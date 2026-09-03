@@ -1,0 +1,1115 @@
+{
+ "generated_at": "2026-09-03T09:32:59+00:00",
+ "config": {
+  "org": "JabRef",
+  "jabcon_start": "2026-09-04T12:00:00+02:00",
+  "jabcon_end": "2026-09-10T19:00:00+02:00",
+  "timezone": "Europe/Berlin",
+  "participants": [
+   "koppor",
+   "Maran23",
+   "InAnYan",
+   "pluto-han",
+   "ThiloteE",
+   "ryan-carpenter",
+   "subhramit",
+   "wanling0000",
+   "Stewori"
+  ],
+  "exclude_repos": []
+ },
+ "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16035",
+   "repo": "JabRef/jabref",
+   "number": 16035,
+   "title": "Select and focus newly added entry",
+   "url": "https://github.com/JabRef/jabref/issues/16035",
+   "type": "issue",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "good first issue",
+    "project: jabcon",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-02T15:31:50Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/11879",
+   "repo": "JabRef/jabref",
+   "number": 11879,
+   "title": "Rework shared SQL database synchronization (PostgreSQL, live updates)",
+   "url": "https://github.com/JabRef/jabref/pull/11879",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: ui",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: bib(la)tex",
+    "component: export-or-save",
+    "component: preferences",
+    "component: shared-database",
+    "component: keybinding",
+    "component: collaboration",
+    "component: backup",
+    "\ud83d\udccc Pinned",
+    "component: cite-as-you-write",
+    "component: jabsrv"
+   ],
+   "updated_at": "2026-09-02T12:58:31Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16579",
+   "repo": "JabRef/jabref",
+   "number": 16579,
+   "title": "Duplicate resolution is O(n^2) ",
+   "url": "https://github.com/JabRef/jabref/issues/16579",
+   "type": "issue",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: duplicate-finder",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-02T07:51:25Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16620",
+   "repo": "JabRef/jabref",
+   "number": 16620,
+   "title": "Fix closing of combo box popup on Escape key",
+   "url": "https://github.com/JabRef/jabref/pull/16620",
+   "type": "pr",
+   "draft": false,
+   "author": "Devansh-18155",
+   "assignees": [
+    "InAnYan"
+   ],
+   "labels": [
+    "component: preferences",
+    "good first issue",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-02T03:23:27Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/11454",
+   "repo": "JabRef/jabref",
+   "number": 11454,
+   "title": "Crash erased bibliography file",
+   "url": "https://github.com/JabRef/jabref/issues/11454",
+   "type": "issue",
+   "draft": false,
+   "author": "IssaHanou",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: entry-editor",
+    "component: backup"
+   ],
+   "updated_at": "2026-08-30T19:16:27Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16042",
+   "repo": "JabRef/jabref",
+   "number": 16042,
+   "title": "Decrease the amount of CSS variables",
+   "url": "https://github.com/JabRef/jabref/issues/16042",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "Maran23"
+   ],
+   "labels": [
+    "component: ui",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-08-28T14:09:23Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/adr/madr/issues/28",
+   "repo": "adr/madr",
+   "number": 28,
+   "title": "Numbering sequence can break when different PRs create ADRs at the same time",
+   "url": "https://github.com/adr/madr/issues/28",
+   "type": "issue",
+   "draft": false,
+   "author": "DeniVuMedi",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "documentation"
+   ],
+   "updated_at": "2026-08-28T07:41:48Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16352",
+   "repo": "JabRef/jabref",
+   "number": 16352,
+   "title": "(Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "url": "https://github.com/JabRef/jabref/issues/16352",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit",
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-08-27T09:03:26Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12874",
+   "repo": "JabRef/jabref",
+   "number": 12874,
+   "title": "Extend `PdfContentImporter` to extract information from bibliographical pages in books",
+   "url": "https://github.com/JabRef/jabref/issues/12874",
+   "type": "issue",
+   "draft": false,
+   "author": "InAnYan",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: import-load",
+    "project: gsoc",
+    "good fourth issue"
+   ],
+   "updated_at": "2026-08-24T10:14:21Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/10371",
+   "repo": "JabRef/jabref",
+   "number": 10371,
+   "title": "jabref-meta storage in bib file should be improved (by switching to embedded JSON)",
+   "url": "https://github.com/JabRef/jabref/issues/10371",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor",
+    "ZiadAbdElFatah"
+   ],
+   "labels": [
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned",
+    "good third issue"
+   ],
+   "updated_at": "2026-08-24T10:12:34Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12418",
+   "repo": "JabRef/jabref",
+   "number": 12418,
+   "title": "Switch to Apache Velocity for Custom Layouts",
+   "url": "https://github.com/JabRef/jabref/issues/12418",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: libre-office",
+    "component: export-or-save",
+    "size: big"
+   ],
+   "updated_at": "2026-08-24T10:10:59Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/6857",
+   "repo": "JabRef/jabref",
+   "number": 6857,
+   "title": "New concept for list main table",
+   "url": "https://github.com/JabRef/jabref/issues/6857",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: ui",
+    "component: maintable",
+    "size: big"
+   ],
+   "updated_at": "2026-08-24T10:10:54Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/9605",
+   "repo": "JabRef/jabref",
+   "number": 9605,
+   "title": "The citation key displays Chinese pinyin instead of Chinese character",
+   "url": "https://github.com/JabRef/jabref/issues/9605",
+   "type": "issue",
+   "draft": false,
+   "author": "ehehela",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: citationkey-generator",
+    "component: unicode"
+   ],
+   "updated_at": "2026-08-24T10:10:49Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/5888",
+   "repo": "JabRef/jabref",
+   "number": 5888,
+   "title": "Integrate BibSonomy",
+   "url": "https://github.com/JabRef/jabref/issues/5888",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: fetcher"
+   ],
+   "updated_at": "2026-08-24T10:10:46Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12893",
+   "repo": "JabRef/jabref",
+   "number": 12893,
+   "title": "Improve rule-based \"Plain citations parser\"",
+   "url": "https://github.com/JabRef/jabref/issues/12893",
+   "type": "issue",
+   "draft": false,
+   "author": "bwakkie",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: import-load",
+    "good third issue"
+   ],
+   "updated_at": "2026-08-24T10:10:42Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/8128",
+   "repo": "JabRef/jabref",
+   "number": 8128,
+   "title": "Support for multi-paper PDFs (AKA proceedings)",
+   "url": "https://github.com/JabRef/jabref/issues/8128",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: ui",
+    "component: import-load",
+    "component: external-files",
+    "good third issue"
+   ],
+   "updated_at": "2026-08-24T10:10:34Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/2961",
+   "repo": "JabRef/jabref",
+   "number": 2961,
+   "title": "Enhanced backup restore dialog",
+   "url": "https://github.com/JabRef/jabref/issues/2961",
+   "type": "issue",
+   "draft": false,
+   "author": "jonasstein",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: ui",
+    "component: export-or-save",
+    "good fourth issue",
+    "component: git"
+   ],
+   "updated_at": "2026-08-24T10:10:24Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/13604",
+   "repo": "JabRef/jabref",
+   "number": 13604,
+   "title": "Implement RefChecker in JabKit",
+   "url": "https://github.com/JabRef/jabref/issues/13604",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "size: big",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-08-18T12:35:43Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/10930",
+   "repo": "JabRef/jabref",
+   "number": 10930,
+   "title": "Dynamic group mirroring the file system.",
+   "url": "https://github.com/JabRef/jabref/issues/10930",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: ui",
+    "component: groups",
+    "size: big",
+    "good third issue"
+   ],
+   "updated_at": "2026-08-17T12:55:56Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/11358",
+   "repo": "JabRef/jabref",
+   "number": 11358,
+   "title": "More option for \"clean up\" \"renaming\".",
+   "url": "https://github.com/JabRef/jabref/issues/11358",
+   "type": "issue",
+   "draft": false,
+   "author": "jiucenglou",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: cleanup-ops",
+    "\ud83d\udccc Pinned",
+    "good third issue"
+   ],
+   "updated_at": "2026-08-11T22:01:49Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16029",
+   "repo": "JabRef/jabref",
+   "number": 16029,
+   "title": "Improve Theme Picker",
+   "url": "https://github.com/JabRef/jabref/issues/16029",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "Maran23",
+    "ZiadAbdElFatah"
+   ],
+   "labels": [
+    "component: ui"
+   ],
+   "updated_at": "2026-08-11T03:47:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16380",
+   "repo": "JabRef/jabref",
+   "number": 16380,
+   "title": "Code quality: Unification of OpenOffice backend",
+   "url": "https://github.com/JabRef/jabref/issues/16380",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit",
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office",
+    "dev: code-quality"
+   ],
+   "updated_at": "2026-08-08T10:50:00Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16427",
+   "repo": "JabRef/jabref",
+   "number": 16427,
+   "title": "Add citation when cursor is inside the citation range",
+   "url": "https://github.com/JabRef/jabref/issues/16427",
+   "type": "issue",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office"
+   ],
+   "updated_at": "2026-08-01T09:37:34Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12261",
+   "repo": "JabRef/jabref",
+   "number": 12261,
+   "title": "Migrate fulltext (PDF) search from Lucene to PostgreSQL",
+   "url": "https://github.com/JabRef/jabref/issues/12261",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: search",
+    "size: big",
+    "good fourth issue"
+   ],
+   "updated_at": "2026-08-01T09:32:00Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/awalsh128/cache-apt-pkgs-action/issues/167",
+   "repo": "awalsh128/cache-apt-pkgs-action",
+   "number": 167,
+   "title": "`pdftk` not found",
+   "url": "https://github.com/awalsh128/cache-apt-pkgs-action/issues/167",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2026-07-29T08:49:33Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16187",
+   "repo": "JabRef/jabref",
+   "number": 16187,
+   "title": "Visual Tweaks for JabRef",
+   "url": "https://github.com/JabRef/jabref/issues/16187",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "Siedlerchr",
+    "koppor",
+    "calixtus"
+   ],
+   "labels": [
+    "component: ui",
+    "component: entry-editor"
+   ],
+   "updated_at": "2026-07-14T17:40:25Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12168",
+   "repo": "JabRef/jabref",
+   "number": 12168,
+   "title": "Frequent ClassCastExceptions when handling CSS in JavaFX",
+   "url": "https://github.com/JabRef/jabref/issues/12168",
+   "type": "issue",
+   "draft": false,
+   "author": "ytzemih",
+   "assignees": [
+    "koppor",
+    "Maran23"
+   ],
+   "labels": [
+    "status: depends-on-external"
+   ],
+   "updated_at": "2026-07-04T12:35:34Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16043",
+   "repo": "JabRef/jabref",
+   "number": 16043,
+   "title": "JabRef Theme Roadmap",
+   "url": "https://github.com/JabRef/jabref/issues/16043",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "Maran23"
+   ],
+   "labels": [
+    "component: ui",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-06-30T14:45:05Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref-koppor/issues/730",
+   "repo": "JabRef/jabref-koppor",
+   "number": 730,
+   "title": "Enable SumatraPDF <-> JabRef connection",
+   "url": "https://github.com/JabRef/jabref-koppor/issues/730",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-06-30T14:28:45Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/6154",
+   "repo": "JabRef/jabref",
+   "number": 6154,
+   "title": "Add to Apple Store",
+   "url": "https://github.com/JabRef/jabref/issues/6154",
+   "type": "issue",
+   "draft": false,
+   "author": "tobiasdiez",
+   "assignees": [
+    "Siedlerchr",
+    "koppor"
+   ],
+   "labels": [
+    "platform: macos",
+    "component: installation"
+   ],
+   "updated_at": "2026-06-22T20:09:16Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/9833",
+   "repo": "JabRef/jabref",
+   "number": 9833,
+   "title": "Mismatched curly braces cause failure to read any subsequent entries",
+   "url": "https://github.com/JabRef/jabref/issues/9833",
+   "type": "issue",
+   "draft": false,
+   "author": "dowobeha",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: bib(la)tex"
+   ],
+   "updated_at": "2026-06-22T20:08:25Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/14962",
+   "repo": "JabRef/jabref",
+   "number": 14962,
+   "title": "JabRef 6.0. Suggestion for hint regarding LibreOffice integration and incompatibility of CSL and old style files.",
+   "url": "https://github.com/JabRef/jabref/issues/14962",
+   "type": "issue",
+   "draft": false,
+   "author": "teertinker",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office"
+   ],
+   "updated_at": "2026-06-22T19:58:55Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/adr/madr/issues/102",
+   "repo": "adr/madr",
+   "number": 102,
+   "title": "Peer repo has a copy of an outdated MADR template ",
+   "url": "https://github.com/adr/madr/issues/102",
+   "type": "issue",
+   "draft": false,
+   "author": "socadk",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2026-06-21T04:29:45Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/14519",
+   "repo": "JabRef/jabref",
+   "number": 14519,
+   "title": "`changed` should be true at withers at BibEntry",
+   "url": "https://github.com/JabRef/jabref/issues/14519",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "dev: code-quality",
+    "\ud83d\udccc Pinned",
+    "good second issue"
+   ],
+   "updated_at": "2026-06-01T04:50:27Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/adr/yadr/issues/3",
+   "repo": "adr/yadr",
+   "number": 3,
+   "title": "Level of confirmation section in bare template",
+   "url": "https://github.com/adr/yadr/issues/3",
+   "type": "issue",
+   "draft": false,
+   "author": "socadk",
+   "assignees": [
+    "koppor",
+    "ungerts",
+    "socadk"
+   ],
+   "labels": [],
+   "updated_at": "2026-03-27T14:27:32Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/JabRefOnline/issues/1723",
+   "repo": "JabRef/JabRefOnline",
+   "number": 1723,
+   "title": "Improve azure front door config",
+   "url": "https://github.com/JabRef/JabRefOnline/issues/1723",
+   "type": "issue",
+   "draft": false,
+   "author": "tobiasdiez",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "p2: nice to have"
+   ],
+   "updated_at": "2026-03-10T11:52:33Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/8298",
+   "repo": "JabRef/jabref",
+   "number": 8298,
+   "title": "Unify open and import database action and show errors",
+   "url": "https://github.com/JabRef/jabref/issues/8298",
+   "type": "issue",
+   "draft": false,
+   "author": "kristofmeixner",
+   "assignees": [
+    "Siedlerchr",
+    "koppor",
+    "calixtus"
+   ],
+   "labels": [
+    "dev: code-quality"
+   ],
+   "updated_at": "2025-11-03T13:13:11Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12790",
+   "repo": "JabRef/jabref",
+   "number": 12790,
+   "title": "Could not resolve org.jabref:easybind:2.2.1-SNAPSHOT",
+   "url": "https://github.com/JabRef/jabref/issues/12790",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [],
+   "updated_at": "2025-03-21T09:57:22Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/11233",
+   "repo": "JabRef/jabref",
+   "number": 11233,
+   "title": "Two-way Compatibility with BibDesk",
+   "url": "https://github.com/JabRef/jabref/issues/11233",
+   "type": "issue",
+   "draft": false,
+   "author": "foice",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2025-02-24T21:51:45Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref-koppor/issues/363",
+   "repo": "JabRef/jabref-koppor",
+   "number": 363,
+   "title": "Compare internal data model",
+   "url": "https://github.com/JabRef/jabref-koppor/issues/363",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "dev: teaching-idea"
+   ],
+   "updated_at": "2025-01-05T00:20:55Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/blog.jabref.org/issues/70",
+   "repo": "JabRef/blog.jabref.org",
+   "number": 70,
+   "title": "Add link to main jabref homepage",
+   "url": "https://github.com/JabRef/blog.jabref.org/issues/70",
+   "type": "issue",
+   "draft": false,
+   "author": "tobiasdiez",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2023-04-03T06:39:24Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref-koppor/issues/329",
+   "repo": "JabRef/jabref-koppor",
+   "number": 329,
+   "title": "Add codemeta.json",
+   "url": "https://github.com/JabRef/jabref-koppor/issues/329",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2022-06-13T22:43:55Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref-koppor/issues/491",
+   "repo": "JabRef/jabref-koppor",
+   "number": 491,
+   "title": "Describe advanced git branch usage for reviews",
+   "url": "https://github.com/JabRef/jabref-koppor/issues/491",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2021-04-12T18:35:26Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref-koppor/issues/370",
+   "repo": "JabRef/jabref-koppor",
+   "number": 370,
+   "title": "Script to create index file for CSL",
+   "url": "https://github.com/JabRef/jabref-koppor/issues/370",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2020-03-10T09:29:41Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref-koppor/issues/357",
+   "repo": "JabRef/jabref-koppor",
+   "number": 357,
+   "title": "Add ADR for dublin core",
+   "url": "https://github.com/JabRef/jabref-koppor/issues/357",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2019-10-19T09:57:40Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/winery/winery/issues/48",
+   "repo": "winery/winery",
+   "number": 48,
+   "title": "IP check for v1.0.0",
+   "url": "https://github.com/winery/winery/issues/48",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2018-07-03T07:12:43Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/stefan-kolb/texcop/issues/3",
+   "repo": "stefan-kolb/texcop",
+   "number": 3,
+   "title": "Related Work",
+   "url": "https://github.com/stefan-kolb/texcop/issues/3",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2018-04-18T09:16:35Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/htdocs/issues/4",
+   "repo": "JabRef/htdocs",
+   "number": 4,
+   "title": "Add redirects for documentation",
+   "url": "https://github.com/JabRef/htdocs/issues/4",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2016-03-08T11:39:53Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/koppor/textools/issues/1",
+   "repo": "koppor/textools",
+   "number": 1,
+   "title": "Add more validation rules",
+   "url": "https://github.com/koppor/textools/issues/1",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [],
+   "updated_at": "2016-02-02T07:46:53Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  }
+ ],
+ "events": [],
+ "stats": {
+  "additions": 0,
+  "deletions": 0,
+  "changed_files": 0,
+  "components": {}
+ },
+ "leaderboard": [
+  {
+   "login": "koppor",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "Maran23",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "InAnYan",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "pluto-han",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "ThiloteE",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "ryan-carpenter",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "subhramit",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "wanling0000",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "Stewori",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  }
+ ]
+}
