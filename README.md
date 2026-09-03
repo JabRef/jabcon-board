@@ -26,6 +26,8 @@ Live: <https://jabref.github.io/jabcon-board/> (only carries data while JabCon r
 `exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board).
 Bot activity is excluded.
 
+"Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...).
+
 Leaderboard points: merged PR 3, review 2, comment / issue / push 1.
 
 ## Manual runs

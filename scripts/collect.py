@@ -7,6 +7,7 @@ Stats for merged PRs are reused from an existing output file (merged PRs never c
 """
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -92,6 +93,7 @@ def collect_cards():
     """Search per column, then dedupe so each item lives in exactly one column (done > progress > backlog)."""
     columns = [
         ("done", f"is:pr is:merged merged:>={START_DATE} {qualifiers('involves')}"),
+        ("done", f"is:pr is:closed is:unmerged closed:>={START_DATE} {qualifiers('involves')}"),
         ("done", f"is:issue is:closed closed:>={START_DATE} {qualifiers('involves')}"),
         ("progress", f"is:pr is:open updated:>={START_DATE} {qualifiers('author')}"),
         ("progress", f"is:pr is:open updated:>={START_DATE} {qualifiers('reviewed-by')}"),
@@ -162,15 +164,63 @@ def component(repo, path):
     return repo.split("/")[1]
 
 
+# (weight, regex on added lines, label) - the nerdier the change, the higher the weight.
+DETECTORS = [
+    (6, r"\bsealed\s+(interface|class)\s+(\w+)", "sealed type {1}"),
+    (6, r"Thread\.ofVirtual|newVirtualThreadPerTaskExecutor", "virtual threads"),
+    (5, r"\brecord\s+(\w+)\s*\(", "record {0}"),
+    (5, r"\bcase\s+[A-Z]\w*(<[^>]*>)?\s+\w+\s*->", "pattern-matching switch"),
+    (4, r"\bcase\s+[A-Z]\w*\s*\(", "record deconstruction pattern"),
+    (4, r"\binstanceof\s+[A-Z]\w*(<[^>]*>)?\s+\w+\b", "instanceof pattern"),
+    (4, r"\bSequenced(Collection|Set|Map)\b|\.reversed\(\)", "sequenced collections"),
+    (3, r"\bStructuredTaskScope\b|\bScopedValue\b", "structured concurrency"),
+    (3, r"@NullMarked", "JSpecify null-marked"),
+    (3, r'^\+\s*"""', "text block"),
+    (3, r"\bswitch\s*\(.*\)\s*\{?\s*$|\bcase\s+.*->", "arrow switch"),
+    (2, r"\bList\.of\(|\bMap\.of\(|\bSet\.of\(", "immutable collection literals"),
+    (2, r"\.stream\(\)", "streams"),
+    (2, r"^\+\s*///", "markdown javadoc"),
+    (2, r"\bvar\s+\w+\s*=", "local var inference"),
+    (2, r"\bOptional\.(ofNullable|of)\(|\.ifPresentOrElse\(", "Optional"),
+]
+DETECTORS = [(w, re.compile(rx, re.M), label) for w, rx, label in DETECTORS]
+
+
+def refactorings(pr, files, repo):
+    """Nerdy facts about a merged PR, mined from its patches. Returns [(weight, text)]."""
+    found = []
+    renamed = [f for f in files if f["status"] == "renamed"]
+    removed = [f for f in files if f["status"] == "removed" and f["filename"].endswith(".java")]
+    if renamed:
+        f = renamed[0]
+        found.append((3 + min(len(renamed), 5), f"moved {len(renamed)} file(s), e.g. {f['previous_filename'].rsplit('/', 1)[-1]} → {f['filename'].rsplit('/', 1)[-1]}"))
+    if removed:
+        found.append((3 + min(len(removed), 5), f"deleted {', '.join(f['filename'].rsplit('/', 1)[-1].removesuffix('.java') for f in removed[:3])}" + (" …" if len(removed) > 3 else "")))
+    if pr["deletions"] > pr["additions"] * 1.5 and pr["deletions"] > 50:
+        found.append((4, f"net −{pr['deletions'] - pr['additions']} lines"))
+    if any(f["filename"].endswith("module-info.java") for f in files):
+        found.append((4, "module boundary changed"))
+    added = "\n".join(l for f in files if f["filename"].endswith(".java") for l in f.get("patch", "").splitlines() if l.startswith("+"))
+    hits = {}
+    for w, rx, label in DETECTORS:
+        for m in rx.finditer(added):
+            text = label.format(*m.groups("")) if "{" in label else label
+            hits[text] = w
+            break
+    found += [(w, t) for t, w in hits.items()]
+    return sorted(found, reverse=True)[:4]
+
+
 def pr_stats(c, cached):
-    if c["id"] in cached:
+    if c["id"] in cached and "refactorings" in cached[c["id"]]:
         return cached[c["id"]]
     pr, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}")
     files, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/files", {"per_page": 100})
     comps = {}
     for f in files:
         comps[component(c["repo"], f["filename"])] = comps.get(component(c["repo"], f["filename"]), 0) + f["changes"]
-    return {"additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps}
+    return {"additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps,
+            "refactorings": refactorings(pr, files, c["repo"])}
 
 
 def leaderboard(cards, events):
@@ -213,7 +263,10 @@ def main():
             totals[k] += c.get("stats", {}).get(k, 0)
         for comp, n in c.get("stats", {}).get("components", {}).items():
             totals["components"][comp] = totals["components"].get(comp, 0) + n
+    nerdy = sorted(({"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
+                    for c in cards for w, t in c.get("stats", {}).get("refactorings", [])), key=lambda r: -r["weight"])[:5]
     data = {
+        "refactorings": nerdy,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,
         "cards": cards,
