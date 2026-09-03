@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JabCon board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="header">
+  <h1 id="title">JabCon</h1>
+  <div id="clock">--:--</div>
+  <div id="countdown"></div>
+  <div id="updated">last update –</div>
+  <img id="logo" src="https://www.jabref.org/img/JabRef-icon-256.png" alt="">
+</header>
+<main>
+  <section class="column" id="backlog"><h2>Backlog <span class="count"></span></h2><div class="cards"></div></section>
+  <section class="column" id="progress"><h2>In progress <span class="count"></span></h2><div class="cards"></div></section>
+  <section class="column" id="done"><h2>Done <span class="count"></span></h2><div class="cards"></div></section>
+  <section id="stats">
+    <h2>Stats</h2>
+    <div id="totals"></div>
+    <div id="components"></div>
+    <div id="leaderboard"></div>
+  </section>
+  <section id="activity">
+    <h2>Latest activity</h2>
+    <ul id="ticker"></ul>
+    <video id="gource" autoplay muted loop playsinline></video>
+  </section>
+</main>
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

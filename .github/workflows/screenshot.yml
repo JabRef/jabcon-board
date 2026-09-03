@@ -1,0 +1,38 @@
+# Archives a screenshot of the live board every three hours (for the blog post / a time-lapse after JabCon).
+name: Screenshot
+
+on:
+  schedule:
+    - cron: '30 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Skip outside the JabCon window
+        id: window
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json; from datetime import datetime, timezone
+          c = json.load(open("config.json")); now = datetime.now(timezone.utc)
+          print("active=" + str(datetime.fromisoformat(c["jabcon_start"]) <= now <= datetime.fromisoformat(c["jabcon_end"])).lower())
+          PY
+      - name: Take screenshot
+        if: steps.window.outputs.active == 'true'
+        run: |
+          mkdir -p screenshots
+          google-chrome --headless=new --no-sandbox --hide-scrollbars --window-size=1920,1080 --virtual-time-budget=10000 \
+            --screenshot="screenshots/$(date -u +%Y-%m-%dT%H-%M-%SZ).png" "https://jabref.github.io/jabcon-board/"
+      - name: Commit
+        if: steps.window.outputs.active == 'true'
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add screenshots
+          git commit -q -m "Add screenshot $(date -u +%FT%TZ)"
+          git pull --rebase -q origin main && git push origin HEAD:main

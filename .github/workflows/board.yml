@@ -1,0 +1,50 @@
+# Publishes site/ and a fresh data.json to gh-pages. The collector exits early outside the JabCon window
+# (config.json) unless "force" is set on a manual run.
+name: Board
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Collect data even outside the JabCon window
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Prepare gh-pages worktree
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          if git fetch origin gh-pages; then
+            git worktree add out origin/gh-pages
+          else
+            git worktree add --orphan -b gh-pages out
+          fi
+      - name: Copy site
+        run: cp -r site/. out/ && rm -f out/data.json.gitkeep
+      - name: Collect data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/collect.py --out out/data.json ${{ inputs.force && '--force' || '' }}
+      - name: Push
+        run: |
+          cd out
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Update board $(date -u +%FT%TZ)"
+          for i in 1 2 3; do git push origin HEAD:gh-pages && exit 0; git pull --rebase origin gh-pages; done
+          exit 1
