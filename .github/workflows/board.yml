@@ -35,7 +35,7 @@ jobs:
             git worktree add --orphan -b gh-pages out
           fi
       - name: Copy site
-        run: cp -r site/. out/ && rm -f out/data.json.gitkeep
+        run: cp -r site/. out/
       - name: Collect data
         env:
           GITHUB_TOKEN: ${{ github.token }}
