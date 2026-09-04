@@ -67,7 +67,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T20:33:03+00:00",
+ "generated_at": "2026-09-04T20:38:09+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -501,6 +501,27 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T20:37:05Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16760",
    "repo": "JabRef/jabref",
    "number": 16760,
@@ -647,27 +668,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-04T11:19:58Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T07:02:48Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1858,6 +1858,33 @@
  ],
  "events": [
   {
+   "id": "14457397117",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:36:05Z",
+   "summary": "reviewed PR #16755 (changes_requested)"
+  },
+  {
+   "id": "14457387857",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:35:53Z",
+   "summary": "commented on PR #16755"
+  },
+  {
+   "id": "14457297118",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:33:59Z",
+   "summary": "commented on PR #16755"
+  },
+  {
    "id": "14457185157",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -2427,10 +2454,10 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 35,
+   "points": 39,
    "merged": 0,
-   "reviews": 10,
-   "other": 15
+   "reviews": 11,
+   "other": 17
   },
   {
    "login": "Maran23",
