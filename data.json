@@ -1,6 +1,26 @@
 {
  "refactorings": [],
- "generated_at": "2026-09-04T11:35:27+00:00",
+ "milestones": [
+  {
+   "ref": "JabRef/jabref/36",
+   "repo": "JabRef/jabref",
+   "title": "6.0-beta",
+   "url": "https://github.com/JabRef/jabref/milestone/36",
+   "open": 14,
+   "closed": 113,
+   "baseline": 113
+  },
+  {
+   "ref": "JabRef/jabref/24",
+   "repo": "JabRef/jabref",
+   "title": "6.0",
+   "url": "https://github.com/JabRef/jabref/milestone/24",
+   "open": 24,
+   "closed": 45,
+   "baseline": 45
+  }
+ ],
+ "generated_at": "2026-09-04T11:42:59+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -26,6 +46,11 @@
    "subhramit",
    "wanling0000",
    "Stewori"
+  ],
+  "milestones": [
+   "JabRef/jabref/36",
+   "JabRef/jabref/24",
+   "JabRef/jabref-issue-melting-pot/1"
   ],
   "exclude_repos": []
  },

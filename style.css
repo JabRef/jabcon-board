@@ -50,7 +50,14 @@ section h2 .count { float: right; color: var(--fg); }
 .cards::-webkit-scrollbar { display: none; }
 .more { color: var(--muted); font-size: .85rem; min-height: 1.1rem; text-align: center; }
 .tag.closed { background: #8b2f2f; }
-#statsrow { flex: 1; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+#statsrow { flex: 1; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 1.5rem; min-width: 0; }
+#milestones { display: flex; flex-direction: column; gap: .3rem; font-size: .85rem; }
+.milestone .bar { position: relative; height: .9rem; background: var(--border); border-radius: .2rem; overflow: hidden; }
+.milestone .bar div { position: absolute; top: 0; bottom: 0; left: 0; }
+.milestone .before { background: #1f6feb; }
+.milestone .during { background: var(--ok); }
+.milestone .label { display: flex; justify-content: space-between; white-space: nowrap; gap: .5rem; }
+.milestone .label .muted { color: var(--muted); font-size: .75rem; }
 #statsrow h3 { margin: 0 0 .3rem; font-size: .9rem; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
 #refactorings { list-style: none; margin: 0; padding: 0; font-size: .85rem; }
 #refactorings li { display: flex; gap: .5rem; align-items: center; padding: 0; white-space: nowrap; overflow: hidden; }
@@ -59,7 +66,7 @@ section h2 .count { float: right; color: var(--fg); }
 #stats { grid-column: 1 / 3; }
 #totals { display: flex; gap: 2rem; font-size: 1.3rem; margin-bottom: .2rem; }
 #totals .add { color: var(--ok); } #totals .del { color: #f85149; }
-#components { display: grid; grid-template-columns: 8rem 1fr 4rem; gap: .1rem .6rem; align-content: start; align-items: center; font-size: .85rem; }
+#components { display: grid; grid-template-columns: 6rem minmax(3rem, 1fr) 3rem; gap: .1rem .6rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
 #leaderboard { display: flex; gap: .8rem; margin-top: auto; padding-top: .3rem; align-items: flex-end; }
 .leader { text-align: center; font-size: .8rem; }
@@ -80,6 +87,7 @@ section h2 .count { float: right; color: var(--fg); }
 #gource[src] + #gource-missing { display: none; }
 #toast { position: fixed; left: 50%; bottom: 2rem; transform: translateX(-50%); background: var(--ok); color: #000; font-size: 2rem; padding: .6rem 1.5rem; border-radius: 1rem; opacity: 0; transition: opacity .5s; pointer-events: none; }
 #toast.show { opacity: 1; }
-/* hover enlarges the video; the free strip on the left is where the mouse goes to shrink it again */
-#gource[src]:hover { position: fixed; z-index: 10; top: 3%; bottom: 3%; left: 10%; right: 2%; width: auto; height: auto; max-height: none; box-shadow: 0 0 4rem #000; }
+/* hover enlarges the video; it must cover the small video completely (bottom/right edge) or hover flickers. The free strip on the left shrinks it again. */
+#gource[src]:hover { position: fixed; z-index: 10; top: 3%; bottom: 0; left: 10%; right: 0; width: auto; height: auto; max-height: none; box-shadow: 0 0 4rem #000; }
 #footer { position: fixed; right: 1rem; bottom: .1rem; display: flex; gap: 1rem; font-size: .6rem; color: var(--muted); font-family: monospace; }
+#components span:nth-child(3n+1) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
