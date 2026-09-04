@@ -136,6 +136,8 @@ def collect_events():
                 "repo": e["repo"]["name"],
                 "created_at": e["created_at"],
                 "summary": summarize(e),
+                "number": (payload.get("issue") or payload.get("pull_request") or {}).get("number"),
+                "merged": bool((payload.get("pull_request") or {}).get("merged")),
                 "url": ((payload.get("issue") or payload.get("pull_request") or {}).get("html_url")
                         or f"https://github.com/{e['repo']['name']}"),
             })
