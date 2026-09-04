@@ -160,3 +160,16 @@ setInterval(load, 60000);
 setInterval(tick, 1000);
 setInterval(loadVideo, 3600000);
 setInterval(renderTicker, 30000);
+
+// Reload the page when a new version of the site was deployed (compares the ETag of app.js).
+let etag;
+async function checkVersion() {
+  try {
+    const r = await fetch('app.js', { method: 'HEAD', cache: 'no-store' });
+    const tag = r.headers.get('etag') || r.headers.get('last-modified');
+    if (etag && tag && tag !== etag) location.reload();
+    etag = tag;
+  } catch (e) { /* offline: try again later */ }
+}
+checkVersion();
+setInterval(checkVersion, 5 * 60000);
