@@ -130,6 +130,8 @@ function loadVideo() {
 }
 
 document.querySelectorAll('.cards').forEach((b) => b.addEventListener('scroll', () => updateMore(b)));
+const scale = parseFloat(new URLSearchParams(location.search).get('scale'));
+if (scale > 0) document.documentElement.style.fontSize = `${1.146 * scale}vw`;
 load();
 loadVideo();
 setInterval(load, 60000);
