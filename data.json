@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T19:36:06+00:00",
+ "generated_at": "2026-09-04T19:48:45+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -474,7 +474,7 @@
     "first contrib",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-04T19:36:00Z",
+   "updated_at": "2026-09-04T19:46:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -498,7 +498,25 @@
     "component: css",
     "first contrib"
    ],
-   "updated_at": "2026-09-04T19:34:33Z",
+   "updated_at": "2026-09-04T19:45:36Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16760",
+   "repo": "JabRef/jabref",
+   "number": 16760,
+   "title": "Enhance developer documentation",
+   "url": "https://github.com/JabRef/jabref/pull/16760",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T19:40:22Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1654,6 +1672,51 @@
  ],
  "events": [
   {
+   "id": "14454945395",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:44:37Z",
+   "summary": "reviewed PR #16846 (changes_requested)"
+  },
+  {
+   "id": "14454907520",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:43:51Z",
+   "summary": "reviewed PR #16846 (commented)"
+  },
+  {
+   "id": "14454906811",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:43:50Z",
+   "summary": "commented on PR #16846"
+  },
+  {
+   "id": "14454690332",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:39:21Z",
+   "summary": "reviewed PR #16760 (changes_requested)"
+  },
+  {
+   "id": "14454685485",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:39:15Z",
+   "summary": "commented on PR #16760"
+  },
+  {
    "id": "14454528166",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -1998,9 +2061,16 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 16,
+   "points": 19,
    "merged": 0,
-   "reviews": 5,
+   "reviews": 6,
+   "other": 7
+  },
+  {
+   "login": "Maran23",
+   "points": 14,
+   "merged": 0,
+   "reviews": 4,
    "other": 6
   },
   {
@@ -2009,13 +2079,6 @@
    "merged": 0,
    "reviews": 3,
    "other": 6
-  },
-  {
-   "login": "Maran23",
-   "points": 9,
-   "merged": 0,
-   "reviews": 2,
-   "other": 5
   },
   {
    "login": "pluto-han",
