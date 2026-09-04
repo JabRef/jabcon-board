@@ -35,7 +35,7 @@ jobs:
             git worktree add --orphan -b gh-pages out
           fi
       - name: Copy site
-        run: cp -r site/. out/
+        run: cp -r site/. out/ && echo "${GITHUB_SHA::7}" > out/version.txt
       - name: Collect data
         env:
           GITHUB_TOKEN: ${{ github.token }}
