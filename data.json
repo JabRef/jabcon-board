@@ -1,6 +1,6 @@
 {
  "refactorings": [],
- "generated_at": "2026-09-04T08:18:41+00:00",
+ "generated_at": "2026-09-04T08:42:00+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -194,6 +194,25 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/openjdk/jfx/pull/2282",
+   "repo": "openjdk/jfx",
+   "number": 2282,
+   "title": "8391309: Mouse-wheel scroll distance incorrectly depends on render scale",
+   "url": "https://github.com/openjdk/jfx/pull/2282",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "ready"
+   ],
+   "updated_at": "2026-09-04T08:36:33Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16755",
    "repo": "JabRef/jabref",
    "number": 16755,
@@ -210,25 +229,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-04T07:02:48Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2282",
-   "repo": "openjdk/jfx",
-   "number": 2282,
-   "title": "8391309: Mouse-wheel scroll distance incorrectly depends on render scale",
-   "url": "https://github.com/openjdk/jfx/pull/2282",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "ready"
-   ],
-   "updated_at": "2026-09-04T06:52:09Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
