@@ -1,5 +1,22 @@
 {
- "refactorings": [],
+ "refactorings": [
+  {
+   "weight": 4,
+   "text": "module boundary changed",
+   "repo": "JabRef/jabref",
+   "number": 16841,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16841"
+  },
+  {
+   "weight": 2,
+   "text": "markdown javadoc",
+   "repo": "JabRef/jabref",
+   "number": 16841,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16841"
+  }
+ ],
  "milestones": [
   {
    "ref": "JabRef/jabref/36",
@@ -18,9 +35,18 @@
    "open": 24,
    "closed": 45,
    "baseline": 45
+  },
+  {
+   "ref": "JabRef/jabref-issue-melting-pot/1",
+   "repo": "JabRef/jabref-issue-melting-pot",
+   "title": "v6",
+   "url": "https://github.com/JabRef/jabref-issue-melting-pot/milestone/1",
+   "open": 25,
+   "closed": 39,
+   "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T14:27:17+00:00",
+ "generated_at": "2026-09-04T14:41:17+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -57,6 +83,56 @@
  },
  "cards": [
   {
+   "id": "https://github.com/JabRef/jabref/pull/16841",
+   "repo": "JabRef/jabref",
+   "number": 16841,
+   "title": "Trace ADRs with OpenFastTrace instead of the e-adr annotation",
+   "url": "https://github.com/JabRef/jabref/pull/16841",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: groups",
+    "component: bib(la)tex",
+    "component: jabkit",
+    "component: import-load",
+    "component: jabsrv",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T14:38:36Z",
+   "closed_at": "2026-09-04T14:38:27Z",
+   "merged_at": "2026-09-04T14:38:27Z",
+   "column": "done",
+   "stats": {
+    "additions": 60,
+    "deletions": 36,
+    "changed_files": 27,
+    "components": {
+     ".jbang": 6,
+     "(root)": 24,
+     "docs": 26,
+     "jabgui": 4,
+     "jabkit": 8,
+     "jablib-examples": 4,
+     "jablib": 18,
+     "jabsrv": 5,
+     "versions": 1
+    },
+    "refactorings": [
+     [
+      4,
+      "module boundary changed"
+     ],
+     [
+      2,
+      "markdown javadoc"
+     ]
+    ]
+   }
+  },
+  {
    "id": "https://github.com/openjdk/jfx/pull/2282",
    "repo": "openjdk/jfx",
    "number": 2282,
@@ -84,30 +160,6 @@
    }
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16841",
-   "repo": "JabRef/jabref",
-   "number": 16841,
-   "title": "Trace ADRs with OpenFastTrace instead of the e-adr annotation",
-   "url": "https://github.com/JabRef/jabref/pull/16841",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: groups",
-    "component: bib(la)tex",
-    "component: jabkit",
-    "component: import-load",
-    "component: jabsrv",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-04T14:24:46Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16835",
    "repo": "JabRef/jabref",
    "number": 16835,
@@ -130,7 +182,7 @@
     "component: entry-editor",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T14:22:28Z",
+   "updated_at": "2026-09-04T14:38:54Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1479,6 +1531,15 @@
  ],
  "events": [
   {
+   "id": "14438315759",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T14:38:27Z",
+   "summary": "merged PR #16841: "
+  },
+  {
    "id": "14434812029",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -1606,10 +1667,19 @@
   }
  ],
  "stats": {
-  "additions": 147,
-  "deletions": 4,
-  "changed_files": 3,
+  "additions": 207,
+  "deletions": 40,
+  "changed_files": 30,
   "components": {
+   ".jbang": 6,
+   "(root)": 24,
+   "docs": 26,
+   "jabgui": 4,
+   "jabkit": 8,
+   "jablib-examples": 4,
+   "jablib": 18,
+   "jabsrv": 5,
+   "versions": 1,
    "jfx": 151
   }
  },
@@ -1620,6 +1690,13 @@
    "merged": 0,
    "reviews": 2,
    "other": 5
+  },
+  {
+   "login": "koppor",
+   "points": 3,
+   "merged": 1,
+   "reviews": 0,
+   "other": 0
   },
   {
    "login": "pluto-han",
@@ -1634,13 +1711,6 @@
    "merged": 0,
    "reviews": 1,
    "other": 1
-  },
-  {
-   "login": "koppor",
-   "points": 0,
-   "merged": 0,
-   "reviews": 0,
-   "other": 0
   },
   {
    "login": "InAnYan",
