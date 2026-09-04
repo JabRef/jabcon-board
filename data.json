@@ -1,6 +1,6 @@
 {
  "refactorings": [],
- "generated_at": "2026-09-04T09:15:03+00:00",
+ "generated_at": "2026-09-04T09:31:15+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -20,6 +20,24 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2291",
+   "repo": "openjdk/jfx",
+   "number": 2291,
+   "title": "8090896: Allow skipping apps build",
+   "url": "https://github.com/openjdk/jfx/pull/2291",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-04T09:28:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
   {
    "id": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
    "repo": "JabRef/JabRef-Browser-Extension-experimental",
@@ -171,24 +189,6 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2291",
-   "repo": "openjdk/jfx",
-   "number": 2291,
-   "title": "8090896: Allow skipping apps build",
-   "url": "https://github.com/openjdk/jfx/pull/2291",
-   "type": "pr",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [],
-   "labels": [
-    "rfr"
-   ],
-   "updated_at": "2026-09-04T02:09:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1296,6 +1296,15 @@
  ],
  "events": [
   {
+   "id": "14421435588",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-04T09:28:35Z",
+   "summary": "commented on #2291: 8090896: Allow skipping apps build"
+  },
+  {
    "id": "14414851461",
    "type": "WatchEvent",
    "action": "started",
@@ -1329,14 +1338,14 @@
    "other": 0
   },
   {
-   "login": "koppor",
-   "points": 0,
+   "login": "Maran23",
+   "points": 1,
    "merged": 0,
    "reviews": 0,
-   "other": 0
+   "other": 1
   },
   {
-   "login": "Maran23",
+   "login": "koppor",
    "points": 0,
    "merged": 0,
    "reviews": 0,
