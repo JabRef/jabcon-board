@@ -38,7 +38,8 @@ jobs:
         run: cp -r site/. out/ && echo "${GITHUB_SHA::7}" > out/version.txt
       - name: Collect data
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          # BOARD_TOKEN (optional, a fine-grained PAT) lets the collector read milestones of private repos
+          GITHUB_TOKEN: ${{ secrets.BOARD_TOKEN || github.token }}
         run: python3 scripts/collect.py --out out/data.json ${{ inputs.force && '--force' || '' }}
       - name: Push
         run: |

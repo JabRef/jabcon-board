@@ -244,7 +244,11 @@ def milestones(previous):
     result = []
     for ref in CONFIG.get("milestones", []):
         owner, repo, number = ref.split("/")
-        m, _ = get(f"/repos/{owner}/{repo}/milestones/{number}")
+        try:
+            m, _ = get(f"/repos/{owner}/{repo}/milestones/{number}")
+        except urllib.error.HTTPError as e:
+            print(f"::warning::milestone {ref} skipped ({e.code}; private repo? set the BOARD_TOKEN secret)")
+            continue
         baseline = next((p["baseline"] for p in previous if p["ref"] == ref), m["closed_issues"])
         result.append({"ref": ref, "repo": f"{owner}/{repo}", "title": m["title"], "url": m["html_url"],
                        "open": m["open_issues"], "closed": m["closed_issues"], "baseline": min(baseline, m["closed_issues"])})
