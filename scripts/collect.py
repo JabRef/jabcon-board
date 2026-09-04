@@ -239,6 +239,18 @@ def leaderboard(cards, events):
     return [{"login": p, "points": v["merged"] * 3 + v["reviews"] * 2 + v["other"], **v} for p, v in score.items()]
 
 
+def milestones(previous):
+    """Milestone progress; the closed count when first seen (usually JabCon start) is kept as the baseline."""
+    result = []
+    for ref in CONFIG.get("milestones", []):
+        owner, repo, number = ref.split("/")
+        m, _ = get(f"/repos/{owner}/{repo}/milestones/{number}")
+        baseline = next((p["baseline"] for p in previous if p["ref"] == ref), m["closed_issues"])
+        result.append({"ref": ref, "repo": f"{owner}/{repo}", "title": m["title"], "url": m["html_url"],
+                       "open": m["open_issues"], "closed": m["closed_issues"], "baseline": min(baseline, m["closed_issues"])})
+    return result
+
+
 def main():
     args = sys.argv[1:]
     out = args[args.index("--out") + 1] if "--out" in args else "data.json"
@@ -246,10 +258,12 @@ def main():
     if "--force" not in args and not (START <= now <= END):
         print(f"outside JabCon window ({START} .. {END}), nothing to do")
         return
-    cached = {}
+    cached, previous_milestones = {}, []
     if os.path.exists(out):
         try:
-            cached = {c["id"]: c["stats"] for c in json.load(open(out))["cards"] if c.get("stats")}
+            previous = json.load(open(out))
+            cached = {c["id"]: c["stats"] for c in previous["cards"] if c.get("stats")}
+            previous_milestones = previous.get("milestones", [])
         except (ValueError, KeyError):
             pass
     cards = collect_cards()
@@ -267,6 +281,7 @@ def main():
                     for c in cards for w, t in c.get("stats", {}).get("refactorings", [])), key=lambda r: -r["weight"])[:5]
     data = {
         "refactorings": nerdy,
+        "milestones": milestones(previous_milestones),
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,
         "cards": cards,

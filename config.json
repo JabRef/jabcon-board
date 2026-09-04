@@ -24,5 +24,10 @@
     "wanling0000",
     "Stewori"
   ],
+  "milestones": [
+    "JabRef/jabref/36",
+    "JabRef/jabref/24",
+    "JabRef/jabref-issue-melting-pot/1"
+  ],
   "exclude_repos": []
 }

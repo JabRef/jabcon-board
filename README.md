@@ -24,7 +24,8 @@ screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more ca
 
 `config.json`: `jabcon_start` / `jabcon_end` (ISO timestamps with offset), `phases` (label + end time, drawn on the header progress bar), `timezone` (for the clock),
 `participants` (GitHub logins; their order sets the colours), `org` (highlighting and the ready-for-review backlog),
-`exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board).
+`exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board),
+`milestones` (`owner/repo/number`; progress bars in the stats panel, green = closed since the board first saw the milestone).
 Bot activity is excluded.
 
 "Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...).
