@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T14:45:24+00:00",
+ "generated_at": "2026-09-04T14:48:56+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -158,6 +158,22 @@
     },
     "refactorings": []
    }
+  },
+  {
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-04T14:48:11Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16835",
