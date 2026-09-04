@@ -65,7 +65,9 @@ function renderStats() {
   $('#refactorings').innerHTML = data.refactorings.map((r) =>
     `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span><span class="repo">${esc(r.repo)}#${r.number}</span></li>`).join('');
   $('#leaderboard').innerHTML = data.leaderboard.map((l) =>
-    `<div class="leader" style="--c:${color[l.login]}">${avatar(l.login, '')}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`).join('');
+    `<div class="leader" style="--c:${color[l.login]}" title="${l.merged} merged PRs × 3 = ${l.merged * 3}
+${l.reviews} reviews × 2 = ${l.reviews * 2}
+${l.other} comments / issues / pushes × 1 = ${l.other}">${avatar(l.login, '')}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`).join('');
 }
 
 function renderTicker() {
