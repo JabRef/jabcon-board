@@ -119,6 +119,7 @@ function tick() {
   const age = now - Date.parse(data.generated_at);
   $('#updated').style.setProperty('--p', Math.min(1, age / REFRESH_MS));
   $('#updated').title = `last update ${ago(data.generated_at)}`;
+  $('#data-time').textContent = `data ${new Date(data.generated_at).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone })}`;
   $('#header').classList.toggle('stale', age > 30 * 60000);
   const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
   $('#elapsed').style.width = `${Math.max(0, Math.min(100, 100 * (now - start) / (end - start)))}%`;
@@ -161,14 +162,16 @@ setInterval(tick, 1000);
 setInterval(loadVideo, 3600000);
 setInterval(renderTicker, 30000);
 
-// Reload the page when a new version of the site was deployed (compares the ETag of app.js).
-let etag;
+// version.txt holds the deployed commit; shown in the corner and used to reload the page after a new deployment.
+let version;
 async function checkVersion() {
   try {
-    const r = await fetch('app.js', { method: 'HEAD', cache: 'no-store' });
-    const tag = r.headers.get('etag') || r.headers.get('last-modified');
-    if (etag && tag && tag !== etag) location.reload();
-    etag = tag;
+    const r = await fetch('version.txt?ts=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) return;
+    const v = (await r.text()).trim();
+    if (version && v !== version) location.reload();
+    version = v;
+    $('#version').textContent = `site ${v}`;
   } catch (e) { /* offline: try again later */ }
 }
 checkVersion();
