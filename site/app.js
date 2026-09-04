@@ -60,7 +60,7 @@ function renderStats() {
   $('#milestones').innerHTML = (data.milestones || []).map((m) => {
     const total = m.open + m.closed || 1, during = m.closed - m.baseline;
     return `<div class="milestone"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}
-      <span>${m.closed}/${total}${during ? ` <span class="muted">+${during}</span>` : ''}</span></div>
+      <span>${m.closed}/${total}${during ? ` <span class="muted">+${during}</span>` : ''} <span class="muted">${m.open} to go</span></span></div>
       <div class="bar"><div class="during" style="width:${(100 * m.closed / total).toFixed(1)}%"></div><div class="before" style="width:${(100 * m.baseline / total).toFixed(1)}%"></div></div></div>`;
   }).join('') + Object.entries(data.private_activity || {}).map(([repo, c]) =>
     `<div class="private">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
@@ -72,10 +72,23 @@ ${l.reviews} reviews × 2 = ${l.reviews * 2}
 ${l.other} comments / issues / pushes × 1 = ${l.other}">${avatar(l.login, '')}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`).join('');
 }
 
+// Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1.
+function eventPoints(e) {
+  if (e.type === 'PullRequestReviewEvent') return 2;
+  if (['IssueCommentEvent', 'IssuesEvent', 'PushEvent'].includes(e.type)) return 1;
+  if (e.type === 'PullRequestEvent' && e.merged) {
+    const pr = data.cards.find((c) => c.column === 'done' && c.repo === e.repo && c.number === e.number);
+    if (pr && pr.author === e.actor) return 3;
+  }
+  return 0;
+}
+
 function renderTicker() {
   const org = data.config.org + '/';
-  $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map((e) =>
-    `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.url, `<span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)}</span>`, 'main')}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`).join('');
+  $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map((e) => {
+    const pts = eventPoints(e);
+    return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.url, `<span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
+  }).join('');
 }
 
 function celebrate(prev) {
