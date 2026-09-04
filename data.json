@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T17:35:45+00:00",
+ "generated_at": "2026-09-04T17:49:19+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -170,7 +170,7 @@
    "author": "subhramit",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-04T14:49:57Z",
+   "updated_at": "2026-09-04T17:46:47Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1625,7 +1625,7 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T16:41:37Z",
-   "summary": "commented on #16846: Fix for issue 15721"
+   "summary": "commented on #16846: Remove hardcoded styling"
   },
   {
    "id": "14440283288",
