@@ -61,11 +61,13 @@
     "subhramit": 0,
     "wanling0000": 0,
     "Stewori": 0,
-    "JohnnyGoodNews": 0
+    "JohnnyGoodNews": 0,
+    "Siedlerchr": 0,
+    "calixtus": 0
    }
   }
  },
- "generated_at": "2026-09-04T20:26:48+00:00",
+ "generated_at": "2026-09-04T20:28:54+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -91,7 +93,9 @@
    "subhramit",
    "wanling0000",
    "Stewori",
-   "JohnnyGoodNews"
+   "JohnnyGoodNews",
+   "Siedlerchr",
+   "calixtus"
   ],
   "milestones": [
    "JabRef/jabref/36",
@@ -870,6 +874,27 @@
    "column": "backlog"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/15562",
+   "repo": "JabRef/jabref",
+   "number": 15562,
+   "title": "Allow updating entries from multi merge results",
+   "url": "https://github.com/JabRef/jabref/pull/15562",
+   "type": "pr",
+   "draft": true,
+   "author": "deepgupta6",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "status: changes-required",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-08-28T06:12:13Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16352",
    "repo": "JabRef/jabref",
    "number": 16352,
@@ -1108,6 +1133,27 @@
     "\ud83d\udccc Pinned"
    ],
    "updated_at": "2026-08-18T12:35:43Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12468",
+   "repo": "JabRef/jabref",
+   "number": 12468,
+   "title": "Ability to disable the built-in JabRef journal abbreviation list",
+   "url": "https://github.com/JabRef/jabref/issues/12468",
+   "type": "issue",
+   "draft": false,
+   "author": "Enivex",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "project: jabcon",
+    "component: journal-abbreviations"
+   ],
+   "updated_at": "2026-08-17T19:48:51Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -1406,6 +1452,27 @@
    "column": "backlog"
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/6057",
+   "repo": "JabRef/jabref",
+   "number": 6057,
+   "title": "Improve startup time",
+   "url": "https://github.com/JabRef/jabref/issues/6057",
+   "type": "issue",
+   "draft": false,
+   "author": "tobiasdiez",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "dev: performance",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-06-11T13:33:36Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/14519",
    "repo": "JabRef/jabref",
    "number": 14519,
@@ -1423,6 +1490,27 @@
     "good second issue"
    ],
    "updated_at": "2026-06-01T04:50:27Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/JabRef-Browser-Extension/issues/626",
+   "repo": "JabRef/JabRef-Browser-Extension",
+   "number": 626,
+   "title": "JabRef BrowserExtension for Safari",
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension/issues/626",
+   "type": "issue",
+   "draft": false,
+   "author": "AntonioDEM",
+   "assignees": [
+    "Siedlerchr"
+   ],
+   "labels": [
+    "status:accepted",
+    "status:help-wanted"
+   ],
+   "updated_at": "2026-05-03T20:23:55Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -1526,6 +1614,27 @@
    "column": "backlog"
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/10939",
+   "repo": "JabRef/jabref",
+   "number": 10939,
+   "title": "Imported settings cleared when clicking \"Save\"",
+   "url": "https://github.com/JabRef/jabref/issues/10939",
+   "type": "issue",
+   "draft": false,
+   "author": "ColinScarato",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "component: ui",
+    "component: preferences"
+   ],
+   "updated_at": "2025-02-24T21:23:23Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
    "id": "https://github.com/JabRef/jabref-koppor/issues/363",
    "repo": "JabRef/jabref-koppor",
    "number": 363,
@@ -1541,6 +1650,45 @@
     "dev: teaching-idea"
    ],
    "updated_at": "2025-01-05T00:20:55Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/user-documentation/issues/284",
+   "repo": "JabRef/user-documentation",
+   "number": 284,
+   "title": "Add pages for often-searched questions",
+   "url": "https://github.com/JabRef/user-documentation/issues/284",
+   "type": "issue",
+   "draft": false,
+   "author": "tobiasdiez",
+   "assignees": [
+    "Siedlerchr"
+   ],
+   "labels": [],
+   "updated_at": "2024-12-18T15:40:42Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/4682",
+   "repo": "JabRef/jabref",
+   "number": 4682,
+   "title": "Groups context menu: Structure remove groups and subgroups",
+   "url": "https://github.com/JabRef/jabref/issues/4682",
+   "type": "issue",
+   "draft": false,
+   "author": "MartinKarim",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "component: ui",
+    "component: groups"
+   ],
+   "updated_at": "2024-11-13T16:49:41Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -1962,6 +2110,15 @@
    "summary": "commented on PR #16742"
   },
   {
+   "id": "14453102099",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:07:03Z",
+   "summary": "commented on #16809: Add fetcher by id for SWHID"
+  },
+  {
    "id": "14451338157",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -2061,6 +2218,15 @@
    "summary": "merged PR #16841"
   },
   {
+   "id": "14436730904",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T14:12:49Z",
+   "summary": "reviewed PR #16841 (approved)"
+  },
+  {
    "id": "14434812029",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -2077,6 +2243,15 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T13:34:31Z",
    "summary": "opened PR #16845"
+  },
+  {
+   "id": "14433169387",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "Siedlerchr",
+   "repo": "AndroidPoet/halo-kmp",
+   "created_at": "2026-09-04T13:14:03Z",
+   "summary": "starred"
   },
   {
    "id": "14431469381",
@@ -2241,6 +2416,13 @@
    "other": 0
   },
   {
+   "login": "Siedlerchr",
+   "points": 3,
+   "merged": 0,
+   "reviews": 1,
+   "other": 1
+  },
+  {
    "login": "ThiloteE",
    "points": 0,
    "merged": 0,
@@ -2270,6 +2452,13 @@
   },
   {
    "login": "JohnnyGoodNews",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "calixtus",
    "points": 0,
    "merged": 0,
    "reviews": 0,
