@@ -33,7 +33,7 @@ function renderColumn(id, cards) {
     if (c.labels.includes('ready-for-review')) tags.push('<span class="tag rfr">ready for review</span>');
     return `<div class="card ${other ? 'other' : ''} ${c.draft ? 'draft' : ''}" style="border-left-color:${color[c.author] || 'var(--border)'}">
       ${avatar(c.author)}<span class="num">${c.type === 'pr' ? '⇄' : '◉'} #${c.number}</span>
-      <span class="title">${esc(c.title)}</span>${tags.join('')}<span class="repo">${esc(c.repo)}</span></div>`;
+      <span class="title">${esc(c.title)}</span>${tags.join('')}<span class="repo">${esc(other ? c.repo : c.repo.slice(org.length))}</span></div>`;
   }).join('');
   box.scrollTop = scrollTop;
   updateMore(box);
@@ -131,7 +131,7 @@ function loadVideo() {
 
 document.querySelectorAll('.cards').forEach((b) => b.addEventListener('scroll', () => updateMore(b)));
 const scale = parseFloat(new URLSearchParams(location.search).get('scale'));
-if (scale > 0) document.documentElement.style.fontSize = `${1.146 * scale}vw`;
+if (scale > 0) document.documentElement.style.fontSize = `min(${1.146 * scale}vw, ${2.037 * scale}vh)`;
 load();
 loadVideo();
 setInterval(load, 60000);
