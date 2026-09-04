@@ -15,7 +15,7 @@ header {
 header.stale { background: #4a3a10; }
 header h1 { margin: 0; font-size: 2.4rem; letter-spacing: .05em; }
 #clock { font-size: 2.4rem; font-variant-numeric: tabular-nums; }
-#progress { flex: 1; display: flex; flex-direction: column; gap: .15rem; font-size: .75rem; color: var(--muted); }
+#timeline { flex: 1; display: flex; flex-direction: column; gap: .15rem; font-size: .75rem; color: var(--muted); }
 #phases, #dates { display: flex; justify-content: space-between; }
 #phases { position: relative; height: 1rem; }
 #phases span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
