@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T22:49:43+00:00",
+ "generated_at": "2026-09-04T23:00:47+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -470,7 +470,7 @@
     "status: changes-required",
     "component: git"
    ],
-   "updated_at": "2026-09-04T22:48:55Z",
+   "updated_at": "2026-09-04T23:00:50Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -501,7 +501,25 @@
     "component: theming",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T22:46:10Z",
+   "updated_at": "2026-09-04T22:57:45Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/unicode-org/icu/pull/2127",
+   "repo": "unicode-org/icu",
+   "number": 2127,
+   "title": "ICU-22080 Add plain ASCII as an explicitly detected type",
+   "url": "https://github.com/unicode-org/icu/pull/2127",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "markusicu"
+   ],
+   "labels": [],
+   "updated_at": "2026-09-04T22:55:59Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2192,6 +2210,174 @@
  ],
  "events": [
   {
+   "id": "14463249708",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:47Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463249674",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:47Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463245451",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:39Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463245433",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:39Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463244714",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:38Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463244724",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:37Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243794",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:36Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243816",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:35Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243062",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:35Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243090",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:34Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463242452",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:33Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463242470",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:32Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463227245",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:04Z",
+   "summary": "commented on #16849: Add SWHID identifier and Software Heritage fetcher",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849"
+  },
+  {
+   "id": "14462954952",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "unicode-org/icu",
+   "created_at": "2026-09-04T22:51:54Z",
+   "summary": "commented on #2127: ICU-22080 Add plain ASCII as an explicitly detected type",
+   "number": 2127,
+   "merged": false,
+   "url": "https://github.com/unicode-org/icu/pull/2127"
+  },
+  {
    "id": "14462777921",
    "type": "IssuesEvent",
    "action": "opened",
@@ -3873,6 +4059,174 @@
   }
  ],
  "all_events": [
+  {
+   "id": "14463249708",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:47Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463249674",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:47Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463245451",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:39Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463245433",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:39Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463244714",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:38Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463244724",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:37Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243794",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:36Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243816",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:35Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243062",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:35Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463243090",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:34Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463242452",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:33Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463242470",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:32Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463227245",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:04Z",
+   "summary": "commented on #16849: Add SWHID identifier and Software Heritage fetcher",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849"
+  },
+  {
+   "id": "14462954952",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "unicode-org/icu",
+   "created_at": "2026-09-04T22:51:54Z",
+   "summary": "commented on #2127: ICU-22080 Add plain ASCII as an explicitly detected type",
+   "number": 2127,
+   "merged": false,
+   "url": "https://github.com/unicode-org/icu/pull/2127"
+  },
   {
    "id": "14462777921",
    "type": "IssuesEvent",
@@ -5587,6 +5941,13 @@
    "other": 26
   },
   {
+   "login": "koppor",
+   "points": 31,
+   "merged": 3,
+   "reviews": 7,
+   "other": 8
+  },
+  {
    "login": "subhramit",
    "points": 24,
    "merged": 0,
@@ -5608,18 +5969,11 @@
    "other": 9
   },
   {
-   "login": "koppor",
-   "points": 12,
-   "merged": 3,
-   "reviews": 1,
-   "other": 1
-  },
-  {
    "login": "Siedlerchr",
-   "points": 11,
+   "points": 12,
    "merged": 0,
    "reviews": 4,
-   "other": 3
+   "other": 4
   },
   {
    "login": "ThiloteE",
