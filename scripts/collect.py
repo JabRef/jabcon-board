@@ -18,6 +18,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = json.load(open(os.path.join(ROOT, "config.json")))
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN")
+# A fine-grained PAT scoped to private repos; used only for milestones (it cannot run global searches: 422)
+MILESTONE_TOKEN = os.environ.get("MILESTONE_TOKEN") or TOKEN
 PARTICIPANTS = CONFIG["participants"]
 START = datetime.fromisoformat(CONFIG["jabcon_start"])
 END = datetime.fromisoformat(CONFIG["jabcon_end"])
@@ -26,11 +28,12 @@ EXCLUDE = {r.lower() for r in CONFIG.get("exclude_repos", [])}
 BOT_SUFFIX = "[bot]"
 
 
-def get(path, params=None):
+def get(path, params=None, token=None):
     url = API + path + ("?" + urllib.parse.urlencode(params) if params else "")
     req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"})
-    if TOKEN:
-        req.add_header("Authorization", "Bearer " + TOKEN)
+    token = token or TOKEN
+    if token:
+        req.add_header("Authorization", "Bearer " + token)
     for attempt in range(3):
         try:
             with urllib.request.urlopen(req, timeout=60) as resp:
@@ -245,7 +248,7 @@ def milestones(previous):
     for ref in CONFIG.get("milestones", []):
         owner, repo, number = ref.split("/")
         try:
-            m, _ = get(f"/repos/{owner}/{repo}/milestones/{number}")
+            m, _ = get(f"/repos/{owner}/{repo}/milestones/{number}", token=MILESTONE_TOKEN)
         except urllib.error.HTTPError as e:
             print(f"::warning::milestone {ref} skipped ({e.code}; private repo? set the BOARD_TOKEN secret)")
             continue
