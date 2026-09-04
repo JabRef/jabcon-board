@@ -59,8 +59,10 @@ section h2 .count { float: right; color: var(--fg); }
 .milestone .before { background: #1f6feb; }
 .milestone .during { background: var(--ok); }
 .milestone .label { display: flex; justify-content: space-between; white-space: nowrap; gap: .5rem; }
+.milestone .label > a { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.milestone .label > span { flex: none; }
 .milestone .label .muted { color: var(--muted); font-size: .75rem; }
-#milestones .private { color: var(--muted); font-size: .75rem; margin-top: .2rem; }
+#milestones .private { color: var(--muted); font-size: .75rem; margin-top: .2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #statsrow > div { min-width: 0; overflow: hidden; }
 #statsrow h3 { margin: 0 0 .3rem; font-size: .9rem; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
 #refactorings { list-style: none; margin: 0; padding: 0; font-size: .85rem; }
