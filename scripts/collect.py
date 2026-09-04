@@ -146,13 +146,14 @@ def summarize(e):
     t = e["type"]
     issue = p.get("issue") or p.get("pull_request") or {}
     ref = f"#{issue['number']}" if issue.get("number") else ""
+    title = f": {issue['title']}" if issue.get("title") else ""
     return {
         "PushEvent": f"pushed {len(p.get('commits', []))} commit(s) to {p.get('ref', '').removeprefix('refs/heads/')}",
-        "PullRequestEvent": f"{p.get('action')} PR {ref}: {issue.get('title', '')}",
+        "PullRequestEvent": f"{'merged' if (p.get('pull_request') or {}).get('merged') else p.get('action')} PR {ref}{title}",
         "PullRequestReviewEvent": f"reviewed PR {ref} ({(p.get('review') or {}).get('state', '').lower()})",
         "PullRequestReviewCommentEvent": f"commented on PR {ref}",
-        "IssuesEvent": f"{p.get('action')} issue {ref}: {issue.get('title', '')}",
-        "IssueCommentEvent": f"commented on {ref}: {issue.get('title', '')}",
+        "IssuesEvent": f"{p.get('action')} issue {ref}{title}",
+        "IssueCommentEvent": f"commented on {ref}{title}",
         "CreateEvent": f"created {p.get('ref_type')} {p.get('ref') or ''}".strip(),
         "DeleteEvent": f"deleted {p.get('ref_type')} {p.get('ref') or ''}".strip(),
         "WatchEvent": "starred",
