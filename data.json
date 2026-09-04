@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T21:23:22+00:00",
+ "generated_at": "2026-09-04T21:28:41+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -132,6 +132,42 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16702",
+   "repo": "JabRef/jabref",
+   "number": 16702,
+   "title": "Improve logging to find out which linked file has a flaw (#15680)",
+   "url": "https://github.com/JabRef/jabref/pull/16702",
+   "type": "pr",
+   "draft": false,
+   "author": "chlendyd7",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: search",
+    "component: external-files",
+    "good first issue",
+    "component: logging",
+    "first contrib",
+    "status: to-be-merged",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T21:24:11Z",
+   "closed_at": "2026-09-04T21:24:03Z",
+   "merged_at": "2026-09-04T21:24:03Z",
+   "column": "done",
+   "stats": {
+    "additions": 12,
+    "deletions": 2,
+    "changed_files": 4,
+    "components": {
+     "(root)": 1,
+     "jabgui": 7,
+     "jablib": 6
+    },
+    "refactorings": []
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16825",
    "repo": "JabRef/jabref",
@@ -318,6 +354,29 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/15680",
+   "repo": "JabRef/jabref",
+   "number": 15680,
+   "title": "Improve logging to find out which linked file has a flaw",
+   "url": "https://github.com/JabRef/jabref/issues/15680",
+   "type": "issue",
+   "draft": false,
+   "author": "ThiloteE",
+   "assignees": [
+    "chlendyd7"
+   ],
+   "labels": [
+    "component: external-files",
+    "good first issue",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-04T21:26:00Z",
+   "closed_at": "2026-09-04T21:24:04Z",
+   "merged_at": null,
+   "column": "done"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16477",
    "repo": "JabRef/jabref",
    "number": 16477,
@@ -340,6 +399,26 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16813",
+   "repo": "JabRef/jabref",
+   "number": 16813,
+   "title": "Synchronize local libraries with their files (merge external changes without a dialog)",
+   "url": "https://github.com/JabRef/jabref/pull/16813",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: preferences",
+    "status: changes-required",
+    "component: external-changes"
+   ],
+   "updated_at": "2026-09-04T21:28:39Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16845",
    "repo": "JabRef/jabref",
    "number": 16845,
@@ -357,27 +436,7 @@
     "status: changes-required",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T21:23:26Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16813",
-   "repo": "JabRef/jabref",
-   "number": 16813,
-   "title": "Synchronize local libraries with their files (merge external changes without a dialog)",
-   "url": "https://github.com/JabRef/jabref/pull/16813",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: preferences",
-    "status: changes-required",
-    "component: external-changes"
-   ],
-   "updated_at": "2026-09-04T21:20:46Z",
+   "updated_at": "2026-09-04T21:28:00Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -657,31 +716,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16702",
-   "repo": "JabRef/jabref",
-   "number": 16702,
-   "title": "Improve logging to find out which linked file has a flaw (#15680)",
-   "url": "https://github.com/JabRef/jabref/pull/16702",
-   "type": "pr",
-   "draft": false,
-   "author": "chlendyd7",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: search",
-    "component: external-files",
-    "good first issue",
-    "component: logging",
-    "first contrib",
-    "status: to-be-merged",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-04T21:10:49Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16760",
    "repo": "JabRef/jabref",
    "number": 16760,
@@ -889,7 +923,7 @@
     "\ud83d\udccd Assigned",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-04T21:23:24Z",
+   "updated_at": "2026-09-04T21:27:58Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -2038,6 +2072,102 @@
   }
  ],
  "events": [
+  {
+   "id": "14459772479",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:29:03Z",
+   "summary": "reviewed PR #16835 (approved)",
+   "number": 16835,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459761276",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:28:46Z",
+   "summary": "reviewed PR #16845 (commented)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459759876",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:28:43Z",
+   "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459649114",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:26:02Z",
+   "summary": "reviewed PR #16845 (commented)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459647943",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:26:00Z",
+   "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459566971",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:24:07Z",
+   "summary": "reviewed PR #16845 (commented)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459566071",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:24:05Z",
+   "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459565359",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:24:05Z",
+   "summary": "closed issue #15680: Improve logging to find out which linked file has a flaw",
+   "number": 15680,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/15680"
+  },
   {
    "id": "14459424401",
    "type": "PullRequestReviewEvent",
@@ -3288,13 +3418,13 @@
   }
  ],
  "stats": {
-  "additions": 549,
-  "deletions": 55,
-  "changed_files": 44,
+  "additions": 561,
+  "deletions": 57,
+  "changed_files": 48,
   "components": {
-   "(root)": 27,
-   "jablib": 33,
-   "jabgui": 343,
+   "(root)": 28,
+   "jabgui": 350,
+   "jablib": 39,
    ".jbang": 6,
    "docs": 26,
    "jabkit": 8,
@@ -3320,6 +3450,13 @@
    "other": 14
   },
   {
+   "login": "pluto-han",
+   "points": 14,
+   "merged": 0,
+   "reviews": 3,
+   "other": 8
+  },
+  {
    "login": "subhramit",
    "points": 12,
    "merged": 0,
@@ -3335,10 +3472,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 7,
+   "points": 10,
    "merged": 0,
-   "reviews": 3,
-   "other": 1
+   "reviews": 4,
+   "other": 2
   },
   {
    "login": "koppor",
@@ -3346,13 +3483,6 @@
    "merged": 2,
    "reviews": 0,
    "other": 0
-  },
-  {
-   "login": "pluto-han",
-   "points": 5,
-   "merged": 0,
-   "reviews": 0,
-   "other": 5
   },
   {
    "login": "ThiloteE",
