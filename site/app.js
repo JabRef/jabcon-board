@@ -93,6 +93,11 @@ function renderTicker() {
 
 function celebrate(prev) {
   if (!prev) return;
+  const leader = data.leaderboard[0]?.login, before = prev.leaderboard[0]?.login;
+  if (leader && before && leader !== before) {
+    bell();
+    toast(`🔔 ${leader} takes the lead!`);
+  }
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
     const who = c.type === 'pr' ? c.author : c.assignees[0] || c.author;
@@ -100,6 +105,29 @@ function celebrate(prev) {
     if (window.confetti) confetti({ particleCount: 200, spread: 90, origin: { y: 0.7 } });
   }
 }
+
+// Fairground bell: a few bright partials with a fast decay, struck three times. Browsers may block audio until
+// the page got one click after load; the click handler below unlocks it.
+let audio;
+function bell() {
+  try {
+    audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+    if (audio.state === 'suspended') audio.resume();
+    const t0 = audio.currentTime;
+    [0, 0.35, 0.7].forEach((offset) => {
+      [1, 2.4, 3.9, 5.2].forEach((ratio, i) => {
+        const osc = audio.createOscillator(), gain = audio.createGain();
+        osc.frequency.value = 880 * ratio;
+        gain.gain.setValueAtTime(0.25 / (i + 1), t0 + offset);
+        gain.gain.exponentialRampToValueAtTime(0.001, t0 + offset + 1.2);
+        osc.connect(gain).connect(audio.destination);
+        osc.start(t0 + offset);
+        osc.stop(t0 + offset + 1.3);
+      });
+    });
+  } catch (e) { /* no audio */ }
+}
+document.addEventListener('click', () => { if (audio?.state === 'suspended') audio.resume(); }, { once: false });
 
 let toastTimer;
 function toast(text) {
