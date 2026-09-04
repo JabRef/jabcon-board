@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T22:12:04+00:00",
+ "generated_at": "2026-09-04T22:21:42+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -741,6 +741,27 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16615",
+   "repo": "JabRef/jabref",
+   "number": 16615,
+   "title": "16075 support multiple customized preview styles",
+   "url": "https://github.com/JabRef/jabref/pull/16615",
+   "type": "pr",
+   "draft": false,
+   "author": "bgyoo970",
+   "assignees": [],
+   "labels": [
+    "component: preferences",
+    "component: entry-preview",
+    "good first issue",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T22:17:16Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2103,6 +2124,30 @@
  ],
  "events": [
   {
+   "id": "14461889822",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:21:58Z",
+   "summary": "reviewed PR #16820 (dismissed)",
+   "number": 16820,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14461889662",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:21:57Z",
+   "summary": "reviewed PR #16820 (dismissed)",
+   "number": 16820,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14461439119",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -2121,7 +2166,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T22:03:10Z",
-   "summary": "reviewed PR #16820 (approved)",
+   "summary": "reviewed PR #16820 (dismissed)",
    "number": 16820,
    "merged": false,
    "url": "https://github.com/JabRef/jabref"
@@ -3624,18 +3669,18 @@
    "other": 15
   },
   {
+   "login": "subhramit",
+   "points": 21,
+   "merged": 0,
+   "reviews": 6,
+   "other": 9
+  },
+  {
    "login": "calixtus",
    "points": 18,
    "merged": 0,
    "reviews": 7,
    "other": 4
-  },
-  {
-   "login": "subhramit",
-   "points": 17,
-   "merged": 0,
-   "reviews": 4,
-   "other": 9
   },
   {
    "login": "pluto-han",
