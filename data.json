@@ -20,7 +20,7 @@
    "baseline": 45
   }
  ],
- "generated_at": "2026-09-04T11:49:05+00:00",
+ "generated_at": "2026-09-04T12:20:26+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -68,7 +68,7 @@
    "labels": [
     "integrated"
    ],
-   "updated_at": "2026-09-04T10:41:58Z",
+   "updated_at": "2026-09-04T12:08:07Z",
    "closed_at": "2026-09-04T10:41:52Z",
    "merged_at": null,
    "column": "done",
@@ -95,7 +95,7 @@
    "labels": [
     "rfr"
    ],
-   "updated_at": "2026-09-04T11:48:39Z",
+   "updated_at": "2026-09-04T12:04:33Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -251,6 +251,32 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16651",
+   "repo": "JabRef/jabref",
+   "number": 16651,
+   "title": "Git integration SLR",
+   "url": "https://github.com/JabRef/jabref/pull/16651",
+   "type": "pr",
+   "draft": false,
+   "author": "LoayTarek5",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "status: changes-required",
+    "component: slr",
+    "good second issue",
+    "status: awaiting-second-review",
+    "component: git"
+   ],
+   "updated_at": "2026-09-04T12:19:57Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1339,6 +1365,15 @@
  ],
  "events": [
   {
+   "id": "14428618777",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-04T11:51:06Z",
+   "summary": "commented on #2291: 8090896: Allow skipping apps build"
+  },
+  {
    "id": "14428524264",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -1422,10 +1457,10 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 4,
+   "points": 5,
    "merged": 0,
    "reviews": 1,
-   "other": 2
+   "other": 3
   },
   {
    "login": "subhramit",
