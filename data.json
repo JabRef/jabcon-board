@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T21:48:40+00:00",
+ "generated_at": "2026-09-04T22:12:04+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -457,6 +457,25 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16831",
+   "repo": "JabRef/jabref",
+   "number": 16831,
+   "title": "Show full text download search as background task",
+   "url": "https://github.com/JabRef/jabref/pull/16831",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: external-files",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T21:51:21Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16813",
    "repo": "JabRef/jabref",
    "number": 16813,
@@ -495,25 +514,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-04T21:42:13Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16831",
-   "repo": "JabRef/jabref",
-   "number": 16831,
-   "title": "Show full text download search as background task",
-   "url": "https://github.com/JabRef/jabref/pull/16831",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: external-files",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T21:36:56Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -758,7 +758,7 @@
    "labels": [
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-04T21:48:04Z",
+   "updated_at": "2026-09-04T21:56:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2102,6 +2102,30 @@
   }
  ],
  "events": [
+  {
+   "id": "14461439119",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:10:19Z",
+   "summary": "commented on #16820: Chore(deps): Bump jablib/src/main/resources/csl-styles from `0819c0e` to `db768d4`",
+   "number": 16820,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16820"
+  },
+  {
+   "id": "14461156787",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:03:10Z",
+   "summary": "reviewed PR #16820 (approved)",
+   "number": 16820,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14460554803",
    "type": "PullRequestReviewEvent",
@@ -3607,18 +3631,18 @@
    "other": 4
   },
   {
+   "login": "subhramit",
+   "points": 17,
+   "merged": 0,
+   "reviews": 4,
+   "other": 9
+  },
+  {
    "login": "pluto-han",
    "points": 15,
    "merged": 0,
    "reviews": 3,
    "other": 9
-  },
-  {
-   "login": "subhramit",
-   "points": 14,
-   "merged": 0,
-   "reviews": 3,
-   "other": 8
   },
   {
    "login": "Siedlerchr",
