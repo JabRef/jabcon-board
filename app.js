@@ -7,6 +7,8 @@ let color = {};
 
 const $ = (s) => document.querySelector(s);
 const avatar = (login, cls = 'avatar') => `<img class="${cls}" src="https://github.com/${login}.png?size=64" alt="" title="${login}" style="--c:${color[login] || 'var(--border)'}">`;
+const link = (url, inner, cls = '') => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${inner}</a>`;
+const repoLink = (repo, text) => link(`https://github.com/${repo}`, esc(text), 'repo');
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 function ago(iso) {
@@ -32,8 +34,8 @@ function renderColumn(id, cards) {
     else if (c.closed_at) tags.push('<span class="tag closed">closed</span>');
     if (c.labels.includes('ready-for-review')) tags.push('<span class="tag rfr">ready for review</span>');
     return `<div class="card ${other ? 'other' : ''} ${c.draft ? 'draft' : ''}" style="border-left-color:${color[c.author] || 'var(--border)'}">
-      ${avatar(c.author)}<span class="num">${c.type === 'pr' ? '⇄' : '◉'} #${c.number}</span>
-      <span class="title">${esc(c.title)}</span>${tags.join('')}<span class="repo">${esc(other ? c.repo : c.repo.slice(org.length))}</span></div>`;
+      ${avatar(c.author)}${link(c.url, `<span class="num">${c.type === 'pr' ? '⇄' : '◉'} #${c.number}</span>
+      <span class="title">${esc(c.title)}</span>`, 'main')}${tags.join('')}${repoLink(c.repo, other ? c.repo : c.repo.slice(org.length))}</div>`;
   }).join('');
   box.scrollTop = scrollTop;
   updateMore(box);
@@ -57,13 +59,13 @@ function renderStats() {
     `<span>${esc(name)}</span><div class="bar" style="width:${(100 * n / max).toFixed(1)}%"></div><span>${n}</span>`).join('');
   $('#milestones').innerHTML = (data.milestones || []).map((m) => {
     const total = m.open + m.closed || 1, during = m.closed - m.baseline;
-    return `<div class="milestone"><div class="label"><span>${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span></span>
+    return `<div class="milestone"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}
       <span>${m.closed}/${total}${during ? ` <span class="muted">+${during}</span>` : ''}</span></div>
       <div class="bar"><div class="during" style="width:${(100 * m.closed / total).toFixed(1)}%"></div><div class="before" style="width:${(100 * m.baseline / total).toFixed(1)}%"></div></div></div>`;
   }).join('') + Object.entries(data.private_activity || {}).map(([repo, c]) =>
     `<div class="private">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
   $('#refactorings').innerHTML = data.refactorings.map((r) =>
-    `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span><span class="repo">${esc(r.repo)}#${r.number}</span></li>`).join('');
+    `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
   $('#leaderboard').innerHTML = data.leaderboard.map((l) =>
     `<div class="leader" style="--c:${color[l.login]}" title="${l.merged} merged PRs × 3 = ${l.merged * 3}
 ${l.reviews} reviews × 2 = ${l.reviews * 2}
@@ -73,7 +75,7 @@ ${l.other} comments / issues / pushes × 1 = ${l.other}">${avatar(l.login, '')}<
 function renderTicker() {
   const org = data.config.org + '/';
   $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map((e) =>
-    `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span><span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)}</span><span class="repo">${esc(e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</span></li>`).join('');
+    `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.url, `<span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)}</span>`, 'main')}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`).join('');
 }
 
 function celebrate(prev) {

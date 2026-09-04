@@ -67,7 +67,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T20:48:48+00:00",
+ "generated_at": "2026-09-04T20:57:56+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -186,6 +186,74 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16831",
+   "repo": "JabRef/jabref",
+   "number": 16831,
+   "title": "Show full text download search as background task",
+   "url": "https://github.com/JabRef/jabref/pull/16831",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: external-files",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T20:57:53Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16791",
+   "repo": "JabRef/jabref",
+   "number": 16791,
+   "title": "Ship JEP 514 AOT cache in jabkit app image",
+   "url": "https://github.com/JabRef/jabref/pull/16791",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "status: devcall",
+    "component: jabkit",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-04T20:54:36Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16835",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "title": "Add per-library keyword separator",
+   "url": "https://github.com/JabRef/jabref/pull/16835",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: cleanup-ops",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: citationkey-generator",
+    "component: bib(la)tex",
+    "component: import-load",
+    "component: export-or-save",
+    "component: entry-editor",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-04T20:50:59Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16774",
    "repo": "JabRef/jabref",
    "number": 16774,
@@ -222,34 +290,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-04T20:31:34Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16835",
-   "repo": "JabRef/jabref",
-   "number": 16835,
-   "title": "Add per-library keyword separator",
-   "url": "https://github.com/JabRef/jabref/pull/16835",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: cleanup-ops",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: citationkey-generator",
-    "component: bib(la)tex",
-    "component: import-load",
-    "component: export-or-save",
-    "component: entry-editor",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-04T20:09:31Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -382,44 +422,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16831",
-   "repo": "JabRef/jabref",
-   "number": 16831,
-   "title": "Show full text download search as background task",
-   "url": "https://github.com/JabRef/jabref/pull/16831",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: external-files",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T03:41:41Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16791",
-   "repo": "JabRef/jabref",
-   "number": 16791,
-   "title": "Ship JEP 514 AOT cache in jabkit app image",
-   "url": "https://github.com/JabRef/jabref/pull/16791",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: jabkit"
-   ],
-   "updated_at": "2026-09-04T03:41:17Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16813",
    "repo": "JabRef/jabref",
    "number": 16813,
@@ -514,6 +516,29 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16795",
+   "repo": "JabRef/jabref",
+   "number": 16795,
+   "title": "Show progress indicator during identifier lookup in New Entry dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16795",
+   "type": "pr",
+   "draft": false,
+   "author": "developer852",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: import-load",
+    "good first issue",
+    "status: awaiting-second-review",
+    "first contrib",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T20:53:21Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1876,13 +1901,134 @@
  ],
  "events": [
   {
+   "id": "14458418990",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:58:08Z",
+   "summary": "merged PR #16774",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458407754",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:57:54Z",
+   "summary": "reviewed PR #16831 (commented)",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458389299",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:57:29Z",
+   "summary": "commented on PR #16831",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458355250",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:56:44Z",
+   "summary": "commented on PR #16831",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458271287",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:54:54Z",
+   "summary": "commented on PR #16831",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458256901",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:54:28Z",
+   "summary": "labeled PR #16791",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458199235",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:53:22Z",
+   "summary": "reviewed PR #16795 (approved)",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458165532",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:52:35Z",
+   "summary": "commented on PR #16831",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458150571",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:52:16Z",
+   "summary": "reviewed PR #16795 (approved)",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458149505",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:52:14Z",
+   "summary": "reviewed PR #16795 (approved)",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458128430",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:51:46Z",
+   "summary": "reviewed PR #16795 (dismissed)",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458010530",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:49:13Z",
+   "summary": "commented on PR #16831",
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14457996708",
    "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:55Z",
-   "summary": "reviewed PR #16795 (commented)"
+   "summary": "reviewed PR #16795 (commented)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457991831",
@@ -1891,7 +2037,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:48Z",
-   "summary": "commented on PR #16795"
+   "summary": "commented on PR #16795",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457990497",
@@ -1900,7 +2047,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:46Z",
-   "summary": "commented on #16739: Fix button placement at commit dialog"
+   "summary": "commented on #16739: Fix button placement at commit dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16739"
   },
   {
    "id": "14457970115",
@@ -1909,7 +2057,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:21Z",
-   "summary": "commented on PR #16795"
+   "summary": "commented on PR #16795",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457889031",
@@ -1918,7 +2067,8 @@
    "actor": "koppor",
    "repo": "TGRRRR/heading-outliner",
    "created_at": "2026-09-04T20:46:33Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/TGRRRR/heading-outliner"
   },
   {
    "id": "14457796258",
@@ -1927,7 +2077,8 @@
    "actor": "calixtus",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:44:35Z",
-   "summary": "reviewed PR #16774 (approved)"
+   "summary": "reviewed PR #16774 (approved)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457720517",
@@ -1936,7 +2087,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:43:00Z",
-   "summary": "reviewed PR #16774 (commented)"
+   "summary": "reviewed PR #16774 (commented)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457719361",
@@ -1945,7 +2097,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:42:59Z",
-   "summary": "commented on PR #16774"
+   "summary": "commented on PR #16774",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457711003",
@@ -1954,7 +2107,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:42:48Z",
-   "summary": "reviewed PR #16774 (approved)"
+   "summary": "reviewed PR #16774 (approved)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457645929",
@@ -1963,7 +2117,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:41:20Z",
-   "summary": "commented on #16763: Automatically generate Git commit message"
+   "summary": "commented on #16763: Automatically generate Git commit message",
+   "url": "https://github.com/JabRef/jabref/issues/16763"
   },
   {
    "id": "14457397117",
@@ -1972,7 +2127,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:36:05Z",
-   "summary": "reviewed PR #16755 (changes_requested)"
+   "summary": "reviewed PR #16755 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457387857",
@@ -1981,7 +2137,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:35:53Z",
-   "summary": "commented on PR #16755"
+   "summary": "commented on PR #16755",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457297118",
@@ -1990,7 +2147,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:33:59Z",
-   "summary": "commented on PR #16755"
+   "summary": "commented on PR #16755",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457185157",
@@ -1999,7 +2157,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:31:35Z",
-   "summary": "reviewed PR #16845 (commented)"
+   "summary": "reviewed PR #16845 (commented)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457185058",
@@ -2008,7 +2167,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:31:35Z",
-   "summary": "reviewed PR #16845 (commented)"
+   "summary": "reviewed PR #16845 (commented)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457139818",
@@ -2017,7 +2177,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:30:35Z",
-   "summary": "commented on PR #16845"
+   "summary": "commented on PR #16845",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457107447",
@@ -2026,7 +2187,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:29:53Z",
-   "summary": "commented on PR #16845"
+   "summary": "commented on PR #16845",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14457087973",
@@ -2035,7 +2197,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:29:27Z",
-   "summary": "commented on PR #16845"
+   "summary": "commented on PR #16845",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14456834945",
@@ -2044,7 +2207,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:24:00Z",
-   "summary": "commented on PR #16845"
+   "summary": "commented on PR #16845",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14456771549",
@@ -2053,7 +2217,8 @@
    "actor": "JohnnyGoodNews",
    "repo": "kidpeterpan/inkbound",
    "created_at": "2026-09-04T20:22:39Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/kidpeterpan/inkbound"
   },
   {
    "id": "14456760356",
@@ -2062,7 +2227,8 @@
    "actor": "JohnnyGoodNews",
    "repo": "enderonat/Academical-Paper-Converter-To-Epub",
    "created_at": "2026-09-04T20:22:23Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/enderonat/Academical-Paper-Converter-To-Epub"
   },
   {
    "id": "14456748617",
@@ -2071,7 +2237,8 @@
    "actor": "JohnnyGoodNews",
    "repo": "TGRRRR/heading-outliner",
    "created_at": "2026-09-04T20:22:09Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/TGRRRR/heading-outliner"
   },
   {
    "id": "14456552498",
@@ -2080,7 +2247,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:17:50Z",
-   "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff"
+   "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
+   "url": "https://github.com/JabRef/jabref/pull/16834"
   },
   {
    "id": "14456169602",
@@ -2089,7 +2257,8 @@
    "actor": "JohnnyGoodNews",
    "repo": "Vinzent03/find-unlinked-files",
    "created_at": "2026-09-04T20:09:58Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/Vinzent03/find-unlinked-files"
   },
   {
    "id": "14456162740",
@@ -2098,7 +2267,8 @@
    "actor": "JohnnyGoodNews",
    "repo": "graydon/obsidian-dangling-links",
    "created_at": "2026-09-04T20:09:49Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/graydon/obsidian-dangling-links"
   },
   {
    "id": "14455700800",
@@ -2107,7 +2277,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:00:22Z",
-   "summary": "reviewed PR #16760 (changes_requested)"
+   "summary": "reviewed PR #16760 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14455700794",
@@ -2116,7 +2287,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:00:22Z",
-   "summary": "reviewed PR #16760 (changes_requested)"
+   "summary": "reviewed PR #16760 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14455654856",
@@ -2125,7 +2297,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:59:24Z",
-   "summary": "commented on PR #16760"
+   "summary": "commented on PR #16760",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14455612246",
@@ -2134,7 +2307,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:58:29Z",
-   "summary": "commented on PR #16760"
+   "summary": "commented on PR #16760",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14455601952",
@@ -2143,7 +2317,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:58:16Z",
-   "summary": "commented on PR #16760"
+   "summary": "commented on PR #16760",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454945395",
@@ -2152,7 +2327,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:44:37Z",
-   "summary": "reviewed PR #16846 (changes_requested)"
+   "summary": "reviewed PR #16846 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454907520",
@@ -2161,7 +2337,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:43:51Z",
-   "summary": "reviewed PR #16846 (commented)"
+   "summary": "reviewed PR #16846 (commented)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454906811",
@@ -2170,7 +2347,8 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:43:50Z",
-   "summary": "commented on PR #16846"
+   "summary": "commented on PR #16846",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454690332",
@@ -2179,7 +2357,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:39:21Z",
-   "summary": "reviewed PR #16760 (changes_requested)"
+   "summary": "reviewed PR #16760 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454685485",
@@ -2188,7 +2367,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:39:15Z",
-   "summary": "commented on PR #16760"
+   "summary": "commented on PR #16760",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454528166",
@@ -2197,7 +2377,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:36:02Z",
-   "summary": "reviewed PR #16222 (commented)"
+   "summary": "reviewed PR #16222 (commented)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454526692",
@@ -2206,7 +2387,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:36:00Z",
-   "summary": "commented on PR #16222"
+   "summary": "commented on PR #16222",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454414572",
@@ -2215,7 +2397,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:33:45Z",
-   "summary": "reviewed PR #16846 (changes_requested)"
+   "summary": "reviewed PR #16846 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454414520",
@@ -2224,7 +2407,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:33:45Z",
-   "summary": "reviewed PR #16846 (changes_requested)"
+   "summary": "reviewed PR #16846 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454347113",
@@ -2233,7 +2417,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:32:22Z",
-   "summary": "commented on PR #16846"
+   "summary": "commented on PR #16846",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454314071",
@@ -2242,7 +2427,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:31:43Z",
-   "summary": "commented on PR #16846"
+   "summary": "commented on PR #16846",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454305290",
@@ -2251,7 +2437,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:31:31Z",
-   "summary": "commented on PR #16846"
+   "summary": "commented on PR #16846",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454186699",
@@ -2260,7 +2447,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:29:05Z",
-   "summary": "reviewed PR #16742 (changes_requested)"
+   "summary": "reviewed PR #16742 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14454186684",
@@ -2269,7 +2457,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:29:05Z",
-   "summary": "reviewed PR #16742 (changes_requested)"
+   "summary": "reviewed PR #16742 (changes_requested)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14453799264",
@@ -2278,7 +2467,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:21:07Z",
-   "summary": "commented on PR #16742"
+   "summary": "commented on PR #16742",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14453766257",
@@ -2287,7 +2477,8 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:20:24Z",
-   "summary": "commented on PR #16742"
+   "summary": "commented on PR #16742",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14453102099",
@@ -2296,7 +2487,8 @@
    "actor": "Siedlerchr",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:07:03Z",
-   "summary": "commented on #16809: Add fetcher by id for SWHID"
+   "summary": "commented on #16809: Add fetcher by id for SWHID",
+   "url": "https://github.com/JabRef/jabref/issues/16809"
   },
   {
    "id": "14451338157",
@@ -2305,7 +2497,8 @@
    "actor": "subhramit",
    "repo": "apache/spark",
    "created_at": "2026-09-04T18:32:02Z",
-   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`"
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225"
   },
   {
    "id": "14451018940",
@@ -2314,7 +2507,8 @@
    "actor": "subhramit",
    "repo": "apache/airflow",
    "created_at": "2026-09-04T18:25:57Z",
-   "summary": "commented on #71976: Add deferrable support to `InfluxDB3Operator`"
+   "summary": "commented on #71976: Add deferrable support to `InfluxDB3Operator`",
+   "url": "https://github.com/apache/airflow/pull/71976"
   },
   {
    "id": "14449529429",
@@ -2323,7 +2517,8 @@
    "actor": "subhramit",
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:58:00Z",
-   "summary": "reviewed PR #58225 (commented)"
+   "summary": "reviewed PR #58225 (commented)",
+   "url": "https://github.com/apache/spark"
   },
   {
    "id": "14449527589",
@@ -2332,7 +2527,8 @@
    "actor": "subhramit",
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:57:58Z",
-   "summary": "commented on PR #58225"
+   "summary": "commented on PR #58225",
+   "url": "https://github.com/apache/spark"
   },
   {
    "id": "14449488393",
@@ -2341,7 +2537,8 @@
    "actor": "subhramit",
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:57:12Z",
-   "summary": "reviewed PR #58225 (commented)"
+   "summary": "reviewed PR #58225 (commented)",
+   "url": "https://github.com/apache/spark"
   },
   {
    "id": "14449487598",
@@ -2350,7 +2547,8 @@
    "actor": "subhramit",
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:57:11Z",
-   "summary": "commented on PR #58225"
+   "summary": "commented on PR #58225",
+   "url": "https://github.com/apache/spark"
   },
   {
    "id": "14447371899",
@@ -2359,7 +2557,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T17:15:43Z",
-   "summary": "reopened PR #16846"
+   "summary": "reopened PR #16846",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14445549935",
@@ -2368,7 +2567,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T16:41:37Z",
-   "summary": "commented on #16846: Remove hardcoded styling"
+   "summary": "commented on #16846: Remove hardcoded styling",
+   "url": "https://github.com/JabRef/jabref/pull/16846"
   },
   {
    "id": "14440283288",
@@ -2377,7 +2577,8 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T15:10:25Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
    "id": "14445552183",
@@ -2386,7 +2587,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T14:50:54Z",
-   "summary": "closed PR #16846"
+   "summary": "closed PR #16846",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14438315759",
@@ -2395,7 +2597,8 @@
    "actor": "koppor",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T14:38:27Z",
-   "summary": "merged PR #16841"
+   "summary": "merged PR #16841",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14436730904",
@@ -2404,7 +2607,8 @@
    "actor": "Siedlerchr",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T14:12:49Z",
-   "summary": "reviewed PR #16841 (approved)"
+   "summary": "reviewed PR #16841 (approved)",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14434812029",
@@ -2413,7 +2617,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T13:41:26Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
    "id": "14434394462",
@@ -2422,7 +2627,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T13:34:31Z",
-   "summary": "opened PR #16845"
+   "summary": "opened PR #16845",
+   "url": "https://github.com/JabRef/jabref"
   },
   {
    "id": "14433169387",
@@ -2431,7 +2637,8 @@
    "actor": "Siedlerchr",
    "repo": "AndroidPoet/halo-kmp",
    "created_at": "2026-09-04T13:14:03Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/AndroidPoet/halo-kmp"
   },
   {
    "id": "14431469381",
@@ -2440,7 +2647,8 @@
    "actor": "Maran23",
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T12:44:42Z",
-   "summary": "reviewed PR #1935 (commented)"
+   "summary": "reviewed PR #1935 (commented)",
+   "url": "https://github.com/openjdk/jfx"
   },
   {
    "id": "14431467898",
@@ -2449,7 +2657,8 @@
    "actor": "Maran23",
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T12:44:40Z",
-   "summary": "commented on PR #1935"
+   "summary": "commented on PR #1935",
+   "url": "https://github.com/openjdk/jfx"
   },
   {
    "id": "14430706823",
@@ -2458,7 +2667,8 @@
    "actor": "Maran23",
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T12:30:43Z",
-   "summary": "commented on #2291: 8090896: Allow skipping apps build"
+   "summary": "commented on #2291: 8090896: Allow skipping apps build",
+   "url": "https://github.com/openjdk/jfx/pull/2291"
   },
   {
    "id": "14428618777",
@@ -2467,7 +2677,8 @@
    "actor": "Maran23",
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T11:51:06Z",
-   "summary": "commented on #2291: 8090896: Allow skipping apps build"
+   "summary": "commented on #2291: 8090896: Allow skipping apps build",
+   "url": "https://github.com/openjdk/jfx/pull/2291"
   },
   {
    "id": "14428524264",
@@ -2476,7 +2687,8 @@
    "actor": "Maran23",
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T11:49:12Z",
-   "summary": "reviewed PR #2291 (commented)"
+   "summary": "reviewed PR #2291 (commented)",
+   "url": "https://github.com/openjdk/jfx"
   },
   {
    "id": "14428522874",
@@ -2485,7 +2697,8 @@
    "actor": "Maran23",
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T11:49:11Z",
-   "summary": "commented on PR #2291"
+   "summary": "commented on PR #2291",
+   "url": "https://github.com/openjdk/jfx"
   },
   {
    "id": "14425349255",
@@ -2494,7 +2707,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T10:45:26Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
    "id": "14423648346",
@@ -2503,7 +2717,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T10:11:02Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
    "id": "14423121207",
@@ -2512,7 +2727,8 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T10:00:43Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
    "id": "14421435588",
@@ -2521,7 +2737,8 @@
    "actor": "Maran23",
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T09:28:35Z",
-   "summary": "commented on #2291: 8090896: Allow skipping apps build"
+   "summary": "commented on #2291: 8090896: Allow skipping apps build",
+   "url": "https://github.com/openjdk/jfx/pull/2291"
   },
   {
    "id": "14414851461",
@@ -2530,7 +2747,8 @@
    "actor": "pluto-han",
    "repo": "JabRef/jabcon-board",
    "created_at": "2026-09-04T07:17:22Z",
-   "summary": "starred"
+   "summary": "starred",
+   "url": "https://github.com/JabRef/jabcon-board"
   },
   {
    "id": "14414119140",
@@ -2539,7 +2757,8 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T07:01:46Z",
-   "summary": "reviewed PR #16755 (approved)"
+   "summary": "reviewed PR #16755 (approved)",
+   "url": "https://github.com/JabRef/jabref"
   }
  ],
  "stats": {
@@ -2562,16 +2781,16 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 41,
+   "points": 48,
    "merged": 0,
-   "reviews": 11,
-   "other": 19
+   "reviews": 12,
+   "other": 24
   },
   {
    "login": "Maran23",
-   "points": 23,
+   "points": 27,
    "merged": 0,
-   "reviews": 7,
+   "reviews": 9,
    "other": 9
   },
   {
@@ -2580,6 +2799,13 @@
    "merged": 0,
    "reviews": 3,
    "other": 6
+  },
+  {
+   "login": "calixtus",
+   "points": 6,
+   "merged": 0,
+   "reviews": 3,
+   "other": 0
   },
   {
    "login": "pluto-han",
@@ -2601,13 +2827,6 @@
    "merged": 0,
    "reviews": 1,
    "other": 1
-  },
-  {
-   "login": "calixtus",
-   "points": 2,
-   "merged": 0,
-   "reviews": 1,
-   "other": 0
   },
   {
    "login": "ThiloteE",
