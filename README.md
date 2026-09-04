@@ -31,7 +31,23 @@ Bot activity is excluded.
 
 "Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...).
 
-Leaderboard points: merged PR 3, review 2, comment / issue / push 1. A bell rings when the leader changes (browsers may need one click on the page after load before they allow sound).
+## Leaderboard points
+
+Recomputed at every data run from activity since `jabcon_start`, in any public repository (bots excluded):
+
+| Activity | Points | Credited to |
+|---|---|---|
+| Pull request merged | 3 | the PR author (not the person who pressed merge) |
+| Review submitted (approve, request changes, comment) | 2 | the reviewer |
+| Issue comment or review comment | 1 | the commenter |
+| Issue opened or closed | 1 | the actor |
+| Push | 1 per push event (not per commit) | the pusher |
+| Issue opened / closed / commented in a `private_repos` repo | 1 | the actor |
+
+Labeling, assigning, starring, forking and merging someone else's PR score nothing. Hover a leaderboard entry to see
+the breakdown; the activity ticker shows the points of each entry. A bell rings when position 1 changes (browsers may
+need one click on the page after load before they allow sound). Weights live in `leaderboard()` in `scripts/collect.py`
+and, for the ticker badge, in `eventPoints()` in `site/app.js`.
 
 ## Manual runs
 
