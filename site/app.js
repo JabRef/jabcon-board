@@ -148,7 +148,7 @@ function render() {
   tick();
 }
 
-const REFRESH_MS = 15 * 60000; // cron interval of the board workflow
+const REFRESH_MS = 5 * 60000; // cron interval of the board workflow
 
 function renderProgress() {
   const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
