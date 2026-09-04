@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T19:19:25+00:00",
+ "generated_at": "2026-09-04T19:36:06+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -459,6 +459,51 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16222",
+   "repo": "JabRef/jabref",
+   "number": 16222,
+   "title": "Extend suggested groups with special fields nested under a new Marking and grading group",
+   "url": "https://github.com/JabRef/jabref/pull/16222",
+   "type": "pr",
+   "draft": false,
+   "author": "Harshpv",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "good first issue",
+    "first contrib",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T19:36:00Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16846",
+   "repo": "JabRef/jabref",
+   "number": 16846,
+   "title": "Remove hardcoded styling",
+   "url": "https://github.com/JabRef/jabref/pull/16846",
+   "type": "pr",
+   "draft": false,
+   "author": "AbdallaSamirKhalifa",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: preferences",
+    "good first issue",
+    "status: changes-required",
+    "component: theming",
+    "component: css",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-04T19:34:33Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16742",
    "repo": "JabRef/jabref",
    "number": 16742,
@@ -471,12 +516,12 @@
    "labels": [
     "component: ui",
     "good first issue",
+    "status: changes-required",
     "component: external-changes",
     "component: git",
-    "first contrib",
-    "status: no-bot-comments"
+    "first contrib"
    ],
-   "updated_at": "2026-09-04T16:43:59Z",
+   "updated_at": "2026-09-04T19:29:48Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -495,27 +540,6 @@
     "rfr"
    ],
    "updated_at": "2026-09-04T16:40:21Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16222",
-   "repo": "JabRef/jabref",
-   "number": 16222,
-   "title": "Extend suggested groups with special fields nested under a new Marking and grading group",
-   "url": "https://github.com/JabRef/jabref/pull/16222",
-   "type": "pr",
-   "draft": false,
-   "author": "Harshpv",
-   "assignees": [],
-   "labels": [
-    "component: groups",
-    "good first issue",
-    "first contrib",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-04T15:49:26Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1630,6 +1654,105 @@
  ],
  "events": [
   {
+   "id": "14454528166",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:36:02Z",
+   "summary": "reviewed PR #16222 (commented)"
+  },
+  {
+   "id": "14454526692",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:36:00Z",
+   "summary": "commented on PR #16222"
+  },
+  {
+   "id": "14454414572",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:33:45Z",
+   "summary": "reviewed PR #16846 (changes_requested)"
+  },
+  {
+   "id": "14454414520",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:33:45Z",
+   "summary": "reviewed PR #16846 (changes_requested)"
+  },
+  {
+   "id": "14454347113",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:32:22Z",
+   "summary": "commented on PR #16846"
+  },
+  {
+   "id": "14454314071",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:31:43Z",
+   "summary": "commented on PR #16846"
+  },
+  {
+   "id": "14454305290",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:31:31Z",
+   "summary": "commented on PR #16846"
+  },
+  {
+   "id": "14454186699",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:29:05Z",
+   "summary": "reviewed PR #16742 (changes_requested)"
+  },
+  {
+   "id": "14454186684",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:29:05Z",
+   "summary": "reviewed PR #16742 (changes_requested)"
+  },
+  {
+   "id": "14453799264",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:21:07Z",
+   "summary": "commented on PR #16742"
+  },
+  {
+   "id": "14453766257",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:20:24Z",
+   "summary": "commented on PR #16742"
+  },
+  {
    "id": "14451338157",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -1874,6 +1997,13 @@
  },
  "leaderboard": [
   {
+   "login": "InAnYan",
+   "points": 16,
+   "merged": 0,
+   "reviews": 5,
+   "other": 6
+  },
+  {
    "login": "subhramit",
    "points": 12,
    "merged": 0,
@@ -1898,13 +2028,6 @@
    "login": "koppor",
    "points": 3,
    "merged": 1,
-   "reviews": 0,
-   "other": 0
-  },
-  {
-   "login": "InAnYan",
-   "points": 0,
-   "merged": 0,
    "reviews": 0,
    "other": 0
   },
