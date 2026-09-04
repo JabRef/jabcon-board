@@ -67,7 +67,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T20:38:09+00:00",
+ "generated_at": "2026-09-04T20:48:48+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -184,6 +184,24 @@
     },
     "refactorings": []
    }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16774",
+   "repo": "JabRef/jabref",
+   "number": 16774,
+   "title": "Open online file links via URL-aware browser call",
+   "url": "https://github.com/JabRef/jabref/pull/16774",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T20:45:21Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16845",
@@ -501,6 +519,28 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16739",
+   "repo": "JabRef/jabref",
+   "number": 16739,
+   "title": "Fix button placement at commit dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16739",
+   "type": "pr",
+   "draft": true,
+   "author": "GRV-Satya-Ganesh",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "status: changes-required",
+    "component: git",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-04T20:48:46Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16755",
    "repo": "JabRef/jabref",
    "number": 16755,
@@ -646,28 +686,6 @@
     "component: git"
    ],
    "updated_at": "2026-09-04T12:59:10Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16739",
-   "repo": "JabRef/jabref",
-   "number": 16739,
-   "title": "Fix button placement at commit dialog",
-   "url": "https://github.com/JabRef/jabref/pull/16739",
-   "type": "pr",
-   "draft": true,
-   "author": "GRV-Satya-Ganesh",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "good first issue",
-    "status: changes-required",
-    "component: git",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-04T11:19:58Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1858,6 +1876,96 @@
  ],
  "events": [
   {
+   "id": "14457996708",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:48:55Z",
+   "summary": "reviewed PR #16795 (commented)"
+  },
+  {
+   "id": "14457991831",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:48:48Z",
+   "summary": "commented on PR #16795"
+  },
+  {
+   "id": "14457990497",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:48:46Z",
+   "summary": "commented on #16739: Fix button placement at commit dialog"
+  },
+  {
+   "id": "14457970115",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:48:21Z",
+   "summary": "commented on PR #16795"
+  },
+  {
+   "id": "14457889031",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "koppor",
+   "repo": "TGRRRR/heading-outliner",
+   "created_at": "2026-09-04T20:46:33Z",
+   "summary": "starred"
+  },
+  {
+   "id": "14457796258",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:44:35Z",
+   "summary": "reviewed PR #16774 (approved)"
+  },
+  {
+   "id": "14457720517",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:43:00Z",
+   "summary": "reviewed PR #16774 (commented)"
+  },
+  {
+   "id": "14457719361",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:42:59Z",
+   "summary": "commented on PR #16774"
+  },
+  {
+   "id": "14457711003",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:42:48Z",
+   "summary": "reviewed PR #16774 (approved)"
+  },
+  {
+   "id": "14457645929",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:41:20Z",
+   "summary": "commented on #16763: Automatically generate Git commit message"
+  },
+  {
    "id": "14457397117",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -2454,17 +2562,17 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 39,
+   "points": 41,
    "merged": 0,
    "reviews": 11,
-   "other": 17
+   "other": 19
   },
   {
    "login": "Maran23",
-   "points": 14,
+   "points": 23,
    "merged": 0,
-   "reviews": 4,
-   "other": 6
+   "reviews": 7,
+   "other": 9
   },
   {
    "login": "subhramit",
@@ -2493,6 +2601,13 @@
    "merged": 0,
    "reviews": 1,
    "other": 1
+  },
+  {
+   "login": "calixtus",
+   "points": 2,
+   "merged": 0,
+   "reviews": 1,
+   "other": 0
   },
   {
    "login": "ThiloteE",
@@ -2524,13 +2639,6 @@
   },
   {
    "login": "JohnnyGoodNews",
-   "points": 0,
-   "merged": 0,
-   "reviews": 0,
-   "other": 0
-  },
-  {
-   "login": "calixtus",
    "points": 0,
    "merged": 0,
    "reviews": 0,
