@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T15:48:44+00:00",
+ "generated_at": "2026-09-04T16:14:31+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -439,6 +439,50 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16742",
+   "repo": "JabRef/jabref",
+   "number": 16742,
+   "title": "Add highlight words mode to Git Diff view",
+   "url": "https://github.com/JabRef/jabref/pull/16742",
+   "type": "pr",
+   "draft": false,
+   "author": "sanjaykumarmtt",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "status: changes-required",
+    "component: external-changes",
+    "component: git",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-04T16:13:34Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16222",
+   "repo": "JabRef/jabref",
+   "number": 16222,
+   "title": "Extend suggested groups with special fields nested under a new Marking and grading group",
+   "url": "https://github.com/JabRef/jabref/pull/16222",
+   "type": "pr",
+   "draft": false,
+   "author": "Harshpv",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "good first issue",
+    "first contrib",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T15:49:26Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16651",
    "repo": "JabRef/jabref",
    "number": 16651,
@@ -523,6 +567,27 @@
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16029",
+   "repo": "JabRef/jabref",
+   "number": 16029,
+   "title": "Improve Theme Picker",
+   "url": "https://github.com/JabRef/jabref/issues/16029",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "Maran23",
+    "ZiadAbdElFatah"
+   ],
+   "labels": [
+    "component: ui"
+   ],
+   "updated_at": "2026-09-04T15:58:19Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16035",
@@ -969,27 +1034,6 @@
     "good third issue"
    ],
    "updated_at": "2026-08-11T22:01:49Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16029",
-   "repo": "JabRef/jabref",
-   "number": 16029,
-   "title": "Improve Theme Picker",
-   "url": "https://github.com/JabRef/jabref/issues/16029",
-   "type": "issue",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [
-    "Maran23",
-    "ZiadAbdElFatah"
-   ],
-   "labels": [
-    "component: ui"
-   ],
-   "updated_at": "2026-08-11T03:47:28Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
