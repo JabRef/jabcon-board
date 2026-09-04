@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T22:21:42+00:00",
+ "generated_at": "2026-09-04T22:24:28+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -457,6 +457,22 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "repo": "itsallcode/openfasttrace",
+   "number": 583,
+   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-04T22:23:47Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16831",
    "repo": "JabRef/jabref",
    "number": 16831,
@@ -535,22 +551,6 @@
     "project: jabcon"
    ],
    "updated_at": "2026-09-04T20:54:36Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "repo": "itsallcode/openfasttrace",
-   "number": 583,
-   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
-   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-04T19:56:18Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2124,6 +2124,30 @@
  ],
  "events": [
   {
+   "id": "14461959481",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "itsallcode/openfasttrace",
+   "created_at": "2026-09-04T22:23:47Z",
+   "summary": "commented on PR #583",
+   "number": 583,
+   "merged": false,
+   "url": "https://github.com/itsallcode/openfasttrace"
+  },
+  {
+   "id": "14461959466",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "itsallcode/openfasttrace",
+   "created_at": "2026-09-04T22:23:47Z",
+   "summary": "reviewed PR #583 (commented)",
+   "number": 583,
+   "merged": false,
+   "url": "https://github.com/itsallcode/openfasttrace"
+  },
+  {
    "id": "14461889822",
    "type": "PullRequestReviewEvent",
    "action": "dismissed",
@@ -3690,18 +3714,18 @@
    "other": 9
   },
   {
+   "login": "koppor",
+   "points": 12,
+   "merged": 3,
+   "reviews": 1,
+   "other": 1
+  },
+  {
    "login": "Siedlerchr",
    "points": 11,
    "merged": 0,
    "reviews": 4,
    "other": 3
-  },
-  {
-   "login": "koppor",
-   "points": 9,
-   "merged": 3,
-   "reviews": 0,
-   "other": 0
   },
   {
    "login": "ThiloteE",
