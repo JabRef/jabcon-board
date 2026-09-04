@@ -18,6 +18,14 @@
   },
   {
    "weight": 2,
+   "text": "immutable collection literals",
+   "repo": "JabRef/jabref",
+   "number": 16825,
+   "author": "albCarlosRodrigues",
+   "url": "https://github.com/JabRef/jabref/pull/16825"
+  },
+  {
+   "weight": 2,
    "text": "markdown javadoc",
    "repo": "JabRef/jabref",
    "number": 16774,
@@ -48,8 +56,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0",
    "url": "https://github.com/JabRef/jabref/milestone/24",
-   "open": 24,
-   "closed": 45,
+   "open": 23,
+   "closed": 46,
    "baseline": 45
   },
   {
@@ -83,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T21:12:47+00:00",
+ "generated_at": "2026-09-04T21:23:22+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -124,6 +132,76 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16825",
+   "repo": "JabRef/jabref",
+   "number": 16825,
+   "title": "Fix accented arXiv title searches",
+   "url": "https://github.com/JabRef/jabref/pull/16825",
+   "type": "pr",
+   "draft": false,
+   "author": "albCarlosRodrigues",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: fetcher",
+    "first contrib",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T21:19:53Z",
+   "closed_at": "2026-09-04T21:19:53Z",
+   "merged_at": "2026-09-04T21:19:53Z",
+   "column": "done",
+   "stats": {
+    "additions": 6,
+    "deletions": 3,
+    "changed_files": 3,
+    "components": {
+     "(root)": 1,
+     "jablib": 8
+    },
+    "refactorings": [
+     [
+      2,
+      "immutable collection literals"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16795",
+   "repo": "JabRef/jabref",
+   "number": 16795,
+   "title": "Show progress indicator during identifier lookup in New Entry dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16795",
+   "type": "pr",
+   "draft": false,
+   "author": "developer852",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: import-load",
+    "good first issue",
+    "status: awaiting-second-review",
+    "first contrib",
+    "status: to-be-merged",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T21:18:18Z",
+   "closed_at": "2026-09-04T21:18:02Z",
+   "merged_at": "2026-09-04T21:18:02Z",
+   "column": "done",
+   "stats": {
+    "additions": 17,
+    "deletions": 1,
+    "changed_files": 3,
+    "components": {
+     "(root)": 1,
+     "jabgui": 17
+    },
+    "refactorings": []
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16774",
    "repo": "JabRef/jabref",
@@ -240,6 +318,71 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16477",
+   "repo": "JabRef/jabref",
+   "number": 16477,
+   "title": "Fix ArXivFetcherTest > searchEntryByPartOfTitleWithAcuteAccent",
+   "url": "https://github.com/JabRef/jabref/issues/16477",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "albCarlosRodrigues"
+   ],
+   "labels": [
+    "component: fetcher",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-04T21:21:16Z",
+   "closed_at": "2026-09-04T21:19:55Z",
+   "merged_at": null,
+   "column": "done"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16845",
+   "repo": "JabRef/jabref",
+   "number": 16845,
+   "title": "Select newly added entry",
+   "url": "https://github.com/JabRef/jabref/pull/16845",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "component: external-files",
+    "component: maintable",
+    "good first issue",
+    "status: changes-required",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-04T21:23:26Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16813",
+   "repo": "JabRef/jabref",
+   "number": 16813,
+   "title": "Synchronize local libraries with their files (merge external changes without a dialog)",
+   "url": "https://github.com/JabRef/jabref/pull/16813",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: preferences",
+    "status: changes-required",
+    "component: external-changes"
+   ],
+   "updated_at": "2026-09-04T21:20:46Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16835",
    "repo": "JabRef/jabref",
    "number": 16835,
@@ -303,29 +446,6 @@
     "project: jabcon"
    ],
    "updated_at": "2026-09-04T20:54:36Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16845",
-   "repo": "JabRef/jabref",
-   "number": 16845,
-   "title": "Select newly added entry",
-   "url": "https://github.com/JabRef/jabref/pull/16845",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: import-load",
-    "component: external-files",
-    "component: maintable",
-    "good first issue",
-    "status: changes-required",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-04T20:31:34Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -458,26 +578,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16813",
-   "repo": "JabRef/jabref",
-   "number": 16813,
-   "title": "Synchronize local libraries with their files (merge external changes without a dialog)",
-   "url": "https://github.com/JabRef/jabref/pull/16813",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: preferences",
-    "component: external-changes"
-   ],
-   "updated_at": "2026-09-04T03:39:37Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16829",
    "repo": "JabRef/jabref",
    "number": 16829,
@@ -577,51 +677,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-04T21:10:49Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16825",
-   "repo": "JabRef/jabref",
-   "number": 16825,
-   "title": "Fix accented arXiv title searches",
-   "url": "https://github.com/JabRef/jabref/pull/16825",
-   "type": "pr",
-   "draft": false,
-   "author": "albCarlosRodrigues",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: fetcher",
-    "first contrib",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-04T21:10:22Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16795",
-   "repo": "JabRef/jabref",
-   "number": 16795,
-   "title": "Show progress indicator during identifier lookup in New Entry dialog",
-   "url": "https://github.com/JabRef/jabref/pull/16795",
-   "type": "pr",
-   "draft": false,
-   "author": "developer852",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: import-load",
-    "good first issue",
-    "status: awaiting-second-review",
-    "first contrib",
-    "status: to-be-merged",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-04T21:08:45Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -817,28 +872,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/16029",
-   "repo": "JabRef/jabref",
-   "number": 16029,
-   "title": "Improve Theme Picker",
-   "url": "https://github.com/JabRef/jabref/issues/16029",
-   "type": "issue",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [
-    "Maran23",
-    "hasnaaabdelrahman",
-    "ZiadAbdElFatah"
-   ],
-   "labels": [
-    "component: ui"
-   ],
-   "updated_at": "2026-09-04T16:17:39Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/issues/16035",
    "repo": "JabRef/jabref",
    "number": 16035,
@@ -856,7 +889,29 @@
     "\ud83d\udccd Assigned",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-04T13:56:31Z",
+   "updated_at": "2026-09-04T21:23:24Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16029",
+   "repo": "JabRef/jabref",
+   "number": 16029,
+   "title": "Improve Theme Picker",
+   "url": "https://github.com/JabRef/jabref/issues/16029",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "Maran23",
+    "hasnaaabdelrahman",
+    "ZiadAbdElFatah"
+   ],
+   "labels": [
+    "component: ui"
+   ],
+   "updated_at": "2026-09-04T16:17:39Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -1983,6 +2038,114 @@
   }
  ],
  "events": [
+  {
+   "id": "14459424401",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:20:47Z",
+   "summary": "reviewed PR #16813 (commented)",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459423318",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:20:45Z",
+   "summary": "commented on PR #16813",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459387734",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:19:55Z",
+   "summary": "reviewed PR #16813 (commented)",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459387815",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:19:55Z",
+   "summary": "closed issue #16477: Fix ArXivFetcherTest > searchEntryByPartOfTitleWithAcuteAccent",
+   "number": 16477,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16477"
+  },
+  {
+   "id": "14459386537",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:19:53Z",
+   "summary": "commented on PR #16813",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459339690",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:18:49Z",
+   "summary": "reviewed PR #16813 (changes_requested)",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459335546",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:18:43Z",
+   "summary": "commented on PR #16813",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14459307668",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:18:04Z",
+   "summary": "closed issue #16756: [UI/UX] Missing loading indicator / spinner in \"New Entry -> Enter Identifier\" dialog during search",
+   "number": 16756,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16756"
+  },
+  {
+   "id": "14459305470",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:18:01Z",
+   "summary": "commented on PR #16813",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14458970809",
    "type": "PullRequestReviewEvent",
@@ -3125,13 +3288,13 @@
   }
  ],
  "stats": {
-  "additions": 526,
-  "deletions": 51,
-  "changed_files": 38,
+  "additions": 549,
+  "deletions": 55,
+  "changed_files": 44,
   "components": {
-   "(root)": 25,
-   "jabgui": 326,
-   "jablib": 25,
+   "(root)": 27,
+   "jablib": 33,
+   "jabgui": 343,
    ".jbang": 6,
    "docs": 26,
    "jabkit": 8,
@@ -3151,10 +3314,10 @@
   },
   {
    "login": "Maran23",
-   "points": 34,
+   "points": 44,
    "merged": 0,
-   "reviews": 12,
-   "other": 10
+   "reviews": 15,
+   "other": 14
   },
   {
    "login": "subhramit",
@@ -3165,10 +3328,10 @@
   },
   {
    "login": "calixtus",
-   "points": 9,
+   "points": 11,
    "merged": 0,
    "reviews": 4,
-   "other": 1
+   "other": 3
   },
   {
    "login": "Siedlerchr",
