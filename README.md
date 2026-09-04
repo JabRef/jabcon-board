@@ -13,7 +13,7 @@ screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more ca
   in any repository and writes `data.json`. Cards from the configured org are shown normally, other repos dimmed.
   The ring next to the logo fills up until the next data run (15 min) and turns amber when data is older than 30 min. "In progress" only lists open PRs touched since the start; "Backlog" lists the org's `ready-for-review` PRs
   and everything assigned to a participant.
-- `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute and the video once per hour.
+- `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute, the video once per hour, and reloads itself when a new version of the site was deployed.
 - `.github/workflows/board.yml` runs every 15 minutes (and on push to `main`), copies `site/` and a fresh
   `data.json` to the `gh-pages` branch. Outside the JabCon window it publishes the site but skips data collection.
 - `.github/workflows/screenshot.yml` stores a screenshot under `screenshots/` every three hours during JabCon.
