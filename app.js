@@ -100,8 +100,10 @@ function tick() {
   const age = (now - Date.parse(data.generated_at)) / 60000;
   $('#updated').textContent = `last update ${ago(data.generated_at)}`;
   $('#header').classList.toggle('stale', age > 30);
+  const fmt = (iso) => new Date(iso).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone });
   const left = Date.parse(data.config.jabcon_end) - now;
-  $('#countdown').textContent = left > 0 ? `ends in ${Math.floor(left / 86400000)} d ${Math.floor(left / 3600000) % 24} h` : 'JabCon is over – thank you!';
+  $('#countdown').textContent = `${fmt(data.config.jabcon_start)} – ${fmt(data.config.jabcon_end)} · ` +
+    (left > 0 ? `ends in ${Math.floor(left / 86400000)} d ${Math.floor(left / 3600000) % 24} h` : 'JabCon is over – thank you!');
 }
 
 async function load() {
