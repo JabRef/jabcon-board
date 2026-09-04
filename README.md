@@ -13,7 +13,7 @@ Live: <https://jabref.github.io/jabcon-board/> (only carries data while JabCon r
   "In progress" only lists open PRs touched since the start; "Backlog" lists the org's `ready-for-review` PRs
   and everything assigned to a participant.
 - `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute and the video once per hour.
-- `.github/workflows/board.yml` runs every 10 minutes (and on push to `main`), copies `site/` and a fresh
+- `.github/workflows/board.yml` runs every 15 minutes (and on push to `main`), copies `site/` and a fresh
   `data.json` to the `gh-pages` branch. Outside the JabCon window it publishes the site but skips data collection.
 - `.github/workflows/screenshot.yml` stores a screenshot under `screenshots/` every three hours during JabCon.
 - The video is rendered by `gource-jabcon.yml` in [JabRef/jabref](https://github.com/JabRef/jabref) to
