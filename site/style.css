@@ -64,5 +64,8 @@ section h2 .count { float: right; color: var(--fg); }
 #ticker .repo { color: var(--muted); }
 #gource { width: 100%; max-height: 45%; object-fit: contain; background: #000; border-radius: .4rem; margin-top: .4rem; }
 #gource:not([src]) { display: none; }
+#gource-missing { margin-top: .4rem; padding: .6rem; border: 1px dashed var(--border); border-radius: .4rem; color: var(--muted); font-size: .8rem; text-align: center; }
+#gource-missing a { color: var(--muted); }
+#gource[src] + #gource-missing { display: none; }
 #toast { position: fixed; left: 50%; bottom: 2rem; transform: translateX(-50%); background: var(--ok); color: #000; font-size: 2rem; padding: .6rem 1.5rem; border-radius: 1rem; opacity: 0; transition: opacity .5s; pointer-events: none; }
 #toast.show { opacity: 1; }
