@@ -87,7 +87,7 @@ section h2 .count { float: right; color: var(--fg); }
 #gource[src] + #gource-missing { display: none; }
 #toast { position: fixed; left: 50%; bottom: 2rem; transform: translateX(-50%); background: var(--ok); color: #000; font-size: 2rem; padding: .6rem 1.5rem; border-radius: 1rem; opacity: 0; transition: opacity .5s; pointer-events: none; }
 #toast.show { opacity: 1; }
-/* hover enlarges the video; the free strip on the left is where the mouse goes to shrink it again */
-#gource[src]:hover { position: fixed; z-index: 10; top: 3%; bottom: 3%; left: 10%; right: 2%; width: auto; height: auto; max-height: none; box-shadow: 0 0 4rem #000; }
+/* hover enlarges the video; it must cover the small video completely (bottom/right edge) or hover flickers. The free strip on the left shrinks it again. */
+#gource[src]:hover { position: fixed; z-index: 10; top: 3%; bottom: 0; left: 10%; right: 0; width: auto; height: auto; max-height: none; box-shadow: 0 0 4rem #000; }
 #footer { position: fixed; right: 1rem; bottom: .1rem; display: flex; gap: 1rem; font-size: .6rem; color: var(--muted); font-family: monospace; }
 #components span:nth-child(3n+1) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
