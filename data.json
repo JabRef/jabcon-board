@@ -1,6 +1,6 @@
 {
  "refactorings": [],
- "generated_at": "2026-09-04T10:39:55+00:00",
+ "generated_at": "2026-09-04T10:49:05+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -20,6 +20,33 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2282",
+   "repo": "openjdk/jfx",
+   "number": 2282,
+   "title": "8391309: Mouse-wheel scroll distance incorrectly depends on render scale",
+   "url": "https://github.com/openjdk/jfx/pull/2282",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "integrated"
+   ],
+   "updated_at": "2026-09-04T10:41:58Z",
+   "closed_at": "2026-09-04T10:41:52Z",
+   "merged_at": null,
+   "column": "done",
+   "stats": {
+    "additions": 147,
+    "deletions": 4,
+    "changed_files": 3,
+    "components": {
+     "jfx": 151
+    },
+    "refactorings": []
+   }
+  },
   {
    "id": "https://github.com/openjdk/jfx/pull/2291",
    "repo": "openjdk/jfx",
@@ -189,25 +216,6 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2282",
-   "repo": "openjdk/jfx",
-   "number": 2282,
-   "title": "8391309: Mouse-wheel scroll distance incorrectly depends on render scale",
-   "url": "https://github.com/openjdk/jfx/pull/2282",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "ready"
-   ],
-   "updated_at": "2026-09-04T10:39:27Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1296,6 +1304,15 @@
  ],
  "events": [
   {
+   "id": "14425349255",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T10:45:26Z",
+   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+  },
+  {
    "id": "14423648346",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -1342,10 +1359,12 @@
   }
  ],
  "stats": {
-  "additions": 0,
-  "deletions": 0,
-  "changed_files": 0,
-  "components": {}
+  "additions": 147,
+  "deletions": 4,
+  "changed_files": 3,
+  "components": {
+   "jfx": 151
+  }
  },
  "leaderboard": [
   {
@@ -1356,14 +1375,14 @@
    "other": 1
   },
   {
-   "login": "Maran23",
-   "points": 1,
+   "login": "pluto-han",
+   "points": 2,
    "merged": 0,
    "reviews": 0,
-   "other": 1
+   "other": 2
   },
   {
-   "login": "pluto-han",
+   "login": "Maran23",
    "points": 1,
    "merged": 0,
    "reviews": 0,
