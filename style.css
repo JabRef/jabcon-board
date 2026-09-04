@@ -38,7 +38,7 @@ section { background: var(--panel); border: 1px solid var(--border); border-radi
 section h2 { margin: 0 0 .5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
 section h2 .count { float: right; color: var(--fg); }
 .cards { position: relative; /* offsetParent for the cards, so updateMore measures inside the column */ overflow-y: auto; scrollbar-width: none; mask-image: linear-gradient(to bottom, #000 calc(100% - 2rem), transparent); flex: 1; display: flex; flex-direction: column; gap: .25rem; }
-.card { flex: none; display: flex; align-items: center; gap: .5rem; padding: .15rem .5rem; border-radius: .4rem; background: var(--bg); border-left: .35rem solid var(--accent); white-space: nowrap; overflow: hidden; }
+.card { font-size: .75rem; flex: none; display: flex; align-items: center; gap: .5rem; padding: .15rem .5rem; border-radius: .4rem; background: var(--bg); border-left: .35rem solid var(--accent); white-space: nowrap; overflow: hidden; }
 .card.other { opacity: .65; }
 .card.draft { border-left-style: dashed; }
 .card .avatar { width: 1.5rem; height: 1.5rem; border-radius: 50%; flex: none; }

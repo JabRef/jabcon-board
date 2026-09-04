@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T21:28:41+00:00",
+ "generated_at": "2026-09-04T21:29:27+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -399,49 +399,6 @@
    "column": "done"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16813",
-   "repo": "JabRef/jabref",
-   "number": 16813,
-   "title": "Synchronize local libraries with their files (merge external changes without a dialog)",
-   "url": "https://github.com/JabRef/jabref/pull/16813",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: preferences",
-    "status: changes-required",
-    "component: external-changes"
-   ],
-   "updated_at": "2026-09-04T21:28:39Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16845",
-   "repo": "JabRef/jabref",
-   "number": 16845,
-   "title": "Select newly added entry",
-   "url": "https://github.com/JabRef/jabref/pull/16845",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: import-load",
-    "component: external-files",
-    "component: maintable",
-    "good first issue",
-    "status: changes-required",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-04T21:28:00Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16835",
    "repo": "JabRef/jabref",
    "number": 16835,
@@ -464,7 +421,50 @@
     "component: entry-editor",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T21:05:50Z",
+   "updated_at": "2026-09-04T21:29:02Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16845",
+   "repo": "JabRef/jabref",
+   "number": 16845,
+   "title": "Select newly added entry",
+   "url": "https://github.com/JabRef/jabref/pull/16845",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "component: external-files",
+    "component: maintable",
+    "good first issue",
+    "status: changes-required",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-04T21:28:44Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16813",
+   "repo": "JabRef/jabref",
+   "number": 16813,
+   "title": "Synchronize local libraries with their files (merge external changes without a dialog)",
+   "url": "https://github.com/JabRef/jabref/pull/16813",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: preferences",
+    "status: changes-required",
+    "component: external-changes"
+   ],
+   "updated_at": "2026-09-04T21:28:39Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
