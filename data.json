@@ -9,6 +9,22 @@
    "url": "https://github.com/JabRef/jabref/pull/16841"
   },
   {
+   "weight": 3,
+   "text": "JSpecify null-marked",
+   "repo": "JabRef/jabref",
+   "number": 16774,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16774"
+  },
+  {
+   "weight": 2,
+   "text": "markdown javadoc",
+   "repo": "JabRef/jabref",
+   "number": 16774,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16774"
+  },
+  {
    "weight": 2,
    "text": "markdown javadoc",
    "repo": "JabRef/jabref",
@@ -67,7 +83,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T20:57:56+00:00",
+ "generated_at": "2026-09-04T21:05:25+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -108,6 +124,44 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16774",
+   "repo": "JabRef/jabref",
+   "number": 16774,
+   "title": "Open online file links via URL-aware browser call",
+   "url": "https://github.com/JabRef/jabref/pull/16774",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T20:58:16Z",
+   "closed_at": "2026-09-04T20:58:08Z",
+   "merged_at": "2026-09-04T20:58:08Z",
+   "column": "done",
+   "stats": {
+    "additions": 319,
+    "deletions": 11,
+    "changed_files": 8,
+    "components": {
+     "(root)": 1,
+     "jabgui": 322,
+     "jablib": 7
+    },
+    "refactorings": [
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "markdown javadoc"
+     ]
+    ]
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16841",
    "repo": "JabRef/jabref",
@@ -199,7 +253,7 @@
     "component: external-files",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-04T20:57:53Z",
+   "updated_at": "2026-09-04T20:59:22Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -249,24 +303,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-04T20:50:59Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16774",
-   "repo": "JabRef/jabref",
-   "number": 16774,
-   "title": "Open online file links via URL-aware browser call",
-   "url": "https://github.com/JabRef/jabref/pull/16774",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-04T20:45:21Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -521,6 +557,24 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16760",
+   "repo": "JabRef/jabref",
+   "number": 16760,
+   "title": "Enhance developer documentation",
+   "url": "https://github.com/JabRef/jabref/pull/16760",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T20:58:27Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16795",
    "repo": "JabRef/jabref",
    "number": 16795,
@@ -582,24 +636,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-04T20:37:05Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16760",
-   "repo": "JabRef/jabref",
-   "number": 16760,
-   "title": "Enhance developer documentation",
-   "url": "https://github.com/JabRef/jabref/pull/16760",
-   "type": "pr",
-   "draft": false,
-   "author": "Eng-YasminKotb",
-   "assignees": [],
-   "labels": [
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-04T20:15:49Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1901,6 +1937,54 @@
  ],
  "events": [
   {
+   "id": "14458481675",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:59:32Z",
+   "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
+   "number": 16834,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16834"
+  },
+  {
+   "id": "14458473863",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:59:22Z",
+   "summary": "commented on #16831: Show full text download search as background task",
+   "number": 16831,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16831"
+  },
+  {
+   "id": "14458433300",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:58:29Z",
+   "summary": "reviewed PR #16760 (commented)",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14458431984",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:58:27Z",
+   "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14458418990",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -1908,6 +1992,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:58:08Z",
    "summary": "merged PR #16774",
+   "number": 16774,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1918,6 +2004,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:57:54Z",
    "summary": "reviewed PR #16831 (commented)",
+   "number": 16831,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1928,6 +2016,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:57:29Z",
    "summary": "commented on PR #16831",
+   "number": 16831,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1938,6 +2028,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:56:44Z",
    "summary": "commented on PR #16831",
+   "number": 16831,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1948,6 +2040,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:54:54Z",
    "summary": "commented on PR #16831",
+   "number": 16831,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1958,6 +2052,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:54:28Z",
    "summary": "labeled PR #16791",
+   "number": 16791,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1968,6 +2064,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:53:22Z",
    "summary": "reviewed PR #16795 (approved)",
+   "number": 16795,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1978,6 +2076,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:52:35Z",
    "summary": "commented on PR #16831",
+   "number": 16831,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1988,6 +2088,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:52:16Z",
    "summary": "reviewed PR #16795 (approved)",
+   "number": 16795,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -1998,6 +2100,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:52:14Z",
    "summary": "reviewed PR #16795 (approved)",
+   "number": 16795,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2008,6 +2112,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:51:46Z",
    "summary": "reviewed PR #16795 (dismissed)",
+   "number": 16795,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2018,6 +2124,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:49:13Z",
    "summary": "commented on PR #16831",
+   "number": 16831,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2028,6 +2136,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:55Z",
    "summary": "reviewed PR #16795 (commented)",
+   "number": 16795,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2038,6 +2148,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:48Z",
    "summary": "commented on PR #16795",
+   "number": 16795,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2048,6 +2160,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:46Z",
    "summary": "commented on #16739: Fix button placement at commit dialog",
+   "number": 16739,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16739"
   },
   {
@@ -2058,6 +2172,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:48:21Z",
    "summary": "commented on PR #16795",
+   "number": 16795,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2068,6 +2184,8 @@
    "repo": "TGRRRR/heading-outliner",
    "created_at": "2026-09-04T20:46:33Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/TGRRRR/heading-outliner"
   },
   {
@@ -2078,6 +2196,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:44:35Z",
    "summary": "reviewed PR #16774 (approved)",
+   "number": 16774,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2088,6 +2208,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:43:00Z",
    "summary": "reviewed PR #16774 (commented)",
+   "number": 16774,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2098,6 +2220,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:42:59Z",
    "summary": "commented on PR #16774",
+   "number": 16774,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2108,6 +2232,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:42:48Z",
    "summary": "reviewed PR #16774 (approved)",
+   "number": 16774,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2118,6 +2244,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:41:20Z",
    "summary": "commented on #16763: Automatically generate Git commit message",
+   "number": 16763,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16763"
   },
   {
@@ -2128,6 +2256,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:36:05Z",
    "summary": "reviewed PR #16755 (changes_requested)",
+   "number": 16755,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2138,6 +2268,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:35:53Z",
    "summary": "commented on PR #16755",
+   "number": 16755,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2148,6 +2280,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:33:59Z",
    "summary": "commented on PR #16755",
+   "number": 16755,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2158,6 +2292,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:31:35Z",
    "summary": "reviewed PR #16845 (commented)",
+   "number": 16845,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2168,6 +2304,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:31:35Z",
    "summary": "reviewed PR #16845 (commented)",
+   "number": 16845,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2178,6 +2316,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:30:35Z",
    "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2188,6 +2328,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:29:53Z",
    "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2198,6 +2340,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:29:27Z",
    "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2208,6 +2352,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:24:00Z",
    "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2218,6 +2364,8 @@
    "repo": "kidpeterpan/inkbound",
    "created_at": "2026-09-04T20:22:39Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/kidpeterpan/inkbound"
   },
   {
@@ -2228,6 +2376,8 @@
    "repo": "enderonat/Academical-Paper-Converter-To-Epub",
    "created_at": "2026-09-04T20:22:23Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/enderonat/Academical-Paper-Converter-To-Epub"
   },
   {
@@ -2238,6 +2388,8 @@
    "repo": "TGRRRR/heading-outliner",
    "created_at": "2026-09-04T20:22:09Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/TGRRRR/heading-outliner"
   },
   {
@@ -2248,6 +2400,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:17:50Z",
    "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
+   "number": 16834,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16834"
   },
   {
@@ -2258,6 +2412,8 @@
    "repo": "Vinzent03/find-unlinked-files",
    "created_at": "2026-09-04T20:09:58Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/Vinzent03/find-unlinked-files"
   },
   {
@@ -2268,6 +2424,8 @@
    "repo": "graydon/obsidian-dangling-links",
    "created_at": "2026-09-04T20:09:49Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/graydon/obsidian-dangling-links"
   },
   {
@@ -2278,6 +2436,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:00:22Z",
    "summary": "reviewed PR #16760 (changes_requested)",
+   "number": 16760,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2288,6 +2448,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T20:00:22Z",
    "summary": "reviewed PR #16760 (changes_requested)",
+   "number": 16760,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2298,6 +2460,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:59:24Z",
    "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2308,6 +2472,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:58:29Z",
    "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2318,6 +2484,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:58:16Z",
    "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2328,6 +2496,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:44:37Z",
    "summary": "reviewed PR #16846 (changes_requested)",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2338,6 +2508,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:43:51Z",
    "summary": "reviewed PR #16846 (commented)",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2348,6 +2520,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:43:50Z",
    "summary": "commented on PR #16846",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2358,6 +2532,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:39:21Z",
    "summary": "reviewed PR #16760 (changes_requested)",
+   "number": 16760,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2368,6 +2544,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:39:15Z",
    "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2378,6 +2556,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:36:02Z",
    "summary": "reviewed PR #16222 (commented)",
+   "number": 16222,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2388,6 +2568,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:36:00Z",
    "summary": "commented on PR #16222",
+   "number": 16222,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2398,6 +2580,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:33:45Z",
    "summary": "reviewed PR #16846 (changes_requested)",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2408,6 +2592,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:33:45Z",
    "summary": "reviewed PR #16846 (changes_requested)",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2418,6 +2604,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:32:22Z",
    "summary": "commented on PR #16846",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2428,6 +2616,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:31:43Z",
    "summary": "commented on PR #16846",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2438,6 +2628,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:31:31Z",
    "summary": "commented on PR #16846",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2448,6 +2640,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:29:05Z",
    "summary": "reviewed PR #16742 (changes_requested)",
+   "number": 16742,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2458,6 +2652,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:29:05Z",
    "summary": "reviewed PR #16742 (changes_requested)",
+   "number": 16742,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2468,6 +2664,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:21:07Z",
    "summary": "commented on PR #16742",
+   "number": 16742,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2478,6 +2676,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:20:24Z",
    "summary": "commented on PR #16742",
+   "number": 16742,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2488,6 +2688,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:07:03Z",
    "summary": "commented on #16809: Add fetcher by id for SWHID",
+   "number": 16809,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16809"
   },
   {
@@ -2498,6 +2700,8 @@
    "repo": "apache/spark",
    "created_at": "2026-09-04T18:32:02Z",
    "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
    "url": "https://github.com/apache/spark/pull/58225"
   },
   {
@@ -2508,6 +2712,8 @@
    "repo": "apache/airflow",
    "created_at": "2026-09-04T18:25:57Z",
    "summary": "commented on #71976: Add deferrable support to `InfluxDB3Operator`",
+   "number": 71976,
+   "merged": false,
    "url": "https://github.com/apache/airflow/pull/71976"
   },
   {
@@ -2518,6 +2724,8 @@
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:58:00Z",
    "summary": "reviewed PR #58225 (commented)",
+   "number": 58225,
+   "merged": false,
    "url": "https://github.com/apache/spark"
   },
   {
@@ -2528,6 +2736,8 @@
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:57:58Z",
    "summary": "commented on PR #58225",
+   "number": 58225,
+   "merged": false,
    "url": "https://github.com/apache/spark"
   },
   {
@@ -2538,6 +2748,8 @@
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:57:12Z",
    "summary": "reviewed PR #58225 (commented)",
+   "number": 58225,
+   "merged": false,
    "url": "https://github.com/apache/spark"
   },
   {
@@ -2548,6 +2760,8 @@
    "repo": "apache/spark",
    "created_at": "2026-09-04T17:57:11Z",
    "summary": "commented on PR #58225",
+   "number": 58225,
+   "merged": false,
    "url": "https://github.com/apache/spark"
   },
   {
@@ -2558,6 +2772,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T17:15:43Z",
    "summary": "reopened PR #16846",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2568,6 +2784,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T16:41:37Z",
    "summary": "commented on #16846: Remove hardcoded styling",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16846"
   },
   {
@@ -2578,6 +2796,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T15:10:25Z",
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "number": 16640,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
@@ -2588,6 +2808,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T14:50:54Z",
    "summary": "closed PR #16846",
+   "number": 16846,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2598,6 +2820,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T14:38:27Z",
    "summary": "merged PR #16841",
+   "number": 16841,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2608,6 +2832,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T14:12:49Z",
    "summary": "reviewed PR #16841 (approved)",
+   "number": 16841,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2618,6 +2844,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T13:41:26Z",
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "number": 16640,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
@@ -2628,6 +2856,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T13:34:31Z",
    "summary": "opened PR #16845",
+   "number": 16845,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
   {
@@ -2638,6 +2868,8 @@
    "repo": "AndroidPoet/halo-kmp",
    "created_at": "2026-09-04T13:14:03Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/AndroidPoet/halo-kmp"
   },
   {
@@ -2648,6 +2880,8 @@
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T12:44:42Z",
    "summary": "reviewed PR #1935 (commented)",
+   "number": 1935,
+   "merged": false,
    "url": "https://github.com/openjdk/jfx"
   },
   {
@@ -2658,6 +2892,8 @@
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T12:44:40Z",
    "summary": "commented on PR #1935",
+   "number": 1935,
+   "merged": false,
    "url": "https://github.com/openjdk/jfx"
   },
   {
@@ -2668,6 +2904,8 @@
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T12:30:43Z",
    "summary": "commented on #2291: 8090896: Allow skipping apps build",
+   "number": 2291,
+   "merged": false,
    "url": "https://github.com/openjdk/jfx/pull/2291"
   },
   {
@@ -2678,6 +2916,8 @@
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T11:51:06Z",
    "summary": "commented on #2291: 8090896: Allow skipping apps build",
+   "number": 2291,
+   "merged": false,
    "url": "https://github.com/openjdk/jfx/pull/2291"
   },
   {
@@ -2688,6 +2928,8 @@
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T11:49:12Z",
    "summary": "reviewed PR #2291 (commented)",
+   "number": 2291,
+   "merged": false,
    "url": "https://github.com/openjdk/jfx"
   },
   {
@@ -2698,6 +2940,8 @@
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T11:49:11Z",
    "summary": "commented on PR #2291",
+   "number": 2291,
+   "merged": false,
    "url": "https://github.com/openjdk/jfx"
   },
   {
@@ -2708,6 +2952,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T10:45:26Z",
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "number": 16640,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
@@ -2718,6 +2964,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T10:11:02Z",
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "number": 16640,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
@@ -2728,6 +2976,8 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T10:00:43Z",
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
+   "number": 16640,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16640"
   },
   {
@@ -2738,6 +2988,8 @@
    "repo": "openjdk/jfx",
    "created_at": "2026-09-04T09:28:35Z",
    "summary": "commented on #2291: 8090896: Allow skipping apps build",
+   "number": 2291,
+   "merged": false,
    "url": "https://github.com/openjdk/jfx/pull/2291"
   },
   {
@@ -2748,6 +3000,8 @@
    "repo": "JabRef/jabcon-board",
    "created_at": "2026-09-04T07:17:22Z",
    "summary": "starred",
+   "number": null,
+   "merged": false,
    "url": "https://github.com/JabRef/jabcon-board"
   },
   {
@@ -2758,21 +3012,23 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T07:01:46Z",
    "summary": "reviewed PR #16755 (approved)",
+   "number": 16755,
+   "merged": false,
    "url": "https://github.com/JabRef/jabref"
   }
  ],
  "stats": {
-  "additions": 207,
-  "deletions": 40,
-  "changed_files": 30,
+  "additions": 526,
+  "deletions": 51,
+  "changed_files": 38,
   "components": {
+   "(root)": 25,
+   "jabgui": 326,
+   "jablib": 25,
    ".jbang": 6,
-   "(root)": 24,
    "docs": 26,
-   "jabgui": 4,
    "jabkit": 8,
    "jablib-examples": 4,
-   "jablib": 18,
    "jabsrv": 5,
    "versions": 1,
    "jfx": 151
@@ -2781,17 +3037,17 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 48,
+   "points": 49,
    "merged": 0,
    "reviews": 12,
-   "other": 24
+   "other": 25
   },
   {
    "login": "Maran23",
-   "points": 27,
+   "points": 30,
    "merged": 0,
-   "reviews": 9,
-   "other": 9
+   "reviews": 10,
+   "other": 10
   },
   {
    "login": "subhramit",
@@ -2802,9 +3058,16 @@
   },
   {
    "login": "calixtus",
-   "points": 6,
+   "points": 7,
    "merged": 0,
    "reviews": 3,
+   "other": 1
+  },
+  {
+   "login": "koppor",
+   "points": 6,
+   "merged": 2,
+   "reviews": 0,
    "other": 0
   },
   {
@@ -2813,13 +3076,6 @@
    "merged": 0,
    "reviews": 0,
    "other": 5
-  },
-  {
-   "login": "koppor",
-   "points": 3,
-   "merged": 1,
-   "reviews": 0,
-   "other": 0
   },
   {
    "login": "Siedlerchr",
