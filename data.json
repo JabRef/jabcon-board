@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T23:00:47+00:00",
+ "generated_at": "2026-09-04T23:17:04+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -470,7 +470,25 @@
     "status: changes-required",
     "component: git"
    ],
-   "updated_at": "2026-09-04T23:00:50Z",
+   "updated_at": "2026-09-04T23:16:53Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16790",
+   "repo": "JabRef/jabref",
+   "number": 16790,
+   "title": "Exclude Kotlin scripts from IDEA formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16790",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T23:14:53Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -814,6 +832,50 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16286",
+   "repo": "JabRef/jabref",
+   "number": 16286,
+   "title": "Support modifier keys entry drag drop",
+   "url": "https://github.com/JabRef/jabref/pull/16286",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "component: external-files",
+    "good first issue",
+    "status: to-be-merged",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T23:14:07Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16742",
+   "repo": "JabRef/jabref",
+   "number": 16742,
+   "title": "Add highlight words mode to Git Diff view",
+   "url": "https://github.com/JabRef/jabref/pull/16742",
+   "type": "pr",
+   "draft": false,
+   "author": "sanjaykumarmtt",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "status: changes-required",
+    "component: external-changes",
+    "component: git",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-04T23:09:05Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16615",
    "repo": "JabRef/jabref",
    "number": 16615,
@@ -979,29 +1041,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-04T19:46:32Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16742",
-   "repo": "JabRef/jabref",
-   "number": 16742,
-   "title": "Add highlight words mode to Git Diff view",
-   "url": "https://github.com/JabRef/jabref/pull/16742",
-   "type": "pr",
-   "draft": false,
-   "author": "sanjaykumarmtt",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "good first issue",
-    "status: changes-required",
-    "component: external-changes",
-    "component: git",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-04T19:29:48Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2210,6 +2249,114 @@
  ],
  "events": [
   {
+   "id": "14463788897",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:55Z",
+   "summary": "reviewed PR #16832 (changes_requested)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463785617",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:49Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463770997",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:22Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463767824",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:16Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463740179",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:15:23Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463739626",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:15:22Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463670436",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:13:16Z",
+   "summary": "reviewed PR #16286 (approved)",
+   "number": 16286,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463534574",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:09:05Z",
+   "summary": "commented on #16742: Add highlight words mode to Git Diff view",
+   "number": 16742,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16742"
+  },
+  {
+   "id": "14463436737",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:06:10Z",
+   "summary": "reviewed PR #16790 (approved)",
+   "number": 16790,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14463249708",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
@@ -3984,6 +4131,18 @@
    "number": 2291,
    "merged": false,
    "url": "https://github.com/openjdk/jfx"
+  },
+  {
+   "id": "20061047972",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T11:20:44Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board"
   },
   {
    "id": "14425349255",
@@ -4060,6 +4219,114 @@
  ],
  "all_events": [
   {
+   "id": "14463788897",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:55Z",
+   "summary": "reviewed PR #16832 (changes_requested)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463785617",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:49Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463770997",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:22Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463767824",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:16:16Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463740179",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:15:23Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463739626",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:15:22Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463670436",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:13:16Z",
+   "summary": "reviewed PR #16286 (approved)",
+   "number": 16286,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463534574",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:09:05Z",
+   "summary": "commented on #16742: Add highlight words mode to Git Diff view",
+   "number": 16742,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16742"
+  },
+  {
+   "id": "14463436737",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:06:10Z",
+   "summary": "reviewed PR #16790 (approved)",
+   "number": 16790,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14463249708",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
@@ -5834,6 +6101,18 @@
    "number": 2291,
    "merged": false,
    "url": "https://github.com/openjdk/jfx"
+  },
+  {
+   "id": "20061047972",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T11:20:44Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board"
   },
   {
    "id": "14425349255",
@@ -5928,10 +6207,10 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 56,
+   "points": 64,
    "merged": 0,
-   "reviews": 19,
-   "other": 18
+   "reviews": 21,
+   "other": 22
   },
   {
    "login": "InAnYan",
@@ -5942,17 +6221,17 @@
   },
   {
    "login": "koppor",
-   "points": 31,
+   "points": 32,
    "merged": 3,
    "reviews": 7,
-   "other": 8
+   "other": 9
   },
   {
    "login": "subhramit",
-   "points": 24,
+   "points": 29,
    "merged": 0,
-   "reviews": 7,
-   "other": 10
+   "reviews": 9,
+   "other": 11
   },
   {
    "login": "calixtus",
