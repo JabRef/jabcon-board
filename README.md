@@ -31,7 +31,7 @@ Bot activity is excluded.
 
 "Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...).
 
-Leaderboard points: merged PR 3, review 2, comment / issue / push 1.
+Leaderboard points: merged PR 3, review 2, comment / issue / push 1. A bell rings when the leader changes (browsers may need one click on the page after load before they allow sound).
 
 ## Manual runs
 
