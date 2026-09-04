@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T16:14:31+00:00",
+ "generated_at": "2026-09-04T16:29:50+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -451,12 +451,12 @@
    "labels": [
     "component: ui",
     "good first issue",
-    "status: changes-required",
     "component: external-changes",
     "component: git",
-    "first contrib"
+    "first contrib",
+    "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-04T16:13:34Z",
+   "updated_at": "2026-09-04T16:28:39Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -579,12 +579,13 @@
    "author": "Maran23",
    "assignees": [
     "Maran23",
+    "hasnaaabdelrahman",
     "ZiadAbdElFatah"
    ],
    "labels": [
     "component: ui"
    ],
-   "updated_at": "2026-09-04T15:58:19Z",
+   "updated_at": "2026-09-04T16:17:39Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
