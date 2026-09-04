@@ -20,7 +20,7 @@
    "baseline": 45
   }
  ],
- "generated_at": "2026-09-04T12:40:12+00:00",
+ "generated_at": "2026-09-04T12:45:17+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -82,6 +82,25 @@
     },
     "refactorings": []
    }
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/1935",
+   "repo": "openjdk/jfx",
+   "number": 1935,
+   "title": "8089514: [TableView, TreeView, ListView, TreeTableView] Clicking outside of the edited cell, node, or entry should commit the value",
+   "url": "https://github.com/openjdk/jfx/pull/1935",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-04T12:44:40Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/2291",
@@ -1386,6 +1405,24 @@
  ],
  "events": [
   {
+   "id": "14431469381",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-04T12:44:42Z",
+   "summary": "reviewed PR #1935 (commented)"
+  },
+  {
+   "id": "14431467898",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-04T12:44:40Z",
+   "summary": "commented on PR #1935"
+  },
+  {
    "id": "14430706823",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -1487,10 +1524,10 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 6,
+   "points": 9,
    "merged": 0,
-   "reviews": 1,
-   "other": 4
+   "reviews": 2,
+   "other": 5
   },
   {
    "login": "subhramit",
