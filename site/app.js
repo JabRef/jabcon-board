@@ -55,6 +55,12 @@ function renderStats() {
   const max = comps[0]?.[1] || 1;
   $('#components').innerHTML = comps.map(([name, n]) =>
     `<span>${esc(name)}</span><div class="bar" style="width:${(100 * n / max).toFixed(1)}%"></div><span>${n}</span>`).join('');
+  $('#milestones').innerHTML = (data.milestones || []).map((m) => {
+    const total = m.open + m.closed || 1, during = m.closed - m.baseline;
+    return `<div class="milestone"><div class="label"><span>${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span></span>
+      <span>${m.closed}/${total}${during ? ` <span class="muted">+${during}</span>` : ''}</span></div>
+      <div class="bar"><div class="during" style="width:${(100 * m.closed / total).toFixed(1)}%"></div><div class="before" style="width:${(100 * m.baseline / total).toFixed(1)}%"></div></div></div>`;
+  }).join('');
   $('#refactorings').innerHTML = data.refactorings.map((r) =>
     `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span><span class="repo">${esc(r.repo)}#${r.number}</span></li>`).join('');
   $('#leaderboard').innerHTML = data.leaderboard.map((l) =>
