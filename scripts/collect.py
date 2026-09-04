@@ -118,29 +118,35 @@ def collect_cards():
     return list(seen.values())
 
 
-def collect_events():
-    events = []
+def collect_events(previous):
+    """Events since START. The public feed only returns the newest 300 per user, so events seen in earlier runs
+    (previous data.json) are kept; otherwise active participants would lose points as JabCon goes on."""
+    seen = {e["id"]: e for e in previous}
     for p in PARTICIPANTS:
-        data, _ = get(f"/users/{p}/events/public", {"per_page": 100})
-        for e in data:
-            if datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")) < START:
-                continue
-            if e["repo"]["name"].lower() in EXCLUDE:
-                continue
-            payload = e.get("payload", {})
-            events.append({
-                "id": e["id"],
-                "type": e["type"],
-                "action": payload.get("action"),
-                "actor": e["actor"]["login"],
-                "repo": e["repo"]["name"],
-                "created_at": e["created_at"],
-                "summary": summarize(e),
-                "number": (payload.get("issue") or payload.get("pull_request") or {}).get("number"),
-                "merged": bool((payload.get("pull_request") or {}).get("merged")),
-                "url": ((payload.get("issue") or payload.get("pull_request") or {}).get("html_url")
-                        or f"https://github.com/{e['repo']['name']}"),
-            })
+        for page in (1, 2, 3):
+            data, _ = get(f"/users/{p}/events/public", {"per_page": 100, "page": page})
+            for e in data:
+                if datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")) < START:
+                    continue
+                if e["repo"]["name"].lower() in EXCLUDE or e["id"] in seen:
+                    continue
+                payload = e.get("payload", {})
+                seen[e["id"]] = {
+                    "id": e["id"],
+                    "type": e["type"],
+                    "action": payload.get("action"),
+                    "actor": e["actor"]["login"],
+                    "repo": e["repo"]["name"],
+                    "created_at": e["created_at"],
+                    "summary": summarize(e),
+                    "number": (payload.get("issue") or payload.get("pull_request") or {}).get("number"),
+                    "merged": bool((payload.get("pull_request") or {}).get("merged")),
+                    "url": ((payload.get("issue") or payload.get("pull_request") or {}).get("html_url")
+                            or f"https://github.com/{e['repo']['name']}"),
+                }
+            if len(data) < 100 or datetime.fromisoformat(data[-1]["created_at"].replace("Z", "+00:00")) < START:
+                break
+    events = list(seen.values())
     events.sort(key=lambda e: e["created_at"], reverse=True)
     return events
 
@@ -297,16 +303,17 @@ def main():
     if "--force" not in args and not (START <= now <= END):
         print(f"outside JabCon window ({START} .. {END}), nothing to do")
         return
-    cached, previous_milestones = {}, []
+    cached, previous_milestones, previous_events = {}, [], []
     if os.path.exists(out):
         try:
             previous = json.load(open(out))
             cached = {c["id"]: c["stats"] for c in previous["cards"] if c.get("stats")}
             previous_milestones = previous.get("milestones", [])
+            previous_events = previous.get("all_events", [])
         except (ValueError, KeyError):
             pass
     cards = collect_cards()
-    events = collect_events()
+    events = collect_events(previous_events)
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr":
             c["stats"] = pr_stats(c, cached)
@@ -327,6 +334,7 @@ def main():
         "config": CONFIG,
         "cards": cards,
         "events": events[:200],
+        "all_events": events,
         "stats": totals,
         "leaderboard": sorted(leaderboard(cards, events, private), key=lambda l: -l["points"]),
     }
