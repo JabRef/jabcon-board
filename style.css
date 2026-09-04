@@ -36,7 +36,7 @@ section { background: var(--panel); border: 1px solid var(--border); border-radi
 section h2 { margin: 0 0 .5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
 section h2 .count { float: right; color: var(--fg); }
 .cards { overflow-y: auto; scrollbar-width: none; mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5rem), transparent); flex: 1; display: flex; flex-direction: column; gap: .4rem; }
-.card { display: flex; align-items: center; gap: .6rem; padding: .35rem .5rem; border-radius: .4rem; background: var(--bg); border-left: .35rem solid var(--accent); white-space: nowrap; overflow: hidden; }
+.card { flex: none; display: flex; align-items: center; gap: .6rem; padding: .35rem .5rem; border-radius: .4rem; background: var(--bg); border-left: .35rem solid var(--accent); white-space: nowrap; overflow: hidden; }
 .card.other { opacity: .65; }
 .card.draft { border-left-style: dashed; }
 .card .avatar { width: 2rem; height: 2rem; border-radius: 50%; flex: none; }
