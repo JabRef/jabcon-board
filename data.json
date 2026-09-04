@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T23:48:50+00:00",
+ "generated_at": "2026-09-04T23:55:44+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -132,6 +132,43 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16832",
+   "repo": "JabRef/jabref",
+   "number": 16832,
+   "title": "Add \"Show diff\" to the save-before-closing dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16832",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "component: git",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T23:52:36Z",
+   "closed_at": "2026-09-04T23:52:21Z",
+   "merged_at": "2026-09-04T23:52:21Z",
+   "column": "done",
+   "stats": {
+    "additions": 100,
+    "deletions": 11,
+    "changed_files": 6,
+    "components": {
+     "(root)": 1,
+     "docs": 7,
+     "jabgui": 101,
+     "jablib": 2
+    },
+    "refactorings": [
+     [
+      2,
+      "markdown javadoc"
+     ]
+    ]
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16790",
    "repo": "JabRef/jabref",
@@ -547,6 +584,25 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16829",
+   "repo": "JabRef/jabref",
+   "number": 16829,
+   "title": "Group file operations in the entry context menu",
+   "url": "https://github.com/JabRef/jabref/pull/16829",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: maintable"
+   ],
+   "updated_at": "2026-09-04T23:53:21Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16851",
    "repo": "JabRef/jabref",
    "number": 16851,
@@ -581,45 +637,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-04T23:44:28Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16832",
-   "repo": "JabRef/jabref",
-   "number": 16832,
-   "title": "Add \"Show diff\" to the save-before-closing dialog",
-   "url": "https://github.com/JabRef/jabref/pull/16832",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: changes-required",
-    "component: git",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-04T23:40:15Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16829",
-   "repo": "JabRef/jabref",
-   "number": 16829,
-   "title": "Group file operations in the entry context menu",
-   "url": "https://github.com/JabRef/jabref/pull/16829",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: maintable"
-   ],
-   "updated_at": "2026-09-04T23:38:35Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2381,6 +2398,18 @@
   }
  ],
  "events": [
+  {
+   "id": "14464874668",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:52:21Z",
+   "summary": "merged PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14464666271",
    "type": "PullRequestEvent",
@@ -4768,21 +4797,21 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabcon-board"
-  },
-  {
-   "id": "14425349255",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T10:45:26Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
-   "number": 16640,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
   }
  ],
  "all_events": [
+  {
+   "id": "14464874668",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:52:21Z",
+   "summary": "merged PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14464666271",
    "type": "PullRequestEvent",
@@ -7245,15 +7274,15 @@
   }
  ],
  "stats": {
-  "additions": 1580,
-  "deletions": 213,
-  "changed_files": 123,
+  "additions": 1680,
+  "deletions": 224,
+  "changed_files": 129,
   "components": {
+   "(root)": 31,
+   "docs": 102,
+   "jabgui": 720,
+   "jablib": 875,
    ".idea": 1,
-   "jabgui": 619,
-   "jablib": 873,
-   "(root)": 30,
-   "docs": 95,
    ".jbang": 6,
    "jabkit": 8,
    "jablib-examples": 4,
@@ -7265,8 +7294,8 @@
  "leaderboard": [
   {
    "login": "koppor",
-   "points": 71,
-   "merged": 4,
+   "points": 74,
+   "merged": 5,
    "reviews": 18,
    "other": 23
   },
