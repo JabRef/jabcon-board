@@ -1,6 +1,6 @@
 {
  "refactorings": [],
- "generated_at": "2026-09-04T07:14:38+00:00",
+ "generated_at": "2026-09-04T07:30:34+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -1295,6 +1295,15 @@
   }
  ],
  "events": [
+  {
+   "id": "14414851461",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T07:17:22Z",
+   "summary": "starred"
+  },
   {
    "id": "14414119140",
    "type": "PullRequestReviewEvent",
