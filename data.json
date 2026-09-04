@@ -20,7 +20,7 @@
    "baseline": 45
   }
  ],
- "generated_at": "2026-09-04T12:45:17+00:00",
+ "generated_at": "2026-09-04T13:02:47+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -84,6 +84,24 @@
    }
   },
   {
+   "id": "https://github.com/openjdk/jfx/pull/2291",
+   "repo": "openjdk/jfx",
+   "number": 2291,
+   "title": "8090896: Allow skipping apps build",
+   "url": "https://github.com/openjdk/jfx/pull/2291",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-04T12:56:00Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/openjdk/jfx/pull/1935",
    "repo": "openjdk/jfx",
    "number": 1935,
@@ -98,24 +116,6 @@
     "csr"
    ],
    "updated_at": "2026-09-04T12:44:40Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2291",
-   "repo": "openjdk/jfx",
-   "number": 2291,
-   "title": "8090896: Allow skipping apps build",
-   "url": "https://github.com/openjdk/jfx/pull/2291",
-   "type": "pr",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [],
-   "labels": [
-    "rfr"
-   ],
-   "updated_at": "2026-09-04T12:30:43Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -310,13 +310,12 @@
     "component: import-load",
     "component: export-or-save",
     "component: preferences",
-    "status: changes-required",
     "component: slr",
     "good second issue",
     "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-04T12:37:35Z",
+   "updated_at": "2026-09-04T12:59:10Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
