@@ -20,7 +20,7 @@
    "baseline": 45
   }
  ],
- "generated_at": "2026-09-04T13:39:32+00:00",
+ "generated_at": "2026-09-04T13:49:01+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -100,7 +100,7 @@
     "good first issue",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T13:38:41Z",
+   "updated_at": "2026-09-04T13:40:35Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1426,6 +1426,15 @@
  ],
  "events": [
   {
+   "id": "14434812029",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T13:41:26Z",
+   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+  },
+  {
    "id": "14434394462",
    "type": "PullRequestEvent",
    "action": "opened",
@@ -1560,18 +1569,18 @@
    "other": 5
   },
   {
+   "login": "pluto-han",
+   "points": 3,
+   "merged": 0,
+   "reviews": 0,
+   "other": 3
+  },
+  {
    "login": "subhramit",
    "points": 3,
    "merged": 0,
    "reviews": 1,
    "other": 1
-  },
-  {
-   "login": "pluto-han",
-   "points": 2,
-   "merged": 0,
-   "reviews": 0,
-   "other": 2
   },
   {
    "login": "koppor",
