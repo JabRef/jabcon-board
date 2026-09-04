@@ -83,7 +83,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T21:05:25+00:00",
+ "generated_at": "2026-09-04T21:07:37+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -240,6 +240,34 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16835",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "title": "Add per-library keyword separator",
+   "url": "https://github.com/JabRef/jabref/pull/16835",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: cleanup-ops",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: citationkey-generator",
+    "component: bib(la)tex",
+    "component: import-load",
+    "component: export-or-save",
+    "component: entry-editor",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-04T21:05:50Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16831",
    "repo": "JabRef/jabref",
    "number": 16831,
@@ -275,34 +303,6 @@
     "project: jabcon"
    ],
    "updated_at": "2026-09-04T20:54:36Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16835",
-   "repo": "JabRef/jabref",
-   "number": 16835,
-   "title": "Add per-library keyword separator",
-   "url": "https://github.com/JabRef/jabref/pull/16835",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: cleanup-ops",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: citationkey-generator",
-    "component: bib(la)tex",
-    "component: import-load",
-    "component: export-or-save",
-    "component: entry-editor",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-04T20:50:59Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -557,24 +557,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16760",
-   "repo": "JabRef/jabref",
-   "number": 16760,
-   "title": "Enhance developer documentation",
-   "url": "https://github.com/JabRef/jabref/pull/16760",
-   "type": "pr",
-   "draft": false,
-   "author": "Eng-YasminKotb",
-   "assignees": [],
-   "labels": [
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-04T20:58:27Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16795",
    "repo": "JabRef/jabref",
    "number": 16795,
@@ -590,9 +572,28 @@
     "good first issue",
     "status: awaiting-second-review",
     "first contrib",
+    "status: to-be-merged",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-04T20:53:21Z",
+   "updated_at": "2026-09-04T21:06:43Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16760",
+   "repo": "JabRef/jabref",
+   "number": 16760,
+   "title": "Enhance developer documentation",
+   "url": "https://github.com/JabRef/jabref/pull/16760",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T20:58:27Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
