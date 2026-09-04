@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T23:17:04+00:00",
+ "generated_at": "2026-09-04T23:25:27+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -457,43 +457,6 @@
    "column": "done"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16832",
-   "repo": "JabRef/jabref",
-   "number": 16832,
-   "title": "Add \"Show diff\" to the save-before-closing dialog",
-   "url": "https://github.com/JabRef/jabref/pull/16832",
-   "type": "pr",
-   "draft": true,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: changes-required",
-    "component: git"
-   ],
-   "updated_at": "2026-09-04T23:16:53Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16790",
-   "repo": "JabRef/jabref",
-   "number": 16790,
-   "title": "Exclude Kotlin scripts from IDEA formatting",
-   "url": "https://github.com/JabRef/jabref/pull/16790",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-04T23:14:53Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -515,11 +478,49 @@
     "component: maintable",
     "component: entry-editor",
     "component: keybinding",
+    "status: changes-required",
     "component: automatic-field-editor",
     "component: theming",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T22:57:45Z",
+   "updated_at": "2026-09-04T23:18:23Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16832",
+   "repo": "JabRef/jabref",
+   "number": 16832,
+   "title": "Add \"Show diff\" to the save-before-closing dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16832",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "component: git"
+   ],
+   "updated_at": "2026-09-04T23:17:48Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16790",
+   "repo": "JabRef/jabref",
+   "number": 16790,
+   "title": "Exclude Kotlin scripts from IDEA formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16790",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T23:14:53Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -827,6 +828,47 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/1773",
+   "repo": "openjdk/jfx",
+   "number": 1773,
+   "title": "8353599: TabPaneSkin: 'overflowMenuDecorator' property",
+   "url": "https://github.com/openjdk/jfx/pull/1773",
+   "type": "pr",
+   "draft": false,
+   "author": "andy-goryachev-oracle",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-04T23:23:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16530",
+   "repo": "JabRef/jabref",
+   "number": 16530,
+   "title": "Add BASE (Bielefeld Academic Search Engine) fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16530",
+   "type": "pr",
+   "draft": false,
+   "author": "sam-exe31",
+   "assignees": [],
+   "labels": [
+    "component: fetcher",
+    "status: changes-required",
+    "component: slr",
+    "\ud83d\udccc Pinned",
+    "good third issue"
+   ],
+   "updated_at": "2026-09-04T23:21:50Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2249,6 +2291,102 @@
  ],
  "events": [
   {
+   "id": "14464008323",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-04T23:23:51Z",
+   "summary": "commented on #1773: 8353599: TabPaneSkin: 'overflowMenuDecorator' property",
+   "number": 1773,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/1773"
+  },
+  {
+   "id": "14463929848",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:21:25Z",
+   "summary": "reviewed PR #16530 (commented)",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463929106",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:21:23Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463916117",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:20:58Z",
+   "summary": "reviewed PR #16530 (changes_requested)",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463916076",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:20:58Z",
+   "summary": "reviewed PR #16530 (changes_requested)",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463905236",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:20:37Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463885470",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:19:59Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463873069",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:19:35Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14463788897",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -4131,6 +4269,18 @@
    "number": 2291,
    "merged": false,
    "url": "https://github.com/openjdk/jfx"
+  },
+  {
+   "id": "20062154761",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T11:35:52Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board"
   },
   {
    "id": "20061047972",
@@ -4219,6 +4369,102 @@
  ],
  "all_events": [
   {
+   "id": "14464008323",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-04T23:23:51Z",
+   "summary": "commented on #1773: 8353599: TabPaneSkin: 'overflowMenuDecorator' property",
+   "number": 1773,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/1773"
+  },
+  {
+   "id": "14463929848",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:21:25Z",
+   "summary": "reviewed PR #16530 (commented)",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463929106",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:21:23Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463916117",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:20:58Z",
+   "summary": "reviewed PR #16530 (changes_requested)",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463916076",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:20:58Z",
+   "summary": "reviewed PR #16530 (changes_requested)",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463905236",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:20:37Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463885470",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:19:59Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14463873069",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:19:35Z",
+   "summary": "commented on PR #16530",
+   "number": 16530,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14463788897",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -6101,6 +6347,18 @@
    "number": 2291,
    "merged": false,
    "url": "https://github.com/openjdk/jfx"
+  },
+  {
+   "id": "20062154761",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T11:35:52Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board"
   },
   {
    "id": "20061047972",
@@ -6207,10 +6465,10 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 64,
+   "points": 65,
    "merged": 0,
    "reviews": 21,
-   "other": 22
+   "other": 23
   },
   {
    "login": "InAnYan",
@@ -6220,18 +6478,18 @@
    "other": 26
   },
   {
-   "login": "koppor",
-   "points": 32,
-   "merged": 3,
-   "reviews": 7,
-   "other": 9
+   "login": "subhramit",
+   "points": 39,
+   "merged": 0,
+   "reviews": 12,
+   "other": 15
   },
   {
-   "login": "subhramit",
-   "points": 29,
-   "merged": 0,
-   "reviews": 9,
-   "other": 11
+   "login": "koppor",
+   "points": 33,
+   "merged": 3,
+   "reviews": 7,
+   "other": 10
   },
   {
    "login": "calixtus",
