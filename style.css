@@ -13,9 +13,20 @@ header {
 header.stale { background: #4a3a10; }
 header h1 { margin: 0; font-size: 2.4rem; letter-spacing: .05em; }
 #clock { font-size: 2.4rem; font-variant-numeric: tabular-nums; }
-#countdown { color: var(--muted); }
-#updated { margin-left: auto; color: var(--muted); }
-header.stale #updated { color: var(--fg); font-weight: bold; }
+#progress { flex: 1; display: flex; flex-direction: column; gap: .15rem; font-size: .75rem; color: var(--muted); }
+#phases, #dates { display: flex; justify-content: space-between; }
+#phases { position: relative; height: 1rem; }
+#phases span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+#bar { position: relative; height: .7rem; background: var(--border); border-radius: .35rem; overflow: hidden; }
+#elapsed { height: 100%; background: var(--accent); border-radius: .35rem; width: 0; transition: width 1s linear; }
+#ticks span { position: absolute; top: 0; bottom: 0; width: .15rem; background: var(--bg); transform: translateX(-50%); }
+#countdown { color: var(--fg); }
+/* ring filling clockwise until the next data run; --p is 0..1 */
+#updated { width: 2.2rem; height: 2.2rem; border-radius: 50%; flex: none;
+  background: conic-gradient(var(--accent) calc(var(--p, 0) * 100%), var(--border) 0); position: relative; }
+#updated::after { content: ""; position: absolute; inset: .45rem; border-radius: 50%; background: var(--panel); }
+header.stale #updated { background: var(--warn); }
+header.stale #updated::after { content: "!"; display: grid; place-items: center; font-weight: bold; }
 #logo { height: 3.5rem; }
 main {
   display: grid; height: calc(100vh - 5rem); gap: .8rem; padding: .8rem;
