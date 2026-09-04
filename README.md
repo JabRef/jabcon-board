@@ -11,7 +11,7 @@ screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more ca
 
 - `scripts/collect.py` queries the GitHub search and events APIs for the participants' **public** activity
   in any repository and writes `data.json`. Cards from the configured org are shown normally, other repos dimmed.
-  "In progress" only lists open PRs touched since the start; "Backlog" lists the org's `ready-for-review` PRs
+  The ring next to the logo fills up until the next data run (15 min) and turns amber when data is older than 30 min. "In progress" only lists open PRs touched since the start; "Backlog" lists the org's `ready-for-review` PRs
   and everything assigned to a participant.
 - `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute and the video once per hour.
 - `.github/workflows/board.yml` runs every 15 minutes (and on push to `main`), copies `site/` and a fresh
@@ -22,7 +22,7 @@ screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more ca
 
 ## Configuration
 
-`config.json`: `jabcon_start` / `jabcon_end` (ISO timestamps with offset), `timezone` (for the clock),
+`config.json`: `jabcon_start` / `jabcon_end` (ISO timestamps with offset), `phases` (label + end time, drawn on the header progress bar), `timezone` (for the clock),
 `participants` (GitHub logins; their order sets the colours), `org` (highlighting and the ready-for-review backlog),
 `exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board).
 Bot activity is excluded.

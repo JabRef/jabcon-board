@@ -90,20 +90,42 @@ function render() {
   for (const col of ['backlog', 'progress', 'done']) renderColumn(col, data.cards.filter((c) => c.column === col));
   renderStats();
   renderTicker();
+  renderProgress();
   tick();
+}
+
+const REFRESH_MS = 15 * 60000; // cron interval of the board workflow
+
+function renderProgress() {
+  const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
+  const pct = (iso) => `${(100 * (Date.parse(iso) - start) / (end - start)).toFixed(2)}%`;
+  const fmt = (iso) => new Date(iso).toLocaleString('en-GB', { weekday: 'short', hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone });
+  const phases = data.config.phases || [];
+  let from = data.config.jabcon_start;
+  $('#phases').innerHTML = phases.map((p) => {
+    const mid = new Date((Date.parse(from) + Date.parse(p.end)) / 2).toISOString();
+    from = p.end;
+    return `<span style="left:${pct(mid)}">${esc(p.label)}</span>`;
+  }).join('');
+  $('#ticks').innerHTML = phases.slice(0, -1).map((p) => `<span style="left:${pct(p.end)}"></span>`).join('');
+  $('#from').textContent = fmt(data.config.jabcon_start);
+  $('#to').textContent = fmt(data.config.jabcon_end);
 }
 
 function tick() {
   const now = new Date();
   $('#clock').textContent = now.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data?.config.timezone });
   if (!data) return;
-  const age = (now - Date.parse(data.generated_at)) / 60000;
-  $('#updated').textContent = `last update ${ago(data.generated_at)}`;
-  $('#header').classList.toggle('stale', age > 30);
-  const fmt = (iso) => new Date(iso).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone });
-  const left = Date.parse(data.config.jabcon_end) - now;
-  $('#countdown').textContent = `${fmt(data.config.jabcon_start)} – ${fmt(data.config.jabcon_end)} · ` +
-    (left > 0 ? `ends in ${Math.floor(left / 86400000)} d ${Math.floor(left / 3600000) % 24} h` : 'JabCon is over – thank you!');
+  const age = now - Date.parse(data.generated_at);
+  $('#updated').style.setProperty('--p', Math.min(1, age / REFRESH_MS));
+  $('#updated').title = `last update ${ago(data.generated_at)}`;
+  $('#header').classList.toggle('stale', age > 30 * 60000);
+  const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
+  $('#elapsed').style.width = `${Math.max(0, Math.min(100, 100 * (now - start) / (end - start)))}%`;
+  const left = end - now;
+  $('#countdown').textContent = now < start ? `starts in ${Math.floor((start - now) / 3600000)} h`
+    : left > 0 ? `${Math.floor((now - start) / 3600000)} h in · ${Math.floor(left / 86400000)} d ${Math.floor(left / 3600000) % 24} h left`
+    : 'JabCon is over – thank you!';
 }
 
 async function load() {
