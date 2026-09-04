@@ -46,7 +46,26 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T19:48:45+00:00",
+ "private_activity": {
+  "JabRef/jabref-issue-melting-pot": {
+   "opened": 1,
+   "closed": 0,
+   "comments": 0,
+   "by": {
+    "koppor": 0,
+    "Maran23": 0,
+    "InAnYan": 1,
+    "pluto-han": 0,
+    "ThiloteE": 0,
+    "ryan-carpenter": 0,
+    "subhramit": 0,
+    "wanling0000": 0,
+    "Stewori": 0,
+    "JohnnyGoodNews": 0
+   }
+  }
+ },
+ "generated_at": "2026-09-04T20:00:50+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -78,6 +97,9 @@
    "JabRef/jabref/36",
    "JabRef/jabref/24",
    "JabRef/jabref-issue-melting-pot/1"
+  ],
+  "private_repos": [
+   "JabRef/jabref-issue-melting-pot"
   ],
   "exclude_repos": []
  },
@@ -160,6 +182,50 @@
    }
   },
   {
+   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "repo": "itsallcode/openfasttrace",
+   "number": 583,
+   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-04T19:56:18Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16835",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "title": "Add per-library keyword separator",
+   "url": "https://github.com/JabRef/jabref/pull/16835",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: cleanup-ops",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: citationkey-generator",
+    "component: bib(la)tex",
+    "component: import-load",
+    "component: export-or-save",
+    "component: entry-editor",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-04T19:53:30Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/openjdk/jfx/pull/1935",
    "repo": "openjdk/jfx",
    "number": 1935,
@@ -210,34 +276,6 @@
     "provider:influxdb"
    ],
    "updated_at": "2026-09-04T18:25:57Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16835",
-   "repo": "JabRef/jabref",
-   "number": 16835,
-   "title": "Add per-library keyword separator",
-   "url": "https://github.com/JabRef/jabref/pull/16835",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: cleanup-ops",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: citationkey-generator",
-    "component: bib(la)tex",
-    "component: import-load",
-    "component: export-or-save",
-    "component: entry-editor",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-04T14:38:54Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -459,6 +497,24 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16760",
+   "repo": "JabRef/jabref",
+   "number": 16760,
+   "title": "Enhance developer documentation",
+   "url": "https://github.com/JabRef/jabref/pull/16760",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T20:00:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16222",
    "repo": "JabRef/jabref",
    "number": 16222,
@@ -499,24 +555,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-04T19:45:36Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16760",
-   "repo": "JabRef/jabref",
-   "number": 16760,
-   "title": "Enhance developer documentation",
-   "url": "https://github.com/JabRef/jabref/pull/16760",
-   "type": "pr",
-   "draft": false,
-   "author": "Eng-YasminKotb",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T19:40:22Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1672,6 +1710,51 @@
  ],
  "events": [
   {
+   "id": "14455700800",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:00:22Z",
+   "summary": "reviewed PR #16760 (changes_requested)"
+  },
+  {
+   "id": "14455700794",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:00:22Z",
+   "summary": "reviewed PR #16760 (changes_requested)"
+  },
+  {
+   "id": "14455654856",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:59:24Z",
+   "summary": "commented on PR #16760"
+  },
+  {
+   "id": "14455612246",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:58:29Z",
+   "summary": "commented on PR #16760"
+  },
+  {
+   "id": "14455601952",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T19:58:16Z",
+   "summary": "commented on PR #16760"
+  },
+  {
    "id": "14454945395",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -2061,10 +2144,10 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 19,
+   "points": 27,
    "merged": 0,
-   "reviews": 6,
-   "other": 7
+   "reviews": 8,
+   "other": 11
   },
   {
    "login": "Maran23",
