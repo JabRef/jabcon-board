@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T22:48:41+00:00",
+ "generated_at": "2026-09-04T22:49:43+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -470,7 +470,7 @@
     "status: changes-required",
     "component: git"
    ],
-   "updated_at": "2026-09-04T22:48:44Z",
+   "updated_at": "2026-09-04T22:48:55Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
