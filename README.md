@@ -26,6 +26,7 @@ screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more ca
 `participants` (GitHub logins; their order sets the colours), `org` (highlighting and the ready-for-review backlog),
 `exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board),
 `milestones` (`owner/repo/number`; progress bars in the stats panel, green = closed since the board first saw the milestone).
+Milestones in private repos need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.
 Bot activity is excluded.
 
 "Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...).
