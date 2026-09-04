@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T19:09:38+00:00",
+ "generated_at": "2026-09-04T19:19:25+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -160,6 +160,25 @@
    }
   },
   {
+   "id": "https://github.com/openjdk/jfx/pull/1935",
+   "repo": "openjdk/jfx",
+   "number": 1935,
+   "title": "8089514: [TableView, TreeView, ListView, TreeTableView] Clicking outside of the edited cell, node, or entry should commit the value",
+   "url": "https://github.com/openjdk/jfx/pull/1935",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-04T19:18:17Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/apache/spark/pull/58225",
    "repo": "apache/spark",
    "number": 58225,
@@ -260,25 +279,6 @@
     "rfr"
    ],
    "updated_at": "2026-09-04T12:56:00Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/1935",
-   "repo": "openjdk/jfx",
-   "number": 1935,
-   "title": "8089514: [TableView, TreeView, ListView, TreeTableView] Clicking outside of the edited cell, node, or entry should commit the value",
-   "url": "https://github.com/openjdk/jfx/pull/1935",
-   "type": "pr",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "csr"
-   ],
-   "updated_at": "2026-09-04T12:44:40Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
