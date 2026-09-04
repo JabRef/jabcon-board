@@ -74,7 +74,7 @@
   "JabRef/jabref-issue-melting-pot": {
    "opened": 1,
    "closed": 2,
-   "comments": 0,
+   "comments": 1,
    "by": {
     "koppor": 0,
     "Maran23": 0,
@@ -82,7 +82,7 @@
     "pluto-han": 0,
     "ThiloteE": 0,
     "ryan-carpenter": 0,
-    "subhramit": 1,
+    "subhramit": 2,
     "wanling0000": 0,
     "Stewori": 0,
     "JohnnyGoodNews": 0,
@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T23:41:10+00:00",
+ "generated_at": "2026-09-04T23:48:50+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -547,6 +547,45 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16851",
+   "repo": "JabRef/jabref",
+   "number": 16851,
+   "title": "Fix `missing$` case warnings in BST VM",
+   "url": "https://github.com/JabRef/jabref/pull/16851",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-04T23:45:18Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16830",
+   "repo": "JabRef/jabref",
+   "number": 16830,
+   "title": "Preserve file attributes when replacing a file atomically",
+   "url": "https://github.com/JabRef/jabref/pull/16830",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: export-or-save",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T23:44:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16832",
    "repo": "JabRef/jabref",
    "number": 16832,
@@ -581,25 +620,6 @@
     "component: maintable"
    ],
    "updated_at": "2026-09-04T23:38:35Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16830",
-   "repo": "JabRef/jabref",
-   "number": 16830,
-   "title": "Preserve file attributes when replacing a file atomically",
-   "url": "https://github.com/JabRef/jabref/pull/16830",
-   "type": "pr",
-   "draft": true,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: export-or-save",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T23:38:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2361,6 +2381,174 @@
   }
  ],
  "events": [
+  {
+   "id": "14464666271",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:44:48Z",
+   "summary": "labeled PR #16851",
+   "number": 16851,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464573503",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:10Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464573499",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:10Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464572679",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:08Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464572650",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:08Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464572228",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:07Z",
+   "summary": "opened PR #16851",
+   "number": 16851,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464571605",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:06Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464571579",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:06Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464570734",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:05Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464570746",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:04Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569816",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:03Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569832",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:02Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569008",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:01Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569014",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:00Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14464461957",
    "type": "PullRequestEvent",
@@ -4592,69 +4780,177 @@
    "number": 16640,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16640"
-  },
-  {
-   "id": "14423648346",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T10:11:02Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
-   "number": 16640,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
-  },
-  {
-   "id": "14423121207",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T10:00:43Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
-   "number": 16640,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
-  },
-  {
-   "id": "14421435588",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "openjdk/jfx",
-   "created_at": "2026-09-04T09:28:35Z",
-   "summary": "commented on #2291: 8090896: Allow skipping apps build",
-   "number": 2291,
-   "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/2291"
-  },
-  {
-   "id": "14414851461",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabcon-board",
-   "created_at": "2026-09-04T07:17:22Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board"
-  },
-  {
-   "id": "14414119140",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T07:01:46Z",
-   "summary": "reviewed PR #16755 (approved)",
-   "number": 16755,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref"
   }
  ],
  "all_events": [
+  {
+   "id": "14464666271",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:44:48Z",
+   "summary": "labeled PR #16851",
+   "number": 16851,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464573503",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:10Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464573499",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:10Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464572679",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:08Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464572650",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:08Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464572228",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:07Z",
+   "summary": "opened PR #16851",
+   "number": 16851,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464571605",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:06Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464571579",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:06Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464570734",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:05Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464570746",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:04Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569816",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:03Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569832",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:02Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569008",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:01Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464569014",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:42:00Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14464461957",
    "type": "PullRequestEvent",
@@ -6968,18 +7264,18 @@
  },
  "leaderboard": [
   {
+   "login": "koppor",
+   "points": 71,
+   "merged": 4,
+   "reviews": 18,
+   "other": 23
+  },
+  {
    "login": "Maran23",
    "points": 68,
    "merged": 0,
    "reviews": 22,
    "other": 24
-  },
-  {
-   "login": "koppor",
-   "points": 53,
-   "merged": 4,
-   "reviews": 12,
-   "other": 17
   },
   {
    "login": "InAnYan",
@@ -6990,10 +7286,10 @@
   },
   {
    "login": "subhramit",
-   "points": 41,
+   "points": 42,
    "merged": 0,
    "reviews": 12,
-   "other": 17
+   "other": 18
   },
   {
    "login": "calixtus",
