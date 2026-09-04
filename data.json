@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T22:40:09+00:00",
+ "generated_at": "2026-09-04T22:48:41+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -463,14 +463,14 @@
    "title": "Add \"Show diff\" to the save-before-closing dialog",
    "url": "https://github.com/JabRef/jabref/pull/16832",
    "type": "pr",
-   "draft": false,
+   "draft": true,
    "author": "koppor",
    "assignees": [],
    "labels": [
     "status: changes-required",
     "component: git"
    ],
-   "updated_at": "2026-09-04T22:39:54Z",
+   "updated_at": "2026-09-04T22:48:44Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -482,9 +482,11 @@
    "title": "Migrate JavaFX tests from TestFX",
    "url": "https://github.com/JabRef/jabref/pull/16850",
    "type": "pr",
-   "draft": true,
+   "draft": false,
    "author": "Siedlerchr",
-   "assignees": [],
+   "assignees": [
+    "Maran23"
+   ],
    "labels": [
     "component: internationalization",
     "component: search",
@@ -499,7 +501,7 @@
     "component: theming",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T22:32:46Z",
+   "updated_at": "2026-09-04T22:46:10Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2190,6 +2192,90 @@
  ],
  "events": [
   {
+   "id": "14462777921",
+   "type": "IssuesEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "citation-style-language/styles",
+   "created_at": "2026-09-04T22:46:53Z",
+   "summary": "opened issue #8313: Double space after citation number in Nature",
+   "number": 8313,
+   "merged": false,
+   "url": "https://github.com/citation-style-language/styles/issues/8313"
+  },
+  {
+   "id": "14462770749",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:41Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462769576",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:38Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462756128",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:15Z",
+   "summary": "reviewed PR #16850 (commented)",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462755106",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:13Z",
+   "summary": "commented on PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462714677",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:45:02Z",
+   "summary": "reviewed PR #16850 (commented)",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462714001",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:45:00Z",
+   "summary": "commented on PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14462352188",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -2209,6 +2295,18 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T22:32:33Z",
    "summary": "opened PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462635862",
+   "type": "PullRequestEvent",
+   "action": "assigned",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:32:33Z",
+   "summary": "assigned PR #16850",
    "number": 16850,
    "merged": false,
    "url": "https://github.com/JabRef/jabref"
@@ -3776,6 +3874,90 @@
  ],
  "all_events": [
   {
+   "id": "14462777921",
+   "type": "IssuesEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "citation-style-language/styles",
+   "created_at": "2026-09-04T22:46:53Z",
+   "summary": "opened issue #8313: Double space after citation number in Nature",
+   "number": 8313,
+   "merged": false,
+   "url": "https://github.com/citation-style-language/styles/issues/8313"
+  },
+  {
+   "id": "14462770749",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:41Z",
+   "summary": "reviewed PR #16832 (commented)",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462769576",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:38Z",
+   "summary": "commented on PR #16832",
+   "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462756128",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:15Z",
+   "summary": "reviewed PR #16850 (commented)",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462755106",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:13Z",
+   "summary": "commented on PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462714677",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:45:02Z",
+   "summary": "reviewed PR #16850 (commented)",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462714001",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:45:00Z",
+   "summary": "commented on PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14462352188",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -3795,6 +3977,18 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T22:32:33Z",
    "summary": "opened PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14462635862",
+   "type": "PullRequestEvent",
+   "action": "assigned",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:32:33Z",
+   "summary": "assigned PR #16850",
    "number": 16850,
    "merged": false,
    "url": "https://github.com/JabRef/jabref"
@@ -5380,24 +5574,24 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 50,
+   "points": 56,
    "merged": 0,
-   "reviews": 17,
-   "other": 16
+   "reviews": 19,
+   "other": 18
   },
   {
    "login": "InAnYan",
-   "points": 49,
+   "points": 52,
    "merged": 0,
-   "reviews": 12,
-   "other": 25
+   "reviews": 13,
+   "other": 26
   },
   {
    "login": "subhramit",
-   "points": 23,
+   "points": 24,
    "merged": 0,
    "reviews": 7,
-   "other": 9
+   "other": 10
   },
   {
    "login": "calixtus",
