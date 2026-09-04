@@ -65,7 +65,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T20:12:42+00:00",
+ "generated_at": "2026-09-04T20:26:48+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -497,6 +497,24 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16760",
+   "repo": "JabRef/jabref",
+   "number": 16760,
+   "title": "Enhance developer documentation",
+   "url": "https://github.com/JabRef/jabref/pull/16760",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-04T20:15:49Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16846",
    "repo": "JabRef/jabref",
    "number": 16846,
@@ -516,24 +534,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-04T20:02:02Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16760",
-   "repo": "JabRef/jabref",
-   "number": 16760,
-   "title": "Enhance developer documentation",
-   "url": "https://github.com/JabRef/jabref/pull/16760",
-   "type": "pr",
-   "draft": false,
-   "author": "Eng-YasminKotb",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T20:01:13Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1710,6 +1710,51 @@
  ],
  "events": [
   {
+   "id": "14456834945",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:24:00Z",
+   "summary": "commented on PR #16845"
+  },
+  {
+   "id": "14456771549",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "JohnnyGoodNews",
+   "repo": "kidpeterpan/inkbound",
+   "created_at": "2026-09-04T20:22:39Z",
+   "summary": "starred"
+  },
+  {
+   "id": "14456760356",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "JohnnyGoodNews",
+   "repo": "enderonat/Academical-Paper-Converter-To-Epub",
+   "created_at": "2026-09-04T20:22:23Z",
+   "summary": "starred"
+  },
+  {
+   "id": "14456748617",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "JohnnyGoodNews",
+   "repo": "TGRRRR/heading-outliner",
+   "created_at": "2026-09-04T20:22:09Z",
+   "summary": "starred"
+  },
+  {
+   "id": "14456552498",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:17:50Z",
+   "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff"
+  },
+  {
    "id": "14456169602",
    "type": "WatchEvent",
    "action": "started",
@@ -2162,10 +2207,10 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 27,
+   "points": 28,
    "merged": 0,
    "reviews": 8,
-   "other": 11
+   "other": 12
   },
   {
    "login": "Maran23",
@@ -2183,10 +2228,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 4,
+   "points": 5,
    "merged": 0,
    "reviews": 0,
-   "other": 4
+   "other": 5
   },
   {
    "login": "koppor",
