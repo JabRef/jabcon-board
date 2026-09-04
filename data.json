@@ -1,40 +1,40 @@
 {
  "refactorings": [
   {
+   "weight": 5,
+   "text": "record UndoableGroupChange",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16835"
+  },
+  {
+   "weight": 5,
+   "text": "pattern-matching switch",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16835"
+  },
+  {
+   "weight": 4,
+   "text": "sequenced collections",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16835"
+  },
+  {
+   "weight": 4,
+   "text": "instanceof pattern",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "author": "koppor",
+   "url": "https://github.com/JabRef/jabref/pull/16835"
+  },
+  {
    "weight": 4,
    "text": "module boundary changed",
-   "repo": "JabRef/jabref",
-   "number": 16841,
-   "author": "koppor",
-   "url": "https://github.com/JabRef/jabref/pull/16841"
-  },
-  {
-   "weight": 3,
-   "text": "JSpecify null-marked",
-   "repo": "JabRef/jabref",
-   "number": 16774,
-   "author": "koppor",
-   "url": "https://github.com/JabRef/jabref/pull/16774"
-  },
-  {
-   "weight": 2,
-   "text": "immutable collection literals",
-   "repo": "JabRef/jabref",
-   "number": 16825,
-   "author": "albCarlosRodrigues",
-   "url": "https://github.com/JabRef/jabref/pull/16825"
-  },
-  {
-   "weight": 2,
-   "text": "markdown javadoc",
-   "repo": "JabRef/jabref",
-   "number": 16774,
-   "author": "koppor",
-   "url": "https://github.com/JabRef/jabref/pull/16774"
-  },
-  {
-   "weight": 2,
-   "text": "markdown javadoc",
    "repo": "JabRef/jabref",
    "number": 16841,
    "author": "koppor",
@@ -65,15 +65,15 @@
    "repo": "JabRef/jabref-issue-melting-pot",
    "title": "v6",
    "url": "https://github.com/JabRef/jabref-issue-melting-pot/milestone/1",
-   "open": 25,
-   "closed": 39,
+   "open": 24,
+   "closed": 40,
    "baseline": 39
   }
  ],
  "private_activity": {
   "JabRef/jabref-issue-melting-pot": {
    "opened": 1,
-   "closed": 0,
+   "closed": 1,
    "comments": 0,
    "by": {
     "koppor": 0,
@@ -86,12 +86,12 @@
     "wanling0000": 0,
     "Stewori": 0,
     "JohnnyGoodNews": 0,
-    "Siedlerchr": 0,
+    "Siedlerchr": 1,
     "calixtus": 0
    }
   }
  },
- "generated_at": "2026-09-04T21:35:45+00:00",
+ "generated_at": "2026-09-04T21:48:40+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -132,6 +132,64 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16835",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "title": "Add per-library keyword separator",
+   "url": "https://github.com/JabRef/jabref/pull/16835",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: cleanup-ops",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: citationkey-generator",
+    "component: bib(la)tex",
+    "component: import-load",
+    "component: export-or-save",
+    "component: entry-editor",
+    "component: diff-merge",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-04T21:41:35Z",
+   "closed_at": "2026-09-04T21:41:34Z",
+   "merged_at": "2026-09-04T21:41:34Z",
+   "column": "done",
+   "stats": {
+    "additions": 965,
+    "deletions": 148,
+    "changed_files": 68,
+    "components": {
+     "(root)": 2,
+     "docs": 69,
+     "jabgui": 220,
+     "jablib": 822
+    },
+    "refactorings": [
+     [
+      5,
+      "record UndoableGroupChange"
+     ],
+     [
+      5,
+      "pattern-matching switch"
+     ],
+     [
+      4,
+      "sequenced collections"
+     ],
+     [
+      4,
+      "instanceof pattern"
+     ]
+    ]
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16702",
    "repo": "JabRef/jabref",
@@ -410,39 +468,10 @@
    "assignees": [],
    "labels": [
     "component: preferences",
-    "status: changes-required",
-    "component: external-changes"
+    "component: external-changes",
+    "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-04T21:30:41Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16835",
-   "repo": "JabRef/jabref",
-   "number": 16835,
-   "title": "Add per-library keyword separator",
-   "url": "https://github.com/JabRef/jabref/pull/16835",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: cleanup-ops",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: citationkey-generator",
-    "component: bib(la)tex",
-    "component: import-load",
-    "component: export-or-save",
-    "component: entry-editor",
-    "component: diff-merge",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-04T21:29:35Z",
+   "updated_at": "2026-09-04T21:46:19Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -465,7 +494,7 @@
     "status: changes-required",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-04T21:28:44Z",
+   "updated_at": "2026-09-04T21:42:13Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -484,7 +513,7 @@
     "component: external-files",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-04T20:59:22Z",
+   "updated_at": "2026-09-04T21:36:56Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -729,7 +758,32 @@
    "labels": [
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-04T20:58:27Z",
+   "updated_at": "2026-09-04T21:48:04Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16651",
+   "repo": "JabRef/jabref",
+   "number": 16651,
+   "title": "Git integration SLR",
+   "url": "https://github.com/JabRef/jabref/pull/16651",
+   "type": "pr",
+   "draft": false,
+   "author": "LoayTarek5",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "component: slr",
+    "good second issue",
+    "status: awaiting-second-review",
+    "component: git"
+   ],
+   "updated_at": "2026-09-04T21:43:07Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -864,31 +918,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16651",
-   "repo": "JabRef/jabref",
-   "number": 16651,
-   "title": "Git integration SLR",
-   "url": "https://github.com/JabRef/jabref/pull/16651",
-   "type": "pr",
-   "draft": false,
-   "author": "LoayTarek5",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: import-load",
-    "component: export-or-save",
-    "component: preferences",
-    "component: slr",
-    "good second issue",
-    "status: awaiting-second-review",
-    "component: git"
-   ],
-   "updated_at": "2026-09-04T12:59:10Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/openjdk/jfx/pull/2197",
    "repo": "openjdk/jfx",
    "number": 2197,
@@ -905,6 +934,30 @@
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16352",
+   "repo": "JabRef/jabref",
+   "number": 16352,
+   "title": "(Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "url": "https://github.com/JabRef/jabref/issues/16352",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit",
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-04T21:46:11Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16035",
@@ -1106,30 +1159,6 @@
     "\ud83d\udccc Pinned"
    ],
    "updated_at": "2026-08-28T06:12:13Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16352",
-   "repo": "JabRef/jabref",
-   "number": 16352,
-   "title": "(Idea) Move Open Office Preferences to a dedicated Preference tab",
-   "url": "https://github.com/JabRef/jabref/issues/16352",
-   "type": "issue",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [
-    "subhramit",
-    "pluto-han"
-   ],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-08-27T09:03:26Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -2073,6 +2102,126 @@
   }
  ],
  "events": [
+  {
+   "id": "14460554803",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:48:04Z",
+   "summary": "reviewed PR #16760 (commented)",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14460551112",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:47:58Z",
+   "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14460480080",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:46:11Z",
+   "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "number": 16352,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16352"
+  },
+  {
+   "id": "14460400781",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:44:17Z",
+   "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "number": 16352,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16352"
+  },
+  {
+   "id": "14460352218",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:43:08Z",
+   "summary": "reviewed PR #16651 (commented)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14460351290",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:43:07Z",
+   "summary": "commented on PR #16651",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14460306954",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:42:00Z",
+   "summary": "reviewed PR #16813 (commented)",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14460289892",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:41:34Z",
+   "summary": "merged PR #16835",
+   "number": 16835,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14460258626",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:40:48Z",
+   "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "number": 16352,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16352"
+  },
+  {
+   "id": "14460080793",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:36:28Z",
+   "summary": "reviewed PR #16813 (commented)",
+   "number": 16813,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14459772479",
    "type": "PullRequestReviewEvent",
@@ -3419,15 +3568,15 @@
   }
  ],
  "stats": {
-  "additions": 561,
-  "deletions": 57,
-  "changed_files": 48,
+  "additions": 1526,
+  "deletions": 205,
+  "changed_files": 116,
   "components": {
-   "(root)": 28,
-   "jabgui": 350,
-   "jablib": 39,
+   "(root)": 30,
+   "docs": 95,
+   "jabgui": 570,
+   "jablib": 861,
    ".jbang": 6,
-   "docs": 26,
    "jabkit": 8,
    "jablib-examples": 4,
    "jabsrv": 5,
@@ -3445,43 +3594,43 @@
   },
   {
    "login": "Maran23",
-   "points": 44,
+   "points": 47,
    "merged": 0,
-   "reviews": 15,
-   "other": 14
+   "reviews": 16,
+   "other": 15
+  },
+  {
+   "login": "calixtus",
+   "points": 18,
+   "merged": 0,
+   "reviews": 7,
+   "other": 4
   },
   {
    "login": "pluto-han",
+   "points": 15,
+   "merged": 0,
+   "reviews": 3,
+   "other": 9
+  },
+  {
+   "login": "subhramit",
    "points": 14,
    "merged": 0,
    "reviews": 3,
    "other": 8
   },
   {
-   "login": "subhramit",
-   "points": 12,
-   "merged": 0,
-   "reviews": 3,
-   "other": 6
-  },
-  {
-   "login": "calixtus",
+   "login": "Siedlerchr",
    "points": 11,
    "merged": 0,
    "reviews": 4,
    "other": 3
   },
   {
-   "login": "Siedlerchr",
-   "points": 10,
-   "merged": 0,
-   "reviews": 4,
-   "other": 2
-  },
-  {
    "login": "koppor",
-   "points": 6,
-   "merged": 2,
+   "points": 9,
+   "merged": 3,
    "reviews": 0,
    "other": 0
   },
