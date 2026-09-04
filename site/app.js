@@ -66,10 +66,11 @@ function renderStats() {
     `<div class="private">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
   $('#refactorings').innerHTML = data.refactorings.map((r) =>
     `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
-  $('#leaderboard').innerHTML = data.leaderboard.map((l) =>
-    `<div class="leader" style="--c:${color[l.login]}" title="${l.merged} merged PRs × 3 = ${l.merged * 3}
-${l.reviews} reviews × 2 = ${l.reviews * 2}
-${l.other} comments / issues / pushes × 1 = ${l.other}">${avatar(l.login, '')}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`).join('');
+  $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
+    const why = `${l.merged} merged PRs × 3 = ${l.merged * 3}\n${l.reviews} reviews × 2 = ${l.reviews * 2}\n${l.other} comments / issues / pushes × 1 = ${l.other}`;
+    // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
+    return `<div class="leader" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
+  }).join('');
 }
 
 // Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1.
