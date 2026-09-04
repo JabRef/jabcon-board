@@ -1,8 +1,9 @@
 {
- "generated_at": "2026-09-03T09:32:59+00:00",
+ "refactorings": [],
+ "generated_at": "2026-09-04T07:14:38+00:00",
  "config": {
   "org": "JabRef",
-  "jabcon_start": "2026-09-04T12:00:00+02:00",
+  "jabcon_start": "2026-09-04T09:00:00+02:00",
   "jabcon_end": "2026-09-10T19:00:00+02:00",
   "timezone": "Europe/Berlin",
   "participants": [
@@ -19,6 +20,259 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
+   "repo": "JabRef/JabRef-Browser-Extension-experimental",
+   "number": 88,
+   "title": "chore(experimental): release 3.3.0",
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "autorelease: pending"
+   ],
+   "updated_at": "2026-09-04T04:39:02Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16831",
+   "repo": "JabRef/jabref",
+   "number": 16831,
+   "title": "Show full text download search as background task",
+   "url": "https://github.com/JabRef/jabref/pull/16831",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: external-files",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T03:41:41Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16791",
+   "repo": "JabRef/jabref",
+   "number": 16791,
+   "title": "Ship JEP 514 AOT cache in jabkit app image",
+   "url": "https://github.com/JabRef/jabref/pull/16791",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: jabkit"
+   ],
+   "updated_at": "2026-09-04T03:41:17Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16813",
+   "repo": "JabRef/jabref",
+   "number": 16813,
+   "title": "Synchronize local libraries with their files (merge external changes without a dialog)",
+   "url": "https://github.com/JabRef/jabref/pull/16813",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: preferences",
+    "component: external-changes"
+   ],
+   "updated_at": "2026-09-04T03:39:37Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16829",
+   "repo": "JabRef/jabref",
+   "number": 16829,
+   "title": "Group file operations in the entry context menu",
+   "url": "https://github.com/JabRef/jabref/pull/16829",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T03:36:55Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16708",
+   "repo": "JabRef/jabref",
+   "number": 16708,
+   "title": "Common CSS styles for spacing, padding, gaps and font-size",
+   "url": "https://github.com/JabRef/jabref/pull/16708",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: libre-office",
+    "component: groups",
+    "component: import-load",
+    "component: preferences",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "status: changes-required",
+    "project: jabcon",
+    "component: logging",
+    "component: automatic-field-editor",
+    "component: theming",
+    "component: slr",
+    "component: ai",
+    "component: css",
+    "component: external-changes",
+    "component: welcome-tab",
+    "component: external-application-integration",
+    "component: pdf-viewer",
+    "component: git",
+    "component: welcome-walkthrough",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-04T03:24:25Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16247",
+   "repo": "JabRef/jabref",
+   "number": 16247,
+   "title": "Fix wrong author and year when importing PDFs with creator-app metadata",
+   "url": "https://github.com/JabRef/jabref/pull/16247",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "status: changes-required",
+    "status: stale"
+   ],
+   "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2291",
+   "repo": "openjdk/jfx",
+   "number": 2291,
+   "title": "8090896: Allow skipping apps build",
+   "url": "https://github.com/openjdk/jfx/pull/2291",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-04T02:09:32Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T07:02:48Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2282",
+   "repo": "openjdk/jfx",
+   "number": 2282,
+   "title": "8391309: Mouse-wheel scroll distance incorrectly depends on render scale",
+   "url": "https://github.com/openjdk/jfx/pull/2282",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "ready"
+   ],
+   "updated_at": "2026-09-04T06:52:09Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16739",
+   "repo": "JabRef/jabref",
+   "number": 16739,
+   "title": "Fix button placement at commit dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16739",
+   "type": "pr",
+   "draft": true,
+   "author": "GRV-Satya-Ganesh",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "status: changes-required",
+    "component: git",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-04T03:23:39Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2197",
+   "repo": "openjdk/jfx",
+   "number": 2197,
+   "title": "8373452: DataFormat threading and API issues",
+   "url": "https://github.com/openjdk/jfx/pull/2197",
+   "type": "pr",
+   "draft": false,
+   "author": "andy-goryachev-oracle",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-04T02:19:43Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
   {
    "id": "https://github.com/JabRef/jabref/issues/16035",
    "repo": "JabRef/jabref",
@@ -1040,7 +1294,17 @@
    "column": "backlog"
   }
  ],
- "events": [],
+ "events": [
+  {
+   "id": "14414119140",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T07:01:46Z",
+   "summary": "reviewed PR #16755 (approved)"
+  }
+ ],
  "stats": {
   "additions": 0,
   "deletions": 0,
@@ -1048,6 +1312,13 @@
   "components": {}
  },
  "leaderboard": [
+  {
+   "login": "subhramit",
+   "points": 2,
+   "merged": 0,
+   "reviews": 1,
+   "other": 0
+  },
   {
    "login": "koppor",
    "points": 0,
@@ -1085,13 +1356,6 @@
   },
   {
    "login": "ryan-carpenter",
-   "points": 0,
-   "merged": 0,
-   "reviews": 0,
-   "other": 0
-  },
-  {
-   "login": "subhramit",
    "points": 0,
    "merged": 0,
    "reviews": 0,
