@@ -46,7 +46,7 @@
    "baseline": 39
   }
  ],
- "generated_at": "2026-09-04T16:40:14+00:00",
+ "generated_at": "2026-09-04T16:48:52+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -456,7 +456,25 @@
     "first contrib",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-04T16:28:39Z",
+   "updated_at": "2026-09-04T16:43:59Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2129",
+   "repo": "openjdk/jfx",
+   "number": 2129,
+   "title": "8222454: TreeTableView NullPointerException at doubleclick on empty \"row\"",
+   "url": "https://github.com/openjdk/jfx/pull/2129",
+   "type": "pr",
+   "draft": false,
+   "author": "plumstone",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-04T16:40:21Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1592,6 +1610,15 @@
  ],
  "events": [
   {
+   "id": "14445549935",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T16:41:37Z",
+   "summary": "commented on #16846: Fix for issue 15721"
+  },
+  {
    "id": "14440283288",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -1599,6 +1626,15 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T15:10:25Z",
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow"
+  },
+  {
+   "id": "14445552183",
+   "type": "PullRequestEvent",
+   "action": "closed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T14:50:54Z",
+   "summary": "closed PR #16846"
   },
   {
    "id": "14438315759",
@@ -1762,6 +1798,13 @@
    "other": 5
   },
   {
+   "login": "pluto-han",
+   "points": 4,
+   "merged": 0,
+   "reviews": 0,
+   "other": 4
+  },
+  {
    "login": "subhramit",
    "points": 4,
    "merged": 0,
@@ -1774,13 +1817,6 @@
    "merged": 1,
    "reviews": 0,
    "other": 0
-  },
-  {
-   "login": "pluto-han",
-   "points": 3,
-   "merged": 0,
-   "reviews": 0,
-   "other": 3
   },
   {
    "login": "InAnYan",
