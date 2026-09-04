@@ -30,5 +30,8 @@
     "JabRef/jabref/24",
     "JabRef/jabref-issue-melting-pot/1"
   ],
+  "private_repos": [
+    "JabRef/jabref-issue-melting-pot"
+  ],
   "exclude_repos": []
 }

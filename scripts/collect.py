@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = json.load(open(os.path.join(ROOT, "config.json")))
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN")
-# A fine-grained PAT scoped to private repos; used only for milestones (it cannot run global searches: 422)
+# A fine-grained PAT scoped to private repos; used only for milestones and private_repos (it cannot run global searches: 422)
 MILESTONE_TOKEN = os.environ.get("MILESTONE_TOKEN") or TOKEN
 PARTICIPANTS = CONFIG["participants"]
 START = datetime.fromisoformat(CONFIG["jabcon_start"])
@@ -227,8 +227,11 @@ def pr_stats(c, cached):
             "refactorings": refactorings(pr, files, c["repo"])}
 
 
-def leaderboard(cards, events):
+def leaderboard(cards, events, private):
     score = {p: {"merged": 0, "reviews": 0, "other": 0} for p in PARTICIPANTS}
+    for counts in private.values():
+        for p, n in counts["by"].items():
+            score[p]["other"] += n
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in score:
             score[c["author"]]["merged"] += 1
@@ -259,6 +262,30 @@ def milestones(previous):
     return result
 
 
+def private_activity():
+    """Counts only (no titles, no numbers): data.json is public, the repos are not."""
+    result = {}
+    for repo in CONFIG.get("private_repos", []):
+        counts = {"opened": 0, "closed": 0, "comments": 0, "by": {p: 0 for p in PARTICIPANTS}}
+        try:
+            events, _ = get(f"/repos/{repo}/events", {"per_page": 100}, token=MILESTONE_TOKEN)
+        except urllib.error.HTTPError as e:
+            print(f"::warning::private repo {repo} skipped ({e.code}; set the BOARD_TOKEN secret)")
+            continue
+        for e in events:
+            if datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")) < START:
+                continue
+            action = e.get("payload", {}).get("action")
+            kind = {("IssuesEvent", "opened"): "opened", ("IssuesEvent", "closed"): "closed", ("IssueCommentEvent", "created"): "comments"}.get((e["type"], action))
+            if kind is None:
+                continue
+            counts[kind] += 1
+            if e["actor"]["login"] in counts["by"]:
+                counts["by"][e["actor"]["login"]] += 1
+        result[repo] = counts
+    return result
+
+
 def main():
     args = sys.argv[1:]
     out = args[args.index("--out") + 1] if "--out" in args else "data.json"
@@ -285,17 +312,19 @@ def main():
             totals[k] += c.get("stats", {}).get(k, 0)
         for comp, n in c.get("stats", {}).get("components", {}).items():
             totals["components"][comp] = totals["components"].get(comp, 0) + n
+    private = private_activity()
     nerdy = sorted(({"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
                     for c in cards for w, t in c.get("stats", {}).get("refactorings", [])), key=lambda r: -r["weight"])[:5]
     data = {
         "refactorings": nerdy,
         "milestones": milestones(previous_milestones),
+        "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,
         "cards": cards,
         "events": events[:200],
         "stats": totals,
-        "leaderboard": sorted(leaderboard(cards, events), key=lambda l: -l["points"]),
+        "leaderboard": sorted(leaderboard(cards, events, private), key=lambda l: -l["points"]),
     }
     with open(out, "w") as f:
         json.dump(data, f, indent=1)
