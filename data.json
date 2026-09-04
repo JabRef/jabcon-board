@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-04T23:33:48+00:00",
+ "generated_at": "2026-09-04T23:41:10+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -558,9 +558,48 @@
    "assignees": [],
    "labels": [
     "status: changes-required",
-    "component: git"
+    "component: git",
+    "status: to-be-merged"
    ],
-   "updated_at": "2026-09-04T23:30:07Z",
+   "updated_at": "2026-09-04T23:40:15Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16829",
+   "repo": "JabRef/jabref",
+   "number": 16829,
+   "title": "Group file operations in the entry context menu",
+   "url": "https://github.com/JabRef/jabref/pull/16829",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: maintable"
+   ],
+   "updated_at": "2026-09-04T23:38:35Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16830",
+   "repo": "JabRef/jabref",
+   "number": 16830,
+   "title": "Preserve file attributes when replacing a file atomically",
+   "url": "https://github.com/JabRef/jabref/pull/16830",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: export-or-save",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-04T23:38:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -821,25 +860,6 @@
     "autorelease: pending"
    ],
    "updated_at": "2026-09-04T04:39:02Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16829",
-   "repo": "JabRef/jabref",
-   "number": 16829,
-   "title": "Group file operations in the entry context menu",
-   "url": "https://github.com/JabRef/jabref/pull/16829",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T03:36:55Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2342,6 +2362,54 @@
  ],
  "events": [
   {
+   "id": "14464461957",
+   "type": "PullRequestEvent",
+   "action": "unlabeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:38:23Z",
+   "summary": "unlabeled PR #16829",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464460825",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:38:16Z",
+   "summary": "labeled PR #16829",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464447277",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:37:56Z",
+   "summary": "reviewed PR #16829 (commented)",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464447001",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:37:55Z",
+   "summary": "commented on PR #16829",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14464205356",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -4484,6 +4552,30 @@
    "actor": "koppor",
    "repo": "JabRef/jabcon-board",
    "created_at": "2026-09-04T11:20:44Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board"
+  },
+  {
+   "id": "20064378207",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T11:19:45Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "20063947653",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T11:15:36Z",
    "summary": "pushed 0 commit(s) to main",
    "number": null,
    "merged": false,
@@ -4564,6 +4656,54 @@
  ],
  "all_events": [
   {
+   "id": "14464461957",
+   "type": "PullRequestEvent",
+   "action": "unlabeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:38:23Z",
+   "summary": "unlabeled PR #16829",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464460825",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:38:16Z",
+   "summary": "labeled PR #16829",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464447277",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:37:56Z",
+   "summary": "reviewed PR #16829 (commented)",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14464447001",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:37:55Z",
+   "summary": "commented on PR #16829",
+   "number": 16829,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14464205356",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -6706,6 +6846,30 @@
    "actor": "koppor",
    "repo": "JabRef/jabcon-board",
    "created_at": "2026-09-04T11:20:44Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board"
+  },
+  {
+   "id": "20064378207",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T11:19:45Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "20063947653",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T11:15:36Z",
    "summary": "pushed 0 commit(s) to main",
    "number": null,
    "merged": false,
@@ -6811,18 +6975,18 @@
    "other": 24
   },
   {
+   "login": "koppor",
+   "points": 53,
+   "merged": 4,
+   "reviews": 12,
+   "other": 17
+  },
+  {
    "login": "InAnYan",
    "points": 52,
    "merged": 0,
    "reviews": 13,
    "other": 26
-  },
-  {
-   "login": "koppor",
-   "points": 48,
-   "merged": 4,
-   "reviews": 11,
-   "other": 14
   },
   {
    "login": "subhramit",
