@@ -68,8 +68,9 @@ function renderStats() {
 }
 
 function renderTicker() {
+  const org = data.config.org + '/';
   $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map((e) =>
-    `<li>${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span><span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)} <span class="repo">${esc(e.repo)}</span></span></li>`).join('');
+    `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span><span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)}</span><span class="repo">${esc(e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</span></li>`).join('');
 }
 
 function celebrate(prev) {

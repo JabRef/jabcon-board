@@ -81,8 +81,9 @@ section h2 .count { float: right; color: var(--fg); }
 #ticker li { display: flex; gap: .5rem; align-items: center; padding: .2rem 0; white-space: nowrap; overflow: hidden; }
 #ticker img { width: 1.4rem; height: 1.4rem; border-radius: 50%; flex: none; }
 #ticker .when { color: var(--muted); flex: none; width: 5.5rem; }
-#ticker .what { overflow: hidden; text-overflow: ellipsis; }
-#ticker .repo { color: var(--muted); }
+#ticker .what { overflow: hidden; text-overflow: ellipsis; flex: 1; }
+#ticker .repo { font-size: .7rem; color: var(--muted); background: var(--border); padding: .1rem .4rem; border-radius: .3rem; flex: none; }
+#ticker li.other { opacity: .65; }
 #gource { width: 100%; max-height: 32%; object-fit: contain; background: #000; border-radius: .4rem; margin-top: .4rem; }
 #gource:not([src]) { display: none; }
 #gource-missing { margin-top: .4rem; padding: .6rem; border: 1px dashed var(--border); border-radius: .4rem; color: var(--muted); font-size: .8rem; text-align: center; }
