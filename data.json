@@ -20,7 +20,7 @@
    "baseline": 45
   }
  ],
- "generated_at": "2026-09-04T14:12:46+00:00",
+ "generated_at": "2026-09-04T14:27:17+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -99,9 +99,38 @@
     "component: bib(la)tex",
     "component: jabkit",
     "component: import-load",
-    "component: jabsrv"
+    "component: jabsrv",
+    "status: to-be-merged"
    ],
-   "updated_at": "2026-09-04T14:08:47Z",
+   "updated_at": "2026-09-04T14:24:46Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16835",
+   "repo": "JabRef/jabref",
+   "number": 16835,
+   "title": "Add per-library keyword separator",
+   "url": "https://github.com/JabRef/jabref/pull/16835",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: cleanup-ops",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: citationkey-generator",
+    "component: bib(la)tex",
+    "component: import-load",
+    "component: export-or-save",
+    "component: entry-editor",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-04T14:22:28Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
