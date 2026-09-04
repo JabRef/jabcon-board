@@ -4,7 +4,8 @@ A self-refreshing wall display for [JabCon](https://contribute.jabref.org/), the
 what participants are working on, what got merged, who did what, plus a [gource](https://gource.io/) video
 of the JabRef repository during the meetup.
 
-Live: <https://jabref.github.io/jabcon-board/> (only carries data while JabCon runs).
+Live: <https://jabref.github.io/jabcon-board/> (only carries data while JabCon runs). The layout scales with the
+screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more cards, `?scale=1.2` for bigger text.
 
 ## How it works
 
