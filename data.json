@@ -20,7 +20,7 @@
    "baseline": 45
   }
  ],
- "generated_at": "2026-09-04T12:20:26+00:00",
+ "generated_at": "2026-09-04T12:40:12+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -45,7 +45,8 @@
    "ryan-carpenter",
    "subhramit",
    "wanling0000",
-   "Stewori"
+   "Stewori",
+   "JohnnyGoodNews"
   ],
   "milestones": [
    "JabRef/jabref/36",
@@ -95,7 +96,27 @@
    "labels": [
     "rfr"
    ],
-   "updated_at": "2026-09-04T12:04:33Z",
+   "updated_at": "2026-09-04T12:30:43Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/godotengine/godot/pull/69362",
+   "repo": "godotengine/godot",
+   "number": 69362,
+   "title": "[3.x] Try loading the path specified in a preload(..) method call with the ResourceLoader if the script code completion cache is not yet available",
+   "url": "https://github.com/godotengine/godot/pull/69362",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "bug",
+    "topic:gdscript",
+    "topic:editor"
+   ],
+   "updated_at": "2026-09-04T12:23:26Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -276,7 +297,7 @@
     "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-04T12:19:57Z",
+   "updated_at": "2026-09-04T12:37:35Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1365,6 +1386,15 @@
  ],
  "events": [
   {
+   "id": "14430706823",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-04T12:30:43Z",
+   "summary": "commented on #2291: 8090896: Allow skipping apps build"
+  },
+  {
    "id": "14428618777",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -1457,10 +1487,10 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 5,
+   "points": 6,
    "merged": 0,
    "reviews": 1,
-   "other": 3
+   "other": 4
   },
   {
    "login": "subhramit",
@@ -1513,6 +1543,13 @@
   },
   {
    "login": "Stewori",
+   "points": 0,
+   "merged": 0,
+   "reviews": 0,
+   "other": 0
+  },
+  {
+   "login": "JohnnyGoodNews",
    "points": 0,
    "merged": 0,
    "reviews": 0,
