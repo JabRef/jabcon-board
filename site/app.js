@@ -93,8 +93,8 @@ function renderTicker() {
 
 function celebrate(prev) {
   if (!prev) return;
-  const leader = data.leaderboard[0]?.login, before = prev.leaderboard[0]?.login;
-  if (leader && before && leader !== before) {
+  const leader = data.leaderboard[0]?.login, wasLeader = prev.leaderboard[0]?.login;
+  if (leader && wasLeader && leader !== wasLeader) {
     bell();
     toast(`🔔 ${leader} takes the lead!`);
   }
