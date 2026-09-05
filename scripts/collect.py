@@ -147,11 +147,20 @@ def collect_events(previous):
                     "url": ((payload.get("comment") or payload.get("review") or {}).get("html_url")
                             or f"https://github.com/{e['repo']['name']}" + (f"/issues/{number}" if number else "")),
                     "excerpt": excerpt((payload.get("comment") or payload.get("review") or {}).get("body")),
+                    "review_id": (payload.get("review") or {}).get("id") or (payload.get("comment") or {}).get("pull_request_review_id"),
                 }
             if len(data) < 100 or datetime.fromisoformat(data[-1]["created_at"].replace("Z", "+00:00")) < START:
                 break
     events = list(seen.values())
     events.sort(key=lambda e: e["created_at"], reverse=True)
+    # a review made of inline comments only has an empty body: borrow the first inline comment's excerpt
+    first_comment = {}
+    for e in reversed(events):
+        if e["type"] == "PullRequestReviewCommentEvent" and e.get("review_id") and e.get("excerpt"):
+            first_comment.setdefault(e["review_id"], e["excerpt"])
+    for e in events:
+        if e["type"] == "PullRequestReviewEvent" and not e.get("excerpt"):
+            e["excerpt"] = first_comment.get(e.get("review_id"), "")
     return events
 
 
@@ -159,7 +168,8 @@ def excerpt(body, limit=140):
     """First line of a comment, markdown-ish noise stripped, cut to limit."""
     if not body:
         return ""
-    line = next((l.strip() for l in body.splitlines() if l.strip() and not l.strip().startswith(("```", "<!--", ">", "|"))), "")
+    line = next((l.strip() for l in body.splitlines()
+                 if l.strip() and not l.strip().startswith(("```", "<!--", ">", "|", "🤖"))), "")
     line = re.sub(r"[`*_#]+", "", line)
     return line if len(line) <= limit else line[:limit - 1].rstrip() + "…"
 
