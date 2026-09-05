@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T14:15:54+00:00",
+ "generated_at": "2026-09-05T14:25:03+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1823,7 +1823,7 @@
     "component: css",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T14:16:05Z",
+   "updated_at": "2026-09-05T14:19:50Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3515,6 +3515,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14485908430",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:19:50Z",
+   "summary": "commented on #16846: Remove hardcoded styling",
+   "number": 16846,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16846#issuecomment-5552425947",
+   "excerpt": "@ZiadAbdElFatah  you can only add new abbreviations to a a new custom list, not the jabref bulitin list",
+   "review_id": null
+  },
   {
    "id": "14485776040",
    "type": "PullRequestReviewCommentEvent",
@@ -6435,24 +6449,23 @@
    "excerpt": "move swhid ot the end, it's not really one that should be checked first",
    "review_id": 5120664875,
    "self": false
-  },
-  {
-   "id": "14478574157",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:22:20Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940128530",
-   "excerpt": "move swhid ot the end, it's not really one that should be checked first",
-   "review_id": 5120664875,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14485908430",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:19:50Z",
+   "summary": "commented on #16846: Remove hardcoded styling",
+   "number": 16846,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16846#issuecomment-5552425947",
+   "excerpt": "@ZiadAbdElFatah  you can only add new abbreviations to a a new custom list, not the jabref bulitin list",
+   "review_id": null
+  },
   {
    "id": "14485776040",
    "type": "PullRequestReviewCommentEvent",
@@ -14451,10 +14464,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 68,
+   "points": 69,
    "merged": 1,
    "reviews": 22,
-   "other": 21
+   "other": 22
   },
   {
    "login": "koppor",
