@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T17:14:35+00:00",
+ "generated_at": "2026-09-05T17:22:22+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1230,6 +1230,72 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16853",
+   "repo": "JabRef/jabref",
+   "number": 16853,
+   "title": "Fix BST entry preview formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16853",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: libre-office",
+    "component: entry-preview",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-05T17:16:09Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "repo": "JabRef/jabref",
+   "number": 16862,
+   "title": "Remove ready-for-review label when a PR is converted to draft",
+   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T17:15:43Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16859",
+   "repo": "JabRef/jabref",
+   "number": 16859,
+   "title": "Configure navigation tree hierarchy for AI requirements in devdocs",
+   "url": "https://github.com/JabRef/jabref/pull/16859",
+   "type": "pr",
+   "draft": false,
+   "author": "InAnYan",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T17:15:21Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16855",
    "repo": "JabRef/jabref",
    "number": 16855,
@@ -1370,26 +1436,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16862",
-   "repo": "JabRef/jabref",
-   "number": 16862,
-   "title": "Remove ready-for-review label when a PR is converted to draft",
-   "url": "https://github.com/JabRef/jabref/pull/16862",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-05T11:16:39Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16791",
    "repo": "JabRef/jabref",
    "number": 16791,
@@ -1430,26 +1476,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16859",
-   "repo": "JabRef/jabref",
-   "number": 16859,
-   "title": "Configure navigation tree hierarchy for AI requirements in devdocs",
-   "url": "https://github.com/JabRef/jabref/pull/16859",
-   "type": "pr",
-   "draft": false,
-   "author": "InAnYan",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-05T10:34:51Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16830",
    "repo": "JabRef/jabref",
    "number": 16830,
@@ -1469,31 +1495,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16853",
-   "repo": "JabRef/jabref",
-   "number": 16853,
-   "title": "Fix BST entry preview formatting",
-   "url": "https://github.com/JabRef/jabref/pull/16853",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: libre-office",
-    "component: entry-preview",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
-   ],
-   "updated_at": "2026-09-05T09:35:34Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16857",
@@ -3554,6 +3555,36 @@
   }
  ],
  "events": [
+  {
+   "id": "14490746136",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:15:45Z",
+   "summary": "reviewed PR #16862 (commented)",
+   "number": 16862,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16862#pullrequestreview-5122188686",
+   "excerpt": "guard review should run regardless, I think?",
+   "review_id": 5122188686,
+   "self": false
+  },
+  {
+   "id": "14490745512",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:15:43Z",
+   "summary": "commented on PR #16862",
+   "number": 16862,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16862#discussion_r3941394602",
+   "excerpt": "guard review should run regardless, I think?",
+   "review_id": 5122188686,
+   "self": false
+  },
   {
    "id": "14490717781",
    "type": "PullRequestReviewEvent",
@@ -6458,38 +6489,39 @@
    "excerpt": "@LoayTarek5 we discussed this to be intentional? or otherwise? I forgot \ud83e\udee3",
    "review_id": 5120700108,
    "self": false
+  }
+ ],
+ "all_events": [
+  {
+   "id": "14490746136",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:15:45Z",
+   "summary": "reviewed PR #16862 (commented)",
+   "number": 16862,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16862#pullrequestreview-5122188686",
+   "excerpt": "guard review should run regardless, I think?",
+   "review_id": 5122188686,
+   "self": false
   },
   {
-   "id": "14478861769",
+   "id": "14490745512",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
    "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:34:47Z",
-   "summary": "commented on PR #16651",
-   "number": 16651,
+   "created_at": "2026-09-05T17:15:43Z",
+   "summary": "commented on PR #16862",
+   "number": 16862,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3940158591",
-   "excerpt": "@LoayTarek5 we discussed this to be intentional? or otherwise? I forgot \ud83e\udee3",
-   "review_id": 5120700108,
+   "url": "https://github.com/JabRef/jabref/pull/16862#discussion_r3941394602",
+   "excerpt": "guard review should run regardless, I think?",
+   "review_id": 5122188686,
    "self": false
   },
-  {
-   "id": "14479889386",
-   "type": "PullRequestEvent",
-   "action": "labeled",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:33:41Z",
-   "summary": "labeled PR #16858",
-   "number": 16858,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16858",
-   "excerpt": "",
-   "review_id": null
-  }
- ],
- "all_events": [
   {
    "id": "14490717781",
    "type": "PullRequestReviewEvent",
@@ -11008,6 +11040,20 @@
    "self": true
   },
   {
+   "id": "20158650841",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T00:17:35Z",
+   "summary": "pushed 0 commit(s) to fix-bst-preview",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14465323174",
    "type": "PullRequestEvent",
    "action": "labeled",
@@ -11032,6 +11078,20 @@
    "number": 16853,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16853",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20158256379",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T00:02:55Z",
+   "summary": "created branch fix-bst-preview",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -13074,6 +13134,20 @@
    "self": false
   },
   {
+   "id": "20158390602",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T20:57:47Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14458389299",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
@@ -14655,7 +14729,8 @@
   "JabRef/jabref#16856": "koppor",
   "JabRef/jabref#16838": "koppor",
   "openjdk/jfx#2015": "mstr2",
-  "JabRef/jabref#16855": "subhramit"
+  "JabRef/jabref#16855": "subhramit",
+  "JabRef/jabref#16862": "koppor"
  },
  "stats": {
   "additions": 2297,
@@ -14681,10 +14756,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 126,
+   "points": 130,
    "merged": 2,
-   "reviews": 24,
-   "other": 72
+   "reviews": 25,
+   "other": 74
   },
   {
    "login": "InAnYan",
@@ -14709,10 +14784,10 @@
   },
   {
    "login": "koppor",
-   "points": 66,
+   "points": 67,
    "merged": 8,
    "reviews": 2,
-   "other": 38
+   "other": 39
   },
   {
    "login": "pluto-han",
