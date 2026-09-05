@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T06:45:51+00:00",
+ "generated_at": "2026-09-05T06:46:39+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -663,6 +663,23 @@
    "closed_at": "2026-09-04T21:19:55Z",
    "merged_at": null,
    "column": "done",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16856",
+   "repo": "JabRef/jabref",
+   "number": 16856,
+   "title": "Drop label \"status: no-bot-comments\"",
+   "url": "https://github.com/JabRef/jabref/pull/16856",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T06:46:34Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
    "focus": false
   },
   {
@@ -2804,6 +2821,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14474916689",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T06:46:25Z",
+   "summary": "opened PR #16856",
+   "number": 16856,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16856",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14474145511",
    "type": "PullRequestReviewEvent",
@@ -5732,23 +5763,23 @@
    "url": "https://github.com/JabRef/jabref/pull/16834#issuecomment-5545980829",
    "excerpt": "Please use the template for PR description",
    "review_id": null
-  },
-  {
-   "id": "14456169602",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "JohnnyGoodNews",
-   "repo": "Vinzent03/find-unlinked-files",
-   "created_at": "2026-09-04T20:09:58Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/Vinzent03/find-unlinked-files",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14474916689",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T06:46:25Z",
+   "summary": "opened PR #16856",
+   "number": 16856,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16856",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14474145511",
    "type": "PullRequestReviewEvent",
