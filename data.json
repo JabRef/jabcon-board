@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T21:16:23+00:00",
+ "generated_at": "2026-09-05T21:24:20+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -4184,6 +4184,20 @@
    "review_id": null
   },
   {
+   "id": "20177491360",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/JabRef-Browser-Extension",
+   "created_at": "2026-09-05T12:10:44Z",
+   "summary": "pushed 0 commit(s) to safari",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14482550808",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -6493,20 +6507,6 @@
    "url": "https://github.com/JabRef/jabref/issues/16640",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14479160908",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:47:12Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
-   "number": 16640,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5550981949",
-   "excerpt": "/unassign @thesauravpoddar",
-   "review_id": null
   }
  ],
  "all_events": [
@@ -7107,6 +7107,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551737473",
    "excerpt": "Needs more thinking and less vibecoding.",
+   "review_id": null
+  },
+  {
+   "id": "20177491360",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/JabRef-Browser-Extension",
+   "created_at": "2026-09-05T12:10:44Z",
+   "summary": "pushed 0 commit(s) to safari",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -15309,10 +15323,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 70,
+   "points": 71,
    "merged": 1,
    "reviews": 22,
-   "other": 23
+   "other": 24
   },
   {
    "login": "pluto-han",
