@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T22:34:21+00:00",
+ "generated_at": "2026-09-05T22:41:21+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -4481,6 +4481,20 @@
    "review_id": null
   },
   {
+   "id": "20183740210",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-05T11:40:07Z",
+   "summary": "deleted branch openoffice-preference",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14481800917",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -4506,6 +4520,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551465735",
    "excerpt": "@ThiloteE pushed another commit - see if you still get that.",
+   "review_id": null
+  },
+  {
+   "id": "20183382153",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T11:29:22Z",
+   "summary": "created branch 8156779-GTK3-warning-when-running-SwingNode-applications",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -6493,35 +6521,6 @@
    "excerpt": "Fixed in 1c2526e96d: the directive is the last line of the file again.",
    "review_id": 5120796045,
    "self": true
-  },
-  {
-   "id": "14479556084",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:04:02Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940232410",
-   "excerpt": "maybe easier to assert it's present? then just .get()?",
-   "review_id": 5120713792,
-   "self": false
-  },
-  {
-   "id": "14479552813",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:03:52Z",
-   "summary": "commented on #16851: Fix `missing$` case warnings in BST VM",
-   "number": 16851,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16851#issuecomment-5551057882",
-   "excerpt": "We could have added a CHANGELOG.md entry - next time ^^",
-   "review_id": null
   }
  ],
  "all_events": [
@@ -7399,6 +7398,20 @@
    "review_id": null
   },
   {
+   "id": "20183740210",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-05T11:40:07Z",
+   "summary": "deleted branch openoffice-preference",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14481800917",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -7424,6 +7437,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551465735",
    "excerpt": "@ThiloteE pushed another commit - see if you still get that.",
+   "review_id": null
+  },
+  {
+   "id": "20183382153",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T11:29:22Z",
+   "summary": "created branch 8156779-GTK3-warning-when-running-SwingNode-applications",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
    "review_id": null
   },
   {
