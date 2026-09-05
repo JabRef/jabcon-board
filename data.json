@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T22:17:37+00:00",
+ "generated_at": "2026-09-05T22:25:49+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -4330,6 +4330,20 @@
    "self": true
   },
   {
+   "id": "20182414127",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:05Z",
+   "summary": "pushed 0 commit(s) to git-merge-driver",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14482039430",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -6489,21 +6503,6 @@
    "excerpt": "But it seems to work without?",
    "review_id": 5120783461,
    "self": true
-  },
-  {
-   "id": "14479442151",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:59:15Z",
-   "summary": "commented on PR #16830",
-   "number": 16830,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3940220542",
-   "excerpt": "But it seems to work without?",
-   "review_id": 5120783461,
-   "self": true
   }
  ],
  "all_events": [
@@ -7251,6 +7250,20 @@
    "excerpt": "Confirmed and fixed in 4857942. Reproduced: with the comment above Smith2020 changed in OTHER only, the driver exited 0 and wrote CURRENT's\u2026",
    "review_id": 5121157210,
    "self": true
+  },
+  {
+   "id": "20182414127",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:05Z",
+   "summary": "pushed 0 commit(s) to git-merge-driver",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14482039430",
@@ -15439,10 +15452,10 @@
   },
   {
    "login": "koppor",
-   "points": 81,
+   "points": 82,
    "merged": 8,
    "reviews": 2,
-   "other": 53
+   "other": 54
   },
   {
    "login": "Siedlerchr",
