@@ -70,6 +70,12 @@
    "baseline": 39
   }
  ],
+ "focus": {
+  "label": "project: jabcon",
+  "open": 12,
+  "closed": 0,
+  "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
+ },
  "private_activity": {
   "JabRef/jabref-issue-melting-pot": {
    "opened": 1,
@@ -91,9 +97,10 @@
    }
   }
  },
- "generated_at": "2026-09-05T06:28:41+00:00",
+ "generated_at": "2026-09-05T06:45:51+00:00",
  "config": {
   "org": "JabRef",
+  "focus_label": "project: jabcon",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
   "jabcon_end": "2026-09-10T19:00:00+02:00",
   "phases": [
@@ -151,6 +158,7 @@
    "closed_at": "2026-09-05T06:26:54Z",
    "merged_at": "2026-09-05T06:26:54Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 3,
     "deletions": 0,
@@ -180,6 +188,7 @@
    "closed_at": "2026-09-05T01:35:01Z",
    "merged_at": "2026-09-05T01:35:01Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 124,
     "deletions": 8,
@@ -211,6 +220,7 @@
    "closed_at": "2026-09-04T23:52:21Z",
    "merged_at": "2026-09-04T23:52:21Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 100,
     "deletions": 11,
@@ -246,6 +256,7 @@
    "closed_at": "2026-09-04T23:27:37Z",
    "merged_at": "2026-09-04T23:27:37Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 1,
     "deletions": 0,
@@ -276,6 +287,7 @@
    "closed_at": "2026-09-04T23:26:52Z",
    "merged_at": "2026-09-04T23:26:52Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 53,
     "deletions": 8,
@@ -324,6 +336,7 @@
    "closed_at": "2026-09-04T21:41:34Z",
    "merged_at": "2026-09-04T21:41:34Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 965,
     "deletions": 148,
@@ -378,6 +391,7 @@
    "closed_at": "2026-09-04T21:24:03Z",
    "merged_at": "2026-09-04T21:24:03Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 12,
     "deletions": 2,
@@ -410,6 +424,7 @@
    "closed_at": "2026-09-04T21:19:53Z",
    "merged_at": "2026-09-04T21:19:53Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 6,
     "deletions": 3,
@@ -449,6 +464,7 @@
    "closed_at": "2026-09-04T21:18:02Z",
    "merged_at": "2026-09-04T21:18:02Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 17,
     "deletions": 1,
@@ -477,6 +493,7 @@
    "closed_at": "2026-09-04T20:58:08Z",
    "merged_at": "2026-09-04T20:58:08Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 319,
     "deletions": 11,
@@ -521,6 +538,7 @@
    "closed_at": "2026-09-04T14:38:27Z",
    "merged_at": "2026-09-04T14:38:27Z",
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 60,
     "deletions": 36,
@@ -565,6 +583,7 @@
    "closed_at": "2026-09-04T10:41:52Z",
    "merged_at": null,
    "column": "done",
+   "focus": false,
    "stats": {
     "additions": 147,
     "deletions": 4,
@@ -596,7 +615,8 @@
    "updated_at": "2026-09-04T23:28:26Z",
    "closed_at": "2026-09-04T23:26:53Z",
    "merged_at": null,
-   "column": "done"
+   "column": "done",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/15680",
@@ -619,7 +639,8 @@
    "updated_at": "2026-09-04T21:26:00Z",
    "closed_at": "2026-09-04T21:24:04Z",
    "merged_at": null,
-   "column": "done"
+   "column": "done",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16477",
@@ -641,7 +662,8 @@
    "updated_at": "2026-09-04T21:21:16Z",
    "closed_at": "2026-09-04T21:19:55Z",
    "merged_at": null,
-   "column": "done"
+   "column": "done",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16853",
@@ -664,7 +686,8 @@
    "updated_at": "2026-09-05T05:51:54Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
@@ -682,7 +705,8 @@
    "updated_at": "2026-09-05T04:34:01Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16174",
@@ -711,7 +735,8 @@
    "updated_at": "2026-09-05T04:31:01Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/14493",
@@ -734,7 +759,8 @@
    "updated_at": "2026-09-05T04:23:45Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/apache/spark/pull/58225",
@@ -750,7 +776,8 @@
    "updated_at": "2026-09-05T03:48:52Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16791",
@@ -771,7 +798,8 @@
    "updated_at": "2026-09-05T03:38:23Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16838",
@@ -791,7 +819,8 @@
    "updated_at": "2026-09-05T03:35:19Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16708",
@@ -831,7 +860,8 @@
    "updated_at": "2026-09-05T03:23:01Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16851",
@@ -852,7 +882,8 @@
    "updated_at": "2026-09-05T03:14:10Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16855",
@@ -874,7 +905,8 @@
    "updated_at": "2026-09-05T02:41:43Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": true
   },
   {
    "id": "https://github.com/unicode-org/icu/pull/2127",
@@ -892,7 +924,8 @@
    "updated_at": "2026-09-05T01:22:56Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16830",
@@ -911,7 +944,8 @@
    "updated_at": "2026-09-05T00:56:43Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16829",
@@ -930,7 +964,8 @@
    "updated_at": "2026-09-04T23:53:21Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16850",
@@ -962,7 +997,8 @@
    "updated_at": "2026-09-04T23:18:23Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/itsallcode/openfasttrace/pull/583",
@@ -978,7 +1014,8 @@
    "updated_at": "2026-09-04T22:23:47Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16831",
@@ -997,7 +1034,8 @@
    "updated_at": "2026-09-04T21:51:21Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16813",
@@ -1017,7 +1055,8 @@
    "updated_at": "2026-09-04T21:46:19Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16845",
@@ -1040,7 +1079,8 @@
    "updated_at": "2026-09-04T21:42:13Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/1935",
@@ -1059,7 +1099,8 @@
    "updated_at": "2026-09-04T19:18:17Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/apache/airflow/pull/71976",
@@ -1079,7 +1120,8 @@
    "updated_at": "2026-09-04T18:25:57Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/2291",
@@ -1097,7 +1139,8 @@
    "updated_at": "2026-09-04T12:56:00Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/godotengine/godot/pull/69362",
@@ -1117,7 +1160,8 @@
    "updated_at": "2026-09-04T12:23:26Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16247",
@@ -1137,7 +1181,8 @@
    "updated_at": "2026-09-04T03:13:28Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16755",
@@ -1158,7 +1203,8 @@
    "updated_at": "2026-09-05T03:53:08Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16846",
@@ -1182,7 +1228,8 @@
    "updated_at": "2026-09-05T03:37:33Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16742",
@@ -1205,7 +1252,8 @@
    "updated_at": "2026-09-05T03:23:10Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16739",
@@ -1227,7 +1275,8 @@
    "updated_at": "2026-09-05T03:23:08Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/1773",
@@ -1246,7 +1295,8 @@
    "updated_at": "2026-09-04T23:23:51Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16530",
@@ -1268,7 +1318,8 @@
    "updated_at": "2026-09-04T23:21:50Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16615",
@@ -1289,7 +1340,8 @@
    "updated_at": "2026-09-04T22:31:41Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/2278",
@@ -1307,7 +1359,8 @@
    "updated_at": "2026-09-04T22:27:26Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16760",
@@ -1325,7 +1378,8 @@
    "updated_at": "2026-09-04T21:56:08Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16651",
@@ -1350,7 +1404,8 @@
    "updated_at": "2026-09-04T21:43:07Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16222",
@@ -1371,7 +1426,8 @@
    "updated_at": "2026-09-04T19:46:32Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/2129",
@@ -1389,7 +1445,8 @@
    "updated_at": "2026-09-04T16:40:21Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/2197",
@@ -1407,50 +1464,36 @@
    "updated_at": "2026-09-04T02:19:43Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "progress"
+   "column": "progress",
+   "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/16330",
+   "id": "https://github.com/JabRef/jabref/issues/11368",
    "repo": "JabRef/jabref",
-   "number": 16330,
-   "title": "Some advanced formatting does not render in BST Entry Preview",
-   "url": "https://github.com/JabRef/jabref/issues/16330",
+   "number": 11368,
+   "title": "Citation key generator and Linked files",
+   "url": "https://github.com/JabRef/jabref/issues/11368",
    "type": "issue",
    "draft": false,
-   "author": "subhramit",
+   "author": "NeymanDmitry",
    "assignees": [
-    "subhramit"
+    "ABhiShek1705m"
    ],
    "labels": [
-    "component: libre-office",
-    "component: entry-preview",
-    "\ud83d\udccc Pinned"
+    "component: ui",
+    "component: citationkey-generator",
+    "component: preferences",
+    "component: external-files",
+    "project: jabcon",
+    "\ud83d\udccc Pinned",
+    "good second issue",
+    "size: medium"
    ],
-   "updated_at": "2026-09-05T02:58:19Z",
+   "updated_at": "2026-09-05T03:11:48Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16539",
-   "repo": "JabRef/jabref",
-   "number": 16539,
-   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
-   "url": "https://github.com/JabRef/jabref/issues/16539",
-   "type": "issue",
-   "draft": false,
-   "author": "ryan-carpenter",
-   "assignees": [
-    "subhramit"
-   ],
-   "labels": [
-    "component: search",
-    "\ud83d\udccc Pinned"
-   ],
-   "updated_at": "2026-09-05T02:27:32Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16352",
@@ -1474,7 +1517,8 @@
    "updated_at": "2026-09-04T21:46:11Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16035",
@@ -1497,7 +1541,138 @@
    "updated_at": "2026-09-04T21:27:58Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16529",
+   "repo": "JabRef/jabref",
+   "number": 16529,
+   "title": "Add macOS text-editing shortcuts as defaults",
+   "url": "https://github.com/JabRef/jabref/issues/16529",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [],
+   "labels": [
+    "platform: macos",
+    "component: keybinding",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-03T05:03:23Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/11211",
+   "repo": "JabRef/jabref",
+   "number": 11211,
+   "title": "Shared PostgeSQL database loses connection after 2h",
+   "url": "https://github.com/JabRef/jabref/issues/11211",
+   "type": "issue",
+   "draft": false,
+   "author": "m-mauersberger",
+   "assignees": [],
+   "labels": [
+    "component: shared-database",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-08-31T09:05:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12468",
+   "repo": "JabRef/jabref",
+   "number": 12468,
+   "title": "Ability to disable the built-in JabRef journal abbreviation list",
+   "url": "https://github.com/JabRef/jabref/issues/12468",
+   "type": "issue",
+   "draft": false,
+   "author": "Enivex",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "project: jabcon",
+    "component: journal-abbreviations"
+   ],
+   "updated_at": "2026-08-17T19:48:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/6057",
+   "repo": "JabRef/jabref",
+   "number": 6057,
+   "title": "Improve startup time",
+   "url": "https://github.com/JabRef/jabref/issues/6057",
+   "type": "issue",
+   "draft": false,
+   "author": "tobiasdiez",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "dev: performance",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-06-11T13:33:36Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16330",
+   "repo": "JabRef/jabref",
+   "number": 16330,
+   "title": "Some advanced formatting does not render in BST Entry Preview",
+   "url": "https://github.com/JabRef/jabref/issues/16330",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "component: libre-office",
+    "component: entry-preview",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T02:58:19Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16539",
+   "repo": "JabRef/jabref",
+   "number": 16539,
+   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "component: search",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T02:27:32Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16029",
@@ -1519,7 +1694,8 @@
    "updated_at": "2026-09-04T16:17:39Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/11879",
@@ -1552,7 +1728,8 @@
    "updated_at": "2026-09-02T12:58:31Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16579",
@@ -1573,7 +1750,8 @@
    "updated_at": "2026-09-02T07:51:25Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16620",
@@ -1595,7 +1773,8 @@
    "updated_at": "2026-09-02T03:23:27Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/11454",
@@ -1616,7 +1795,8 @@
    "updated_at": "2026-08-30T19:16:27Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16042",
@@ -1637,7 +1817,8 @@
    "updated_at": "2026-08-28T14:09:23Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/adr/madr/issues/28",
@@ -1657,7 +1838,8 @@
    "updated_at": "2026-08-28T07:41:48Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/15562",
@@ -1678,7 +1860,8 @@
    "updated_at": "2026-08-28T06:12:13Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/12874",
@@ -1700,7 +1883,8 @@
    "updated_at": "2026-08-24T10:14:21Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/10371",
@@ -1723,7 +1907,8 @@
    "updated_at": "2026-08-24T10:12:34Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/12418",
@@ -1745,7 +1930,8 @@
    "updated_at": "2026-08-24T10:10:59Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/6857",
@@ -1767,7 +1953,8 @@
    "updated_at": "2026-08-24T10:10:54Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/9605",
@@ -1788,7 +1975,8 @@
    "updated_at": "2026-08-24T10:10:49Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/5888",
@@ -1808,7 +1996,8 @@
    "updated_at": "2026-08-24T10:10:46Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/12893",
@@ -1829,7 +2018,8 @@
    "updated_at": "2026-08-24T10:10:42Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/8128",
@@ -1852,7 +2042,8 @@
    "updated_at": "2026-08-24T10:10:34Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/2961",
@@ -1875,7 +2066,8 @@
    "updated_at": "2026-08-24T10:10:24Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/13604",
@@ -1897,28 +2089,8 @@
    "updated_at": "2026-08-18T12:35:43Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/12468",
-   "repo": "JabRef/jabref",
-   "number": 12468,
-   "title": "Ability to disable the built-in JabRef journal abbreviation list",
-   "url": "https://github.com/JabRef/jabref/issues/12468",
-   "type": "issue",
-   "draft": false,
-   "author": "Enivex",
-   "assignees": [
-    "calixtus"
-   ],
-   "labels": [
-    "project: jabcon",
-    "component: journal-abbreviations"
-   ],
-   "updated_at": "2026-08-17T19:48:51Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/10930",
@@ -1941,7 +2113,8 @@
    "updated_at": "2026-08-17T12:55:56Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/11358",
@@ -1963,7 +2136,8 @@
    "updated_at": "2026-08-11T22:01:49Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16380",
@@ -1985,7 +2159,8 @@
    "updated_at": "2026-08-08T10:50:00Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16427",
@@ -2005,7 +2180,8 @@
    "updated_at": "2026-08-01T09:37:34Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/12261",
@@ -2027,7 +2203,8 @@
    "updated_at": "2026-08-01T09:32:00Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/awalsh128/cache-apt-pkgs-action/issues/167",
@@ -2045,7 +2222,8 @@
    "updated_at": "2026-07-29T08:49:33Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16187",
@@ -2068,7 +2246,8 @@
    "updated_at": "2026-07-14T17:40:25Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/12168",
@@ -2089,7 +2268,8 @@
    "updated_at": "2026-07-04T12:35:34Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16043",
@@ -2110,7 +2290,8 @@
    "updated_at": "2026-06-30T14:45:05Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref-koppor/issues/730",
@@ -2131,7 +2312,8 @@
    "updated_at": "2026-06-30T14:28:45Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/6154",
@@ -2153,7 +2335,8 @@
    "updated_at": "2026-06-22T20:09:16Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/9833",
@@ -2173,7 +2356,8 @@
    "updated_at": "2026-06-22T20:08:25Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/14962",
@@ -2193,7 +2377,8 @@
    "updated_at": "2026-06-22T19:58:55Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/adr/madr/issues/102",
@@ -2211,28 +2396,8 @@
    "updated_at": "2026-06-21T04:29:45Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/6057",
-   "repo": "JabRef/jabref",
-   "number": 6057,
-   "title": "Improve startup time",
-   "url": "https://github.com/JabRef/jabref/issues/6057",
-   "type": "issue",
-   "draft": false,
-   "author": "tobiasdiez",
-   "assignees": [
-    "calixtus"
-   ],
-   "labels": [
-    "dev: performance",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-06-11T13:33:36Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/14519",
@@ -2254,7 +2419,8 @@
    "updated_at": "2026-06-01T04:50:27Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/JabRef-Browser-Extension/issues/626",
@@ -2275,7 +2441,8 @@
    "updated_at": "2026-05-03T20:23:55Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/adr/yadr/issues/3",
@@ -2295,7 +2462,8 @@
    "updated_at": "2026-03-27T14:27:32Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/JabRefOnline/issues/1723",
@@ -2315,7 +2483,8 @@
    "updated_at": "2026-03-10T11:52:33Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/8298",
@@ -2337,7 +2506,8 @@
    "updated_at": "2025-11-03T13:13:11Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/12790",
@@ -2355,7 +2525,8 @@
    "updated_at": "2025-03-21T09:57:22Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/11233",
@@ -2373,7 +2544,8 @@
    "updated_at": "2025-02-24T21:51:45Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/10939",
@@ -2394,7 +2566,8 @@
    "updated_at": "2025-02-24T21:23:23Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref-koppor/issues/363",
@@ -2414,7 +2587,8 @@
    "updated_at": "2025-01-05T00:20:55Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/user-documentation/issues/284",
@@ -2432,7 +2606,8 @@
    "updated_at": "2024-12-18T15:40:42Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/4682",
@@ -2453,7 +2628,8 @@
    "updated_at": "2024-11-13T16:49:41Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/blog.jabref.org/issues/70",
@@ -2471,7 +2647,8 @@
    "updated_at": "2023-04-03T06:39:24Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref-koppor/issues/329",
@@ -2489,7 +2666,8 @@
    "updated_at": "2022-06-13T22:43:55Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref-koppor/issues/491",
@@ -2507,7 +2685,8 @@
    "updated_at": "2021-04-12T18:35:26Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref-koppor/issues/370",
@@ -2525,7 +2704,8 @@
    "updated_at": "2020-03-10T09:29:41Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref-koppor/issues/357",
@@ -2543,7 +2723,8 @@
    "updated_at": "2019-10-19T09:57:40Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/winery/winery/issues/48",
@@ -2561,7 +2742,8 @@
    "updated_at": "2018-07-03T07:12:43Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/stefan-kolb/texcop/issues/3",
@@ -2579,7 +2761,8 @@
    "updated_at": "2018-04-18T09:16:35Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/htdocs/issues/4",
@@ -2597,7 +2780,8 @@
    "updated_at": "2016-03-08T11:39:53Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/koppor/textools/issues/1",
@@ -2615,7 +2799,8 @@
    "updated_at": "2016-02-02T07:46:53Z",
    "closed_at": null,
    "merged_at": null,
-   "column": "backlog"
+   "column": "backlog",
+   "focus": false
   }
  ],
  "events": [
@@ -4947,6 +5132,20 @@
    "self": false
   },
   {
+   "id": "20102849758",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:07:28Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14458481675",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -5003,6 +5202,20 @@
    "excerpt": "we should have consistent casing. gui, cli, logic is lower-case. Model and Preferences is upper case.",
    "review_id": 5117779672,
    "self": false
+  },
+  {
+   "id": "20102420305",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:58:10Z",
+   "summary": "deleted branch fix-url-open-mangling",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14458418990",
@@ -5531,34 +5744,6 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/Vinzent03/find-unlinked-files",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14456162740",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "JohnnyGoodNews",
-   "repo": "graydon/obsidian-dangling-links",
-   "created_at": "2026-09-04T20:09:49Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/graydon/obsidian-dangling-links",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20101313988",
-   "type": "DeleteEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:07:16Z",
-   "summary": "deleted branch dependabot/gradle/versions/org.controlsfx-controlsfx-11.2.5",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
   }
@@ -7892,6 +8077,20 @@
    "self": false
   },
   {
+   "id": "20102849758",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:07:28Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14458481675",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -7948,6 +8147,20 @@
    "excerpt": "we should have consistent casing. gui, cli, logic is lower-case. Model and Preferences is upper case.",
    "review_id": 5117779672,
    "self": false
+  },
+  {
+   "id": "20102420305",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:58:10Z",
+   "summary": "deleted branch fix-url-open-mangling",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14458418990",
@@ -9427,10 +9640,10 @@
   },
   {
    "login": "koppor",
-   "points": 26,
+   "points": 27,
    "merged": 5,
    "reviews": 1,
-   "other": 9
+   "other": 10
   },
   {
    "login": "calixtus",
