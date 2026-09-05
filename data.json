@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T04:20:56+00:00",
+ "generated_at": "2026-09-05T04:32:31+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -614,29 +614,6 @@
    "column": "done"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/14493",
-   "repo": "JabRef/jabref",
-   "number": 14493,
-   "title": "Add OAuth2 flow for CiteDrive",
-   "url": "https://github.com/JabRef/jabref/pull/14493",
-   "type": "pr",
-   "draft": true,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: waiting-for-feedback",
-    "component: import-load",
-    "component: preferences",
-    "status: changes-required",
-    "\ud83d\udccc Pinned",
-    "component: jabsrv"
-   ],
-   "updated_at": "2026-09-05T04:16:01Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16174",
    "repo": "JabRef/jabref",
    "number": 16174,
@@ -660,7 +637,30 @@
     "component: xmp",
     "component: latex-file-support"
    ],
-   "updated_at": "2026-09-05T04:15:01Z",
+   "updated_at": "2026-09-05T04:31:01Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/14493",
+   "repo": "JabRef/jabref",
+   "number": 14493,
+   "title": "Add OAuth2 flow for CiteDrive",
+   "url": "https://github.com/JabRef/jabref/pull/14493",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: waiting-for-feedback",
+    "component: import-load",
+    "component: preferences",
+    "\ud83d\udccc Pinned",
+    "component: jabsrv",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T04:23:45Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
