@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T14:33:14+00:00",
+ "generated_at": "2026-09-05T14:40:30+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1806,27 +1806,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/openjdk/jfx/pull/2015",
-   "repo": "openjdk/jfx",
-   "number": 2015,
-   "title": "8375588: Enhanced property metadata",
-   "url": "https://github.com/openjdk/jfx/pull/2015",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "csr"
-   ],
-   "updated_at": "2026-09-05T14:31:19Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16846",
    "repo": "JabRef/jabref",
    "number": 16846,
@@ -1844,7 +1823,28 @@
     "component: css",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T14:19:50Z",
+   "updated_at": "2026-09-05T14:37:25Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2015",
+   "repo": "openjdk/jfx",
+   "number": 2015,
+   "title": "8375588: Enhanced property metadata",
+   "url": "https://github.com/openjdk/jfx/pull/2015",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-05T14:36:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
