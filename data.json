@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T00:36:22+00:00",
+ "generated_at": "2026-09-05T00:38:06+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -584,6 +584,46 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16830",
+   "repo": "JabRef/jabref",
+   "number": 16830,
+   "title": "Preserve file attributes when replacing a file atomically",
+   "url": "https://github.com/JabRef/jabref/pull/16830",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: export-or-save",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T00:37:06Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16851",
+   "repo": "JabRef/jabref",
+   "number": 16851,
+   "title": "Fix `missing$` case warnings in BST VM",
+   "url": "https://github.com/JabRef/jabref/pull/16851",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-05T00:36:49Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16853",
    "repo": "JabRef/jabref",
    "number": 16853,
@@ -602,46 +642,6 @@
     "component: bst"
    ],
    "updated_at": "2026-09-05T00:35:57Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16830",
-   "repo": "JabRef/jabref",
-   "number": 16830,
-   "title": "Preserve file attributes when replacing a file atomically",
-   "url": "https://github.com/JabRef/jabref/pull/16830",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: export-or-save",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-05T00:35:44Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16851",
-   "repo": "JabRef/jabref",
-   "number": 16851,
-   "title": "Fix `missing$` case warnings in BST VM",
-   "url": "https://github.com/JabRef/jabref/pull/16851",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: changes-required",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
-   ],
-   "updated_at": "2026-09-05T00:34:39Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2473,7 +2473,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118987087",
+   "excerpt": ""
   },
   {
    "id": "14466070799",
@@ -2485,7 +2486,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938822815",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14466069911",
@@ -2497,7 +2499,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938822726",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14466069905",
@@ -2509,7 +2512,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118987001",
+   "excerpt": ""
   },
   {
    "id": "14466069037",
@@ -2521,7 +2525,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118986895",
+   "excerpt": ""
   },
   {
    "id": "14466069046",
@@ -2533,7 +2538,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938822624",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14466045744",
@@ -2545,7 +2551,8 @@
    "summary": "reviewed PR #16851 (commented)",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16851"
+   "url": "https://github.com/JabRef/jabref/pull/16851#pullrequestreview-5118984296",
+   "excerpt": ""
   },
   {
    "id": "14466044793",
@@ -2557,7 +2564,8 @@
    "summary": "commented on PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16851"
+   "url": "https://github.com/JabRef/jabref/pull/16851#discussion_r3938820013",
+   "excerpt": "addressed"
   },
   {
    "id": "14465991401",
@@ -2569,7 +2577,8 @@
    "summary": "reviewed PR #16852 (approved)",
    "number": 16852,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16852#pullrequestreview-5118978166",
+   "excerpt": ""
   },
   {
    "id": "14465847062",
@@ -2581,7 +2590,8 @@
    "summary": "reviewed PR #16851 (commented)",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16851#pullrequestreview-5118954034",
+   "excerpt": ""
   },
   {
    "id": "14465846655",
@@ -2593,7 +2603,8 @@
    "summary": "commented on PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16851#discussion_r3938791822",
+   "excerpt": "logging doesnt need a test"
   },
   {
    "id": "14465323174",
@@ -2605,7 +2616,8 @@
    "summary": "labeled PR #16853",
    "number": 16853,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16853",
+   "excerpt": ""
   },
   {
    "id": "14465305460",
@@ -2617,7 +2629,8 @@
    "summary": "opened PR #16853",
    "number": 16853,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16853",
+   "excerpt": ""
   },
   {
    "id": "14464874668",
@@ -2629,7 +2642,8 @@
    "summary": "merged PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16832",
+   "excerpt": ""
   },
   {
    "id": "14465995077",
@@ -2641,7 +2655,8 @@
    "summary": "labeled PR #16852",
    "number": 16852,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16852",
+   "excerpt": ""
   },
   {
    "id": "14464666271",
@@ -2653,7 +2668,8 @@
    "summary": "labeled PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16851",
+   "excerpt": ""
   },
   {
    "id": "14464573503",
@@ -2665,7 +2681,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598329",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464573499",
@@ -2677,7 +2694,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722953",
+   "excerpt": ""
   },
   {
    "id": "14464572679",
@@ -2689,7 +2707,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598225",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464572650",
@@ -2701,7 +2720,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722659",
+   "excerpt": ""
   },
   {
    "id": "14464572228",
@@ -2713,7 +2733,8 @@
    "summary": "opened PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16851",
+   "excerpt": ""
   },
   {
    "id": "14464571605",
@@ -2725,7 +2746,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598120",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464571579",
@@ -2737,7 +2759,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722545",
+   "excerpt": ""
   },
   {
    "id": "14464570734",
@@ -2749,7 +2772,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722435",
+   "excerpt": ""
   },
   {
    "id": "14464570746",
@@ -2761,7 +2785,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598017",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464569816",
@@ -2773,7 +2798,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722311",
+   "excerpt": ""
   },
   {
    "id": "14464569832",
@@ -2785,7 +2811,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938597899",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464569008",
@@ -2797,7 +2824,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118721981",
+   "excerpt": ""
   },
   {
    "id": "14464569014",
@@ -2809,7 +2837,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938597771",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464461957",
@@ -2821,7 +2850,8 @@
    "summary": "unlabeled PR #16829",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16829",
+   "excerpt": ""
   },
   {
    "id": "14464460825",
@@ -2833,7 +2863,8 @@
    "summary": "labeled PR #16829",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16829",
+   "excerpt": ""
   },
   {
    "id": "14464447277",
@@ -2845,7 +2876,8 @@
    "summary": "reviewed PR #16829 (commented)",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16829#pullrequestreview-5118694279",
+   "excerpt": ""
   },
   {
    "id": "14464447001",
@@ -2857,7 +2889,8 @@
    "summary": "commented on PR #16829",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16829#discussion_r3938583040",
+   "excerpt": "No need"
   },
   {
    "id": "14464205356",
@@ -2869,7 +2902,8 @@
    "summary": "reviewed PR #16832 (approved)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118640896",
+   "excerpt": ""
   },
   {
    "id": "14464129277",
@@ -2881,7 +2915,8 @@
    "summary": "merged PR #16790",
    "number": 16790,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16790",
+   "excerpt": ""
   },
   {
    "id": "14464105529",
@@ -2893,7 +2928,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542298",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464105517",
@@ -2905,7 +2941,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618410",
+   "excerpt": ""
   },
   {
    "id": "14464105106",
@@ -2917,7 +2954,8 @@
    "summary": "closed issue #16109: Add support for modifier keys when dragging and dropping an entry.",
    "number": 16109,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16109"
+   "url": "https://github.com/JabRef/jabref/issues/16109",
+   "excerpt": ""
   },
   {
    "id": "14464104860",
@@ -2929,7 +2967,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542211",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464104819",
@@ -2941,7 +2980,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618283",
+   "excerpt": ""
   },
   {
    "id": "14464104263",
@@ -2953,7 +2993,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618124",
+   "excerpt": ""
   },
   {
    "id": "14464104265",
@@ -2965,7 +3006,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542082",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464070818",
@@ -2977,7 +3019,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118610018",
+   "excerpt": ""
   },
   {
    "id": "14464070828",
@@ -2989,7 +3032,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938537482",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464008323",
@@ -3001,7 +3045,8 @@
    "summary": "commented on #1773: 8353599: TabPaneSkin: 'overflowMenuDecorator' property",
    "number": 1773,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/1773"
+   "url": "https://github.com/openjdk/jfx/pull/1773#issuecomment-5547587172",
+   "excerpt": "One thing I wonder: The decorator vs. the possibility to customize the whole overflow menu, like you can do for the table (menu). So a prot\u2026"
   },
   {
    "id": "14463929848",
@@ -3013,7 +3058,8 @@
    "summary": "reviewed PR #16530 (commented)",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#pullrequestreview-5118581695",
+   "excerpt": ""
   },
   {
    "id": "14463929106",
@@ -3025,7 +3071,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938521315",
+   "excerpt": "Why was this comment removed?"
   },
   {
    "id": "14463916117",
@@ -3037,7 +3084,8 @@
    "summary": "reviewed PR #16530 (changes_requested)",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#pullrequestreview-5118570335",
+   "excerpt": "Just a quick eye."
   },
   {
    "id": "14463916076",
@@ -3049,7 +3097,8 @@
    "summary": "reviewed PR #16530 (changes_requested)",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#pullrequestreview-5118570335",
+   "excerpt": "Just a quick eye."
   },
   {
    "id": "14463905236",
@@ -3061,7 +3110,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938518412",
+   "excerpt": "Did you even read what your LLM churned out? Use import."
   },
   {
    "id": "14463885470",
@@ -3073,7 +3123,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938516162",
+   "excerpt": "Is there a possibility of catching more specific exceptions here?"
   },
   {
    "id": "14463873069",
@@ -3085,7 +3136,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938514617",
+   "excerpt": "Why fully qualified name? Use import."
   },
   {
    "id": "14463788897",
@@ -3097,7 +3149,8 @@
    "summary": "reviewed PR #16832 (changes_requested)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118551230",
+   "excerpt": ""
   },
   {
    "id": "14463785617",
@@ -3109,7 +3162,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938504313",
+   "excerpt": "I would also make that a new method, so that the lambda is small and easy to read"
   },
   {
    "id": "14463770997",
@@ -3121,7 +3175,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938502179",
+   "excerpt": "maybe as a new method? That would make the lambda better readable"
   },
   {
    "id": "14463767824",
@@ -3133,7 +3188,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938501708",
+   "excerpt": "maybe as a new method? That would make the lambda better readable"
   },
   {
    "id": "14463740179",
@@ -3145,7 +3201,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118547554",
+   "excerpt": ""
   },
   {
    "id": "14463739626",
@@ -3157,7 +3214,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938498332",
+   "excerpt": "better idea, yes"
   },
   {
    "id": "14463670436",
@@ -3169,7 +3227,8 @@
    "summary": "reviewed PR #16286 (approved)",
    "number": 16286,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16286#pullrequestreview-5118538534",
+   "excerpt": ""
   },
   {
    "id": "14463534574",
@@ -3181,7 +3240,8 @@
    "summary": "commented on #16742: Add highlight words mode to Git Diff view",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742"
+   "url": "https://github.com/JabRef/jabref/pull/16742#issuecomment-5547484764",
+   "excerpt": "Use the same default as for three way merge."
   },
   {
    "id": "14463436737",
@@ -3193,7 +3253,8 @@
    "summary": "reviewed PR #16790 (approved)",
    "number": 16790,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16790#pullrequestreview-5118500783",
+   "excerpt": ""
   },
   {
    "id": "14463249708",
@@ -3205,7 +3266,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429767",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463249674",
@@ -3217,7 +3279,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118463226",
+   "excerpt": ""
   },
   {
    "id": "14463245451",
@@ -3229,7 +3292,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429319",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463245433",
@@ -3241,7 +3305,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462766",
+   "excerpt": ""
   },
   {
    "id": "14463244714",
@@ -3253,7 +3318,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462671",
+   "excerpt": ""
   },
   {
    "id": "14463244724",
@@ -3265,7 +3331,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429217",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463243794",
@@ -3277,7 +3344,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462593",
+   "excerpt": ""
   },
   {
    "id": "14463243816",
@@ -3289,7 +3357,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429135",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463243062",
@@ -3301,7 +3370,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462523",
+   "excerpt": ""
   },
   {
    "id": "14463243090",
@@ -3313,7 +3383,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429066",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463242452",
@@ -3325,7 +3396,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462419",
+   "excerpt": ""
   },
   {
    "id": "14463242470",
@@ -3337,7 +3409,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938428974",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463227245",
@@ -3349,7 +3422,8 @@
    "summary": "commented on #16849: Add SWHID identifier and Software Heritage fetcher",
    "number": 16849,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849"
+   "url": "https://github.com/JabRef/jabref/pull/16849#issuecomment-5547404499",
+   "excerpt": "please check for rate limti https://archive.softwareheritage.org/api/rate-limiting"
   },
   {
    "id": "14462954952",
@@ -3361,7 +3435,8 @@
    "summary": "commented on #2127: ICU-22080 Add plain ASCII as an explicitly detected type",
    "number": 2127,
    "merged": false,
-   "url": "https://github.com/unicode-org/icu/pull/2127"
+   "url": "https://github.com/unicode-org/icu/pull/2127#issuecomment-5547345313",
+   "excerpt": "@srl295 We are at an open source hackathon and wondering what we could do to help to move this forward. I hope, that the time we needed to\u2026"
   },
   {
    "id": "14462777921",
@@ -3373,7 +3448,8 @@
    "summary": "opened issue #8313: Double space after citation number in Nature",
    "number": 8313,
    "merged": false,
-   "url": "https://github.com/citation-style-language/styles/issues/8313"
+   "url": "https://github.com/citation-style-language/styles/issues/8313",
+   "excerpt": ""
   },
   {
    "id": "14462770749",
@@ -3385,7 +3461,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118394369",
+   "excerpt": ""
   },
   {
    "id": "14462769576",
@@ -3397,7 +3474,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938363583",
+   "excerpt": "But the idea kinda should work"
   },
   {
    "id": "14462756128",
@@ -3409,7 +3487,8 @@
    "summary": "reviewed PR #16850 (commented)",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5118392455",
+   "excerpt": ""
   },
   {
    "id": "14462755106",
@@ -3421,7 +3500,8 @@
    "summary": "commented on PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3938361784",
+   "excerpt": "invokeAndWait is better, because the API also called it like that"
   },
   {
    "id": "14462714677",
@@ -3433,7 +3513,8 @@
    "summary": "reviewed PR #16850 (commented)",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5118387002",
+   "excerpt": ""
   },
   {
    "id": "14462714001",
@@ -3445,7 +3526,8 @@
    "summary": "commented on PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3938356460",
+   "excerpt": "must really be synchronized?"
   },
   {
    "id": "14462352188",
@@ -3457,7 +3539,8 @@
    "summary": "reviewed PR #16820 (approved)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5118338199",
+   "excerpt": ""
   },
   {
    "id": "14462280113",
@@ -3469,7 +3552,8 @@
    "summary": "opened PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16850",
+   "excerpt": ""
   },
   {
    "id": "14462635862",
@@ -3481,7 +3565,8 @@
    "summary": "assigned PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16850",
+   "excerpt": ""
   },
   {
    "id": "14462095029",
@@ -3493,7 +3578,8 @@
    "summary": "reviewed PR #2278 (commented)",
    "number": 2278,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/2278#pullrequestreview-5118302511",
+   "excerpt": ""
   },
   {
    "id": "14462094001",
@@ -3505,7 +3591,8 @@
    "summary": "commented on PR #2278",
    "number": 2278,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/2278#discussion_r3938275249",
+   "excerpt": "@hjohn just pinging you, as you deprecated it and you might be more aware about potential special cases / problems."
   },
   {
    "id": "14461959481",
@@ -3517,7 +3604,8 @@
    "summary": "commented on PR #583",
    "number": 583,
    "merged": false,
-   "url": "https://github.com/itsallcode/openfasttrace"
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583#discussion_r3938258668",
+   "excerpt": "Added req~example~2 right after \u2014 the test now asserts both items are detected."
   },
   {
    "id": "14461959466",
@@ -3529,7 +3617,8 @@
    "summary": "reviewed PR #583 (commented)",
    "number": 583,
    "merged": false,
-   "url": "https://github.com/itsallcode/openfasttrace"
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583#pullrequestreview-5118285916",
+   "excerpt": ""
   },
   {
    "id": "14461889822",
@@ -3541,7 +3630,8 @@
    "summary": "reviewed PR #16820 (dismissed)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5093874214",
+   "excerpt": ""
   },
   {
    "id": "14461889662",
@@ -3553,7 +3643,8 @@
    "summary": "reviewed PR #16820 (dismissed)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5118181276",
+   "excerpt": ""
   },
   {
    "id": "14461439119",
@@ -3565,7 +3656,8 @@
    "summary": "commented on #16820: Chore(deps): Bump jablib/src/main/resources/csl-styles from `0819c0e` to `db768d4`",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16820"
+   "url": "https://github.com/JabRef/jabref/pull/16820#issuecomment-5547014767",
+   "excerpt": "Hmm okay, they renamed something again."
   },
   {
    "id": "14461156787",
@@ -3577,7 +3669,8 @@
    "summary": "reviewed PR #16820 (dismissed)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5118181276",
+   "excerpt": ""
   },
   {
    "id": "14460554803",
@@ -3589,7 +3682,8 @@
    "summary": "reviewed PR #16760 (commented)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5118096286",
+   "excerpt": ""
   },
   {
    "id": "14460551112",
@@ -3601,7 +3695,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3938088908",
+   "excerpt": "@InAnYan"
   },
   {
    "id": "14460480080",
@@ -3613,7 +3708,8 @@
    "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
    "number": 16352,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352"
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5546810216",
+   "excerpt": "I mean style to style"
   },
   {
    "id": "14460400781",
@@ -3625,7 +3721,8 @@
    "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
    "number": 16352,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352"
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5546793268",
+   "excerpt": "Add space before and after can stay where it is, as it depends from citation to citation as well."
   },
   {
    "id": "14460352218",
@@ -3637,7 +3734,8 @@
    "summary": "reviewed PR #16651 (commented)",
    "number": 16651,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5118070604",
+   "excerpt": ""
   },
   {
    "id": "14460351290",
@@ -3649,7 +3747,8 @@
    "summary": "commented on PR #16651",
    "number": 16651,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3938066118",
+   "excerpt": "false positive"
   },
   {
    "id": "14460306954",
@@ -3661,7 +3760,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5118035291",
+   "excerpt": "There might be scaling problems. Claude says"
   },
   {
    "id": "14460289892",
@@ -3673,7 +3773,8 @@
    "summary": "merged PR #16835",
    "number": 16835,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16835",
+   "excerpt": ""
   },
   {
    "id": "14460258626",
@@ -3685,7 +3786,8 @@
    "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
    "number": 16352,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352"
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5546763822",
+   "excerpt": "Which settings should i move to preference? add space after/before, infer mode?"
   },
   {
    "id": "14460080793",
@@ -3697,7 +3799,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5118035291",
+   "excerpt": "There might be scaling problems. Claude says"
   },
   {
    "id": "14459772479",
@@ -3709,7 +3812,8 @@
    "summary": "reviewed PR #16835 (approved)",
    "number": 16835,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16835#pullrequestreview-5117993173",
+   "excerpt": ""
   },
   {
    "id": "14459761276",
@@ -3721,7 +3825,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117991542",
+   "excerpt": ""
   },
   {
    "id": "14459759876",
@@ -3733,7 +3838,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937998888",
+   "excerpt": "i think its an issue because \"add entry\" selects entry, but \"add entry using\" does not"
   },
   {
    "id": "14459649114",
@@ -3745,7 +3851,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117976504",
+   "excerpt": ""
   },
   {
    "id": "14459647943",
@@ -3757,7 +3864,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937985928",
+   "excerpt": "updated code while makiing isTargetLibraryTab  inline."
   },
   {
    "id": "14459566971",
@@ -3769,7 +3877,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117965855",
+   "excerpt": ""
   },
   {
    "id": "14459566071",
@@ -3781,7 +3890,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937976630",
+   "excerpt": "Yes"
   },
   {
    "id": "14459565359",
@@ -3793,7 +3903,8 @@
    "summary": "closed issue #15680: Improve logging to find out which linked file has a flaw",
    "number": 15680,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/15680"
+   "url": "https://github.com/JabRef/jabref/issues/15680",
+   "excerpt": ""
   },
   {
    "id": "14459424401",
@@ -3805,7 +3916,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5117946706",
+   "excerpt": ""
   },
   {
    "id": "14459423318",
@@ -3817,7 +3929,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937959812",
+   "excerpt": "big lambda, maybe a new method instead?"
   },
   {
    "id": "14459387734",
@@ -3829,7 +3942,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5117941359",
+   "excerpt": ""
   },
   {
    "id": "14459387815",
@@ -3841,7 +3955,8 @@
    "summary": "closed issue #16477: Fix ArXivFetcherTest > searchEntryByPartOfTitleWithAcuteAccent",
    "number": 16477,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16477"
+   "url": "https://github.com/JabRef/jabref/issues/16477",
+   "excerpt": ""
   },
   {
    "id": "14459386537",
@@ -3853,7 +3968,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937955525",
+   "excerpt": "I wonder if we should put that into a new method. Together with the for loop, this gets complex quick."
   },
   {
    "id": "14459339690",
@@ -3865,7 +3981,8 @@
    "summary": "reviewed PR #16813 (changes_requested)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5117929097",
+   "excerpt": ""
   },
   {
    "id": "14459335546",
@@ -3877,7 +3994,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937949122",
+   "excerpt": "Is it possible that we add the listener multiple times (e.g. this code get exeucted multiple times)"
   },
   {
    "id": "14459307668",
@@ -3889,7 +4007,8 @@
    "summary": "closed issue #16756: [UI/UX] Missing loading indicator / spinner in \"New Entry -> Enter Identifier\" dialog during search",
    "number": 16756,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16756"
+   "url": "https://github.com/JabRef/jabref/issues/16756",
+   "excerpt": ""
   },
   {
    "id": "14459305470",
@@ -3901,7 +4020,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937945783",
+   "excerpt": "Also use Objects.equals for null safety?"
   },
   {
    "id": "14458970809",
@@ -3913,7 +4033,8 @@
    "summary": "reviewed PR #16825 (approved)",
    "number": 16825,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16825#pullrequestreview-5117880620",
+   "excerpt": ""
   },
   {
    "id": "14458961675",
@@ -3925,7 +4046,8 @@
    "summary": "reviewed PR #16702 (approved)",
    "number": 16702,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16702#pullrequestreview-5117879412",
+   "excerpt": ""
   },
   {
    "id": "14458957438",
@@ -3937,7 +4059,8 @@
    "summary": "reviewed PR #16702 (dismissed)",
    "number": 16702,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16702#pullrequestreview-5047584818",
+   "excerpt": ""
   },
   {
    "id": "14458927536",
@@ -3949,7 +4072,8 @@
    "summary": "reviewed PR #16702 (approved)",
    "number": 16702,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16702#pullrequestreview-5117874759",
+   "excerpt": ""
   },
   {
    "id": "14458881540",
@@ -3961,7 +4085,8 @@
    "summary": "reviewed PR #16825 (approved)",
    "number": 16825,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16825#pullrequestreview-5117868399",
+   "excerpt": ""
   },
   {
    "id": "14458481675",
@@ -3973,7 +4098,8 @@
    "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
    "number": 16834,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16834"
+   "url": "https://github.com/JabRef/jabref/pull/16834#issuecomment-5546383847",
+   "excerpt": "Your changes look ok so far, but please have the minimum courtesy to provide a PR description. We are no machines but real human beings. Tr\u2026"
   },
   {
    "id": "14458473863",
@@ -3985,7 +4111,8 @@
    "summary": "commented on #16831: Show full text download search as background task",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16831"
+   "url": "https://github.com/JabRef/jabref/pull/16831#issuecomment-5546382248",
+   "excerpt": "I think the code is okay, but I don't have full forces right now"
   },
   {
    "id": "14458433300",
@@ -3997,7 +4124,8 @@
    "summary": "reviewed PR #16760 (commented)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117779672",
+   "excerpt": ""
   },
   {
    "id": "14458431984",
@@ -4009,7 +4137,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937843211",
+   "excerpt": "we should have consistent casing. gui, cli, logic is lower-case. Model and Preferences is upper case."
   },
   {
    "id": "14458418990",
@@ -4021,7 +4150,8 @@
    "summary": "merged PR #16774",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16774",
+   "excerpt": ""
   },
   {
    "id": "14458407754",
@@ -4033,7 +4163,8 @@
    "summary": "reviewed PR #16831 (commented)",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#pullrequestreview-5117694837",
+   "excerpt": ""
   },
   {
    "id": "14458389299",
@@ -4045,7 +4176,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937837679",
+   "excerpt": "Probably remove this comment, and instead a short comment above if to explain why this check is needed. e.g. Entry could be deleted while t\u2026"
   },
   {
    "id": "14458355250",
@@ -4057,7 +4189,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937833046",
+   "excerpt": "Remove comment? Obvious?"
   },
   {
    "id": "14458271287",
@@ -4069,7 +4202,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937823024",
+   "excerpt": "Maybe delete the comment?"
   },
   {
    "id": "14458256901",
@@ -4081,7 +4215,8 @@
    "summary": "labeled PR #16791",
    "number": 16791,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16791",
+   "excerpt": ""
   },
   {
    "id": "14458199235",
@@ -4093,7 +4228,8 @@
    "summary": "reviewed PR #16795 (approved)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117730544",
+   "excerpt": ""
   },
   {
    "id": "14458165532",
@@ -4105,7 +4241,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937811290",
+   "excerpt": "IDK, data race, can it be an argument of the action?"
   },
   {
    "id": "14458150571",
@@ -4117,7 +4254,8 @@
    "summary": "reviewed PR #16795 (approved)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117721118",
+   "excerpt": ""
   },
   {
    "id": "14458149505",
@@ -4129,7 +4267,8 @@
    "summary": "reviewed PR #16795 (approved)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117720749",
+   "excerpt": ""
   },
   {
    "id": "14458128430",
@@ -4141,7 +4280,8 @@
    "summary": "reviewed PR #16795 (dismissed)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5098644568",
+   "excerpt": ""
   },
   {
    "id": "14458010530",
@@ -4153,7 +4293,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937793986",
+   "excerpt": "Remove line"
   },
   {
    "id": "14457996708",
@@ -4165,7 +4306,8 @@
    "summary": "reviewed PR #16795 (commented)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117687147",
+   "excerpt": ""
   },
   {
    "id": "14457991831",
@@ -4177,7 +4319,8 @@
    "summary": "commented on PR #16795",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#discussion_r3937791836",
+   "excerpt": "is a spacing of 4 enough?"
   },
   {
    "id": "14457990497",
@@ -4189,7 +4332,8 @@
    "summary": "commented on #16739: Fix button placement at commit dialog",
    "number": 16739,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16739"
+   "url": "https://github.com/JabRef/jabref/pull/16739#issuecomment-5546281908",
+   "excerpt": "No worries, thank you for informing us"
   },
   {
    "id": "14457970115",
@@ -4201,7 +4345,8 @@
    "summary": "commented on PR #16795",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#discussion_r3937789281",
+   "excerpt": "bind to idSearchingBox.visibleProperty()"
   },
   {
    "id": "14457889031",
@@ -4213,7 +4358,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/TGRRRR/heading-outliner"
+   "url": "https://github.com/TGRRRR/heading-outliner",
+   "excerpt": ""
   },
   {
    "id": "14457796258",
@@ -4225,7 +4371,8 @@
    "summary": "reviewed PR #16774 (approved)",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117654224",
+   "excerpt": ""
   },
   {
    "id": "14457720517",
@@ -4237,7 +4384,8 @@
    "summary": "reviewed PR #16774 (commented)",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117640617",
+   "excerpt": ""
   },
   {
    "id": "14457719361",
@@ -4249,7 +4397,8 @@
    "summary": "commented on PR #16774",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#discussion_r3937760703",
+   "excerpt": "discussed: later"
   },
   {
    "id": "14457711003",
@@ -4261,7 +4410,8 @@
    "summary": "reviewed PR #16774 (approved)",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117638689",
+   "excerpt": ""
   },
   {
    "id": "14457645929",
@@ -4273,7 +4423,8 @@
    "summary": "commented on #16763: Automatically generate Git commit message",
    "number": 16763,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16763"
+   "url": "https://github.com/JabRef/jabref/issues/16763#issuecomment-5546211200",
+   "excerpt": "@cmarqueslau which PR? Sorry, I can't find it"
   },
   {
    "id": "14457397117",
@@ -4285,7 +4436,8 @@
    "summary": "reviewed PR #16755 (changes_requested)",
    "number": 16755,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5117563583",
+   "excerpt": ""
   },
   {
    "id": "14457387857",
@@ -4297,7 +4449,8 @@
    "summary": "commented on PR #16755",
    "number": 16755,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3937721714",
+   "excerpt": "Is this else if block important?"
   },
   {
    "id": "14457297118",
@@ -4309,7 +4462,8 @@
    "summary": "commented on PR #16755",
    "number": 16755,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3937711751",
+   "excerpt": "This should be above the line 578, not here"
   },
   {
    "id": "14457185157",
@@ -4321,7 +4475,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117494475",
+   "excerpt": "Confirmed works, but IDK right now about the code. Maybe it's okay, need to check the other day"
   },
   {
    "id": "14457185058",
@@ -4333,7 +4488,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117494475",
+   "excerpt": "Confirmed works, but IDK right now about the code. Maybe it's okay, need to check the other day"
   },
   {
    "id": "14457139818",
@@ -4345,7 +4501,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937693777",
+   "excerpt": "It works even if citation key is empty?"
   },
   {
    "id": "14457107447",
@@ -4357,7 +4514,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937690037",
+   "excerpt": "Is uid the right method to check it?"
   },
   {
    "id": "14457087973",
@@ -4369,7 +4527,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937687928",
+   "excerpt": "I think this method is never used anywhere, so I think it could be inlined in the selectImportedEntriesInActiveTab."
   },
   {
    "id": "14456834945",
@@ -4381,7 +4540,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937657284",
+   "excerpt": "I wonder if it's an issue or a feature?"
   },
   {
    "id": "14456771549",
@@ -4393,7 +4553,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/kidpeterpan/inkbound"
+   "url": "https://github.com/kidpeterpan/inkbound",
+   "excerpt": ""
   },
   {
    "id": "14456760356",
@@ -4405,7 +4566,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/enderonat/Academical-Paper-Converter-To-Epub"
+   "url": "https://github.com/enderonat/Academical-Paper-Converter-To-Epub",
+   "excerpt": ""
   },
   {
    "id": "14456748617",
@@ -4417,7 +4579,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/TGRRRR/heading-outliner"
+   "url": "https://github.com/TGRRRR/heading-outliner",
+   "excerpt": ""
   },
   {
    "id": "14456552498",
@@ -4429,7 +4592,8 @@
    "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
    "number": 16834,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16834"
+   "url": "https://github.com/JabRef/jabref/pull/16834#issuecomment-5545980829",
+   "excerpt": "Please use the template for PR description"
   },
   {
    "id": "14456169602",
@@ -4441,7 +4605,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/Vinzent03/find-unlinked-files"
+   "url": "https://github.com/Vinzent03/find-unlinked-files",
+   "excerpt": ""
   },
   {
    "id": "14456162740",
@@ -4453,7 +4618,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/graydon/obsidian-dangling-links"
+   "url": "https://github.com/graydon/obsidian-dangling-links",
+   "excerpt": ""
   },
   {
    "id": "14455700800",
@@ -4465,7 +4631,8 @@
    "summary": "reviewed PR #16760 (changes_requested)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117293983",
+   "excerpt": "Just added some personal nitpicks"
   },
   {
    "id": "14455700794",
@@ -4477,7 +4644,8 @@
    "summary": "reviewed PR #16760 (changes_requested)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117293983",
+   "excerpt": "Just added some personal nitpicks"
   },
   {
    "id": "14455654856",
@@ -4489,7 +4657,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937504187",
+   "excerpt": "global[\"Global Classes\"]"
   },
   {
    "id": "14455612246",
@@ -4501,7 +4670,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937498460",
+   "excerpt": "direction TD"
   },
   {
    "id": "14455601952",
@@ -4513,7 +4683,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937497062",
+   "excerpt": "flowchart TD"
   },
   {
    "id": "14454945395",
@@ -4525,7 +4696,8 @@
    "summary": "reviewed PR #16846 (changes_requested)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117190804",
+   "excerpt": ""
   },
   {
    "id": "14454907520",
@@ -4537,7 +4709,8 @@
    "summary": "reviewed PR #16846 (commented)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117184864",
+   "excerpt": ""
   },
   {
    "id": "14454906811",
@@ -4549,7 +4722,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937399800",
+   "excerpt": "This styleClass is never used, so how should that fix anything beside removing code and adding new dead code."
   },
   {
    "id": "14454690332",
@@ -4561,7 +4735,8 @@
    "summary": "reviewed PR #16760 (changes_requested)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117149891",
+   "excerpt": ""
   },
   {
    "id": "14454685485",
@@ -4573,7 +4748,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937368799",
+   "excerpt": "since we use mermaid, no need for svg file"
   },
   {
    "id": "14454528166",
@@ -4585,7 +4761,8 @@
    "summary": "reviewed PR #16222 (commented)",
    "number": 16222,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16222#pullrequestreview-5117127142",
+   "excerpt": ""
   },
   {
    "id": "14454526692",
@@ -4597,7 +4774,8 @@
    "summary": "commented on PR #16222",
    "number": 16222,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16222#discussion_r3937348239",
+   "excerpt": "Add above:"
   },
   {
    "id": "14454414572",
@@ -4609,7 +4787,8 @@
    "summary": "reviewed PR #16846 (changes_requested)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
+   "excerpt": "Thanks! Left some nitpicks. And can you check also qodo comments?"
   },
   {
    "id": "14454414520",
@@ -4621,7 +4800,8 @@
    "summary": "reviewed PR #16846 (changes_requested)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
+   "excerpt": "Thanks! Left some nitpicks. And can you check also qodo comments?"
   },
   {
    "id": "14454347113",
@@ -4633,7 +4813,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937324087",
+   "excerpt": "Formatting change: add a space before {"
   },
   {
    "id": "14454314071",
@@ -4645,7 +4826,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937320292",
+   "excerpt": "Format change: remove blank line"
   },
   {
    "id": "14454305290",
@@ -4657,7 +4839,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937319060",
+   "excerpt": "Format change: add blank line above"
   },
   {
    "id": "14454186699",
@@ -4669,7 +4852,8 @@
    "summary": "reviewed PR #16742 (changes_requested)",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5117019050",
+   "excerpt": "Yep, thanks, now it works, but I don't know should we leave WORDS or CHARS by default. @wanling0000 what do you think?"
   },
   {
    "id": "14454186684",
@@ -4681,7 +4865,8 @@
    "summary": "reviewed PR #16742 (changes_requested)",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5117019050",
+   "excerpt": "Yep, thanks, now it works, but I don't know should we leave WORDS or CHARS by default. @wanling0000 what do you think?"
   },
   {
    "id": "14453799264",
@@ -4693,7 +4878,8 @@
    "summary": "commented on PR #16742",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#discussion_r3937251271",
+   "excerpt": "I think the WORDS was not a default method."
   },
   {
    "id": "14453766257",
@@ -4705,7 +4891,8 @@
    "summary": "commented on PR #16742",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#discussion_r3937246594",
+   "excerpt": "In future, if possible please leave only changes related to the PR. This simplifies the review"
   },
   {
    "id": "14453102099",
@@ -4717,7 +4904,8 @@
    "summary": "commented on #16809: Add fetcher by id for SWHID",
    "number": 16809,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16809"
+   "url": "https://github.com/JabRef/jabref/issues/16809#issuecomment-5545260566",
+   "excerpt": "https://dontpastetheai.com/"
   },
   {
    "id": "14451338157",
@@ -4729,7 +4917,8 @@
    "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225"
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5544877896",
+   "excerpt": "Yep, had missed that one. fixed in the [latest commit](https://github.com/apache/spark/pull/58225/commits/b524b6ed0c5bcfc6b194c9d3f50635072\u2026"
   },
   {
    "id": "14451018940",
@@ -4741,7 +4930,8 @@
    "summary": "commented on #71976: Add deferrable support to `InfluxDB3Operator`",
    "number": 71976,
    "merged": false,
-   "url": "https://github.com/apache/airflow/pull/71976"
+   "url": "https://github.com/apache/airflow/pull/71976#issuecomment-5544808966",
+   "excerpt": "Hi @eladkal @ashb , could I get another \ud83d\udc40 here please?"
   },
   {
    "id": "14449529429",
@@ -4753,7 +4943,8 @@
    "summary": "reviewed PR #58225 (commented)",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5116309300",
+   "excerpt": ""
   },
   {
    "id": "14449527589",
@@ -4765,7 +4956,8 @@
    "summary": "commented on PR #58225",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3936638040",
+   "excerpt": "I switched the test to go through renameTable(...) instead of hand-building this case"
   },
   {
    "id": "14449488393",
@@ -4777,7 +4969,8 @@
    "summary": "reviewed PR #58225 (commented)",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5116300759",
+   "excerpt": ""
   },
   {
    "id": "14449487598",
@@ -4789,7 +4982,8 @@
    "summary": "commented on PR #58225",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3936632622",
+   "excerpt": "Fair. Changed the 42102 path to fall back to oldName when tableName is absent"
   },
   {
    "id": "14447371899",
@@ -4801,7 +4995,8 @@
    "summary": "reopened PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16846",
+   "excerpt": ""
   },
   {
    "id": "14445549935",
@@ -4813,7 +5008,8 @@
    "summary": "commented on #16846: Remove hardcoded styling",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846"
+   "url": "https://github.com/JabRef/jabref/pull/16846#issuecomment-5543644964",
+   "excerpt": "dontpastetheai.com"
   },
   {
    "id": "14440283288",
@@ -4825,7 +5021,8 @@
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
    "number": 16640,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
+   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5542491002",
+   "excerpt": "You can leave this issue and pick another, perhaps. Thanks for trying."
   },
   {
    "id": "14445552183",
@@ -4837,7 +5034,8 @@
    "summary": "closed PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16846",
+   "excerpt": ""
   },
   {
    "id": "14438315759",
@@ -4849,7 +5047,8 @@
    "summary": "merged PR #16841",
    "number": 16841,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16841",
+   "excerpt": ""
   },
   {
    "id": "14436730904",
@@ -4861,7 +5060,8 @@
    "summary": "reviewed PR #16841 (approved)",
    "number": 16841,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16841#pullrequestreview-5114012372",
+   "excerpt": ""
   }
  ],
  "all_events": [
@@ -4875,7 +5075,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118987087",
+   "excerpt": ""
   },
   {
    "id": "14466070799",
@@ -4887,7 +5088,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938822815",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14466069911",
@@ -4899,7 +5101,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938822726",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14466069905",
@@ -4911,7 +5114,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118987001",
+   "excerpt": ""
   },
   {
    "id": "14466069037",
@@ -4923,7 +5127,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118986895",
+   "excerpt": ""
   },
   {
    "id": "14466069046",
@@ -4935,7 +5140,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16830"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938822624",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14466045744",
@@ -4947,7 +5153,8 @@
    "summary": "reviewed PR #16851 (commented)",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16851"
+   "url": "https://github.com/JabRef/jabref/pull/16851#pullrequestreview-5118984296",
+   "excerpt": ""
   },
   {
    "id": "14466044793",
@@ -4959,7 +5166,8 @@
    "summary": "commented on PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16851"
+   "url": "https://github.com/JabRef/jabref/pull/16851#discussion_r3938820013",
+   "excerpt": "addressed"
   },
   {
    "id": "14465991401",
@@ -4971,7 +5179,8 @@
    "summary": "reviewed PR #16852 (approved)",
    "number": 16852,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16852#pullrequestreview-5118978166",
+   "excerpt": ""
   },
   {
    "id": "14465847062",
@@ -4983,7 +5192,8 @@
    "summary": "reviewed PR #16851 (commented)",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16851#pullrequestreview-5118954034",
+   "excerpt": ""
   },
   {
    "id": "14465846655",
@@ -4995,7 +5205,8 @@
    "summary": "commented on PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16851#discussion_r3938791822",
+   "excerpt": "logging doesnt need a test"
   },
   {
    "id": "14465323174",
@@ -5007,7 +5218,8 @@
    "summary": "labeled PR #16853",
    "number": 16853,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16853",
+   "excerpt": ""
   },
   {
    "id": "14465305460",
@@ -5019,7 +5231,8 @@
    "summary": "opened PR #16853",
    "number": 16853,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16853",
+   "excerpt": ""
   },
   {
    "id": "14464874668",
@@ -5031,7 +5244,8 @@
    "summary": "merged PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16832",
+   "excerpt": ""
   },
   {
    "id": "14465995077",
@@ -5043,7 +5257,8 @@
    "summary": "labeled PR #16852",
    "number": 16852,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16852",
+   "excerpt": ""
   },
   {
    "id": "14464666271",
@@ -5055,7 +5270,8 @@
    "summary": "labeled PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16851",
+   "excerpt": ""
   },
   {
    "id": "14464573503",
@@ -5067,7 +5283,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598329",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464573499",
@@ -5079,7 +5296,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722953",
+   "excerpt": ""
   },
   {
    "id": "14464572679",
@@ -5091,7 +5309,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598225",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464572650",
@@ -5103,7 +5322,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722659",
+   "excerpt": ""
   },
   {
    "id": "14464572228",
@@ -5115,7 +5335,8 @@
    "summary": "opened PR #16851",
    "number": 16851,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16851",
+   "excerpt": ""
   },
   {
    "id": "14464571605",
@@ -5127,7 +5348,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598120",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464571579",
@@ -5139,7 +5361,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722545",
+   "excerpt": ""
   },
   {
    "id": "14464570734",
@@ -5151,7 +5374,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722435",
+   "excerpt": ""
   },
   {
    "id": "14464570746",
@@ -5163,7 +5387,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938598017",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464569816",
@@ -5175,7 +5400,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118722311",
+   "excerpt": ""
   },
   {
    "id": "14464569832",
@@ -5187,7 +5413,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938597899",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464569008",
@@ -5199,7 +5426,8 @@
    "summary": "reviewed PR #16830 (commented)",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5118721981",
+   "excerpt": ""
   },
   {
    "id": "14464569014",
@@ -5211,7 +5439,8 @@
    "summary": "commented on PR #16830",
    "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3938597771",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464461957",
@@ -5223,7 +5452,8 @@
    "summary": "unlabeled PR #16829",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16829",
+   "excerpt": ""
   },
   {
    "id": "14464460825",
@@ -5235,7 +5465,8 @@
    "summary": "labeled PR #16829",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16829",
+   "excerpt": ""
   },
   {
    "id": "14464447277",
@@ -5247,7 +5478,8 @@
    "summary": "reviewed PR #16829 (commented)",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16829#pullrequestreview-5118694279",
+   "excerpt": ""
   },
   {
    "id": "14464447001",
@@ -5259,7 +5491,8 @@
    "summary": "commented on PR #16829",
    "number": 16829,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16829#discussion_r3938583040",
+   "excerpt": "No need"
   },
   {
    "id": "14464205356",
@@ -5271,7 +5504,8 @@
    "summary": "reviewed PR #16832 (approved)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118640896",
+   "excerpt": ""
   },
   {
    "id": "14464129277",
@@ -5283,7 +5517,8 @@
    "summary": "merged PR #16790",
    "number": 16790,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16790",
+   "excerpt": ""
   },
   {
    "id": "14464105529",
@@ -5295,7 +5530,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542298",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464105517",
@@ -5307,7 +5543,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618410",
+   "excerpt": ""
   },
   {
    "id": "14464105106",
@@ -5319,7 +5556,8 @@
    "summary": "closed issue #16109: Add support for modifier keys when dragging and dropping an entry.",
    "number": 16109,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16109"
+   "url": "https://github.com/JabRef/jabref/issues/16109",
+   "excerpt": ""
   },
   {
    "id": "14464104860",
@@ -5331,7 +5569,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542211",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464104819",
@@ -5343,7 +5582,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618283",
+   "excerpt": ""
   },
   {
    "id": "14464104263",
@@ -5355,7 +5595,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618124",
+   "excerpt": ""
   },
   {
    "id": "14464104265",
@@ -5367,7 +5608,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542082",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464070818",
@@ -5379,7 +5621,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118610018",
+   "excerpt": ""
   },
   {
    "id": "14464070828",
@@ -5391,7 +5634,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938537482",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14464008323",
@@ -5403,7 +5647,8 @@
    "summary": "commented on #1773: 8353599: TabPaneSkin: 'overflowMenuDecorator' property",
    "number": 1773,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/1773"
+   "url": "https://github.com/openjdk/jfx/pull/1773#issuecomment-5547587172",
+   "excerpt": "One thing I wonder: The decorator vs. the possibility to customize the whole overflow menu, like you can do for the table (menu). So a prot\u2026"
   },
   {
    "id": "14463929848",
@@ -5415,7 +5660,8 @@
    "summary": "reviewed PR #16530 (commented)",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#pullrequestreview-5118581695",
+   "excerpt": ""
   },
   {
    "id": "14463929106",
@@ -5427,7 +5673,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938521315",
+   "excerpt": "Why was this comment removed?"
   },
   {
    "id": "14463916117",
@@ -5439,7 +5686,8 @@
    "summary": "reviewed PR #16530 (changes_requested)",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#pullrequestreview-5118570335",
+   "excerpt": "Just a quick eye."
   },
   {
    "id": "14463916076",
@@ -5451,7 +5699,8 @@
    "summary": "reviewed PR #16530 (changes_requested)",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#pullrequestreview-5118570335",
+   "excerpt": "Just a quick eye."
   },
   {
    "id": "14463905236",
@@ -5463,7 +5712,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938518412",
+   "excerpt": "Did you even read what your LLM churned out? Use import."
   },
   {
    "id": "14463885470",
@@ -5475,7 +5725,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938516162",
+   "excerpt": "Is there a possibility of catching more specific exceptions here?"
   },
   {
    "id": "14463873069",
@@ -5487,7 +5738,8 @@
    "summary": "commented on PR #16530",
    "number": 16530,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938514617",
+   "excerpt": "Why fully qualified name? Use import."
   },
   {
    "id": "14463788897",
@@ -5499,7 +5751,8 @@
    "summary": "reviewed PR #16832 (changes_requested)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118551230",
+   "excerpt": ""
   },
   {
    "id": "14463785617",
@@ -5511,7 +5764,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938504313",
+   "excerpt": "I would also make that a new method, so that the lambda is small and easy to read"
   },
   {
    "id": "14463770997",
@@ -5523,7 +5777,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938502179",
+   "excerpt": "maybe as a new method? That would make the lambda better readable"
   },
   {
    "id": "14463767824",
@@ -5535,7 +5790,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938501708",
+   "excerpt": "maybe as a new method? That would make the lambda better readable"
   },
   {
    "id": "14463740179",
@@ -5547,7 +5803,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118547554",
+   "excerpt": ""
   },
   {
    "id": "14463739626",
@@ -5559,7 +5816,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938498332",
+   "excerpt": "better idea, yes"
   },
   {
    "id": "14463670436",
@@ -5571,7 +5829,8 @@
    "summary": "reviewed PR #16286 (approved)",
    "number": 16286,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16286#pullrequestreview-5118538534",
+   "excerpt": ""
   },
   {
    "id": "14463534574",
@@ -5583,7 +5842,8 @@
    "summary": "commented on #16742: Add highlight words mode to Git Diff view",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742"
+   "url": "https://github.com/JabRef/jabref/pull/16742#issuecomment-5547484764",
+   "excerpt": "Use the same default as for three way merge."
   },
   {
    "id": "14463436737",
@@ -5595,7 +5855,8 @@
    "summary": "reviewed PR #16790 (approved)",
    "number": 16790,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16790#pullrequestreview-5118500783",
+   "excerpt": ""
   },
   {
    "id": "14463249708",
@@ -5607,7 +5868,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429767",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463249674",
@@ -5619,7 +5881,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118463226",
+   "excerpt": ""
   },
   {
    "id": "14463245451",
@@ -5631,7 +5894,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429319",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463245433",
@@ -5643,7 +5907,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462766",
+   "excerpt": ""
   },
   {
    "id": "14463244714",
@@ -5655,7 +5920,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462671",
+   "excerpt": ""
   },
   {
    "id": "14463244724",
@@ -5667,7 +5933,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429217",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463243794",
@@ -5679,7 +5946,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462593",
+   "excerpt": ""
   },
   {
    "id": "14463243816",
@@ -5691,7 +5959,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429135",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463243062",
@@ -5703,7 +5972,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462523",
+   "excerpt": ""
   },
   {
    "id": "14463243090",
@@ -5715,7 +5985,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938429066",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463242452",
@@ -5727,7 +5998,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118462419",
+   "excerpt": ""
   },
   {
    "id": "14463242470",
@@ -5739,7 +6011,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938428974",
+   "excerpt": "\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
    "id": "14463227245",
@@ -5751,7 +6024,8 @@
    "summary": "commented on #16849: Add SWHID identifier and Software Heritage fetcher",
    "number": 16849,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849"
+   "url": "https://github.com/JabRef/jabref/pull/16849#issuecomment-5547404499",
+   "excerpt": "please check for rate limti https://archive.softwareheritage.org/api/rate-limiting"
   },
   {
    "id": "14462954952",
@@ -5763,7 +6037,8 @@
    "summary": "commented on #2127: ICU-22080 Add plain ASCII as an explicitly detected type",
    "number": 2127,
    "merged": false,
-   "url": "https://github.com/unicode-org/icu/pull/2127"
+   "url": "https://github.com/unicode-org/icu/pull/2127#issuecomment-5547345313",
+   "excerpt": "@srl295 We are at an open source hackathon and wondering what we could do to help to move this forward. I hope, that the time we needed to\u2026"
   },
   {
    "id": "14462777921",
@@ -5775,7 +6050,8 @@
    "summary": "opened issue #8313: Double space after citation number in Nature",
    "number": 8313,
    "merged": false,
-   "url": "https://github.com/citation-style-language/styles/issues/8313"
+   "url": "https://github.com/citation-style-language/styles/issues/8313",
+   "excerpt": ""
   },
   {
    "id": "14462770749",
@@ -5787,7 +6063,8 @@
    "summary": "reviewed PR #16832 (commented)",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118394369",
+   "excerpt": ""
   },
   {
    "id": "14462769576",
@@ -5799,7 +6076,8 @@
    "summary": "commented on PR #16832",
    "number": 16832,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938363583",
+   "excerpt": "But the idea kinda should work"
   },
   {
    "id": "14462756128",
@@ -5811,7 +6089,8 @@
    "summary": "reviewed PR #16850 (commented)",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5118392455",
+   "excerpt": ""
   },
   {
    "id": "14462755106",
@@ -5823,7 +6102,8 @@
    "summary": "commented on PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3938361784",
+   "excerpt": "invokeAndWait is better, because the API also called it like that"
   },
   {
    "id": "14462714677",
@@ -5835,7 +6115,8 @@
    "summary": "reviewed PR #16850 (commented)",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5118387002",
+   "excerpt": ""
   },
   {
    "id": "14462714001",
@@ -5847,7 +6128,8 @@
    "summary": "commented on PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3938356460",
+   "excerpt": "must really be synchronized?"
   },
   {
    "id": "14462352188",
@@ -5859,7 +6141,8 @@
    "summary": "reviewed PR #16820 (approved)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5118338199",
+   "excerpt": ""
   },
   {
    "id": "14462280113",
@@ -5871,7 +6154,8 @@
    "summary": "opened PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16850",
+   "excerpt": ""
   },
   {
    "id": "14462635862",
@@ -5883,7 +6167,8 @@
    "summary": "assigned PR #16850",
    "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16850",
+   "excerpt": ""
   },
   {
    "id": "14462095029",
@@ -5895,7 +6180,8 @@
    "summary": "reviewed PR #2278 (commented)",
    "number": 2278,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/2278#pullrequestreview-5118302511",
+   "excerpt": ""
   },
   {
    "id": "14462094001",
@@ -5907,7 +6193,8 @@
    "summary": "commented on PR #2278",
    "number": 2278,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/2278#discussion_r3938275249",
+   "excerpt": "@hjohn just pinging you, as you deprecated it and you might be more aware about potential special cases / problems."
   },
   {
    "id": "14461959481",
@@ -5919,7 +6206,8 @@
    "summary": "commented on PR #583",
    "number": 583,
    "merged": false,
-   "url": "https://github.com/itsallcode/openfasttrace"
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583#discussion_r3938258668",
+   "excerpt": "Added req~example~2 right after \u2014 the test now asserts both items are detected."
   },
   {
    "id": "14461959466",
@@ -5931,7 +6219,8 @@
    "summary": "reviewed PR #583 (commented)",
    "number": 583,
    "merged": false,
-   "url": "https://github.com/itsallcode/openfasttrace"
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583#pullrequestreview-5118285916",
+   "excerpt": ""
   },
   {
    "id": "14461889822",
@@ -5943,7 +6232,8 @@
    "summary": "reviewed PR #16820 (dismissed)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5093874214",
+   "excerpt": ""
   },
   {
    "id": "14461889662",
@@ -5955,7 +6245,8 @@
    "summary": "reviewed PR #16820 (dismissed)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5118181276",
+   "excerpt": ""
   },
   {
    "id": "14461439119",
@@ -5967,7 +6258,8 @@
    "summary": "commented on #16820: Chore(deps): Bump jablib/src/main/resources/csl-styles from `0819c0e` to `db768d4`",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16820"
+   "url": "https://github.com/JabRef/jabref/pull/16820#issuecomment-5547014767",
+   "excerpt": "Hmm okay, they renamed something again."
   },
   {
    "id": "14461156787",
@@ -5979,7 +6271,8 @@
    "summary": "reviewed PR #16820 (dismissed)",
    "number": 16820,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5118181276",
+   "excerpt": ""
   },
   {
    "id": "14460554803",
@@ -5991,7 +6284,8 @@
    "summary": "reviewed PR #16760 (commented)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5118096286",
+   "excerpt": ""
   },
   {
    "id": "14460551112",
@@ -6003,7 +6297,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3938088908",
+   "excerpt": "@InAnYan"
   },
   {
    "id": "14460480080",
@@ -6015,7 +6310,8 @@
    "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
    "number": 16352,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352"
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5546810216",
+   "excerpt": "I mean style to style"
   },
   {
    "id": "14460400781",
@@ -6027,7 +6323,8 @@
    "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
    "number": 16352,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352"
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5546793268",
+   "excerpt": "Add space before and after can stay where it is, as it depends from citation to citation as well."
   },
   {
    "id": "14460352218",
@@ -6039,7 +6336,8 @@
    "summary": "reviewed PR #16651 (commented)",
    "number": 16651,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5118070604",
+   "excerpt": ""
   },
   {
    "id": "14460351290",
@@ -6051,7 +6349,8 @@
    "summary": "commented on PR #16651",
    "number": 16651,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3938066118",
+   "excerpt": "false positive"
   },
   {
    "id": "14460306954",
@@ -6063,7 +6362,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5118035291",
+   "excerpt": "There might be scaling problems. Claude says"
   },
   {
    "id": "14460289892",
@@ -6075,7 +6375,8 @@
    "summary": "merged PR #16835",
    "number": 16835,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16835",
+   "excerpt": ""
   },
   {
    "id": "14460258626",
@@ -6087,7 +6388,8 @@
    "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
    "number": 16352,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352"
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5546763822",
+   "excerpt": "Which settings should i move to preference? add space after/before, infer mode?"
   },
   {
    "id": "14460080793",
@@ -6099,7 +6401,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5118035291",
+   "excerpt": "There might be scaling problems. Claude says"
   },
   {
    "id": "14459772479",
@@ -6111,7 +6414,8 @@
    "summary": "reviewed PR #16835 (approved)",
    "number": 16835,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16835#pullrequestreview-5117993173",
+   "excerpt": ""
   },
   {
    "id": "14459761276",
@@ -6123,7 +6427,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117991542",
+   "excerpt": ""
   },
   {
    "id": "14459759876",
@@ -6135,7 +6440,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937998888",
+   "excerpt": "i think its an issue because \"add entry\" selects entry, but \"add entry using\" does not"
   },
   {
    "id": "14459649114",
@@ -6147,7 +6453,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117976504",
+   "excerpt": ""
   },
   {
    "id": "14459647943",
@@ -6159,7 +6466,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937985928",
+   "excerpt": "updated code while makiing isTargetLibraryTab  inline."
   },
   {
    "id": "14459566971",
@@ -6171,7 +6479,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117965855",
+   "excerpt": ""
   },
   {
    "id": "14459566071",
@@ -6183,7 +6492,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937976630",
+   "excerpt": "Yes"
   },
   {
    "id": "14459565359",
@@ -6195,7 +6505,8 @@
    "summary": "closed issue #15680: Improve logging to find out which linked file has a flaw",
    "number": 15680,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/15680"
+   "url": "https://github.com/JabRef/jabref/issues/15680",
+   "excerpt": ""
   },
   {
    "id": "14459424401",
@@ -6207,7 +6518,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5117946706",
+   "excerpt": ""
   },
   {
    "id": "14459423318",
@@ -6219,7 +6531,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937959812",
+   "excerpt": "big lambda, maybe a new method instead?"
   },
   {
    "id": "14459387734",
@@ -6231,7 +6544,8 @@
    "summary": "reviewed PR #16813 (commented)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5117941359",
+   "excerpt": ""
   },
   {
    "id": "14459387815",
@@ -6243,7 +6557,8 @@
    "summary": "closed issue #16477: Fix ArXivFetcherTest > searchEntryByPartOfTitleWithAcuteAccent",
    "number": 16477,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16477"
+   "url": "https://github.com/JabRef/jabref/issues/16477",
+   "excerpt": ""
   },
   {
    "id": "14459386537",
@@ -6255,7 +6570,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937955525",
+   "excerpt": "I wonder if we should put that into a new method. Together with the for loop, this gets complex quick."
   },
   {
    "id": "14459339690",
@@ -6267,7 +6583,8 @@
    "summary": "reviewed PR #16813 (changes_requested)",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5117929097",
+   "excerpt": ""
   },
   {
    "id": "14459335546",
@@ -6279,7 +6596,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937949122",
+   "excerpt": "Is it possible that we add the listener multiple times (e.g. this code get exeucted multiple times)"
   },
   {
    "id": "14459307668",
@@ -6291,7 +6609,8 @@
    "summary": "closed issue #16756: [UI/UX] Missing loading indicator / spinner in \"New Entry -> Enter Identifier\" dialog during search",
    "number": 16756,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16756"
+   "url": "https://github.com/JabRef/jabref/issues/16756",
+   "excerpt": ""
   },
   {
    "id": "14459305470",
@@ -6303,7 +6622,8 @@
    "summary": "commented on PR #16813",
    "number": 16813,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16813#discussion_r3937945783",
+   "excerpt": "Also use Objects.equals for null safety?"
   },
   {
    "id": "14458970809",
@@ -6315,7 +6635,8 @@
    "summary": "reviewed PR #16825 (approved)",
    "number": 16825,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16825#pullrequestreview-5117880620",
+   "excerpt": ""
   },
   {
    "id": "14458961675",
@@ -6327,7 +6648,8 @@
    "summary": "reviewed PR #16702 (approved)",
    "number": 16702,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16702#pullrequestreview-5117879412",
+   "excerpt": ""
   },
   {
    "id": "14458957438",
@@ -6339,7 +6661,8 @@
    "summary": "reviewed PR #16702 (dismissed)",
    "number": 16702,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16702#pullrequestreview-5047584818",
+   "excerpt": ""
   },
   {
    "id": "14458927536",
@@ -6351,7 +6674,8 @@
    "summary": "reviewed PR #16702 (approved)",
    "number": 16702,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16702#pullrequestreview-5117874759",
+   "excerpt": ""
   },
   {
    "id": "14458881540",
@@ -6363,7 +6687,8 @@
    "summary": "reviewed PR #16825 (approved)",
    "number": 16825,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16825#pullrequestreview-5117868399",
+   "excerpt": ""
   },
   {
    "id": "14458481675",
@@ -6375,7 +6700,8 @@
    "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
    "number": 16834,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16834"
+   "url": "https://github.com/JabRef/jabref/pull/16834#issuecomment-5546383847",
+   "excerpt": "Your changes look ok so far, but please have the minimum courtesy to provide a PR description. We are no machines but real human beings. Tr\u2026"
   },
   {
    "id": "14458473863",
@@ -6387,7 +6713,8 @@
    "summary": "commented on #16831: Show full text download search as background task",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16831"
+   "url": "https://github.com/JabRef/jabref/pull/16831#issuecomment-5546382248",
+   "excerpt": "I think the code is okay, but I don't have full forces right now"
   },
   {
    "id": "14458433300",
@@ -6399,7 +6726,8 @@
    "summary": "reviewed PR #16760 (commented)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117779672",
+   "excerpt": ""
   },
   {
    "id": "14458431984",
@@ -6411,7 +6739,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937843211",
+   "excerpt": "we should have consistent casing. gui, cli, logic is lower-case. Model and Preferences is upper case."
   },
   {
    "id": "14458418990",
@@ -6423,7 +6752,8 @@
    "summary": "merged PR #16774",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16774",
+   "excerpt": ""
   },
   {
    "id": "14458407754",
@@ -6435,7 +6765,8 @@
    "summary": "reviewed PR #16831 (commented)",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#pullrequestreview-5117694837",
+   "excerpt": ""
   },
   {
    "id": "14458389299",
@@ -6447,7 +6778,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937837679",
+   "excerpt": "Probably remove this comment, and instead a short comment above if to explain why this check is needed. e.g. Entry could be deleted while t\u2026"
   },
   {
    "id": "14458355250",
@@ -6459,7 +6791,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937833046",
+   "excerpt": "Remove comment? Obvious?"
   },
   {
    "id": "14458271287",
@@ -6471,7 +6804,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937823024",
+   "excerpt": "Maybe delete the comment?"
   },
   {
    "id": "14458256901",
@@ -6483,7 +6817,8 @@
    "summary": "labeled PR #16791",
    "number": 16791,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16791",
+   "excerpt": ""
   },
   {
    "id": "14458199235",
@@ -6495,7 +6830,8 @@
    "summary": "reviewed PR #16795 (approved)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117730544",
+   "excerpt": ""
   },
   {
    "id": "14458165532",
@@ -6507,7 +6843,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937811290",
+   "excerpt": "IDK, data race, can it be an argument of the action?"
   },
   {
    "id": "14458150571",
@@ -6519,7 +6856,8 @@
    "summary": "reviewed PR #16795 (approved)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117721118",
+   "excerpt": ""
   },
   {
    "id": "14458149505",
@@ -6531,7 +6869,8 @@
    "summary": "reviewed PR #16795 (approved)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117720749",
+   "excerpt": ""
   },
   {
    "id": "14458128430",
@@ -6543,7 +6882,8 @@
    "summary": "reviewed PR #16795 (dismissed)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5098644568",
+   "excerpt": ""
   },
   {
    "id": "14458010530",
@@ -6555,7 +6895,8 @@
    "summary": "commented on PR #16831",
    "number": 16831,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16831#discussion_r3937793986",
+   "excerpt": "Remove line"
   },
   {
    "id": "14457996708",
@@ -6567,7 +6908,8 @@
    "summary": "reviewed PR #16795 (commented)",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#pullrequestreview-5117687147",
+   "excerpt": ""
   },
   {
    "id": "14457991831",
@@ -6579,7 +6921,8 @@
    "summary": "commented on PR #16795",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#discussion_r3937791836",
+   "excerpt": "is a spacing of 4 enough?"
   },
   {
    "id": "14457990497",
@@ -6591,7 +6934,8 @@
    "summary": "commented on #16739: Fix button placement at commit dialog",
    "number": 16739,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16739"
+   "url": "https://github.com/JabRef/jabref/pull/16739#issuecomment-5546281908",
+   "excerpt": "No worries, thank you for informing us"
   },
   {
    "id": "14457970115",
@@ -6603,7 +6947,8 @@
    "summary": "commented on PR #16795",
    "number": 16795,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16795#discussion_r3937789281",
+   "excerpt": "bind to idSearchingBox.visibleProperty()"
   },
   {
    "id": "14457889031",
@@ -6615,7 +6960,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/TGRRRR/heading-outliner"
+   "url": "https://github.com/TGRRRR/heading-outliner",
+   "excerpt": ""
   },
   {
    "id": "14457796258",
@@ -6627,7 +6973,8 @@
    "summary": "reviewed PR #16774 (approved)",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117654224",
+   "excerpt": ""
   },
   {
    "id": "14457720517",
@@ -6639,7 +6986,8 @@
    "summary": "reviewed PR #16774 (commented)",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117640617",
+   "excerpt": ""
   },
   {
    "id": "14457719361",
@@ -6651,7 +6999,8 @@
    "summary": "commented on PR #16774",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#discussion_r3937760703",
+   "excerpt": "discussed: later"
   },
   {
    "id": "14457711003",
@@ -6663,7 +7012,8 @@
    "summary": "reviewed PR #16774 (approved)",
    "number": 16774,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117638689",
+   "excerpt": ""
   },
   {
    "id": "14457645929",
@@ -6675,7 +7025,8 @@
    "summary": "commented on #16763: Automatically generate Git commit message",
    "number": 16763,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16763"
+   "url": "https://github.com/JabRef/jabref/issues/16763#issuecomment-5546211200",
+   "excerpt": "@cmarqueslau which PR? Sorry, I can't find it"
   },
   {
    "id": "14457397117",
@@ -6687,7 +7038,8 @@
    "summary": "reviewed PR #16755 (changes_requested)",
    "number": 16755,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5117563583",
+   "excerpt": ""
   },
   {
    "id": "14457387857",
@@ -6699,7 +7051,8 @@
    "summary": "commented on PR #16755",
    "number": 16755,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3937721714",
+   "excerpt": "Is this else if block important?"
   },
   {
    "id": "14457297118",
@@ -6711,7 +7064,8 @@
    "summary": "commented on PR #16755",
    "number": 16755,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3937711751",
+   "excerpt": "This should be above the line 578, not here"
   },
   {
    "id": "14457185157",
@@ -6723,7 +7077,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117494475",
+   "excerpt": "Confirmed works, but IDK right now about the code. Maybe it's okay, need to check the other day"
   },
   {
    "id": "14457185058",
@@ -6735,7 +7090,8 @@
    "summary": "reviewed PR #16845 (commented)",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117494475",
+   "excerpt": "Confirmed works, but IDK right now about the code. Maybe it's okay, need to check the other day"
   },
   {
    "id": "14457139818",
@@ -6747,7 +7103,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937693777",
+   "excerpt": "It works even if citation key is empty?"
   },
   {
    "id": "14457107447",
@@ -6759,7 +7116,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937690037",
+   "excerpt": "Is uid the right method to check it?"
   },
   {
    "id": "14457087973",
@@ -6771,7 +7129,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937687928",
+   "excerpt": "I think this method is never used anywhere, so I think it could be inlined in the selectImportedEntriesInActiveTab."
   },
   {
    "id": "14456834945",
@@ -6783,7 +7142,8 @@
    "summary": "commented on PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937657284",
+   "excerpt": "I wonder if it's an issue or a feature?"
   },
   {
    "id": "14456771549",
@@ -6795,7 +7155,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/kidpeterpan/inkbound"
+   "url": "https://github.com/kidpeterpan/inkbound",
+   "excerpt": ""
   },
   {
    "id": "14456760356",
@@ -6807,7 +7168,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/enderonat/Academical-Paper-Converter-To-Epub"
+   "url": "https://github.com/enderonat/Academical-Paper-Converter-To-Epub",
+   "excerpt": ""
   },
   {
    "id": "14456748617",
@@ -6819,7 +7181,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/TGRRRR/heading-outliner"
+   "url": "https://github.com/TGRRRR/heading-outliner",
+   "excerpt": ""
   },
   {
    "id": "14456552498",
@@ -6831,7 +7194,8 @@
    "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
    "number": 16834,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16834"
+   "url": "https://github.com/JabRef/jabref/pull/16834#issuecomment-5545980829",
+   "excerpt": "Please use the template for PR description"
   },
   {
    "id": "14456169602",
@@ -6843,7 +7207,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/Vinzent03/find-unlinked-files"
+   "url": "https://github.com/Vinzent03/find-unlinked-files",
+   "excerpt": ""
   },
   {
    "id": "14456162740",
@@ -6855,7 +7220,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/graydon/obsidian-dangling-links"
+   "url": "https://github.com/graydon/obsidian-dangling-links",
+   "excerpt": ""
   },
   {
    "id": "14455700800",
@@ -6867,7 +7233,8 @@
    "summary": "reviewed PR #16760 (changes_requested)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117293983",
+   "excerpt": "Just added some personal nitpicks"
   },
   {
    "id": "14455700794",
@@ -6879,7 +7246,8 @@
    "summary": "reviewed PR #16760 (changes_requested)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117293983",
+   "excerpt": "Just added some personal nitpicks"
   },
   {
    "id": "14455654856",
@@ -6891,7 +7259,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937504187",
+   "excerpt": "global[\"Global Classes\"]"
   },
   {
    "id": "14455612246",
@@ -6903,7 +7272,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937498460",
+   "excerpt": "direction TD"
   },
   {
    "id": "14455601952",
@@ -6915,7 +7285,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937497062",
+   "excerpt": "flowchart TD"
   },
   {
    "id": "14454945395",
@@ -6927,7 +7298,8 @@
    "summary": "reviewed PR #16846 (changes_requested)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117190804",
+   "excerpt": ""
   },
   {
    "id": "14454907520",
@@ -6939,7 +7311,8 @@
    "summary": "reviewed PR #16846 (commented)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117184864",
+   "excerpt": ""
   },
   {
    "id": "14454906811",
@@ -6951,7 +7324,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937399800",
+   "excerpt": "This styleClass is never used, so how should that fix anything beside removing code and adding new dead code."
   },
   {
    "id": "14454690332",
@@ -6963,7 +7337,8 @@
    "summary": "reviewed PR #16760 (changes_requested)",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117149891",
+   "excerpt": ""
   },
   {
    "id": "14454685485",
@@ -6975,7 +7350,8 @@
    "summary": "commented on PR #16760",
    "number": 16760,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937368799",
+   "excerpt": "since we use mermaid, no need for svg file"
   },
   {
    "id": "14454528166",
@@ -6987,7 +7363,8 @@
    "summary": "reviewed PR #16222 (commented)",
    "number": 16222,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16222#pullrequestreview-5117127142",
+   "excerpt": ""
   },
   {
    "id": "14454526692",
@@ -6999,7 +7376,8 @@
    "summary": "commented on PR #16222",
    "number": 16222,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16222#discussion_r3937348239",
+   "excerpt": "Add above:"
   },
   {
    "id": "14454414572",
@@ -7011,7 +7389,8 @@
    "summary": "reviewed PR #16846 (changes_requested)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
+   "excerpt": "Thanks! Left some nitpicks. And can you check also qodo comments?"
   },
   {
    "id": "14454414520",
@@ -7023,7 +7402,8 @@
    "summary": "reviewed PR #16846 (changes_requested)",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
+   "excerpt": "Thanks! Left some nitpicks. And can you check also qodo comments?"
   },
   {
    "id": "14454347113",
@@ -7035,7 +7415,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937324087",
+   "excerpt": "Formatting change: add a space before {"
   },
   {
    "id": "14454314071",
@@ -7047,7 +7428,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937320292",
+   "excerpt": "Format change: remove blank line"
   },
   {
    "id": "14454305290",
@@ -7059,7 +7441,8 @@
    "summary": "commented on PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937319060",
+   "excerpt": "Format change: add blank line above"
   },
   {
    "id": "14454186699",
@@ -7071,7 +7454,8 @@
    "summary": "reviewed PR #16742 (changes_requested)",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5117019050",
+   "excerpt": "Yep, thanks, now it works, but I don't know should we leave WORDS or CHARS by default. @wanling0000 what do you think?"
   },
   {
    "id": "14454186684",
@@ -7083,7 +7467,8 @@
    "summary": "reviewed PR #16742 (changes_requested)",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5117019050",
+   "excerpt": "Yep, thanks, now it works, but I don't know should we leave WORDS or CHARS by default. @wanling0000 what do you think?"
   },
   {
    "id": "14453799264",
@@ -7095,7 +7480,8 @@
    "summary": "commented on PR #16742",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#discussion_r3937251271",
+   "excerpt": "I think the WORDS was not a default method."
   },
   {
    "id": "14453766257",
@@ -7107,7 +7493,8 @@
    "summary": "commented on PR #16742",
    "number": 16742,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16742#discussion_r3937246594",
+   "excerpt": "In future, if possible please leave only changes related to the PR. This simplifies the review"
   },
   {
    "id": "14453102099",
@@ -7119,7 +7506,8 @@
    "summary": "commented on #16809: Add fetcher by id for SWHID",
    "number": 16809,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16809"
+   "url": "https://github.com/JabRef/jabref/issues/16809#issuecomment-5545260566",
+   "excerpt": "https://dontpastetheai.com/"
   },
   {
    "id": "14451338157",
@@ -7131,7 +7519,8 @@
    "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225"
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5544877896",
+   "excerpt": "Yep, had missed that one. fixed in the [latest commit](https://github.com/apache/spark/pull/58225/commits/b524b6ed0c5bcfc6b194c9d3f50635072\u2026"
   },
   {
    "id": "14451018940",
@@ -7143,7 +7532,8 @@
    "summary": "commented on #71976: Add deferrable support to `InfluxDB3Operator`",
    "number": 71976,
    "merged": false,
-   "url": "https://github.com/apache/airflow/pull/71976"
+   "url": "https://github.com/apache/airflow/pull/71976#issuecomment-5544808966",
+   "excerpt": "Hi @eladkal @ashb , could I get another \ud83d\udc40 here please?"
   },
   {
    "id": "14449529429",
@@ -7155,7 +7545,8 @@
    "summary": "reviewed PR #58225 (commented)",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5116309300",
+   "excerpt": ""
   },
   {
    "id": "14449527589",
@@ -7167,7 +7558,8 @@
    "summary": "commented on PR #58225",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3936638040",
+   "excerpt": "I switched the test to go through renameTable(...) instead of hand-building this case"
   },
   {
    "id": "14449488393",
@@ -7179,7 +7571,8 @@
    "summary": "reviewed PR #58225 (commented)",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5116300759",
+   "excerpt": ""
   },
   {
    "id": "14449487598",
@@ -7191,7 +7584,8 @@
    "summary": "commented on PR #58225",
    "number": 58225,
    "merged": false,
-   "url": "https://github.com/apache/spark"
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3936632622",
+   "excerpt": "Fair. Changed the 42102 path to fall back to oldName when tableName is absent"
   },
   {
    "id": "14447371899",
@@ -7203,7 +7597,8 @@
    "summary": "reopened PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16846",
+   "excerpt": ""
   },
   {
    "id": "14445549935",
@@ -7215,7 +7610,8 @@
    "summary": "commented on #16846: Remove hardcoded styling",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846"
+   "url": "https://github.com/JabRef/jabref/pull/16846#issuecomment-5543644964",
+   "excerpt": "dontpastetheai.com"
   },
   {
    "id": "14440283288",
@@ -7227,7 +7623,8 @@
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
    "number": 16640,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
+   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5542491002",
+   "excerpt": "You can leave this issue and pick another, perhaps. Thanks for trying."
   },
   {
    "id": "14445552183",
@@ -7239,7 +7636,8 @@
    "summary": "closed PR #16846",
    "number": 16846,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16846",
+   "excerpt": ""
   },
   {
    "id": "14438315759",
@@ -7251,7 +7649,8 @@
    "summary": "merged PR #16841",
    "number": 16841,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16841",
+   "excerpt": ""
   },
   {
    "id": "14436730904",
@@ -7263,7 +7662,8 @@
    "summary": "reviewed PR #16841 (approved)",
    "number": 16841,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16841#pullrequestreview-5114012372",
+   "excerpt": ""
   },
   {
    "id": "14434812029",
@@ -7275,7 +7675,8 @@
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
    "number": 16640,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
+   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5541293093",
+   "excerpt": "You need to open Zotero to use the plugin."
   },
   {
    "id": "14434394462",
@@ -7287,7 +7688,8 @@
    "summary": "opened PR #16845",
    "number": 16845,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/issues/16845",
+   "excerpt": ""
   },
   {
    "id": "14433169387",
@@ -7299,7 +7701,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/AndroidPoet/halo-kmp"
+   "url": "https://github.com/AndroidPoet/halo-kmp",
+   "excerpt": ""
   },
   {
    "id": "14431469381",
@@ -7311,7 +7714,8 @@
    "summary": "reviewed PR #1935 (commented)",
    "number": 1935,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/1935#pullrequestreview-5113068070",
+   "excerpt": ""
   },
   {
    "id": "14431467898",
@@ -7323,7 +7727,8 @@
    "summary": "commented on PR #1935",
    "number": 1935,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/1935#discussion_r3934071351",
+   "excerpt": "This just follows the same behavior as DatePicker, ComboBox, Spinner."
   },
   {
    "id": "14430706823",
@@ -7335,7 +7740,8 @@
    "summary": "commented on #2291: 8090896: Allow skipping apps build",
    "number": 2291,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/2291"
+   "url": "https://github.com/openjdk/jfx/pull/2291#issuecomment-5540451382",
+   "excerpt": "@nlisker I should propably document that new property inside the gradle-local.properties.template file, right?"
   },
   {
    "id": "14428618777",
@@ -7347,7 +7753,8 @@
    "summary": "commented on #2291: 8090896: Allow skipping apps build",
    "number": 2291,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/2291"
+   "url": "https://github.com/openjdk/jfx/pull/2291#issuecomment-5540030066",
+   "excerpt": "Introduced in this PR to eventually skip building and cleaning apps."
   },
   {
    "id": "14428524264",
@@ -7359,7 +7766,8 @@
    "summary": "reviewed PR #2291 (commented)",
    "number": 2291,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/2291#pullrequestreview-5112546544",
+   "excerpt": ""
   },
   {
    "id": "14428522874",
@@ -7371,7 +7779,8 @@
    "summary": "commented on PR #2291",
    "number": 2291,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx"
+   "url": "https://github.com/openjdk/jfx/pull/2291#discussion_r3933675533",
+   "excerpt": "Changed back to true."
   },
   {
    "id": "20063467230",
@@ -7383,7 +7792,8 @@
    "summary": "pushed 0 commit(s) to 8090896-Allow-skipping-apps-build",
    "number": null,
    "merged": false,
-   "url": "https://github.com/Maran23/jfx"
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": ""
   },
   {
    "id": "20062154761",
@@ -7395,7 +7805,8 @@
    "summary": "pushed 0 commit(s) to main",
    "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board"
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": ""
   },
   {
    "id": "20061047972",
@@ -7407,7 +7818,8 @@
    "summary": "pushed 0 commit(s) to main",
    "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board"
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": ""
   },
   {
    "id": "20064378207",
@@ -7419,7 +7831,8 @@
    "summary": "pushed 0 commit(s) to main",
    "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": ""
   },
   {
    "id": "20063947653",
@@ -7431,7 +7844,8 @@
    "summary": "pushed 0 commit(s) to main",
    "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board"
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": ""
   },
   {
    "id": "14425349255",
@@ -7443,7 +7857,8 @@
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
    "number": 16640,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
+   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5539323187",
+   "excerpt": "See https://github.com/JabRef/jabref/issues/16640issuecomment-5538846180"
   },
   {
    "id": "14423648346",
@@ -7455,7 +7870,8 @@
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
    "number": 16640,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
+   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5538968442",
+   "excerpt": "What do you mean"
   },
   {
    "id": "14423121207",
@@ -7467,7 +7883,8 @@
    "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
    "number": 16640,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640"
+   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5538846180",
+   "excerpt": "On clicking cite in the zotero plugin, a popup should appear asking you to select the style and the citation."
   },
   {
    "id": "14421435588",
@@ -7479,7 +7896,8 @@
    "summary": "commented on #2291: 8090896: Allow skipping apps build",
    "number": 2291,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/2291"
+   "url": "https://github.com/openjdk/jfx/pull/2291#issuecomment-5538463728",
+   "excerpt": "So a cleanApps and cleanJavaFX task? Maybe an idea. Although with the new local gradle properties, I could probably just override INCLUDEAP\u2026"
   },
   {
    "id": "14414851461",
@@ -7491,7 +7909,8 @@
    "summary": "starred",
    "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board"
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": ""
   },
   {
    "id": "14414119140",
@@ -7503,7 +7922,8 @@
    "summary": "reviewed PR #16755 (approved)",
    "number": 16755,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref"
+   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5110139487",
+   "excerpt": "Brilliant work, lgtm"
   }
  ],
  "stats": {
