@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T15:43:29+00:00",
+ "generated_at": "2026-09-05T15:50:38+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1821,9 +1821,10 @@
     "good first issue",
     "component: theming",
     "component: css",
-    "first contrib"
+    "first contrib",
+    "status: to-be-merged"
    ],
-   "updated_at": "2026-09-05T14:53:53Z",
+   "updated_at": "2026-09-05T15:49:19Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -13677,7 +13678,7 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:33:45Z",
-   "summary": "reviewed PR #16846 (changes_requested)",
+   "summary": "reviewed PR #16846 (dismissed)",
    "number": 16846,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
@@ -13692,7 +13693,7 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T19:33:45Z",
-   "summary": "reviewed PR #16846 (changes_requested)",
+   "summary": "reviewed PR #16846 (dismissed)",
    "number": 16846,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
