@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T07:01:38+00:00",
+ "generated_at": "2026-09-05T07:19:45+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -4809,6 +4809,20 @@
    "self": false
   },
   {
+   "id": "20105580623",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:41:35Z",
+   "summary": "deleted branch keyword-separator-per-library",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14460289892",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -5749,20 +5763,6 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/kidpeterpan/inkbound",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14456760356",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "JohnnyGoodNews",
-   "repo": "enderonat/Academical-Paper-Converter-To-Epub",
-   "created_at": "2026-09-04T20:22:23Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/enderonat/Academical-Paper-Converter-To-Epub",
    "excerpt": "",
    "review_id": null
   }
@@ -7752,6 +7752,20 @@
    "excerpt": "There might be scaling problems. Claude says",
    "review_id": 5118035291,
    "self": false
+  },
+  {
+   "id": "20105580623",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T21:41:35Z",
+   "summary": "deleted branch keyword-separator-per-library",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14460289892",
