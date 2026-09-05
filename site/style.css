@@ -28,7 +28,8 @@ header h1 { margin: 0; font-size: 2.4rem; letter-spacing: .05em; }
 #updated { width: 2.2rem; height: 2.2rem; border-radius: 50%; flex: none;
   background: conic-gradient(var(--accent) calc(var(--p, 0) * 100%), var(--border) 0); position: relative; }
 #updated::after { content: ""; position: absolute; inset: .45rem; border-radius: 50%; background: var(--panel); }
-#updated.overdue { background: var(--muted); } /* full ring, next run late but not yet stale */
+#updated.overdue { animation: pulse 2s ease-in-out infinite; } /* full ring pulsing: next run is late but data is not yet stale */
+@keyframes pulse { 50% { opacity: .35; } }
 header.stale #updated { background: var(--warn); }
 header.stale #updated::after { content: "!"; display: grid; place-items: center; font-weight: bold; }
 #logo { height: 3.5rem; }
@@ -114,15 +115,18 @@ section h2 .count { float: right; color: var(--fg); }
 body::before {
   content: ""; position: fixed; inset: -40%; z-index: -1; pointer-events: none;
   background: radial-gradient(closest-side, #1f3a5f 0%, transparent 70%);
-  opacity: .35; animation: drift 90s ease-in-out infinite alternate;
+  opacity: .6; animation: drift 90s ease-in-out infinite alternate;
 }
 main { position: relative; z-index: 0; }
 section { animation: breathe 20s ease-in-out infinite; }
+/* every pixel changes slowly: the whole page brightens and darkens by ~10 % over 40 s */
+body { animation: glow 40s ease-in-out infinite; }
+@keyframes glow { 50% { filter: brightness(1.1); } }
 @keyframes drift {
   0%   { transform: translate(-25%, -20%) scale(.8); }
   50%  { transform: translate(15%, 10%) scale(1.1); }
   100% { transform: translate(25%, -15%) scale(.9); }
 }
 @keyframes breathe { 50% { border-color: #3d4654; } }
-@media (prefers-reduced-motion: reduce) { body::before, section { animation: none; } }
-html.still body::before, html.still section { animation: none; }
+@media (prefers-reduced-motion: reduce) { body, body::before, section { animation: none; } }
+html.still body, html.still body::before, html.still section { animation: none; }
