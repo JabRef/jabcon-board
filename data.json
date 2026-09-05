@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T03:21:53+00:00",
+ "generated_at": "2026-09-05T03:33:24+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -614,6 +614,67 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16791",
+   "repo": "JabRef/jabref",
+   "number": 16791,
+   "title": "Ship JEP 514 AOT cache in jabkit app image",
+   "url": "https://github.com/JabRef/jabref/pull/16791",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "status: devcall",
+    "component: jabkit",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-05T03:23:03Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16708",
+   "repo": "JabRef/jabref",
+   "number": 16708,
+   "title": "Common CSS styles for spacing, padding, gaps and font-size",
+   "url": "https://github.com/JabRef/jabref/pull/16708",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: libre-office",
+    "component: groups",
+    "component: import-load",
+    "component: preferences",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "status: changes-required",
+    "project: jabcon",
+    "component: logging",
+    "component: automatic-field-editor",
+    "component: theming",
+    "component: slr",
+    "component: ai",
+    "component: css",
+    "component: external-changes",
+    "component: welcome-tab",
+    "component: external-application-integration",
+    "component: pdf-viewer",
+    "component: git",
+    "component: welcome-walkthrough",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-05T03:23:01Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16838",
    "repo": "JabRef/jabref",
    "number": 16838,
@@ -882,27 +943,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16791",
-   "repo": "JabRef/jabref",
-   "number": 16791,
-   "title": "Ship JEP 514 AOT cache in jabkit app image",
-   "url": "https://github.com/JabRef/jabref/pull/16791",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "status: devcall",
-    "component: jabkit",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-09-04T20:54:36Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/openjdk/jfx/pull/1935",
    "repo": "openjdk/jfx",
    "number": 1935,
@@ -998,46 +1038,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16708",
-   "repo": "JabRef/jabref",
-   "number": 16708,
-   "title": "Common CSS styles for spacing, padding, gaps and font-size",
-   "url": "https://github.com/JabRef/jabref/pull/16708",
-   "type": "pr",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: libre-office",
-    "component: groups",
-    "component: import-load",
-    "component: preferences",
-    "component: external-files",
-    "component: maintable",
-    "component: entry-editor",
-    "status: changes-required",
-    "project: jabcon",
-    "component: logging",
-    "component: automatic-field-editor",
-    "component: theming",
-    "component: slr",
-    "component: ai",
-    "component: css",
-    "component: external-changes",
-    "component: welcome-tab",
-    "component: external-application-integration",
-    "component: pdf-viewer",
-    "component: git",
-    "component: welcome-walkthrough",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-04T03:24:25Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16247",
    "repo": "JabRef/jabref",
    "number": 16247,
@@ -1053,6 +1053,72 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T03:24:07Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16742",
+   "repo": "JabRef/jabref",
+   "number": 16742,
+   "title": "Add highlight words mode to Git Diff view",
+   "url": "https://github.com/JabRef/jabref/pull/16742",
+   "type": "pr",
+   "draft": false,
+   "author": "sanjaykumarmtt",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "status: changes-required",
+    "component: external-changes",
+    "component: git",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T03:23:10Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16739",
+   "repo": "JabRef/jabref",
+   "number": 16739,
+   "title": "Fix button placement at commit dialog",
+   "url": "https://github.com/JabRef/jabref/pull/16739",
+   "type": "pr",
+   "draft": true,
+   "author": "GRV-Satya-Ganesh",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "status: changes-required",
+    "component: git",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T03:23:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1076,28 +1142,7 @@
     "component: css",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T03:22:03Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-05T03:15:34Z",
+   "updated_at": "2026-09-05T03:22:05Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1158,29 +1203,6 @@
     "good third issue"
    ],
    "updated_at": "2026-09-04T23:21:50Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16742",
-   "repo": "JabRef/jabref",
-   "number": 16742,
-   "title": "Add highlight words mode to Git Diff view",
-   "url": "https://github.com/JabRef/jabref/pull/16742",
-   "type": "pr",
-   "draft": false,
-   "author": "sanjaykumarmtt",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "good first issue",
-    "status: changes-required",
-    "component: external-changes",
-    "component: git",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-04T23:09:05Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1263,28 +1285,6 @@
     "component: git"
    ],
    "updated_at": "2026-09-04T21:43:07Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16739",
-   "repo": "JabRef/jabref",
-   "number": 16739,
-   "title": "Fix button placement at commit dialog",
-   "url": "https://github.com/JabRef/jabref/pull/16739",
-   "type": "pr",
-   "draft": true,
-   "author": "GRV-Satya-Ganesh",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "good first issue",
-    "status: changes-required",
-    "component: git",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-04T20:48:46Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -9171,7 +9171,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-04T07:01:46Z",
-   "summary": "reviewed PR #16755 (approved)",
+   "summary": "reviewed PR #16755 (dismissed)",
    "number": 16755,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5110139487",
