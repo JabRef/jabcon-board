@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T07:38:11+00:00",
+ "generated_at": "2026-09-05T07:45:37+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -666,6 +666,39 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16850",
+   "repo": "JabRef/jabref",
+   "number": 16850,
+   "title": "Migrate JavaFX tests from TestFX",
+   "url": "https://github.com/JabRef/jabref/pull/16850",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [
+    "Maran23"
+   ],
+   "labels": [
+    "component: internationalization",
+    "component: search",
+    "component: groups",
+    "component: export-or-save",
+    "component: preferences",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "component: keybinding",
+    "status: changes-required",
+    "component: automatic-field-editor",
+    "component: theming",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-05T07:40:21Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16856",
    "repo": "JabRef/jabref",
    "number": 16856,
@@ -987,39 +1020,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16850",
-   "repo": "JabRef/jabref",
-   "number": 16850,
-   "title": "Migrate JavaFX tests from TestFX",
-   "url": "https://github.com/JabRef/jabref/pull/16850",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [
-    "Maran23"
-   ],
-   "labels": [
-    "component: internationalization",
-    "component: search",
-    "component: groups",
-    "component: export-or-save",
-    "component: preferences",
-    "component: external-files",
-    "component: maintable",
-    "component: entry-editor",
-    "component: keybinding",
-    "status: changes-required",
-    "component: automatic-field-editor",
-    "component: theming",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-04T23:18:23Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/itsallcode/openfasttrace/pull/583",
    "repo": "itsallcode/openfasttrace",
    "number": 583,
@@ -1204,6 +1204,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T07:39:35Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16742",
    "repo": "JabRef/jabref",
    "number": 16742,
@@ -1244,28 +1266,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-05T07:31:54Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-05T03:53:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
