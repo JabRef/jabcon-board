@@ -154,7 +154,8 @@ function render() {
   tick();
 }
 
-const REFRESH_MS = 5 * 60000; // cron interval of the board workflow
+// GitHub runs a */5 schedule only best-effort (observed 7-20 min between runs), so the ring is sized for a typical gap
+const REFRESH_MS = 10 * 60000;
 
 function renderProgress() {
   const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
@@ -178,6 +179,7 @@ function tick() {
   if (!data) return;
   const age = now - Date.parse(data.generated_at);
   $('#updated').style.setProperty('--p', Math.min(1, age / REFRESH_MS));
+  $('#updated').classList.toggle('overdue', age > REFRESH_MS);
   $('#updated').title = `last update ${ago(data.generated_at)}`;
   $('#data-time').textContent = `data ${new Date(data.generated_at).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone })}`;
   $('#header').classList.toggle('stale', age > 30 * 60000);
