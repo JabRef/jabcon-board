@@ -213,7 +213,7 @@ load();
 loadVideo();
 setInterval(load, 60000);
 setInterval(tick, 1000);
-setInterval(loadVideo, 3600000);
+setInterval(loadVideo, 15 * 60000);
 setInterval(renderTicker, 30000);
 
 // version.txt holds the deployed commit; shown in the corner and used to reload the page after a new deployment.
