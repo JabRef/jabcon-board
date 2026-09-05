@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T16:44:48+00:00",
+ "generated_at": "2026-09-05T16:51:55+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -11993,6 +11993,20 @@
    "review_id": null
   },
   {
+   "id": "20156113659",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:46:52Z",
+   "summary": "pushed 0 commit(s) to show-diff-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14462770749",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -12081,6 +12095,20 @@
    "excerpt": "must really be synchronized?",
    "review_id": 5118387002,
    "self": false
+  },
+  {
+   "id": "20156032130",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-04T22:44:07Z",
+   "summary": "pushed 0 commit(s) to migratejavafxtest",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "20113147643",
@@ -13516,6 +13544,48 @@
    "review_id": null
   },
   {
+   "id": "20156068147",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "Eng-YasminKotb/jabref",
+   "created_at": "2026-09-04T20:01:03Z",
+   "summary": "pushed 0 commit(s) to Enhance-developer-documentation",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Eng-YasminKotb/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20156059116",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "Eng-YasminKotb/jabref",
+   "created_at": "2026-09-04T20:00:52Z",
+   "summary": "pushed 0 commit(s) to Enhance-developer-documentation",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Eng-YasminKotb/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20155997449",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T20:00:39Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "20150294047",
    "type": "PushEvent",
    "action": null,
@@ -14545,10 +14615,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 112,
+   "points": 114,
    "merged": 0,
    "reviews": 28,
-   "other": 56
+   "other": 58
   },
   {
    "login": "Maran23",
@@ -14559,17 +14629,17 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 69,
+   "points": 70,
    "merged": 1,
    "reviews": 22,
-   "other": 22
+   "other": 23
   },
   {
    "login": "koppor",
-   "points": 64,
+   "points": 66,
    "merged": 8,
    "reviews": 2,
-   "other": 36
+   "other": 38
   },
   {
    "login": "pluto-han",
