@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T02:57:41+00:00",
+ "generated_at": "2026-09-05T03:21:53+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -614,23 +614,21 @@
    "column": "done"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16853",
+   "id": "https://github.com/JabRef/jabref/pull/16838",
    "repo": "JabRef/jabref",
-   "number": 16853,
-   "title": "Fix BST entry preview formatting",
-   "url": "https://github.com/JabRef/jabref/pull/16853",
+   "number": 16838,
+   "title": "Add jabkit git merge-driver for semantic .bib merges",
+   "url": "https://github.com/JabRef/jabref/pull/16838",
    "type": "pr",
    "draft": false,
-   "author": "subhramit",
+   "author": "koppor",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
-    "component: entry-preview",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
+    "component: jabkit",
+    "status: changes-required",
+    "component: git"
    ],
-   "updated_at": "2026-09-05T02:57:40Z",
+   "updated_at": "2026-09-05T03:21:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -651,7 +649,30 @@
     "component: latex-file-support",
     "component: bst"
    ],
-   "updated_at": "2026-09-05T02:57:32Z",
+   "updated_at": "2026-09-05T03:14:10Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16853",
+   "repo": "JabRef/jabref",
+   "number": 16853,
+   "title": "Fix BST entry preview formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16853",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: libre-office",
+    "component: entry-preview",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-05T03:11:57Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -667,7 +688,7 @@
    "author": "subhramit",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-05T02:56:06Z",
+   "updated_at": "2026-09-05T03:03:56Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1037,6 +1058,51 @@
    "column": "progress"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16846",
+   "repo": "JabRef/jabref",
+   "number": 16846,
+   "title": "Remove hardcoded styling",
+   "url": "https://github.com/JabRef/jabref/pull/16846",
+   "type": "pr",
+   "draft": false,
+   "author": "AbdallaSamirKhalifa",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: preferences",
+    "good first issue",
+    "status: changes-required",
+    "component: theming",
+    "component: css",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T03:22:03Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T03:15:34Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16852",
    "repo": "JabRef/jabref",
    "number": 16852,
@@ -1224,51 +1290,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-04T20:37:05Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16846",
-   "repo": "JabRef/jabref",
-   "number": 16846,
-   "title": "Remove hardcoded styling",
-   "url": "https://github.com/JabRef/jabref/pull/16846",
-   "type": "pr",
-   "draft": false,
-   "author": "AbdallaSamirKhalifa",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: preferences",
-    "good first issue",
-    "status: changes-required",
-    "component: theming",
-    "component: css",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-04T20:02:02Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16222",
    "repo": "JabRef/jabref",
    "number": 16222,
@@ -1326,27 +1347,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/16539",
-   "repo": "JabRef/jabref",
-   "number": 16539,
-   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
-   "url": "https://github.com/JabRef/jabref/issues/16539",
-   "type": "issue",
-   "draft": false,
-   "author": "ryan-carpenter",
-   "assignees": [
-    "subhramit"
-   ],
-   "labels": [
-    "component: search",
-    "\ud83d\udccc Pinned"
-   ],
-   "updated_at": "2026-09-05T02:27:32Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/issues/16330",
    "repo": "JabRef/jabref",
    "number": 16330,
@@ -1363,7 +1363,28 @@
     "component: entry-preview",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-05T00:20:01Z",
+   "updated_at": "2026-09-05T02:58:19Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16539",
+   "repo": "JabRef/jabref",
+   "number": 16539,
+   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "component: search",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T02:27:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -2535,6 +2556,50 @@
   }
  ],
  "events": [
+  {
+   "id": "14469746566",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T03:01:06Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5548908775",
+   "excerpt": "Covered in https://github.com/apache/spark/pull/58225/commits/c4237cfb60522dd445bb822042f2f4f73832a3d0, test adapted in https://github.com/\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14469716246",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:59:48Z",
+   "summary": "reviewed PR #58225 (commented)",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5119481539",
+   "excerpt": "Yes figured that, this is now fixed",
+   "review_id": 5119481539,
+   "self": true
+  },
+  {
+   "id": "14469715895",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:59:47Z",
+   "summary": "commented on PR #58225",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3939230876",
+   "excerpt": "Yes figured that, this is now fixed",
+   "review_id": 5119481539,
+   "self": true
+  },
   {
    "id": "14469510607",
    "type": "IssueCommentEvent",
@@ -5438,54 +5503,53 @@
    "excerpt": "",
    "review_id": 5117190804,
    "self": false
-  },
-  {
-   "id": "14454907520",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:43:51Z",
-   "summary": "reviewed PR #16846 (commented)",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117184864",
-   "excerpt": "This styleClass is never used, so how should that fix anything beside removing code and adding new dead code.",
-   "review_id": 5117184864,
-   "self": false
-  },
-  {
-   "id": "14454906811",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:43:50Z",
-   "summary": "commented on PR #16846",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937399800",
-   "excerpt": "This styleClass is never used, so how should that fix anything beside removing code and adding new dead code.",
-   "review_id": 5117184864,
-   "self": false
-  },
-  {
-   "id": "14454690332",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:39:21Z",
-   "summary": "reviewed PR #16760 (changes_requested)",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117149891",
-   "excerpt": "since we use mermaid, no need for svg file",
-   "review_id": 5117149891,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14469746566",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T03:01:06Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5548908775",
+   "excerpt": "Covered in https://github.com/apache/spark/pull/58225/commits/c4237cfb60522dd445bb822042f2f4f73832a3d0, test adapted in https://github.com/\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14469716246",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:59:48Z",
+   "summary": "reviewed PR #58225 (commented)",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5119481539",
+   "excerpt": "Yes figured that, this is now fixed",
+   "review_id": 5119481539,
+   "self": true
+  },
+  {
+   "id": "14469715895",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:59:47Z",
+   "summary": "commented on PR #58225",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3939230876",
+   "excerpt": "Yes figured that, this is now fixed",
+   "review_id": 5119481539,
+   "self": true
+  },
   {
    "id": "14469510607",
    "type": "IssueCommentEvent",
@@ -9184,10 +9248,10 @@
   },
   {
    "login": "subhramit",
-   "points": 48,
+   "points": 49,
    "merged": 1,
    "reviews": 10,
-   "other": 25
+   "other": 26
   },
   {
    "login": "koppor",
