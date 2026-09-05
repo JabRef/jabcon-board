@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T10:26:42+00:00",
+ "generated_at": "2026-09-05T10:35:43+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -826,48 +826,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16858",
-   "repo": "JabRef/jabref",
-   "number": 16858,
-   "title": "Fix wrong source tab label at startup",
-   "url": "https://github.com/JabRef/jabref/pull/16858",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: entry-editor",
-    "dev: binaries"
-   ],
-   "updated_at": "2026-09-05T10:26:19Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
-   "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue"
-   ],
-   "updated_at": "2026-09-05T10:25:55Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16859",
    "repo": "JabRef/jabref",
    "number": 16859,
@@ -880,7 +838,29 @@
    "labels": [
     "status: ready-for-review"
    ],
-   "updated_at": "2026-09-05T10:24:00Z",
+   "updated_at": "2026-09-05T10:34:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16826",
+   "repo": "JabRef/jabref",
+   "number": 16826,
+   "title": "Register the autosave manager for library changes again",
+   "url": "https://github.com/JabRef/jabref/pull/16826",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: waiting-for-feedback",
+    "component: backup",
+    "status: to-be-merged",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T10:33:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -913,29 +893,45 @@
     "component: theming",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-05T10:19:03Z",
+   "updated_at": "2026-09-05T10:32:37Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16826",
+   "id": "https://github.com/JabRef/jabref/pull/16860",
    "repo": "JabRef/jabref",
-   "number": 16826,
-   "title": "Register the autosave manager for library changes again",
-   "url": "https://github.com/JabRef/jabref/pull/16826",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
    "type": "pr",
    "draft": false,
-   "author": "koppor",
+   "author": "pluto-han",
    "assignees": [],
    "labels": [
-    "status: waiting-for-feedback",
-    "status: changes-required",
-    "component: backup",
-    "status: to-be-merged"
+    "component: libre-office",
+    "component: preferences",
+    "good first issue"
    ],
-   "updated_at": "2026-09-05T10:15:38Z",
+   "updated_at": "2026-09-05T10:32:02Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T10:30:38Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -952,10 +948,31 @@
    "author": "koppor",
    "assignees": [],
    "labels": [
-    "component: export-or-save",
-    "status: changes-required"
+    "status: ready-for-review",
+    "component: export-or-save"
    ],
-   "updated_at": "2026-09-05T10:15:29Z",
+   "updated_at": "2026-09-05T10:30:16Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16858",
+   "repo": "JabRef/jabref",
+   "number": 16858,
+   "title": "Fix wrong source tab label at startup",
+   "url": "https://github.com/JabRef/jabref/pull/16858",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: entry-editor",
+    "dev: binaries"
+   ],
+   "updated_at": "2026-09-05T10:26:19Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -984,23 +1001,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": true
-  },
-  {
-   "id": "https://github.com/apache/spark/pull/58225",
-   "repo": "apache/spark",
-   "number": 58225,
-   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "url": "https://github.com/apache/spark/pull/58225",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T08:44:43Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16857",
@@ -1447,29 +1447,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T10:26:35Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16620",
    "repo": "JabRef/jabref",
    "number": 16620,
@@ -1486,7 +1463,7 @@
     "good first issue",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-05T10:26:16Z",
+   "updated_at": "2026-09-05T10:35:50Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1508,7 +1485,30 @@
     "status: changes-required",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T10:18:33Z",
+   "updated_at": "2026-09-05T10:31:52Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T10:26:35Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1816,7 +1816,7 @@
     "project: jabcon",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-05T10:25:51Z",
+   "updated_at": "2026-09-05T10:31:58Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog",
@@ -3134,6 +3134,65 @@
   }
  ],
  "events": [
+  {
+   "id": "14480297210",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:35:55Z",
+   "summary": "opened PR #16861",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16861",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14480222739",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:32:38Z",
+   "summary": "reviewed PR #16850 (commented)",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5120883614",
+   "excerpt": "uses locks now",
+   "review_id": 5120883614,
+   "self": true
+  },
+  {
+   "id": "14480222552",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:32:37Z",
+   "summary": "commented on PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3940309808",
+   "excerpt": "uses locks now",
+   "review_id": 5120883614,
+   "self": true
+  },
+  {
+   "id": "14480099646",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:27:21Z",
+   "summary": "reviewed PR #16860 (approved)",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
+   "excerpt": "",
+   "review_id": 5120868338,
+   "self": false
+  },
   {
    "id": "14480074628",
    "type": "IssueCommentEvent",
@@ -4646,6 +4705,20 @@
    "excerpt": "",
    "review_id": 5120373882,
    "self": false
+  },
+  {
+   "id": "20123658182",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-05T07:51:07Z",
+   "summary": "created branch Enhance-developer-documentation",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14476388361",
@@ -5982,83 +6055,68 @@
    "url": "https://github.com/JabRef/jabref/issues/16790",
    "excerpt": "",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14464105529",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:54Z",
-   "summary": "commented on PR #16832",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542298",
-   "excerpt": "Pre-existing behavior of MetadataChangeDetailsView, shared with the Git diff and the external-changes dialog (all three pass side labels, t\u2026",
-   "review_id": 5118618410,
-   "self": true
-  },
-  {
-   "id": "14464105517",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:54Z",
-   "summary": "reviewed PR #16832 (commented)",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618410",
-   "excerpt": "Pre-existing behavior of MetadataChangeDetailsView, shared with the Git diff and the external-changes dialog (all three pass side labels, t\u2026",
-   "review_id": 5118618410,
-   "self": true
-  },
-  {
-   "id": "14464105106",
-   "type": "IssuesEvent",
-   "action": "closed",
+   "id": "14480297210",
+   "type": "PullRequestEvent",
+   "action": "opened",
    "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:54Z",
-   "summary": "closed issue #16109: Add support for modifier keys when dragging and dropping an entry.",
-   "number": 16109,
+   "created_at": "2026-09-05T10:35:55Z",
+   "summary": "opened PR #16861",
+   "number": 16861,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16109",
+   "url": "https://github.com/JabRef/jabref/issues/16861",
    "excerpt": "",
    "review_id": null
   },
   {
-   "id": "14464104860",
-   "type": "PullRequestReviewCommentEvent",
+   "id": "14480222739",
+   "type": "PullRequestReviewEvent",
    "action": "created",
-   "actor": "koppor",
+   "actor": "Siedlerchr",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:53Z",
-   "summary": "commented on PR #16832",
-   "number": 16832,
+   "created_at": "2026-09-05T10:32:38Z",
+   "summary": "reviewed PR #16850 (commented)",
+   "number": 16850,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542211",
-   "excerpt": "Same cause as the changelog duplicate (merge kept both sides); the trailing copies are removed and the localization consistency test passes\u2026",
-   "review_id": 5118618283,
+   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5120883614",
+   "excerpt": "uses locks now",
+   "review_id": 5120883614,
    "self": true
   },
   {
-   "id": "14464104819",
+   "id": "14480222552",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:32:37Z",
+   "summary": "commented on PR #16850",
+   "number": 16850,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3940309808",
+   "excerpt": "uses locks now",
+   "review_id": 5120883614,
+   "self": true
+  },
+  {
+   "id": "14480099646",
    "type": "PullRequestReviewEvent",
    "action": "created",
-   "actor": "koppor",
+   "actor": "Maran23",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:53Z",
-   "summary": "reviewed PR #16832 (commented)",
-   "number": 16832,
+   "created_at": "2026-09-05T10:27:21Z",
+   "summary": "reviewed PR #16860 (approved)",
+   "number": 16860,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618283",
-   "excerpt": "Same cause as the changelog duplicate (merge kept both sides); the trailing copies are removed and the localization consistency test passes\u2026",
-   "review_id": 5118618283,
-   "self": true
-  }
- ],
- "all_events": [
+   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
+   "excerpt": "",
+   "review_id": 5120868338,
+   "self": false
+  },
   {
    "id": "14480074628",
    "type": "IssueCommentEvent",
@@ -7571,6 +7629,20 @@
    "excerpt": "",
    "review_id": 5120373882,
    "self": false
+  },
+  {
+   "id": "20123658182",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-05T07:51:07Z",
+   "summary": "created branch Enhance-developer-documentation",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14476388361",
@@ -11683,6 +11755,20 @@
    "review_id": null
   },
   {
+   "id": "20124125845",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T13:02:37Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14431469381",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -12030,17 +12116,17 @@
   },
   {
    "login": "Maran23",
-   "points": 71,
+   "points": 73,
    "merged": 0,
-   "reviews": 22,
+   "reviews": 23,
    "other": 27
   },
   {
    "login": "koppor",
-   "points": 48,
+   "points": 49,
    "merged": 6,
    "reviews": 2,
-   "other": 26
+   "other": 27
   },
   {
    "login": "Siedlerchr",
