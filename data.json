@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T08:43:40+00:00",
+ "generated_at": "2026-09-05T08:50:52+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -676,7 +676,7 @@
    "author": "subhramit",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-05T08:37:29Z",
+   "updated_at": "2026-09-05T08:44:43Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1243,6 +1243,27 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16519",
+   "repo": "JabRef/jabref",
+   "number": 16519,
+   "title": "Show indicator for fetchers with a saved API key in Web Search preferences",
+   "url": "https://github.com/JabRef/jabref/pull/16519",
+   "type": "pr",
+   "draft": true,
+   "author": "kerollosy",
+   "assignees": [],
+   "labels": [
+    "good first issue",
+    "status: changes-required",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T08:50:32Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16742",
    "repo": "JabRef/jabref",
    "number": 16742,
@@ -1260,7 +1281,7 @@
     "component: git",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T08:30:52Z",
+   "updated_at": "2026-09-05T08:48:55Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -2905,6 +2926,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14477829525",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "moby/moby",
+   "created_at": "2026-09-05T08:49:53Z",
+   "summary": "commented on #49453: Buildx with new/unstarted docker-container driver and containerd can't use just pulled image",
+   "number": 49453,
+   "merged": false,
+   "url": "https://github.com/moby/moby/issues/49453#issuecomment-5550694633",
+   "excerpt": "Hi, I (and some other contributors at Spark) seem to be facing a similar recurring error - https://github.com/subhramit/spark/actions/runs/\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14477710166",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T08:44:42Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5550669926",
+   "excerpt": "Okay apparently this happened in [other PRs](https://github.com/szehon-ho/spark/actions/runs/33812521771/job/100840717313) as well and is i\u2026",
+   "review_id": null
+  },
   {
    "id": "14477504325",
    "type": "IssueCommentEvent",
@@ -5803,37 +5852,37 @@
    "excerpt": "we should have consistent casing. gui, cli, logic is lower-case. Model and Preferences is upper case.",
    "review_id": 5117779672,
    "self": false
-  },
-  {
-   "id": "20102420305",
-   "type": "DeleteEvent",
-   "action": null,
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:58:10Z",
-   "summary": "deleted branch fix-url-open-mangling",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14458418990",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:58:08Z",
-   "summary": "merged PR #16774",
-   "number": 16774,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16774",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14477829525",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "moby/moby",
+   "created_at": "2026-09-05T08:49:53Z",
+   "summary": "commented on #49453: Buildx with new/unstarted docker-container driver and containerd can't use just pulled image",
+   "number": 49453,
+   "merged": false,
+   "url": "https://github.com/moby/moby/issues/49453#issuecomment-5550694633",
+   "excerpt": "Hi, I (and some other contributors at Spark) seem to be facing a similar recurring error - https://github.com/subhramit/spark/actions/runs/\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14477710166",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T08:44:42Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5550669926",
+   "excerpt": "Okay apparently this happened in [other PRs](https://github.com/szehon-ho/spark/actions/runs/33812521771/job/100840717313) as well and is i\u2026",
+   "review_id": null
+  },
   {
    "id": "14477504325",
    "type": "IssueCommentEvent",
@@ -10234,10 +10283,10 @@
   },
   {
    "login": "subhramit",
-   "points": 58,
+   "points": 60,
    "merged": 1,
    "reviews": 11,
-   "other": 33
+   "other": 35
   },
   {
    "login": "koppor",
