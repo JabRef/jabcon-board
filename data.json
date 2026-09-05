@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T01:05:40+00:00",
+ "generated_at": "2026-09-05T01:27:17+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -584,6 +584,24 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/unicode-org/icu/pull/2127",
+   "repo": "unicode-org/icu",
+   "number": 2127,
+   "title": "ICU-22080 Add plain ASCII as an explicitly detected type",
+   "url": "https://github.com/unicode-org/icu/pull/2127",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "markusicu"
+   ],
+   "labels": [],
+   "updated_at": "2026-09-05T01:22:56Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16854",
    "repo": "JabRef/jabref",
    "number": 16854,
@@ -596,7 +614,7 @@
    "labels": [
     "component: jabsrv"
    ],
-   "updated_at": "2026-09-05T01:05:28Z",
+   "updated_at": "2026-09-05T01:19:01Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -711,24 +729,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-04T23:18:23Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/unicode-org/icu/pull/2127",
-   "repo": "unicode-org/icu",
-   "number": 2127,
-   "title": "ICU-22080 Add plain ASCII as an explicitly detected type",
-   "url": "https://github.com/unicode-org/icu/pull/2127",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [
-    "markusicu"
-   ],
-   "labels": [],
-   "updated_at": "2026-09-04T22:55:59Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2481,6 +2481,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14467323869",
+   "type": "IssuesEvent",
+   "action": "unlabeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:20:15Z",
+   "summary": "unlabeled issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467319237",
+   "type": "IssuesEvent",
+   "action": "unassigned",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:20:03Z",
+   "summary": "unassigned issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14466947356",
    "type": "PullRequestEvent",
@@ -5409,39 +5437,37 @@
    "excerpt": "Yep, thanks, now it works, but I don't know should we leave WORDS or CHARS by default. @wanling0000 what do you think?",
    "review_id": 5117019050,
    "self": false
-  },
-  {
-   "id": "14453799264",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:21:07Z",
-   "summary": "commented on PR #16742",
-   "number": 16742,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742#discussion_r3937251271",
-   "excerpt": "I think the WORDS was not a default method.",
-   "review_id": 5117019050,
-   "self": false
-  },
-  {
-   "id": "14453766257",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:20:24Z",
-   "summary": "commented on PR #16742",
-   "number": 16742,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742#discussion_r3937246594",
-   "excerpt": "In future, if possible please leave only changes related to the PR. This simplifies the review",
-   "review_id": 5117019050,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14467323869",
+   "type": "IssuesEvent",
+   "action": "unlabeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:20:15Z",
+   "summary": "unlabeled issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467319237",
+   "type": "IssuesEvent",
+   "action": "unassigned",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:20:03Z",
+   "summary": "unassigned issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14466947356",
    "type": "PullRequestEvent",
@@ -8661,6 +8687,20 @@
    "self": true
   },
   {
+   "id": "20073376581",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T12:40:03Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14430706823",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -8941,17 +8981,17 @@
   },
   {
    "login": "subhramit",
-   "points": 38,
+   "points": 40,
    "merged": 0,
    "reviews": 10,
-   "other": 18
+   "other": 20
   },
   {
    "login": "koppor",
-   "points": 22,
+   "points": 23,
    "merged": 5,
    "reviews": 1,
-   "other": 5
+   "other": 6
   },
   {
    "login": "calixtus",
