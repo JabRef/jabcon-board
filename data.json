@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T08:50:52+00:00",
+ "generated_at": "2026-09-05T08:57:59+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -666,23 +666,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/apache/spark/pull/58225",
-   "repo": "apache/spark",
-   "number": 58225,
-   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "url": "https://github.com/apache/spark/pull/58225",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T08:44:43Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16853",
    "repo": "JabRef/jabref",
    "number": 16853,
@@ -700,11 +683,45 @@
     "component: latex-file-support",
     "component: bst"
    ],
-   "updated_at": "2026-09-05T08:31:02Z",
+   "updated_at": "2026-09-05T08:57:31Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
    "focus": true
+  },
+  {
+   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "repo": "itsallcode/openfasttrace",
+   "number": 583,
+   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T08:56:31Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T08:44:43Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16857",
@@ -773,23 +790,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-05T07:56:00Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "repo": "itsallcode/openfasttrace",
-   "number": 583,
-   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
-   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T07:51:25Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1243,21 +1243,44 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16519",
+   "id": "https://github.com/JabRef/jabref/pull/16651",
    "repo": "JabRef/jabref",
-   "number": 16519,
-   "title": "Show indicator for fetchers with a saved API key in Web Search preferences",
-   "url": "https://github.com/JabRef/jabref/pull/16519",
+   "number": 16651,
+   "title": "Git integration SLR",
+   "url": "https://github.com/JabRef/jabref/pull/16651",
    "type": "pr",
-   "draft": true,
-   "author": "kerollosy",
+   "draft": false,
+   "author": "LoayTarek5",
    "assignees": [],
    "labels": [
-    "good first issue",
-    "status: changes-required",
-    "first contrib"
+    "component: ui",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "good second issue",
+    "status: awaiting-second-review",
+    "component: git"
    ],
-   "updated_at": "2026-09-05T08:50:32Z",
+   "updated_at": "2026-09-05T08:57:48Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2278",
+   "repo": "openjdk/jfx",
+   "number": 2278,
+   "title": "8391279: Fix pixel-snapping in Region",
+   "url": "https://github.com/openjdk/jfx/pull/2278",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-05T08:56:54Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1279,9 +1302,31 @@
     "good first issue",
     "component: external-changes",
     "component: git",
+    "first contrib",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T08:55:13Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16519",
+   "repo": "JabRef/jabref",
+   "number": 16519,
+   "title": "Show indicator for fetchers with a saved API key in Web Search preferences",
+   "url": "https://github.com/JabRef/jabref/pull/16519",
+   "type": "pr",
+   "draft": true,
+   "author": "kerollosy",
+   "assignees": [],
+   "labels": [
+    "good first issue",
+    "status: changes-required",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T08:48:55Z",
+   "updated_at": "2026-09-05T08:50:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1458,51 +1503,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-04T22:31:41Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2278",
-   "repo": "openjdk/jfx",
-   "number": 2278,
-   "title": "8391279: Fix pixel-snapping in Region",
-   "url": "https://github.com/openjdk/jfx/pull/2278",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr"
-   ],
-   "updated_at": "2026-09-04T22:27:26Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16651",
-   "repo": "JabRef/jabref",
-   "number": 16651,
-   "title": "Git integration SLR",
-   "url": "https://github.com/JabRef/jabref/pull/16651",
-   "type": "pr",
-   "draft": false,
-   "author": "LoayTarek5",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: import-load",
-    "component: export-or-save",
-    "component: preferences",
-    "component: slr",
-    "good second issue",
-    "status: awaiting-second-review",
-    "component: git"
-   ],
-   "updated_at": "2026-09-04T21:43:07Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -2927,6 +2927,51 @@
  ],
  "events": [
   {
+   "id": "14478004612",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T08:57:33Z",
+   "summary": "reviewed PR #16853 (commented)",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120329800",
+   "excerpt": "nitpick",
+   "review_id": 5120329800,
+   "self": false
+  },
+  {
+   "id": "14478003894",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T08:57:31Z",
+   "summary": "reviewed PR #16853 (commented)",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120329800",
+   "excerpt": "nitpick",
+   "review_id": 5120329800,
+   "self": false
+  },
+  {
+   "id": "14477938009",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T08:54:38Z",
+   "summary": "reviewed PR #16742 (approved)",
+   "number": 16742,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120601402",
+   "excerpt": "",
+   "review_id": 5120601402,
+   "self": false
+  },
+  {
    "id": "14477829525",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -4252,6 +4297,20 @@
    "self": false
   },
   {
+   "id": "20115153432",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:27:39Z",
+   "summary": "deleted branch do-not-format-kts",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14464129277",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -4368,6 +4427,20 @@
    "excerpt": "Duplicate came from the automated upstream merge keeping both sides; removed, one entry remains.",
    "review_id": 5118618124,
    "self": true
+  },
+  {
+   "id": "20115124925",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:26:51Z",
+   "summary": "pushed 0 commit(s) to show-diff-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14464070818",
@@ -5780,81 +5853,54 @@
    "url": "https://github.com/JabRef/jabcon-board",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "20104009900",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/jabcon-board",
-   "created_at": "2026-09-04T21:05:15Z",
-   "summary": "pushed 0 commit(s) to main",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14458481675",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:59:32Z",
-   "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
-   "number": 16834,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16834#issuecomment-5546383847",
-   "excerpt": "Your changes look ok so far, but please have the minimum courtesy to provide a PR description. We are no machines but real human beings. Tr\u2026",
-   "review_id": null
-  },
-  {
-   "id": "14458473863",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:59:22Z",
-   "summary": "commented on #16831: Show full text download search as background task",
-   "number": 16831,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16831#issuecomment-5546382248",
-   "excerpt": "I think the code is okay, but I don't have full forces right now",
-   "review_id": null
-  },
-  {
-   "id": "14458433300",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:58:29Z",
-   "summary": "reviewed PR #16760 (commented)",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117779672",
-   "excerpt": "we should have consistent casing. gui, cli, logic is lower-case. Model and Preferences is upper case.",
-   "review_id": 5117779672,
-   "self": false
-  },
-  {
-   "id": "14458431984",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:58:27Z",
-   "summary": "commented on PR #16760",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937843211",
-   "excerpt": "we should have consistent casing. gui, cli, logic is lower-case. Model and Preferences is upper case.",
-   "review_id": 5117779672,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14478004612",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T08:57:33Z",
+   "summary": "reviewed PR #16853 (commented)",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120329800",
+   "excerpt": "nitpick",
+   "review_id": 5120329800,
+   "self": false
+  },
+  {
+   "id": "14478003894",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T08:57:31Z",
+   "summary": "reviewed PR #16853 (commented)",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120329800",
+   "excerpt": "nitpick",
+   "review_id": 5120329800,
+   "self": false
+  },
+  {
+   "id": "14477938009",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T08:54:38Z",
+   "summary": "reviewed PR #16742 (approved)",
+   "number": 16742,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120601402",
+   "excerpt": "",
+   "review_id": 5120601402,
+   "self": false
+  },
   {
    "id": "14477829525",
    "type": "IssueCommentEvent",
@@ -7181,6 +7227,20 @@
    "self": false
   },
   {
+   "id": "20115153432",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:27:39Z",
+   "summary": "deleted branch do-not-format-kts",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14464129277",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -7297,6 +7357,20 @@
    "excerpt": "Duplicate came from the automated upstream merge keeping both sides; removed, one entry remains.",
    "review_id": 5118618124,
    "self": true
+  },
+  {
+   "id": "20115124925",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:26:51Z",
+   "summary": "pushed 0 commit(s) to show-diff-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14464070818",
@@ -10290,16 +10364,16 @@
   },
   {
    "login": "koppor",
-   "points": 36,
+   "points": 37,
    "merged": 5,
    "reviews": 1,
-   "other": 19
+   "other": 20
   },
   {
    "login": "Siedlerchr",
-   "points": 21,
+   "points": 23,
    "merged": 0,
-   "reviews": 7,
+   "reviews": 8,
    "other": 7
   },
   {
@@ -10311,9 +10385,9 @@
   },
   {
    "login": "pluto-han",
-   "points": 8,
+   "points": 12,
    "merged": 0,
-   "reviews": 0,
+   "reviews": 2,
    "other": 8
   },
   {
