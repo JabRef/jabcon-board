@@ -26,6 +26,7 @@ END = datetime.fromisoformat(CONFIG["jabcon_end"])
 START_DATE = START.astimezone(timezone.utc).strftime("%Y-%m-%d")
 EXCLUDE = {r.lower() for r in CONFIG.get("exclude_repos", [])}
 BOT_SUFFIX = "[bot]"
+PR_AUTHORS = {}  # "owner/repo#n" -> login, loaded from the previous data.json
 
 
 def get(path, params=None, token=None):
@@ -153,6 +154,18 @@ def collect_events(previous):
                 break
     events = list(seen.values())
     events.sort(key=lambda e: e["created_at"], reverse=True)
+    # reviewing one's own PR (e.g. replying to review threads) scores nothing; the slimmed PR object in the event
+    # has no author, so resolve it once per PR and cache in data.json
+    for e in events:
+        if e["type"] in ("PullRequestReviewEvent", "PullRequestReviewCommentEvent") and e.get("number") and "self" not in e:
+            key = f"{e['repo']}#{e['number']}"
+            if key not in PR_AUTHORS:
+                try:
+                    pr, _ = get(f"/repos/{e['repo']}/pulls/{e['number']}")
+                    PR_AUTHORS[key] = pr["user"]["login"]
+                except urllib.error.HTTPError:
+                    PR_AUTHORS[key] = ""
+            e["self"] = PR_AUTHORS[key] == e["actor"]
     # a review made of inline comments only has an empty body: borrow the first inline comment's excerpt
     first_comment = {}
     for e in reversed(events):
@@ -272,6 +285,8 @@ def leaderboard(cards, events, private):
         s = score.get(e["actor"])
         if s is None:
             continue
+        if e.get("self"):
+            continue
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
         elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "IssuesEvent", "PushEvent"):
@@ -333,6 +348,7 @@ def main():
             cached = {c["id"]: c["stats"] for c in previous["cards"] if c.get("stats")}
             previous_milestones = previous.get("milestones", [])
             previous_events = previous.get("all_events", [])
+            PR_AUTHORS.update(previous.get("pr_authors", {}))
         except (ValueError, KeyError):
             pass
     cards = collect_cards()
@@ -358,6 +374,7 @@ def main():
         "cards": cards,
         "events": events[:200],
         "all_events": events,
+        "pr_authors": PR_AUTHORS,
         "stats": totals,
         "leaderboard": sorted(leaderboard(cards, events, private), key=lambda l: -l["points"]),
     }
