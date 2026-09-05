@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T13:43:39+00:00",
+ "generated_at": "2026-09-05T13:50:38+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1819,7 +1819,7 @@
     "rfr",
     "csr"
    ],
-   "updated_at": "2026-09-05T13:43:32Z",
+   "updated_at": "2026-09-05T13:49:43Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
