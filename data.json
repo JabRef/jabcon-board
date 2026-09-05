@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T18:00:23+00:00",
+ "generated_at": "2026-09-05T18:21:23+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1880,6 +1880,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "status: changes-required",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T18:18:35Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16586",
    "repo": "JabRef/jabref",
    "number": 16586,
@@ -1896,7 +1919,7 @@
     "good second issue",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-05T17:44:48Z",
+   "updated_at": "2026-09-05T18:03:28Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1918,29 +1941,6 @@
     "csr"
    ],
    "updated_at": "2026-09-05T14:36:38Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "status: changes-required",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T13:22:29Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -11450,6 +11450,20 @@
    "review_id": null
   },
   {
+   "id": "20163260502",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:38:16Z",
+   "summary": "pushed 0 commit(s) to fulltext-context-menu",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14464447277",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -11683,6 +11697,20 @@
    "excerpt": "Done: the lambdas are now loadSavedFile / parseSavedFile, showDiffDialog and showDiffError, so showDiffToSavedFile reads as a three-line ta\u2026",
    "review_id": 5118610018,
    "self": true
+  },
+  {
+   "id": "20162924380",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:25:48Z",
+   "summary": "pushed 0 commit(s) to show-diff-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14464008323",
@@ -12157,6 +12185,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16849#issuecomment-5547404499",
    "excerpt": "please check for rate limti https://archive.softwareheritage.org/api/rate-limiting",
+   "review_id": null
+  },
+  {
+   "id": "20162649153",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref-koppor",
+   "created_at": "2026-09-04T22:59:47Z",
+   "summary": "pushed 0 commit(s) to assets-show-diff-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref-koppor",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -14937,10 +14979,10 @@
   },
   {
    "login": "koppor",
-   "points": 70,
+   "points": 73,
    "merged": 8,
    "reviews": 2,
-   "other": 42
+   "other": 45
   },
   {
    "login": "Siedlerchr",
