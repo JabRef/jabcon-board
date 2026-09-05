@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T10:23:27+00:00",
+ "generated_at": "2026-09-05T10:26:42+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -826,26 +826,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
-   "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences"
-   ],
-   "updated_at": "2026-09-05T10:23:14Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16858",
    "repo": "JabRef/jabref",
    "number": 16858,
@@ -860,7 +840,28 @@
     "component: entry-editor",
     "dev: binaries"
    ],
-   "updated_at": "2026-09-05T10:21:47Z",
+   "updated_at": "2026-09-05T10:26:19Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue"
+   ],
+   "updated_at": "2026-09-05T10:25:55Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -879,7 +880,7 @@
    "labels": [
     "status: ready-for-review"
    ],
-   "updated_at": "2026-09-05T10:21:46Z",
+   "updated_at": "2026-09-05T10:24:00Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1446,6 +1447,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T10:26:35Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16620",
    "repo": "JabRef/jabref",
    "number": 16620,
@@ -1462,7 +1486,7 @@
     "good first issue",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-05T10:20:57Z",
+   "updated_at": "2026-09-05T10:26:16Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1575,28 +1599,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-05T08:50:32Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-05T08:16:27Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1795,6 +1797,32 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16352",
+   "repo": "JabRef/jabref",
+   "number": 16352,
+   "title": "(Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "url": "https://github.com/JabRef/jabref/issues/16352",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit",
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "project: jabcon",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T10:25:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/11368",
    "repo": "JabRef/jabref",
    "number": 11368,
@@ -1817,31 +1845,6 @@
     "size: medium"
    ],
    "updated_at": "2026-09-05T03:11:48Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16352",
-   "repo": "JabRef/jabref",
-   "number": 16352,
-   "title": "(Idea) Move Open Office Preferences to a dedicated Preference tab",
-   "url": "https://github.com/JabRef/jabref/issues/16352",
-   "type": "issue",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [
-    "subhramit",
-    "pluto-han"
-   ],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-09-04T21:46:11Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog",
@@ -3131,6 +3134,79 @@
   }
  ],
  "events": [
+  {
+   "id": "14480074628",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:26:19Z",
+   "summary": "commented on #16858: Fix wrong source tab label at startup",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16858#issuecomment-5551162932",
+   "excerpt": "@subhramit  Feel free to fix it, I'm out of tokens right now",
+   "review_id": null
+  },
+  {
+   "id": "14480069794",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:26:07Z",
+   "summary": "reviewed PR #16620 (approved)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120864247",
+   "excerpt": "this looks good code-wise. The event handler is a good idea.",
+   "review_id": 5120864247,
+   "self": false
+  },
+  {
+   "id": "14480021438",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:24:00Z",
+   "summary": "commented on #16859: Configure navigation tree hierarchy for AI requirements in devdocs",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16859#issuecomment-5551152323",
+   "excerpt": "BTW grandparent is important, because htere is also a code howtos section AI",
+   "review_id": null
+  },
+  {
+   "id": "14480020469",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:24:00Z",
+   "summary": "reviewed PR #16860 (commented)",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120859028",
+   "excerpt": "good catch",
+   "review_id": 5120859028,
+   "self": true
+  },
+  {
+   "id": "14480020129",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:23:58Z",
+   "summary": "commented on PR #16860",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16860#discussion_r3940284056",
+   "excerpt": "good catch",
+   "review_id": 5120859028,
+   "self": true
+  },
   {
    "id": "14480005217",
    "type": "PullRequestReviewEvent",
@@ -5980,83 +6056,82 @@
    "excerpt": "Same cause as the changelog duplicate (merge kept both sides); the trailing copies are removed and the localization consistency test passes\u2026",
    "review_id": 5118618283,
    "self": true
-  },
-  {
-   "id": "14464104263",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:52Z",
-   "summary": "reviewed PR #16832 (commented)",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118618124",
-   "excerpt": "Duplicate came from the automated upstream merge keeping both sides; removed, one entry remains.",
-   "review_id": 5118618124,
-   "self": true
-  },
-  {
-   "id": "14464104265",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:51Z",
-   "summary": "commented on PR #16832",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938542082",
-   "excerpt": "Duplicate came from the automated upstream merge keeping both sides; removed, one entry remains.",
-   "review_id": 5118618124,
-   "self": true
-  },
-  {
-   "id": "20115124925",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:26:51Z",
-   "summary": "pushed 0 commit(s) to show-diff-button",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14464070818",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:25:49Z",
-   "summary": "reviewed PR #16832 (commented)",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118610018",
-   "excerpt": "Done: the lambdas are now loadSavedFile / parseSavedFile, showDiffDialog and showDiffError, so showDiffToSavedFile reads as a three-line ta\u2026",
-   "review_id": 5118610018,
-   "self": true
-  },
-  {
-   "id": "14464070828",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:25:48Z",
-   "summary": "commented on PR #16832",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#discussion_r3938537482",
-   "excerpt": "Done: the lambdas are now loadSavedFile / parseSavedFile, showDiffDialog and showDiffError, so showDiffToSavedFile reads as a three-line ta\u2026",
-   "review_id": 5118610018,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14480074628",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:26:19Z",
+   "summary": "commented on #16858: Fix wrong source tab label at startup",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16858#issuecomment-5551162932",
+   "excerpt": "@subhramit  Feel free to fix it, I'm out of tokens right now",
+   "review_id": null
+  },
+  {
+   "id": "14480069794",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:26:07Z",
+   "summary": "reviewed PR #16620 (approved)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120864247",
+   "excerpt": "this looks good code-wise. The event handler is a good idea.",
+   "review_id": 5120864247,
+   "self": false
+  },
+  {
+   "id": "14480021438",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:24:00Z",
+   "summary": "commented on #16859: Configure navigation tree hierarchy for AI requirements in devdocs",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16859#issuecomment-5551152323",
+   "excerpt": "BTW grandparent is important, because htere is also a code howtos section AI",
+   "review_id": null
+  },
+  {
+   "id": "14480020469",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:24:00Z",
+   "summary": "reviewed PR #16860 (commented)",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120859028",
+   "excerpt": "good catch",
+   "review_id": 5120859028,
+   "self": true
+  },
+  {
+   "id": "14480020129",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:23:58Z",
+   "summary": "commented on PR #16860",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16860#discussion_r3940284056",
+   "excerpt": "good catch",
+   "review_id": 5120859028,
+   "self": true
+  },
   {
    "id": "14480005217",
    "type": "PullRequestReviewEvent",
@@ -11914,7 +11989,8 @@
   "JabRef/jabref#16853": "subhramit",
   "JabRef/jabref#16826": "koppor",
   "JabRef/jabref#16859": "InAnYan",
-  "JabRef/jabref#16860": "pluto-han"
+  "JabRef/jabref#16860": "pluto-han",
+  "JabRef/jabref#16620": "Devansh-18155"
  },
  "stats": {
   "additions": 1940,
@@ -11947,16 +12023,16 @@
   },
   {
    "login": "InAnYan",
-   "points": 80,
+   "points": 81,
    "merged": 0,
    "reviews": 19,
-   "other": 42
+   "other": 43
   },
   {
    "login": "Maran23",
-   "points": 69,
+   "points": 71,
    "merged": 0,
-   "reviews": 21,
+   "reviews": 22,
    "other": 27
   },
   {
@@ -11968,10 +12044,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 42,
+   "points": 43,
    "merged": 0,
    "reviews": 15,
-   "other": 12
+   "other": 13
   },
   {
    "login": "calixtus",
