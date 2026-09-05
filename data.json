@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T05:50:18+00:00",
+ "generated_at": "2026-09-05T05:57:31+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -614,6 +614,29 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16853",
+   "repo": "JabRef/jabref",
+   "number": 16853,
+   "title": "Fix BST entry preview formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16853",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: libre-office",
+    "component: entry-preview",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-05T05:51:54Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
    "repo": "JabRef/JabRef-Browser-Extension-experimental",
    "number": 88,
@@ -797,29 +820,6 @@
     "component: bst"
    ],
    "updated_at": "2026-09-05T03:14:10Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16853",
-   "repo": "JabRef/jabref",
-   "number": 16853,
-   "title": "Fix BST entry preview formatting",
-   "url": "https://github.com/JabRef/jabref/pull/16853",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: libre-office",
-    "component: entry-preview",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
-   ],
-   "updated_at": "2026-09-05T03:11:57Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2608,6 +2608,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14473615551",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T05:51:54Z",
+   "summary": "commented on #16853: Fix BST entry preview formatting",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#issuecomment-5549793344",
+   "excerpt": "Missing tests for edge cases and malformed strings",
+   "review_id": null
+  },
   {
    "id": "14471457547",
    "type": "IssueCommentEvent",
@@ -5537,24 +5551,23 @@
    "excerpt": "Just added some personal nitpicks",
    "review_id": 5117293983,
    "self": false
-  },
-  {
-   "id": "14455654856",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:59:24Z",
-   "summary": "commented on PR #16760",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937504187",
-   "excerpt": "global[\"Global Classes\"]",
-   "review_id": 5117293983,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14473615551",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T05:51:54Z",
+   "summary": "commented on #16853: Fix BST entry preview formatting",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#issuecomment-5549793344",
+   "excerpt": "Missing tests for edge cases and malformed strings",
+   "review_id": null
+  },
   {
    "id": "14471457547",
    "type": "IssueCommentEvent",
@@ -9381,10 +9394,10 @@
   },
   {
    "login": "calixtus",
-   "points": 18,
+   "points": 19,
    "merged": 0,
    "reviews": 7,
-   "other": 4
+   "other": 5
   },
   {
    "login": "Siedlerchr",
