@@ -223,6 +223,11 @@ function loadVideo() {
 }
 
 document.querySelectorAll('.cards').forEach((b) => b.addEventListener('scroll', () => updateMore(b)));
+// clicking "n more" pages the column in that direction (for desktop use; the wall never scrolls)
+document.querySelectorAll('.more').forEach((m) => m.addEventListener('click', () => {
+  const box = m.parentElement.querySelector('.cards');
+  box.scrollBy({ top: (m.classList.contains('above') ? -1 : 1) * box.clientHeight * 0.9, behavior: 'smooth' });
+}));
 const params = new URLSearchParams(location.search);
 if (params.get('still')) document.documentElement.classList.add('still');
 const scale = parseFloat(params.get('scale'));
