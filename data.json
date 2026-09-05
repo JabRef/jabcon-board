@@ -47,8 +47,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 13,
-   "closed": 115,
+   "open": 12,
+   "closed": 116,
    "baseline": 113
   },
   {
@@ -72,8 +72,8 @@
  ],
  "focus": {
   "label": "project: jabcon",
-  "open": 11,
-  "closed": 1,
+  "open": 10,
+  "closed": 2,
   "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
  },
  "private_activity": {
@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:38:20+00:00",
+ "generated_at": "2026-09-05T11:45:31+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -137,6 +137,33 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16352",
+   "repo": "JabRef/jabref",
+   "number": 16352,
+   "title": "(Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "url": "https://github.com/JabRef/jabref/issues/16352",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit",
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "project: jabcon",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T11:41:17Z",
+   "closed_at": "2026-09-05T11:40:06Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": true
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16851",
    "repo": "JabRef/jabref",
@@ -181,6 +208,40 @@
       "immutable collection literals"
      ]
     ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T11:40:16Z",
+   "closed_at": "2026-09-05T11:40:05Z",
+   "state_reason": null,
+   "merged_at": "2026-09-05T11:40:05Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 56,
+    "deletions": 29,
+    "changed_files": 5,
+    "components": {
+     "(root)": 1,
+     "jabgui": 83,
+     "jablib": 1
+    },
+    "refactorings": []
    }
   },
   {
@@ -1038,28 +1099,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16838",
-   "repo": "JabRef/jabref",
-   "number": 16838,
-   "title": "Add jabkit git merge-driver for semantic .bib merges",
-   "url": "https://github.com/JabRef/jabref/pull/16838",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: jabkit",
-    "status: changes-required",
-    "component: git"
-   ],
-   "updated_at": "2026-09-05T11:38:07Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -1084,9 +1123,33 @@
     "status: changes-required",
     "component: automatic-field-editor",
     "component: theming",
-    "component: diff-merge"
+    "component: jabsrv",
+    "component: diff-merge",
+    "component: lsp"
    ],
-   "updated_at": "2026-09-05T11:35:46Z",
+   "updated_at": "2026-09-05T11:41:33Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16838",
+   "repo": "JabRef/jabref",
+   "number": 16838,
+   "title": "Add jabkit git merge-driver for semantic .bib merges",
+   "url": "https://github.com/JabRef/jabref/pull/16838",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: jabkit",
+    "status: changes-required",
+    "component: git"
+   ],
+   "updated_at": "2026-09-05T11:38:07Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1108,29 +1171,6 @@
     "component: import-load"
    ],
    "updated_at": "2026-09-05T11:31:08Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
-   "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T11:23:13Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1692,7 +1732,7 @@
    "labels": [
     "rfr"
    ],
-   "updated_at": "2026-09-05T11:37:50Z",
+   "updated_at": "2026-09-05T11:42:13Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2022,33 +2062,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16352",
-   "repo": "JabRef/jabref",
-   "number": 16352,
-   "title": "(Idea) Move Open Office Preferences to a dedicated Preference tab",
-   "url": "https://github.com/JabRef/jabref/issues/16352",
-   "type": "issue",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [
-    "subhramit",
-    "pluto-han"
-   ],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue",
-    "project: jabcon",
-    "\ud83d\udccc Pinned"
-   ],
-   "updated_at": "2026-09-05T10:58:35Z",
-   "closed_at": null,
-   "state_reason": "reopened",
-   "merged_at": null,
-   "column": "backlog",
-   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/11368",
@@ -3422,6 +3435,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14481801196",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:40:07Z",
+   "summary": "closed issue #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "number": 16352,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16352",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14481800917",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:40:05Z",
+   "summary": "merged PR #16860",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16860",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14481567386",
    "type": "IssueCommentEvent",
@@ -6329,38 +6370,37 @@
    "url": "https://github.com/JabRef/jabref/pull/16856#issuecomment-5550263944",
    "excerpt": "Are you really sure? I liked it as a ready for review indicator or is that now repalced with ready for review",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14474916689",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "koppor",
+   "id": "14481801196",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T06:46:25Z",
-   "summary": "opened PR #16856",
-   "number": 16856,
+   "created_at": "2026-09-05T11:40:07Z",
+   "summary": "closed issue #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "number": 16352,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16856",
+   "url": "https://github.com/JabRef/jabref/issues/16352",
    "excerpt": "",
    "review_id": null
   },
   {
-   "id": "14474145511",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
+   "id": "14481800917",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "pluto-han",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T06:14:55Z",
-   "summary": "reviewed PR #16852 (approved)",
-   "number": 16852,
+   "created_at": "2026-09-05T11:40:05Z",
+   "summary": "merged PR #16860",
+   "number": 16860,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16852#pullrequestreview-5120057880",
+   "url": "https://github.com/JabRef/jabref/issues/16860",
    "excerpt": "",
-   "review_id": 5120057880,
-   "self": false
-  }
- ],
- "all_events": [
+   "review_id": null
+  },
   {
    "id": "14481567386",
    "type": "IssueCommentEvent",
@@ -13616,13 +13656,13 @@
   "JabRef/jabref#16838": "koppor"
  },
  "stats": {
-  "additions": 2201,
-  "deletions": 309,
-  "changed_files": 162,
+  "additions": 2257,
+  "deletions": 338,
+  "changed_files": 167,
   "components": {
-   "jablib": 938,
-   "(root)": 37,
-   "jabgui": 1056,
+   "jablib": 939,
+   "(root)": 38,
+   "jabgui": 1139,
    ".github": 25,
    "docs": 117,
    "openfasttrace": 31,
@@ -13674,10 +13714,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 34,
-   "merged": 0,
+   "points": 38,
+   "merged": 1,
    "reviews": 8,
-   "other": 18
+   "other": 19
   },
   {
    "login": "calixtus",
