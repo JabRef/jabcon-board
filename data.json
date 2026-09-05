@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T09:17:56+00:00",
+ "generated_at": "2026-09-05T09:27:38+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -139,6 +139,42 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "repo": "itsallcode/openfasttrace",
+   "number": 583,
+   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "bug",
+    "ai-assisted"
+   ],
+   "updated_at": "2026-09-05T09:19:44Z",
+   "closed_at": "2026-09-05T09:19:16Z",
+   "merged_at": "2026-09-05T09:19:15Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 31,
+    "deletions": 0,
+    "changed_files": 3,
+    "components": {
+     "openfasttrace": 31
+    },
+    "refactorings": [
+     [
+      3,
+      "text block"
+     ]
+    ]
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16742",
    "repo": "JabRef/jabref",
@@ -629,6 +665,27 @@
    }
   },
   {
+   "id": "https://github.com/itsallcode/openfasttrace/issues/582",
+   "repo": "itsallcode/openfasttrace",
+   "number": 582,
+   "title": "Markdown importer silently drops all requirements after a fenced code block that directly follows a heading",
+   "url": "https://github.com/itsallcode/openfasttrace/issues/582",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "bug"
+   ],
+   "updated_at": "2026-09-05T09:19:17Z",
+   "closed_at": "2026-09-05T09:19:17Z",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16728",
    "repo": "JabRef/jabref",
    "number": 16728,
@@ -734,37 +791,14 @@
    "author": "Siedlerchr",
    "assignees": [],
    "labels": [
+    "status: ready-for-review",
     "component: entry-editor"
    ],
-   "updated_at": "2026-09-05T09:17:45Z",
+   "updated_at": "2026-09-05T09:27:29Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16853",
-   "repo": "JabRef/jabref",
-   "number": 16853,
-   "title": "Fix BST entry preview formatting",
-   "url": "https://github.com/JabRef/jabref/pull/16853",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: libre-office",
-    "component: entry-preview",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
-   ],
-   "updated_at": "2026-09-05T09:16:54Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16850",
@@ -793,28 +827,35 @@
     "component: theming",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-05T09:16:43Z",
+   "updated_at": "2026-09-05T09:19:20Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
   },
   {
-   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "repo": "itsallcode/openfasttrace",
-   "number": 583,
-   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
-   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "id": "https://github.com/JabRef/jabref/pull/16853",
+   "repo": "JabRef/jabref",
+   "number": 16853,
+   "title": "Fix BST entry preview formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16853",
    "type": "pr",
    "draft": false,
-   "author": "koppor",
+   "author": "subhramit",
    "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T08:56:31Z",
+   "labels": [
+    "status: ready-for-review",
+    "component: libre-office",
+    "component: entry-preview",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-05T09:19:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
-   "focus": false
+   "focus": true
   },
   {
    "id": "https://github.com/apache/spark/pull/58225",
@@ -1320,6 +1361,47 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "status: changes-required",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T09:27:15Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2278",
+   "repo": "openjdk/jfx",
+   "number": 2278,
+   "title": "8391279: Fix pixel-snapping in Region",
+   "url": "https://github.com/openjdk/jfx/pull/2278",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-05T09:24:52Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16651",
    "repo": "JabRef/jabref",
    "number": 16651,
@@ -1340,48 +1422,7 @@
     "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-05T09:15:58Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "first contrib",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-05T09:12:06Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2278",
-   "repo": "openjdk/jfx",
-   "number": 2278,
-   "title": "8391279: Fix pixel-snapping in Region",
-   "url": "https://github.com/openjdk/jfx/pull/2278",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr"
-   ],
-   "updated_at": "2026-09-05T08:56:54Z",
+   "updated_at": "2026-09-05T09:18:27Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1802,27 +1843,6 @@
     "\ud83d\udccc Pinned"
    ],
    "updated_at": "2026-09-05T09:16:18Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/itsallcode/openfasttrace/issues/582",
-   "repo": "itsallcode/openfasttrace",
-   "number": 582,
-   "title": "Markdown importer silently drops all requirements after a fenced code block that directly follows a heading",
-   "url": "https://github.com/itsallcode/openfasttrace/issues/582",
-   "type": "issue",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [
-    "koppor"
-   ],
-   "labels": [
-    "bug"
-   ],
-   "updated_at": "2026-09-05T07:51:55Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog",
@@ -2981,6 +3001,124 @@
  ],
  "events": [
   {
+   "id": "14478631615",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T09:24:54Z",
+   "summary": "reviewed PR #2278 (commented)",
+   "number": 2278,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2278#pullrequestreview-5120669364",
+   "excerpt": "Does it make sense to eventually consolidate, as you also suggested?",
+   "review_id": 5120669364,
+   "self": false
+  },
+  {
+   "id": "14478630905",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T09:24:52Z",
+   "summary": "commented on PR #2278",
+   "number": 2278,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2278#discussion_r3940133531",
+   "excerpt": "Does it make sense to eventually consolidate, as you also suggested?",
+   "review_id": 5120669364,
+   "self": false
+  },
+  {
+   "id": "14478574682",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:22:22Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120664875",
+   "excerpt": "move swhid ot the end, it's not really one that should be checked first",
+   "review_id": 5120664875,
+   "self": false
+  },
+  {
+   "id": "14478574157",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:22:20Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940128530",
+   "excerpt": "move swhid ot the end, it's not really one that should be checked first",
+   "review_id": 5120664875,
+   "self": false
+  },
+  {
+   "id": "14478504997",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "itsallcode/openfasttrace",
+   "created_at": "2026-09-05T09:19:15Z",
+   "summary": "merged PR #583",
+   "number": 583,
+   "merged": false,
+   "url": "https://github.com/itsallcode/openfasttrace/issues/583",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14478502642",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:19:10Z",
+   "summary": "reviewed PR #16853 (commented)",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120659007",
+   "excerpt": "It looks much better, thanks!",
+   "review_id": 5120659007,
+   "self": false
+  },
+  {
+   "id": "14478501990",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:19:08Z",
+   "summary": "commented on PR #16853",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3940122277",
+   "excerpt": "It looks much better, thanks!",
+   "review_id": 5120659007,
+   "self": false
+  },
+  {
+   "id": "14478486963",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:18:27Z",
+   "summary": "commented on #16651: Git integration SLR",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5550836230",
+   "excerpt": "Hi Loay, any changes pending here you wish to do? or rfr?",
+   "review_id": null
+  },
+  {
    "id": "14478484552",
    "type": "IssuesEvent",
    "action": "labeled",
@@ -3006,6 +3144,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16844#issuecomment-5550833687",
    "excerpt": "@esthermichelle  sorry for taking over this issue, but we want to get a beta release out this weekend so I decided to fix it",
+   "review_id": null
+  },
+  {
+   "id": "14478491309",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:17:22Z",
+   "summary": "labeled PR #16858",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16858",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -4080,6 +4232,20 @@
    "merged": false,
    "url": "https://github.com/itsallcode/openfasttrace-gradle/issues/63#issuecomment-5548128182",
    "excerpt": "+1 I have been facing this as well.",
+   "review_id": null
+  },
+  {
+   "id": "20117578937",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-05T00:36:14Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -5757,157 +5923,127 @@
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14460289892",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:41:34Z",
-   "summary": "merged PR #16835",
-   "number": 16835,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16835",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14460258626",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:40:48Z",
-   "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
-   "number": 16352,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5546763822",
-   "excerpt": "Which settings should i move to preference? add space after/before, infer mode?",
-   "review_id": null
-  },
-  {
-   "id": "14460080793",
+   "id": "14478631615",
    "type": "PullRequestReviewEvent",
    "action": "created",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:36:28Z",
-   "summary": "reviewed PR #16813 (commented)",
-   "number": 16813,
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T09:24:54Z",
+   "summary": "reviewed PR #2278 (commented)",
+   "number": 2278,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16813#pullrequestreview-5118035291",
-   "excerpt": "There might be scaling problems. Claude says",
-   "review_id": 5118035291,
+   "url": "https://github.com/openjdk/jfx/pull/2278#pullrequestreview-5120669364",
+   "excerpt": "Does it make sense to eventually consolidate, as you also suggested?",
+   "review_id": 5120669364,
    "self": false
   },
   {
-   "id": "14459772479",
+   "id": "14478630905",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T09:24:52Z",
+   "summary": "commented on PR #2278",
+   "number": 2278,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2278#discussion_r3940133531",
+   "excerpt": "Does it make sense to eventually consolidate, as you also suggested?",
+   "review_id": 5120669364,
+   "self": false
+  },
+  {
+   "id": "14478574682",
    "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "Siedlerchr",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:29:03Z",
-   "summary": "reviewed PR #16835 (approved)",
-   "number": 16835,
+   "created_at": "2026-09-05T09:22:22Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16835#pullrequestreview-5117993173",
-   "excerpt": "",
-   "review_id": 5117993173,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120664875",
+   "excerpt": "move swhid ot the end, it's not really one that should be checked first",
+   "review_id": 5120664875,
    "self": false
   },
   {
-   "id": "14459761276",
+   "id": "14478574157",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:22:20Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940128530",
+   "excerpt": "move swhid ot the end, it's not really one that should be checked first",
+   "review_id": 5120664875,
+   "self": false
+  },
+  {
+   "id": "14478504997",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "itsallcode/openfasttrace",
+   "created_at": "2026-09-05T09:19:15Z",
+   "summary": "merged PR #583",
+   "number": 583,
+   "merged": false,
+   "url": "https://github.com/itsallcode/openfasttrace/issues/583",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14478502642",
    "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:28:46Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
+   "created_at": "2026-09-05T09:19:10Z",
+   "summary": "reviewed PR #16853 (commented)",
+   "number": 16853,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117991542",
-   "excerpt": "i think its an issue because \"add entry\" selects entry, but \"add entry using\" does not",
-   "review_id": 5117991542,
-   "self": true
+   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120659007",
+   "excerpt": "It looks much better, thanks!",
+   "review_id": 5120659007,
+   "self": false
   },
   {
-   "id": "14459759876",
+   "id": "14478501990",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:28:43Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
+   "created_at": "2026-09-05T09:19:08Z",
+   "summary": "commented on PR #16853",
+   "number": 16853,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937998888",
-   "excerpt": "i think its an issue because \"add entry\" selects entry, but \"add entry using\" does not",
-   "review_id": 5117991542,
-   "self": true
+   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3940122277",
+   "excerpt": "It looks much better, thanks!",
+   "review_id": 5120659007,
+   "self": false
   },
   {
-   "id": "14459649114",
-   "type": "PullRequestReviewEvent",
+   "id": "14478486963",
+   "type": "IssueCommentEvent",
    "action": "created",
-   "actor": "pluto-han",
+   "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:26:02Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
+   "created_at": "2026-09-05T09:18:27Z",
+   "summary": "commented on #16651: Git integration SLR",
+   "number": 16651,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117976504",
-   "excerpt": "updated code while makiing isTargetLibraryTab  inline.",
-   "review_id": 5117976504,
-   "self": true
+   "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5550836230",
+   "excerpt": "Hi Loay, any changes pending here you wish to do? or rfr?",
+   "review_id": null
   },
-  {
-   "id": "14459647943",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:26:00Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937985928",
-   "excerpt": "updated code while makiing isTargetLibraryTab  inline.",
-   "review_id": 5117976504,
-   "self": true
-  },
-  {
-   "id": "14459566971",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:24:07Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117965855",
-   "excerpt": "Yes",
-   "review_id": 5117965855,
-   "self": true
-  },
-  {
-   "id": "14459566071",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T21:24:05Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937976630",
-   "excerpt": "Yes",
-   "review_id": 5117965855,
-   "self": true
-  }
- ],
- "all_events": [
   {
    "id": "14478484552",
    "type": "IssuesEvent",
@@ -5934,6 +6070,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16844#issuecomment-5550833687",
    "excerpt": "@esthermichelle  sorry for taking over this issue, but we want to get a beta release out this weekend so I decided to fix it",
+   "review_id": null
+  },
+  {
+   "id": "14478491309",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:17:22Z",
+   "summary": "labeled PR #16858",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16858",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -7008,6 +7158,20 @@
    "merged": false,
    "url": "https://github.com/itsallcode/openfasttrace-gradle/issues/63#issuecomment-5548128182",
    "excerpt": "+1 I have been facing this as well.",
+   "review_id": null
+  },
+  {
+   "id": "20117578937",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-05T00:36:14Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -10621,10 +10785,11 @@
   "JabRef/jabref#16853": "subhramit"
  },
  "stats": {
-  "additions": 1863,
+  "additions": 1894,
   "deletions": 248,
-  "changed_files": 139,
+  "changed_files": 142,
   "components": {
+   "openfasttrace": 31,
    "jabgui": 792,
    ".github": 1,
    "(root)": 35,
@@ -10643,17 +10808,17 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 66,
+   "points": 69,
    "merged": 0,
-   "reviews": 20,
-   "other": 26
+   "reviews": 21,
+   "other": 27
   },
   {
    "login": "subhramit",
-   "points": 62,
+   "points": 63,
    "merged": 1,
    "reviews": 11,
-   "other": 37
+   "other": 38
   },
   {
    "login": "InAnYan",
@@ -10664,17 +10829,17 @@
   },
   {
    "login": "koppor",
-   "points": 38,
-   "merged": 5,
+   "points": 42,
+   "merged": 6,
    "reviews": 1,
-   "other": 21
+   "other": 22
   },
   {
    "login": "Siedlerchr",
-   "points": 26,
+   "points": 29,
    "merged": 0,
-   "reviews": 8,
-   "other": 10
+   "reviews": 9,
+   "other": 11
   },
   {
    "login": "calixtus",
@@ -10685,10 +10850,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 15,
+   "points": 18,
    "merged": 0,
-   "reviews": 3,
-   "other": 9
+   "reviews": 4,
+   "other": 10
   },
   {
    "login": "ThiloteE",
