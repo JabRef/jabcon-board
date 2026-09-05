@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T10:17:35+00:00",
+ "generated_at": "2026-09-05T10:20:28+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -826,6 +826,96 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16859",
+   "repo": "JabRef/jabref",
+   "number": 16859,
+   "title": "Configure navigation tree hierarchy for AI requirements in devdocs",
+   "url": "https://github.com/JabRef/jabref/pull/16859",
+   "type": "pr",
+   "draft": false,
+   "author": "InAnYan",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review"
+   ],
+   "updated_at": "2026-09-05T10:19:57Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T10:20:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16850",
+   "repo": "JabRef/jabref",
+   "number": 16850,
+   "title": "Migrate JavaFX tests from TestFX",
+   "url": "https://github.com/JabRef/jabref/pull/16850",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [
+    "Maran23"
+   ],
+   "labels": [
+    "component: internationalization",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: export-or-save",
+    "component: preferences",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "component: keybinding",
+    "component: automatic-field-editor",
+    "component: theming",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-05T10:19:03Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16858",
+   "repo": "JabRef/jabref",
+   "number": 16858,
+   "title": "Fix wrong source tab label at startup",
+   "url": "https://github.com/JabRef/jabref/pull/16858",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: entry-editor",
+    "dev: binaries"
+   ],
+   "updated_at": "2026-09-05T10:18:51Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16826",
    "repo": "JabRef/jabref",
    "number": 16826,
@@ -868,56 +958,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16859",
-   "repo": "JabRef/jabref",
-   "number": 16859,
-   "title": "Configure navigation tree hierarchy for AI requirements in devdocs",
-   "url": "https://github.com/JabRef/jabref/pull/16859",
-   "type": "pr",
-   "draft": false,
-   "author": "InAnYan",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T10:14:33Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16850",
-   "repo": "JabRef/jabref",
-   "number": 16850,
-   "title": "Migrate JavaFX tests from TestFX",
-   "url": "https://github.com/JabRef/jabref/pull/16850",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [
-    "Maran23"
-   ],
-   "labels": [
-    "component: internationalization",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: export-or-save",
-    "component: preferences",
-    "component: external-files",
-    "component: maintable",
-    "component: entry-editor",
-    "component: keybinding",
-    "component: automatic-field-editor",
-    "component: theming",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-05T10:05:47Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16853",
    "repo": "JabRef/jabref",
    "number": 16853,
@@ -940,26 +980,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16858",
-   "repo": "JabRef/jabref",
-   "number": 16858,
-   "title": "Fix wrong source tab label at startup",
-   "url": "https://github.com/JabRef/jabref/pull/16858",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: entry-editor"
-   ],
-   "updated_at": "2026-09-05T09:33:41Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
   },
   {
    "id": "https://github.com/apache/spark/pull/58225",
@@ -1433,12 +1453,12 @@
    "author": "7amo10",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
     "component: bib(la)tex",
     "component: fetcher",
+    "status: changes-required",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T10:16:57Z",
+   "updated_at": "2026-09-05T10:18:33Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -3109,6 +3129,35 @@
  ],
  "events": [
   {
+   "id": "14479908417",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:19:37Z",
+   "summary": "opened PR #16860",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16860",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14479887216",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:18:46Z",
+   "summary": "reviewed PR #16859 (approved)",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16859#pullrequestreview-5120828619",
+   "excerpt": "",
+   "review_id": 5120828619,
+   "self": false
+  },
+  {
    "id": "14479846788",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -3859,6 +3908,20 @@
    "excerpt": "@LoayTarek5 we discussed this to be intentional? or otherwise? I forgot \ud83e\udee3",
    "review_id": 5120700108,
    "self": false
+  },
+  {
+   "id": "14479889386",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:33:41Z",
+   "summary": "labeled PR #16858",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16858",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14478817293",
@@ -5988,54 +6051,38 @@
    "excerpt": "Did you even read what your LLM churned out? Use import.",
    "review_id": 5118570335,
    "self": false
-  },
-  {
-   "id": "14463885470",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:19:59Z",
-   "summary": "commented on PR #16530",
-   "number": 16530,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938516162",
-   "excerpt": "Is there a possibility of catching more specific exceptions here?",
-   "review_id": 5118570335,
-   "self": false
-  },
-  {
-   "id": "14463873069",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:19:35Z",
-   "summary": "commented on PR #16530",
-   "number": 16530,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16530#discussion_r3938514617",
-   "excerpt": "Why fully qualified name? Use import.",
-   "review_id": 5118570335,
-   "self": false
-  },
-  {
-   "id": "14463788897",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:16:55Z",
-   "summary": "reviewed PR #16832 (changes_requested)",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118551230",
-   "excerpt": "maybe as a new method? That would make the lambda better readable",
-   "review_id": 5118551230,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14479908417",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:19:37Z",
+   "summary": "opened PR #16860",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16860",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14479887216",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:18:46Z",
+   "summary": "reviewed PR #16859 (approved)",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16859#pullrequestreview-5120828619",
+   "excerpt": "",
+   "review_id": 5120828619,
+   "self": false
+  },
   {
    "id": "14479846788",
    "type": "PullRequestReviewEvent",
@@ -6787,6 +6834,20 @@
    "excerpt": "@LoayTarek5 we discussed this to be intentional? or otherwise? I forgot \ud83e\udee3",
    "review_id": 5120700108,
    "self": false
+  },
+  {
+   "id": "14479889386",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:33:41Z",
+   "summary": "labeled PR #16858",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16858",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14478817293",
@@ -11759,7 +11820,8 @@
   "openjdk/jfx#2291": "Maran23",
   "JabRef/jabref#16849": "7amo10",
   "JabRef/jabref#16853": "subhramit",
-  "JabRef/jabref#16826": "koppor"
+  "JabRef/jabref#16826": "koppor",
+  "JabRef/jabref#16859": "InAnYan"
  },
  "stats": {
   "additions": 1940,
@@ -11813,9 +11875,9 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 40,
+   "points": 42,
    "merged": 0,
-   "reviews": 14,
+   "reviews": 15,
    "other": 12
   },
   {

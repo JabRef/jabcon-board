@@ -107,3 +107,22 @@ section h2 .count { float: right; color: var(--fg); }
 #gource[src]:hover { position: fixed; z-index: 10; top: 3%; bottom: 0; left: 10%; right: 0; width: auto; height: auto; max-height: none; box-shadow: 0 0 4rem #000; }
 #footer { position: fixed; right: 1rem; bottom: .1rem; display: flex; gap: 1rem; font-size: .6rem; color: var(--muted); font-family: monospace; }
 #components span:nth-child(3n+1) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Ambient motion so TVs with content-adaptive dimming don't treat the wall as a static image:
+   a slow drifting glow behind the panels (whole-screen pixel change, low contrast) and a gentle
+   breathing of the panel borders. Off with ?still=1 or reduced-motion. */
+body::before {
+  content: ""; position: fixed; inset: -40%; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, #1f3a5f 0%, transparent 70%);
+  opacity: .35; animation: drift 90s ease-in-out infinite alternate;
+}
+main { position: relative; z-index: 0; }
+section { animation: breathe 20s ease-in-out infinite; }
+@keyframes drift {
+  0%   { transform: translate(-25%, -20%) scale(.8); }
+  50%  { transform: translate(15%, 10%) scale(1.1); }
+  100% { transform: translate(25%, -15%) scale(.9); }
+}
+@keyframes breathe { 50% { border-color: #3d4654; } }
+@media (prefers-reduced-motion: reduce) { body::before, section { animation: none; } }
+html.still body::before, html.still section { animation: none; }
