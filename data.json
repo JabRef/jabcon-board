@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T07:19:45+00:00",
+ "generated_at": "2026-09-05T07:29:09+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -678,7 +678,7 @@
    "labels": [
     "status: changes-required"
    ],
-   "updated_at": "2026-09-05T06:48:56Z",
+   "updated_at": "2026-09-05T07:23:01Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1198,6 +1198,28 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "first contrib",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T07:28:48Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -2824,6 +2846,35 @@
  ],
  "events": [
   {
+   "id": "14475915130",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:28:33Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120324003",
+   "excerpt": "codewise looks good to me now, I wil mark at ready for review so qodo can comment",
+   "review_id": 5120324003,
+   "self": false
+  },
+  {
+   "id": "14475788047",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:23:01Z",
+   "summary": "commented on #16856: Drop label \"status: no-bot-comments\"",
+   "number": 16856,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16856#issuecomment-5550263944",
+   "excerpt": "Are you really sure? I liked it as a ready for review indicator or is that now repalced with ready for review",
+   "review_id": null
+  },
+  {
    "id": "14474916689",
    "type": "PullRequestEvent",
    "action": "opened",
@@ -4308,6 +4359,20 @@
    "self": true
   },
   {
+   "id": "20107327086",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T23:00:37Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14463243794",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -4396,6 +4461,20 @@
    "excerpt": "Replaced with getDatabasePath().map(...).orElseGet(BibDatabaseContext::empty); the IOException is wrapped in UncheckedIOException and surfa\u2026",
    "review_id": 5118462419,
    "self": true
+  },
+  {
+   "id": "20107323807",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:32Z",
+   "summary": "pushed 0 commit(s) to show-diff-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14463227245",
@@ -4633,6 +4712,20 @@
    "self": true
   },
   {
+   "id": "20107243927",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-04T22:22:31Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14461889822",
    "type": "PullRequestReviewEvent",
    "action": "dismissed",
@@ -4661,6 +4754,48 @@
    "excerpt": "",
    "review_id": 5118181276,
    "self": false
+  },
+  {
+   "id": "20107220846",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:21:55Z",
+   "summary": "pushed 0 commit(s) to dependabot/submodules/jablib/src/main/resources/csl-styles-db768d4",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20107207000",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T22:21:33Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20106955094",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "bgyoo970/jabref",
+   "created_at": "2026-09-04T22:15:11Z",
+   "summary": "pushed 0 commit(s) to 16075-Support-multiple-customized-preview-styles",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/bgyoo970/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14461439119",
@@ -5646,128 +5781,38 @@
    "excerpt": "Is this else if block important?",
    "review_id": 5117563583,
    "self": false
-  },
-  {
-   "id": "14457297118",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:33:59Z",
-   "summary": "commented on PR #16755",
-   "number": 16755,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3937711751",
-   "excerpt": "This should be above the line 578, not here",
-   "review_id": 5117563583,
-   "self": false
-  },
-  {
-   "id": "14457185157",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:31:35Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117494475",
-   "excerpt": "Confirmed works, but IDK right now about the code. Maybe it's okay, need to check the other day",
-   "review_id": 5117494475,
-   "self": false
-  },
-  {
-   "id": "14457185058",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:31:35Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5117494475",
-   "excerpt": "Confirmed works, but IDK right now about the code. Maybe it's okay, need to check the other day",
-   "review_id": 5117494475,
-   "self": false
-  },
-  {
-   "id": "14457139818",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:30:35Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937693777",
-   "excerpt": "It works even if citation key is empty?",
-   "review_id": 5117494475,
-   "self": false
-  },
-  {
-   "id": "14457107447",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:29:53Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937690037",
-   "excerpt": "Is uid the right method to check it?",
-   "review_id": 5117494475,
-   "self": false
-  },
-  {
-   "id": "14457087973",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:29:27Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937687928",
-   "excerpt": "I think this method is never used anywhere, so I think it could be inlined in the selectImportedEntriesInActiveTab.",
-   "review_id": 5117494475,
-   "self": false
-  },
-  {
-   "id": "14456834945",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:24:00Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3937657284",
-   "excerpt": "I wonder if it's an issue or a feature?",
-   "review_id": 5117494475,
-   "self": false
-  },
-  {
-   "id": "14456771549",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "JohnnyGoodNews",
-   "repo": "kidpeterpan/inkbound",
-   "created_at": "2026-09-04T20:22:39Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/kidpeterpan/inkbound",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14475915130",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:28:33Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120324003",
+   "excerpt": "codewise looks good to me now, I wil mark at ready for review so qodo can comment",
+   "review_id": 5120324003,
+   "self": false
+  },
+  {
+   "id": "14475788047",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:23:01Z",
+   "summary": "commented on #16856: Drop label \"status: no-bot-comments\"",
+   "number": 16856,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16856#issuecomment-5550263944",
+   "excerpt": "Are you really sure? I liked it as a ready for review indicator or is that now repalced with ready for review",
+   "review_id": null
+  },
   {
    "id": "14474916689",
    "type": "PullRequestEvent",
@@ -7253,6 +7298,20 @@
    "self": true
   },
   {
+   "id": "20107327086",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T23:00:37Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14463243794",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -7341,6 +7400,20 @@
    "excerpt": "Replaced with getDatabasePath().map(...).orElseGet(BibDatabaseContext::empty); the IOException is wrapped in UncheckedIOException and surfa\u2026",
    "review_id": 5118462419,
    "self": true
+  },
+  {
+   "id": "20107323807",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:00:32Z",
+   "summary": "pushed 0 commit(s) to show-diff-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14463227245",
@@ -7578,6 +7651,20 @@
    "self": true
   },
   {
+   "id": "20107243927",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-04T22:22:31Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14461889822",
    "type": "PullRequestReviewEvent",
    "action": "dismissed",
@@ -7606,6 +7693,48 @@
    "excerpt": "",
    "review_id": 5118181276,
    "self": false
+  },
+  {
+   "id": "20107220846",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T22:21:55Z",
+   "summary": "pushed 0 commit(s) to dependabot/submodules/jablib/src/main/resources/csl-styles-db768d4",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20107207000",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T22:21:33Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20106955094",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "bgyoo970/jabref",
+   "created_at": "2026-09-04T22:15:11Z",
+   "summary": "pushed 0 commit(s) to 16075-Support-multiple-customized-preview-styles",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/bgyoo970/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14461439119",
@@ -9683,7 +9812,8 @@
   "apache/spark#58225": "subhramit",
   "JabRef/jabref#16841": "koppor",
   "openjdk/jfx#1935": "Maran23",
-  "openjdk/jfx#2291": "Maran23"
+  "openjdk/jfx#2291": "Maran23",
+  "JabRef/jabref#16849": "7amo10"
  },
  "stats": {
   "additions": 1807,
@@ -9708,10 +9838,10 @@
  "leaderboard": [
   {
    "login": "Maran23",
-   "points": 63,
+   "points": 64,
    "merged": 0,
    "reviews": 20,
-   "other": 23
+   "other": 24
   },
   {
    "login": "InAnYan",
@@ -9722,31 +9852,31 @@
   },
   {
    "login": "subhramit",
-   "points": 51,
+   "points": 52,
    "merged": 1,
    "reviews": 10,
-   "other": 28
+   "other": 29
   },
   {
    "login": "koppor",
-   "points": 28,
+   "points": 31,
    "merged": 5,
    "reviews": 1,
-   "other": 11
+   "other": 14
   },
   {
    "login": "calixtus",
-   "points": 19,
+   "points": 20,
    "merged": 0,
    "reviews": 7,
-   "other": 5
+   "other": 6
   },
   {
    "login": "Siedlerchr",
-   "points": 16,
+   "points": 19,
    "merged": 0,
-   "reviews": 5,
-   "other": 6
+   "reviews": 6,
+   "other": 7
   },
   {
    "login": "pluto-han",
