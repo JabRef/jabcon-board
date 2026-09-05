@@ -23,7 +23,7 @@ screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more ca
 ## Configuration
 
 `config.json`: `jabcon_start` / `jabcon_end` (ISO timestamps with offset), `phases` (label + end time, drawn on the header progress bar), `timezone` (for the clock),
-`participants` (GitHub logins; their order sets the colours), `org` (highlighting and the ready-for-review backlog),
+`participants` (GitHub logins; their order sets the colours), `org` (highlighting and the ready-for-review backlog), `focus_label` (a label in the org, e.g. `project: jabcon`: its open items are always in the Backlog, labeled cards form the first group of every column, and a progress bar for it sits above the milestones),
 `exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board),
 `milestones` (`owner/repo/number`; progress bars in the stats panel, green = closed since the board first saw the milestone).
 `private_repos` lists private repos whose issue activity is counted for the leaderboard and shown as counts only (no titles) under the milestones. Milestones and `private_repos` need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.

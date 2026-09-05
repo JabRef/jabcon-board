@@ -25,6 +25,8 @@ START = datetime.fromisoformat(CONFIG["jabcon_start"])
 END = datetime.fromisoformat(CONFIG["jabcon_end"])
 START_DATE = START.astimezone(timezone.utc).strftime("%Y-%m-%d")
 EXCLUDE = {r.lower() for r in CONFIG.get("exclude_repos", [])}
+FOCUS = CONFIG.get("focus_label", "")
+FOCUS_Q = f'org:{CONFIG["org"]} label:"{FOCUS}"' if FOCUS else ""
 BOT_SUFFIX = "[bot]"
 PR_AUTHORS = {}  # "owner/repo#n" -> login, loaded from the previous data.json
 
@@ -86,6 +88,7 @@ def card(item, column):
         "closed_at": item.get("closed_at"),
         "merged_at": (item.get("pull_request") or {}).get("merged_at"),
         "column": column,
+        "focus": bool(FOCUS) and FOCUS in [l["name"] for l in item.get("labels", [])],
     }
 
 
@@ -96,16 +99,20 @@ def keep(item):
 def collect_cards():
     """Search per column, then dedupe so each item lives in exactly one column (done > progress > backlog)."""
     columns = [
+        ("done", f"{FOCUS_Q} is:closed closed:>={START_DATE}"),
         ("done", f"is:pr is:merged merged:>={START_DATE} {qualifiers('involves')}"),
         ("done", f"is:pr is:closed is:unmerged closed:>={START_DATE} {qualifiers('involves')}"),
         ("done", f"is:issue is:closed closed:>={START_DATE} {qualifiers('involves')}"),
         ("progress", f"is:pr is:open updated:>={START_DATE} {qualifiers('author')}"),
         ("progress", f"is:pr is:open updated:>={START_DATE} {qualifiers('reviewed-by')}"),
+        ("backlog", f"{FOCUS_Q} is:open"),
         ("backlog", f"org:{CONFIG['org']} is:pr is:open label:ready-for-review"),
         ("backlog", f"is:open {qualifiers('assignee')}"),
     ]
     seen = {}
     for column, query in columns:
+        if query.startswith(" "):  # focus queries without a focus label configured
+            continue
         for item in search(query):
             if item["html_url"] not in seen and keep(item):
                 c = card(item, column)
@@ -334,6 +341,16 @@ def private_activity():
     return result
 
 
+def focus_progress():
+    """Open vs. closed-since-start counts for the focus label, drawn like a milestone."""
+    if not FOCUS:
+        return None
+    open_count = get("/search/issues", {"q": f"{FOCUS_Q} is:open", "per_page": 1})[0]["total_count"]
+    closed = get("/search/issues", {"q": f"{FOCUS_Q} is:closed closed:>={START_DATE}", "per_page": 1})[0]["total_count"]
+    return {"label": FOCUS, "open": open_count, "closed": closed,
+            "url": f"https://github.com/issues?q={urllib.parse.quote(FOCUS_Q + ' is:open')}"}
+
+
 def main():
     args = sys.argv[1:]
     out = args[args.index("--out") + 1] if "--out" in args else "data.json"
@@ -368,6 +385,7 @@ def main():
     data = {
         "refactorings": nerdy,
         "milestones": milestones(previous_milestones),
+        "focus": focus_progress(),
         "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,

@@ -1,5 +1,6 @@
 {
   "org": "JabRef",
+  "focus_label": "project: jabcon",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
   "jabcon_end": "2026-09-10T19:00:00+02:00",
   "phases": [
