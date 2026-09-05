@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T10:38:30+00:00",
+ "generated_at": "2026-09-05T10:42:44+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -880,21 +880,54 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "number": 16850,
+   "title": "Migrate JavaFX tests from TestFX",
+   "url": "https://github.com/JabRef/jabref/pull/16850",
    "type": "pr",
    "draft": false,
-   "author": "pluto-han",
+   "author": "Siedlerchr",
+   "assignees": [
+    "Maran23"
+   ],
+   "labels": [
+    "component: internationalization",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: export-or-save",
+    "component: preferences",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "component: keybinding",
+    "component: automatic-field-editor",
+    "component: theming",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-05T10:42:37Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16858",
+   "repo": "JabRef/jabref",
+   "number": 16858,
+   "title": "Fix wrong source tab label at startup",
+   "url": "https://github.com/JabRef/jabref/pull/16858",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
    "assignees": [],
    "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue"
+    "status: ready-for-review",
+    "component: entry-editor",
+    "dev: binaries"
    ],
-   "updated_at": "2026-09-05T10:37:58Z",
+   "updated_at": "2026-09-05T10:42:15Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -914,7 +947,28 @@
     "component: groups",
     "component: import-load"
    ],
-   "updated_at": "2026-09-05T10:36:49Z",
+   "updated_at": "2026-09-05T10:39:58Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue"
+   ],
+   "updated_at": "2026-09-05T10:37:58Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -962,39 +1016,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16850",
-   "repo": "JabRef/jabref",
-   "number": 16850,
-   "title": "Migrate JavaFX tests from TestFX",
-   "url": "https://github.com/JabRef/jabref/pull/16850",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [
-    "Maran23"
-   ],
-   "labels": [
-    "component: internationalization",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: export-or-save",
-    "component: preferences",
-    "component: external-files",
-    "component: maintable",
-    "component: entry-editor",
-    "component: keybinding",
-    "component: automatic-field-editor",
-    "component: theming",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-05T10:32:37Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/apache/spark/pull/58225",
    "repo": "apache/spark",
    "number": 58225,
@@ -1026,27 +1047,6 @@
     "component: export-or-save"
    ],
    "updated_at": "2026-09-05T10:30:16Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16858",
-   "repo": "JabRef/jabref",
-   "number": 16858,
-   "title": "Fix wrong source tab label at startup",
-   "url": "https://github.com/JabRef/jabref/pull/16858",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: entry-editor",
-    "dev: binaries"
-   ],
-   "updated_at": "2026-09-05T10:26:19Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1537,7 +1537,7 @@
     "good first issue",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-05T10:37:24Z",
+   "updated_at": "2026-09-05T10:39:18Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -3186,6 +3186,21 @@
  ],
  "events": [
   {
+   "id": "14480414224",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:41:19Z",
+   "summary": "commented on PR #16755",
+   "number": 16755,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3940326431",
+   "excerpt": "big lambda, is it possible to extract to a new method?",
+   "review_id": 5120899624,
+   "self": false
+  },
+  {
    "id": "14480350110",
    "type": "IssuesEvent",
    "action": "closed",
@@ -4859,6 +4874,20 @@
    "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
    "review_id": 5120363796,
    "self": false
+  },
+  {
+   "id": "20124939320",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-05T07:40:08Z",
+   "summary": "pushed 0 commit(s) to migratejavafxtest",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14476002872",
@@ -6077,39 +6106,24 @@
    "excerpt": "No need",
    "review_id": 5118694279,
    "self": true
-  },
-  {
-   "id": "14464447001",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:37:55Z",
-   "summary": "commented on PR #16829",
-   "number": 16829,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16829#discussion_r3938583040",
-   "excerpt": "No need",
-   "review_id": 5118694279,
-   "self": true
-  },
-  {
-   "id": "14464205356",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:30:09Z",
-   "summary": "reviewed PR #16832 (approved)",
-   "number": 16832,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16832#pullrequestreview-5118640896",
-   "excerpt": "",
-   "review_id": 5118640896,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14480414224",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:41:19Z",
+   "summary": "commented on PR #16755",
+   "number": 16755,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3940326431",
+   "excerpt": "big lambda, is it possible to extract to a new method?",
+   "review_id": 5120899624,
+   "self": false
+  },
   {
    "id": "14480350110",
    "type": "IssuesEvent",
@@ -7784,6 +7798,20 @@
    "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
    "review_id": 5120363796,
    "self": false
+  },
+  {
+   "id": "20124939320",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-05T07:40:08Z",
+   "summary": "pushed 0 commit(s) to migratejavafxtest",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14476002872",
@@ -12197,10 +12225,10 @@
   },
   {
    "login": "Maran23",
-   "points": 73,
+   "points": 74,
    "merged": 0,
    "reviews": 23,
-   "other": 27
+   "other": 28
   },
   {
    "login": "koppor",
@@ -12211,10 +12239,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 43,
+   "points": 44,
    "merged": 0,
    "reviews": 15,
-   "other": 13
+   "other": 14
   },
   {
    "login": "calixtus",
