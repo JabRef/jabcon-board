@@ -88,7 +88,7 @@ function renderTicker() {
   const org = data.config.org + '/';
   $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map((e) => {
     const pts = eventPoints(e);
-    return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.url, `<span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
+    return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><b>${esc(e.actor)}</b> ${esc(e.summary)}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
   }).join('');
 }
 

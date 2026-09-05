@@ -131,6 +131,7 @@ def collect_events(previous):
                 if e["repo"]["name"].lower() in EXCLUDE or e["id"] in seen:
                     continue
                 payload = e.get("payload", {})
+                number = (payload.get("issue") or payload.get("pull_request") or {}).get("number")
                 seen[e["id"]] = {
                     "id": e["id"],
                     "type": e["type"],
@@ -139,10 +140,10 @@ def collect_events(previous):
                     "repo": e["repo"]["name"],
                     "created_at": e["created_at"],
                     "summary": summarize(e),
-                    "number": (payload.get("issue") or payload.get("pull_request") or {}).get("number"),
+                    "number": number,
                     "merged": bool((payload.get("pull_request") or {}).get("merged")),
-                    "url": ((payload.get("issue") or payload.get("pull_request") or {}).get("html_url")
-                            or f"https://github.com/{e['repo']['name']}"),
+                    # event payloads carry slimmed issue/PR objects without html_url; /issues/N redirects to PRs too
+                    "url": f"https://github.com/{e['repo']['name']}" + (f"/issues/{number}" if number else ""),
                 }
             if len(data) < 100 or datetime.fromisoformat(data[-1]["created_at"].replace("Z", "+00:00")) < START:
                 break
