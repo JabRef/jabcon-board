@@ -18,6 +18,14 @@
   },
   {
    "weight": 4,
+   "text": "instanceof pattern",
+   "repo": "JabRef/jabref",
+   "number": 16620,
+   "author": "Devansh-18155",
+   "url": "https://github.com/JabRef/jabref/pull/16620"
+  },
+  {
+   "weight": 4,
    "text": "sequenced collections",
    "repo": "JabRef/jabref",
    "number": 16835,
@@ -31,14 +39,6 @@
    "number": 16835,
    "author": "koppor",
    "url": "https://github.com/JabRef/jabref/pull/16835"
-  },
-  {
-   "weight": 4,
-   "text": "module boundary changed",
-   "repo": "JabRef/jabref",
-   "number": 16841,
-   "author": "koppor",
-   "url": "https://github.com/JabRef/jabref/pull/16841"
   }
  ],
  "milestones": [
@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:45:31+00:00",
+ "generated_at": "2026-09-05T11:52:41+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -206,6 +206,49 @@
      [
       2,
       "immutable collection literals"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16620",
+   "repo": "JabRef/jabref",
+   "number": 16620,
+   "title": "Fix closing of combo box popup on Escape key",
+   "url": "https://github.com/JabRef/jabref/pull/16620",
+   "type": "pr",
+   "draft": false,
+   "author": "Devansh-18155",
+   "assignees": [
+    "InAnYan"
+   ],
+   "labels": [
+    "component: search",
+    "component: preferences",
+    "good first issue",
+    "status: to-be-merged",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T11:48:43Z",
+   "closed_at": "2026-09-05T11:48:35Z",
+   "state_reason": null,
+   "merged_at": "2026-09-05T11:48:35Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 32,
+    "deletions": 32,
+    "changed_files": 6,
+    "components": {
+     "(root)": 1,
+     "docs": 6,
+     "jabgui": 55,
+     "jablib": 2
+    },
+    "refactorings": [
+     [
+      4,
+      "instanceof pattern"
      ]
     ]
    }
@@ -933,6 +976,30 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16596",
+   "repo": "JabRef/jabref",
+   "number": 16596,
+   "title": "When a dropdown is opened in the preferences, it should be closed on ESC - not the whole dialog",
+   "url": "https://github.com/JabRef/jabref/issues/16596",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "Devansh-18155"
+   ],
+   "labels": [
+    "good first issue",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T11:49:32Z",
+   "closed_at": "2026-09-05T11:48:36Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16844",
    "repo": "JabRef/jabref",
    "number": 16844,
@@ -1099,6 +1166,70 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16838",
+   "repo": "JabRef/jabref",
+   "number": 16838,
+   "title": "Add jabkit git merge-driver for semantic .bib merges",
+   "url": "https://github.com/JabRef/jabref/pull/16838",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: jabkit",
+    "status: changes-required",
+    "component: git"
+   ],
+   "updated_at": "2026-09-05T11:52:33Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2296",
+   "repo": "openjdk/jfx",
+   "number": 2296,
+   "title": "8156779: GTK3: warning when running SwingNode applications",
+   "url": "https://github.com/openjdk/jfx/pull/2296",
+   "type": "pr",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-05T11:52:04Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16861",
+   "repo": "JabRef/jabref",
+   "number": 16861,
+   "title": "Resolve LaTeX aux file paths relative to the library file",
+   "url": "https://github.com/JabRef/jabref/pull/16861",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "component: import-load",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T11:49:34Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -1128,49 +1259,6 @@
     "component: lsp"
    ],
    "updated_at": "2026-09-05T11:41:33Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16838",
-   "repo": "JabRef/jabref",
-   "number": 16838,
-   "title": "Add jabkit git merge-driver for semantic .bib merges",
-   "url": "https://github.com/JabRef/jabref/pull/16838",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: jabkit",
-    "status: changes-required",
-    "component: git"
-   ],
-   "updated_at": "2026-09-05T11:38:07Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16861",
-   "repo": "JabRef/jabref",
-   "number": 16861,
-   "title": "Resolve LaTeX aux file paths relative to the library file",
-   "url": "https://github.com/JabRef/jabref/pull/16861",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "component: groups",
-    "component: import-load"
-   ],
-   "updated_at": "2026-09-05T11:31:08Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1756,32 +1844,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-05T11:37:18Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16620",
-   "repo": "JabRef/jabref",
-   "number": 16620,
-   "title": "Fix closing of combo box popup on Escape key",
-   "url": "https://github.com/JabRef/jabref/pull/16620",
-   "type": "pr",
-   "draft": false,
-   "author": "Devansh-18155",
-   "assignees": [
-    "InAnYan"
-   ],
-   "labels": [
-    "component: search",
-    "component: preferences",
-    "good first issue",
-    "status: to-be-merged",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-05T11:36:33Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3436,6 +3498,154 @@
  ],
  "events": [
   {
+   "id": "14482121866",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:22Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121157556",
+   "excerpt": "Partly confirmed, and guarded in 4857942. A % comment in front of an entry or a @String survives \u2014 the parser attaches it as their user com\u2026",
+   "review_id": 5121157556,
+   "self": true
+  },
+  {
+   "id": "14482121865",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:22Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940539765",
+   "excerpt": "Partly confirmed, and guarded in 4857942. A % comment in front of an entry or a @String survives \u2014 the parser attaches it as their user com\u2026",
+   "review_id": 5121157556,
+   "self": true
+  },
+  {
+   "id": "14482121482",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:21Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940539713",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced both: % DBID: ... and % Encoding: ISO-8859-1 added in OTHER alone were dropped with exit code 0.\u2026",
+   "review_id": 5121157423,
+   "self": true
+  },
+  {
+   "id": "14482121474",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:21Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121157423",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced both: % DBID: ... and % Encoding: ISO-8859-1 added in OTHER alone were dropped with exit code 0.\u2026",
+   "review_id": 5121157423,
+   "self": true
+  },
+  {
+   "id": "14482120940",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:20Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121157210",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced: with the comment above Smith2020 changed in OTHER only, the driver exited 0 and wrote CURRENT's\u2026",
+   "review_id": 5121157210,
+   "self": true
+  },
+  {
+   "id": "14482120949",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:19Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940539581",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced: with the comment above Smith2020 changed in OTHER only, the driver exited 0 and wrote CURRENT's\u2026",
+   "review_id": 5121157210,
+   "self": true
+  },
+  {
+   "id": "14482039430",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:49:14Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121139156",
+   "excerpt": "Not applicable for this PR. Picocli help text lives in annotation values, which have to be compile-time constants, so Localization.lang(...\u2026",
+   "review_id": 5121139156,
+   "self": true
+  },
+  {
+   "id": "14482039445",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:49:13Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940525146",
+   "excerpt": "Not applicable for this PR. Picocli help text lives in annotation values, which have to be compile-time constants, so Localization.lang(...\u2026",
+   "review_id": 5121139156,
+   "self": true
+  },
+  {
+   "id": "14482023302",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:48:37Z",
+   "summary": "closed issue #16596: When a dropdown is opened in the preferences, it should be closed on ESC - not the whole dialog",
+   "number": 16596,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16596",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14482017418",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T11:48:23Z",
+   "summary": "opened PR #2296",
+   "number": 2296,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/issues/2296",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14481801196",
    "type": "IssuesEvent",
    "action": "closed",
@@ -3520,6 +3730,20 @@
    "excerpt": "Thanks, fixed in 91a5348. The placeholders are escaped as %%O %%A %%B now (the same way the BASE/CURRENT/OTHER parameter descriptions alrea\u2026",
    "review_id": 5121008867,
    "self": true
+  },
+  {
+   "id": "20131017581",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:02Z",
+   "summary": "deleted branch biblatexource",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14481308475",
@@ -4611,6 +4835,20 @@
    "review_id": null
   },
   {
+   "id": "20131166420",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:35:51Z",
+   "summary": "pushed 0 commit(s) to aux-sync-path",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14480222739",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -4787,6 +5025,20 @@
    "excerpt": "no need",
    "review_id": 5120854469,
    "self": true
+  },
+  {
+   "id": "20130735437",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-05T10:23:04Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479963347",
@@ -6179,200 +6431,157 @@
    "url": "https://github.com/JabRef/jabref/issues/16857",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14476544432",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:56:06Z",
-   "summary": "opened PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16857",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14476491005",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:53:43Z",
-   "summary": "commented on PR #16853",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3939925025",
-   "excerpt": "all the tests use the same pattern, i think we can extract them and use @ParameterizedTest?",
-   "review_id": 5120329800,
-   "self": false
-  },
-  {
-   "id": "14476448268",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:51:51Z",
-   "summary": "reviewed PR #16760 (approved)",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5120373882",
-   "excerpt": "",
-   "review_id": 5120373882,
-   "self": false
-  },
-  {
-   "id": "20123658182",
-   "type": "CreateEvent",
-   "action": null,
-   "actor": "InAnYan",
-   "repo": "InAnYan/jabref",
-   "created_at": "2026-09-05T07:51:07Z",
-   "summary": "created branch Enhance-developer-documentation",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/InAnYan/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14476388361",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:49:13Z",
-   "summary": "reviewed PR #16755 (approved)",
-   "number": 16755,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5120368319",
-   "excerpt": "",
-   "review_id": 5120368319,
-   "self": false
-  },
-  {
-   "id": "14476349216",
-   "type": "PullRequestReviewEvent",
-   "action": "dismissed",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:47:30Z",
-   "summary": "reviewed PR #16742 (dismissed)",
-   "number": 16742,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120331205",
-   "excerpt": "",
-   "review_id": 5120331205,
-   "self": false
-  },
-  {
-   "id": "14476339008",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:47:03Z",
-   "summary": "reviewed PR #16760 (commented)",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5120363796",
-   "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
-   "review_id": 5120363796,
-   "self": false
-  },
-  {
-   "id": "14476338177",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:47:01Z",
-   "summary": "commented on PR #16760",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3939910234",
-   "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
-   "review_id": 5120363796,
-   "self": false
-  },
-  {
-   "id": "20124939320",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Siedlerchr",
-   "repo": "Siedlerchr/jabref",
-   "created_at": "2026-09-05T07:40:08Z",
-   "summary": "pushed 0 commit(s) to migratejavafxtest",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/Siedlerchr/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14476002872",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:32:28Z",
-   "summary": "reviewed PR #16742 (dismissed)",
-   "number": 16742,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120331205",
-   "excerpt": "",
-   "review_id": 5120331205,
-   "self": false
-  },
-  {
-   "id": "14475984017",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:31:37Z",
-   "summary": "commented on PR #16853",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3939876085",
-   "excerpt": "Im not sure about the name \"needle\"?",
-   "review_id": 5120329800,
-   "self": false
-  },
-  {
-   "id": "14475915130",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:28:33Z",
-   "summary": "reviewed PR #16849 (commented)",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120324003",
-   "excerpt": "codewise looks good to me now, I wil mark at ready for review so qodo can comment",
-   "review_id": 5120324003,
-   "self": false
-  },
-  {
-   "id": "14475788047",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T07:23:01Z",
-   "summary": "commented on #16856: Drop label \"status: no-bot-comments\"",
-   "number": 16856,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16856#issuecomment-5550263944",
-   "excerpt": "Are you really sure? I liked it as a ready for review indicator or is that now repalced with ready for review",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14482121866",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:22Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121157556",
+   "excerpt": "Partly confirmed, and guarded in 4857942. A % comment in front of an entry or a @String survives \u2014 the parser attaches it as their user com\u2026",
+   "review_id": 5121157556,
+   "self": true
+  },
+  {
+   "id": "14482121865",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:22Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940539765",
+   "excerpt": "Partly confirmed, and guarded in 4857942. A % comment in front of an entry or a @String survives \u2014 the parser attaches it as their user com\u2026",
+   "review_id": 5121157556,
+   "self": true
+  },
+  {
+   "id": "14482121482",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:21Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940539713",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced both: % DBID: ... and % Encoding: ISO-8859-1 added in OTHER alone were dropped with exit code 0.\u2026",
+   "review_id": 5121157423,
+   "self": true
+  },
+  {
+   "id": "14482121474",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:21Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121157423",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced both: % DBID: ... and % Encoding: ISO-8859-1 added in OTHER alone were dropped with exit code 0.\u2026",
+   "review_id": 5121157423,
+   "self": true
+  },
+  {
+   "id": "14482120940",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:20Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121157210",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced: with the comment above Smith2020 changed in OTHER only, the driver exited 0 and wrote CURRENT's\u2026",
+   "review_id": 5121157210,
+   "self": true
+  },
+  {
+   "id": "14482120949",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:52:19Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940539581",
+   "excerpt": "Confirmed and fixed in 4857942. Reproduced: with the comment above Smith2020 changed in OTHER only, the driver exited 0 and wrote CURRENT's\u2026",
+   "review_id": 5121157210,
+   "self": true
+  },
+  {
+   "id": "14482039430",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:49:14Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121139156",
+   "excerpt": "Not applicable for this PR. Picocli help text lives in annotation values, which have to be compile-time constants, so Localization.lang(...\u2026",
+   "review_id": 5121139156,
+   "self": true
+  },
+  {
+   "id": "14482039445",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:49:13Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940525146",
+   "excerpt": "Not applicable for this PR. Picocli help text lives in annotation values, which have to be compile-time constants, so Localization.lang(...\u2026",
+   "review_id": 5121139156,
+   "self": true
+  },
+  {
+   "id": "14482023302",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:48:37Z",
+   "summary": "closed issue #16596: When a dropdown is opened in the preferences, it should be closed on ESC - not the whole dialog",
+   "number": 16596,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16596",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14482017418",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T11:48:23Z",
+   "summary": "opened PR #2296",
+   "number": 2296,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/issues/2296",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14481801196",
    "type": "IssuesEvent",
@@ -6458,6 +6667,20 @@
    "excerpt": "Thanks, fixed in 91a5348. The placeholders are escaped as %%O %%A %%B now (the same way the BASE/CURRENT/OTHER parameter descriptions alrea\u2026",
    "review_id": 5121008867,
    "self": true
+  },
+  {
+   "id": "20131017581",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:02Z",
+   "summary": "deleted branch biblatexource",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14481308475",
@@ -7549,6 +7772,20 @@
    "review_id": null
   },
   {
+   "id": "20131166420",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:35:51Z",
+   "summary": "pushed 0 commit(s) to aux-sync-path",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14480222739",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -7725,6 +7962,20 @@
    "excerpt": "no need",
    "review_id": 5120854469,
    "self": true
+  },
+  {
+   "id": "20130735437",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-05T10:23:04Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479963347",
@@ -13656,15 +13907,15 @@
   "JabRef/jabref#16838": "koppor"
  },
  "stats": {
-  "additions": 2257,
-  "deletions": 338,
-  "changed_files": 167,
+  "additions": 2289,
+  "deletions": 370,
+  "changed_files": 173,
   "components": {
-   "jablib": 939,
-   "(root)": 38,
-   "jabgui": 1139,
+   "jablib": 941,
+   "(root)": 39,
+   "docs": 123,
+   "jabgui": 1194,
    ".github": 25,
-   "docs": 117,
    "openfasttrace": 31,
    "build-logic": 112,
    "jabsrv": 23,
@@ -13679,10 +13930,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 119,
+   "points": 121,
    "merged": 2,
    "reviews": 23,
-   "other": 67
+   "other": 69
   },
   {
    "login": "InAnYan",
@@ -13707,10 +13958,10 @@
   },
   {
    "login": "koppor",
-   "points": 58,
+   "points": 59,
    "merged": 8,
    "reviews": 2,
-   "other": 30
+   "other": 31
   },
   {
    "login": "pluto-han",
