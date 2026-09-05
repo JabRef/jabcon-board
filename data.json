@@ -47,8 +47,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 15,
-   "closed": 113,
+   "open": 14,
+   "closed": 114,
    "baseline": 113
   },
   {
@@ -89,7 +89,6 @@
     "ThiloteE": 0,
     "ryan-carpenter": 0,
     "subhramit": 3,
-    "wanling0000": 0,
     "Stewori": 0,
     "JohnnyGoodNews": 0,
     "Siedlerchr": 1,
@@ -97,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T10:35:43+00:00",
+ "generated_at": "2026-09-05T10:38:30+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -122,7 +121,6 @@
    "ThiloteE",
    "ryan-carpenter",
    "subhramit",
-   "wanling0000",
    "Stewori",
    "JohnnyGoodNews",
    "Siedlerchr",
@@ -182,6 +180,41 @@
       "immutable collection literals"
      ]
     ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T10:38:21Z",
+   "closed_at": "2026-09-05T10:38:21Z",
+   "merged_at": "2026-09-05T10:38:21Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 43,
+    "deletions": 13,
+    "changed_files": 7,
+    "components": {
+     "(root)": 1,
+     "docs": 6,
+     "jabgui": 47,
+     "jablib": 2
+    },
+    "refactorings": []
    }
   },
   {
@@ -710,6 +743,27 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16607",
+   "repo": "JabRef/jabref",
+   "number": 16607,
+   "title": "Floating titles get in the way when not needed",
+   "url": "https://github.com/JabRef/jabref/issues/16607",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "good first issue",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T10:38:22Z",
+   "closed_at": "2026-09-05T10:38:22Z",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/itsallcode/openfasttrace/issues/582",
    "repo": "itsallcode/openfasttrace",
    "number": 582,
@@ -826,6 +880,47 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue"
+   ],
+   "updated_at": "2026-09-05T10:37:58Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16861",
+   "repo": "JabRef/jabref",
+   "number": 16861,
+   "title": "Resolve LaTeX aux file paths relative to the library file",
+   "url": "https://github.com/JabRef/jabref/pull/16861",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "component: import-load"
+   ],
+   "updated_at": "2026-09-05T10:36:49Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16859",
    "repo": "JabRef/jabref",
    "number": 16859,
@@ -894,27 +989,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-05T10:32:37Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
-   "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue"
-   ],
-   "updated_at": "2026-09-05T10:32:02Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1461,9 +1535,9 @@
    "labels": [
     "component: preferences",
     "good first issue",
-    "status: changes-required"
+    "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-05T10:35:50Z",
+   "updated_at": "2026-09-05T10:37:24Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1486,29 +1560,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-05T10:31:52Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T10:26:35Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1816,7 +1867,7 @@
     "project: jabcon",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-05T10:31:58Z",
+   "updated_at": "2026-09-05T10:37:53Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog",
@@ -3135,6 +3186,35 @@
  ],
  "events": [
   {
+   "id": "14480350110",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:38:22Z",
+   "summary": "closed issue #16607: Floating titles get in the way when not needed",
+   "number": 16607,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16607",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14480308125",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:36:26Z",
+   "summary": "reviewed PR #16860 (dismissed)",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
+   "excerpt": "",
+   "review_id": 5120868338,
+   "self": true
+  },
+  {
    "id": "14480297210",
    "type": "PullRequestEvent",
    "action": "opened",
@@ -3185,7 +3265,7 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T10:27:21Z",
-   "summary": "reviewed PR #16860 (approved)",
+   "summary": "reviewed PR #16860 (dismissed)",
    "number": 16860,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
@@ -6027,37 +6107,38 @@
    "excerpt": "",
    "review_id": 5118640896,
    "self": false
-  },
-  {
-   "id": "20115153432",
-   "type": "DeleteEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:27:39Z",
-   "summary": "deleted branch do-not-format-kts",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14464129277",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T23:27:37Z",
-   "summary": "merged PR #16790",
-   "number": 16790,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16790",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14480350110",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:38:22Z",
+   "summary": "closed issue #16607: Floating titles get in the way when not needed",
+   "number": 16607,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16607",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14480308125",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:36:26Z",
+   "summary": "reviewed PR #16860 (dismissed)",
+   "number": 16860,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
+   "excerpt": "",
+   "review_id": 5120868338,
+   "self": true
+  },
   {
    "id": "14480297210",
    "type": "PullRequestEvent",
@@ -6109,7 +6190,7 @@
    "actor": "Maran23",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T10:27:21Z",
-   "summary": "reviewed PR #16860 (approved)",
+   "summary": "reviewed PR #16860 (dismissed)",
    "number": 16860,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
@@ -12079,18 +12160,18 @@
   "JabRef/jabref#16620": "Devansh-18155"
  },
  "stats": {
-  "additions": 1940,
-  "deletions": 263,
-  "changed_files": 146,
+  "additions": 1983,
+  "deletions": 276,
+  "changed_files": 153,
   "components": {
-   "jablib": 936,
-   "jabgui": 792,
+   "jablib": 938,
+   "(root)": 36,
+   "docs": 108,
+   "jabgui": 839,
    "openfasttrace": 31,
    ".github": 1,
-   "(root)": 35,
    "build-logic": 112,
    "jabsrv": 23,
-   "docs": 102,
    ".idea": 1,
    ".jbang": 6,
    "jabkit": 8,
@@ -12109,10 +12190,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 81,
+   "points": 82,
    "merged": 0,
    "reviews": 19,
-   "other": 43
+   "other": 44
   },
   {
    "login": "Maran23",
@@ -12158,13 +12239,6 @@
   },
   {
    "login": "ryan-carpenter",
-   "points": 0,
-   "merged": 0,
-   "reviews": 0,
-   "other": 0
-  },
-  {
-   "login": "wanling0000",
    "points": 0,
    "merged": 0,
    "reviews": 0,
