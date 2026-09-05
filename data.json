@@ -47,8 +47,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 14,
-   "closed": 114,
+   "open": 13,
+   "closed": 115,
    "baseline": 113
   },
   {
@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:18:24+00:00",
+ "generated_at": "2026-09-05T11:21:48+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -179,6 +179,44 @@
      [
       2,
       "immutable collection literals"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16858",
+   "repo": "JabRef/jabref",
+   "number": 16858,
+   "title": "Fix wrong source tab label at startup",
+   "url": "https://github.com/JabRef/jabref/pull/16858",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: entry-editor",
+    "dev: binaries",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T11:20:01Z",
+   "closed_at": "2026-09-05T11:20:00Z",
+   "state_reason": null,
+   "merged_at": "2026-09-05T11:20:00Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 52,
+    "deletions": 15,
+    "changed_files": 3,
+    "components": {
+     "(root)": 1,
+     "jabgui": 66
+    },
+    "refactorings": [
+     [
+      2,
+      "Optional"
      ]
     ]
    }
@@ -834,6 +872,29 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16844",
+   "repo": "JabRef/jabref",
+   "number": 16844,
+   "title": "\"Biblatex source\" displayed for a BibTeX file",
+   "url": "https://github.com/JabRef/jabref/issues/16844",
+   "type": "issue",
+   "draft": false,
+   "author": "mlep",
+   "assignees": [
+    "esthermichelle"
+   ],
+   "labels": [
+    "component: entry-editor",
+    "\ud83d\udccd Assigned"
+   ],
+   "updated_at": "2026-09-05T11:20:01Z",
+   "closed_at": "2026-09-05T11:20:01Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16607",
    "repo": "JabRef/jabref",
    "number": 16607,
@@ -977,6 +1038,46 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16838",
+   "repo": "JabRef/jabref",
+   "number": 16838,
+   "title": "Add jabkit git merge-driver for semantic .bib merges",
+   "url": "https://github.com/JabRef/jabref/pull/16838",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: jabkit",
+    "status: changes-required",
+    "component: git"
+   ],
+   "updated_at": "2026-09-05T11:20:25Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T11:19:24Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -1115,29 +1216,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16858",
-   "repo": "JabRef/jabref",
-   "number": 16858,
-   "title": "Fix wrong source tab label at startup",
-   "url": "https://github.com/JabRef/jabref/pull/16858",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: entry-editor",
-    "dev: binaries",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T11:07:57Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16859",
    "repo": "JabRef/jabref",
    "number": 16859,
@@ -1151,24 +1229,6 @@
     "status: ready-for-review"
    ],
    "updated_at": "2026-09-05T10:34:51Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/apache/spark/pull/58225",
-   "repo": "apache/spark",
-   "number": 58225,
-   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "url": "https://github.com/apache/spark/pull/58225",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T10:30:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1331,28 +1391,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-05T04:23:45Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16838",
-   "repo": "JabRef/jabref",
-   "number": 16838,
-   "title": "Add jabkit git merge-driver for semantic .bib merges",
-   "url": "https://github.com/JabRef/jabref/pull/16838",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: jabkit",
-    "status: changes-required",
-    "component: git"
-   ],
-   "updated_at": "2026-09-05T03:35:19Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1642,6 +1680,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "status: changes-required",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T11:20:50Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16620",
    "repo": "JabRef/jabref",
    "number": 16620,
@@ -1659,30 +1720,7 @@
     "good first issue",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-05T11:18:15Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "status: changes-required",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T11:16:51Z",
+   "updated_at": "2026-09-05T11:18:49Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3383,6 +3421,108 @@
   }
  ],
  "events": [
+  {
+   "id": "14481317333",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:25Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940423662",
+   "excerpt": "Thanks, fixed in 91a5348. The placeholders are escaped as %%O %%A %%B now (the same way the BASE/CURRENT/OTHER parameter descriptions alrea\u2026",
+   "review_id": 5121008867,
+   "self": true
+  },
+  {
+   "id": "14481317320",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:25Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121008867",
+   "excerpt": "Thanks, fixed in 91a5348. The placeholders are escaped as %%O %%A %%B now (the same way the BASE/CURRENT/OTHER parameter descriptions alrea\u2026",
+   "review_id": 5121008867,
+   "self": true
+  },
+  {
+   "id": "14481308475",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:01Z",
+   "summary": "closed issue #16844: \"Biblatex source\" displayed for a BibTeX file",
+   "number": 16844,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16844",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14481308458",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:00Z",
+   "summary": "merged PR #16858",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16858",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14481295161",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T11:19:24Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5551408788",
+   "excerpt": "Okay apparently this happened in [other PRs](https://github.com/szehon-ho/spark/actions/runs/33812521771/job/100840717313) as well and is i\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14481289514",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:19:09Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5121006405",
+   "excerpt": "Ah ok",
+   "review_id": 5121006405,
+   "self": false
+  },
+  {
+   "id": "14481289023",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:19:08Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940421191",
+   "excerpt": "Ah ok",
+   "review_id": 5121006405,
+   "self": false
+  },
   {
    "id": "14481270049",
    "type": "PullRequestReviewEvent",
@@ -6217,109 +6357,111 @@
    "url": "https://github.com/JabRef/jabref/pull/16174#issuecomment-5549274785",
    "excerpt": "Merged origin/main into this branch to resolve the merge conflicts. Two files conflicted:",
    "review_id": null
-  },
-  {
-   "id": "14470833176",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T03:48:52Z",
-   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5549148043",
-   "excerpt": "K8s integration test failed in https://github.com/subhramit/spark/actions/runs/33940800548/job/101240221054 but seemed unrelated to my chan\u2026",
-   "review_id": null
-  },
-  {
-   "id": "14469746566",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T03:01:06Z",
-   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5548908775",
-   "excerpt": "Covered in https://github.com/apache/spark/pull/58225/commits/c4237cfb60522dd445bb822042f2f4f73832a3d0, test adapted in https://github.com/\u2026",
-   "review_id": null
-  },
-  {
-   "id": "20122253305",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/spark",
-   "created_at": "2026-09-05T03:00:55Z",
-   "summary": "pushed 0 commit(s) to SPARK-58945",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/spark",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14469716246",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T02:59:48Z",
-   "summary": "reviewed PR #58225 (commented)",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5119481539",
-   "excerpt": "Yes figured that, this is now fixed",
-   "review_id": 5119481539,
-   "self": true
-  },
-  {
-   "id": "14469715895",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T02:59:47Z",
-   "summary": "commented on PR #58225",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#discussion_r3939230876",
-   "excerpt": "Yes figured that, this is now fixed",
-   "review_id": 5119481539,
-   "self": true
-  },
-  {
-   "id": "20122128448",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-05T02:57:29Z",
-   "summary": "pushed 0 commit(s) to fix-bst-preview",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20116117654",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-05T02:57:24Z",
-   "summary": "pushed 0 commit(s) to fix-bstvm",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14481317333",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:25Z",
+   "summary": "commented on PR #16838",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3940423662",
+   "excerpt": "Thanks, fixed in 91a5348. The placeholders are escaped as %%O %%A %%B now (the same way the BASE/CURRENT/OTHER parameter descriptions alrea\u2026",
+   "review_id": 5121008867,
+   "self": true
+  },
+  {
+   "id": "14481317320",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:25Z",
+   "summary": "reviewed PR #16838 (commented)",
+   "number": 16838,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5121008867",
+   "excerpt": "Thanks, fixed in 91a5348. The placeholders are escaped as %%O %%A %%B now (the same way the BASE/CURRENT/OTHER parameter descriptions alrea\u2026",
+   "review_id": 5121008867,
+   "self": true
+  },
+  {
+   "id": "14481308475",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:01Z",
+   "summary": "closed issue #16844: \"Biblatex source\" displayed for a BibTeX file",
+   "number": 16844,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16844",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14481308458",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:20:00Z",
+   "summary": "merged PR #16858",
+   "number": 16858,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16858",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14481295161",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T11:19:24Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5551408788",
+   "excerpt": "Okay apparently this happened in [other PRs](https://github.com/szehon-ho/spark/actions/runs/33812521771/job/100840717313) as well and is i\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14481289514",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:19:09Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5121006405",
+   "excerpt": "Ah ok",
+   "review_id": 5121006405,
+   "self": false
+  },
+  {
+   "id": "14481289023",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:19:08Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940421191",
+   "excerpt": "Ah ok",
+   "review_id": 5121006405,
+   "self": false
+  },
   {
    "id": "14481270049",
    "type": "PullRequestReviewEvent",
@@ -13413,18 +13555,19 @@
   "JabRef/jabref#16860": "pluto-han",
   "JabRef/jabref#16620": "Devansh-18155",
   "JabRef/jabref#16858": "Siedlerchr",
-  "JabRef/jabref#16856": "koppor"
+  "JabRef/jabref#16856": "koppor",
+  "JabRef/jabref#16838": "koppor"
  },
  "stats": {
-  "additions": 2149,
-  "deletions": 294,
-  "changed_files": 159,
+  "additions": 2201,
+  "deletions": 309,
+  "changed_files": 162,
   "components": {
    "jablib": 938,
+   "(root)": 37,
+   "jabgui": 1056,
    ".github": 25,
    "docs": 117,
-   "jabgui": 990,
-   "(root)": 36,
    "openfasttrace": 31,
    "build-logic": 112,
    "jabsrv": 23,
@@ -13439,17 +13582,17 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 116,
+   "points": 118,
    "merged": 2,
    "reviews": 23,
-   "other": 64
+   "other": 66
   },
   {
    "login": "InAnYan",
-   "points": 96,
+   "points": 99,
    "merged": 0,
-   "reviews": 24,
-   "other": 48
+   "reviews": 25,
+   "other": 49
   },
   {
    "login": "Maran23",
@@ -13460,8 +13603,8 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 64,
-   "merged": 0,
+   "points": 67,
+   "merged": 1,
    "reviews": 22,
    "other": 20
   },
