@@ -41,6 +41,8 @@ section h2 .count { float: right; color: var(--fg); }
 .card { font-size: .75rem; flex: none; display: flex; align-items: center; gap: .5rem; padding: .15rem .5rem; border-radius: .4rem; background: var(--bg); border-left: .35rem solid var(--accent); white-space: nowrap; overflow: hidden; }
 .card.other { opacity: .65; }
 .card.draft { border-left-style: dashed; }
+.card.focus { background: #1c2230; }
+.divider { flex: none; font-size: .65rem; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; padding: .2rem 0 0; border-top: 1px solid var(--border); }
 .card .avatar { width: 1.5rem; height: 1.5rem; border-radius: 50%; flex: none; }
 .card .num { color: var(--muted); flex: none; }
 .card .title { overflow: hidden; text-overflow: ellipsis; flex: 1; }
