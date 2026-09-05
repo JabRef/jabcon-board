@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T12:38:59+00:00",
+ "generated_at": "2026-09-05T12:47:29+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1806,6 +1806,31 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16846",
+   "repo": "JabRef/jabref",
+   "number": 16846,
+   "title": "Remove hardcoded styling",
+   "url": "https://github.com/JabRef/jabref/pull/16846",
+   "type": "pr",
+   "draft": false,
+   "author": "AbdallaSamirKhalifa",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: preferences",
+    "good first issue",
+    "component: theming",
+    "component: css",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T12:45:07Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16651",
    "repo": "JabRef/jabref",
    "number": 16651,
@@ -1826,7 +1851,7 @@
     "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-05T12:38:40Z",
+   "updated_at": "2026-09-05T12:42:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1847,32 +1872,6 @@
     "rfr"
    ],
    "updated_at": "2026-09-05T12:30:32Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16846",
-   "repo": "JabRef/jabref",
-   "number": 16846,
-   "title": "Remove hardcoded styling",
-   "url": "https://github.com/JabRef/jabref/pull/16846",
-   "type": "pr",
-   "draft": false,
-   "author": "AbdallaSamirKhalifa",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: preferences",
-    "good first issue",
-    "status: changes-required",
-    "component: theming",
-    "component: css",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T12:29:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
