@@ -128,8 +128,8 @@ def collect_events(previous):
             for e in data:
                 if datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")) < START:
                     continue
-                if e["repo"]["name"].lower() in EXCLUDE or e["id"] in seen:
-                    continue
+                if e["repo"]["name"].lower() in EXCLUDE:
+                    continue  # a fresh fetch overwrites the stored copy, so new fields reach older events too
                 payload = e.get("payload", {})
                 number = (payload.get("issue") or payload.get("pull_request") or {}).get("number")
                 seen[e["id"]] = {
@@ -142,14 +142,26 @@ def collect_events(previous):
                     "summary": summarize(e),
                     "number": number,
                     "merged": bool((payload.get("pull_request") or {}).get("merged")),
-                    # event payloads carry slimmed issue/PR objects without html_url; /issues/N redirects to PRs too
-                    "url": f"https://github.com/{e['repo']['name']}" + (f"/issues/{number}" if number else ""),
+                    # comments and reviews have their own html_url; issue/PR objects in events are slimmed and have
+                    # none, /issues/N redirects to PRs too
+                    "url": ((payload.get("comment") or payload.get("review") or {}).get("html_url")
+                            or f"https://github.com/{e['repo']['name']}" + (f"/issues/{number}" if number else "")),
+                    "excerpt": excerpt((payload.get("comment") or payload.get("review") or {}).get("body")),
                 }
             if len(data) < 100 or datetime.fromisoformat(data[-1]["created_at"].replace("Z", "+00:00")) < START:
                 break
     events = list(seen.values())
     events.sort(key=lambda e: e["created_at"], reverse=True)
     return events
+
+
+def excerpt(body, limit=140):
+    """First line of a comment, markdown-ish noise stripped, cut to limit."""
+    if not body:
+        return ""
+    line = next((l.strip() for l in body.splitlines() if l.strip() and not l.strip().startswith(("```", "<!--", ">", "|"))), "")
+    line = re.sub(r"[`*_#]+", "", line)
+    return line if len(line) <= limit else line[:limit - 1].rstrip() + "…"
 
 
 def summarize(e):
