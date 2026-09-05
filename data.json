@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T05:57:31+00:00",
+ "generated_at": "2026-09-05T06:28:41+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -132,6 +132,36 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16852",
+   "repo": "JabRef/jabref",
+   "number": 16852,
+   "title": "Document improve AI Usage Policy",
+   "url": "https://github.com/JabRef/jabref/pull/16852",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "status: awaiting-second-review",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T06:26:54Z",
+   "closed_at": "2026-09-05T06:26:54Z",
+   "merged_at": "2026-09-05T06:26:54Z",
+   "column": "done",
+   "stats": {
+    "additions": 3,
+    "deletions": 0,
+    "changed_files": 2,
+    "components": {
+     ".github": 1,
+     "(root)": 2
+    },
+    "refactorings": []
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16854",
    "repo": "JabRef/jabref",
@@ -1195,25 +1225,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-05T03:23:08Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16852",
-   "repo": "JabRef/jabref",
-   "number": 16852,
-   "title": "Document improve AI Usage Policy",
-   "url": "https://github.com/JabRef/jabref/pull/16852",
-   "type": "pr",
-   "draft": false,
-   "author": "Eng-YasminKotb",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "status: awaiting-second-review"
-   ],
-   "updated_at": "2026-09-05T00:29:13Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2609,6 +2620,21 @@
  ],
  "events": [
   {
+   "id": "14474145511",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T06:14:55Z",
+   "summary": "reviewed PR #16852 (approved)",
+   "number": 16852,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16852#pullrequestreview-5120057880",
+   "excerpt": "",
+   "review_id": 5120057880,
+   "self": false
+  },
+  {
    "id": "14473615551",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -5523,38 +5549,37 @@
    "review_id": null
   },
   {
-   "id": "14455700800",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "InAnYan",
+   "id": "20101313988",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:00:22Z",
-   "summary": "reviewed PR #16760 (changes_requested)",
-   "number": 16760,
+   "created_at": "2026-09-04T20:07:16Z",
+   "summary": "deleted branch dependabot/gradle/versions/org.controlsfx-controlsfx-11.2.5",
+   "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117293983",
-   "excerpt": "Just added some personal nitpicks",
-   "review_id": 5117293983,
-   "self": false
-  },
-  {
-   "id": "14455700794",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:00:22Z",
-   "summary": "reviewed PR #16760 (changes_requested)",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5117293983",
-   "excerpt": "Just added some personal nitpicks",
-   "review_id": 5117293983,
-   "self": false
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   }
  ],
  "all_events": [
   {
+   "id": "14474145511",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T06:14:55Z",
+   "summary": "reviewed PR #16852 (approved)",
+   "number": 16852,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16852#pullrequestreview-5120057880",
+   "excerpt": "",
+   "review_id": 5120057880,
+   "self": false
+  },
+  {
    "id": "14473615551",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -8465,6 +8490,20 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/graydon/obsidian-dangling-links",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20101313988",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T20:07:16Z",
+   "summary": "deleted branch dependabot/gradle/versions/org.controlsfx-controlsfx-11.2.5",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -9345,12 +9384,13 @@
   "openjdk/jfx#2291": "Maran23"
  },
  "stats": {
-  "additions": 1804,
+  "additions": 1807,
   "deletions": 232,
-  "changed_files": 133,
+  "changed_files": 135,
   "components": {
+   ".github": 1,
+   "(root)": 35,
    "build-logic": 112,
-   "(root)": 33,
    "jabsrv": 23,
    "docs": 102,
    "jabgui": 720,
@@ -9401,9 +9441,9 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 13,
+   "points": 15,
    "merged": 0,
-   "reviews": 4,
+   "reviews": 5,
    "other": 5
   },
   {
