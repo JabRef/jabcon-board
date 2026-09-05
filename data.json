@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T06:46:39+00:00",
+ "generated_at": "2026-09-05T06:53:42+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -675,8 +675,10 @@
    "draft": false,
    "author": "koppor",
    "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T06:46:34Z",
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T06:48:56Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1202,6 +1204,30 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16742",
+   "repo": "JabRef/jabref",
+   "number": 16742,
+   "title": "Add highlight words mode to Git Diff view",
+   "url": "https://github.com/JabRef/jabref/pull/16742",
+   "type": "pr",
+   "draft": false,
+   "author": "sanjaykumarmtt",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "component: external-changes",
+    "component: git",
+    "first contrib",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T06:51:27Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16755",
    "repo": "JabRef/jabref",
    "number": 16755,
@@ -1243,30 +1269,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-05T03:37:33Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16742",
-   "repo": "JabRef/jabref",
-   "number": 16742,
-   "title": "Add highlight words mode to Git Diff view",
-   "url": "https://github.com/JabRef/jabref/pull/16742",
-   "type": "pr",
-   "draft": false,
-   "author": "sanjaykumarmtt",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "good first issue",
-    "status: changes-required",
-    "component: external-changes",
-    "component: git",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T03:23:10Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -5177,6 +5179,20 @@
    "review_id": null
   },
   {
+   "id": "20104009900",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:05:15Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14458481675",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -5748,20 +5764,6 @@
    "merged": false,
    "url": "https://github.com/TGRRRR/heading-outliner",
    "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14456552498",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:17:50Z",
-   "summary": "commented on #16834:    Add test for entry deletion in BibDatabaseDiff",
-   "number": 16834,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16834#issuecomment-5545980829",
-   "excerpt": "Please use the template for PR description",
    "review_id": null
   }
  ],
@@ -8122,6 +8124,20 @@
    "review_id": null
   },
   {
+   "id": "20104009900",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:05:15Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14458481675",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -9671,10 +9687,10 @@
   },
   {
    "login": "koppor",
-   "points": 27,
+   "points": 28,
    "merged": 5,
    "reviews": 1,
-   "other": 10
+   "other": 11
   },
   {
    "login": "calixtus",
