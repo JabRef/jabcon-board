@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:30:19+00:00",
+ "generated_at": "2026-09-05T11:38:20+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1038,50 +1038,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16861",
-   "repo": "JabRef/jabref",
-   "number": 16861,
-   "title": "Resolve LaTeX aux file paths relative to the library file",
-   "url": "https://github.com/JabRef/jabref/pull/16861",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "component: groups",
-    "component: import-load"
-   ],
-   "updated_at": "2026-09-05T11:29:36Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
-   "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T11:23:13Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16838",
    "repo": "JabRef/jabref",
    "number": 16838,
@@ -1096,25 +1052,7 @@
     "status: changes-required",
     "component: git"
    ],
-   "updated_at": "2026-09-05T11:20:25Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/apache/spark/pull/58225",
-   "repo": "apache/spark",
-   "number": 58225,
-   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "url": "https://github.com/apache/spark/pull/58225",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T11:19:24Z",
+   "updated_at": "2026-09-05T11:38:07Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1148,7 +1086,69 @@
     "component: theming",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-05T11:17:35Z",
+   "updated_at": "2026-09-05T11:35:46Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16861",
+   "repo": "JabRef/jabref",
+   "number": 16861,
+   "title": "Resolve LaTeX aux file paths relative to the library file",
+   "url": "https://github.com/JabRef/jabref/pull/16861",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "component: import-load"
+   ],
+   "updated_at": "2026-09-05T11:31:08Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T11:23:13Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T11:19:24Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1680,6 +1680,26 @@
    "focus": false
   },
   {
+   "id": "https://github.com/openjdk/jfx/pull/2278",
+   "repo": "openjdk/jfx",
+   "number": 2278,
+   "title": "8391279: Fix pixel-snapping in Region",
+   "url": "https://github.com/openjdk/jfx/pull/2278",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-05T11:37:50Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16849",
    "repo": "JabRef/jabref",
    "number": 16849,
@@ -1695,7 +1715,7 @@
     "status: changes-required",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T11:30:01Z",
+   "updated_at": "2026-09-05T11:37:18Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1718,9 +1738,10 @@
     "component: search",
     "component: preferences",
     "good first issue",
+    "status: to-be-merged",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-05T11:18:49Z",
+   "updated_at": "2026-09-05T11:36:33Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1773,26 +1794,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-05T09:51:49Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2278",
-   "repo": "openjdk/jfx",
-   "number": 2278,
-   "title": "8391279: Fix pixel-snapping in Region",
-   "url": "https://github.com/openjdk/jfx/pull/2278",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr"
-   ],
-   "updated_at": "2026-09-05T09:24:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3422,6 +3423,20 @@
  ],
  "events": [
   {
+   "id": "14481567386",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:31:08Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551465735",
+   "excerpt": "@ThiloteE pushed another commit - see if you still get that.",
+   "review_id": null
+  },
+  {
    "id": "14481450376",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -4508,6 +4523,20 @@
    "number": 16607,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16607",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20129478099",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T10:37:14Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
    "excerpt": "",
    "review_id": null
   },
@@ -6329,37 +6358,23 @@
    "excerpt": "",
    "review_id": 5120057880,
    "self": false
-  },
-  {
-   "id": "14473615551",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T05:51:54Z",
-   "summary": "commented on #16853: Fix BST entry preview formatting",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#issuecomment-5549793344",
-   "excerpt": "Missing tests for edge cases and malformed strings",
-   "review_id": null
-  },
-  {
-   "id": "20125205481",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/JabRef-Browser-Extension-experimental",
-   "created_at": "2026-09-05T04:33:46Z",
-   "summary": "pushed 0 commit(s) to release-please--branches--experimental--components--jabrefbrowserextension",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14481567386",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:31:08Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551465735",
+   "excerpt": "@ThiloteE pushed another commit - see if you still get that.",
+   "review_id": null
+  },
   {
    "id": "14481450376",
    "type": "IssueCommentEvent",
@@ -7447,6 +7462,20 @@
    "number": 16607,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16607",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20129478099",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T10:37:14Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
    "excerpt": "",
    "review_id": null
   },
@@ -13610,10 +13639,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 118,
+   "points": 119,
    "merged": 2,
    "reviews": 23,
-   "other": 66
+   "other": 67
   },
   {
    "login": "InAnYan",
@@ -13624,10 +13653,10 @@
   },
   {
    "login": "Maran23",
-   "points": 82,
+   "points": 83,
    "merged": 0,
    "reviews": 26,
-   "other": 30
+   "other": 31
   },
   {
    "login": "Siedlerchr",
