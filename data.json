@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T00:46:22+00:00",
+ "generated_at": "2026-09-05T01:05:40+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -584,6 +584,24 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16854",
+   "repo": "JabRef/jabref",
+   "number": 16854,
+   "title": "Fix openfasttrace buildtime concurrency issues",
+   "url": "https://github.com/JabRef/jabref/pull/16854",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "component: jabsrv"
+   ],
+   "updated_at": "2026-09-05T01:05:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16851",
    "repo": "JabRef/jabref",
    "number": 16851,
@@ -599,7 +617,7 @@
     "component: latex-file-support",
     "component: bst"
    ],
-   "updated_at": "2026-09-05T00:46:20Z",
+   "updated_at": "2026-09-05T01:02:34Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -618,7 +636,7 @@
     "component: export-or-save",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-05T00:44:59Z",
+   "updated_at": "2026-09-05T00:56:43Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2463,6 +2481,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14466947356",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:05:17Z",
+   "summary": "opened PR #16854",
+   "number": 16854,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16854",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14466324353",
    "type": "PullRequestReviewEvent",
@@ -5407,23 +5439,23 @@
    "excerpt": "In future, if possible please leave only changes related to the PR. This simplifies the review",
    "review_id": 5117019050,
    "self": false
-  },
-  {
-   "id": "14453102099",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:07:03Z",
-   "summary": "commented on #16809: Add fetcher by id for SWHID",
-   "number": 16809,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16809#issuecomment-5545260566",
-   "excerpt": "https://dontpastetheai.com/",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14466947356",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:05:17Z",
+   "summary": "opened PR #16854",
+   "number": 16854,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16854",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14466324353",
    "type": "PullRequestReviewEvent",
