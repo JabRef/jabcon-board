@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T12:47:29+00:00",
+ "generated_at": "2026-09-05T12:55:54+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -211,6 +211,44 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16858",
+   "repo": "JabRef/jabref",
+   "number": 16858,
+   "title": "Fix wrong source tab label at startup",
+   "url": "https://github.com/JabRef/jabref/pull/16858",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: entry-editor",
+    "dev: binaries",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T12:52:51Z",
+   "closed_at": "2026-09-05T11:20:00Z",
+   "state_reason": null,
+   "merged_at": "2026-09-05T11:20:00Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 52,
+    "deletions": 15,
+    "changed_files": 3,
+    "components": {
+     "(root)": 1,
+     "jabgui": 66
+    },
+    "refactorings": [
+     [
+      2,
+      "Optional"
+     ]
+    ]
+   }
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16620",
    "repo": "JabRef/jabref",
    "number": 16620,
@@ -285,44 +323,6 @@
      "jablib": 1
     },
     "refactorings": []
-   }
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16858",
-   "repo": "JabRef/jabref",
-   "number": 16858,
-   "title": "Fix wrong source tab label at startup",
-   "url": "https://github.com/JabRef/jabref/pull/16858",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: entry-editor",
-    "dev: binaries",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T11:20:01Z",
-   "closed_at": "2026-09-05T11:20:00Z",
-   "state_reason": null,
-   "merged_at": "2026-09-05T11:20:00Z",
-   "column": "done",
-   "focus": false,
-   "stats": {
-    "additions": 52,
-    "deletions": 15,
-    "changed_files": 3,
-    "components": {
-     "(root)": 1,
-     "jabgui": 66
-    },
-    "refactorings": [
-     [
-      2,
-      "Optional"
-     ]
-    ]
    }
   },
   {
@@ -1806,31 +1806,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16846",
-   "repo": "JabRef/jabref",
-   "number": 16846,
-   "title": "Remove hardcoded styling",
-   "url": "https://github.com/JabRef/jabref/pull/16846",
-   "type": "pr",
-   "draft": false,
-   "author": "AbdallaSamirKhalifa",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: preferences",
-    "good first issue",
-    "component: theming",
-    "component: css",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T12:45:07Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16651",
    "repo": "JabRef/jabref",
    "number": 16651,
@@ -1851,7 +1826,32 @@
     "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-05T12:42:38Z",
+   "updated_at": "2026-09-05T12:49:28Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16846",
+   "repo": "JabRef/jabref",
+   "number": 16846,
+   "title": "Remove hardcoded styling",
+   "url": "https://github.com/JabRef/jabref/pull/16846",
+   "type": "pr",
+   "draft": false,
+   "author": "AbdallaSamirKhalifa",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: preferences",
+    "good first issue",
+    "component: theming",
+    "component: css",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T12:45:07Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -5259,6 +5259,20 @@
    "review_id": null
   },
   {
+   "id": "20136824596",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T10:15:58Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14479817177",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -5299,6 +5313,20 @@
    "number": 16851,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16851",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20136757361",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-05T10:13:52Z",
+   "summary": "created branch openoffice-preference",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -5345,6 +5373,20 @@
    "excerpt": "Fixed in 024ae8e246: the extended-attribute and ACL setup of the Windows test (and the archive-flag setup of its sibling) now turns unsuppo\u2026",
    "review_id": 5120814144,
    "self": true
+  },
+  {
+   "id": "20136722969",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:12:45Z",
+   "summary": "pushed 0 commit(s) to atomic-preserve-attrs",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479691323",
@@ -6404,50 +6446,6 @@
    "excerpt": "nitpick",
    "review_id": 5120329800,
    "self": false
-  },
-  {
-   "id": "14478003894",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T08:57:31Z",
-   "summary": "reviewed PR #16853 (commented)",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120329800",
-   "excerpt": "nitpick",
-   "review_id": 5120329800,
-   "self": false
-  },
-  {
-   "id": "14477938009",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T08:54:38Z",
-   "summary": "reviewed PR #16742 (approved)",
-   "number": 16742,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120601402",
-   "excerpt": "",
-   "review_id": 5120601402,
-   "self": false
-  },
-  {
-   "id": "14477829525",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "moby/moby",
-   "created_at": "2026-09-05T08:49:53Z",
-   "summary": "commented on #49453: Buildx with new/unstarted docker-container driver and containerd can't use just pulled image",
-   "number": 49453,
-   "merged": false,
-   "url": "https://github.com/moby/moby/issues/49453#issuecomment-5550694633",
-   "excerpt": "Hi, I (and some other contributors at Spark) seem to be facing a similar recurring error - https://github.com/subhramit/spark/actions/runs/\u2026",
-   "review_id": null
   }
  ],
  "all_events": [
@@ -8195,6 +8193,20 @@
    "review_id": null
   },
   {
+   "id": "20136824596",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T10:15:58Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14479817177",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -8235,6 +8247,20 @@
    "number": 16851,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16851",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20136757361",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-05T10:13:52Z",
+   "summary": "created branch openoffice-preference",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -8281,6 +8307,20 @@
    "excerpt": "Fixed in 024ae8e246: the extended-attribute and ACL setup of the Windows test (and the archive-flag setup of its sibling) now turns unsuppo\u2026",
    "review_id": 5120814144,
    "self": true
+  },
+  {
+   "id": "20136722969",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:12:45Z",
+   "summary": "pushed 0 commit(s) to atomic-preserve-attrs",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479691323",
@@ -13540,6 +13580,20 @@
    "review_id": null
   },
   {
+   "id": "20136593056",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T15:13:24Z",
+   "summary": "deleted branch dependabot/gradle/versions/com.dlsc.gemsfx-gemsfx-4.4.5",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14440283288",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -14028,8 +14082,8 @@
   "components": {
    "jablib": 941,
    "(root)": 39,
-   "docs": 123,
    "jabgui": 1194,
+   "docs": 123,
    ".github": 25,
    "openfasttrace": 31,
    "build-logic": 112,
@@ -14059,10 +14113,10 @@
   },
   {
    "login": "Maran23",
-   "points": 85,
+   "points": 86,
    "merged": 0,
    "reviews": 26,
-   "other": 33
+   "other": 34
   },
   {
    "login": "Siedlerchr",
@@ -14073,10 +14127,10 @@
   },
   {
    "login": "koppor",
-   "points": 60,
+   "points": 61,
    "merged": 8,
    "reviews": 2,
-   "other": 32
+   "other": 33
   },
   {
    "login": "pluto-han",
