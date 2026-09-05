@@ -220,7 +220,9 @@ function loadVideo() {
 }
 
 document.querySelectorAll('.cards').forEach((b) => b.addEventListener('scroll', () => updateMore(b)));
-const scale = parseFloat(new URLSearchParams(location.search).get('scale'));
+const params = new URLSearchParams(location.search);
+if (params.get('still')) document.documentElement.classList.add('still');
+const scale = parseFloat(params.get('scale'));
 if (scale > 0) document.documentElement.style.fontSize = `min(${1.146 * scale}vw, ${2.037 * scale}vh)`;
 load();
 loadVideo();
