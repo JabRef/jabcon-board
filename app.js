@@ -31,8 +31,11 @@ function renderColumn(id, cards) {
     const other = !c.repo.startsWith(org);
     const tags = [];
     if (c.draft) tags.push('<span class="tag draft">draft</span>');
+    // GitHub's colours: merged / completed purple, closed PR red, not planned or duplicate gray
     if (c.merged_at) tags.push('<span class="tag merged">merged</span>');
-    else if (c.closed_at) tags.push('<span class="tag closed">closed</span>');
+    else if (c.closed_at && c.type === 'pr') tags.push('<span class="tag closed">closed</span>');
+    else if (c.closed_at && ['not_planned', 'duplicate'].includes(c.state_reason)) tags.push(`<span class="tag notplanned">${c.state_reason.replace('_', ' ')}</span>`);
+    else if (c.closed_at) tags.push('<span class="tag merged">done</span>');
     if (c.labels.includes('ready-for-review')) tags.push('<span class="tag rfr">ready for review</span>');
     return `<div class="card ${other ? 'other' : ''} ${c.draft ? 'draft' : ''} ${c.focus ? 'focus' : ''}" style="border-left-color:${color[c.author] || 'var(--border)'}">
       ${avatar(c.author)}${link(c.url, `<span class="num">${c.type === 'pr' ? '⇄' : '◉'} #${c.number}</span>

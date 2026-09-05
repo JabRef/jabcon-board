@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:14:47+00:00",
+ "generated_at": "2026-09-05T11:18:24+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -156,6 +156,7 @@
    ],
    "updated_at": "2026-09-05T10:15:16Z",
    "closed_at": "2026-09-05T10:15:08Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T10:15:08Z",
    "column": "done",
    "focus": true,
@@ -197,6 +198,7 @@
    ],
    "updated_at": "2026-09-05T11:08:15Z",
    "closed_at": "2026-09-05T11:07:37Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T11:07:37Z",
    "column": "done",
    "focus": false,
@@ -228,6 +230,7 @@
    ],
    "updated_at": "2026-09-05T10:45:00Z",
    "closed_at": "2026-09-05T10:44:53Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T10:44:52Z",
    "column": "done",
    "focus": false,
@@ -274,6 +277,7 @@
    ],
    "updated_at": "2026-09-05T10:43:49Z",
    "closed_at": "2026-09-05T10:38:21Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T10:38:21Z",
    "column": "done",
    "focus": false,
@@ -308,6 +312,7 @@
    ],
    "updated_at": "2026-09-05T10:16:06Z",
    "closed_at": "2026-09-04T23:26:52Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T23:26:52Z",
    "column": "done",
    "focus": false,
@@ -349,6 +354,7 @@
    ],
    "updated_at": "2026-09-05T09:55:28Z",
    "closed_at": "2026-09-05T09:19:16Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T09:19:15Z",
    "column": "done",
    "focus": false,
@@ -388,6 +394,7 @@
    ],
    "updated_at": "2026-09-05T09:09:23Z",
    "closed_at": "2026-09-05T09:09:23Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T09:09:23Z",
    "column": "done",
    "focus": false,
@@ -418,6 +425,7 @@
    ],
    "updated_at": "2026-09-05T06:26:54Z",
    "closed_at": "2026-09-05T06:26:54Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T06:26:54Z",
    "column": "done",
    "focus": false,
@@ -448,6 +456,7 @@
    ],
    "updated_at": "2026-09-05T01:35:10Z",
    "closed_at": "2026-09-05T01:35:01Z",
+   "state_reason": null,
    "merged_at": "2026-09-05T01:35:01Z",
    "column": "done",
    "focus": false,
@@ -480,6 +489,7 @@
    ],
    "updated_at": "2026-09-04T23:52:36Z",
    "closed_at": "2026-09-04T23:52:21Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T23:52:21Z",
    "column": "done",
    "focus": false,
@@ -516,6 +526,7 @@
    ],
    "updated_at": "2026-09-04T23:27:38Z",
    "closed_at": "2026-09-04T23:27:37Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T23:27:37Z",
    "column": "done",
    "focus": false,
@@ -555,6 +566,7 @@
    ],
    "updated_at": "2026-09-04T21:41:35Z",
    "closed_at": "2026-09-04T21:41:34Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T21:41:34Z",
    "column": "done",
    "focus": false,
@@ -610,6 +622,7 @@
    ],
    "updated_at": "2026-09-04T21:24:11Z",
    "closed_at": "2026-09-04T21:24:03Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T21:24:03Z",
    "column": "done",
    "focus": false,
@@ -643,6 +656,7 @@
    ],
    "updated_at": "2026-09-04T21:19:53Z",
    "closed_at": "2026-09-04T21:19:53Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T21:19:53Z",
    "column": "done",
    "focus": false,
@@ -683,6 +697,7 @@
    ],
    "updated_at": "2026-09-04T21:18:18Z",
    "closed_at": "2026-09-04T21:18:02Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T21:18:02Z",
    "column": "done",
    "focus": false,
@@ -712,6 +727,7 @@
    ],
    "updated_at": "2026-09-04T20:58:16Z",
    "closed_at": "2026-09-04T20:58:08Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T20:58:08Z",
    "column": "done",
    "focus": false,
@@ -757,6 +773,7 @@
    ],
    "updated_at": "2026-09-04T14:38:36Z",
    "closed_at": "2026-09-04T14:38:27Z",
+   "state_reason": null,
    "merged_at": "2026-09-04T14:38:27Z",
    "column": "done",
    "focus": false,
@@ -802,6 +819,7 @@
    ],
    "updated_at": "2026-09-04T12:08:07Z",
    "closed_at": "2026-09-04T10:41:52Z",
+   "state_reason": null,
    "merged_at": null,
    "column": "done",
    "focus": false,
@@ -832,6 +850,7 @@
    ],
    "updated_at": "2026-09-05T10:42:58Z",
    "closed_at": "2026-09-05T10:38:22Z",
+   "state_reason": "completed",
    "merged_at": null,
    "column": "done",
    "focus": false
@@ -853,6 +872,7 @@
    ],
    "updated_at": "2026-09-05T09:19:17Z",
    "closed_at": "2026-09-05T09:19:17Z",
+   "state_reason": "completed",
    "merged_at": null,
    "column": "done",
    "focus": false
@@ -877,6 +897,7 @@
    ],
    "updated_at": "2026-09-05T09:10:36Z",
    "closed_at": "2026-09-05T09:09:24Z",
+   "state_reason": "completed",
    "merged_at": null,
    "column": "done",
    "focus": false
@@ -901,6 +922,7 @@
    ],
    "updated_at": "2026-09-04T23:28:26Z",
    "closed_at": "2026-09-04T23:26:53Z",
+   "state_reason": "completed",
    "merged_at": null,
    "column": "done",
    "focus": false
@@ -925,6 +947,7 @@
    ],
    "updated_at": "2026-09-04T21:26:00Z",
    "closed_at": "2026-09-04T21:24:04Z",
+   "state_reason": "completed",
    "merged_at": null,
    "column": "done",
    "focus": false
@@ -948,25 +971,9 @@
    ],
    "updated_at": "2026-09-04T21:21:16Z",
    "closed_at": "2026-09-04T21:19:55Z",
+   "state_reason": "completed",
    "merged_at": null,
    "column": "done",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16862",
-   "repo": "JabRef/jabref",
-   "number": 16862,
-   "title": "Remove ready-for-review label when a PR is converted to draft",
-   "url": "https://github.com/JabRef/jabref/pull/16862",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T11:13:11Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
    "focus": false
   },
   {
@@ -996,8 +1003,52 @@
     "component: theming",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-05T11:13:09Z",
+   "updated_at": "2026-09-05T11:17:35Z",
    "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "repo": "JabRef/jabref",
+   "number": 16862,
+   "title": "Remove ready-for-review label when a PR is converted to draft",
+   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T11:16:39Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T11:15:39Z",
+   "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1018,6 +1069,7 @@
    ],
    "updated_at": "2026-09-05T11:11:13Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1039,32 +1091,10 @@
    ],
    "updated_at": "2026-09-05T11:11:09Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
-   "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue",
-    "status: changes-required",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T11:10:13Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
   },
   {
    "id": "https://github.com/openjdk/jfx/pull/2295",
@@ -1079,6 +1109,7 @@
    "labels": [],
    "updated_at": "2026-09-05T11:09:22Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1101,6 +1132,7 @@
    ],
    "updated_at": "2026-09-05T11:07:57Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1120,6 +1152,7 @@
    ],
    "updated_at": "2026-09-05T10:34:51Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1137,6 +1170,7 @@
    "labels": [],
    "updated_at": "2026-09-05T10:30:38Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1157,6 +1191,7 @@
    ],
    "updated_at": "2026-09-05T10:30:16Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1181,6 +1216,7 @@
    ],
    "updated_at": "2026-09-05T09:35:34Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": true
@@ -1220,6 +1256,7 @@
    ],
    "updated_at": "2026-09-05T08:18:20Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1239,6 +1276,7 @@
    ],
    "updated_at": "2026-09-05T04:34:01Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1269,6 +1307,7 @@
    ],
    "updated_at": "2026-09-05T04:31:01Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1293,6 +1332,7 @@
    ],
    "updated_at": "2026-09-05T04:23:45Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1314,6 +1354,7 @@
    ],
    "updated_at": "2026-09-05T03:35:19Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1355,6 +1396,7 @@
    ],
    "updated_at": "2026-09-05T03:23:01Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": true
@@ -1378,6 +1420,7 @@
    ],
    "updated_at": "2026-09-05T02:41:43Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": true
@@ -1397,6 +1440,7 @@
    "labels": [],
    "updated_at": "2026-09-05T01:22:56Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1417,6 +1461,7 @@
    ],
    "updated_at": "2026-09-04T23:53:21Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1437,6 +1482,7 @@
    ],
    "updated_at": "2026-09-04T21:51:21Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1458,6 +1504,7 @@
    ],
    "updated_at": "2026-09-04T21:46:19Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1482,6 +1529,7 @@
    ],
    "updated_at": "2026-09-04T21:42:13Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1502,6 +1550,7 @@
    ],
    "updated_at": "2026-09-04T19:18:17Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1523,6 +1572,7 @@
    ],
    "updated_at": "2026-09-04T18:25:57Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1542,6 +1592,7 @@
    ],
    "updated_at": "2026-09-04T12:56:00Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1563,6 +1614,7 @@
    ],
    "updated_at": "2026-09-04T12:23:26Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1584,6 +1636,55 @@
    ],
    "updated_at": "2026-09-04T03:13:28Z",
    "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16620",
+   "repo": "JabRef/jabref",
+   "number": 16620,
+   "title": "Fix closing of combo box popup on Escape key",
+   "url": "https://github.com/JabRef/jabref/pull/16620",
+   "type": "pr",
+   "draft": false,
+   "author": "Devansh-18155",
+   "assignees": [
+    "InAnYan"
+   ],
+   "labels": [
+    "component: search",
+    "component: preferences",
+    "good first issue",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T11:18:15Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "status: changes-required",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T11:16:51Z",
+   "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1609,54 +1710,9 @@
     "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-05T11:12:27Z",
+   "updated_at": "2026-09-05T11:15:59Z",
    "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16620",
-   "repo": "JabRef/jabref",
-   "number": 16620,
-   "title": "Fix closing of combo box popup on Escape key",
-   "url": "https://github.com/JabRef/jabref/pull/16620",
-   "type": "pr",
-   "draft": false,
-   "author": "Devansh-18155",
-   "assignees": [
-    "InAnYan"
-   ],
-   "labels": [
-    "component: search",
-    "component: preferences",
-    "good first issue",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-05T11:10:03Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "status: changes-required",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T11:09:51Z",
-   "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1680,6 +1736,7 @@
    ],
    "updated_at": "2026-09-05T09:51:49Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1699,6 +1756,7 @@
    ],
    "updated_at": "2026-09-05T09:24:52Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1720,6 +1778,7 @@
    ],
    "updated_at": "2026-09-05T08:50:32Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1739,6 +1798,7 @@
    ],
    "updated_at": "2026-09-05T07:54:37Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1764,6 +1824,7 @@
    ],
    "updated_at": "2026-09-05T03:37:33Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1787,6 +1848,7 @@
    ],
    "updated_at": "2026-09-05T03:23:08Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1807,6 +1869,7 @@
    ],
    "updated_at": "2026-09-04T23:23:51Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1830,6 +1893,7 @@
    ],
    "updated_at": "2026-09-04T23:21:50Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1852,6 +1916,7 @@
    ],
    "updated_at": "2026-09-04T22:31:41Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1874,6 +1939,7 @@
    ],
    "updated_at": "2026-09-04T19:46:32Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1893,6 +1959,7 @@
    ],
    "updated_at": "2026-09-04T16:40:21Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1912,6 +1979,7 @@
    ],
    "updated_at": "2026-09-04T02:19:43Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
@@ -1938,6 +2006,7 @@
    ],
    "updated_at": "2026-09-05T10:58:35Z",
    "closed_at": null,
+   "state_reason": "reopened",
    "merged_at": null,
    "column": "backlog",
    "focus": true
@@ -1966,6 +2035,7 @@
    ],
    "updated_at": "2026-09-05T03:11:48Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": true
@@ -1990,6 +2060,7 @@
    ],
    "updated_at": "2026-09-04T21:27:58Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": true
@@ -2011,6 +2082,7 @@
    ],
    "updated_at": "2026-09-03T05:03:23Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": true
@@ -2031,6 +2103,7 @@
    ],
    "updated_at": "2026-08-31T09:05:51Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": true
@@ -2053,6 +2126,7 @@
    ],
    "updated_at": "2026-08-17T19:48:51Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": true
@@ -2075,6 +2149,7 @@
    ],
    "updated_at": "2026-06-11T13:33:36Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": true
@@ -2098,6 +2173,7 @@
    ],
    "updated_at": "2026-09-05T10:11:53Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2121,6 +2197,7 @@
    ],
    "updated_at": "2026-09-05T09:16:18Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2143,6 +2220,7 @@
    ],
    "updated_at": "2026-09-05T02:27:32Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2166,6 +2244,7 @@
    ],
    "updated_at": "2026-09-04T16:17:39Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2200,6 +2279,7 @@
    ],
    "updated_at": "2026-09-02T12:58:31Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2222,6 +2302,7 @@
    ],
    "updated_at": "2026-09-02T07:51:25Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2244,6 +2325,7 @@
    ],
    "updated_at": "2026-08-30T19:16:27Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2266,6 +2348,7 @@
    ],
    "updated_at": "2026-08-28T14:09:23Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2287,6 +2370,7 @@
    ],
    "updated_at": "2026-08-28T07:41:48Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2309,6 +2393,7 @@
    ],
    "updated_at": "2026-08-28T06:12:13Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2332,6 +2417,7 @@
    ],
    "updated_at": "2026-08-24T10:14:21Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2356,6 +2442,7 @@
    ],
    "updated_at": "2026-08-24T10:12:34Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2379,6 +2466,7 @@
    ],
    "updated_at": "2026-08-24T10:10:59Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2402,6 +2490,7 @@
    ],
    "updated_at": "2026-08-24T10:10:54Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2424,6 +2513,7 @@
    ],
    "updated_at": "2026-08-24T10:10:49Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2445,6 +2535,7 @@
    ],
    "updated_at": "2026-08-24T10:10:46Z",
    "closed_at": null,
+   "state_reason": "reopened",
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2467,6 +2558,7 @@
    ],
    "updated_at": "2026-08-24T10:10:42Z",
    "closed_at": null,
+   "state_reason": "reopened",
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2491,6 +2583,7 @@
    ],
    "updated_at": "2026-08-24T10:10:34Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2515,6 +2608,7 @@
    ],
    "updated_at": "2026-08-24T10:10:24Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2538,6 +2632,7 @@
    ],
    "updated_at": "2026-08-18T12:35:43Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2562,6 +2657,7 @@
    ],
    "updated_at": "2026-08-17T12:55:56Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2585,6 +2681,7 @@
    ],
    "updated_at": "2026-08-11T22:01:49Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2608,6 +2705,7 @@
    ],
    "updated_at": "2026-08-08T10:50:00Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2629,6 +2727,7 @@
    ],
    "updated_at": "2026-08-01T09:37:34Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2652,6 +2751,7 @@
    ],
    "updated_at": "2026-08-01T09:32:00Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2671,6 +2771,7 @@
    "labels": [],
    "updated_at": "2026-07-29T08:49:33Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2695,6 +2796,7 @@
    ],
    "updated_at": "2026-07-14T17:40:25Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2717,6 +2819,7 @@
    ],
    "updated_at": "2026-07-04T12:35:34Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2739,6 +2842,7 @@
    ],
    "updated_at": "2026-06-30T14:45:05Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2761,6 +2865,7 @@
    ],
    "updated_at": "2026-06-30T14:28:45Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2784,6 +2889,7 @@
    ],
    "updated_at": "2026-06-22T20:09:16Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2805,6 +2911,7 @@
    ],
    "updated_at": "2026-06-22T20:08:25Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2826,6 +2933,7 @@
    ],
    "updated_at": "2026-06-22T19:58:55Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2845,6 +2953,7 @@
    "labels": [],
    "updated_at": "2026-06-21T04:29:45Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2868,6 +2977,7 @@
    ],
    "updated_at": "2026-06-01T04:50:27Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2890,6 +3000,7 @@
    ],
    "updated_at": "2026-05-03T20:23:55Z",
    "closed_at": null,
+   "state_reason": "reopened",
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2911,6 +3022,7 @@
    "labels": [],
    "updated_at": "2026-03-27T14:27:32Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2932,6 +3044,7 @@
    ],
    "updated_at": "2026-03-10T11:52:33Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2955,6 +3068,7 @@
    ],
    "updated_at": "2025-11-03T13:13:11Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2974,6 +3088,7 @@
    "labels": [],
    "updated_at": "2025-03-21T09:57:22Z",
    "closed_at": null,
+   "state_reason": "reopened",
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -2993,6 +3108,7 @@
    "labels": [],
    "updated_at": "2025-02-24T21:51:45Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3015,6 +3131,7 @@
    ],
    "updated_at": "2025-02-24T21:23:23Z",
    "closed_at": null,
+   "state_reason": "reopened",
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3036,6 +3153,7 @@
    ],
    "updated_at": "2025-01-05T00:20:55Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3055,6 +3173,7 @@
    "labels": [],
    "updated_at": "2024-12-18T15:40:42Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3077,6 +3196,7 @@
    ],
    "updated_at": "2024-11-13T16:49:41Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3096,6 +3216,7 @@
    "labels": [],
    "updated_at": "2023-04-03T06:39:24Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3115,6 +3236,7 @@
    "labels": [],
    "updated_at": "2022-06-13T22:43:55Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3134,6 +3256,7 @@
    "labels": [],
    "updated_at": "2021-04-12T18:35:26Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3153,6 +3276,7 @@
    "labels": [],
    "updated_at": "2020-03-10T09:29:41Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3172,6 +3296,7 @@
    "labels": [],
    "updated_at": "2019-10-19T09:57:40Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3191,6 +3316,7 @@
    "labels": [],
    "updated_at": "2018-07-03T07:12:43Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3210,6 +3336,7 @@
    "labels": [],
    "updated_at": "2018-04-18T09:16:35Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3229,6 +3356,7 @@
    "labels": [],
    "updated_at": "2016-03-08T11:39:53Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
@@ -3248,12 +3376,118 @@
    "labels": [],
    "updated_at": "2016-02-02T07:46:53Z",
    "closed_at": null,
+   "state_reason": null,
    "merged_at": null,
    "column": "backlog",
    "focus": false
   }
  ],
  "events": [
+  {
+   "id": "14481270049",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:18:21Z",
+   "summary": "reviewed PR #16620 (approved)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5121003505",
+   "excerpt": "",
+   "review_id": 5121003505,
+   "self": false
+  },
+  {
+   "id": "14481267677",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:18:16Z",
+   "summary": "reviewed PR #16620 (approved)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5121003315",
+   "excerpt": "",
+   "review_id": 5121003315,
+   "self": false
+  },
+  {
+   "id": "14481234995",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:53Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120998587",
+   "excerpt": "Yes, I think we have this in all ones",
+   "review_id": 5120998587,
+   "self": false
+  },
+  {
+   "id": "14481234392",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:51Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940413762",
+   "excerpt": "Yes, I think we have this in all ones",
+   "review_id": 5120998587,
+   "self": false
+  },
+  {
+   "id": "14481228515",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:36Z",
+   "summary": "reviewed PR #16620 (dismissed)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120968448",
+   "excerpt": "",
+   "review_id": 5120968448,
+   "self": false
+  },
+  {
+   "id": "14481214082",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:00Z",
+   "summary": "reviewed PR #16651 (commented)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5120995844",
+   "excerpt": "And qodo 's https://github.com/JabRef/jabref/pull/16651/changesr3836419213 as well",
+   "review_id": 5120995844,
+   "self": false
+  },
+  {
+   "id": "14481213616",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:15:58Z",
+   "summary": "commented on PR #16651",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3940411456",
+   "excerpt": "And qodo 's https://github.com/JabRef/jabref/pull/16651/changesr3836419213 as well",
+   "review_id": 5120995844,
+   "self": false
+  },
   {
    "id": "14481101960",
    "type": "IssueCommentEvent",
@@ -3379,7 +3613,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T11:09:15Z",
-   "summary": "reviewed PR #16620 (approved)",
+   "summary": "reviewed PR #16620 (dismissed)",
    "number": 16620,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120968448",
@@ -4815,6 +5049,20 @@
    "excerpt": "@7amo10 why did you mark this as resolved, if it's kinda right?",
    "review_id": 5120713792,
    "self": false
+  },
+  {
+   "id": "20128075013",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "koppor/openfasttrace",
+   "created_at": "2026-09-05T09:55:29Z",
+   "summary": "deleted branch bugfix/582_code_block_after_section_title",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/koppor/openfasttrace",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479315325",
@@ -6069,123 +6317,114 @@
    "url": "https://github.com/subhramit/jabref",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "20116073421",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/spark",
-   "created_at": "2026-09-05T02:56:05Z",
-   "summary": "pushed 0 commit(s) to SPARK-58945",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/spark",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14469510607",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T02:50:34Z",
-   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5548857734",
-   "excerpt": "Somehow the test still fails. Let me take a deeper look.",
-   "review_id": null
-  },
-  {
-   "id": "14469146003",
-   "type": "IssuesEvent",
-   "action": "labeled",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T02:35:01Z",
-   "summary": "labeled issue #11368: Citation key generator and Linked files",
-   "number": 11368,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/11368",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20121137227",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-05T02:26:49Z",
-   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14468598862",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T02:11:36Z",
-   "summary": "reviewed PR #58225 (commented)",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5119360151",
-   "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
-   "review_id": 5119360151,
-   "self": true
-  },
-  {
-   "id": "14468598047",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T02:11:34Z",
-   "summary": "commented on PR #58225",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#discussion_r3939107634",
-   "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
-   "review_id": 5119360151,
-   "self": true
-  },
-  {
-   "id": "20120402094",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-05T02:03:39Z",
-   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14467769584",
-   "type": "PullRequestEvent",
-   "action": "labeled",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T01:38:21Z",
-   "summary": "labeled PR #16855",
-   "number": 16855,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16855",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14481270049",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:18:21Z",
+   "summary": "reviewed PR #16620 (approved)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5121003505",
+   "excerpt": "",
+   "review_id": 5121003505,
+   "self": false
+  },
+  {
+   "id": "14481267677",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:18:16Z",
+   "summary": "reviewed PR #16620 (approved)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5121003315",
+   "excerpt": "",
+   "review_id": 5121003315,
+   "self": false
+  },
+  {
+   "id": "14481234995",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:53Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120998587",
+   "excerpt": "Yes, I think we have this in all ones",
+   "review_id": 5120998587,
+   "self": false
+  },
+  {
+   "id": "14481234392",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:51Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940413762",
+   "excerpt": "Yes, I think we have this in all ones",
+   "review_id": 5120998587,
+   "self": false
+  },
+  {
+   "id": "14481228515",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:36Z",
+   "summary": "reviewed PR #16620 (dismissed)",
+   "number": 16620,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120968448",
+   "excerpt": "",
+   "review_id": 5120968448,
+   "self": false
+  },
+  {
+   "id": "14481214082",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:16:00Z",
+   "summary": "reviewed PR #16651 (commented)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5120995844",
+   "excerpt": "And qodo 's https://github.com/JabRef/jabref/pull/16651/changesr3836419213 as well",
+   "review_id": 5120995844,
+   "self": false
+  },
+  {
+   "id": "14481213616",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:15:58Z",
+   "summary": "commented on PR #16651",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3940411456",
+   "excerpt": "And qodo 's https://github.com/JabRef/jabref/pull/16651/changesr3836419213 as well",
+   "review_id": 5120995844,
+   "self": false
+  },
   {
    "id": "14481101960",
    "type": "IssueCommentEvent",
@@ -6311,7 +6550,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T11:09:15Z",
-   "summary": "reviewed PR #16620 (approved)",
+   "summary": "reviewed PR #16620 (dismissed)",
    "number": 16620,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120968448",
@@ -7747,6 +7986,20 @@
    "excerpt": "@7amo10 why did you mark this as resolved, if it's kinda right?",
    "review_id": 5120713792,
    "self": false
+  },
+  {
+   "id": "20128075013",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "koppor/openfasttrace",
+   "created_at": "2026-09-05T09:55:29Z",
+   "summary": "deleted branch bugfix/582_code_block_after_section_title",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/koppor/openfasttrace",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479315325",
@@ -13186,16 +13439,16 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 111,
+   "points": 116,
    "merged": 2,
-   "reviews": 21,
-   "other": 63
+   "reviews": 23,
+   "other": 64
   },
   {
    "login": "InAnYan",
-   "points": 92,
+   "points": 96,
    "merged": 0,
-   "reviews": 22,
+   "reviews": 24,
    "other": 48
   },
   {
@@ -13207,10 +13460,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 61,
+   "points": 64,
    "merged": 0,
-   "reviews": 21,
-   "other": 19
+   "reviews": 22,
+   "other": 20
   },
   {
    "login": "koppor",
