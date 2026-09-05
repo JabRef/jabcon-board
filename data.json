@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:21:48+00:00",
+ "generated_at": "2026-09-05T11:30:19+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -887,7 +887,7 @@
     "component: entry-editor",
     "\ud83d\udccd Assigned"
    ],
-   "updated_at": "2026-09-05T11:20:01Z",
+   "updated_at": "2026-09-05T11:23:36Z",
    "closed_at": "2026-09-05T11:20:01Z",
    "state_reason": "completed",
    "merged_at": null,
@@ -1038,6 +1038,50 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16861",
+   "repo": "JabRef/jabref",
+   "number": 16861,
+   "title": "Resolve LaTeX aux file paths relative to the library file",
+   "url": "https://github.com/JabRef/jabref/pull/16861",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "component: import-load"
+   ],
+   "updated_at": "2026-09-05T11:29:36Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16860",
+   "repo": "JabRef/jabref",
+   "number": 16860,
+   "title": "Move more openoffice setting to preference tab",
+   "url": "https://github.com/JabRef/jabref/pull/16860",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good first issue",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T11:23:13Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16838",
    "repo": "JabRef/jabref",
    "number": 16838,
@@ -1125,50 +1169,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-05T11:16:39Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16860",
-   "repo": "JabRef/jabref",
-   "number": 16860,
-   "title": "Move more openoffice setting to preference tab",
-   "url": "https://github.com/JabRef/jabref/pull/16860",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good first issue",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T11:15:39Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16861",
-   "repo": "JabRef/jabref",
-   "number": 16861,
-   "title": "Resolve LaTeX aux file paths relative to the library file",
-   "url": "https://github.com/JabRef/jabref/pull/16861",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "component: groups",
-    "component: import-load"
-   ],
-   "updated_at": "2026-09-05T11:11:13Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1695,7 +1695,7 @@
     "status: changes-required",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T11:20:50Z",
+   "updated_at": "2026-09-05T11:30:01Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3422,6 +3422,20 @@
  ],
  "events": [
   {
+   "id": "14481450376",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:26:08Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551441171",
+   "excerpt": "Less errors now, but still get this one:",
+   "review_id": null
+  },
+  {
    "id": "14481317333",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
@@ -4732,6 +4746,20 @@
    "excerpt": "",
    "review_id": 5120828619,
    "self": true
+  },
+  {
+   "id": "20128961272",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-05T10:21:40Z",
+   "summary": "pushed 0 commit(s) to fix/devdocs-ai-requirements-tree",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479908417",
@@ -6329,37 +6357,23 @@
    "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14471457547",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T04:16:01Z",
-   "summary": "commented on #14493: Add OAuth2 flow for CiteDrive",
-   "number": 14493,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/14493#issuecomment-5549279787",
-   "excerpt": "Merged origin/main into this branch to resolve the merge conflict. One file conflicted: jabgui/src/main/java/org/jabref/gui/desktop/os/Nati\u2026",
-   "review_id": null
-  },
-  {
-   "id": "14471435195",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T04:15:01Z",
-   "summary": "commented on #16174: Replace ControlsFX/mvvmfx-validation with org.jfxcore:validation",
-   "number": 16174,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16174#issuecomment-5549274785",
-   "excerpt": "Merged origin/main into this branch to resolve the merge conflicts. Two files conflicted:",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14481450376",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:26:08Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551441171",
+   "excerpt": "Less errors now, but still get this one:",
+   "review_id": null
+  },
   {
    "id": "14481317333",
    "type": "PullRequestReviewCommentEvent",
@@ -7671,6 +7685,20 @@
    "excerpt": "",
    "review_id": 5120828619,
    "self": true
+  },
+  {
+   "id": "20128961272",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-05T10:21:40Z",
+   "summary": "pushed 0 commit(s) to fix/devdocs-ai-requirements-tree",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479908417",
@@ -13589,10 +13617,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 99,
+   "points": 100,
    "merged": 0,
    "reviews": 25,
-   "other": 49
+   "other": 50
   },
   {
    "login": "Maran23",
@@ -13631,10 +13659,10 @@
   },
   {
    "login": "ThiloteE",
-   "points": 1,
+   "points": 2,
    "merged": 0,
    "reviews": 0,
-   "other": 1
+   "other": 2
   },
   {
    "login": "ryan-carpenter",
