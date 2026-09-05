@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T20:32:00+00:00",
+ "generated_at": "2026-09-05T20:39:28+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2356,6 +2356,30 @@
    "focus": true
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16029",
+   "repo": "JabRef/jabref",
+   "number": 16029,
+   "title": "Improve Theme Picker",
+   "url": "https://github.com/JabRef/jabref/issues/16029",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "Maran23",
+    "hasnaaabdelrahman",
+    "ZiadAbdElFatah"
+   ],
+   "labels": [
+    "component: ui"
+   ],
+   "updated_at": "2026-09-05T20:34:05Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16539",
    "repo": "JabRef/jabref",
    "number": 16539,
@@ -2420,30 +2444,6 @@
     "\ud83d\udccc Pinned"
    ],
    "updated_at": "2026-09-05T09:16:18Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16029",
-   "repo": "JabRef/jabref",
-   "number": 16029,
-   "title": "Improve Theme Picker",
-   "url": "https://github.com/JabRef/jabref/issues/16029",
-   "type": "issue",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [
-    "Maran23",
-    "hasnaaabdelrahman",
-    "ZiadAbdElFatah"
-   ],
-   "labels": [
-    "component: ui"
-   ],
-   "updated_at": "2026-09-04T16:17:39Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
