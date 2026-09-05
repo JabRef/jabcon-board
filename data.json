@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T13:57:36+00:00",
+ "generated_at": "2026-09-05T14:15:54+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1166,6 +1166,30 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16855",
+   "repo": "JabRef/jabref",
+   "number": 16855,
+   "title": "Fix invalid regex handling in search",
+   "url": "https://github.com/JabRef/jabref/pull/16855",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "component: search",
+    "component: entry-editor",
+    "component: entry-preview",
+    "status: changes-required",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-05T14:10:03Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": true
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -1566,30 +1590,6 @@
    "focus": true
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16855",
-   "repo": "JabRef/jabref",
-   "number": 16855,
-   "title": "Fix invalid regex handling in search",
-   "url": "https://github.com/JabRef/jabref/pull/16855",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "component: search",
-    "component: entry-editor",
-    "component: entry-preview",
-    "status: changes-required",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-09-05T02:41:43Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
-  },
-  {
    "id": "https://github.com/unicode-org/icu/pull/2127",
    "repo": "unicode-org/icu",
    "number": 2127,
@@ -1806,27 +1806,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/openjdk/jfx/pull/2015",
-   "repo": "openjdk/jfx",
-   "number": 2015,
-   "title": "8375588: Enhanced property metadata",
-   "url": "https://github.com/openjdk/jfx/pull/2015",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "csr"
-   ],
-   "updated_at": "2026-09-05T13:49:43Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16846",
    "repo": "JabRef/jabref",
    "number": 16846,
@@ -1844,7 +1823,28 @@
     "component: css",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T13:27:18Z",
+   "updated_at": "2026-09-05T14:16:05Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2015",
+   "repo": "openjdk/jfx",
+   "number": 2015,
+   "title": "8375588: Enhanced property metadata",
+   "url": "https://github.com/openjdk/jfx/pull/2015",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-05T13:49:43Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3515,6 +3515,66 @@
   }
  ],
  "events": [
+  {
+   "id": "14485776040",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:15:02Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3940880793",
+   "excerpt": "I don't understand a bit. It escapes a literal term so it can be used as a regular expression?",
+   "review_id": 5121538606,
+   "self": false
+  },
+  {
+   "id": "14485634266",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:10:05Z",
+   "summary": "reviewed PR #16855 (commented)",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#pullrequestreview-5121498854",
+   "excerpt": "Maybe this method can be removed if it's just calls other static method?",
+   "review_id": 5121498854,
+   "self": false
+  },
+  {
+   "id": "14485426231",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:02:09Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3940845715",
+   "excerpt": "Though there are 2 methods, and the other one has implementation here",
+   "review_id": 5121498854,
+   "self": false
+  },
+  {
+   "id": "14485411034",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:01:33Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3940844259",
+   "excerpt": "Maybe this method can be removed if it's just calls other static method?",
+   "review_id": 5121498854,
+   "self": false
+  },
   {
    "id": "14484942643",
    "type": "PullRequestReviewEvent",
@@ -6390,67 +6450,69 @@
    "excerpt": "move swhid ot the end, it's not really one that should be checked first",
    "review_id": 5120664875,
    "self": false
-  },
-  {
-   "id": "14478504997",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "koppor",
-   "repo": "itsallcode/openfasttrace",
-   "created_at": "2026-09-05T09:19:15Z",
-   "summary": "merged PR #583",
-   "number": 583,
-   "merged": false,
-   "url": "https://github.com/itsallcode/openfasttrace/issues/583",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14478502642",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:19:10Z",
-   "summary": "reviewed PR #16853 (commented)",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120659007",
-   "excerpt": "It looks much better, thanks!",
-   "review_id": 5120659007,
-   "self": false
-  },
-  {
-   "id": "14478501990",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:19:08Z",
-   "summary": "commented on PR #16853",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3940122277",
-   "excerpt": "It looks much better, thanks!",
-   "review_id": 5120659007,
-   "self": false
-  },
-  {
-   "id": "14478486963",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:18:27Z",
-   "summary": "commented on #16651: Git integration SLR",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5550836230",
-   "excerpt": "Hi Loay, any changes pending here you wish to do? or rfr?",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14485776040",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:15:02Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3940880793",
+   "excerpt": "I don't understand a bit. It escapes a literal term so it can be used as a regular expression?",
+   "review_id": 5121538606,
+   "self": false
+  },
+  {
+   "id": "14485634266",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:10:05Z",
+   "summary": "reviewed PR #16855 (commented)",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#pullrequestreview-5121498854",
+   "excerpt": "Maybe this method can be removed if it's just calls other static method?",
+   "review_id": 5121498854,
+   "self": false
+  },
+  {
+   "id": "14485426231",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:02:09Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3940845715",
+   "excerpt": "Though there are 2 methods, and the other one has implementation here",
+   "review_id": 5121498854,
+   "self": false
+  },
+  {
+   "id": "14485411034",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T14:01:33Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3940844259",
+   "excerpt": "Maybe this method can be removed if it's just calls other static method?",
+   "review_id": 5121498854,
+   "self": false
+  },
   {
    "id": "14484942643",
    "type": "PullRequestReviewEvent",
@@ -14341,7 +14403,8 @@
   "JabRef/jabref#16858": "Siedlerchr",
   "JabRef/jabref#16856": "koppor",
   "JabRef/jabref#16838": "koppor",
-  "openjdk/jfx#2015": "mstr2"
+  "openjdk/jfx#2015": "mstr2",
+  "JabRef/jabref#16855": "subhramit"
  },
  "stats": {
   "additions": 2289,
@@ -14374,10 +14437,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 106,
+   "points": 111,
    "merged": 0,
-   "reviews": 27,
-   "other": 52
+   "reviews": 28,
+   "other": 55
   },
   {
    "login": "Maran23",
