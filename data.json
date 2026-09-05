@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T17:29:18+00:00",
+ "generated_at": "2026-09-05T17:38:39+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -12729,6 +12729,20 @@
    "self": true
   },
   {
+   "id": "20159576205",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:28:46Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14459759876",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
@@ -12742,6 +12756,20 @@
    "excerpt": "i think its an issue because \"add entry\" selects entry, but \"add entry using\" does not",
    "review_id": 5117991542,
    "self": true
+  },
+  {
+   "id": "20159518072",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-04T21:27:10Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14459649114",
@@ -14833,17 +14861,17 @@
   },
   {
    "login": "koppor",
-   "points": 68,
+   "points": 69,
    "merged": 8,
    "reviews": 2,
-   "other": 40
+   "other": 41
   },
   {
    "login": "pluto-han",
-   "points": 39,
+   "points": 40,
    "merged": 1,
    "reviews": 8,
-   "other": 20
+   "other": 21
   },
   {
    "login": "calixtus",
