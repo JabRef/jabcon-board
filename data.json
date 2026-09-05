@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T15:57:50+00:00",
+ "generated_at": "2026-09-05T16:17:33+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -208,6 +208,42 @@
       "immutable collection literals"
      ]
     ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16846",
+   "repo": "JabRef/jabref",
+   "number": 16846,
+   "title": "Remove hardcoded styling",
+   "url": "https://github.com/JabRef/jabref/pull/16846",
+   "type": "pr",
+   "draft": false,
+   "author": "AbdallaSamirKhalifa",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: preferences",
+    "good first issue",
+    "component: theming",
+    "component: css",
+    "first contrib",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T16:05:28Z",
+   "closed_at": "2026-09-05T16:05:16Z",
+   "state_reason": null,
+   "merged_at": "2026-09-05T16:05:16Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 8,
+    "deletions": 17,
+    "changed_files": 3,
+    "components": {
+     "(root)": 1,
+     "jabgui": 24
+    },
+    "refactorings": []
    }
   },
   {
@@ -974,6 +1010,34 @@
     },
     "refactorings": []
    }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/15721",
+   "repo": "JabRef/jabref",
+   "number": 15721,
+   "title": "Replace all `styleProperty()` bindings with proper styleClasses",
+   "url": "https://github.com/JabRef/jabref/issues/15721",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "ZiadAbdElFatah",
+    "AbdallaSamirKhalifa"
+   ],
+   "labels": [
+    "component: ui",
+    "good first issue",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned",
+    "component: css",
+    "\ud83d\udd14 reminder-sent"
+   ],
+   "updated_at": "2026-09-05T16:06:19Z",
+   "closed_at": "2026-09-05T16:05:17Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16596",
@@ -1799,32 +1863,6 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16846",
-   "repo": "JabRef/jabref",
-   "number": 16846,
-   "title": "Remove hardcoded styling",
-   "url": "https://github.com/JabRef/jabref/pull/16846",
-   "type": "pr",
-   "draft": false,
-   "author": "AbdallaSamirKhalifa",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: preferences",
-    "good first issue",
-    "component: theming",
-    "component: css",
-    "first contrib",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T15:49:19Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -13024,6 +13062,20 @@
    "self": false
   },
   {
+   "id": "20152285916",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "developer852/jabref",
+   "created_at": "2026-09-04T20:52:26Z",
+   "summary": "pushed 0 commit(s) to fix-for-issue-16756",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/developer852/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14458150571",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -14463,13 +14515,13 @@
   "JabRef/jabref#16855": "subhramit"
  },
  "stats": {
-  "additions": 2289,
-  "deletions": 370,
-  "changed_files": 173,
+  "additions": 2297,
+  "deletions": 387,
+  "changed_files": 176,
   "components": {
    "jablib": 941,
-   "(root)": 39,
-   "jabgui": 1194,
+   "(root)": 40,
+   "jabgui": 1218,
    "docs": 123,
    ".github": 25,
    "openfasttrace": 31,
@@ -14528,10 +14580,10 @@
   },
   {
    "login": "calixtus",
-   "points": 20,
+   "points": 21,
    "merged": 0,
    "reviews": 7,
-   "other": 6
+   "other": 7
   },
   {
    "login": "ThiloteE",
