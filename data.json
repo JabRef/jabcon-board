@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T21:54:11+00:00",
+ "generated_at": "2026-09-05T22:03:13+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -5311,6 +5311,20 @@
    "review_id": null
   },
   {
+   "id": "20180487703",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:49:20Z",
+   "summary": "pushed 0 commit(s) to aux-sync-path",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14480578562",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -5587,6 +5601,20 @@
    "excerpt": "big lambda, is it possible to extract to a new method?",
    "review_id": 5120899624,
    "self": false
+  },
+  {
+   "id": "20180309012",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-05T10:42:29Z",
+   "summary": "pushed 0 commit(s) to migratejavafxtest",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14480414224",
@@ -6437,6 +6465,20 @@
    "review_id": null
   },
   {
+   "id": "20180560203",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-05T09:54:36Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14479315325",
    "type": "PullRequestEvent",
    "action": "labeled",
@@ -6462,50 +6504,6 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16826#issuecomment-5551009070",
    "excerpt": "In main:",
-   "review_id": null
-  },
-  {
-   "id": "14479289522",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:52:49Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940206410",
-   "excerpt": "I would name it a bit differently, so that the class is swhid, but the variable is like content. But that's a nitpicj",
-   "review_id": 5120713792,
-   "self": false
-  },
-  {
-   "id": "14479251145",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:51:08Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940203374",
-   "excerpt": "Shouldn't this be localized @Siedlerchr ?",
-   "review_id": 5120713792,
-   "self": false
-  },
-  {
-   "id": "14479217650",
-   "type": "IssuesEvent",
-   "action": "unassigned",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:49:47Z",
-   "summary": "unassigned issue #16640: Rework LibreOffice CSL Style Inference flow",
-   "number": 16640,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640",
-   "excerpt": "",
    "review_id": null
   }
  ],
@@ -8237,6 +8235,20 @@
    "review_id": null
   },
   {
+   "id": "20180487703",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:49:20Z",
+   "summary": "pushed 0 commit(s) to aux-sync-path",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14480578562",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -8513,6 +8525,20 @@
    "excerpt": "big lambda, is it possible to extract to a new method?",
    "review_id": 5120899624,
    "self": false
+  },
+  {
+   "id": "20180309012",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-05T10:42:29Z",
+   "summary": "pushed 0 commit(s) to migratejavafxtest",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14480414224",
@@ -9359,6 +9385,20 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/koppor/openfasttrace",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20180560203",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-05T09:54:36Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
    "excerpt": "",
    "review_id": null
   },
@@ -15309,10 +15349,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 145,
+   "points": 146,
    "merged": 2,
    "reviews": 26,
-   "other": 87
+   "other": 88
   },
   {
    "login": "InAnYan",
@@ -15330,17 +15370,17 @@
   },
   {
    "login": "koppor",
-   "points": 79,
+   "points": 80,
    "merged": 8,
    "reviews": 2,
-   "other": 51
+   "other": 52
   },
   {
    "login": "Siedlerchr",
-   "points": 71,
+   "points": 72,
    "merged": 1,
    "reviews": 22,
-   "other": 24
+   "other": 25
   },
   {
    "login": "pluto-han",
