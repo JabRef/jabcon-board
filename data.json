@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T02:27:44+00:00",
+ "generated_at": "2026-09-05T02:42:49+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -627,10 +627,10 @@
     "component: search",
     "component: entry-editor",
     "component: entry-preview",
-    "project: jabcon",
-    "status: no-bot-comments"
+    "status: changes-required",
+    "project: jabcon"
    ],
-   "updated_at": "2026-09-05T02:27:34Z",
+   "updated_at": "2026-09-05T02:41:43Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -646,7 +646,7 @@
    "author": "subhramit",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-05T02:24:32Z",
+   "updated_at": "2026-09-05T02:29:49Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2536,6 +2536,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14469146003",
+   "type": "IssuesEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T02:35:01Z",
+   "summary": "labeled issue #11368: Citation key generator and Linked files",
+   "number": 11368,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/11368",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14468598862",
    "type": "PullRequestReviewEvent",
@@ -5471,24 +5485,23 @@
    "excerpt": "since we use mermaid, no need for svg file",
    "review_id": 5117149891,
    "self": false
-  },
-  {
-   "id": "14454528166",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:36:02Z",
-   "summary": "reviewed PR #16222 (commented)",
-   "number": 16222,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16222#pullrequestreview-5117127142",
-   "excerpt": "Add above:",
-   "review_id": 5117127142,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14469146003",
+   "type": "IssuesEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T02:35:01Z",
+   "summary": "labeled issue #11368: Citation key generator and Linked files",
+   "number": 11368,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/11368",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14468598862",
    "type": "PullRequestReviewEvent",
@@ -9159,10 +9172,10 @@
   },
   {
    "login": "subhramit",
-   "points": 46,
+   "points": 47,
    "merged": 1,
    "reviews": 10,
-   "other": 23
+   "other": 24
   },
   {
    "login": "koppor",
