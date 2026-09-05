@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T02:50:36+00:00",
+ "generated_at": "2026-09-05T02:57:41+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -614,6 +614,49 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16853",
+   "repo": "JabRef/jabref",
+   "number": 16853,
+   "title": "Fix BST entry preview formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16853",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: entry-preview",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-05T02:57:40Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16851",
+   "repo": "JabRef/jabref",
+   "number": 16851,
+   "title": "Fix `missing$` case warnings in BST VM",
+   "url": "https://github.com/JabRef/jabref/pull/16851",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
+   ],
+   "updated_at": "2026-09-05T02:57:32Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/apache/spark/pull/58225",
    "repo": "apache/spark",
    "number": 58225,
@@ -624,7 +667,7 @@
    "author": "subhramit",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-05T02:50:34Z",
+   "updated_at": "2026-09-05T02:56:06Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -670,27 +713,6 @@
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16851",
-   "repo": "JabRef/jabref",
-   "number": 16851,
-   "title": "Fix `missing$` case warnings in BST VM",
-   "url": "https://github.com/JabRef/jabref/pull/16851",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
-   ],
-   "updated_at": "2026-09-05T01:02:34Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16830",
    "repo": "JabRef/jabref",
    "number": 16830,
@@ -705,29 +727,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-05T00:56:43Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16853",
-   "repo": "JabRef/jabref",
-   "number": 16853,
-   "title": "Fix BST entry preview formatting",
-   "url": "https://github.com/JabRef/jabref/pull/16853",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: libre-office",
-    "component: entry-preview",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
-   ],
-   "updated_at": "2026-09-05T00:35:57Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
