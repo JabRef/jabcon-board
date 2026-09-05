@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T12:25:59+00:00",
+ "generated_at": "2026-09-05T12:38:59+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1806,6 +1806,54 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16651",
+   "repo": "JabRef/jabref",
+   "number": 16651,
+   "title": "Git integration SLR",
+   "url": "https://github.com/JabRef/jabref/pull/16651",
+   "type": "pr",
+   "draft": false,
+   "author": "LoayTarek5",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "status: changes-required",
+    "component: slr",
+    "good second issue",
+    "status: awaiting-second-review",
+    "component: git"
+   ],
+   "updated_at": "2026-09-05T12:38:40Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2278",
+   "repo": "openjdk/jfx",
+   "number": 2278,
+   "title": "8391279: Fix pixel-snapping in Region",
+   "url": "https://github.com/openjdk/jfx/pull/2278",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-05T12:30:32Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16846",
    "repo": "JabRef/jabref",
    "number": 16846,
@@ -1824,7 +1872,7 @@
     "component: css",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T12:26:02Z",
+   "updated_at": "2026-09-05T12:29:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1869,54 +1917,6 @@
     "csr"
    ],
    "updated_at": "2026-09-05T12:19:37Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2278",
-   "repo": "openjdk/jfx",
-   "number": 2278,
-   "title": "8391279: Fix pixel-snapping in Region",
-   "url": "https://github.com/openjdk/jfx/pull/2278",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr"
-   ],
-   "updated_at": "2026-09-05T11:42:13Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16651",
-   "repo": "JabRef/jabref",
-   "number": 16651,
-   "title": "Git integration SLR",
-   "url": "https://github.com/JabRef/jabref/pull/16651",
-   "type": "pr",
-   "draft": false,
-   "author": "LoayTarek5",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: import-load",
-    "component: export-or-save",
-    "component: preferences",
-    "status: changes-required",
-    "component: slr",
-    "good second issue",
-    "status: awaiting-second-review",
-    "component: git"
-   ],
-   "updated_at": "2026-09-05T11:15:59Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
