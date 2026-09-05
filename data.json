@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T20:54:04+00:00",
+ "generated_at": "2026-09-05T21:02:32+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -4840,6 +4840,20 @@
    "review_id": null
   },
   {
+   "id": "20175568593",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T11:08:38Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14481017380",
    "type": "PullRequestEvent",
    "action": "opened",
@@ -6493,20 +6507,6 @@
    "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5550981949",
    "excerpt": "/unassign @thesauravpoddar",
    "review_id": null
-  },
-  {
-   "id": "14479155653",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:46:57Z",
-   "summary": "commented on #16640: Rework LibreOffice CSL Style Inference flow",
-   "number": 16640,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5550980862",
-   "excerpt": "@thesauravpoddar Hey Saurav, although we really appreciate the sincerity with which you have prepared for this issue, currently [JabCon](ht\u2026",
-   "review_id": null
   }
  ],
  "all_events": [
@@ -7763,6 +7763,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16791#issuecomment-5551359976",
    "excerpt": "Marked as draft, because devcall labels was put on",
+   "review_id": null
+  },
+  {
+   "id": "20175568593",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-05T11:08:38Z",
+   "summary": "pushed 0 commit(s) to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -15281,10 +15295,10 @@
   },
   {
    "login": "Maran23",
-   "points": 106,
+   "points": 107,
    "merged": 0,
    "reviews": 32,
-   "other": 42
+   "other": 43
   },
   {
    "login": "koppor",
