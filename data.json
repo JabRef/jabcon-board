@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T17:22:22+00:00",
+ "generated_at": "2026-09-05T17:29:18+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -208,6 +208,36 @@
       "immutable collection literals"
      ]
     ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16859",
+   "repo": "JabRef/jabref",
+   "number": 16859,
+   "title": "Configure navigation tree hierarchy for AI requirements in devdocs",
+   "url": "https://github.com/JabRef/jabref/pull/16859",
+   "type": "pr",
+   "draft": false,
+   "author": "InAnYan",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-05T17:27:28Z",
+   "closed_at": "2026-09-05T17:27:28Z",
+   "state_reason": null,
+   "merged_at": "2026-09-05T17:27:28Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 18,
+    "deletions": 9,
+    "changed_files": 9,
+    "components": {
+     "docs": 27
+    },
+    "refactorings": []
    }
   },
   {
@@ -1268,27 +1298,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-05T17:15:43Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16859",
-   "repo": "JabRef/jabref",
-   "number": 16859,
-   "title": "Configure navigation tree hierarchy for AI requirements in devdocs",
-   "url": "https://github.com/JabRef/jabref/pull/16859",
-   "type": "pr",
-   "draft": false,
-   "author": "InAnYan",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T17:15:21Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3555,6 +3564,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14491076558",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:27:28Z",
+   "summary": "merged PR #16859",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16859",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14490990930",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:24:27Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5553511122",
+   "excerpt": "The key was this for me ^",
+   "review_id": null
+  },
   {
    "id": "14490746136",
    "type": "PullRequestReviewEvent",
@@ -6459,39 +6496,37 @@
    "excerpt": "Qn: why are we passing ENABLED here always?",
    "review_id": 5120703030,
    "self": false
-  },
-  {
-   "id": "14478878233",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:35:28Z",
-   "summary": "commented on PR #16651",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3940160441",
-   "excerpt": "Qn: why are we passing ENABLED here always?",
-   "review_id": 5120703030,
-   "self": false
-  },
-  {
-   "id": "14478862135",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:34:48Z",
-   "summary": "reviewed PR #16651 (commented)",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5120700108",
-   "excerpt": "@LoayTarek5 we discussed this to be intentional? or otherwise? I forgot \ud83e\udee3",
-   "review_id": 5120700108,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14491076558",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:27:28Z",
+   "summary": "merged PR #16859",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16859",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14490990930",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:24:27Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5553511122",
+   "excerpt": "The key was this for me ^",
+   "review_id": null
+  },
   {
    "id": "14490746136",
    "type": "PullRequestReviewEvent",
@@ -12916,6 +12951,20 @@
    "self": false
   },
   {
+   "id": "20158961714",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:12:19Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "20109500089",
    "type": "PushEvent",
    "action": null,
@@ -14733,14 +14782,14 @@
   "JabRef/jabref#16862": "koppor"
  },
  "stats": {
-  "additions": 2297,
-  "deletions": 387,
-  "changed_files": 176,
+  "additions": 2315,
+  "deletions": 396,
+  "changed_files": 185,
   "components": {
    "jablib": 941,
+   "docs": 150,
    "(root)": 40,
    "jabgui": 1218,
-   "docs": 123,
    ".github": 25,
    "openfasttrace": 31,
    "build-logic": 112,
@@ -14756,15 +14805,15 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 130,
+   "points": 131,
    "merged": 2,
    "reviews": 25,
-   "other": 74
+   "other": 75
   },
   {
    "login": "InAnYan",
-   "points": 114,
-   "merged": 0,
+   "points": 117,
+   "merged": 1,
    "reviews": 28,
    "other": 58
   },
@@ -14784,10 +14833,10 @@
   },
   {
    "login": "koppor",
-   "points": 67,
+   "points": 68,
    "merged": 8,
    "reviews": 2,
-   "other": 39
+   "other": 40
   },
   {
    "login": "pluto-han",
