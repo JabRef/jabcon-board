@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T00:23:41+00:00",
+ "generated_at": "2026-09-05T00:29:20+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -584,23 +584,20 @@
    "column": "done"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16853",
+   "id": "https://github.com/JabRef/jabref/pull/16830",
    "repo": "JabRef/jabref",
-   "number": 16853,
-   "title": "Fix BST entry preview formatting",
-   "url": "https://github.com/JabRef/jabref/pull/16853",
+   "number": 16830,
+   "title": "Preserve file attributes when replacing a file atomically",
+   "url": "https://github.com/JabRef/jabref/pull/16830",
    "type": "pr",
-   "draft": false,
-   "author": "subhramit",
+   "draft": true,
+   "author": "koppor",
    "assignees": [],
    "labels": [
-    "component: libre-office",
-    "component: entry-preview",
-    "project: jabcon",
-    "component: latex-file-support",
-    "component: bst"
+    "component: export-or-save",
+    "status: changes-required"
    ],
-   "updated_at": "2026-09-05T00:20:06Z",
+   "updated_at": "2026-09-05T00:29:04Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -621,26 +618,29 @@
     "component: latex-file-support",
     "component: bst"
    ],
-   "updated_at": "2026-09-05T00:00:27Z",
+   "updated_at": "2026-09-05T00:24:05Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16830",
+   "id": "https://github.com/JabRef/jabref/pull/16853",
    "repo": "JabRef/jabref",
-   "number": 16830,
-   "title": "Preserve file attributes when replacing a file atomically",
-   "url": "https://github.com/JabRef/jabref/pull/16830",
+   "number": 16853,
+   "title": "Fix BST entry preview formatting",
+   "url": "https://github.com/JabRef/jabref/pull/16853",
    "type": "pr",
    "draft": false,
-   "author": "koppor",
+   "author": "subhramit",
    "assignees": [],
    "labels": [
-    "component: export-or-save",
-    "status: changes-required"
+    "component: libre-office",
+    "component: entry-preview",
+    "project: jabcon",
+    "component: latex-file-support",
+    "component: bst"
    ],
-   "updated_at": "2026-09-05T00:00:01Z",
+   "updated_at": "2026-09-05T00:20:06Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -980,6 +980,25 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16852",
+   "repo": "JabRef/jabref",
+   "number": 16852,
+   "title": "Document improve AI Usage Policy",
+   "url": "https://github.com/JabRef/jabref/pull/16852",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "status: awaiting-second-review"
+   ],
+   "updated_at": "2026-09-05T00:29:13Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -2444,6 +2463,18 @@
  ],
  "events": [
   {
+   "id": "14465991401",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T00:29:05Z",
+   "summary": "reviewed PR #16852 (approved)",
+   "number": 16852,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
    "id": "14465847062",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -2500,6 +2531,18 @@
    "created_at": "2026-09-04T23:52:21Z",
    "summary": "merged PR #16832",
    "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14465995077",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:51:40Z",
+   "summary": "labeled PR #16852",
+   "number": 16852,
    "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
@@ -4818,33 +4861,21 @@
    "number": 2291,
    "merged": false,
    "url": "https://github.com/openjdk/jfx"
-  },
-  {
-   "id": "14428522874",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "openjdk/jfx",
-   "created_at": "2026-09-04T11:49:11Z",
-   "summary": "commented on PR #2291",
-   "number": 2291,
-   "merged": false,
-   "url": "https://github.com/openjdk/jfx"
-  },
-  {
-   "id": "20063467230",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Maran23",
-   "repo": "Maran23/jfx",
-   "created_at": "2026-09-04T11:47:44Z",
-   "summary": "pushed 0 commit(s) to 8090896-Allow-skipping-apps-build",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/Maran23/jfx"
   }
  ],
  "all_events": [
+  {
+   "id": "14465991401",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T00:29:05Z",
+   "summary": "reviewed PR #16852 (approved)",
+   "number": 16852,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
   {
    "id": "14465847062",
    "type": "PullRequestReviewEvent",
@@ -4902,6 +4933,18 @@
    "created_at": "2026-09-04T23:52:21Z",
    "summary": "merged PR #16832",
    "number": 16832,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref"
+  },
+  {
+   "id": "14465995077",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T23:51:40Z",
+   "summary": "labeled PR #16852",
+   "number": 16852,
    "merged": false,
    "url": "https://github.com/JabRef/jabref"
   },
@@ -7387,9 +7430,9 @@
  "leaderboard": [
   {
    "login": "koppor",
-   "points": 74,
+   "points": 76,
    "merged": 5,
-   "reviews": 18,
+   "reviews": 19,
    "other": 23
   },
   {
