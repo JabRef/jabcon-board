@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T16:59:20+00:00",
+ "generated_at": "2026-09-05T17:14:35+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1240,13 +1240,13 @@
    "author": "subhramit",
    "assignees": [],
    "labels": [
+    "status: ready-for-review",
     "component: search",
     "component: entry-editor",
     "component: entry-preview",
-    "status: changes-required",
     "project: jabcon"
    ],
-   "updated_at": "2026-09-05T14:10:03Z",
+   "updated_at": "2026-09-05T17:12:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2326,6 +2326,29 @@
    "focus": true
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16539",
+   "repo": "JabRef/jabref",
+   "number": 16539,
+   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "component: search",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T17:11:47Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16640",
    "repo": "JabRef/jabref",
    "number": 16640,
@@ -2367,29 +2390,6 @@
     "\ud83d\udccc Pinned"
    ],
    "updated_at": "2026-09-05T09:16:18Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16539",
-   "repo": "JabRef/jabref",
-   "number": 16539,
-   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
-   "url": "https://github.com/JabRef/jabref/issues/16539",
-   "type": "issue",
-   "draft": false,
-   "author": "ryan-carpenter",
-   "assignees": [
-    "subhramit"
-   ],
-   "labels": [
-    "component: search",
-    "\ud83d\udccc Pinned"
-   ],
-   "updated_at": "2026-09-05T02:27:32Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3554,6 +3554,65 @@
   }
  ],
  "events": [
+  {
+   "id": "14490717781",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:14:45Z",
+   "summary": "reviewed PR #16859 (approved)",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16859#pullrequestreview-5122186363",
+   "excerpt": "",
+   "review_id": 5122186363,
+   "self": false
+  },
+  {
+   "id": "14490611214",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:11:10Z",
+   "summary": "reviewed PR #16855 (commented)",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#pullrequestreview-5122170374",
+   "excerpt": "Good eye. I kept this one",
+   "review_id": 5122170374,
+   "self": true
+  },
+  {
+   "id": "14490610004",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:11:07Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3941376825",
+   "excerpt": "Good eye. I kept this one",
+   "review_id": 5122170374,
+   "self": true
+  },
+  {
+   "id": "20157867874",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T17:10:53Z",
+   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14487454929",
    "type": "IssueCommentEvent",
@@ -6428,68 +6487,68 @@
    "url": "https://github.com/JabRef/jabref/issues/16858",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14478817293",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:32:57Z",
-   "summary": "reviewed PR #16849 (commented)",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120692365",
-   "excerpt": "Even though qodo said that, I think it does not really make sense",
-   "review_id": 5120692365,
-   "self": false
-  },
-  {
-   "id": "14478816523",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:32:55Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940152775",
-   "excerpt": "Even though qodo said that, I think it does not really make sense",
-   "review_id": 5120692365,
-   "self": false
-  },
-  {
-   "id": "14478711993",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "itsallcode/openfasttrace-gradle",
-   "created_at": "2026-09-05T09:28:34Z",
-   "summary": "commented on #63: Resolution of the configuration 'oftRequirementConfig' was attempted without an exclusive lock",
-   "number": 63,
-   "merged": false,
-   "url": "https://github.com/itsallcode/openfasttrace-gradle/issues/63#issuecomment-5550884516",
-   "excerpt": "Workaround - https://github.com/JabRef/jabref/pull/16854",
-   "review_id": null
-  },
-  {
-   "id": "14478631615",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "openjdk/jfx",
-   "created_at": "2026-09-05T09:24:54Z",
-   "summary": "reviewed PR #2278 (commented)",
-   "number": 2278,
-   "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/2278#pullrequestreview-5120669364",
-   "excerpt": "Does it make sense to eventually consolidate, as you also suggested?",
-   "review_id": 5120669364,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14490717781",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:14:45Z",
+   "summary": "reviewed PR #16859 (approved)",
+   "number": 16859,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16859#pullrequestreview-5122186363",
+   "excerpt": "",
+   "review_id": 5122186363,
+   "self": false
+  },
+  {
+   "id": "14490611214",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:11:10Z",
+   "summary": "reviewed PR #16855 (commented)",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#pullrequestreview-5122170374",
+   "excerpt": "Good eye. I kept this one",
+   "review_id": 5122170374,
+   "self": true
+  },
+  {
+   "id": "14490610004",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T17:11:07Z",
+   "summary": "commented on PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#discussion_r3941376825",
+   "excerpt": "Good eye. I kept this one",
+   "review_id": 5122170374,
+   "self": true
+  },
+  {
+   "id": "20157867874",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T17:10:53Z",
+   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14487454929",
    "type": "IssueCommentEvent",
@@ -11285,6 +11344,20 @@
    "self": true
   },
   {
+   "id": "20157571232",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-04T23:37:23Z",
+   "summary": "created branch fix-bstvm",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14464205356",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -14608,10 +14681,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 123,
+   "points": 126,
    "merged": 2,
-   "reviews": 23,
-   "other": 71
+   "reviews": 24,
+   "other": 72
   },
   {
    "login": "InAnYan",
