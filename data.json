@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T09:54:44+00:00",
+ "generated_at": "2026-09-05T09:59:11+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -140,6 +140,42 @@
  },
  "cards": [
   {
+   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "repo": "itsallcode/openfasttrace",
+   "number": 583,
+   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "bug",
+    "ai-assisted"
+   ],
+   "updated_at": "2026-09-05T09:55:28Z",
+   "closed_at": "2026-09-05T09:19:16Z",
+   "merged_at": "2026-09-05T09:19:15Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 31,
+    "deletions": 0,
+    "changed_files": 3,
+    "components": {
+     "openfasttrace": 31
+    },
+    "refactorings": [
+     [
+      3,
+      "text block"
+     ]
+    ]
+   }
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16286",
    "repo": "JabRef/jabref",
    "number": 16286,
@@ -176,42 +212,6 @@
      [
       2,
       "immutable collection literals"
-     ]
-    ]
-   }
-  },
-  {
-   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "repo": "itsallcode/openfasttrace",
-   "number": 583,
-   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
-   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [
-    "koppor"
-   ],
-   "labels": [
-    "bug",
-    "ai-assisted"
-   ],
-   "updated_at": "2026-09-05T09:19:44Z",
-   "closed_at": "2026-09-05T09:19:16Z",
-   "merged_at": "2026-09-05T09:19:15Z",
-   "column": "done",
-   "focus": false,
-   "stats": {
-    "additions": 31,
-    "deletions": 0,
-    "changed_files": 3,
-    "components": {
-     "openfasttrace": 31
-    },
-    "refactorings": [
-     [
-      3,
-      "text block"
      ]
     ]
    }
@@ -3067,6 +3067,51 @@
   }
  ],
  "events": [
+  {
+   "id": "14479442487",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:59:16Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5120783461",
+   "excerpt": "But it seems to work without?",
+   "review_id": 5120783461,
+   "self": true
+  },
+  {
+   "id": "14479442151",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:59:15Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3940220542",
+   "excerpt": "But it seems to work without?",
+   "review_id": 5120783461,
+   "self": true
+  },
+  {
+   "id": "14479383928",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:56:43Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940214960",
+   "excerpt": "@7amo10 why did you mark this as resolved, if it's kinda right?",
+   "review_id": 5120713792,
+   "self": false
+  },
   {
    "id": "14479315325",
    "type": "PullRequestEvent",
@@ -5950,54 +5995,54 @@
    "excerpt": "invokeAndWait is better, because the API also called it like that",
    "review_id": 5118392455,
    "self": false
-  },
-  {
-   "id": "14462755106",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T22:46:13Z",
-   "summary": "commented on PR #16850",
-   "number": 16850,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3938361784",
-   "excerpt": "invokeAndWait is better, because the API also called it like that",
-   "review_id": 5118392455,
-   "self": false
-  },
-  {
-   "id": "14462714677",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T22:45:02Z",
-   "summary": "reviewed PR #16850 (commented)",
-   "number": 16850,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5118387002",
-   "excerpt": "must really be synchronized?",
-   "review_id": 5118387002,
-   "self": false
-  },
-  {
-   "id": "14462714001",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T22:45:00Z",
-   "summary": "commented on PR #16850",
-   "number": 16850,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3938356460",
-   "excerpt": "must really be synchronized?",
-   "review_id": 5118387002,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14479442487",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:59:16Z",
+   "summary": "reviewed PR #16830 (commented)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5120783461",
+   "excerpt": "But it seems to work without?",
+   "review_id": 5120783461,
+   "self": true
+  },
+  {
+   "id": "14479442151",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:59:15Z",
+   "summary": "commented on PR #16830",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3940220542",
+   "excerpt": "But it seems to work without?",
+   "review_id": 5120783461,
+   "self": true
+  },
+  {
+   "id": "14479383928",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:56:43Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940214960",
+   "excerpt": "@7amo10 why did you mark this as resolved, if it's kinda right?",
+   "review_id": 5120713792,
+   "self": false
+  },
   {
    "id": "14479315325",
    "type": "PullRequestEvent",
@@ -11257,9 +11302,9 @@
   "deletions": 248,
   "changed_files": 142,
   "components": {
+   "openfasttrace": 31,
    "jabgui": 792,
    "jablib": 875,
-   "openfasttrace": 31,
    ".github": 1,
    "(root)": 35,
    "build-logic": 112,
@@ -11290,10 +11335,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 68,
+   "points": 69,
    "merged": 0,
    "reviews": 17,
-   "other": 34
+   "other": 35
   },
   {
    "login": "koppor",
