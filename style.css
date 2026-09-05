@@ -19,6 +19,7 @@ header h1 { margin: 0; font-size: 2.4rem; letter-spacing: .05em; }
 #phases, #dates { display: flex; justify-content: space-between; }
 #phases { position: relative; height: 1rem; }
 #phases span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+#phases .phase-left { color: var(--fg); font-weight: normal; }
 #bar { position: relative; height: .7rem; background: var(--border); border-radius: .35rem; overflow: hidden; }
 #elapsed { height: 100%; background: var(--accent); border-radius: .35rem; width: 0; transition: width 1s linear; }
 #ticks span { position: absolute; top: 0; bottom: 0; width: .15rem; background: var(--bg); transform: translateX(-50%); }

@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T09:52:07+00:00",
+ "generated_at": "2026-09-05T09:54:44+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -139,6 +139,47 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16286",
+   "repo": "JabRef/jabref",
+   "number": 16286,
+   "title": "Support modifier keys entry drag drop",
+   "url": "https://github.com/JabRef/jabref/pull/16286",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "component: external-files",
+    "good first issue",
+    "status: to-be-merged",
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T09:53:28Z",
+   "closed_at": "2026-09-04T23:26:52Z",
+   "merged_at": "2026-09-04T23:26:52Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 53,
+    "deletions": 8,
+    "changed_files": 6,
+    "components": {
+     "jabgui": 49,
+     "jablib": 12
+    },
+    "refactorings": [
+     [
+      3,
+      "arrow switch"
+     ],
+     [
+      2,
+      "immutable collection literals"
+     ]
+    ]
+   }
+  },
   {
    "id": "https://github.com/itsallcode/openfasttrace/pull/583",
    "repo": "itsallcode/openfasttrace",
@@ -335,47 +376,6 @@
      ".idea": 1
     },
     "refactorings": []
-   }
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16286",
-   "repo": "JabRef/jabref",
-   "number": 16286,
-   "title": "Support modifier keys entry drag drop",
-   "url": "https://github.com/JabRef/jabref/pull/16286",
-   "type": "pr",
-   "draft": false,
-   "author": "Eng-YasminKotb",
-   "assignees": [],
-   "labels": [
-    "component: external-files",
-    "good first issue",
-    "status: to-be-merged",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-04T23:26:52Z",
-   "closed_at": "2026-09-04T23:26:52Z",
-   "merged_at": "2026-09-04T23:26:52Z",
-   "column": "done",
-   "focus": false,
-   "stats": {
-    "additions": 53,
-    "deletions": 8,
-    "changed_files": 6,
-    "components": {
-     "jabgui": 49,
-     "jablib": 12
-    },
-    "refactorings": [
-     [
-      3,
-      "arrow switch"
-     ],
-     [
-      2,
-      "immutable collection literals"
-     ]
-    ]
    }
   },
   {
@@ -778,6 +778,27 @@
    "closed_at": "2026-09-04T21:19:55Z",
    "merged_at": null,
    "column": "done",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16826",
+   "repo": "JabRef/jabref",
+   "number": 16826,
+   "title": "Register the autosave manager for library changes again",
+   "url": "https://github.com/JabRef/jabref/pull/16826",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: waiting-for-feedback",
+    "status: changes-required",
+    "component: backup"
+   ],
+   "updated_at": "2026-09-05T09:53:26Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
    "focus": false
   },
   {
@@ -1355,6 +1376,29 @@
     "status: stale"
    ],
    "updated_at": "2026-09-04T03:13:28Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16620",
+   "repo": "JabRef/jabref",
+   "number": 16620,
+   "title": "Fix closing of combo box popup on Escape key",
+   "url": "https://github.com/JabRef/jabref/pull/16620",
+   "type": "pr",
+   "draft": false,
+   "author": "Devansh-18155",
+   "assignees": [
+    "InAnYan"
+   ],
+   "labels": [
+    "component: preferences",
+    "good first issue",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-05T09:53:09Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1990,29 +2034,6 @@
     "\ud83d\udccc Pinned"
    ],
    "updated_at": "2026-09-02T07:51:25Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16620",
-   "repo": "JabRef/jabref",
-   "number": 16620,
-   "title": "Fix closing of combo box popup on Escape key",
-   "url": "https://github.com/JabRef/jabref/pull/16620",
-   "type": "pr",
-   "draft": false,
-   "author": "Devansh-18155",
-   "assignees": [
-    "InAnYan"
-   ],
-   "labels": [
-    "component: preferences",
-    "good first issue",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-02T03:23:27Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog",
@@ -3046,6 +3067,49 @@
   }
  ],
  "events": [
+  {
+   "id": "14479315325",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:53:48Z",
+   "summary": "labeled PR #16470",
+   "number": 16470,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16470",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14479295577",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:53:04Z",
+   "summary": "commented on #16826: Register the autosave manager for library changes again",
+   "number": 16826,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16826#issuecomment-5551009070",
+   "excerpt": "In main:",
+   "review_id": null
+  },
+  {
+   "id": "14479289522",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:52:49Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940206410",
+   "excerpt": "I would name it a bit differently, so that the class is swhid, but the variable is like content. But that's a nitpicj",
+   "review_id": 5120713792,
+   "self": false
+  },
   {
    "id": "14479251145",
    "type": "PullRequestReviewCommentEvent",
@@ -4216,6 +4280,20 @@
    "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
    "review_id": 5119360151,
    "self": true
+  },
+  {
+   "id": "20120402094",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T02:03:39Z",
+   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14467769584",
@@ -5917,66 +5995,52 @@
    "excerpt": "must really be synchronized?",
    "review_id": 5118387002,
    "self": false
-  },
-  {
-   "id": "20113147643",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Maran23",
-   "repo": "Maran23/jfx",
-   "created_at": "2026-09-04T22:35:34Z",
-   "summary": "pushed 0 commit(s) to cell-state-unify",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/Maran23/jfx",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14462352188",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T22:34:32Z",
-   "summary": "reviewed PR #16820 (approved)",
-   "number": 16820,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16820#pullrequestreview-5118338199",
-   "excerpt": "",
-   "review_id": 5118338199,
-   "self": false
-  },
-  {
-   "id": "14462280113",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T22:32:33Z",
-   "summary": "opened PR #16850",
-   "number": 16850,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16850",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14462635862",
-   "type": "PullRequestEvent",
-   "action": "assigned",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T22:32:33Z",
-   "summary": "assigned PR #16850",
-   "number": 16850,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16850",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14479315325",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:53:48Z",
+   "summary": "labeled PR #16470",
+   "number": 16470,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16470",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14479295577",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:53:04Z",
+   "summary": "commented on #16826: Register the autosave manager for library changes again",
+   "number": 16826,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16826#issuecomment-5551009070",
+   "excerpt": "In main:",
+   "review_id": null
+  },
+  {
+   "id": "14479289522",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T09:52:49Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940206410",
+   "excerpt": "I would name it a bit differently, so that the class is swhid, but the variable is like content. But that's a nitpicj",
+   "review_id": 5120713792,
+   "self": false
+  },
   {
    "id": "14479251145",
    "type": "PullRequestReviewCommentEvent",
@@ -7147,6 +7211,20 @@
    "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
    "review_id": 5119360151,
    "self": true
+  },
+  {
+   "id": "20120402094",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T02:03:39Z",
+   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14467769584",
@@ -11179,14 +11257,14 @@
   "deletions": 248,
   "changed_files": 142,
   "components": {
-   "openfasttrace": 31,
    "jabgui": 792,
+   "jablib": 875,
+   "openfasttrace": 31,
    ".github": 1,
    "(root)": 35,
    "build-logic": 112,
    "jabsrv": 23,
    "docs": 102,
-   "jablib": 875,
    ".idea": 1,
    ".jbang": 6,
    "jabkit": 8,
@@ -11198,10 +11276,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 79,
+   "points": 80,
    "merged": 1,
    "reviews": 15,
-   "other": 46
+   "other": 47
   },
   {
    "login": "Maran23",
@@ -11212,17 +11290,17 @@
   },
   {
    "login": "InAnYan",
-   "points": 67,
+   "points": 68,
    "merged": 0,
    "reviews": 17,
-   "other": 33
+   "other": 34
   },
   {
    "login": "koppor",
-   "points": 43,
+   "points": 44,
    "merged": 6,
    "reviews": 1,
-   "other": 23
+   "other": 24
   },
   {
    "login": "Siedlerchr",
