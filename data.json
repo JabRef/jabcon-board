@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T13:18:34+00:00",
+ "generated_at": "2026-09-05T13:26:53+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1806,6 +1806,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "status: changes-required",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-05T13:22:29Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16846",
    "repo": "JabRef/jabref",
    "number": 16846,
@@ -1823,7 +1846,7 @@
     "component: css",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T13:12:52Z",
+   "updated_at": "2026-09-05T13:20:40Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1872,29 +1895,6 @@
     "rfr"
    ],
    "updated_at": "2026-09-05T12:30:32Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "status: changes-required",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T12:22:13Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3516,6 +3516,81 @@
  ],
  "events": [
   {
+   "id": "14484402242",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:22:29Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940744469",
+   "excerpt": "Okay, thank you for the explanation.",
+   "review_id": 5121393220,
+   "self": false
+  },
+  {
+   "id": "14484402233",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:22:29Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5121393220",
+   "excerpt": "Okay, thank you for the explanation.",
+   "review_id": 5121393220,
+   "self": false
+  },
+  {
+   "id": "14484379893",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:21:37Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5121391321",
+   "excerpt": "Ah,if it's consistent then this is good",
+   "review_id": 5121391321,
+   "self": false
+  },
+  {
+   "id": "14484379909",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:21:36Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940742361",
+   "excerpt": "Ah,if it's consistent then this is good",
+   "review_id": 5121391321,
+   "self": false
+  },
+  {
+   "id": "14484340210",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T13:20:04Z",
+   "summary": "commented on PR #2015",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#discussion_r3940739013",
+   "excerpt": "I was still wondering if it might make sense to log a warning or just an info that this is really is a fallback implementation and develope\u2026",
+   "review_id": 5121388170,
+   "self": false
+  },
+  {
    "id": "14484217704",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -3787,6 +3862,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551441171",
    "excerpt": "Less errors now, but still get this one:",
+   "review_id": null
+  },
+  {
+   "id": "20138967482",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:21:39Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -6355,97 +6444,84 @@
    "excerpt": "Yes good idea, CSLFormatUtils does that. Though I was talking more about getting the failure context (\"what\" failed) during the test failur\u2026",
    "review_id": 5120652411,
    "self": true
-  },
-  {
-   "id": "20126584629",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-05T09:14:41Z",
-   "summary": "pushed 0 commit(s) to fix-bst-preview",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14478276718",
-   "type": "IssuesEvent",
-   "action": "closed",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:09:25Z",
-   "summary": "closed issue #16728: Add highlight words mode to Git Diff view",
-   "number": 16728,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16728",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14478254206",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:08:24Z",
-   "summary": "reviewed PR #16853 (commented)",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120636613",
-   "excerpt": "I first used it in https://github.com/JabRef/jabref/blob/b52e3d22841c5022aede529d785397ad1a1f2dd9/jablib/src/main/java/org/jabref/logic/ope\u2026",
-   "review_id": 5120636613,
-   "self": true
-  },
-  {
-   "id": "14478254046",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:08:23Z",
-   "summary": "commented on PR #16853",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3940100591",
-   "excerpt": "I first used it in https://github.com/JabRef/jabref/blob/b52e3d22841c5022aede529d785397ad1a1f2dd9/jablib/src/main/java/org/jabref/logic/ope\u2026",
-   "review_id": 5120636613,
-   "self": true
-  },
-  {
-   "id": "14478242785",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:07:54Z",
-   "summary": "reviewed PR #16853 (commented)",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5120634875",
-   "excerpt": "Adding comments on top of each test can help maybe",
-   "review_id": 5120634875,
-   "self": false
-  },
-  {
-   "id": "14478242524",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:07:53Z",
-   "summary": "commented on PR #16853",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3940099308",
-   "excerpt": "Adding comments on top of each test can help maybe",
-   "review_id": 5120634875,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14484402242",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:22:29Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940744469",
+   "excerpt": "Okay, thank you for the explanation.",
+   "review_id": 5121393220,
+   "self": false
+  },
+  {
+   "id": "14484402233",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:22:29Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5121393220",
+   "excerpt": "Okay, thank you for the explanation.",
+   "review_id": 5121393220,
+   "self": false
+  },
+  {
+   "id": "14484379893",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:21:37Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5121391321",
+   "excerpt": "Ah,if it's consistent then this is good",
+   "review_id": 5121391321,
+   "self": false
+  },
+  {
+   "id": "14484379909",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T13:21:36Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940742361",
+   "excerpt": "Ah,if it's consistent then this is good",
+   "review_id": 5121391321,
+   "self": false
+  },
+  {
+   "id": "14484340210",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T13:20:04Z",
+   "summary": "commented on PR #2015",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#discussion_r3940739013",
+   "excerpt": "I was still wondering if it might make sense to log a warning or just an info that this is really is a fallback implementation and develope\u2026",
+   "review_id": 5121388170,
+   "self": false
+  },
   {
    "id": "14484217704",
    "type": "IssueCommentEvent",
@@ -6718,6 +6794,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551441171",
    "excerpt": "Less errors now, but still get this one:",
+   "review_id": null
+  },
+  {
+   "id": "20138967482",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:21:39Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -14112,7 +14202,8 @@
   "JabRef/jabref#16620": "Devansh-18155",
   "JabRef/jabref#16858": "Siedlerchr",
   "JabRef/jabref#16856": "koppor",
-  "JabRef/jabref#16838": "koppor"
+  "JabRef/jabref#16838": "koppor",
+  "openjdk/jfx#2015": "mstr2"
  },
  "stats": {
   "additions": 2289,
@@ -14145,17 +14236,17 @@
   },
   {
    "login": "InAnYan",
-   "points": 100,
+   "points": 106,
    "merged": 0,
-   "reviews": 25,
-   "other": 50
+   "reviews": 27,
+   "other": 52
   },
   {
    "login": "Maran23",
-   "points": 87,
+   "points": 88,
    "merged": 0,
    "reviews": 26,
-   "other": 35
+   "other": 36
   },
   {
    "login": "Siedlerchr",
@@ -14166,10 +14257,10 @@
   },
   {
    "login": "koppor",
-   "points": 62,
+   "points": 63,
    "merged": 8,
    "reviews": 2,
-   "other": 34
+   "other": 35
   },
   {
    "login": "pluto-han",
