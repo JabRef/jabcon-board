@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T03:57:42+00:00",
+ "generated_at": "2026-09-05T04:20:56+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -612,6 +612,58 @@
    "closed_at": "2026-09-04T21:19:55Z",
    "merged_at": null,
    "column": "done"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/14493",
+   "repo": "JabRef/jabref",
+   "number": 14493,
+   "title": "Add OAuth2 flow for CiteDrive",
+   "url": "https://github.com/JabRef/jabref/pull/14493",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: waiting-for-feedback",
+    "component: import-load",
+    "component: preferences",
+    "status: changes-required",
+    "\ud83d\udccc Pinned",
+    "component: jabsrv"
+   ],
+   "updated_at": "2026-09-05T04:16:01Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16174",
+   "repo": "JabRef/jabref",
+   "number": 16174,
+   "title": "Replace ControlsFX/mvvmfx-validation with org.jfxcore:validation",
+   "url": "https://github.com/JabRef/jabref/pull/16174",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "component: import-load",
+    "component: preferences",
+    "component: shared-database",
+    "component: external-files",
+    "component: entry-editor",
+    "status: changes-required",
+    "component: automatic-field-editor",
+    "\ud83d\udccc Pinned",
+    "component: git",
+    "component: xmp",
+    "component: latex-file-support"
+   ],
+   "updated_at": "2026-09-05T04:15:01Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
   },
   {
    "id": "https://github.com/apache/spark/pull/58225",
@@ -2556,6 +2608,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14471457547",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T04:16:01Z",
+   "summary": "commented on #14493: Add OAuth2 flow for CiteDrive",
+   "number": 14493,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/14493#issuecomment-5549279787",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict. One file conflicted: jabgui/src/main/java/org/jabref/gui/desktop/os/Nati\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14471435195",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T04:15:01Z",
+   "summary": "commented on #16174: Replace ControlsFX/mvvmfx-validation with org.jfxcore:validation",
+   "number": 16174,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16174#issuecomment-5549274785",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflicts. Two files conflicted:",
+   "review_id": null
+  },
   {
    "id": "14470833176",
    "type": "IssueCommentEvent",
@@ -5472,39 +5552,37 @@
    "excerpt": "global[\"Global Classes\"]",
    "review_id": 5117293983,
    "self": false
-  },
-  {
-   "id": "14455612246",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:58:29Z",
-   "summary": "commented on PR #16760",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937498460",
-   "excerpt": "direction TD",
-   "review_id": 5117293983,
-   "self": false
-  },
-  {
-   "id": "14455601952",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:58:16Z",
-   "summary": "commented on PR #16760",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3937497062",
-   "excerpt": "flowchart TD",
-   "review_id": 5117293983,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14471457547",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T04:16:01Z",
+   "summary": "commented on #14493: Add OAuth2 flow for CiteDrive",
+   "number": 14493,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/14493#issuecomment-5549279787",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict. One file conflicted: jabgui/src/main/java/org/jabref/gui/desktop/os/Nati\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14471435195",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T04:15:01Z",
+   "summary": "commented on #16174: Replace ControlsFX/mvvmfx-validation with org.jfxcore:validation",
+   "number": 16174,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16174#issuecomment-5549274785",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflicts. Two files conflicted:",
+   "review_id": null
+  },
   {
    "id": "14470833176",
    "type": "IssueCommentEvent",
@@ -9282,10 +9360,10 @@
   },
   {
    "login": "koppor",
-   "points": 24,
+   "points": 26,
    "merged": 5,
    "reviews": 1,
-   "other": 7
+   "other": 9
   },
   {
    "login": "calixtus",
