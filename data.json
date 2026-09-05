@@ -47,8 +47,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 12,
-   "closed": 116,
+   "open": 11,
+   "closed": 117,
    "baseline": 113
   },
   {
@@ -56,8 +56,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0",
    "url": "https://github.com/JabRef/jabref/milestone/24",
-   "open": 23,
-   "closed": 46,
+   "open": 22,
+   "closed": 47,
    "baseline": 45
   },
   {
@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T22:25:49+00:00",
+ "generated_at": "2026-09-05T22:34:21+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1040,6 +1040,52 @@
     },
     "refactorings": []
    }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/11454",
+   "repo": "JabRef/jabref",
+   "number": 11454,
+   "title": "Crash erased bibliography file",
+   "url": "https://github.com/JabRef/jabref/issues/11454",
+   "type": "issue",
+   "draft": false,
+   "author": "IssaHanou",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: entry-editor",
+    "component: backup"
+   ],
+   "updated_at": "2026-09-05T22:33:01Z",
+   "closed_at": "2026-09-05T22:32:56Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16479",
+   "repo": "JabRef/jabref",
+   "number": 16479,
+   "title": "Fix OpenAlexCiationFetcherTest",
+   "url": "https://github.com/JabRef/jabref/issues/16479",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "albCarlosRodrigues"
+   ],
+   "labels": [
+    "component: fetcher",
+    "\ud83d\udccd Assigned"
+   ],
+   "updated_at": "2026-09-05T22:28:37Z",
+   "closed_at": "2026-09-05T22:28:31Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/15721",
@@ -2509,29 +2555,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/11454",
-   "repo": "JabRef/jabref",
-   "number": 11454,
-   "title": "Crash erased bibliography file",
-   "url": "https://github.com/JabRef/jabref/issues/11454",
-   "type": "issue",
-   "draft": false,
-   "author": "IssaHanou",
-   "assignees": [
-    "koppor"
-   ],
-   "labels": [
-    "component: entry-editor",
-    "component: backup"
-   ],
-   "updated_at": "2026-08-30T19:16:27Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/issues/16042",
    "repo": "JabRef/jabref",
    "number": 16042,
@@ -3584,6 +3607,48 @@
   }
  ],
  "events": [
+  {
+   "id": "14498983785",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T22:32:56Z",
+   "summary": "closed issue #11454: Crash erased bibliography file",
+   "number": 11454,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/11454",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14498982352",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T22:32:51Z",
+   "summary": "commented on #11454: Crash erased bibliography file",
+   "number": 11454,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/11454#issuecomment-5555236322",
+   "excerpt": "This can be considered fixed now!",
+   "review_id": null
+  },
+  {
+   "id": "14498887440",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T22:28:32Z",
+   "summary": "closed issue #16479: Fix OpenAlexCiationFetcherTest",
+   "number": 16479,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16479",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14496505480",
    "type": "IssueCommentEvent",
@@ -4756,6 +4821,20 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T11:11:01Z",
    "summary": "created branch draft-removes-label",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20182804680",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:10:52Z",
+   "summary": "pushed 0 commit(s) to aux-sync-path",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
@@ -6443,69 +6522,51 @@
    "url": "https://github.com/JabRef/jabref/pull/16851#issuecomment-5551057882",
    "excerpt": "We could have added a CHANGELOG.md entry - next time ^^",
    "review_id": null
-  },
-  {
-   "id": "14479533305",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:03:03Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940230602",
-   "excerpt": "we don't use underscores in test names. Though I agree it's more readable. But I think it's better to stick to current conventions",
-   "review_id": 5120713792,
-   "self": false
-  },
-  {
-   "id": "14479525966",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:02:44Z",
-   "summary": "reviewed PR #16851 (approved)",
-   "number": 16851,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16851#pullrequestreview-5120793399",
-   "excerpt": "",
-   "review_id": 5120793399,
-   "self": false
-  },
-  {
-   "id": "14479484949",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:01:01Z",
-   "summary": "reviewed PR #16826 (dismissed)",
-   "number": 16826,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16826#pullrequestreview-5120788933",
-   "excerpt": "",
-   "review_id": 5120788933,
-   "self": false
-  },
-  {
-   "id": "14479442487",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:59:16Z",
-   "summary": "reviewed PR #16830 (commented)",
-   "number": 16830,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5120783461",
-   "excerpt": "But it seems to work without?",
-   "review_id": 5120783461,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14498983785",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T22:32:56Z",
+   "summary": "closed issue #11454: Crash erased bibliography file",
+   "number": 11454,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/11454",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14498982352",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T22:32:51Z",
+   "summary": "commented on #11454: Crash erased bibliography file",
+   "number": 11454,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/11454#issuecomment-5555236322",
+   "excerpt": "This can be considered fixed now!",
+   "review_id": null
+  },
+  {
+   "id": "14498887440",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T22:28:32Z",
+   "summary": "closed issue #16479: Fix OpenAlexCiationFetcherTest",
+   "number": 16479,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16479",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14496505480",
    "type": "IssueCommentEvent",
@@ -7678,6 +7739,20 @@
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T11:11:01Z",
    "summary": "created branch draft-removes-label",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20182804680",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:10:52Z",
+   "summary": "pushed 0 commit(s) to aux-sync-path",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
@@ -15431,10 +15506,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 146,
+   "points": 147,
    "merged": 2,
    "reviews": 26,
-   "other": 88
+   "other": 89
   },
   {
    "login": "InAnYan",
@@ -15459,10 +15534,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 73,
+   "points": 76,
    "merged": 1,
    "reviews": 22,
-   "other": 26
+   "other": 29
   },
   {
    "login": "pluto-han",
