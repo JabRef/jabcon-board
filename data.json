@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T21:02:32+00:00",
+ "generated_at": "2026-09-05T21:16:23+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2372,7 +2372,7 @@
    "labels": [
     "component: ui"
    ],
-   "updated_at": "2026-09-05T20:47:53Z",
+   "updated_at": "2026-09-05T21:08:18Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
