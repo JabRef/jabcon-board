@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T03:50:20+00:00",
+ "generated_at": "2026-09-05T03:57:42+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -1073,7 +1073,7 @@
     "good first issue",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-05T03:42:15Z",
+   "updated_at": "2026-09-05T03:53:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
