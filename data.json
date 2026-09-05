@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T20:46:55+00:00",
+ "generated_at": "2026-09-05T20:54:04+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2372,7 +2372,7 @@
    "labels": [
     "component: ui"
    ],
-   "updated_at": "2026-09-05T20:34:05Z",
+   "updated_at": "2026-09-05T20:47:53Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3584,6 +3584,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14496505480",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T20:50:34Z",
+   "summary": "commented on #16787: Use consistent padding, gaps, font-sizes",
+   "number": 16787,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16787#issuecomment-5554696091",
+   "excerpt": "This PR depends on the others to be merged, and is not really up for grab tbh.",
+   "review_id": null
+  },
+  {
+   "id": "14496432478",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T20:47:53Z",
+   "summary": "commented on #16029: Improve Theme Picker",
+   "number": 16029,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16029#issuecomment-5554681801",
+   "excerpt": "it should Preview both, as all themes usually (should) have both color schemes.",
+   "review_id": null
+  },
   {
    "id": "14494772979",
    "type": "PullRequestReviewEvent",
@@ -6479,39 +6507,37 @@
    "url": "https://github.com/JabRef/jabref/issues/16640#issuecomment-5550980862",
    "excerpt": "@thesauravpoddar Hey Saurav, although we really appreciate the sincerity with which you have prepared for this issue, currently [JabCon](ht\u2026",
    "review_id": null
-  },
-  {
-   "id": "14479092968",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:44:11Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940186687",
-   "excerpt": "it might have or might not?",
-   "review_id": 5120713792,
-   "self": false
-  },
-  {
-   "id": "14479004676",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:40:39Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940174326",
-   "excerpt": "Sure that no access modifiers?",
-   "review_id": 5120713792,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14496505480",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T20:50:34Z",
+   "summary": "commented on #16787: Use consistent padding, gaps, font-sizes",
+   "number": 16787,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16787#issuecomment-5554696091",
+   "excerpt": "This PR depends on the others to be merged, and is not really up for grab tbh.",
+   "review_id": null
+  },
+  {
+   "id": "14496432478",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T20:47:53Z",
+   "summary": "commented on #16029: Improve Theme Picker",
+   "number": 16029,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16029#issuecomment-5554681801",
+   "excerpt": "it should Preview both, as all themes usually (should) have both color schemes.",
+   "review_id": null
+  },
   {
    "id": "14494772979",
    "type": "PullRequestReviewEvent",
@@ -10243,6 +10269,20 @@
    "excerpt": "",
    "review_id": 5120373882,
    "self": false
+  },
+  {
+   "id": "20175497803",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "Eng-YasminKotb/jabref",
+   "created_at": "2026-09-05T07:51:31Z",
+   "summary": "pushed 0 commit(s) to Enhance-developer-documentation",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Eng-YasminKotb/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "20123658182",
@@ -15234,17 +15274,17 @@
   },
   {
    "login": "InAnYan",
-   "points": 118,
+   "points": 119,
    "merged": 1,
    "reviews": 28,
-   "other": 59
+   "other": 60
   },
   {
    "login": "Maran23",
-   "points": 104,
+   "points": 106,
    "merged": 0,
    "reviews": 32,
-   "other": 40
+   "other": 42
   },
   {
    "login": "koppor",
