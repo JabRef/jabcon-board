@@ -22,21 +22,22 @@ function ago(iso) {
 function renderColumn(id, cards) {
   const org = data.config.org + '/';
   const last = (c) => c.merged_at || c.closed_at || c.updated_at;
-  const sorted = [...cards].sort((a, b) => last(b).localeCompare(last(a)));
+  const sorted = [...cards].sort((a, b) => (b.focus - a.focus) || last(b).localeCompare(last(a)));
+  const nFocus = sorted.filter((c) => c.focus).length;
   const box = $(`#${id} .cards`);
   const scrollTop = box.scrollTop;
   $(`#${id} .count`).textContent = cards.length;
-  box.innerHTML = sorted.map((c) => {
+  box.innerHTML = sorted.map((c, i) => (i === nFocus && nFocus && i < sorted.length ? '<div class="divider">other</div>' : '') + (() => {
     const other = !c.repo.startsWith(org);
     const tags = [];
     if (c.draft) tags.push('<span class="tag draft">draft</span>');
     if (c.merged_at) tags.push('<span class="tag merged">merged</span>');
     else if (c.closed_at) tags.push('<span class="tag closed">closed</span>');
     if (c.labels.includes('ready-for-review')) tags.push('<span class="tag rfr">ready for review</span>');
-    return `<div class="card ${other ? 'other' : ''} ${c.draft ? 'draft' : ''}" style="border-left-color:${color[c.author] || 'var(--border)'}">
+    return `<div class="card ${other ? 'other' : ''} ${c.draft ? 'draft' : ''} ${c.focus ? 'focus' : ''}" style="border-left-color:${color[c.author] || 'var(--border)'}">
       ${avatar(c.author)}${link(c.url, `<span class="num">${c.type === 'pr' ? '⇄' : '◉'} #${c.number}</span>
       <span class="title">${esc(c.title)}</span>`, 'main')}${tags.join('')}${repoLink(c.repo, other ? c.repo : c.repo.slice(org.length))}</div>`;
-  }).join('');
+  })()).join('');
   box.scrollTop = scrollTop;
   updateMore(box);
 }
@@ -57,7 +58,11 @@ function renderStats() {
   const max = comps[0]?.[1] || 1;
   $('#components').innerHTML = comps.map(([name, n]) =>
     `<span>${esc(name)}</span><div class="bar" style="width:${(100 * n / max).toFixed(1)}%"></div><span>${n}</span>`).join('');
-  $('#milestones').innerHTML = (data.milestones || []).map((m) => {
+  const f = data.focus;
+  $('#milestones').innerHTML = (f ? `<div class="milestone focus"><div class="label">${link(f.url, `${esc(f.label)}`)}
+      <span>${f.closed}/${f.closed + f.open} <span class="muted">${f.open} to go</span></span></div>
+      <div class="bar"><div class="during" style="width:${(100 * f.closed / (f.closed + f.open || 1)).toFixed(1)}%"></div></div></div>` : '') +
+    (data.milestones || []).map((m) => {
     const total = m.open + m.closed || 1, during = m.closed - m.baseline;
     return `<div class="milestone"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}
       <span>${m.closed}/${total}${during ? ` <span class="muted">+${during}</span>` : ''} <span class="muted">${m.open} to go</span></span></div>
