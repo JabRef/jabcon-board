@@ -27,6 +27,7 @@ header h1 { margin: 0; font-size: 2.4rem; letter-spacing: .05em; }
 #updated { width: 2.2rem; height: 2.2rem; border-radius: 50%; flex: none;
   background: conic-gradient(var(--accent) calc(var(--p, 0) * 100%), var(--border) 0); position: relative; }
 #updated::after { content: ""; position: absolute; inset: .45rem; border-radius: 50%; background: var(--panel); }
+#updated.overdue { background: var(--muted); } /* full ring, next run late but not yet stale */
 header.stale #updated { background: var(--warn); }
 header.stale #updated::after { content: "!"; display: grid; place-items: center; font-weight: bold; }
 #logo { height: 3.5rem; }

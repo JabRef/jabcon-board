@@ -11,7 +11,7 @@ screen width (Full HD and UHD look the same); append `?scale=0.8` to fit more ca
 
 - `scripts/collect.py` queries the GitHub search and events APIs for the participants' **public** activity
   in any repository and writes `data.json`. Cards from the configured org are shown normally, other repos dimmed.
-  The ring next to the logo fills up until the next data run (5 min) and turns amber when data is older than 30 min. "In progress" only lists open PRs touched since the start; "Backlog" lists the org's `ready-for-review` PRs
+  The ring next to the logo fills up over the typical gap between data runs (10 min; GitHub runs the 5-minute schedule only best-effort), turns gray when a run is late and amber when data is older than 30 min. "In progress" only lists open PRs touched since the start; "Backlog" lists the org's `ready-for-review` PRs
   and everything assigned to a participant.
 - `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute, the video every 15 minutes, and reloads itself when a new version of the site was deployed.
 - `.github/workflows/board.yml` runs every 5 minutes (and on push to `main`), copies `site/` and a fresh
