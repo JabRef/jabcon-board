@@ -97,7 +97,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T07:45:37+00:00",
+ "generated_at": "2026-09-05T07:53:00+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -666,6 +666,23 @@
    "focus": false
   },
   {
+   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "repo": "itsallcode/openfasttrace",
+   "number": 583,
+   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
+   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T07:51:25Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -1020,23 +1037,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "repo": "itsallcode/openfasttrace",
-   "number": 583,
-   "title": "#582: Fix Markdown importer dropping items after a code block following a title",
-   "url": "https://github.com/itsallcode/openfasttrace/pull/583",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-04T22:23:47Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16831",
    "repo": "JabRef/jabref",
    "number": 16831,
@@ -1204,6 +1204,25 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16760",
+   "repo": "JabRef/jabref",
+   "number": 16760,
+   "title": "Enhance developer documentation",
+   "url": "https://github.com/JabRef/jabref/pull/16760",
+   "type": "pr",
+   "draft": false,
+   "author": "Eng-YasminKotb",
+   "assignees": [],
+   "labels": [
+    "status: no-bot-comments"
+   ],
+   "updated_at": "2026-09-05T07:51:49Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16755",
    "repo": "JabRef/jabref",
    "number": 16755,
@@ -1219,7 +1238,7 @@
     "good first issue",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-05T07:39:35Z",
+   "updated_at": "2026-09-05T07:49:11Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1243,7 +1262,7 @@
     "first contrib",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-05T07:32:27Z",
+   "updated_at": "2026-09-05T07:48:14Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1398,25 +1417,6 @@
     "rfr"
    ],
    "updated_at": "2026-09-04T22:27:26Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16760",
-   "repo": "JabRef/jabref",
-   "number": 16760,
-   "title": "Enhance developer documentation",
-   "url": "https://github.com/JabRef/jabref/pull/16760",
-   "type": "pr",
-   "draft": false,
-   "author": "Eng-YasminKotb",
-   "assignees": [],
-   "labels": [
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-04T21:56:08Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -1669,6 +1669,27 @@
    "merged_at": null,
    "column": "backlog",
    "focus": true
+  },
+  {
+   "id": "https://github.com/itsallcode/openfasttrace/issues/582",
+   "repo": "itsallcode/openfasttrace",
+   "number": 582,
+   "title": "Markdown importer silently drops all requirements after a fenced code block that directly follows a heading",
+   "url": "https://github.com/itsallcode/openfasttrace/issues/582",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "bug"
+   ],
+   "updated_at": "2026-09-05T07:51:55Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16330",
@@ -2846,13 +2867,103 @@
  ],
  "events": [
   {
+   "id": "14476491005",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:53:43Z",
+   "summary": "commented on PR #16853",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3939925025",
+   "excerpt": "all the tests use the same pattern, i think we can extract them and use @ParameterizedTest?",
+   "review_id": 5120329800,
+   "self": false
+  },
+  {
+   "id": "14476448268",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:51:51Z",
+   "summary": "reviewed PR #16760 (approved)",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5120373882",
+   "excerpt": "",
+   "review_id": 5120373882,
+   "self": false
+  },
+  {
+   "id": "14476388361",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:49:13Z",
+   "summary": "reviewed PR #16755 (approved)",
+   "number": 16755,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5120368319",
+   "excerpt": "",
+   "review_id": 5120368319,
+   "self": false
+  },
+  {
+   "id": "14476349216",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:47:30Z",
+   "summary": "reviewed PR #16742 (dismissed)",
+   "number": 16742,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120331205",
+   "excerpt": "",
+   "review_id": 5120331205,
+   "self": false
+  },
+  {
+   "id": "14476339008",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:47:03Z",
+   "summary": "reviewed PR #16760 (commented)",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5120363796",
+   "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
+   "review_id": 5120363796,
+   "self": false
+  },
+  {
+   "id": "14476338177",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:47:01Z",
+   "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3939910234",
+   "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
+   "review_id": 5120363796,
+   "self": false
+  },
+  {
    "id": "14476002872",
    "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T07:32:28Z",
-   "summary": "reviewed PR #16742 (approved)",
+   "summary": "reviewed PR #16742 (dismissed)",
    "number": 16742,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120331205",
@@ -5281,6 +5392,20 @@
    "excerpt": "Also use Objects.equals for null safety?",
    "review_id": 5117929097,
    "self": false
+  },
+  {
+   "id": "20109500089",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:12:04Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14458970809",
@@ -5678,112 +5803,99 @@
    "url": "https://github.com/JabRef/jabref/pull/16739#issuecomment-5546281908",
    "excerpt": "No worries, thank you for informing us",
    "review_id": null
-  },
-  {
-   "id": "14457970115",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:48:21Z",
-   "summary": "commented on PR #16795",
-   "number": 16795,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16795#discussion_r3937789281",
-   "excerpt": "bind to idSearchingBox.visibleProperty()",
-   "review_id": 5117687147,
-   "self": false
-  },
-  {
-   "id": "14457889031",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "koppor",
-   "repo": "TGRRRR/heading-outliner",
-   "created_at": "2026-09-04T20:46:33Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/TGRRRR/heading-outliner",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14457796258",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:44:35Z",
-   "summary": "reviewed PR #16774 (approved)",
-   "number": 16774,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117654224",
-   "excerpt": "",
-   "review_id": 5117654224,
-   "self": false
-  },
-  {
-   "id": "14457720517",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:43:00Z",
-   "summary": "reviewed PR #16774 (commented)",
-   "number": 16774,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117640617",
-   "excerpt": "discussed: later",
-   "review_id": 5117640617,
-   "self": false
-  },
-  {
-   "id": "14457719361",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:42:59Z",
-   "summary": "commented on PR #16774",
-   "number": 16774,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16774#discussion_r3937760703",
-   "excerpt": "discussed: later",
-   "review_id": 5117640617,
-   "self": false
-  },
-  {
-   "id": "14457711003",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:42:48Z",
-   "summary": "reviewed PR #16774 (approved)",
-   "number": 16774,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16774#pullrequestreview-5117638689",
-   "excerpt": "",
-   "review_id": 5117638689,
-   "self": false
-  },
-  {
-   "id": "14457645929",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T20:41:20Z",
-   "summary": "commented on #16763: Automatically generate Git commit message",
-   "number": 16763,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16763#issuecomment-5546211200",
-   "excerpt": "@cmarqueslau which PR? Sorry, I can't find it",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14476491005",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:53:43Z",
+   "summary": "commented on PR #16853",
+   "number": 16853,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16853#discussion_r3939925025",
+   "excerpt": "all the tests use the same pattern, i think we can extract them and use @ParameterizedTest?",
+   "review_id": 5120329800,
+   "self": false
+  },
+  {
+   "id": "14476448268",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:51:51Z",
+   "summary": "reviewed PR #16760 (approved)",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5120373882",
+   "excerpt": "",
+   "review_id": 5120373882,
+   "self": false
+  },
+  {
+   "id": "14476388361",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:49:13Z",
+   "summary": "reviewed PR #16755 (approved)",
+   "number": 16755,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5120368319",
+   "excerpt": "",
+   "review_id": 5120368319,
+   "self": false
+  },
+  {
+   "id": "14476349216",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:47:30Z",
+   "summary": "reviewed PR #16742 (dismissed)",
+   "number": 16742,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120331205",
+   "excerpt": "",
+   "review_id": 5120331205,
+   "self": false
+  },
+  {
+   "id": "14476339008",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:47:03Z",
+   "summary": "reviewed PR #16760 (commented)",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#pullrequestreview-5120363796",
+   "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
+   "review_id": 5120363796,
+   "self": false
+  },
+  {
+   "id": "14476338177",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T07:47:01Z",
+   "summary": "commented on PR #16760",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#discussion_r3939910234",
+   "excerpt": "I think I manually added the needed changes, the code layers are lower-case, and everything else is Title Case, so I think we're fine now",
+   "review_id": 5120363796,
+   "self": false
+  },
   {
    "id": "14476002872",
    "type": "PullRequestReviewEvent",
@@ -5791,7 +5903,7 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T07:32:28Z",
-   "summary": "reviewed PR #16742 (approved)",
+   "summary": "reviewed PR #16742 (dismissed)",
    "number": 16742,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5120331205",
@@ -8220,6 +8332,20 @@
    "excerpt": "Also use Objects.equals for null safety?",
    "review_id": 5117929097,
    "self": false
+  },
+  {
+   "id": "20109500089",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T21:12:04Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14458970809",
@@ -9876,10 +10002,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 54,
+   "points": 61,
    "merged": 0,
-   "reviews": 14,
-   "other": 26
+   "reviews": 17,
+   "other": 27
   },
   {
    "login": "subhramit",
@@ -9890,10 +10016,17 @@
   },
   {
    "login": "koppor",
-   "points": 31,
+   "points": 32,
    "merged": 5,
    "reviews": 1,
-   "other": 14
+   "other": 15
+  },
+  {
+   "login": "Siedlerchr",
+   "points": 21,
+   "merged": 0,
+   "reviews": 7,
+   "other": 7
   },
   {
    "login": "calixtus",
@@ -9903,18 +10036,11 @@
    "other": 6
   },
   {
-   "login": "Siedlerchr",
-   "points": 19,
-   "merged": 0,
-   "reviews": 6,
-   "other": 7
-  },
-  {
    "login": "pluto-han",
-   "points": 7,
+   "points": 8,
    "merged": 0,
    "reviews": 0,
-   "other": 7
+   "other": 8
   },
   {
    "login": "ThiloteE",
