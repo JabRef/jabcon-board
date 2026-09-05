@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T02:01:25+00:00",
+ "generated_at": "2026-09-05T02:27:44+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -620,16 +620,17 @@
    "title": "Fix invalid regex handling in search",
    "url": "https://github.com/JabRef/jabref/pull/16855",
    "type": "pr",
-   "draft": true,
+   "draft": false,
    "author": "subhramit",
    "assignees": [],
    "labels": [
     "component: search",
     "component: entry-editor",
     "component: entry-preview",
-    "project: jabcon"
+    "project: jabcon",
+    "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-05T02:01:13Z",
+   "updated_at": "2026-09-05T02:27:34Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -645,7 +646,7 @@
    "author": "subhramit",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-05T01:59:33Z",
+   "updated_at": "2026-09-05T02:24:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1341,7 +1342,7 @@
     "component: search",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-05T02:01:11Z",
+   "updated_at": "2026-09-05T02:27:32Z",
    "closed_at": null,
    "merged_at": null,
    "column": "backlog"
@@ -2535,6 +2536,36 @@
   }
  ],
  "events": [
+  {
+   "id": "14468598862",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:11:36Z",
+   "summary": "reviewed PR #58225 (commented)",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5119360151",
+   "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
+   "review_id": 5119360151,
+   "self": true
+  },
+  {
+   "id": "14468598047",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:11:34Z",
+   "summary": "commented on PR #58225",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3939107634",
+   "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
+   "review_id": 5119360151,
+   "self": true
+  },
   {
    "id": "14467769584",
    "type": "PullRequestEvent",
@@ -5455,39 +5486,39 @@
    "excerpt": "Add above:",
    "review_id": 5117127142,
    "self": false
-  },
-  {
-   "id": "14454526692",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:36:00Z",
-   "summary": "commented on PR #16222",
-   "number": 16222,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16222#discussion_r3937348239",
-   "excerpt": "Add above:",
-   "review_id": 5117127142,
-   "self": false
-  },
-  {
-   "id": "14454414572",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:33:45Z",
-   "summary": "reviewed PR #16846 (changes_requested)",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
-   "excerpt": "Thanks! Left some nitpicks. And can you check also qodo comments?",
-   "review_id": 5117095611,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14468598862",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:11:36Z",
+   "summary": "reviewed PR #58225 (commented)",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#pullrequestreview-5119360151",
+   "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
+   "review_id": 5119360151,
+   "self": true
+  },
+  {
+   "id": "14468598047",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-05T02:11:34Z",
+   "summary": "commented on PR #58225",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#discussion_r3939107634",
+   "excerpt": "fixed in https://github.com/apache/spark/pull/58225/commits/856cc118422aa950e5de3d7014213ff71df48830",
+   "review_id": 5119360151,
+   "self": true
+  },
   {
    "id": "14467769584",
    "type": "PullRequestEvent",
@@ -8732,6 +8763,20 @@
    "review_id": null
   },
   {
+   "id": "20079262794",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T14:22:19Z",
+   "summary": "pushed 0 commit(s) to keyword-separator-per-library",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14436730904",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -9135,10 +9180,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 12,
+   "points": 13,
    "merged": 0,
    "reviews": 4,
-   "other": 4
+   "other": 5
   },
   {
    "login": "pluto-han",
