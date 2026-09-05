@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T15:05:12+00:00",
+ "generated_at": "2026-09-05T15:18:23+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -157,7 +157,7 @@
     "project: jabcon",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-05T11:41:17Z",
+   "updated_at": "2026-09-05T15:16:43Z",
    "closed_at": "2026-09-05T11:40:06Z",
    "state_reason": "completed",
    "merged_at": null,
@@ -3516,6 +3516,20 @@
  ],
  "events": [
   {
+   "id": "14487454929",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T15:16:43Z",
+   "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "number": 16352,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5552754751",
+   "excerpt": "Please open a new issue - rework Open Office panel UI",
+   "review_id": null
+  },
+  {
    "id": "14486817857",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -6434,24 +6448,23 @@
    "excerpt": "Does it make sense to eventually consolidate, as you also suggested?",
    "review_id": 5120669364,
    "self": false
-  },
-  {
-   "id": "14478630905",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "openjdk/jfx",
-   "created_at": "2026-09-05T09:24:52Z",
-   "summary": "commented on PR #2278",
-   "number": 2278,
-   "merged": false,
-   "url": "https://github.com/openjdk/jfx/pull/2278#discussion_r3940133531",
-   "excerpt": "Does it make sense to eventually consolidate, as you also suggested?",
-   "review_id": 5120669364,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14487454929",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T15:16:43Z",
+   "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
+   "number": 16352,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5552754751",
+   "excerpt": "Please open a new issue - rework Open Office panel UI",
+   "review_id": null
+  },
   {
    "id": "14486817857",
    "type": "PullRequestReviewEvent",
@@ -14458,10 +14471,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 122,
+   "points": 123,
    "merged": 2,
    "reviews": 23,
-   "other": 70
+   "other": 71
   },
   {
    "login": "InAnYan",
