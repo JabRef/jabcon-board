@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:13:04+00:00",
+ "generated_at": "2026-09-05T11:14:47+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -953,6 +953,23 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "repo": "JabRef/jabref",
+   "number": 16862,
+   "title": "Remove ready-for-review label when a PR is converted to draft",
+   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-05T11:13:11Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -980,23 +997,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-05T11:13:09Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16862",
-   "repo": "JabRef/jabref",
-   "number": 16862,
-   "title": "Remove ready-for-review label when a PR is converted to draft",
-   "url": "https://github.com/JabRef/jabref/pull/16862",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-05T11:13:11Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress",
@@ -12795,6 +12795,20 @@
    "review_id": null
   },
   {
+   "id": "20127721191",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-04T13:37:06Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14434394462",
    "type": "PullRequestEvent",
    "action": "opened",
@@ -13207,10 +13221,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 33,
+   "points": 34,
    "merged": 0,
    "reviews": 8,
-   "other": 17
+   "other": 18
   },
   {
    "login": "calixtus",
