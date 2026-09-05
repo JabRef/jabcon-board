@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T11:59:49+00:00",
+ "generated_at": "2026-09-05T12:25:59+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1194,7 +1194,7 @@
     "component: diff-merge",
     "component: lsp"
    ],
-   "updated_at": "2026-09-05T11:56:14Z",
+   "updated_at": "2026-09-05T12:10:47Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1202,19 +1202,19 @@
    "focus": false
   },
   {
-   "id": "https://github.com/openjdk/jfx/pull/2296",
-   "repo": "openjdk/jfx",
-   "number": 2296,
-   "title": "8156779: GTK3: warning when running SwingNode applications",
-   "url": "https://github.com/openjdk/jfx/pull/2296",
+   "id": "https://github.com/JabRef/JabRef-Browser-Extension/pull/681",
+   "repo": "JabRef/JabRef-Browser-Extension",
+   "number": 681,
+   "title": "Build and publish safari browser extension",
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension/pull/681",
    "type": "pr",
    "draft": false,
-   "author": "Maran23",
+   "author": "Siedlerchr",
    "assignees": [],
    "labels": [
-    "rfr"
+    "status:ready-for-review"
    ],
-   "updated_at": "2026-09-05T11:55:18Z",
+   "updated_at": "2026-09-05T12:10:44Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1236,7 +1236,7 @@
     "status: changes-required",
     "component: git"
    ],
-   "updated_at": "2026-09-05T11:55:11Z",
+   "updated_at": "2026-09-05T12:07:18Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1244,21 +1244,19 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16861",
-   "repo": "JabRef/jabref",
-   "number": 16861,
-   "title": "Resolve LaTeX aux file paths relative to the library file",
-   "url": "https://github.com/JabRef/jabref/pull/16861",
+   "id": "https://github.com/openjdk/jfx/pull/2296",
+   "repo": "openjdk/jfx",
+   "number": 2296,
+   "title": "8156779: GTK3: warning when running SwingNode applications",
+   "url": "https://github.com/openjdk/jfx/pull/2296",
    "type": "pr",
    "draft": false,
-   "author": "subhramit",
+   "author": "Maran23",
    "assignees": [],
    "labels": [
-    "component: groups",
-    "component: import-load",
-    "status: changes-required"
+    "rfr"
    ],
-   "updated_at": "2026-09-05T11:49:34Z",
+   "updated_at": "2026-09-05T11:55:18Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1808,19 +1806,25 @@
    "focus": false
   },
   {
-   "id": "https://github.com/openjdk/jfx/pull/2278",
-   "repo": "openjdk/jfx",
-   "number": 2278,
-   "title": "8391279: Fix pixel-snapping in Region",
-   "url": "https://github.com/openjdk/jfx/pull/2278",
+   "id": "https://github.com/JabRef/jabref/pull/16846",
+   "repo": "JabRef/jabref",
+   "number": 16846,
+   "title": "Remove hardcoded styling",
+   "url": "https://github.com/JabRef/jabref/pull/16846",
    "type": "pr",
    "draft": false,
-   "author": "mstr2",
+   "author": "AbdallaSamirKhalifa",
    "assignees": [],
    "labels": [
-    "rfr"
+    "component: ui",
+    "component: preferences",
+    "good first issue",
+    "status: changes-required",
+    "component: theming",
+    "component: css",
+    "first contrib"
    ],
-   "updated_at": "2026-09-05T11:42:13Z",
+   "updated_at": "2026-09-05T12:26:02Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1843,7 +1847,48 @@
     "status: changes-required",
     "first contrib"
    ],
-   "updated_at": "2026-09-05T11:37:18Z",
+   "updated_at": "2026-09-05T12:22:13Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2015",
+   "repo": "openjdk/jfx",
+   "number": 2015,
+   "title": "8375588: Enhanced property metadata",
+   "url": "https://github.com/openjdk/jfx/pull/2015",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-05T12:19:37Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2278",
+   "repo": "openjdk/jfx",
+   "number": 2278,
+   "title": "8391279: Fix pixel-snapping in Region",
+   "url": "https://github.com/openjdk/jfx/pull/2278",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-05T11:42:13Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1938,32 +1983,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-05T07:54:37Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16846",
-   "repo": "JabRef/jabref",
-   "number": 16846,
-   "title": "Remove hardcoded styling",
-   "url": "https://github.com/JabRef/jabref/pull/16846",
-   "type": "pr",
-   "draft": false,
-   "author": "AbdallaSamirKhalifa",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: preferences",
-    "good first issue",
-    "status: changes-required",
-    "component: theming",
-    "component: css",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T03:37:33Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3498,6 +3517,62 @@
  ],
  "events": [
   {
+   "id": "14482691659",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T12:14:53Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551737473",
+   "excerpt": "Needs more thinking and less vibecoding.",
+   "review_id": null
+  },
+  {
+   "id": "14482550808",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T12:09:15Z",
+   "summary": "commented on #2139: 8354943: [Linux] Simplify and update glass gtk backend: window sizing, positioning, and state management issues",
+   "number": 2139,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2139#issuecomment-5551699608",
+   "excerpt": "This PR should merge in master again.",
+   "review_id": null
+  },
+  {
+   "id": "14482592033",
+   "type": "PullRequestEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T12:01:59Z",
+   "summary": "closed PR #16861",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16861",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14482350310",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T12:01:33Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551645882",
+   "excerpt": "Ok, this time all the error messages are gone :+1: , but it doesn't work regardless :(",
+   "review_id": null
+  },
+  {
    "id": "14482121866",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -3921,6 +3996,20 @@
    "excerpt": "And qodo 's https://github.com/JabRef/jabref/pull/16651/changesr3836419213 as well",
    "review_id": 5120995844,
    "self": false
+  },
+  {
+   "id": "20132509421",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-05T11:13:01Z",
+   "summary": "pushed 0 commit(s) to migratejavafxtest",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14481101960",
@@ -6360,80 +6449,65 @@
    "url": "https://github.com/moby/moby/issues/49453#issuecomment-5550694633",
    "excerpt": "Hi, I (and some other contributors at Spark) seem to be facing a similar recurring error - https://github.com/subhramit/spark/actions/runs/\u2026",
    "review_id": null
-  },
-  {
-   "id": "14477710166",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T08:44:42Z",
-   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5550669926",
-   "excerpt": "Okay apparently this happened in [other PRs](https://github.com/szehon-ho/spark/actions/runs/33812521771/job/100840717313) as well and is i\u2026",
-   "review_id": null
-  },
-  {
-   "id": "14477504325",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-05T08:36:20Z",
-   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5550627999",
-   "excerpt": "I am unsure why this is happening every time now:",
-   "review_id": null
-  },
-  {
-   "id": "14477029699",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T08:17:00Z",
-   "summary": "commented on #16853: Fix BST entry preview formatting",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#issuecomment-5550532463",
-   "excerpt": "Added",
-   "review_id": null
-  },
-  {
-   "id": "14477016317",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T08:16:27Z",
-   "summary": "reviewed PR #16755 (approved)",
-   "number": 16755,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5120435259",
-   "excerpt": "Thanks everyone for helping polish this up. It's a nice improvement",
-   "review_id": 5120435259,
-   "self": false
-  },
-  {
-   "id": "20126168745",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-05T08:14:58Z",
-   "summary": "pushed 0 commit(s) to fix-bst-preview",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14482691659",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T12:14:53Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551737473",
+   "excerpt": "Needs more thinking and less vibecoding.",
+   "review_id": null
+  },
+  {
+   "id": "14482550808",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-05T12:09:15Z",
+   "summary": "commented on #2139: 8354943: [Linux] Simplify and update glass gtk backend: window sizing, positioning, and state management issues",
+   "number": 2139,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2139#issuecomment-5551699608",
+   "excerpt": "This PR should merge in master again.",
+   "review_id": null
+  },
+  {
+   "id": "14482592033",
+   "type": "PullRequestEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T12:01:59Z",
+   "summary": "closed PR #16861",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16861",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14482350310",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T12:01:33Z",
+   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
+   "number": 16861,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551645882",
+   "excerpt": "Ok, this time all the error messages are gone :+1: , but it doesn't work regardless :(",
+   "review_id": null
+  },
   {
    "id": "14482121866",
    "type": "PullRequestReviewEvent",
@@ -6858,6 +6932,20 @@
    "excerpt": "And qodo 's https://github.com/JabRef/jabref/pull/16651/changesr3836419213 as well",
    "review_id": 5120995844,
    "self": false
+  },
+  {
+   "id": "20132509421",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-05T11:13:01Z",
+   "summary": "pushed 0 commit(s) to migratejavafxtest",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14481101960",
@@ -13495,6 +13583,20 @@
    "review_id": null
   },
   {
+   "id": "20133959252",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-04T14:41:07Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14438315759",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -13944,10 +14046,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 121,
+   "points": 122,
    "merged": 2,
    "reviews": 23,
-   "other": 69
+   "other": 70
   },
   {
    "login": "InAnYan",
@@ -13958,24 +14060,24 @@
   },
   {
    "login": "Maran23",
-   "points": 84,
+   "points": 85,
    "merged": 0,
    "reviews": 26,
-   "other": 32
+   "other": 33
   },
   {
    "login": "Siedlerchr",
-   "points": 67,
+   "points": 68,
    "merged": 1,
    "reviews": 22,
-   "other": 20
+   "other": 21
   },
   {
    "login": "koppor",
-   "points": 59,
+   "points": 60,
    "merged": 8,
    "reviews": 2,
-   "other": 31
+   "other": 32
   },
   {
    "login": "pluto-han",
@@ -13993,10 +14095,10 @@
   },
   {
    "login": "ThiloteE",
-   "points": 2,
+   "points": 3,
    "merged": 0,
    "reviews": 0,
-   "other": 2
+   "other": 3
   },
   {
    "login": "ryan-carpenter",
