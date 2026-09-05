@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T22:03:13+00:00",
+ "generated_at": "2026-09-05T22:17:37+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -4649,6 +4649,20 @@
    "self": false
   },
   {
+   "id": "20181310070",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "Devansh-18155/jabref",
+   "created_at": "2026-09-05T11:16:34Z",
+   "summary": "pushed 0 commit(s) to fix/combobox-escape-close-dialog",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Devansh-18155/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14481214082",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -4717,6 +4731,20 @@
    "number": 16862,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16862",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20181145261",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:11:01Z",
+   "summary": "created branch draft-removes-label",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -4878,6 +4906,20 @@
    "number": 2295,
    "merged": false,
    "url": "https://github.com/openjdk/jfx/issues/2295",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20181030596",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:07:38Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -5471,6 +5513,20 @@
    "excerpt": "Yeah we do both, e.g.",
    "review_id": 5120908685,
    "self": false
+  },
+  {
+   "id": "20182009596",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:44:54Z",
+   "summary": "deleted branch fix-autosave-registration",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14480495814",
@@ -6069,6 +6125,20 @@
    "self": false
   },
   {
+   "id": "20181177784",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:15:20Z",
+   "summary": "pushed 0 commit(s) to fix-autosave-registration",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14479805962",
    "type": "PullRequestEvent",
    "action": "merged",
@@ -6434,77 +6504,6 @@
    "excerpt": "But it seems to work without?",
    "review_id": 5120783461,
    "self": true
-  },
-  {
-   "id": "14479383928",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:56:43Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940214960",
-   "excerpt": "@7amo10 why did you mark this as resolved, if it's kinda right?",
-   "review_id": 5120713792,
-   "self": false
-  },
-  {
-   "id": "20128075013",
-   "type": "DeleteEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "koppor/openfasttrace",
-   "created_at": "2026-09-05T09:55:29Z",
-   "summary": "deleted branch bugfix/582_code_block_after_section_title",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/koppor/openfasttrace",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20180560203",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/jabcon-board",
-   "created_at": "2026-09-05T09:54:36Z",
-   "summary": "pushed 0 commit(s) to main",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14479315325",
-   "type": "PullRequestEvent",
-   "action": "labeled",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:53:48Z",
-   "summary": "labeled PR #16470",
-   "number": 16470,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16470",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14479295577",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T09:53:04Z",
-   "summary": "commented on #16826: Register the autosave manager for library changes again",
-   "number": 16826,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16826#issuecomment-5551009070",
-   "excerpt": "In main:",
-   "review_id": null
   }
  ],
  "all_events": [
@@ -7573,6 +7572,20 @@
    "self": false
   },
   {
+   "id": "20181310070",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "Devansh-18155/jabref",
+   "created_at": "2026-09-05T11:16:34Z",
+   "summary": "pushed 0 commit(s) to fix/combobox-escape-close-dialog",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Devansh-18155/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14481214082",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -7641,6 +7654,20 @@
    "number": 16862,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16862",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20181145261",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:11:01Z",
+   "summary": "created branch draft-removes-label",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -7802,6 +7829,20 @@
    "number": 2295,
    "merged": false,
    "url": "https://github.com/openjdk/jfx/issues/2295",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20181030596",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T11:07:38Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -8395,6 +8436,20 @@
    "excerpt": "Yeah we do both, e.g.",
    "review_id": 5120908685,
    "self": false
+  },
+  {
+   "id": "20182009596",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:44:54Z",
+   "summary": "deleted branch fix-autosave-registration",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14480495814",
@@ -8991,6 +9046,20 @@
    "excerpt": "",
    "review_id": 5120788933,
    "self": false
+  },
+  {
+   "id": "20181177784",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T10:15:20Z",
+   "summary": "pushed 0 commit(s) to fix-autosave-registration",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14479805962",
@@ -15356,10 +15425,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 119,
+   "points": 120,
    "merged": 1,
    "reviews": 28,
-   "other": 60
+   "other": 61
   },
   {
    "login": "Maran23",
@@ -15370,17 +15439,17 @@
   },
   {
    "login": "koppor",
-   "points": 80,
+   "points": 81,
    "merged": 8,
    "reviews": 2,
-   "other": 52
+   "other": 53
   },
   {
    "login": "Siedlerchr",
-   "points": 72,
+   "points": 73,
    "merged": 1,
    "reviews": 22,
-   "other": 25
+   "other": 26
   },
   {
    "login": "pluto-han",
