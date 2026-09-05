@@ -55,7 +55,8 @@ section h2 .count { float: right; color: var(--fg); }
 .card .tag.merged { background: #8250df; }
 .card .tag.rfr { background: #1f6feb; }
 .cards::-webkit-scrollbar { display: none; }
-.more { color: var(--muted); font-size: .85rem; min-height: 1.1rem; text-align: center; }
+.more { color: var(--muted); font-size: .85rem; min-height: 1.1rem; text-align: center; cursor: pointer; user-select: none; }
+.more:empty { cursor: default; }
 .tag.closed { background: #cf222e; }
 .tag.notplanned { background: #57606a; }
 #statsrow { flex: 1; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 1.5rem; min-width: 0; }
