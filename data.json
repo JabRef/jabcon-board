@@ -91,7 +91,7 @@
    }
   }
  },
- "generated_at": "2026-09-05T01:27:17+00:00",
+ "generated_at": "2026-09-05T01:45:41+00:00",
  "config": {
   "org": "JabRef",
   "jabcon_start": "2026-09-04T09:00:00+02:00",
@@ -132,6 +132,36 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16854",
+   "repo": "JabRef/jabref",
+   "number": 16854,
+   "title": "Fix openfasttrace buildtime concurrency issues",
+   "url": "https://github.com/JabRef/jabref/pull/16854",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: jabsrv"
+   ],
+   "updated_at": "2026-09-05T01:35:10Z",
+   "closed_at": "2026-09-05T01:35:01Z",
+   "merged_at": "2026-09-05T01:35:01Z",
+   "column": "done",
+   "stats": {
+    "additions": 124,
+    "deletions": 8,
+    "changed_files": 4,
+    "components": {
+     "build-logic": 112,
+     "(root)": 2,
+     "jabsrv": 18
+    },
+    "refactorings": []
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16832",
    "repo": "JabRef/jabref",
@@ -584,6 +614,27 @@
    "column": "done"
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16855",
+   "repo": "JabRef/jabref",
+   "number": 16855,
+   "title": "Fix invalid regex handling in search",
+   "url": "https://github.com/JabRef/jabref/pull/16855",
+   "type": "pr",
+   "draft": true,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "component: search",
+    "component: entry-editor",
+    "component: entry-preview",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-05T01:44:37Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "progress"
+  },
+  {
    "id": "https://github.com/unicode-org/icu/pull/2127",
    "repo": "unicode-org/icu",
    "number": 2127,
@@ -597,24 +648,6 @@
    ],
    "labels": [],
    "updated_at": "2026-09-05T01:22:56Z",
-   "closed_at": null,
-   "merged_at": null,
-   "column": "progress"
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16854",
-   "repo": "JabRef/jabref",
-   "number": 16854,
-   "title": "Fix openfasttrace buildtime concurrency issues",
-   "url": "https://github.com/JabRef/jabref/pull/16854",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "component: jabsrv"
-   ],
-   "updated_at": "2026-09-05T01:19:01Z",
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
@@ -1291,6 +1324,27 @@
    "closed_at": null,
    "merged_at": null,
    "column": "progress"
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16539",
+   "repo": "JabRef/jabref",
+   "number": 16539,
+   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "component: search",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-05T01:44:36Z",
+   "closed_at": null,
+   "merged_at": null,
+   "column": "backlog"
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16330",
@@ -2481,6 +2535,90 @@
   }
  ],
  "events": [
+  {
+   "id": "14467769584",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:38:21Z",
+   "summary": "labeled PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16855",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467761475",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:38:10Z",
+   "summary": "opened PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16855",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467678733",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:35:01Z",
+   "summary": "merged PR #16854",
+   "number": 16854,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16854",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467595454",
+   "type": "IssuesEvent",
+   "action": "unlabeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:31:35Z",
+   "summary": "unlabeled issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467591679",
+   "type": "IssuesEvent",
+   "action": "assigned",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:31:25Z",
+   "summary": "assigned issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467590730",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:31:21Z",
+   "summary": "commented on #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539#issuecomment-5548429613",
+   "excerpt": "This is not a good first issue. Will be taken up by the internal team.",
+   "review_id": null
+  },
   {
    "id": "14467323869",
    "type": "IssuesEvent",
@@ -5347,99 +5485,93 @@
    "excerpt": "Thanks! Left some nitpicks. And can you check also qodo comments?",
    "review_id": 5117095611,
    "self": false
-  },
-  {
-   "id": "14454414520",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:33:45Z",
-   "summary": "reviewed PR #16846 (changes_requested)",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5117095611",
-   "excerpt": "Thanks! Left some nitpicks. And can you check also qodo comments?",
-   "review_id": 5117095611,
-   "self": false
-  },
-  {
-   "id": "14454347113",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:32:22Z",
-   "summary": "commented on PR #16846",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937324087",
-   "excerpt": "Formatting change: add a space before {",
-   "review_id": 5117095611,
-   "self": false
-  },
-  {
-   "id": "14454314071",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:31:43Z",
-   "summary": "commented on PR #16846",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937320292",
-   "excerpt": "Format change: remove blank line",
-   "review_id": 5117095611,
-   "self": false
-  },
-  {
-   "id": "14454305290",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:31:31Z",
-   "summary": "commented on PR #16846",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#discussion_r3937319060",
-   "excerpt": "Format change: add blank line above",
-   "review_id": 5117095611,
-   "self": false
-  },
-  {
-   "id": "14454186699",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:29:05Z",
-   "summary": "reviewed PR #16742 (changes_requested)",
-   "number": 16742,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5117019050",
-   "excerpt": "Yep, thanks, now it works, but I don't know should we leave WORDS or CHARS by default. @wanling0000 what do you think?",
-   "review_id": 5117019050,
-   "self": false
-  },
-  {
-   "id": "14454186684",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-04T19:29:05Z",
-   "summary": "reviewed PR #16742 (changes_requested)",
-   "number": 16742,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16742#pullrequestreview-5117019050",
-   "excerpt": "Yep, thanks, now it works, but I don't know should we leave WORDS or CHARS by default. @wanling0000 what do you think?",
-   "review_id": 5117019050,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14467769584",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:38:21Z",
+   "summary": "labeled PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16855",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467761475",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:38:10Z",
+   "summary": "opened PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16855",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467678733",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:35:01Z",
+   "summary": "merged PR #16854",
+   "number": 16854,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16854",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467595454",
+   "type": "IssuesEvent",
+   "action": "unlabeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:31:35Z",
+   "summary": "unlabeled issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467591679",
+   "type": "IssuesEvent",
+   "action": "assigned",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:31:25Z",
+   "summary": "assigned issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14467590730",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-05T01:31:21Z",
+   "summary": "commented on #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539#issuecomment-5548429613",
+   "excerpt": "This is not a good first issue. Will be taken up by the internal team.",
+   "review_id": null
+  },
   {
    "id": "14467323869",
    "type": "IssuesEvent",
@@ -8947,11 +9079,13 @@
   "openjdk/jfx#2291": "Maran23"
  },
  "stats": {
-  "additions": 1680,
-  "deletions": 224,
-  "changed_files": 129,
+  "additions": 1804,
+  "deletions": 232,
+  "changed_files": 133,
   "components": {
-   "(root)": 31,
+   "build-logic": 112,
+   "(root)": 33,
+   "jabsrv": 23,
    "docs": 102,
    "jabgui": 720,
    "jablib": 875,
@@ -8959,7 +9093,6 @@
    ".jbang": 6,
    "jabkit": 8,
    "jablib-examples": 4,
-   "jabsrv": 5,
    "versions": 1,
    "jfx": 151
   }
@@ -8981,10 +9114,10 @@
   },
   {
    "login": "subhramit",
-   "points": 40,
-   "merged": 0,
+   "points": 46,
+   "merged": 1,
    "reviews": 10,
-   "other": 20
+   "other": 23
   },
   {
    "login": "koppor",
