@@ -86,6 +86,7 @@ def card(item, column):
         "labels": [l["name"] for l in item.get("labels", [])],
         "updated_at": item["updated_at"],
         "closed_at": item.get("closed_at"),
+        "state_reason": item.get("state_reason"),  # issues: completed | not_planned | duplicate | reopened
         "merged_at": (item.get("pull_request") or {}).get("merged_at"),
         "column": column,
         "focus": bool(FOCUS) and FOCUS in [l["name"] for l in item.get("labels", [])],

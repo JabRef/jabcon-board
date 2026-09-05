@@ -52,11 +52,12 @@ section h2 .count { float: right; color: var(--fg); }
 .card .repo { font-size: .7rem; color: var(--muted); background: var(--border); padding: .1rem .4rem; border-radius: .3rem; flex: none; }
 .card .tag { font-size: .7rem; padding: .1rem .4rem; border-radius: .3rem; background: var(--border); flex: none; }
 .card .tag.draft { color: var(--draft); }
-.card .tag.merged { background: #6e40c9; }
+.card .tag.merged { background: #8250df; }
 .card .tag.rfr { background: #1f6feb; }
 .cards::-webkit-scrollbar { display: none; }
 .more { color: var(--muted); font-size: .85rem; min-height: 1.1rem; text-align: center; }
-.tag.closed { background: #8b2f2f; }
+.tag.closed { background: #cf222e; }
+.tag.notplanned { background: #57606a; }
 #statsrow { flex: 1; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 1.5rem; min-width: 0; }
 #milestones { display: flex; flex-direction: column; gap: .3rem; font-size: .85rem; }
 .milestone .bar { position: relative; height: .9rem; background: var(--border); border-radius: .2rem; overflow: hidden; }
