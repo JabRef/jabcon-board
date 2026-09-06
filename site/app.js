@@ -244,8 +244,21 @@ document.querySelectorAll('.more').forEach((m) => m.addEventListener('click', ()
 }));
 const params = new URLSearchParams(location.search);
 if (params.get('still')) document.documentElement.classList.add('still');
-const scale = parseFloat(params.get('scale'));
-if (scale > 0) document.documentElement.style.fontSize = `min(${1.146 * scale}vw, ${2.037 * scale}vh)`;
+// Browser zoom is a no-op here: the layout is in vw/vh, so a zoomed viewport shrinks the text right back.
+// Ctrl+wheel therefore scales the page itself; the factor survives the self-reloads via localStorage. Ctrl+0 resets.
+let scale = parseFloat(params.get('scale')) || parseFloat(localStorage.getItem('scale')) || 1;
+function applyScale() {
+  document.documentElement.style.fontSize = `min(${1.146 * scale}vw, ${2.037 * scale}vh)`;
+  try { localStorage.setItem('scale', scale); } catch (e) { /* private mode */ }
+}
+if (scale !== 1) applyScale();
+document.addEventListener('wheel', (e) => {
+  if (!e.ctrlKey) return;
+  e.preventDefault();
+  scale = Math.min(3, Math.max(0.3, scale * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
+  applyScale();
+}, { passive: false });
+document.addEventListener('keydown', (e) => { if (e.ctrlKey && e.key === '0') { scale = 1; applyScale(); } });
 load();
 loadVideo();
 setInterval(load, 60000);
