@@ -37,6 +37,14 @@ pages it. The lines are correct after every re-render and the scroll position su
 
 Needs: impl
 
+### Section headings explain themselves
+`req~heading-tooltips~1`
+
+Hovering a section heading (Backlog, In progress, Done, Stats, Latest activity) shows a tooltip saying what the
+section contains and why it is on the board.
+
+Needs: impl
+
 ### State tags use GitHub's colours
 `req~github-colours~1`
 
