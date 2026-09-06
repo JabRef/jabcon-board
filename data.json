@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T11:23:28+00:00",
+ "generated_at": "2026-09-06T11:30:39+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2146,28 +2146,6 @@
     "rfr"
    ],
    "updated_at": "2026-09-04T12:56:00Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/godotengine/godot/pull/69362",
-   "repo": "godotengine/godot",
-   "number": 69362,
-   "title": "[3.x] Try loading the path specified in a preload(..) method call with the ResourceLoader if the script code completion cache is not yet available",
-   "url": "https://github.com/godotengine/godot/pull/69362",
-   "type": "pr",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [],
-   "labels": [
-    "bug",
-    "topic:gdscript",
-    "topic:editor"
-   ],
-   "updated_at": "2026-09-04T12:23:26Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
