@@ -38,6 +38,6 @@
   "exclude_repos": [],
   "repo_factors": {
     "JabRef": 5,
-    "openjdk/jfx": 5
+    "openjdk/jfx": 6
   }
 }
