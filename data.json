@@ -52,7 +52,7 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 7,
+   "open": 6,
    "closed": 120,
    "baseline": 113
   },
@@ -61,7 +61,7 @@
    "repo": "JabRef/jabref",
    "title": "6.0",
    "url": "https://github.com/JabRef/jabref/milestone/24",
-   "open": 22,
+   "open": 23,
    "closed": 47,
    "baseline": 45
   },
@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T15:54:54+00:00",
+ "generated_at": "2026-09-06T16:06:59+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1552,6 +1552,29 @@
    }
   },
   {
+   "id": "https://github.com/ejwa/gitinspector/issues/249",
+   "repo": "ejwa/gitinspector",
+   "number": 249,
+   "title": "LookupError: unknown encoding: cp65001",
+   "url": "https://github.com/ejwa/gitinspector/issues/249",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "adam-waldenberg"
+   ],
+   "labels": [
+    "Priority : High",
+    "Bug"
+   ],
+   "updated_at": "2026-09-06T16:01:25Z",
+   "closed_at": "2026-09-06T16:01:14Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16704",
    "repo": "JabRef/jabref",
    "number": 16704,
@@ -1958,6 +1981,52 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16868",
+   "repo": "JabRef/jabref",
+   "number": 16868,
+   "title": "Show group changes in Git diff",
+   "url": "https://github.com/JabRef/jabref/pull/16868",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "good second issue",
+    "component: external-changes",
+    "component: git",
+    "component: diff-merge",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T16:04:27Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16877",
+   "repo": "JabRef/jabref",
+   "number": 16877,
+   "title": "Label CI/CD and build-system pull requests automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16877",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T16:04:08Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16845",
    "repo": "JabRef/jabref",
    "number": 16845,
@@ -1976,50 +2045,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-06T15:54:38Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16877",
-   "repo": "JabRef/jabref",
-   "number": 16877,
-   "title": "Label CI/CD and build-system pull requests automatically",
-   "url": "https://github.com/JabRef/jabref/pull/16877",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T15:53:53Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16868",
-   "repo": "JabRef/jabref",
-   "number": 16868,
-   "title": "Show group changes in Git diff",
-   "url": "https://github.com/JabRef/jabref/pull/16868",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "good second issue",
-    "component: external-changes",
-    "component: git",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-06T15:53:17Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2786,13 +2811,12 @@
     "component: import-load",
     "component: export-or-save",
     "component: preferences",
-    "status: changes-required",
     "component: slr",
     "good second issue",
     "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-06T15:52:22Z",
+   "updated_at": "2026-09-06T15:56:24Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3106,6 +3130,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/12468",
+   "repo": "JabRef/jabref",
+   "number": 12468,
+   "title": "Ability to disable the built-in JabRef journal abbreviation list",
+   "url": "https://github.com/JabRef/jabref/issues/12468",
+   "type": "issue",
+   "draft": false,
+   "author": "Enivex",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "project: jabcon",
+    "component: journal-abbreviations"
+   ],
+   "updated_at": "2026-09-06T16:00:15Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16035",
    "repo": "JabRef/jabref",
    "number": 16035,
@@ -3196,29 +3243,6 @@
     "project: jabcon"
    ],
    "updated_at": "2026-08-31T09:05:51Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/12468",
-   "repo": "JabRef/jabref",
-   "number": 12468,
-   "title": "Ability to disable the built-in JabRef journal abbreviation list",
-   "url": "https://github.com/JabRef/jabref/issues/12468",
-   "type": "issue",
-   "draft": false,
-   "author": "Enivex",
-   "assignees": [
-    "calixtus"
-   ],
-   "labels": [
-    "project: jabcon",
-    "component: journal-abbreviations"
-   ],
-   "updated_at": "2026-08-17T19:48:51Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4351,6 +4375,80 @@
   }
  ],
  "events": [
+  {
+   "id": "14523021115",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:01:11Z",
+   "summary": "commented on PR #16651",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3944496235",
+   "excerpt": "I would pass it in constructor",
+   "review_id": 5125849146,
+   "self": false
+  },
+  {
+   "id": "14522996578",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:00:17Z",
+   "summary": "reviewed PR #16868 (approved)",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125869963",
+   "excerpt": "",
+   "review_id": 5125869963,
+   "self": false
+  },
+  {
+   "id": "14522992631",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:00:08Z",
+   "summary": "commented on #12468: Ability to disable the built-in JabRef journal abbreviation list",
+   "number": 12468,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/12468#issuecomment-5560413247",
+   "excerpt": "I think we moved this to 6.0 release, not that important for the hbeta right now",
+   "review_id": null
+  },
+  {
+   "id": "14522899890",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:56:36Z",
+   "summary": "commented on PR #16651",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3944485535",
+   "excerpt": "But is String.valueOf really neededhere? One cannot pass an integer?",
+   "review_id": 5125849146,
+   "self": false
+  },
+  {
+   "id": "14522873484",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:55:36Z",
+   "summary": "reviewed PR #16868 (approved)",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125860104",
+   "excerpt": "",
+   "review_id": 5125860104,
+   "self": false
+  },
   {
    "id": "14522843685",
    "type": "IssueCommentEvent",
@@ -7205,83 +7303,83 @@
    "excerpt": "yep, updated",
    "review_id": 5125301709,
    "self": true
-  },
-  {
-   "id": "20239418812",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "pluto-han",
-   "repo": "pluto-han/jabref",
-   "created_at": "2026-09-06T12:30:44Z",
-   "summary": "pushed 0 commit(s) to infer-style-button",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/pluto-han/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14517316502",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:30:44Z",
-   "summary": "commented on PR #16870",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943932680",
-   "excerpt": "yep, updated",
-   "review_id": 5125301709,
-   "self": true
-  },
-  {
-   "id": "14517304300",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:30:14Z",
-   "summary": "reviewed PR #16870 (commented)",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125300596",
-   "excerpt": "My idea is: error message as dialog and successful infer message as notice, so users are only \"disturbed\" when encountering errors",
-   "review_id": 5125300596,
-   "self": true
-  },
-  {
-   "id": "14517303317",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:30:11Z",
-   "summary": "commented on PR #16870",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943931464",
-   "excerpt": "My idea is: error message as dialog and successful infer message as notice, so users are only \"disturbed\" when encountering errors",
-   "review_id": 5125300596,
-   "self": true
-  },
-  {
-   "id": "14517283975",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:29:25Z",
-   "summary": "reviewed PR #16869 (approved)",
-   "number": 16869,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16869#pullrequestreview-5125296918",
-   "excerpt": "But can the invalid entry still somehow parsed or not? And we just skip it?",
-   "review_id": 5125296918,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14523021115",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:01:11Z",
+   "summary": "commented on PR #16651",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3944496235",
+   "excerpt": "I would pass it in constructor",
+   "review_id": 5125849146,
+   "self": false
+  },
+  {
+   "id": "14522996578",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:00:17Z",
+   "summary": "reviewed PR #16868 (approved)",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125869963",
+   "excerpt": "",
+   "review_id": 5125869963,
+   "self": false
+  },
+  {
+   "id": "14522992631",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:00:08Z",
+   "summary": "commented on #12468: Ability to disable the built-in JabRef journal abbreviation list",
+   "number": 12468,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/12468#issuecomment-5560413247",
+   "excerpt": "I think we moved this to 6.0 release, not that important for the hbeta right now",
+   "review_id": null
+  },
+  {
+   "id": "14522899890",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:56:36Z",
+   "summary": "commented on PR #16651",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3944485535",
+   "excerpt": "But is String.valueOf really neededhere? One cannot pass an integer?",
+   "review_id": 5125849146,
+   "self": false
+  },
+  {
+   "id": "14522873484",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:55:36Z",
+   "summary": "reviewed PR #16868 (approved)",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125860104",
+   "excerpt": "",
+   "review_id": 5125860104,
+   "self": false
+  },
   {
    "id": "14522843685",
    "type": "IssueCommentEvent",
@@ -21330,30 +21428,30 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 214,
+   "points": 216,
    "merged": 1,
    "reviews": 52,
-   "other": 107
+   "other": 109
   },
   {
    "login": "subhramit",
-   "points": 198,
+   "points": 200,
    "merged": 4,
-   "reviews": 39,
+   "reviews": 40,
    "other": 108
   },
   {
    "login": "Siedlerchr",
-   "points": 147,
+   "points": 148,
    "merged": 3,
    "reviews": 35,
-   "other": 68
+   "other": 69
   },
   {
    "login": "Maran23",
-   "points": 125,
+   "points": 127,
    "merged": 1,
-   "reviews": 36,
+   "reviews": 37,
    "other": 50
   },
   {
