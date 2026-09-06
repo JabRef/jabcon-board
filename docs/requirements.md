@@ -121,9 +121,10 @@ Needs: impl
 ## Scoring
 
 ### Points
-`req~scoring~4`
+`req~scoring~5`
 
-Merged PR (as author) 3 points, review 2, comment / issue / push / PR opened or labeled 1. On a JabCon item (focus label or configured
+Merged PR (as author) 3 points, review 1 to 3 by the cyclomatic complexity of the reviewed diff (branch points in the
+added code lines: 1 for a trivial diff such as docs, config or renames, 3 from 20 branch points on), comment / issue / push / PR opened or labeled 1. On a JabCon item (focus label or configured
 milestone) each counts tenfold; elsewhere the configured `repo_factors` apply, keyed by repo or org (anything in the
 JabRef org and upstream JavaFX work count fivefold and sixfold).
 The ticker shows the same points per event as the leaderboard sums.

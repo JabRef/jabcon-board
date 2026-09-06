@@ -40,7 +40,7 @@ Recomputed at every data run from activity since `jabcon_start`, in any public r
 | Activity | Points | Credited to |
 |---|---|---|
 | Pull request merged | 3 | the PR author (not the person who pressed merge) |
-| Review submitted (approve, request changes, comment) | 2 | the reviewer |
+| Review submitted (approve, request changes, comment) | 1, 2 or 3 by the complexity of the reviewed diff (branch points in added code: trivial, normal, 20+) | the reviewer |
 | Issue comment or review comment | 1 | the commenter |
 | Issue opened or closed | 1 | the actor |
 | Push | 1 per push event (not per commit) | the pusher |
