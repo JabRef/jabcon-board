@@ -47,8 +47,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 8,
-   "closed": 119,
+   "open": 7,
+   "closed": 120,
    "baseline": 113
   },
   {
@@ -78,7 +78,7 @@
  },
  "private_activity": {
   "JabRef/jabref-issue-melting-pot": {
-   "opened": 2,
+   "opened": 3,
    "closed": 3,
    "comments": 1,
    "by": {
@@ -92,11 +92,11 @@
     "Stewori": 0,
     "JohnnyGoodNews": 0,
     "Siedlerchr": 1,
-    "calixtus": 0
+    "calixtus": 1
    }
   }
  },
- "generated_at": "2026-09-06T14:17:10+00:00",
+ "generated_at": "2026-09-06T14:26:05+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -359,6 +359,47 @@
      [
       3,
       "JSpecify null-marked"
+     ],
+     [
+      2,
+      "immutable collection literals"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16869",
+   "repo": "JabRef/jabref",
+   "number": 16869,
+   "title": "fix(bibtex): recover after unmatched braces",
+   "url": "https://github.com/JabRef/jabref/pull/16869",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: import-load",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T14:24:55Z",
+   "closed_at": "2026-09-06T14:24:48Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T14:24:48Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 98,
+    "deletions": 3,
+    "changed_files": 3,
+    "components": {
+     "(root)": 1,
+     "jablib": 100
+    },
+    "refactorings": [
+     [
+      3,
+      "text block"
      ],
      [
       2,
@@ -1392,6 +1433,28 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/9833",
+   "repo": "JabRef/jabref",
+   "number": 9833,
+   "title": "Mismatched curly braces cause failure to read any subsequent entries",
+   "url": "https://github.com/JabRef/jabref/issues/9833",
+   "type": "issue",
+   "draft": false,
+   "author": "dowobeha",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: bib(la)tex"
+   ],
+   "updated_at": "2026-09-06T14:25:49Z",
+   "closed_at": "2026-09-06T14:24:50Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16042",
    "repo": "JabRef/jabref",
    "number": 16042,
@@ -1800,28 +1863,6 @@
     "status: ready-for-review"
    ],
    "updated_at": "2026-09-06T14:15:22Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16869",
-   "repo": "JabRef/jabref",
-   "number": 16869,
-   "title": "fix(bibtex): recover after unmatched braces",
-   "url": "https://github.com/JabRef/jabref/pull/16869",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: import-load",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T14:13:17Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3077,28 +3118,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/9833",
-   "repo": "JabRef/jabref",
-   "number": 9833,
-   "title": "Mismatched curly braces cause failure to read any subsequent entries",
-   "url": "https://github.com/JabRef/jabref/issues/9833",
-   "type": "issue",
-   "draft": false,
-   "author": "dowobeha",
-   "assignees": [
-    "koppor"
-   ],
-   "labels": [
-    "component: bib(la)tex"
-   ],
-   "updated_at": "2026-09-06T09:43:52Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/issues/16029",
    "repo": "JabRef/jabref",
    "number": 16029,
@@ -4153,6 +4172,93 @@
   }
  ],
  "events": [
+  {
+   "id": "20247151317",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:24:50Z",
+   "summary": "deleted branch fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14520362628",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:24:50Z",
+   "summary": "closed issue #9833: Mismatched curly braces cause failure to read any subsequent entries",
+   "number": 9833,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/9833",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14520362572",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:24:48Z",
+   "summary": "merged PR #16869",
+   "number": 16869,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16869",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14520331963",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:23:47Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944232478",
+   "excerpt": "Obvious comments",
+   "review_id": 5125483424,
+   "self": false
+  },
+  {
+   "id": "14520277892",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:22:03Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944223075",
+   "excerpt": "Doesn't library tab has a method to get undo journal?",
+   "review_id": 5125483424,
+   "self": false
+  },
+  {
+   "id": "14520160150",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:17:51Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944209303",
+   "excerpt": "Can you elaborate more on that?",
+   "review_id": 5125483424,
+   "self": false
+  },
   {
    "id": "14520147357",
    "type": "PullRequestReviewCommentEvent",
@@ -7006,95 +7112,96 @@
    "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5558633324",
    "excerpt": "Since multiple issues have to go wrong for the issue to trigger and this is \"just\" about a notification and JabRef also has automatic backu\u2026",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14514168939",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Stewori",
-   "repo": "jython/jython.github.io",
-   "created_at": "2026-09-06T10:18:27Z",
-   "summary": "commented on #43: JBang support for running Jython",
-   "number": 43,
-   "merged": false,
-   "url": "https://github.com/jython/jython.github.io/pull/43#issuecomment-5558571959",
-   "excerpt": "Perhaps, JBang-Jython usage could also be added as a subsection to \"Getting Started\" in index.md.",
-   "review_id": null
-  },
-  {
-   "id": "14514089242",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T10:14:59Z",
-   "summary": "commented on #16707: Fix/16703 graceful jgit errors",
-   "number": 16707,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16707#issuecomment-5558554769",
-   "excerpt": "any updates? @aawhan0",
-   "review_id": null
-  },
-  {
-   "id": "20230654106",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Siedlerchr",
-   "repo": "Siedlerchr/jabref",
-   "created_at": "2026-09-06T10:13:05Z",
-   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/Siedlerchr/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14513854325",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T10:05:04Z",
-   "summary": "reviewed PR #16870 (commented)",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125006061",
-   "excerpt": "it is designed only for citationstyle",
-   "review_id": 5125006061,
-   "self": true
-  },
-  {
-   "id": "14513854015",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T10:05:03Z",
-   "summary": "commented on PR #16870",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943619499",
-   "excerpt": "it is designed only for citationstyle",
-   "review_id": 5125006061,
-   "self": true
-  },
-  {
-   "id": "20230160971",
-   "type": "PushEvent",
+   "id": "20247151317",
+   "type": "DeleteEvent",
    "action": null,
    "actor": "Siedlerchr",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T10:05:02Z",
-   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "created_at": "2026-09-06T14:24:50Z",
+   "summary": "deleted branch fix/bibtex-unmatched-braces-recovery",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  }
- ],
- "all_events": [
+  },
+  {
+   "id": "14520362628",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:24:50Z",
+   "summary": "closed issue #9833: Mismatched curly braces cause failure to read any subsequent entries",
+   "number": 9833,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/9833",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14520362572",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:24:48Z",
+   "summary": "merged PR #16869",
+   "number": 16869,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16869",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14520331963",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:23:47Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944232478",
+   "excerpt": "Obvious comments",
+   "review_id": 5125483424,
+   "self": false
+  },
+  {
+   "id": "14520277892",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:22:03Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944223075",
+   "excerpt": "Doesn't library tab has a method to get undo journal?",
+   "review_id": 5125483424,
+   "self": false
+  },
+  {
+   "id": "14520160150",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:17:51Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944209303",
+   "excerpt": "Can you elaborate more on that?",
+   "review_id": 5125483424,
+   "self": false
+  },
   {
    "id": "14520147357",
    "type": "PullRequestReviewCommentEvent",
@@ -19822,13 +19929,13 @@
   "JabRef/jabref#16872": "koppor"
  },
  "stats": {
-  "additions": 3474,
-  "deletions": 1497,
-  "changed_files": 337,
+  "additions": 3572,
+  "deletions": 1500,
+  "changed_files": 340,
   "components": {
-   "(root)": 45,
+   "(root)": 46,
    "jabgui": 2964,
-   "jablib": 1397,
+   "jablib": 1497,
    "latex-conv": 1,
    "docs": 202,
    ".github": 25,
@@ -19846,10 +19953,10 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 196,
+   "points": 199,
    "merged": 1,
    "reviews": 49,
-   "other": 95
+   "other": 98
   },
   {
    "login": "subhramit",
@@ -19860,10 +19967,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 136,
-   "merged": 2,
+   "points": 140,
+   "merged": 3,
    "reviews": 33,
-   "other": 64
+   "other": 65
   },
   {
    "login": "Maran23",
@@ -19888,10 +19995,10 @@
   },
   {
    "login": "calixtus",
-   "points": 28,
+   "points": 29,
    "merged": 0,
    "reviews": 9,
-   "other": 10
+   "other": 11
   },
   {
    "login": "ThiloteE",
