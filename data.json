@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T09:37:55+00:00",
+ "generated_at": "2026-09-06T09:44:56+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1412,6 +1412,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16870",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "title": "Add infer style button",
+   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good second issue"
+   ],
+   "updated_at": "2026-09-06T09:43:56Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16869",
    "repo": "JabRef/jabref",
    "number": 16869,
@@ -2211,7 +2233,7 @@
     "component: external-files",
     "first contrib"
    ],
-   "updated_at": "2026-09-06T09:37:50Z",
+   "updated_at": "2026-09-06T09:40:20Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2717,6 +2739,31 @@
    "focus": true
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16640",
+   "repo": "JabRef/jabref",
+   "number": 16640,
+   "title": "Rework LibreOffice CSL Style Inference flow",
+   "url": "https://github.com/JabRef/jabref/issues/16640",
+   "type": "issue",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned",
+    "good second issue",
+    "size: medium"
+   ],
+   "updated_at": "2026-09-06T09:43:43Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16693",
    "repo": "JabRef/jabref",
    "number": 16693,
@@ -2783,30 +2830,6 @@
     "component: ui"
    ],
    "updated_at": "2026-09-05T21:08:18Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16640",
-   "repo": "JabRef/jabref",
-   "number": 16640,
-   "title": "Rework LibreOffice CSL Style Inference flow",
-   "url": "https://github.com/JabRef/jabref/issues/16640",
-   "type": "issue",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [
-    "pluto-han"
-   ],
-   "labels": [
-    "\ud83d\udccd Assigned",
-    "good second issue",
-    "size: medium"
-   ],
-   "updated_at": "2026-09-05T10:11:53Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3439,7 +3462,7 @@
    "labels": [
     "component: bib(la)tex"
    ],
-   "updated_at": "2026-06-22T20:08:25Z",
+   "updated_at": "2026-09-06T09:43:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3913,6 +3936,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14513346808",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:43:00Z",
+   "summary": "opened PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16870",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14513098024",
    "type": "PullRequestEvent",
@@ -6791,24 +6828,23 @@
    "url": "https://github.com/Siedlerchr/jabref",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14480414224",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:41:19Z",
-   "summary": "commented on PR #16755",
-   "number": 16755,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16755#discussion_r3940326431",
-   "excerpt": "big lambda, is it possible to extract to a new method?",
-   "review_id": 5120899624,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14513346808",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:43:00Z",
+   "summary": "opened PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16870",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14513098024",
    "type": "PullRequestEvent",
