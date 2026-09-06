@@ -35,5 +35,8 @@
   "private_repos": [
     "JabRef/jabref-issue-melting-pot"
   ],
-  "exclude_repos": []
+  "exclude_repos": [],
+  "repo_factors": {
+    "openjdk/jfx": 5
+  }
 }
