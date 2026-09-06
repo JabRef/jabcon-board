@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T15:24:31+00:00",
+ "generated_at": "2026-09-06T15:32:43+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1460,6 +1460,30 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16704",
+   "repo": "JabRef/jabref",
+   "number": 16704,
+   "title": "Show \"Nothing to commit\" if there is nothing to commit",
+   "url": "https://github.com/JabRef/jabref/issues/16704",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "cmarqueslau"
+   ],
+   "labels": [
+    "good first issue",
+    "\ud83d\udccd Assigned",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T15:26:43Z",
+   "closed_at": "2026-09-06T15:26:43Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/9833",
    "repo": "JabRef/jabref",
    "number": 9833,
@@ -1842,6 +1866,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16880",
+   "repo": "JabRef/jabref",
+   "number": 16880,
+   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
+   "url": "https://github.com/JabRef/jabref/pull/16880",
+   "type": "pr",
+   "draft": false,
+   "author": "Stewori",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "component: ai",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T15:32:39Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/openjdk/jfx/pull/2297",
    "repo": "openjdk/jfx",
    "number": 2297,
@@ -1854,7 +1900,7 @@
    "labels": [
     "rfr"
    ],
-   "updated_at": "2026-09-06T15:24:09Z",
+   "updated_at": "2026-09-06T15:30:41Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1862,55 +1908,19 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16880",
+   "id": "https://github.com/JabRef/jabref/pull/16877",
    "repo": "JabRef/jabref",
-   "number": 16880,
-   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
-   "url": "https://github.com/JabRef/jabref/pull/16880",
+   "number": 16877,
+   "title": "Label CI/CD and build-system pull requests automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16877",
    "type": "pr",
    "draft": false,
-   "author": "Stewori",
+   "author": "koppor",
    "assignees": [],
    "labels": [
-    "component: ai"
+    "status: ready-for-review"
    ],
-   "updated_at": "2026-09-06T15:23:19Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16879",
-   "repo": "JabRef/jabref",
-   "number": 16879,
-   "title": "fix(ai): keep group chat window after library edits",
-   "url": "https://github.com/JabRef/jabref/pull/16879",
-   "type": "pr",
-   "draft": false,
-   "author": "InAnYan",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-06T15:23:05Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/apache/spark/pull/58225",
-   "repo": "apache/spark",
-   "number": 58225,
-   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "url": "https://github.com/apache/spark/pull/58225",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-06T15:20:36Z",
+   "updated_at": "2026-09-06T15:29:25Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1928,6 +1938,7 @@
    "author": "calixtus",
    "assignees": [],
    "labels": [
+    "component: ui",
     "component: cleanup-ops",
     "component: libre-office",
     "dev: code-quality",
@@ -1951,7 +1962,7 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T15:16:32Z",
+   "updated_at": "2026-09-06T15:28:07Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1959,19 +1970,35 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16877",
+   "id": "https://github.com/JabRef/jabref/pull/16879",
    "repo": "JabRef/jabref",
-   "number": 16877,
-   "title": "Label CI/CD and build-system pull requests automatically",
-   "url": "https://github.com/JabRef/jabref/pull/16877",
+   "number": 16879,
+   "title": "fix(ai): keep group chat window after library edits",
+   "url": "https://github.com/JabRef/jabref/pull/16879",
    "type": "pr",
    "draft": false,
-   "author": "koppor",
+   "author": "InAnYan",
    "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-06T15:12:47Z",
+   "labels": [],
+   "updated_at": "2026-09-06T15:24:46Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-06T15:20:36Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2674,6 +2701,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-06T15:26:23Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16530",
    "repo": "JabRef/jabref",
    "number": 16530,
@@ -2691,28 +2740,6 @@
     "good third issue"
    ],
    "updated_at": "2026-09-06T14:57:42Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-06T14:07:11Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4276,6 +4303,48 @@
   }
  ],
  "events": [
+  {
+   "id": "20251503041",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:27:51Z",
+   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14522100964",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:26:43Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5560227150",
+   "excerpt": "This no longer happens in current main.",
+   "review_id": null
+  },
+  {
+   "id": "14522100547",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:26:43Z",
+   "summary": "closed issue #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14522007384",
    "type": "PullRequestReviewEvent",
@@ -7156,54 +7225,51 @@
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14516932697",
-   "type": "PullRequestReviewEvent",
-   "action": "dismissed",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:15:32Z",
-   "summary": "reviewed PR #16871 (dismissed)",
-   "number": 16871,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16871#pullrequestreview-5125251097",
-   "excerpt": "\ud83d\ude80",
-   "review_id": 5125251097,
-   "self": true
-  },
-  {
-   "id": "14516932838",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:15:32Z",
-   "summary": "reviewed PR #16871 (dismissed)",
-   "number": 16871,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16871#pullrequestreview-5125251097",
-   "excerpt": "\ud83d\ude80",
-   "review_id": 5125251097,
-   "self": false
-  },
-  {
-   "id": "14516932261",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:15:30Z",
-   "summary": "commented on PR #16838",
-   "number": 16838,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16838#discussion_r3943897993",
-   "excerpt": "Not applicable, same as the earlier thread on this: JabRefen.properties is the only bundle edited in this repository. The translated bundle\u2026",
-   "review_id": 5125269588,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "20251503041",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:27:51Z",
+   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14522100964",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:26:43Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5560227150",
+   "excerpt": "This no longer happens in current main.",
+   "review_id": null
+  },
+  {
+   "id": "14522100547",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:26:43Z",
+   "summary": "closed issue #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14522007384",
    "type": "PullRequestReviewEvent",
@@ -20892,10 +20958,10 @@
   },
   {
    "login": "subhramit",
-   "points": 193,
+   "points": 195,
    "merged": 4,
    "reviews": 38,
-   "other": 105
+   "other": 107
   },
   {
    "login": "Siedlerchr",
@@ -20927,10 +20993,10 @@
   },
   {
    "login": "calixtus",
-   "points": 33,
+   "points": 34,
    "merged": 0,
    "reviews": 10,
-   "other": 13
+   "other": 14
   },
   {
    "login": "Stewori",
