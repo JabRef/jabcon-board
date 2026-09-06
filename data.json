@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T11:53:35+00:00",
+ "generated_at": "2026-09-06T12:01:03+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1412,6 +1412,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16870",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "title": "Add infer style button",
+   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "status: changes-required",
+    "good second issue"
+   ],
+   "updated_at": "2026-09-06T12:01:08Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16850",
    "repo": "JabRef/jabref",
    "number": 16850,
@@ -1440,7 +1463,7 @@
     "component: diff-merge",
     "component: lsp"
    ],
-   "updated_at": "2026-09-06T11:52:09Z",
+   "updated_at": "2026-09-06T11:57:57Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1480,29 +1503,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T11:03:22Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16870",
-   "repo": "JabRef/jabref",
-   "number": 16870,
-   "title": "Add infer style button",
-   "url": "https://github.com/JabRef/jabref/pull/16870",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "status: changes-required",
-    "good second issue"
-   ],
-   "updated_at": "2026-09-06T10:05:03Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3892,6 +3892,78 @@
   }
  ],
  "events": [
+  {
+   "id": "20237566972",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:01:18Z",
+   "summary": "pushed 0 commit(s) to common-style",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14516572478",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:01:17Z",
+   "summary": "opened PR #16871",
+   "number": 16871,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16871",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14516550991",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:00:26Z",
+   "summary": "reviewed PR #16870 (changes_requested)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125221539",
+   "excerpt": "Quick look as I'm travelling again, I don't think we are writing the style into meta.xml when zotero compatibility mode is disabled - we ar\u2026",
+   "review_id": 5125221539,
+   "self": false
+  },
+  {
+   "id": "14516550968",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:00:26Z",
+   "summary": "reviewed PR #16870 (changes_requested)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125221539",
+   "excerpt": "Quick look as I'm travelling again, I don't think we are writing the style into meta.xml when zotero compatibility mode is disabled - we ar\u2026",
+   "review_id": 5125221539,
+   "self": false
+  },
+  {
+   "id": "20237359332",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T11:57:59Z",
+   "summary": "created branch subset-search",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14516347078",
    "type": "PullRequestReviewCommentEvent",
@@ -6705,59 +6777,17 @@
    "excerpt": "I don't understand why the impl is linked here?",
    "review_id": 5120929822,
    "self": false
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14480717270",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:54:53Z",
-   "summary": "reviewed PR #16620 (commented)",
-   "number": 16620,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120926622",
-   "excerpt": "Not sure this is related to the PR, but I think you added it because of the failing test?",
-   "review_id": 5120926622,
-   "self": false
-  },
-  {
-   "id": "14480716600",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:54:51Z",
-   "summary": "commented on PR #16620",
-   "number": 16620,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16620#discussion_r3940353686",
-   "excerpt": "Not sure this is related to the PR, but I think you added it because of the failing test?",
-   "review_id": 5120926622,
-   "self": false
-  },
-  {
-   "id": "20131658570",
+   "id": "20237566972",
    "type": "PushEvent",
    "action": null,
    "actor": "Maran23",
-   "repo": "Maran23/jfx",
-   "created_at": "2026-09-05T10:50:42Z",
-   "summary": "pushed 0 commit(s) to cell-state-unify",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/Maran23/jfx",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20180487703",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:49:20Z",
-   "summary": "pushed 0 commit(s) to aux-sync-path",
+   "created_at": "2026-09-06T12:01:18Z",
+   "summary": "pushed 0 commit(s) to common-style",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
@@ -6765,21 +6795,63 @@
    "review_id": null
   },
   {
-   "id": "14480578562",
-   "type": "IssueCommentEvent",
+   "id": "14516572478",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:01:17Z",
+   "summary": "opened PR #16871",
+   "number": 16871,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16871",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14516550991",
+   "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:48:38Z",
-   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
-   "number": 16861,
+   "created_at": "2026-09-06T12:00:26Z",
+   "summary": "reviewed PR #16870 (changes_requested)",
+   "number": 16870,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551265480",
-   "excerpt": "Current implementaton already follows this model. Pushing some more tests in next commit.",
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125221539",
+   "excerpt": "Quick look as I'm travelling again, I don't think we are writing the style into meta.xml when zotero compatibility mode is disabled - we ar\u2026",
+   "review_id": 5125221539,
+   "self": false
+  },
+  {
+   "id": "14516550968",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:00:26Z",
+   "summary": "reviewed PR #16870 (changes_requested)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125221539",
+   "excerpt": "Quick look as I'm travelling again, I don't think we are writing the style into meta.xml when zotero compatibility mode is disabled - we ar\u2026",
+   "review_id": 5125221539,
+   "self": false
+  },
+  {
+   "id": "20237359332",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T11:57:59Z",
+   "summary": "created branch subset-search",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
    "review_id": null
-  }
- ],
- "all_events": [
+  },
   {
    "id": "14516347078",
    "type": "PullRequestReviewCommentEvent",
@@ -16798,9 +16870,9 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 154,
+   "points": 158,
    "merged": 3,
-   "reviews": 26,
+   "reviews": 28,
    "other": 93
   },
   {
@@ -16812,10 +16884,10 @@
   },
   {
    "login": "Maran23",
-   "points": 111,
+   "points": 112,
    "merged": 0,
    "reviews": 33,
-   "other": 45
+   "other": 46
   },
   {
    "login": "Siedlerchr",
