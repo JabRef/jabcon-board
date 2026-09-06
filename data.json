@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T14:49:52+00:00",
+ "generated_at": "2026-09-06T14:52:32+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1848,7 +1848,7 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T14:49:25Z",
+   "updated_at": "2026-09-06T14:50:18Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4212,6 +4212,20 @@
   }
  ],
  "events": [
+  {
+   "id": "20249048965",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T14:52:22Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14521037473",
    "type": "PullRequestReviewEvent",
@@ -7141,23 +7155,23 @@
    "url": "https://github.com/JabRef/jabref/issues/16548#issuecomment-5559081180",
    "excerpt": "Looks good so far.",
    "review_id": null
-  },
-  {
-   "id": "14516616146",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:03:02Z",
-   "summary": "commented on #16853: Fix BST entry preview formatting",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#issuecomment-5559079567",
-   "excerpt": "looks good on my machine",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "20249048965",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T14:52:22Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14521037473",
    "type": "PullRequestReviewEvent",
@@ -20242,10 +20256,10 @@
   },
   {
    "login": "koppor",
-   "points": 99,
+   "points": 100,
    "merged": 10,
    "reviews": 2,
-   "other": 65
+   "other": 66
   },
   {
    "login": "pluto-han",
