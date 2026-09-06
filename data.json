@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T16:45:52+00:00",
+ "generated_at": "2026-09-06T16:53:05+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2090,6 +2090,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16870",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "title": "Add infer style button",
+   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good second issue"
+   ],
+   "updated_at": "2026-09-06T16:51:05Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16845",
    "repo": "JabRef/jabref",
    "number": 16845,
@@ -2107,7 +2129,7 @@
     "status: changes-required",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T16:45:47Z",
+   "updated_at": "2026-09-06T16:45:59Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2130,28 +2152,6 @@
     "component: git"
    ],
    "updated_at": "2026-09-06T16:44:22Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16870",
-   "repo": "JabRef/jabref",
-   "number": 16870,
-   "title": "Add infer style button",
-   "url": "https://github.com/JabRef/jabref/pull/16870",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good second issue"
-   ],
-   "updated_at": "2026-09-06T16:40:22Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2896,12 +2896,12 @@
     "component: import-load",
     "component: export-or-save",
     "component: preferences",
+    "status: changes-required",
     "component: slr",
     "good second issue",
-    "status: awaiting-second-review",
     "component: git"
    ],
-   "updated_at": "2026-09-06T15:56:24Z",
+   "updated_at": "2026-09-06T16:48:40Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3358,30 +3358,6 @@
    "focus": true
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/16703",
-   "repo": "JabRef/jabref",
-   "number": 16703,
-   "title": "Gracefully handle jgit errors",
-   "url": "https://github.com/JabRef/jabref/issues/16703",
-   "type": "issue",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [
-    "subhramit"
-   ],
-   "labels": [
-    "good first issue",
-    "\ud83d\udccc Pinned",
-    "component: git"
-   ],
-   "updated_at": "2026-09-06T16:40:55Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/issues/16640",
    "repo": "JabRef/jabref",
    "number": 16640,
@@ -3399,7 +3375,31 @@
     "good second issue",
     "size: medium"
    ],
-   "updated_at": "2026-09-06T16:40:20Z",
+   "updated_at": "2026-09-06T16:49:42Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16703",
+   "repo": "JabRef/jabref",
+   "number": 16703,
+   "title": "Gracefully handle jgit errors",
+   "url": "https://github.com/JabRef/jabref/issues/16703",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "good first issue",
+    "\ud83d\udccc Pinned",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T16:40:55Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4460,6 +4460,79 @@
   }
  ],
  "events": [
+  {
+   "id": "14524388641",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:51:05Z",
+   "summary": "reviewed PR #16870 (approved)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125990246",
+   "excerpt": "",
+   "review_id": 5125990246,
+   "self": false
+  },
+  {
+   "id": "14524384727",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:50:56Z",
+   "summary": "commented on #16870: Add infer style button",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560704821",
+   "excerpt": "Took the opportunity to finish it. Should insert the style into meta in non-zotero mode as well now.",
+   "review_id": null
+  },
+  {
+   "id": "20256908204",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T16:48:54Z",
+   "summary": "pushed 0 commit(s) to infer-style-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14524302383",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:47:49Z",
+   "summary": "reviewed PR #16651 (changes_requested)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125849146",
+   "excerpt": "Sorry, killing the fun",
+   "review_id": 5125849146,
+   "self": false
+  },
+  {
+   "id": "14524302382",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:47:49Z",
+   "summary": "reviewed PR #16651 (changes_requested)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125849146",
+   "excerpt": "Sorry, killing the fun",
+   "review_id": 5125849146,
+   "self": false
+  },
   {
    "id": "14524253664",
    "type": "PullRequestReviewEvent",
@@ -7306,82 +7379,82 @@
    "excerpt": "Not sure either, I think primary is a fix",
    "review_id": 5125339763,
    "self": true
-  },
-  {
-   "id": "14517717955",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:46:45Z",
-   "summary": "commented on PR #16868",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#discussion_r3943970220",
-   "excerpt": "Not sure either, I think primary is a fix",
-   "review_id": 5125339763,
-   "self": true
-  },
-  {
-   "id": "14517708470",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:46:24Z",
-   "summary": "reviewed PR #16868 (commented)",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125338325",
-   "excerpt": "the code is just moved  from there",
-   "review_id": 5125338325,
-   "self": true
-  },
-  {
-   "id": "14517707500",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:46:21Z",
-   "summary": "commented on PR #16868",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#discussion_r3943969054",
-   "excerpt": "the code is just moved  from there",
-   "review_id": 5125338325,
-   "self": true
-  },
-  {
-   "id": "14517678718",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:45:14Z",
-   "summary": "commented on #16868: Show group changes in Git diff",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#issuecomment-5559301541",
-   "excerpt": "Yes, this PR just moves it to a new position",
-   "review_id": null
-  },
-  {
-   "id": "20240320437",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:43:54Z",
-   "summary": "pushed 0 commit(s) to fix-sync",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14524388641",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:51:05Z",
+   "summary": "reviewed PR #16870 (approved)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125990246",
+   "excerpt": "",
+   "review_id": 5125990246,
+   "self": false
+  },
+  {
+   "id": "14524384727",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:50:56Z",
+   "summary": "commented on #16870: Add infer style button",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560704821",
+   "excerpt": "Took the opportunity to finish it. Should insert the style into meta in non-zotero mode as well now.",
+   "review_id": null
+  },
+  {
+   "id": "20256908204",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T16:48:54Z",
+   "summary": "pushed 0 commit(s) to infer-style-button",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14524302383",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:47:49Z",
+   "summary": "reviewed PR #16651 (changes_requested)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125849146",
+   "excerpt": "Sorry, killing the fun",
+   "review_id": 5125849146,
+   "self": false
+  },
+  {
+   "id": "14524302382",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:47:49Z",
+   "summary": "reviewed PR #16651 (changes_requested)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125849146",
+   "excerpt": "Sorry, killing the fun",
+   "review_id": 5125849146,
+   "self": false
+  },
   {
    "id": "14524253664",
    "type": "PullRequestReviewEvent",
@@ -21748,17 +21821,17 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 218,
+   "points": 222,
    "merged": 1,
-   "reviews": 52,
+   "reviews": 54,
    "other": 111
   },
   {
    "login": "subhramit",
-   "points": 206,
+   "points": 210,
    "merged": 4,
-   "reviews": 40,
-   "other": 114
+   "reviews": 41,
+   "other": 116
   },
   {
    "login": "Siedlerchr",
