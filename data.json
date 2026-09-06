@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T14:52:32+00:00",
+ "generated_at": "2026-09-06T14:55:47+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -365,6 +365,42 @@
       "immutable collection literals"
      ]
     ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16755",
+   "repo": "JabRef/jabref",
+   "number": 16755,
+   "title": "Show tooltips only for truncated text or explicit preview clicks",
+   "url": "https://github.com/JabRef/jabref/pull/16755",
+   "type": "pr",
+   "draft": false,
+   "author": "justanothercoder-hub",
+   "assignees": [],
+   "labels": [
+    "component: maintable",
+    "component: entry-editor",
+    "good first issue",
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T14:53:29Z",
+   "closed_at": "2026-09-05T10:38:21Z",
+   "state_reason": null,
+   "merged_at": "2026-09-05T10:38:21Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 43,
+    "deletions": 13,
+    "changed_files": 7,
+    "components": {
+     "(root)": 1,
+     "docs": 6,
+     "jabgui": 47,
+     "jablib": 2
+    },
+    "refactorings": []
    }
   },
   {
@@ -855,42 +891,6 @@
       "immutable collection literals"
      ]
     ]
-   }
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16755",
-   "repo": "JabRef/jabref",
-   "number": 16755,
-   "title": "Show tooltips only for truncated text or explicit preview clicks",
-   "url": "https://github.com/JabRef/jabref/pull/16755",
-   "type": "pr",
-   "draft": false,
-   "author": "justanothercoder-hub",
-   "assignees": [],
-   "labels": [
-    "component: maintable",
-    "component: entry-editor",
-    "good first issue",
-    "status: changes-required",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-05T10:43:49Z",
-   "closed_at": "2026-09-05T10:38:21Z",
-   "state_reason": null,
-   "merged_at": "2026-09-05T10:38:21Z",
-   "column": "done",
-   "focus": false,
-   "stats": {
-    "additions": 43,
-    "deletions": 13,
-    "changed_files": 7,
-    "components": {
-     "(root)": 1,
-     "docs": 6,
-     "jabgui": 47,
-     "jablib": 2
-    },
-    "refactorings": []
    }
   },
   {
@@ -1815,6 +1815,47 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16877",
+   "repo": "JabRef/jabref",
+   "number": 16877,
+   "title": "Label CI/CD pull requests automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16877",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-06T14:55:38Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16878",
+   "repo": "JabRef/jabref",
+   "number": 16878,
+   "title": "Drop stray org.jetbrains.annotations use from jablib",
+   "url": "https://github.com/JabRef/jabref/pull/16878",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: ai"
+   ],
+   "updated_at": "2026-09-06T14:54:25Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16857",
    "repo": "JabRef/jabref",
    "number": 16857,
@@ -1891,26 +1932,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16878",
-   "repo": "JabRef/jabref",
-   "number": 16878,
-   "title": "Drop stray org.jetbrains.annotations use from jablib",
-   "url": "https://github.com/JabRef/jabref/pull/16878",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: ai"
-   ],
-   "updated_at": "2026-09-06T14:41:44Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/vsch/flexmark-java/pull/680",
    "repo": "vsch/flexmark-java",
    "number": 680,
@@ -1946,26 +1967,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-06T14:28:59Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16877",
-   "repo": "JabRef/jabref",
-   "number": 16877,
-   "title": "Label CI/CD pull requests automatically",
-   "url": "https://github.com/JabRef/jabref/pull/16877",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T14:26:40Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4212,6 +4213,34 @@
   }
  ],
  "events": [
+  {
+   "id": "20249279914",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T14:55:39Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14521149703",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:53:23Z",
+   "summary": "commented on #16877: Label CI/CD pull requests automatically",
+   "number": 16877,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16877#issuecomment-5560035875",
+   "excerpt": "Both findings fixed in 9e18eeb \u2014 the .github/.yml / .github/.sh wildcards are replaced by an explicit list, so FUNDING.yml and the template\u2026",
+   "review_id": null
+  },
   {
    "id": "20249048965",
    "type": "PushEvent",
@@ -7126,38 +7155,37 @@
    "excerpt": "",
    "review_id": 5125249073,
    "self": false
-  },
-  {
-   "id": "14516669757",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:05:10Z",
-   "summary": "reviewed PR #16853 (approved)",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16853#pullrequestreview-5125248008",
-   "excerpt": "",
-   "review_id": 5125248008,
-   "self": false
-  },
-  {
-   "id": "14516624292",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:03:22Z",
-   "summary": "commented on #16548: Rework Citations Tab UI",
-   "number": 16548,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16548#issuecomment-5559081180",
-   "excerpt": "Looks good so far.",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "20249279914",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T14:55:39Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14521149703",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:53:23Z",
+   "summary": "commented on #16877: Label CI/CD pull requests automatically",
+   "number": 16877,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16877#issuecomment-5560035875",
+   "excerpt": "Both findings fixed in 9e18eeb \u2014 the .github/.yml / .github/.sh wildcards are replaced by an explicit list, so FUNDING.yml and the template\u2026",
+   "review_id": null
+  },
   {
    "id": "20249048965",
    "type": "PushEvent",
@@ -20211,8 +20239,8 @@
    "(root)": 46,
    "jabgui": 2964,
    "jablib": 1497,
-   "latex-conv": 1,
    "docs": 202,
+   "latex-conv": 1,
    ".github": 25,
    "openfasttrace": 31,
    "build-logic": 112,
@@ -20256,10 +20284,10 @@
   },
   {
    "login": "koppor",
-   "points": 100,
+   "points": 102,
    "merged": 10,
    "reviews": 2,
-   "other": 66
+   "other": 68
   },
   {
    "login": "pluto-han",
