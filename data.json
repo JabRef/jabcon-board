@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T10:17:21+00:00",
+ "generated_at": "2026-09-06T10:26:46+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1422,10 +1422,10 @@
    "author": "Siedlerchr",
    "assignees": [],
    "labels": [
-    "component: import-load",
-    "status: changes-required"
+    "status: ready-for-review",
+    "component: import-load"
    ],
-   "updated_at": "2026-09-06T10:14:06Z",
+   "updated_at": "2026-09-06T10:25:55Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3914,6 +3914,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14514168939",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Stewori",
+   "repo": "jython/jython.github.io",
+   "created_at": "2026-09-06T10:18:27Z",
+   "summary": "commented on #43: JBang support for running Jython",
+   "number": 43,
+   "merged": false,
+   "url": "https://github.com/jython/jython.github.io/pull/43#issuecomment-5558571959",
+   "excerpt": "Perhaps, JBang-Jython usage could also be added as a subsection to \"Getting Started\" in index.md.",
+   "review_id": null
+  },
   {
    "id": "14514089242",
    "type": "IssueCommentEvent",
@@ -6790,23 +6804,23 @@
    "excerpt": "Yeah we do both, e.g.",
    "review_id": 5120908685,
    "self": false
-  },
-  {
-   "id": "20182009596",
-   "type": "DeleteEvent",
-   "action": null,
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:44:54Z",
-   "summary": "deleted branch fix-autosave-registration",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14514168939",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Stewori",
+   "repo": "jython/jython.github.io",
+   "created_at": "2026-09-06T10:18:27Z",
+   "summary": "commented on #43: JBang support for running Jython",
+   "number": 43,
+   "merged": false,
+   "url": "https://github.com/jython/jython.github.io/pull/43#issuecomment-5558571959",
+   "excerpt": "Perhaps, JBang-Jython usage could also be added as a subsection to \"Getting Started\" in index.md.",
+   "review_id": null
+  },
   {
    "id": "14514089242",
    "type": "IssueCommentEvent",
@@ -16737,14 +16751,14 @@
    "other": 4
   },
   {
-   "login": "ryan-carpenter",
-   "points": 0,
+   "login": "Stewori",
+   "points": 1,
    "merged": 0,
    "reviews": 0,
-   "other": 0
+   "other": 1
   },
   {
-   "login": "Stewori",
+   "login": "ryan-carpenter",
    "points": 0,
    "merged": 0,
    "reviews": 0,
