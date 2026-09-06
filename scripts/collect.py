@@ -207,7 +207,7 @@ def summarize(e):
     ref = f"#{issue['number']}" if issue.get("number") else ""
     title = f": {issue['title']}" if issue.get("title") else ""
     return {
-        "PushEvent": f"pushed {len(p.get('commits', []))} commit(s) to {p.get('ref', '').removeprefix('refs/heads/')}",
+        "PushEvent": f"pushed to {p.get('ref', '').removeprefix('refs/heads/')}",  # the public feed carries no commit list
         "PullRequestEvent": f"{'merged' if (p.get('pull_request') or {}).get('merged') else p.get('action')} PR {ref}{title}",
         "PullRequestReviewEvent": f"reviewed PR {ref} ({(p.get('review') or {}).get('state', '').lower()})",
         "PullRequestReviewCommentEvent": f"commented on PR {ref}",
