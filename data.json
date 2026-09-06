@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T18:47:26+00:00",
+ "generated_at": "2026-09-06T18:54:40+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2204,7 +2204,7 @@
     "good first issue",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T18:45:27Z",
+   "updated_at": "2026-09-06T18:49:30Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4559,6 +4559,35 @@
   }
  ],
  "events": [
+  {
+   "id": "14527565400",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:49:33Z",
+   "summary": "reviewed PR #16845 (approved)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126277433",
+   "excerpt": "",
+   "review_id": 5126277433,
+   "self": false
+  },
+  {
+   "id": "14527537323",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:48:26Z",
+   "summary": "commented on #16845: Select newly added entry",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#issuecomment-5561368807",
+   "excerpt": "bulk itself is not different but now we select by id instead of citaiton key, so now the first completed imported entry is used",
+   "review_id": null
+  },
   {
    "id": "14527404677",
    "type": "PullRequestReviewEvent",
@@ -7439,38 +7468,38 @@
    "url": "https://github.com/JabRef/jabref/issues/16876",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14519468045",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:52:39Z",
-   "summary": "opened PR #16875",
-   "number": 16875,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16875",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14519430611",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:51:16Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944139678",
-   "excerpt": "I think qodo's right",
-   "review_id": 5125483424,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14527565400",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:49:33Z",
+   "summary": "reviewed PR #16845 (approved)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126277433",
+   "excerpt": "",
+   "review_id": 5126277433,
+   "self": false
+  },
+  {
+   "id": "14527537323",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:48:26Z",
+   "summary": "commented on #16845: Select newly added entry",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#issuecomment-5561368807",
+   "excerpt": "bulk itself is not different but now we select by id instead of citaiton key, so now the first completed imported entry is used",
+   "review_id": null
+  },
   {
    "id": "14527404677",
    "type": "PullRequestReviewEvent",
@@ -22708,9 +22737,9 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 243,
+   "points": 245,
    "merged": 4,
-   "reviews": 51,
+   "reviews": 52,
    "other": 129
   },
   {
@@ -22722,10 +22751,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 157,
+   "points": 158,
    "merged": 4,
    "reviews": 37,
-   "other": 71
+   "other": 72
   },
   {
    "login": "Maran23",
