@@ -24,9 +24,11 @@ PARTICIPANTS = CONFIG["participants"]
 START = datetime.fromisoformat(CONFIG["jabcon_start"])
 END = datetime.fromisoformat(CONFIG["jabcon_end"])
 START_DATE = START.astimezone(timezone.utc).strftime("%Y-%m-%d")
-EXCLUDE = {r.lower() for r in CONFIG.get("exclude_repos", [])}
+# [impl->req~private-counts-only~1] private repos never yield cards, whatever the token can see
+EXCLUDE = {r.lower() for r in CONFIG.get("exclude_repos", []) + CONFIG.get("private_repos", [])}
 FOCUS = CONFIG.get("focus_label", "")
 FOCUS_Q = f'org:{CONFIG["org"]} label:"{FOCUS}"' if FOCUS else ""
+MILESTONE_REFS = set(CONFIG.get("milestones", []))
 BOT_SUFFIX = "[bot]"
 PR_AUTHORS = {}  # "owner/repo#n" -> login, loaded from the previous data.json
 
@@ -89,7 +91,9 @@ def card(item, column):
         "state_reason": item.get("state_reason"),  # issues: completed | not_planned | duplicate | reopened
         "merged_at": (item.get("pull_request") or {}).get("merged_at"),
         "column": column,
-        "focus": bool(FOCUS) and FOCUS in [l["name"] for l in item.get("labels", [])],
+        # [impl->req~column-order~2] JabCon item: focus label or one of the configured milestones
+        "focus": (bool(FOCUS) and FOCUS in [l["name"] for l in item.get("labels", [])])
+                 or f"{repo_of(item)}/{(item.get('milestone') or {}).get('number')}" in MILESTONE_REFS,
     }
 
 
@@ -100,7 +104,8 @@ def keep(item):
 
 # [impl->req~one-column-per-item~1]
 # [impl->req~in-progress-recent~1]
-def collect_cards():
+# [impl->req~backlog-jabcon-only~1]
+def collect_cards(milestones):
     """Search per column, then dedupe so each item lives in exactly one column (done > progress > backlog)."""
     columns = [
         ("done", f"{FOCUS_Q} is:closed closed:>={START_DATE}"),
@@ -110,9 +115,7 @@ def collect_cards():
         ("progress", f"is:pr is:open updated:>={START_DATE} {qualifiers('author')}"),
         ("progress", f"is:pr is:open updated:>={START_DATE} {qualifiers('reviewed-by')}"),
         ("backlog", f"{FOCUS_Q} is:open"),
-        ("backlog", f"org:{CONFIG['org']} is:pr is:open label:ready-for-review"),
-        ("backlog", f"is:open {qualifiers('assignee')}"),
-    ]
+    ] + [("backlog", f'repo:{m["repo"]} milestone:"{m["title"]}" is:open') for m in milestones if m["repo"].lower() not in EXCLUDE]
     seen = {}
     for column, query in columns:
         if query.startswith(" "):  # focus queries without a focus label configured
@@ -335,26 +338,36 @@ def pr_stats(c, cached):
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
-# [impl->req~scoring~1]
+# [impl->req~scoring~2]
 def leaderboard(cards, events, private):
-    score = {p: {"merged": 0, "reviews": 0, "other": 0} for p in PARTICIPANTS}
+    """Merged PR 3, review 2, other 1; on a JabCon item (focus label / milestone) each counts tenfold."""
+    score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "points": 0} for p in PARTICIPANTS}
+    jabcon = {(c["repo"], c["number"]) for c in cards if c["focus"]}
     for counts in private.values():
         for p, n in counts["by"].items():
             score[p]["other"] += n
+            score[p]["points"] += n
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in score:
             score[c["author"]]["merged"] += 1
+            score[c["author"]]["milestone"] += c["focus"]
+            score[c["author"]]["points"] += 30 if c["focus"] else 3
     for e in events:
         s = score.get(e["actor"])
         if s is None:
             continue
         if e.get("self") or e.get("sync"):
             continue
+        factor = 10 if (e["repo"], e.get("number")) in jabcon else 1
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
         elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "IssuesEvent", "PushEvent"):
             s["other"] += 1
-    return [{"login": p, "points": v["merged"] * 3 + v["reviews"] * 2 + v["other"], **v} for p, v in score.items()]
+        else:
+            continue
+        s["milestone"] += factor == 10
+        s["points"] += (2 if e["type"] == "PullRequestReviewEvent" else 1) * factor
+    return [{"login": p, **v} for p, v in score.items()]
 
 
 # [impl->req~milestones~1]
@@ -427,7 +440,8 @@ def main():
             PR_AUTHORS.update(previous.get("pr_authors", {}))
         except (ValueError, KeyError):
             pass
-    cards = collect_cards()
+    ms = milestones(previous_milestones)
+    cards = collect_cards(ms)
     events = collect_events(previous_events)
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr":
@@ -448,7 +462,7 @@ def main():
     data = {
         "refactorings": nerdy,
         "ai_models": dict(sorted(ai_used.items(), key=lambda kv: -kv[1])),
-        "milestones": milestones(previous_milestones),
+        "milestones": ms,
         "focus": focus_progress(),
         "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
