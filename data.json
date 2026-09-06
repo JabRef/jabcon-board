@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T21:40:47+00:00",
+ "generated_at": "2026-09-06T21:47:04+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2866,21 +2866,20 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16800",
+   "id": "https://github.com/JabRef/jabref/pull/16830",
    "repo": "JabRef/jabref",
-   "number": 16800,
-   "title": "Fill shared database login from a pasted connection URL",
-   "url": "https://github.com/JabRef/jabref/pull/16800",
+   "number": 16830,
+   "title": "Preserve file attributes when replacing a file atomically",
+   "url": "https://github.com/JabRef/jabref/pull/16830",
    "type": "pr",
    "draft": false,
    "author": "koppor",
    "assignees": [],
    "labels": [
-    "component: ui",
-    "component: shared-database",
-    "status: no-bot-comments"
+    "status: ready-for-review",
+    "component: export-or-save"
    ],
-   "updated_at": "2026-09-06T21:37:12Z",
+   "updated_at": "2026-09-06T21:45:47Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2899,9 +2898,10 @@
    "assignees": [],
    "labels": [
     "status: ready-for-review",
-    "component: external-files"
+    "component: external-files",
+    "status: to-be-merged"
    ],
-   "updated_at": "2026-09-06T21:21:52Z",
+   "updated_at": "2026-09-06T21:44:55Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2909,25 +2909,21 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16884",
+   "id": "https://github.com/JabRef/jabref/pull/16800",
    "repo": "JabRef/jabref",
-   "number": 16884,
-   "title": "Separate AI features behind Service Provider Interface (SPI)",
-   "url": "https://github.com/JabRef/jabref/pull/16884",
+   "number": 16800,
+   "title": "Fill shared database login from a pasted connection URL",
+   "url": "https://github.com/JabRef/jabref/pull/16800",
    "type": "pr",
-   "draft": true,
-   "author": "InAnYan",
+   "draft": false,
+   "author": "koppor",
    "assignees": [],
    "labels": [
-    "component: groups",
-    "component: fetcher",
-    "component: jabkit",
-    "component: preferences",
-    "component: entry-editor",
-    "component: ai",
-    "component: citation-relations"
+    "component: ui",
+    "component: shared-database",
+    "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-06T21:40:54Z",
+   "updated_at": "2026-09-06T21:37:12Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3278,27 +3274,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16830",
-   "repo": "JabRef/jabref",
-   "number": 16830,
-   "title": "Preserve file attributes when replacing a file atomically",
-   "url": "https://github.com/JabRef/jabref/pull/16830",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: export-or-save"
-   ],
-   "updated_at": "2026-09-06T04:29:58Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16782",
    "repo": "JabRef/jabref",
    "number": 16782,
@@ -3565,6 +3540,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-06T21:45:20Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16874",
    "repo": "JabRef/jabref",
    "number": 16874,
@@ -3668,28 +3665,6 @@
     "good second issue"
    ],
    "updated_at": "2026-09-06T20:28:30Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-06T19:39:44Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -5087,6 +5062,78 @@
   }
  ],
  "events": [
+  {
+   "id": "20275985987",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:47:17Z",
+   "summary": "pushed to shared-db-url-paste",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14532168974",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:45:48Z",
+   "summary": "reviewed PR #16830 (approved)",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5126709987",
+   "excerpt": "",
+   "review_id": 5126709987,
+   "self": false
+  },
+  {
+   "id": "14532116485",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:43:39Z",
+   "summary": "reviewed PR #16831 (approved)",
+   "number": 16831,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16831#pullrequestreview-5126704876",
+   "excerpt": "",
+   "review_id": 5126704876,
+   "self": false
+  },
+  {
+   "id": "14532111142",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "Siedlerchr",
+   "repo": "redhat-et/ripwire",
+   "created_at": "2026-09-06T21:43:24Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/redhat-et/ripwire",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14532138191",
+   "type": "PullRequestEvent",
+   "action": "closed",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:40:54Z",
+   "summary": "closed PR #16884",
+   "number": 16884,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16884",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20275544493",
    "type": "PushEvent",
@@ -7935,43 +7982,17 @@
    "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5561192682",
    "excerpt": "(Sorry for the french)",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14526601171",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "Siedlerchr",
-   "repo": "ungerts/adr-instructions-maven-plugin",
-   "created_at": "2026-09-06T18:13:11Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/ungerts/adr-instructions-maven-plugin",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14526529893",
-   "type": "PullRequestEvent",
-   "action": "labeled",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T18:10:28Z",
-   "summary": "labeled PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16857",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20262276026",
+   "id": "20275985987",
    "type": "PushEvent",
    "action": null,
-   "actor": "calixtus",
+   "actor": "Siedlerchr",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T18:10:27Z",
-   "summary": "pushed to fix-undoredoevenmore",
+   "created_at": "2026-09-06T21:47:17Z",
+   "summary": "pushed to shared-db-url-paste",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
@@ -7979,36 +8000,63 @@
    "review_id": null
   },
   {
-   "id": "14526521688",
-   "type": "IssueCommentEvent",
+   "id": "14532168974",
+   "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "calixtus",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T18:10:15Z",
-   "summary": "commented on #16857: Fix undo C - One undomanager / journal per library and some cleanups",
-   "number": 16857,
+   "created_at": "2026-09-06T21:45:48Z",
+   "summary": "reviewed PR #16830 (approved)",
+   "number": 16830,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#issuecomment-5561151132",
-   "excerpt": "Cannot reproduce either. Think its rfr.",
+   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5126709987",
+   "excerpt": "",
+   "review_id": 5126709987,
+   "self": false
+  },
+  {
+   "id": "14532116485",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:43:39Z",
+   "summary": "reviewed PR #16831 (approved)",
+   "number": 16831,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16831#pullrequestreview-5126704876",
+   "excerpt": "",
+   "review_id": 5126704876,
+   "self": false
+  },
+  {
+   "id": "14532111142",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "Siedlerchr",
+   "repo": "redhat-et/ripwire",
+   "created_at": "2026-09-06T21:43:24Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/redhat-et/ripwire",
+   "excerpt": "",
    "review_id": null
   },
   {
-   "id": "14526130287",
-   "type": "PullRequestReviewEvent",
-   "action": "dismissed",
-   "actor": "pluto-han",
+   "id": "14532138191",
+   "type": "PullRequestEvent",
+   "action": "closed",
+   "actor": "InAnYan",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:56:34Z",
-   "summary": "reviewed PR #16845 (dismissed)",
-   "number": 16845,
+   "created_at": "2026-09-06T21:40:54Z",
+   "summary": "closed PR #16884",
+   "number": 16884,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125841269",
-   "excerpt": "I think just checking the propertty would be sufficient?",
-   "review_id": 5125841269,
-   "self": true
-  }
- ],
- "all_events": [
+   "url": "https://github.com/JabRef/jabref/issues/16884",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20275544493",
    "type": "PushEvent",
@@ -25354,6 +25402,20 @@
    "review_id": null
   },
   {
+   "id": "20275856256",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Maran23",
+   "repo": "Maran23/jfx",
+   "created_at": "2026-09-04T12:49:52Z",
+   "summary": "pushed to cell-state-unify",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Maran23/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14431469381",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -25774,17 +25836,17 @@
   },
   {
    "login": "Maran23",
-   "points": 180,
+   "points": 181,
    "merged": 1,
    "reviews": 53,
-   "other": 71
+   "other": 72
   },
   {
    "login": "Siedlerchr",
-   "points": 173,
+   "points": 174,
    "merged": 5,
    "reviews": 40,
-   "other": 78
+   "other": 79
   },
   {
    "login": "koppor",
@@ -25802,9 +25864,9 @@
   },
   {
    "login": "calixtus",
-   "points": 50,
+   "points": 54,
    "merged": 1,
-   "reviews": 12,
+   "reviews": 14,
    "other": 23
   },
   {
