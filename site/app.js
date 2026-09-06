@@ -246,6 +246,7 @@ async function load() {
 const video = $('#gource');
 video.addEventListener('ended', () => { video.loop = true; video.src = `${VIDEO}?ts=${Date.now()}`; video.play().catch(() => {}); });
 video.addEventListener('error', () => video.removeAttribute('src')); // no rendering yet: hide, retry next hour
+video.addEventListener('loadedmetadata', () => { video.playbackRate = 3; }); // [impl->req~gource-speed~1] re-applied per source: a src swap resets the rate
 // [impl->req~gource-refresh~1]
 function loadVideo() {
   if (video.getAttribute('src')) { video.loop = false; return; } // finish the current loop, then swap
