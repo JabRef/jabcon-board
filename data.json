@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T17:52:57+00:00",
+ "generated_at": "2026-09-06T18:00:10+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2169,6 +2169,31 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16845",
+   "repo": "JabRef/jabref",
+   "number": 16845,
+   "title": "Select newly added entry",
+   "url": "https://github.com/JabRef/jabref/pull/16845",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "component: external-files",
+    "component: maintable",
+    "good first issue",
+    "status: changes-required",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-06T17:57:56Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/NixOS/nixpkgs/pull/546687",
    "repo": "NixOS/nixpkgs",
    "number": 546687,
@@ -2288,31 +2313,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T16:57:57Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16845",
-   "repo": "JabRef/jabref",
-   "number": 16845,
-   "title": "Select newly added entry",
-   "url": "https://github.com/JabRef/jabref/pull/16845",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: import-load",
-    "component: external-files",
-    "component: maintable",
-    "good first issue",
-    "status: changes-required",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-06T16:45:59Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3316,29 +3316,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/12468",
-   "repo": "JabRef/jabref",
-   "number": 12468,
-   "title": "Ability to disable the built-in JabRef journal abbreviation list",
-   "url": "https://github.com/JabRef/jabref/issues/12468",
-   "type": "issue",
-   "draft": false,
-   "author": "Enivex",
-   "assignees": [
-    "calixtus"
-   ],
-   "labels": [
-    "project: jabcon",
-    "component: journal-abbreviations"
-   ],
-   "updated_at": "2026-09-06T16:00:15Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": true
-  },
-  {
    "id": "https://github.com/JabRef/jabref/issues/16035",
    "repo": "JabRef/jabref",
    "number": 16035,
@@ -3356,7 +3333,30 @@
     "\ud83d\udccd Assigned",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-06T03:26:10Z",
+   "updated_at": "2026-09-06T17:57:54Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/issues/12468",
+   "repo": "JabRef/jabref",
+   "number": 12468,
+   "title": "Ability to disable the built-in JabRef journal abbreviation list",
+   "url": "https://github.com/JabRef/jabref/issues/12468",
+   "type": "issue",
+   "draft": false,
+   "author": "Enivex",
+   "assignees": [
+    "calixtus"
+   ],
+   "labels": [
+    "project: jabcon",
+    "component: journal-abbreviations"
+   ],
+   "updated_at": "2026-09-06T16:00:15Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4537,6 +4537,65 @@
  ],
  "events": [
   {
+   "id": "14526130287",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:56:34Z",
+   "summary": "reviewed PR #16845 (dismissed)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125841269",
+   "excerpt": "I think just checking the propertty would be sufficient?",
+   "review_id": 5125841269,
+   "self": true
+  },
+  {
+   "id": "14526130192",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:56:33Z",
+   "summary": "reviewed PR #16845 (commented)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126138947",
+   "excerpt": "done",
+   "review_id": 5126138947,
+   "self": true
+  },
+  {
+   "id": "14526133251",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:56:32Z",
+   "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3944781616",
+   "excerpt": "done",
+   "review_id": 5126138947,
+   "self": true
+  },
+  {
+   "id": "20261357706",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T17:56:29Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14525606094",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -5367,7 +5426,7 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T15:46:57Z",
-   "summary": "reviewed PR #16845 (approved)",
+   "summary": "reviewed PR #16845 (dismissed)",
    "number": 16845,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125841269",
@@ -7385,68 +7444,68 @@
    "url": "https://github.com/Siedlerchr/jabref",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "20241888739",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:06:17Z",
-   "summary": "pushed 0 commit(s) to fulltext-context-menu",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14518214480",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:05:42Z",
-   "summary": "commented on PR #16863",
-   "number": 16863,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16863#discussion_r3944022479",
-   "excerpt": "Why making a copy?",
-   "review_id": 5125368226,
-   "self": false
-  },
-  {
-   "id": "14518173570",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:04:08Z",
-   "summary": "commented on PR #16863",
-   "number": 16863,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16863#discussion_r3944018843",
-   "excerpt": "But does it make sense to have a separate same variable?",
-   "review_id": 5125368226,
-   "self": false
-  },
-  {
-   "id": "14518148310",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:03:12Z",
-   "summary": "commented on PR #16863",
-   "number": 16863,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16863#discussion_r3944016657",
-   "excerpt": "I think a ternary expression is shorter? Because we change only one argument",
-   "review_id": 5125368226,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14526130287",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:56:34Z",
+   "summary": "reviewed PR #16845 (dismissed)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125841269",
+   "excerpt": "I think just checking the propertty would be sufficient?",
+   "review_id": 5125841269,
+   "self": true
+  },
+  {
+   "id": "14526130192",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:56:33Z",
+   "summary": "reviewed PR #16845 (commented)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126138947",
+   "excerpt": "done",
+   "review_id": 5126138947,
+   "self": true
+  },
+  {
+   "id": "14526133251",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:56:32Z",
+   "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3944781616",
+   "excerpt": "done",
+   "review_id": 5126138947,
+   "self": true
+  },
+  {
+   "id": "20261357706",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T17:56:29Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14525606094",
    "type": "IssueCommentEvent",
@@ -8278,7 +8337,7 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T15:46:57Z",
-   "summary": "reviewed PR #16845 (approved)",
+   "summary": "reviewed PR #16845 (dismissed)",
    "number": 16845,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125841269",
@@ -22161,10 +22220,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 59,
+   "points": 60,
    "merged": 3,
    "reviews": 8,
-   "other": 34
+   "other": 35
   },
   {
    "login": "calixtus",
