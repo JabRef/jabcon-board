@@ -338,9 +338,9 @@ def pr_stats(c, cached):
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
-# [impl->req~scoring~3]
+# [impl->req~scoring~4]
 def leaderboard(cards, events, private):
-    """Merged PR 3, review 2, other 1; tenfold on a JabCon item (focus label / milestone), times the configured
+    """Merged PR 3, review 2, other (comment, issue, push, PR opened / labeled) 1; tenfold on a JabCon item (focus label / milestone), times the configured
     repo_factors elsewhere (keys are repos or whole orgs, e.g. the JabRef org and upstream JavaFX work)."""
     score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "boosted": 0, "points": 0} for p in PARTICIPANTS}
     jabcon = {(c["repo"], c["number"]) for c in cards if c["focus"]}
@@ -368,7 +368,8 @@ def leaderboard(cards, events, private):
             continue
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
-        elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "IssuesEvent", "PushEvent"):
+        elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "IssuesEvent", "PushEvent") \
+                or (e["type"] == "PullRequestEvent" and e.get("action") in ("opened", "labeled")):
             s["other"] += 1
         else:
             continue
