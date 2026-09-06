@@ -28,17 +28,17 @@
    "weight": 4,
    "text": "instanceof pattern",
    "repo": "JabRef/jabref",
-   "number": 16870,
-   "author": "pluto-han",
-   "url": "https://github.com/JabRef/jabref/pull/16870"
+   "number": 16882,
+   "author": "subhramit",
+   "url": "https://github.com/JabRef/jabref/pull/16882"
   },
   {
    "weight": 4,
-   "text": "net \u2212451 lines",
+   "text": "instanceof pattern",
    "repo": "JabRef/jabref",
-   "number": 16708,
-   "author": "Maran23",
-   "url": "https://github.com/JabRef/jabref/pull/16708"
+   "number": 16870,
+   "author": "pluto-han",
+   "url": "https://github.com/JabRef/jabref/pull/16870"
   }
  ],
  "ai_models": {
@@ -53,8 +53,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 4,
-   "closed": 124,
+   "open": 3,
+   "closed": 125,
    "baseline": 113
   },
   {
@@ -78,8 +78,8 @@
  ],
  "focus": {
   "label": "project: jabcon",
-  "open": 7,
-  "closed": 8,
+  "open": 6,
+  "closed": 9,
   "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
  },
  "private_activity": {
@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T20:18:39+00:00",
+ "generated_at": "2026-09-06T20:28:01+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -143,6 +143,54 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16882",
+   "repo": "JabRef/jabref",
+   "number": 16882,
+   "title": "Gracefully handle JGit errors",
+   "url": "https://github.com/JabRef/jabref/pull/16882",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "good first issue",
+    "project: jabcon",
+    "component: git",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T20:19:37Z",
+   "closed_at": "2026-09-06T20:19:29Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T20:19:29Z",
+   "column": "done",
+   "focus": true,
+   "stats": {
+    "additions": 336,
+    "deletions": 67,
+    "changed_files": 16,
+    "components": {
+     "(root)": 1,
+     "jabgui": 246,
+     "jablib": 156
+    },
+    "refactorings": [
+     [
+      4,
+      "instanceof pattern"
+     ],
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "Optional"
+     ]
+    ],
+    "ai": []
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/issues/16035",
    "repo": "JabRef/jabref",
@@ -1941,6 +1989,30 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16703",
+   "repo": "JabRef/jabref",
+   "number": 16703,
+   "title": "Gracefully handle jgit errors",
+   "url": "https://github.com/JabRef/jabref/issues/16703",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "good first issue",
+    "\ud83d\udccc Pinned",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T20:21:32Z",
+   "closed_at": "2026-09-06T20:19:30Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/12630",
    "repo": "JabRef/jabref",
    "number": 12630,
@@ -2473,10 +2545,10 @@
    "author": "koppor",
    "assignees": [],
    "labels": [
-    "status: changes-required",
+    "status: ready-for-review",
     "dev: ci-cd"
    ],
-   "updated_at": "2026-09-06T20:17:29Z",
+   "updated_at": "2026-09-06T20:22:56Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2561,29 +2633,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16882",
-   "repo": "JabRef/jabref",
-   "number": 16882,
-   "title": "Gracefully handle JGit errors",
-   "url": "https://github.com/JabRef/jabref/pull/16882",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "good first issue",
-    "project: jabcon",
-    "component: git",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T20:11:21Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
   },
   {
    "id": "https://github.com/JabRef/html-to-node/pull/25",
@@ -3297,7 +3346,28 @@
     "status: changes-required",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T20:18:43Z",
+   "updated_at": "2026-09-06T20:28:14Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16865",
+   "repo": "JabRef/jabref",
+   "number": 16865,
+   "title": "Fix parsing of percent comments in BibTeX files",
+   "url": "https://github.com/JabRef/jabref/pull/16865",
+   "type": "pr",
+   "draft": false,
+   "author": "albCarlosRodrigues",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: import-load"
+   ],
+   "updated_at": "2026-09-06T20:23:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3318,7 +3388,7 @@
     "rfr",
     "csr"
    ],
-   "updated_at": "2026-09-06T20:14:48Z",
+   "updated_at": "2026-09-06T20:22:24Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3727,30 +3797,6 @@
    "merged_at": null,
    "column": "backlog",
    "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16703",
-   "repo": "JabRef/jabref",
-   "number": 16703,
-   "title": "Gracefully handle jgit errors",
-   "url": "https://github.com/JabRef/jabref/issues/16703",
-   "type": "issue",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [
-    "subhramit"
-   ],
-   "labels": [
-    "good first issue",
-    "\ud83d\udccc Pinned",
-    "component: git"
-   ],
-   "updated_at": "2026-09-06T19:54:06Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/16029",
@@ -4806,6 +4852,152 @@
   }
  ],
  "events": [
+  {
+   "id": "14530093560",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:23:52Z",
+   "summary": "commented on #16865: Fix parsing of percent comments in BibTeX files",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#issuecomment-5561934718",
+   "excerpt": "Not sure, if this is true - let's see how fast the answers of the review comment come.",
+   "review_id": null
+  },
+  {
+   "id": "14530081953",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:23:26Z",
+   "summary": "reviewed PR #16865 (commented)",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#pullrequestreview-5126518793",
+   "excerpt": "Check if this is stored in the BibEntry",
+   "review_id": 5126518793,
+   "self": false
+  },
+  {
+   "id": "14530081407",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:23:24Z",
+   "summary": "commented on PR #16865",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#discussion_r3945166985",
+   "excerpt": "Check if this is stored in the BibEntry",
+   "review_id": 5126518793,
+   "self": false
+  },
+  {
+   "id": "14530047473",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:22:06Z",
+   "summary": "reviewed PR #16865 (commented)",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#pullrequestreview-5126515346",
+   "excerpt": "Add a test case for this, too.",
+   "review_id": 5126515346,
+   "self": false
+  },
+  {
+   "id": "14530046877",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:22:05Z",
+   "summary": "commented on PR #16865",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#discussion_r3945163780",
+   "excerpt": "Add a test case for this, too.",
+   "review_id": 5126515346,
+   "self": false
+  },
+  {
+   "id": "14530040540",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T20:21:49Z",
+   "summary": "reviewed PR #2015 (approved)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5126505373",
+   "excerpt": "I like the idea of the sentinel value.",
+   "review_id": 5126505373,
+   "self": false
+  },
+  {
+   "id": "14530040533",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T20:21:49Z",
+   "summary": "reviewed PR #2015 (approved)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5126505373",
+   "excerpt": "I like the idea of the sentinel value.",
+   "review_id": 5126505373,
+   "self": false
+  },
+  {
+   "id": "20270515984",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T20:19:30Z",
+   "summary": "deleted branch fix-jgit-exceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14529981188",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:19:30Z",
+   "summary": "closed issue #16703: Gracefully handle jgit errors",
+   "number": 16703,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16703",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14529981136",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:19:29Z",
+   "summary": "merged PR #16882",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16882",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14529961969",
    "type": "PullRequestReviewEvent",
@@ -7582,153 +7774,155 @@
    "url": "https://github.com/JabRef/jabref/issues/16880",
    "excerpt": "",
    "review_id": null
+  }
+ ],
+ "all_events": [
+  {
+   "id": "14530093560",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:23:52Z",
+   "summary": "commented on #16865: Fix parsing of percent comments in BibTeX files",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#issuecomment-5561934718",
+   "excerpt": "Not sure, if this is true - let's see how fast the answers of the review comment come.",
+   "review_id": null
   },
   {
-   "id": "14522425385",
+   "id": "14530081953",
    "type": "PullRequestReviewEvent",
    "action": "created",
-   "actor": "subhramit",
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:38:48Z",
-   "summary": "reviewed PR #16651 (dismissed)",
-   "number": 16651,
+   "created_at": "2026-09-06T20:23:26Z",
+   "summary": "reviewed PR #16865 (commented)",
+   "number": 16865,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125819479",
-   "excerpt": "Needs one final review.",
-   "review_id": 5125819479,
+   "url": "https://github.com/JabRef/jabref/pull/16865#pullrequestreview-5126518793",
+   "excerpt": "Check if this is stored in the BibEntry",
+   "review_id": 5126518793,
    "self": false
   },
   {
-   "id": "14522398363",
-   "type": "IssuesEvent",
-   "action": "opened",
-   "actor": "ryan-carpenter",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:37:47Z",
-   "summary": "opened issue #16881: Differentiate true/false relevance stars on hover in entry table",
-   "number": 16881,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16881",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14522278187",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:33:19Z",
-   "summary": "reviewed PR #16857 (commented)",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5125807257",
-   "excerpt": "fixed comment",
-   "review_id": 5125807257,
-   "self": true
-  },
-  {
-   "id": "14522277283",
+   "id": "14530081407",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
-   "actor": "calixtus",
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:33:17Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
+   "created_at": "2026-09-06T20:23:24Z",
+   "summary": "commented on PR #16865",
+   "number": 16865,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944428991",
-   "excerpt": "fixed comment",
-   "review_id": 5125807257,
-   "self": true
+   "url": "https://github.com/JabRef/jabref/pull/16865#discussion_r3945166985",
+   "excerpt": "Check if this is stored in the BibEntry",
+   "review_id": 5126518793,
+   "self": false
   },
   {
-   "id": "20251503041",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "calixtus",
+   "id": "14530047473",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:27:51Z",
-   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
+   "created_at": "2026-09-06T20:22:06Z",
+   "summary": "reviewed PR #16865 (commented)",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#pullrequestreview-5126515346",
+   "excerpt": "Add a test case for this, too.",
+   "review_id": 5126515346,
+   "self": false
+  },
+  {
+   "id": "14530046877",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:22:05Z",
+   "summary": "commented on PR #16865",
+   "number": 16865,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16865#discussion_r3945163780",
+   "excerpt": "Add a test case for this, too.",
+   "review_id": 5126515346,
+   "self": false
+  },
+  {
+   "id": "14530040540",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T20:21:49Z",
+   "summary": "reviewed PR #2015 (approved)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5126505373",
+   "excerpt": "I like the idea of the sentinel value.",
+   "review_id": 5126505373,
+   "self": false
+  },
+  {
+   "id": "14530040533",
+   "type": "PullRequestReviewEvent",
+   "action": "updated",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T20:21:49Z",
+   "summary": "reviewed PR #2015 (approved)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5126505373",
+   "excerpt": "I like the idea of the sentinel value.",
+   "review_id": 5126505373,
+   "self": false
+  },
+  {
+   "id": "20270515984",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T20:19:30Z",
+   "summary": "deleted branch fix-jgit-exceptions",
    "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref",
+   "url": "https://github.com/subhramit/jabref",
    "excerpt": "",
    "review_id": null
   },
   {
-   "id": "14522100964",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:26:43Z",
-   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
-   "number": 16704,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5560227150",
-   "excerpt": "This no longer happens in current main, potentially post https://github.com/JabRef/jabref/pull/16722.",
-   "review_id": null
-  },
-  {
-   "id": "14522100547",
+   "id": "14529981188",
    "type": "IssuesEvent",
    "action": "closed",
    "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:26:43Z",
-   "summary": "closed issue #16704: Show \"Nothing to commit\" if there is nothing to commit",
-   "number": 16704,
+   "created_at": "2026-09-06T20:19:30Z",
+   "summary": "closed issue #16703: Gracefully handle jgit errors",
+   "number": 16703,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16704",
+   "url": "https://github.com/JabRef/jabref/issues/16703",
    "excerpt": "",
    "review_id": null
   },
   {
-   "id": "14522007384",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T15:23:20Z",
-   "summary": "reviewed PR #16880 (approved)",
-   "number": 16880,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16880#pullrequestreview-5125785223",
-   "excerpt": "",
-   "review_id": 5125785223,
-   "self": false
-  },
-  {
-   "id": "14521987763",
+   "id": "14529981136",
    "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "Maran23",
-   "repo": "openjdk/jfx",
-   "created_at": "2026-09-06T15:22:36Z",
-   "summary": "opened PR #2297",
-   "number": 2297,
+   "action": "merged",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:19:29Z",
+   "summary": "merged PR #16882",
+   "number": 16882,
    "merged": false,
-   "url": "https://github.com/openjdk/jfx/issues/2297",
+   "url": "https://github.com/JabRef/jabref/issues/16882",
    "excerpt": "",
    "review_id": null
   },
-  {
-   "id": "20251051984",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/jabcon-board",
-   "created_at": "2026-09-06T15:20:53Z",
-   "summary": "pushed 0 commit(s) to main",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board",
-   "excerpt": "",
-   "review_id": null
-  }
- ],
- "all_events": [
   {
    "id": "14529961969",
    "type": "PullRequestReviewEvent",
@@ -24321,16 +24515,17 @@
   "JabRef/jabref#16875": "koppor",
   "JabRef/jabref#16882": "subhramit",
   "JabRef/jabref#16879": "InAnYan",
-  "JabRef/jabref#16874": "Devansh-18155"
+  "JabRef/jabref#16874": "Devansh-18155",
+  "JabRef/jabref#16865": "albCarlosRodrigues"
  },
  "stats": {
-  "additions": 5728,
-  "deletions": 2062,
-  "changed_files": 426,
+  "additions": 6064,
+  "deletions": 2129,
+  "changed_files": 442,
   "components": {
-   "(root)": 55,
-   "jabgui": 5239,
-   "jablib": 1728,
+   "(root)": 56,
+   "jabgui": 5485,
+   "jablib": 1884,
    "docs": 219,
    "skills": 26,
    ".github": 181,
@@ -24350,10 +24545,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 263,
-   "merged": 4,
+   "points": 267,
+   "merged": 5,
    "reviews": 58,
-   "other": 135
+   "other": 136
   },
   {
    "login": "InAnYan",
@@ -24363,6 +24558,13 @@
    "other": 118
   },
   {
+   "login": "Maran23",
+   "points": 165,
+   "merged": 1,
+   "reviews": 48,
+   "other": 66
+  },
+  {
    "login": "Siedlerchr",
    "points": 165,
    "merged": 4,
@@ -24370,18 +24572,11 @@
    "other": 75
   },
   {
-   "login": "Maran23",
-   "points": 161,
-   "merged": 1,
-   "reviews": 46,
-   "other": 66
-  },
-  {
    "login": "koppor",
-   "points": 134,
+   "points": 141,
    "merged": 13,
-   "reviews": 4,
-   "other": 87
+   "reviews": 6,
+   "other": 90
   },
   {
    "login": "pluto-han",
