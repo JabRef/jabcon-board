@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T03:24:00+00:00",
+ "generated_at": "2026-09-06T03:35:38+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1306,6 +1306,52 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16845",
+   "repo": "JabRef/jabref",
+   "number": 16845,
+   "title": "Select newly added entry",
+   "url": "https://github.com/JabRef/jabref/pull/16845",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "component: external-files",
+    "component: maintable",
+    "good first issue",
+    "status: changes-required",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-06T03:26:12Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16810",
+   "repo": "JabRef/jabref",
+   "number": 16810,
+   "title": "Keep library close working when cleanup throws an Error",
+   "url": "https://github.com/JabRef/jabref/pull/16810",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "status: devcall"
+   ],
+   "updated_at": "2026-09-06T03:24:23Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16708",
    "repo": "JabRef/jabref",
    "number": 16708,
@@ -1346,31 +1392,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16845",
-   "repo": "JabRef/jabref",
-   "number": 16845,
-   "title": "Select newly added entry",
-   "url": "https://github.com/JabRef/jabref/pull/16845",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: import-load",
-    "component: external-files",
-    "component: maintable",
-    "good first issue",
-    "status: changes-required",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-06T03:23:48Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16782",
@@ -2372,6 +2393,31 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16035",
+   "repo": "JabRef/jabref",
+   "number": 16035,
+   "title": "Select and focus newly added entry",
+   "url": "https://github.com/JabRef/jabref/issues/16035",
+   "type": "issue",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "good first issue",
+    "project: jabcon",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-06T03:26:10Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": true
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/11368",
    "repo": "JabRef/jabref",
    "number": 11368,
@@ -2394,31 +2440,6 @@
     "size: medium"
    ],
    "updated_at": "2026-09-05T03:11:48Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16035",
-   "repo": "JabRef/jabref",
-   "number": 16035,
-   "title": "Select and focus newly added entry",
-   "url": "https://github.com/JabRef/jabref/issues/16035",
-   "type": "issue",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [
-    "pluto-han"
-   ],
-   "labels": [
-    "good first issue",
-    "project: jabcon",
-    "\ud83d\udccd Assigned",
-    "\ud83d\udccc Pinned"
-   ],
-   "updated_at": "2026-09-04T21:27:58Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
