@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T14:42:42+00:00",
+ "generated_at": "2026-09-06T14:49:52+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1848,7 +1848,42 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T14:41:15Z",
+   "updated_at": "2026-09-06T14:49:25Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/11879",
+   "repo": "JabRef/jabref",
+   "number": 11879,
+   "title": "Rework shared SQL database synchronization (PostgreSQL, live updates)",
+   "url": "https://github.com/JabRef/jabref/pull/11879",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: ui",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: bib(la)tex",
+    "component: export-or-save",
+    "component: preferences",
+    "component: shared-database",
+    "component: keybinding",
+    "component: collaboration",
+    "component: backup",
+    "\ud83d\udccc Pinned",
+    "component: cite-as-you-write",
+    "component: jabsrv"
+   ],
+   "updated_at": "2026-09-06T14:44:17Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1911,41 +1946,6 @@
     "component: diff-merge"
    ],
    "updated_at": "2026-09-06T14:28:59Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/11879",
-   "repo": "JabRef/jabref",
-   "number": 11879,
-   "title": "Rework shared SQL database synchronization (PostgreSQL, live updates)",
-   "url": "https://github.com/JabRef/jabref/pull/11879",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [
-    "koppor"
-   ],
-   "labels": [
-    "component: ui",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: bib(la)tex",
-    "component: export-or-save",
-    "component: preferences",
-    "component: shared-database",
-    "component: keybinding",
-    "component: collaboration",
-    "component: backup",
-    "\ud83d\udccc Pinned",
-    "component: cite-as-you-write",
-    "component: jabsrv"
-   ],
-   "updated_at": "2026-09-06T14:28:11Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4212,6 +4212,36 @@
   }
  ],
  "events": [
+  {
+   "id": "14521037473",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:49:27Z",
+   "summary": "reviewed PR #16857 (commented)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5125685743",
+   "excerpt": "done",
+   "review_id": 5125685743,
+   "self": true
+  },
+  {
+   "id": "14521036308",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:49:24Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944300871",
+   "excerpt": "done",
+   "review_id": 5125685743,
+   "self": true
+  },
   {
    "id": "20248239579",
    "type": "PushEvent",
@@ -7125,37 +7155,39 @@
    "url": "https://github.com/JabRef/jabref/pull/16853#issuecomment-5559079567",
    "excerpt": "looks good on my machine",
    "review_id": null
-  },
-  {
-   "id": "14516579857",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:01:34Z",
-   "summary": "commented on #16693: Allow subset search in Style Select Dialog",
-   "number": 16693,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16693#issuecomment-5559072082",
-   "excerpt": "They already overshot their assignment deadline - seems like the auto-unassign action isn't working properly...",
-   "review_id": null
-  },
-  {
-   "id": "20237566972",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:01:18Z",
-   "summary": "pushed 0 commit(s) to common-style",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14521037473",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:49:27Z",
+   "summary": "reviewed PR #16857 (commented)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5125685743",
+   "excerpt": "done",
+   "review_id": 5125685743,
+   "self": true
+  },
+  {
+   "id": "14521036308",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:49:24Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944300871",
+   "excerpt": "done",
+   "review_id": 5125685743,
+   "self": true
+  },
   {
    "id": "20248239579",
    "type": "PushEvent",
