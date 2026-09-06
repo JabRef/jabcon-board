@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T10:36:33+00:00",
+ "generated_at": "2026-09-06T10:43:48+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -3915,6 +3915,34 @@
  ],
  "events": [
   {
+   "id": "14514620375",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:38:23Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5558667696",
+   "excerpt": "well yeah it's not that urgent, but there is only one precondition for this (at least for me) - just put the bib file in desktop.",
+   "review_id": null
+  },
+  {
+   "id": "14514618366",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:38:18Z",
+   "summary": "commented on #16787: Use consistent padding, gaps, font-sizes",
+   "number": 16787,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16787#issuecomment-5558667265",
+   "excerpt": "if you like, you can also start with https://github.com/JabRef/jabref/issues/16042 as a baseline. My current idea is to have a very small a\u2026",
+   "review_id": null
+  },
+  {
    "id": "14514528128",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -6771,39 +6799,37 @@
    "excerpt": "Verifyin that the parsed swhid is correct",
    "review_id": 5120912709,
    "self": false
-  },
-  {
-   "id": "14480550840",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:47:22Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940339351",
-   "excerpt": "Verifyin that the parsed swhid is correct",
-   "review_id": 5120912709,
-   "self": false
-  },
-  {
-   "id": "14480540860",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:46:55Z",
-   "summary": "reviewed PR #16849 (commented)",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120911958",
-   "excerpt": "method names to not should have underscoresm missedd that",
-   "review_id": 5120911958,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14514620375",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:38:23Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5558667696",
+   "excerpt": "well yeah it's not that urgent, but there is only one precondition for this (at least for me) - just put the bib file in desktop.",
+   "review_id": null
+  },
+  {
+   "id": "14514618366",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:38:18Z",
+   "summary": "commented on #16787: Use consistent padding, gaps, font-sizes",
+   "number": 16787,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16787#issuecomment-5558667265",
+   "excerpt": "if you like, you can also start with https://github.com/JabRef/jabref/issues/16042 as a baseline. My current idea is to have a very small a\u2026",
+   "review_id": null
+  },
   {
    "id": "14514528128",
    "type": "IssueCommentEvent",
@@ -16765,10 +16791,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 152,
+   "points": 153,
    "merged": 3,
    "reviews": 26,
-   "other": 91
+   "other": 92
   },
   {
    "login": "InAnYan",
@@ -16779,10 +16805,10 @@
   },
   {
    "login": "Maran23",
-   "points": 110,
+   "points": 111,
    "merged": 0,
    "reviews": 33,
-   "other": 44
+   "other": 45
   },
   {
    "login": "Siedlerchr",
