@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T04:00:04+00:00",
+ "generated_at": "2026-09-06T04:22:36+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1306,6 +1306,86 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/11879",
+   "repo": "JabRef/jabref",
+   "number": 11879,
+   "title": "Rework shared SQL database synchronization (PostgreSQL, live updates)",
+   "url": "https://github.com/JabRef/jabref/pull/11879",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: ui",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: bib(la)tex",
+    "component: export-or-save",
+    "component: preferences",
+    "component: shared-database",
+    "component: keybinding",
+    "component: collaboration",
+    "component: backup",
+    "\ud83d\udccc Pinned",
+    "component: cite-as-you-write",
+    "component: jabsrv"
+   ],
+   "updated_at": "2026-09-06T04:14:41Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16805",
+   "repo": "JabRef/jabref",
+   "number": 16805,
+   "title": "Do not offer a backup that differs only in modification dates",
+   "url": "https://github.com/JabRef/jabref/pull/16805",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: import-load",
+    "status: changes-required",
+    "component: backup",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-06T04:13:58Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16830",
+   "repo": "JabRef/jabref",
+   "number": 16830,
+   "title": "Preserve file attributes when replacing a file atomically",
+   "url": "https://github.com/JabRef/jabref/pull/16830",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: export-or-save",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-06T04:13:41Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16845",
    "repo": "JabRef/jabref",
    "number": 16845,
@@ -1475,50 +1555,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": true
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16805",
-   "repo": "JabRef/jabref",
-   "number": 16805,
-   "title": "Do not offer a backup that differs only in modification dates",
-   "url": "https://github.com/JabRef/jabref/pull/16805",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: import-load",
-    "status: changes-required",
-    "component: backup"
-   ],
-   "updated_at": "2026-09-06T03:22:52Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16830",
-   "repo": "JabRef/jabref",
-   "number": 16830,
-   "title": "Preserve file attributes when replacing a file atomically",
-   "url": "https://github.com/JabRef/jabref/pull/16830",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: export-or-save",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T03:22:32Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16792",
@@ -2629,41 +2665,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/11879",
-   "repo": "JabRef/jabref",
-   "number": 11879,
-   "title": "Rework shared SQL database synchronization (PostgreSQL, live updates)",
-   "url": "https://github.com/JabRef/jabref/pull/11879",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [
-    "koppor"
-   ],
-   "labels": [
-    "component: ui",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: bib(la)tex",
-    "component: export-or-save",
-    "component: preferences",
-    "component: shared-database",
-    "component: keybinding",
-    "component: collaboration",
-    "component: backup",
-    "\ud83d\udccc Pinned",
-    "component: cite-as-you-write",
-    "component: jabsrv"
-   ],
-   "updated_at": "2026-09-02T12:58:31Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/issues/16579",
    "repo": "JabRef/jabref",
    "number": 16579,
@@ -3739,6 +3740,48 @@
   }
  ],
  "events": [
+  {
+   "id": "14506124114",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T04:14:41Z",
+   "summary": "commented on #11879: Rework shared SQL database synchronization (PostgreSQL, live updates)",
+   "number": 11879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/11879#issuecomment-5556830747",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict.",
+   "review_id": null
+  },
+  {
+   "id": "14506099228",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T04:13:27Z",
+   "summary": "commented on #16805: Do not offer a backup that differs only in modification dates",
+   "number": 16805,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16805#issuecomment-5556825316",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict.",
+   "review_id": null
+  },
+  {
+   "id": "14506088271",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T04:12:57Z",
+   "summary": "commented on #16830: Preserve file attributes when replacing a file atomically",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16830#issuecomment-5556822928",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict.",
+   "review_id": null
+  },
   {
    "id": "14498983785",
    "type": "IssuesEvent",
@@ -6607,53 +6650,51 @@
    "excerpt": "@Siedlerchr you think this is ok test?",
    "review_id": 5120713792,
    "self": false
-  },
-  {
-   "id": "14479568277",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:04:36Z",
-   "summary": "commented on #16620: Fix closing of combo box popup on Escape key",
-   "number": 16620,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16620#issuecomment-5551061097",
-   "excerpt": "@Devansh-18155 can you please resolve the conflicts once more",
-   "review_id": null
-  },
-  {
-   "id": "14479562710",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:04:21Z",
-   "summary": "reviewed PR #16830 (commented)",
-   "number": 16830,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5120796099",
-   "excerpt": "Mitigated in 1c2526e96d: the attributes are applied only when the target still matches the snapshot taken right after the commit, so a file\u2026",
-   "review_id": 5120796099,
-   "self": true
-  },
-  {
-   "id": "14479562714",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:04:20Z",
-   "summary": "commented on PR #16830",
-   "number": 16830,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16830#discussion_r3940232924",
-   "excerpt": "Mitigated in 1c2526e96d: the attributes are applied only when the target still matches the snapshot taken right after the commit, so a file\u2026",
-   "review_id": 5120796099,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14506124114",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T04:14:41Z",
+   "summary": "commented on #11879: Rework shared SQL database synchronization (PostgreSQL, live updates)",
+   "number": 11879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/11879#issuecomment-5556830747",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict.",
+   "review_id": null
+  },
+  {
+   "id": "14506099228",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T04:13:27Z",
+   "summary": "commented on #16805: Do not offer a backup that differs only in modification dates",
+   "number": 16805,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16805#issuecomment-5556825316",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict.",
+   "review_id": null
+  },
+  {
+   "id": "14506088271",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T04:12:57Z",
+   "summary": "commented on #16830: Preserve file attributes when replacing a file atomically",
+   "number": 16830,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16830#issuecomment-5556822928",
+   "excerpt": "Merged origin/main into this branch to resolve the merge conflict.",
+   "review_id": null
+  },
   {
    "id": "14498983785",
    "type": "IssuesEvent",
@@ -15712,10 +15753,10 @@
   },
   {
    "login": "koppor",
-   "points": 82,
+   "points": 85,
    "merged": 8,
    "reviews": 2,
-   "other": 54
+   "other": 57
   },
   {
    "login": "Siedlerchr",
