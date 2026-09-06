@@ -183,9 +183,9 @@ When the top of the leaderboard changes, a bell sounds and a toast names the new
 Needs: impl
 
 ### Done items get confetti
-`req~done-confetti~1`
+`req~done-confetti~2`
 
-A newly merged PR or closed issue triggers confetti and a toast naming who did it.
+A newly merged PR or closed issue triggers confetti and a toast naming who did it, the number and the title.
 
 Needs: impl
 
