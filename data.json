@@ -77,8 +77,8 @@
  ],
  "focus": {
   "label": "project: jabcon",
-  "open": 7,
-  "closed": 5,
+  "open": 9,
+  "closed": 6,
   "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
  },
  "private_activity": {
@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T17:15:06+00:00",
+ "generated_at": "2026-09-06T17:22:57+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -142,6 +142,60 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16868",
+   "repo": "JabRef/jabref",
+   "number": 16868,
+   "title": "Show group changes in Git diff",
+   "url": "https://github.com/JabRef/jabref/pull/16868",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "project: jabcon",
+    "good second issue",
+    "component: external-changes",
+    "component: git",
+    "component: diff-merge",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T17:21:07Z",
+   "closed_at": "2026-09-06T16:14:38Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T16:14:37Z",
+   "column": "done",
+   "focus": true,
+   "stats": {
+    "additions": 224,
+    "deletions": 129,
+    "changed_files": 8,
+    "components": {
+     "(root)": 1,
+     "docs": 1,
+     "jabgui": 351
+    },
+    "refactorings": [
+     [
+      5,
+      "record GroupDiffMode"
+     ],
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "markdown javadoc"
+     ],
+     [
+      2,
+      "immutable collection literals"
+     ]
+    ],
+    "ai": []
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16708",
    "repo": "JabRef/jabref",
@@ -369,59 +423,6 @@
      [
       3,
       "JSpecify null-marked"
-     ],
-     [
-      2,
-      "immutable collection literals"
-     ]
-    ],
-    "ai": []
-   }
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16868",
-   "repo": "JabRef/jabref",
-   "number": 16868,
-   "title": "Show group changes in Git diff",
-   "url": "https://github.com/JabRef/jabref/pull/16868",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "good second issue",
-    "component: external-changes",
-    "component: git",
-    "component: diff-merge",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T16:14:50Z",
-   "closed_at": "2026-09-06T16:14:38Z",
-   "state_reason": null,
-   "merged_at": "2026-09-06T16:14:37Z",
-   "column": "done",
-   "focus": false,
-   "stats": {
-    "additions": 224,
-    "deletions": 129,
-    "changed_files": 8,
-    "components": {
-     "(root)": 1,
-     "docs": 1,
-     "jabgui": 351
-    },
-    "refactorings": [
-     [
-      5,
-      "record GroupDiffMode"
-     ],
-     [
-      3,
-      "JSpecify null-marked"
-     ],
-     [
-      2,
-      "markdown javadoc"
      ],
      [
       2,
@@ -2090,6 +2091,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16870",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "title": "Add infer style button",
+   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "project: jabcon",
+    "good second issue"
+   ],
+   "updated_at": "2026-09-06T17:21:37Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": true
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16882",
    "repo": "JabRef/jabref",
    "number": 16882,
@@ -2102,14 +2126,15 @@
    "labels": [
     "status: ready-for-review",
     "good first issue",
+    "project: jabcon",
     "component: git"
    ],
-   "updated_at": "2026-09-06T17:10:49Z",
+   "updated_at": "2026-09-06T17:20:57Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
    "column": "progress",
-   "focus": false
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16857",
@@ -2164,28 +2189,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T16:57:57Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16870",
-   "repo": "JabRef/jabref",
-   "number": 16870,
-   "title": "Add infer style button",
-   "url": "https://github.com/JabRef/jabref/pull/16870",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good second issue"
-   ],
-   "updated_at": "2026-09-06T16:53:33Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2919,7 +2922,7 @@
     "good second issue",
     "component: git"
    ],
-   "updated_at": "2026-09-06T16:48:40Z",
+   "updated_at": "2026-09-06T17:19:19Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4479,6 +4482,78 @@
  ],
  "events": [
   {
+   "id": "14525210291",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:21:39Z",
+   "summary": "reviewed PR #16870 (dismissed)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125274713",
+   "excerpt": "Left some nitpicks",
+   "review_id": 5125274713,
+   "self": false
+  },
+  {
+   "id": "14525137435",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:18:48Z",
+   "summary": "commented on #16651: Git integration SLR",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5560863073",
+   "excerpt": "@InAnYan took the opportunity to address, your comments felt valid. Can you take a look again now?",
+   "review_id": null
+  },
+  {
+   "id": "14525113504",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:17:53Z",
+   "summary": "reviewed PR #16651 (dismissed)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125819479",
+   "excerpt": "Needs one final review.",
+   "review_id": 5125819479,
+   "self": false
+  },
+  {
+   "id": "20258859715",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "LoayTarek5/jabref",
+   "created_at": "2026-09-06T17:17:51Z",
+   "summary": "pushed 0 commit(s) to git-integration-slr",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/LoayTarek5/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525192395",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:10:49Z",
+   "summary": "labeled PR #16882",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16882",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "20257584509",
    "type": "PushEvent",
    "action": null,
@@ -4546,6 +4621,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560719310",
    "excerpt": "Definitely a big improvement, thanks!",
+   "review_id": null
+  },
+  {
+   "id": "14525203045",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:53:33Z",
+   "summary": "labeled PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16870",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -4792,6 +4881,20 @@
    "number": 16882,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16882",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525196538",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:50Z",
+   "summary": "labeled PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
    "excerpt": "",
    "review_id": null
   },
@@ -5197,7 +5300,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T15:38:48Z",
-   "summary": "reviewed PR #16651 (approved)",
+   "summary": "reviewed PR #16651 (dismissed)",
    "number": 16651,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125819479",
@@ -7290,112 +7393,81 @@
    "excerpt": "",
    "review_id": 5125378319,
    "self": false
-  },
-  {
-   "id": "14517999070",
-   "type": "PullRequestReviewEvent",
-   "action": "dismissed",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:57:30Z",
-   "summary": "reviewed PR #11879 (dismissed)",
-   "number": 11879,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/11879#pullrequestreview-5125345633",
-   "excerpt": "",
-   "review_id": 5125345633,
-   "self": false
-  },
-  {
-   "id": "20241290946",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:57:27Z",
-   "summary": "pushed 0 commit(s) to fix-sync",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14517972614",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:56:30Z",
-   "summary": "commented on PR #16863",
-   "number": 16863,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16863#discussion_r3943998254",
-   "excerpt": "I'm not sure this requirement should be added",
-   "review_id": 5125368226,
-   "self": false
-  },
-  {
-   "id": "14517920478",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "ThiloteE",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:54:33Z",
-   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
-   "number": 16704,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5559350668",
-   "excerpt": "Another is to actually use the git feature and the user has to take a deliberate decision, so it will hit a subgroup of a subgroup of users\u2026",
-   "review_id": null
-  },
-  {
-   "id": "14517834443",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:51:20Z",
-   "summary": "reviewed PR #16864 (changes_requested)",
-   "number": 16864,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16864#pullrequestreview-5125351519",
-   "excerpt": "Qodo comment 1 still relevant?",
-   "review_id": 5125351519,
-   "self": false
-  },
-  {
-   "id": "14517813403",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:50:29Z",
-   "summary": "reviewed PR #16870 (commented)",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125349754",
-   "excerpt": "this \"preference\" is not JabRef's preference, but the user-defined-preference stored in meta.xml in .odt file.",
-   "review_id": 5125349754,
-   "self": true
-  },
-  {
-   "id": "14517812730",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:50:28Z",
-   "summary": "commented on PR #16870",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943980463",
-   "excerpt": "this \"preference\" is not JabRef's preference, but the user-defined-preference stored in meta.xml in .odt file.",
-   "review_id": 5125349754,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14525210291",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:21:39Z",
+   "summary": "reviewed PR #16870 (dismissed)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125274713",
+   "excerpt": "Left some nitpicks",
+   "review_id": 5125274713,
+   "self": false
+  },
+  {
+   "id": "14525137435",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:18:48Z",
+   "summary": "commented on #16651: Git integration SLR",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5560863073",
+   "excerpt": "@InAnYan took the opportunity to address, your comments felt valid. Can you take a look again now?",
+   "review_id": null
+  },
+  {
+   "id": "14525113504",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:17:53Z",
+   "summary": "reviewed PR #16651 (dismissed)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125819479",
+   "excerpt": "Needs one final review.",
+   "review_id": 5125819479,
+   "self": false
+  },
+  {
+   "id": "20258859715",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "LoayTarek5/jabref",
+   "created_at": "2026-09-06T17:17:51Z",
+   "summary": "pushed 0 commit(s) to git-integration-slr",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/LoayTarek5/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525192395",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:10:49Z",
+   "summary": "labeled PR #16882",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16882",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20257584509",
    "type": "PushEvent",
@@ -7464,6 +7536,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560719310",
    "excerpt": "Definitely a big improvement, thanks!",
+   "review_id": null
+  },
+  {
+   "id": "14525203045",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:53:33Z",
+   "summary": "labeled PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16870",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -7710,6 +7796,20 @@
    "number": 16882,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16882",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525196538",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:50Z",
+   "summary": "labeled PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
    "excerpt": "",
    "review_id": null
   },
@@ -8115,7 +8215,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T15:38:48Z",
-   "summary": "reviewed PR #16651 (approved)",
+   "summary": "reviewed PR #16651 (dismissed)",
    "number": 16651,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125819479",
@@ -10838,7 +10938,7 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T12:25:50Z",
-   "summary": "reviewed PR #16870 (changes_requested)",
+   "summary": "reviewed PR #16870 (dismissed)",
    "number": 16870,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125274713",
@@ -10853,7 +10953,7 @@
    "actor": "InAnYan",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T12:25:50Z",
-   "summary": "reviewed PR #16870 (changes_requested)",
+   "summary": "reviewed PR #16870 (dismissed)",
    "number": 16870,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125274713",
@@ -21885,9 +21985,9 @@
   "changed_files": 352,
   "components": {
    "(root)": 47,
+   "docs": 203,
    "jabgui": 3315,
    "jablib": 1501,
-   "docs": 203,
    ".github": 57,
    "latex-conv": 1,
    "openfasttrace": 31,
@@ -21912,10 +22012,10 @@
   },
   {
    "login": "subhramit",
-   "points": 211,
+   "points": 217,
    "merged": 4,
-   "reviews": 41,
-   "other": 117
+   "reviews": 43,
+   "other": 119
   },
   {
    "login": "Siedlerchr",
