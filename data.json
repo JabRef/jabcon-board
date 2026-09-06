@@ -41,6 +41,11 @@
    "url": "https://github.com/JabRef/jabref/pull/16835"
   }
  ],
+ "ai_models": {
+  "Claude Fable 5": 4,
+  "Claude Fable 5.1": 4,
+  "Claude Opus 5": 3
+ },
  "milestones": [
   {
    "ref": "JabRef/jabref/36",
@@ -96,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T15:47:28+00:00",
+ "generated_at": "2026-09-06T15:48:15+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -202,6 +207,9 @@
       2,
       "immutable collection literals"
      ]
+    ],
+    "ai": [
+     "Claude Fable 5"
     ]
    }
   },
@@ -238,7 +246,8 @@
      "(root)": 1,
      "jablib": 169
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -291,7 +300,8 @@
       2,
       "markdown javadoc"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -364,7 +374,8 @@
       2,
       "immutable collection literals"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -395,7 +406,8 @@
     "components": {
      "jablib": 4
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -431,7 +443,8 @@
      "jabgui": 47,
      "jablib": 2
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -472,7 +485,8 @@
       2,
       "immutable collection literals"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -499,7 +513,8 @@
     "components": {
      "latex-conv": 1
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -532,7 +547,10 @@
      "jabgui": 26,
      "jablib": 1
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": [
+     "Claude Opus 5"
+    ]
    }
   },
   {
@@ -574,7 +592,8 @@
       2,
       "streams"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -605,7 +624,8 @@
     "components": {
      "jablib": 5
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -635,7 +655,8 @@
     "components": {
      "docs": 44
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -665,7 +686,8 @@
     "components": {
      "jablib": 43
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -695,7 +717,8 @@
     "components": {
      "docs": 27
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -731,7 +754,8 @@
      "(root)": 1,
      "jabgui": 24
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -769,7 +793,8 @@
       2,
       "Optional"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -812,7 +837,8 @@
       4,
       "instanceof pattern"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -846,7 +872,8 @@
      "jabgui": 83,
      "jablib": 1
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -875,7 +902,10 @@
     "components": {
      ".github": 24
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": [
+     "Claude Fable 5.1"
+    ]
    }
   },
   {
@@ -921,6 +951,9 @@
       2,
       "immutable collection literals"
      ]
+    ],
+    "ai": [
+     "Claude Fable 5.1"
     ]
    }
   },
@@ -963,7 +996,8 @@
       2,
       "immutable collection literals"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -1000,6 +1034,10 @@
       3,
       "text block"
      ]
+    ],
+    "ai": [
+     "Claude Fable 5",
+     "Claude Opus 5"
     ]
    }
   },
@@ -1035,7 +1073,8 @@
     "components": {
      "jabgui": 72
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -1067,7 +1106,8 @@
      ".github": 1,
      "(root)": 2
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -1099,7 +1139,8 @@
      "(root)": 2,
      "jabsrv": 18
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -1138,6 +1179,9 @@
       2,
       "markdown javadoc"
      ]
+    ],
+    "ai": [
+     "Claude Fable 5.1"
     ]
    }
   },
@@ -1167,7 +1211,10 @@
     "components": {
      ".idea": 1
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": [
+     "Claude Fable 5"
+    ]
    }
   },
   {
@@ -1227,6 +1274,9 @@
       4,
       "instanceof pattern"
      ]
+    ],
+    "ai": [
+     "Claude Fable 5.1"
     ]
    }
   },
@@ -1265,7 +1315,8 @@
      "jabgui": 7,
      "jablib": 6
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -1303,7 +1354,8 @@
       2,
       "immutable collection literals"
      ]
-    ]
+    ],
+    "ai": []
    }
   },
   {
@@ -1339,7 +1391,8 @@
      "(root)": 1,
      "jabgui": 17
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -1379,6 +1432,9 @@
       2,
       "markdown javadoc"
      ]
+    ],
+    "ai": [
+     "Claude Fable 5"
     ]
    }
   },
@@ -1431,6 +1487,9 @@
       2,
       "markdown javadoc"
      ]
+    ],
+    "ai": [
+     "Claude Opus 5"
     ]
    }
   },
@@ -1458,7 +1517,8 @@
     "components": {
      "jabref": 4
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
@@ -1487,7 +1547,8 @@
     "components": {
      "jfx": 151
     },
-    "refactorings": []
+    "refactorings": [],
+    "ai": []
    }
   },
   {
