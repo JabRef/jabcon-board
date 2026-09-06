@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T09:44:56+00:00",
+ "generated_at": "2026-09-06T09:52:04+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1412,6 +1412,27 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16869",
+   "repo": "JabRef/jabref",
+   "number": 16869,
+   "title": "fix(bibtex): recover after unmatched braces",
+   "url": "https://github.com/JabRef/jabref/pull/16869",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-06T09:49:25Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16870",
    "repo": "JabRef/jabref",
    "number": 16870,
@@ -1426,27 +1447,7 @@
     "component: preferences",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T09:43:56Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16869",
-   "repo": "JabRef/jabref",
-   "number": 16869,
-   "title": "fix(bibtex): recover after unmatched braces",
-   "url": "https://github.com/JabRef/jabref/pull/16869",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "component: import-load"
-   ],
-   "updated_at": "2026-09-06T09:35:19Z",
+   "updated_at": "2026-09-06T09:45:40Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2739,6 +2740,28 @@
    "focus": true
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/9833",
+   "repo": "JabRef/jabref",
+   "number": 9833,
+   "title": "Mismatched curly braces cause failure to read any subsequent entries",
+   "url": "https://github.com/JabRef/jabref/issues/9833",
+   "type": "issue",
+   "draft": false,
+   "author": "dowobeha",
+   "assignees": [
+    "koppor"
+   ],
+   "labels": [
+    "component: bib(la)tex"
+   ],
+   "updated_at": "2026-09-06T09:43:52Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16640",
    "repo": "JabRef/jabref",
    "number": 16640,
@@ -3441,28 +3464,6 @@
     "component: installation"
    ],
    "updated_at": "2026-06-22T20:09:16Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/9833",
-   "repo": "JabRef/jabref",
-   "number": 9833,
-   "title": "Mismatched curly braces cause failure to read any subsequent entries",
-   "url": "https://github.com/JabRef/jabref/issues/9833",
-   "type": "issue",
-   "draft": false,
-   "author": "dowobeha",
-   "assignees": [
-    "koppor"
-   ],
-   "labels": [
-    "component: bib(la)tex"
-   ],
-   "updated_at": "2026-09-06T09:43:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
