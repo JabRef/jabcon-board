@@ -221,9 +221,10 @@ Needs: impl
 ## Display
 
 ### Self-updating wall
-`req~auto-reload~1`
+`req~auto-reload~2`
 
-Data is fetched every minute; a new deployment (changed `version.txt`) reloads the page within 5 minutes. The
+Data is fetched every minute and only re-rendered when it actually changed, so a tooltip stays readable while the
+mouse rests on a card or avatar. A new deployment (changed `version.txt`) reloads the page within 5 minutes. The
 deployed commit is shown in the footer.
 
 Needs: impl
