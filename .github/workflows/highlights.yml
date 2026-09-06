@@ -1,5 +1,5 @@
 # Cuts a highlights reel from the JabRef gource video (scripts/highlights.py) and publishes it to gh-pages as
-# highlights.mp4, hourly. Shares the gh-pages concurrency group with the Board workflow so the two never race.
+# highlights.mp4, hourly. Its own concurrency group: sharing gh-pages with the 5-minute Board would cancel queued runs.
 name: Highlights
 
 on:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: gh-pages
+  group: highlights
 
 jobs:
   render:
