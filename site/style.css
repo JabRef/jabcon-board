@@ -93,7 +93,7 @@ section h2 .count { float: right; color: var(--fg); }
 #done { grid-row: 2; grid-column: 3; }
 #totals { display: inline-flex; gap: 1.5rem; margin-left: 1.5rem; font-size: 1rem; letter-spacing: 0; text-transform: none; color: var(--fg); }
 #totals .add { color: var(--ok); } #totals .del { color: #f85149; }
-#components { display: grid; grid-template-columns: 6rem minmax(3rem, 1fr) 3rem; gap: .1rem .6rem; align-content: start; align-items: center; font-size: .85rem; }
+#components { display: grid; grid-template-columns: fit-content(5rem) minmax(1.5rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
 #leaderboard { display: flex; gap: .8rem; margin-top: auto; padding-top: .3rem; align-items: flex-end; }
 .leader { cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
@@ -123,6 +123,7 @@ section h2 .count { float: right; color: var(--fg); }
 #gource[src]:hover { position: fixed; z-index: 10; top: 3vh; left: 10vw; width: 90vw; height: 97vh; max-height: none; box-shadow: 0 0 4rem #000; }
 #footer { position: fixed; right: 1rem; bottom: .1rem; display: flex; gap: 1rem; font-size: .6rem; color: var(--muted); font-family: monospace; }
 #components span:nth-child(3n+1) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#components span:nth-child(3n) { text-align: end; font-variant-numeric: tabular-nums; }
 
 /* Ambient motion so TVs with content-adaptive dimming don't treat the wall as a static image:
    a slow drifting glow behind the panels (whole-screen pixel change, low contrast) and a gentle
