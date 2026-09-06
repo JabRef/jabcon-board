@@ -324,26 +324,49 @@ def refactorings(pr, files, repo):
     return sorted(found, reverse=True)[:4]
 
 
+# [impl->req~scoring~5]
+BRANCH = re.compile(r"\b(if|for|while|case|catch)\b|&&|\|\|")
+CODE = (".java", ".kt", ".js", ".ts", ".py", ".sh", ".fxml")
+
+
+def complexity(files):
+    """Cyclomatic complexity of the added code, McCabe-style on the diff: 1 + branch points in added lines of source
+    files. Docs, config and renames come out at 1. ponytail: regex on patch lines, no parser; comments and strings count"""
+    added = (l for f in files if f["filename"].endswith(CODE) for l in f.get("patch", "").splitlines() if l.startswith("+"))
+    return 1 + sum(len(BRANCH.findall(l)) for l in added)
+
+
+def review_points(cc):
+    """Review of a trivial diff 1, complex diff 3, else (or unknown PR) 2."""
+    return 2 if cc is None else 1 if cc <= 2 else 3 if cc >= 20 else 2
+
+
 def pr_stats(c, cached):
-    if c["id"] in cached and "ai" in cached[c["id"]]:
+    if c["id"] in cached and "ai" in cached[c["id"]] and "complexity" in cached[c["id"]]:
         return cached[c["id"]]
+    if c["column"] != "done":  # open PR under review: only its complexity, refetched when the PR changes
+        if cached.get(c["id"], {}).get("updated_at") == c["updated_at"]:
+            return cached[c["id"]]
+        files, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/files", {"per_page": 100})
+        return {"complexity": complexity(files), "updated_at": c["updated_at"]}
     pr, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}")
     files, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/files", {"per_page": 100})
     commits, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/commits", {"per_page": 100})
     comps = {}
     for f in files:
         comps[component(c["repo"], f["filename"])] = comps.get(component(c["repo"], f["filename"]), 0) + f["changes"]
-    return {"additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps,
+    return {"additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "complexity": complexity(files),
             "refactorings": refactorings(pr, files, c["repo"]),
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
-# [impl->req~scoring~4]
+# [impl->req~scoring~5]
 def leaderboard(cards, events, private):
-    """Merged PR 3, review 2, other (comment, issue, push, PR opened / labeled) 1; tenfold on a JabCon item (focus label / milestone), times the configured
+    """Merged PR 3, review 1..3 by the complexity of the reviewed diff, other (comment, issue, push, PR opened / labeled) 1; tenfold on a JabCon item (focus label / milestone), times the configured
     repo_factors elsewhere (keys are repos or whole orgs, e.g. the JabRef org and upstream JavaFX work)."""
     score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "boosted": 0, "points": 0} for p in PARTICIPANTS}
     jabcon = {(c["repo"], c["number"]) for c in cards if c["focus"]}
+    cc = {(c["repo"], c["number"]): c.get("stats", {}).get("complexity") for c in cards if c["type"] == "pr"}
     repo_factors = CONFIG.get("repo_factors", {})
 
     def factor(s, repo, number):
@@ -373,7 +396,8 @@ def leaderboard(cards, events, private):
             s["other"] += 1
         else:
             continue
-        s["points"] += (2 if e["type"] == "PullRequestReviewEvent" else 1) * factor(s, e["repo"], e.get("number"))
+        base = review_points(cc.get((e["repo"], e.get("number")))) if e["type"] == "PullRequestReviewEvent" else 1
+        s["points"] += base * factor(s, e["repo"], e.get("number"))
     return [{"login": p, **v} for p, v in score.items()]
 
 
@@ -451,7 +475,7 @@ def main():
     cards = collect_cards(ms)
     events = collect_events(previous_events)
     for c in cards:
-        if c["column"] == "done" and c["type"] == "pr":
+        if c["type"] == "pr" and c["column"] != "backlog":
             c["stats"] = pr_stats(c, cached)
     totals = {"additions": 0, "deletions": 0, "changed_files": 0, "components": {}}
     for c in cards:
