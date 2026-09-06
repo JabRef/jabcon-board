@@ -47,7 +47,7 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 10,
+   "open": 9,
    "closed": 118,
    "baseline": 113
   },
@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T10:26:46+00:00",
+ "generated_at": "2026-09-06T10:36:33+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1425,7 +1425,7 @@
     "status: ready-for-review",
     "component: import-load"
    ],
-   "updated_at": "2026-09-06T10:25:55Z",
+   "updated_at": "2026-09-06T10:33:19Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2197,6 +2197,27 @@
    "focus": false
   },
   {
+   "id": "https://github.com/openjdk/jfx/pull/2015",
+   "repo": "openjdk/jfx",
+   "number": 2015,
+   "title": "8375588: Enhanced property metadata",
+   "url": "https://github.com/openjdk/jfx/pull/2015",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-06T10:34:15Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16707",
    "repo": "JabRef/jabref",
    "number": 16707,
@@ -2213,27 +2234,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-06T10:14:59Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2015",
-   "repo": "openjdk/jfx",
-   "number": 2015,
-   "title": "8375588: Enhanced property metadata",
-   "url": "https://github.com/openjdk/jfx/pull/2015",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "csr"
-   ],
-   "updated_at": "2026-09-06T10:02:11Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3914,6 +3914,78 @@
   }
  ],
  "events": [
+  {
+   "id": "14514528128",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:34:23Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5558648240",
+   "excerpt": "Github is broken. Cannot remove this issue from the beta-milestone xD",
+   "review_id": null
+  },
+  {
+   "id": "14514525358",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T10:34:17Z",
+   "summary": "reviewed PR #2015 (commented)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5125061828",
+   "excerpt": "Thats a good question. I understood this code as 'fallback, should usually not run' and then I think we don't need a cache, but Michael pro\u2026",
+   "review_id": 5125061828,
+   "self": false
+  },
+  {
+   "id": "14514524655",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T10:34:15Z",
+   "summary": "commented on PR #2015",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#discussion_r3943677700",
+   "excerpt": "Thats a good question. I understood this code as 'fallback, should usually not run' and then I think we don't need a cache, but Michael pro\u2026",
+   "review_id": 5125061828,
+   "self": false
+  },
+  {
+   "id": "20231888993",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:33:12Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14514457146",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:31:16Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5558633324",
+   "excerpt": "Since multiple issues have to go wrong for the issue to trigger and this is \"just\" about a notification and JabRef also has automatic backu\u2026",
+   "review_id": null
+  },
   {
    "id": "14514168939",
    "type": "IssueCommentEvent",
@@ -6729,84 +6801,81 @@
    "excerpt": "method names to not should have underscoresm missedd that",
    "review_id": 5120911958,
    "self": false
-  },
-  {
-   "id": "14480540420",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:46:53Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940338548",
-   "excerpt": "method names to not should have underscoresm missedd that",
-   "review_id": 5120911958,
-   "self": false
-  },
-  {
-   "id": "14480520581",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:46:01Z",
-   "summary": "reviewed PR #16849 (commented)",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120909693",
-   "excerpt": "No we always assert on optionals",
-   "review_id": 5120909693,
-   "self": false
-  },
-  {
-   "id": "14480520100",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:46:00Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940335950",
-   "excerpt": "No we always assert on optionals",
-   "review_id": 5120909693,
-   "self": false
-  },
-  {
-   "id": "14480508422",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:45:27Z",
-   "summary": "reviewed PR #16849 (commented)",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120908685",
-   "excerpt": "Yeah we do both, e.g.",
-   "review_id": 5120908685,
-   "self": false
-  },
-  {
-   "id": "14480507661",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:45:25Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940334938",
-   "excerpt": "Yeah we do both, e.g.",
-   "review_id": 5120908685,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14514528128",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:34:23Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5558648240",
+   "excerpt": "Github is broken. Cannot remove this issue from the beta-milestone xD",
+   "review_id": null
+  },
+  {
+   "id": "14514525358",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T10:34:17Z",
+   "summary": "reviewed PR #2015 (commented)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5125061828",
+   "excerpt": "Thats a good question. I understood this code as 'fallback, should usually not run' and then I think we don't need a cache, but Michael pro\u2026",
+   "review_id": 5125061828,
+   "self": false
+  },
+  {
+   "id": "14514524655",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T10:34:15Z",
+   "summary": "commented on PR #2015",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#discussion_r3943677700",
+   "excerpt": "Thats a good question. I understood this code as 'fallback, should usually not run' and then I think we don't need a cache, but Michael pro\u2026",
+   "review_id": 5125061828,
+   "self": false
+  },
+  {
+   "id": "20231888993",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:33:12Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14514457146",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:31:16Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5558633324",
+   "excerpt": "Since multiple issues have to go wrong for the issue to trigger and this is \"just\" about a notification and JabRef also has automatic backu\u2026",
+   "review_id": null
+  },
   {
    "id": "14514168939",
    "type": "IssueCommentEvent",
@@ -16710,17 +16779,17 @@
   },
   {
    "login": "Maran23",
-   "points": 107,
+   "points": 110,
    "merged": 0,
-   "reviews": 32,
-   "other": 43
+   "reviews": 33,
+   "other": 44
   },
   {
    "login": "Siedlerchr",
-   "points": 104,
+   "points": 105,
    "merged": 2,
    "reviews": 24,
-   "other": 50
+   "other": 51
   },
   {
    "login": "koppor",
@@ -16745,10 +16814,10 @@
   },
   {
    "login": "ThiloteE",
-   "points": 4,
+   "points": 6,
    "merged": 0,
    "reviews": 0,
-   "other": 4
+   "other": 6
   },
   {
    "login": "Stewori",
