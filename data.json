@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T15:12:23+00:00",
+ "generated_at": "2026-09-06T15:14:16+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1842,6 +1842,67 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16877",
+   "repo": "JabRef/jabref",
+   "number": 16877,
+   "title": "Label CI/CD and build-system pull requests automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16877",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review"
+   ],
+   "updated_at": "2026-09-06T15:12:47Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16857",
+   "repo": "JabRef/jabref",
+   "number": 16857,
+   "title": "Fix undo C - One undomanager / journal per library and some cleanups",
+   "url": "https://github.com/JabRef/jabref/pull/16857",
+   "type": "pr",
+   "draft": false,
+   "author": "calixtus",
+   "assignees": [],
+   "labels": [
+    "component: cleanup-ops",
+    "component: libre-office",
+    "dev: code-quality",
+    "component: search",
+    "component: groups",
+    "component: citationkey-generator",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "component: shared-database",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "status: changes-required",
+    "component: automatic-field-editor",
+    "component: external-changes",
+    "component: welcome-tab",
+    "component: citation-relations",
+    "component: welcome-walkthrough",
+    "component: diff-merge",
+    "component: xmp",
+    "component: special-fields"
+   ],
+   "updated_at": "2026-09-06T15:12:37Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/JabRef-Browser-Extension/pull/681",
    "repo": "JabRef/JabRef-Browser-Extension",
    "number": 681,
@@ -1893,67 +1954,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T15:11:47Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16857",
-   "repo": "JabRef/jabref",
-   "number": 16857,
-   "title": "Fix undo C - One undomanager / journal per library and some cleanups",
-   "url": "https://github.com/JabRef/jabref/pull/16857",
-   "type": "pr",
-   "draft": false,
-   "author": "calixtus",
-   "assignees": [],
-   "labels": [
-    "component: cleanup-ops",
-    "component: libre-office",
-    "dev: code-quality",
-    "component: search",
-    "component: groups",
-    "component: citationkey-generator",
-    "component: import-load",
-    "component: export-or-save",
-    "component: preferences",
-    "component: shared-database",
-    "component: external-files",
-    "component: maintable",
-    "component: entry-editor",
-    "status: changes-required",
-    "component: automatic-field-editor",
-    "component: external-changes",
-    "component: welcome-tab",
-    "component: citation-relations",
-    "component: welcome-walkthrough",
-    "component: diff-merge",
-    "component: xmp",
-    "component: special-fields"
-   ],
-   "updated_at": "2026-09-06T15:11:24Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16877",
-   "repo": "JabRef/jabref",
-   "number": 16877,
-   "title": "Label CI/CD pull requests automatically",
-   "url": "https://github.com/JabRef/jabref/pull/16877",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-06T15:08:47Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4257,6 +4257,20 @@
   }
  ],
  "events": [
+  {
+   "id": "20250608221",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T15:14:06Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14521716991",
    "type": "PullRequestReviewEvent",
@@ -7170,24 +7184,23 @@
    "excerpt": "Fixed in cd63284. All six conflict tests now compare the complete stderr output, for example:",
    "review_id": 5125269537,
    "self": true
-  },
-  {
-   "id": "14516931038",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:15:28Z",
-   "summary": "reviewed PR #16838 (commented)",
-   "number": 16838,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5125269466",
-   "excerpt": "Fixed in cd63284. The comments above diverged, takeFromOther and differsBeyondFields are gone; the rationale that is not visible in the con\u2026",
-   "review_id": 5125269466,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "20250608221",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T15:14:06Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14521716991",
    "type": "PullRequestReviewEvent",
@@ -20839,10 +20852,10 @@
   },
   {
    "login": "koppor",
-   "points": 106,
+   "points": 107,
    "merged": 10,
    "reviews": 2,
-   "other": 72
+   "other": 73
   },
   {
    "login": "pluto-han",
