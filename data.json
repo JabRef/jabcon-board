@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T17:00:10+00:00",
+ "generated_at": "2026-09-06T17:15:06+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2090,6 +2090,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16882",
+   "repo": "JabRef/jabref",
+   "number": 16882,
+   "title": "Gracefully handle JGit errors",
+   "url": "https://github.com/JabRef/jabref/pull/16882",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "good first issue",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T17:10:49Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16857",
    "repo": "JabRef/jabref",
    "number": 16857,
@@ -2142,28 +2164,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T16:57:57Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16882",
-   "repo": "JabRef/jabref",
-   "number": 16882,
-   "title": "Gracefully handle JGit errors",
-   "url": "https://github.com/JabRef/jabref/pull/16882",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "good first issue",
-    "status: changes-required",
-    "component: git"
-   ],
-   "updated_at": "2026-09-06T16:57:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
