@@ -25,15 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - name: Prepare gh-pages worktree
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          if git fetch origin gh-pages; then
-            git worktree add out origin/gh-pages
-          else
-            git worktree add --orphan -b gh-pages out
-          fi
+      - run: scripts/gh-pages.sh prepare
       - name: Copy site
         run: cp -r site/. out/ && echo "${GITHUB_SHA::7}" > out/version.txt
       - name: Collect data
@@ -42,11 +34,4 @@ jobs:
           # optional fine-grained PAT for milestones in private repos
           MILESTONE_TOKEN: ${{ secrets.BOARD_TOKEN }}
         run: python3 scripts/collect.py --out out/data.json ${{ inputs.force && '--force' || '' }}
-      - name: Push
-        run: |
-          cd out
-          git add -A
-          git diff --cached --quiet && exit 0
-          git commit -q -m "Update board $(date -u +%FT%TZ)"
-          for i in 1 2 3; do git push origin HEAD:gh-pages && exit 0; git pull --rebase origin gh-pages; done
-          exit 1
+      - run: scripts/gh-pages.sh push

@@ -18,11 +18,13 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 - `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute, the video every 15 minutes, and reloads itself when a new version of the site was deployed.
 - `.github/workflows/board.yml` runs every 5 minutes (and on push to `main`), copies `site/` and a fresh
   `data.json` to the `gh-pages` branch. Outside the JabCon window it publishes the site but skips data collection.
+  `gh-pages` is always a single commit (`scripts/gh-pages.sh` force-pushes a fresh one), so it never piles up old data or videos.
 - `.github/workflows/screenshot.yml` stores a screenshot under `screenshots/` every three hours during JabCon.
 - The video is rendered by `gource-jabcon.yml` in [JabRef/jabref](https://github.com/JabRef/jabref) to
   `https://files.jabref.org/gource/jabcon-2026.mp4`; the URL is set at the top of `site/app.js`.
 - `scripts/highlights.py data.json jabcon-2026.mp4 highlights.mp4 [count]` cuts a highlights reel from that video: a
   Star-Wars crawl per biggest merged PR, then a BOOM into the gource moment it was merged. Needs only `ffmpeg`.
+  `.github/workflows/highlights.yml` renders it hourly to <https://jabref.github.io/jabcon-board/highlights.mp4>.
 
 ## Configuration
 

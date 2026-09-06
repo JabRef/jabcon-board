@@ -1,0 +1,24 @@
+# Cuts a highlights reel from the JabRef gource video (scripts/highlights.py) and publishes it to gh-pages as
+# highlights.mp4, hourly. Shares the gh-pages concurrency group with the Board workflow so the two never race.
+name: Highlights
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - run: scripts/gh-pages.sh prepare
+      - run: curl -sfo gource.mp4 https://files.jabref.org/gource/jabcon-2026.mp4
+      - run: python3 scripts/highlights.py out/data.json gource.mp4 out/highlights.mp4
+      - run: scripts/gh-pages.sh push
