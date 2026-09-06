@@ -108,7 +108,7 @@ function renderAiModels() {
 }
 
 // Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1; tenfold on a JabCon
-// item, times config.repo_factors elsewhere (upstream JavaFX work).
+// item, times config.repo_factors elsewhere (keys are repos or orgs: the JabRef org, upstream JavaFX work).
 // [impl->req~scoring~3]
 // [impl->req~no-self-review-points~1]
 // [impl->req~no-fork-sync-points~1]
@@ -116,7 +116,8 @@ const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e
 const boostText = () => Object.entries(data.config.repo_factors || {}).map(([r, f]) => `${r} × ${f}`).join(', ') || 'boosted repos';
 function eventPoints(e) {
   if (e.self || e.sync) return 0; // own PR, fork sync
-  const card = cardOf(e), factor = card?.focus ? 10 : (data.config.repo_factors || {})[e.repo] || 1;
+  const rf = data.config.repo_factors || {};
+  const card = cardOf(e), factor = card?.focus ? 10 : rf[e.repo] || rf[e.repo.split('/')[0]] || 1;
   if (e.type === 'PullRequestReviewEvent') return 2 * factor;
   if (['IssueCommentEvent', 'IssuesEvent', 'PushEvent'].includes(e.type)) return factor;
   if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return 3 * factor;
