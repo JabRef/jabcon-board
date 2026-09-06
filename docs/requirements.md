@@ -168,6 +168,14 @@ pointer stays over it (no flicker, no jump); moving the pointer to the free stri
 
 Needs: impl
 
+### Video plays at triple speed
+`req~gource-speed~1`
+
+The gource video plays at three times its recorded speed, so a run through the repository history fits the wall's
+attention span.
+
+Needs: impl
+
 ### Video refreshes without cutting a loop
 `req~gource-refresh~1`
 
