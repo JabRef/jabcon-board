@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T18:39:50+00:00",
+ "generated_at": "2026-09-06T18:47:26+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2204,7 +2204,7 @@
     "good first issue",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T18:40:01Z",
+   "updated_at": "2026-09-06T18:45:27Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3013,6 +3013,7 @@
    "assignees": [],
    "labels": [
     "component: ui",
+    "status: ready-for-review",
     "component: libre-office",
     "component: import-load",
     "component: export-or-save",
@@ -3024,7 +3025,7 @@
     "component: git",
     "component: welcome-walkthrough"
    ],
-   "updated_at": "2026-09-06T18:29:26Z",
+   "updated_at": "2026-09-06T18:42:43Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3355,7 +3356,7 @@
     "\ud83d\udccd Assigned",
     "\ud83d\udccc Pinned"
    ],
-   "updated_at": "2026-09-06T18:39:59Z",
+   "updated_at": "2026-09-06T18:44:39Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4558,6 +4559,79 @@
   }
  ],
  "events": [
+  {
+   "id": "14527404677",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:43:35Z",
+   "summary": "reviewed PR #16845 (dismissed)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126258418",
+   "excerpt": "",
+   "review_id": 5126258418,
+   "self": false
+  },
+  {
+   "id": "14527404768",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:43:34Z",
+   "summary": "commented on #16845: Select newly added entry",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#issuecomment-5561340425",
+   "excerpt": "Two questions - 1. what happens in case of bulk imports? 2. does the chronological navigation (back, forward) work consistently with this?",
+   "review_id": null
+  },
+  {
+   "id": "20264452226",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T18:43:34Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14527376095",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:42:32Z",
+   "summary": "reviewed PR #16845 (dismissed)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126258418",
+   "excerpt": "",
+   "review_id": 5126258418,
+   "self": false
+  },
+  {
+   "id": "14527323476",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:40:34Z",
+   "summary": "reviewed PR #16651 (dismissed)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5021386382",
+   "excerpt": "I feel like the current UI mixes local Git settings and remote/GitHub settings a bit.",
+   "review_id": 5021386382,
+   "self": false
+  },
   {
    "id": "14527314562",
    "type": "PullRequestReviewEvent",
@@ -7394,83 +7468,82 @@
    "excerpt": "I think qodo's right",
    "review_id": 5125483424,
    "self": false
-  },
-  {
-   "id": "14519318123",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:47:06Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944126950",
-   "excerpt": "Yeah, makes sence",
-   "review_id": 5125483424,
-   "self": false
-  },
-  {
-   "id": "14519283609",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:45:50Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944122950",
-   "excerpt": "Ah, you are right copilot, but please review only changes",
-   "review_id": 5125483424,
-   "self": false
-  },
-  {
-   "id": "14519204136",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:43:00Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944114847",
-   "excerpt": "Uhm, the parameter is the bib database context?",
-   "review_id": 5125483424,
-   "self": false
-  },
-  {
-   "id": "14519113801",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Stewori",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:39:40Z",
-   "summary": "reviewed PR #16838 (approved)",
-   "number": 16838,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5125474112",
-   "excerpt": "",
-   "review_id": 5125474112,
-   "self": false
-  },
-  {
-   "id": "14519059947",
-   "type": "IssuesEvent",
-   "action": "closed",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:37:42Z",
-   "summary": "closed issue #16042: Decrease the amount of CSS variables",
-   "number": 16042,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16042",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14527404677",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:43:35Z",
+   "summary": "reviewed PR #16845 (dismissed)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126258418",
+   "excerpt": "",
+   "review_id": 5126258418,
+   "self": false
+  },
+  {
+   "id": "14527404768",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:43:34Z",
+   "summary": "commented on #16845: Select newly added entry",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#issuecomment-5561340425",
+   "excerpt": "Two questions - 1. what happens in case of bulk imports? 2. does the chronological navigation (back, forward) work consistently with this?",
+   "review_id": null
+  },
+  {
+   "id": "20264452226",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T18:43:34Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14527376095",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:42:32Z",
+   "summary": "reviewed PR #16845 (dismissed)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126258418",
+   "excerpt": "",
+   "review_id": 5126258418,
+   "self": false
+  },
+  {
+   "id": "14527323476",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T18:40:34Z",
+   "summary": "reviewed PR #16651 (dismissed)",
+   "number": 16651,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5021386382",
+   "excerpt": "I feel like the current UI mixes local Git settings and remote/GitHub settings a bit.",
+   "review_id": 5021386382,
+   "self": false
+  },
   {
    "id": "14527314562",
    "type": "PullRequestReviewEvent",
@@ -22635,10 +22708,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 240,
+   "points": 243,
    "merged": 4,
-   "reviews": 50,
-   "other": 128
+   "reviews": 51,
+   "other": 129
   },
   {
    "login": "InAnYan",
@@ -22649,10 +22722,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 152,
+   "points": 157,
    "merged": 4,
-   "reviews": 35,
-   "other": 70
+   "reviews": 37,
+   "other": 71
   },
   {
    "login": "Maran23",
