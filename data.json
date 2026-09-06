@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T15:14:16+00:00",
+ "generated_at": "2026-09-06T15:15:01+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1842,26 +1842,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16877",
-   "repo": "JabRef/jabref",
-   "number": 16877,
-   "title": "Label CI/CD and build-system pull requests automatically",
-   "url": "https://github.com/JabRef/jabref/pull/16877",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-06T15:12:47Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16857",
    "repo": "JabRef/jabref",
    "number": 16857,
@@ -1895,7 +1875,27 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T15:12:37Z",
+   "updated_at": "2026-09-06T15:14:49Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16877",
+   "repo": "JabRef/jabref",
+   "number": 16877,
+   "title": "Label CI/CD and build-system pull requests automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16877",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review"
+   ],
+   "updated_at": "2026-09-06T15:12:47Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
