@@ -42,7 +42,7 @@
   }
  ],
  "ai_models": {
-  "Claude Opus 5": 6,
+  "Claude Opus 5": 7,
   "Claude Fable 5": 5,
   "Claude Fable 5.1": 5,
   "Cursor": 1
@@ -53,8 +53,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 3,
-   "closed": 125,
+   "open": 1,
+   "closed": 126,
    "baseline": 113
   },
   {
@@ -62,7 +62,7 @@
    "repo": "JabRef/jabref",
    "title": "6.0",
    "url": "https://github.com/JabRef/jabref/milestone/24",
-   "open": 22,
+   "open": 23,
    "closed": 48,
    "baseline": 45
   },
@@ -71,7 +71,7 @@
    "repo": "JabRef/jabref-issue-melting-pot",
    "title": "v6",
    "url": "https://github.com/JabRef/jabref-issue-melting-pot/milestone/1",
-   "open": 23,
+   "open": 20,
    "closed": 41,
    "baseline": 39
   }
@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T21:01:08+00:00",
+ "generated_at": "2026-09-06T21:15:54+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -557,6 +557,40 @@
      ]
     ],
     "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16883",
+   "repo": "JabRef/jabref",
+   "number": 16883,
+   "title": "Fix status label update for reviews on fork PRs",
+   "url": "https://github.com/JabRef/jabref/pull/16883",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "dev: ci-cd",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T21:07:44Z",
+   "closed_at": "2026-09-06T21:07:38Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T21:07:38Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 71,
+    "deletions": 33,
+    "changed_files": 2,
+    "components": {
+     ".github": 104
+    },
+    "refactorings": [],
+    "ai": [
+     "Claude Opus 5"
+    ]
    }
   },
   {
@@ -2660,6 +2694,27 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "repo": "JabRef/jabref",
+   "number": 16862,
+   "title": "Remove ready-for-review label when a PR is converted to draft",
+   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "dev: ci-cd"
+   ],
+   "updated_at": "2026-09-06T21:14:41Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16831",
    "repo": "JabRef/jabref",
    "number": 16831,
@@ -2673,7 +2728,7 @@
     "component: external-files",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-06T21:00:01Z",
+   "updated_at": "2026-09-06T21:12:42Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2681,41 +2736,21 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16883",
+   "id": "https://github.com/JabRef/jabref/pull/16814",
    "repo": "JabRef/jabref",
-   "number": 16883,
-   "title": "Fix status label update for reviews on fork PRs",
-   "url": "https://github.com/JabRef/jabref/pull/16883",
+   "number": 16814,
+   "title": "Keep working on a shared database while its connection is down",
+   "url": "https://github.com/JabRef/jabref/pull/16814",
    "type": "pr",
-   "draft": false,
+   "draft": true,
    "author": "koppor",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
-    "dev: ci-cd",
-    "status: to-be-merged"
+    "component: groups",
+    "component: shared-database",
+    "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-06T20:56:56Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16810",
-   "repo": "JabRef/jabref",
-   "number": 16810,
-   "title": "Keep library close working when cleanup throws an Error",
-   "url": "https://github.com/JabRef/jabref/pull/16810",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: devcall"
-   ],
-   "updated_at": "2026-09-06T20:56:44Z",
+   "updated_at": "2026-09-06T21:05:27Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2754,10 +2789,11 @@
     "component: citation-relations",
     "component: welcome-walkthrough",
     "component: diff-merge",
+    "status: to-be-merged",
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T20:55:06Z",
+   "updated_at": "2026-09-06T21:04:16Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2765,20 +2801,19 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "id": "https://github.com/JabRef/jabref/pull/16810",
    "repo": "JabRef/jabref",
-   "number": 16862,
-   "title": "Remove ready-for-review label when a PR is converted to draft",
-   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "number": 16810,
+   "title": "Keep library close working when cleanup throws an Error",
+   "url": "https://github.com/JabRef/jabref/pull/16810",
    "type": "pr",
    "draft": false,
    "author": "koppor",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
-    "dev: ci-cd"
+    "status: devcall"
    ],
-   "updated_at": "2026-09-06T20:47:21Z",
+   "updated_at": "2026-09-06T20:56:44Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2882,28 +2917,6 @@
     "\ud83d\udccc Pinned"
    ],
    "updated_at": "2026-09-06T19:28:20Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16814",
-   "repo": "JabRef/jabref",
-   "number": 16814,
-   "title": "Keep working on a shared database while its connection is down",
-   "url": "https://github.com/JabRef/jabref/pull/16814",
-   "type": "pr",
-   "draft": true,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: groups",
-    "component: shared-database",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-06T19:27:37Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3448,12 +3461,33 @@
    "author": "Devansh-18155",
    "assignees": [],
    "labels": [
+    "status: ready-for-review",
     "component: fetcher",
     "component: entry-editor",
-    "status: changes-required",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T20:59:12Z",
+   "updated_at": "2026-09-06T21:12:22Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2015",
+   "repo": "openjdk/jfx",
+   "number": 2015,
+   "title": "8375588: Enhanced property metadata",
+   "url": "https://github.com/openjdk/jfx/pull/2015",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-06T21:06:26Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3476,27 +3510,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-06T20:51:25Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2015",
-   "repo": "openjdk/jfx",
-   "number": 2015,
-   "title": "8375588: Enhanced property metadata",
-   "url": "https://github.com/openjdk/jfx/pull/2015",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "csr"
-   ],
-   "updated_at": "2026-09-06T20:46:28Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4960,6 +4973,108 @@
   }
  ],
  "events": [
+  {
+   "id": "14531395399",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:14:43Z",
+   "summary": "reviewed PR #16862 (approved)",
+   "number": 16862,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16862#pullrequestreview-5126632155",
+   "excerpt": "",
+   "review_id": 5126632155,
+   "self": false
+  },
+  {
+   "id": "14531343429",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:12:44Z",
+   "summary": "reviewed PR #16831 (approved)",
+   "number": 16831,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16831#pullrequestreview-5126627849",
+   "excerpt": "",
+   "review_id": 5126627849,
+   "self": false
+  },
+  {
+   "id": "20273559369",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:07:39Z",
+   "summary": "deleted branch pr-review-label-token",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531213421",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:07:38Z",
+   "summary": "merged PR #16883",
+   "number": 16883,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16883",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531182698",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T21:06:27Z",
+   "summary": "reviewed PR #2015 (commented)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5126613759",
+   "excerpt": "Got it.",
+   "review_id": 5126613759,
+   "self": false
+  },
+  {
+   "id": "14531182291",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T21:06:26Z",
+   "summary": "commented on PR #2015",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#discussion_r3945266455",
+   "excerpt": "Got it.",
+   "review_id": 5126613759,
+   "self": false
+  },
+  {
+   "id": "20273390573",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:04:56Z",
+   "summary": "pushed 0 commit(s) to fulltext-download-background-task",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20273142042",
    "type": "PushEvent",
@@ -7777,114 +7892,111 @@
    "url": "https://github.com/pluto-han/jabref",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14524302383",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:47:49Z",
-   "summary": "reviewed PR #16651 (changes_requested)",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125849146",
-   "excerpt": "Sorry, killing the fun",
-   "review_id": 5125849146,
-   "self": false
-  },
-  {
-   "id": "14524302382",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:47:49Z",
-   "summary": "reviewed PR #16651 (changes_requested)",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125849146",
-   "excerpt": "Sorry, killing the fun",
-   "review_id": 5125849146,
-   "self": false
-  },
-  {
-   "id": "14524253664",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:46:00Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125978907",
-   "excerpt": "i cannot reproduce it",
-   "review_id": 5125978907,
-   "self": true
-  },
-  {
-   "id": "14524253149",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:45:59Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3944608745",
-   "excerpt": "i cannot reproduce it",
-   "review_id": 5125978907,
-   "self": true
-  },
-  {
-   "id": "14524248291",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:45:48Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125978491",
-   "excerpt": "no need to create a test",
-   "review_id": 5125978491,
-   "self": true
-  },
-  {
-   "id": "14524248218",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:45:47Z",
-   "summary": "commented on PR #16651",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3944608301",
-   "excerpt": "This is an interesting questions. I think for now we can leave like this, and then decide later",
-   "review_id": 5125849146,
-   "self": false
-  },
-  {
-   "id": "14524247881",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:45:46Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3944608287",
-   "excerpt": "no need to create a test",
-   "review_id": 5125978491,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14531395399",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:14:43Z",
+   "summary": "reviewed PR #16862 (approved)",
+   "number": 16862,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16862#pullrequestreview-5126632155",
+   "excerpt": "",
+   "review_id": 5126632155,
+   "self": false
+  },
+  {
+   "id": "14531343429",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:12:44Z",
+   "summary": "reviewed PR #16831 (approved)",
+   "number": 16831,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16831#pullrequestreview-5126627849",
+   "excerpt": "",
+   "review_id": 5126627849,
+   "self": false
+  },
+  {
+   "id": "20273559369",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:07:39Z",
+   "summary": "deleted branch pr-review-label-token",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531213421",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:07:38Z",
+   "summary": "merged PR #16883",
+   "number": 16883,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16883",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531182698",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T21:06:27Z",
+   "summary": "reviewed PR #2015 (commented)",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#pullrequestreview-5126613759",
+   "excerpt": "Got it.",
+   "review_id": 5126613759,
+   "self": false
+  },
+  {
+   "id": "14531182291",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T21:06:26Z",
+   "summary": "commented on PR #2015",
+   "number": 2015,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/pull/2015#discussion_r3945266455",
+   "excerpt": "Got it.",
+   "review_id": 5126613759,
+   "self": false
+  },
+  {
+   "id": "20273390573",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:04:56Z",
+   "summary": "pushed 0 commit(s) to fulltext-download-background-task",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20273142042",
    "type": "PushEvent",
@@ -25192,15 +25304,15 @@
   "JabRef/jabref#16883": "koppor"
  },
  "stats": {
-  "additions": 8482,
-  "deletions": 3506,
-  "changed_files": 505,
+  "additions": 8553,
+  "deletions": 3539,
+  "changed_files": 507,
   "components": {
    "(root)": 57,
    "jabgui": 5955,
    "jablib": 4864,
    "docs": 423,
-   ".github": 193,
+   ".github": 297,
    "jabsrv": 27,
    "jabref-website": 124,
    "openfasttrace": 31,
@@ -25219,10 +25331,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 272,
+   "points": 277,
    "merged": 5,
-   "reviews": 59,
-   "other": 139
+   "reviews": 61,
+   "other": 140
   },
   {
    "login": "InAnYan",
@@ -25233,10 +25345,10 @@
   },
   {
    "login": "Maran23",
-   "points": 177,
+   "points": 180,
    "merged": 1,
-   "reviews": 52,
-   "other": 70
+   "reviews": 53,
+   "other": 71
   },
   {
    "login": "Siedlerchr",
@@ -25247,8 +25359,8 @@
   },
   {
    "login": "koppor",
-   "points": 148,
-   "merged": 14,
+   "points": 151,
+   "merged": 15,
    "reviews": 6,
    "other": 94
   },
