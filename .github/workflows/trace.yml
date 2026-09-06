@@ -1,0 +1,14 @@
+# Requirements trace (OpenFastTrace): every requirement in docs/requirements.md needs an [impl->req~...] tag in the code.
+name: Trace
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  trace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - run: scripts/trace.sh -v failures
