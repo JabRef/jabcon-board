@@ -26,19 +26,19 @@
   },
   {
    "weight": 4,
+   "text": "instanceof pattern",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "author": "pluto-han",
+   "url": "https://github.com/JabRef/jabref/pull/16870"
+  },
+  {
+   "weight": 4,
    "text": "net \u2212451 lines",
    "repo": "JabRef/jabref",
    "number": 16708,
    "author": "Maran23",
    "url": "https://github.com/JabRef/jabref/pull/16708"
-  },
-  {
-   "weight": 4,
-   "text": "instanceof pattern",
-   "repo": "JabRef/jabref",
-   "number": 16620,
-   "author": "Devansh-18155",
-   "url": "https://github.com/JabRef/jabref/pull/16620"
   }
  ],
  "ai_models": {
@@ -52,8 +52,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 5,
-   "closed": 121,
+   "open": 4,
+   "closed": 122,
    "baseline": 113
   },
   {
@@ -77,8 +77,8 @@
  ],
  "focus": {
   "label": "project: jabcon",
-  "open": 9,
-  "closed": 6,
+  "open": 8,
+  "closed": 7,
   "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
  },
  "private_activity": {
@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T17:30:07+00:00",
+ "generated_at": "2026-09-06T17:38:37+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -142,6 +142,59 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16870",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "title": "Add infer style button",
+   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "project: jabcon",
+    "good second issue",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T17:35:10Z",
+   "closed_at": "2026-09-06T17:34:56Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T17:34:56Z",
+   "column": "done",
+   "focus": true,
+   "stats": {
+    "additions": 156,
+    "deletions": 55,
+    "changed_files": 7,
+    "components": {
+     "(root)": 1,
+     "jabgui": 206,
+     "jablib": 4
+    },
+    "refactorings": [
+     [
+      4,
+      "instanceof pattern"
+     ],
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "streams"
+     ],
+     [
+      2,
+      "immutable collection literals"
+     ]
+    ],
+    "ai": []
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16868",
    "repo": "JabRef/jabref",
@@ -446,7 +499,7 @@
     "status: to-be-merged",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-06T17:28:05Z",
+   "updated_at": "2026-09-06T17:31:36Z",
    "closed_at": "2026-09-06T12:24:57Z",
    "state_reason": null,
    "merged_at": "2026-09-06T12:24:57Z",
@@ -1638,6 +1691,31 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16640",
+   "repo": "JabRef/jabref",
+   "number": 16640,
+   "title": "Rework LibreOffice CSL Style Inference flow",
+   "url": "https://github.com/JabRef/jabref/issues/16640",
+   "type": "issue",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned",
+    "good second issue",
+    "size: medium"
+   ],
+   "updated_at": "2026-09-06T17:35:50Z",
+   "closed_at": "2026-09-06T17:34:57Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16729",
    "repo": "JabRef/jabref",
    "number": 16729,
@@ -2091,28 +2169,22 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16870",
-   "repo": "JabRef/jabref",
-   "number": 16870,
-   "title": "Add infer style button",
-   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
    "type": "pr",
    "draft": false,
-   "author": "pluto-han",
+   "author": "subhramit",
    "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "project: jabcon",
-    "good second issue",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T17:23:44Z",
+   "labels": [],
+   "updated_at": "2026-09-06T17:36:46Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
    "column": "progress",
-   "focus": true
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16882",
@@ -2255,24 +2327,6 @@
     "rfr"
    ],
    "updated_at": "2026-09-06T15:30:41Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/apache/spark/pull/58225",
-   "repo": "apache/spark",
-   "number": 58225,
-   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "url": "https://github.com/apache/spark/pull/58225",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-06T15:20:36Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2918,12 +2972,11 @@
     "component: import-load",
     "component: export-or-save",
     "component: preferences",
-    "status: changes-required",
     "component: slr",
     "good second issue",
     "component: git"
    ],
-   "updated_at": "2026-09-06T17:30:11Z",
+   "updated_at": "2026-09-06T17:32:10Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3397,31 +3450,6 @@
     "component: git"
    ],
    "updated_at": "2026-09-06T16:57:48Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16640",
-   "repo": "JabRef/jabref",
-   "number": 16640,
-   "title": "Rework LibreOffice CSL Style Inference flow",
-   "url": "https://github.com/JabRef/jabref/issues/16640",
-   "type": "issue",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [
-    "pluto-han"
-   ],
-   "labels": [
-    "\ud83d\udccd Assigned",
-    "\ud83d\udccc Pinned",
-    "good second issue",
-    "size: medium"
-   ],
-   "updated_at": "2026-09-06T16:49:42Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4482,6 +4510,62 @@
   }
  ],
  "events": [
+  {
+   "id": "14525606094",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-06T17:36:46Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5560962949",
+   "excerpt": "@LuciferYang CI is now green, could you take a final look?",
+   "review_id": null
+  },
+  {
+   "id": "14525558367",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:34:57Z",
+   "summary": "closed issue #16640: Rework LibreOffice CSL Style Inference flow",
+   "number": 16640,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16640",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525558343",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:34:56Z",
+   "summary": "merged PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16870",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525469681",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:31:36Z",
+   "summary": "commented on #16760: Enhance developer documentation",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#issuecomment-5560934466",
+   "excerpt": "If upgrading mermaid version causes you to make more changes to other mermaid diagrams, just make the syntax compatible. Else upgrade.",
+   "review_id": null
+  },
   {
    "id": "14525210291",
    "type": "PullRequestReviewEvent",
@@ -7334,69 +7418,65 @@
    "excerpt": "I think a ternary expression is shorter? Because we change only one argument",
    "review_id": 5125368226,
    "self": false
-  },
-  {
-   "id": "14518116159",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:01:59Z",
-   "summary": "reviewed PR #16871 (approved)",
-   "number": 16871,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16871#pullrequestreview-5125384206",
-   "excerpt": "",
-   "review_id": 5125384206,
-   "self": false
-  },
-  {
-   "id": "14518073248",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:00:19Z",
-   "summary": "reviewed PR #16869 (commented)",
-   "number": 16869,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16869#pullrequestreview-5125380665",
-   "excerpt": "No this entry will be skipped as before, but now it doesn't affect the other entries coming after/before",
-   "review_id": 5125380665,
-   "self": true
-  },
-  {
-   "id": "14518072219",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T13:00:17Z",
-   "summary": "commented on PR #16869",
-   "number": 16869,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16869#discussion_r3944010432",
-   "excerpt": "No this entry will be skipped as before, but now it doesn't affect the other entries coming after/before",
-   "review_id": 5125380665,
-   "self": true
-  },
-  {
-   "id": "14518044536",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:59:11Z",
-   "summary": "reviewed PR #16873 (approved)",
-   "number": 16873,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16873#pullrequestreview-5125378319",
-   "excerpt": "",
-   "review_id": 5125378319,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14525606094",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "apache/spark",
+   "created_at": "2026-09-06T17:36:46Z",
+   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "number": 58225,
+   "merged": false,
+   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5560962949",
+   "excerpt": "@LuciferYang CI is now green, could you take a final look?",
+   "review_id": null
+  },
+  {
+   "id": "14525558367",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:34:57Z",
+   "summary": "closed issue #16640: Rework LibreOffice CSL Style Inference flow",
+   "number": 16640,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16640",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525558343",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:34:56Z",
+   "summary": "merged PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16870",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14525469681",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T17:31:36Z",
+   "summary": "commented on #16760: Enhance developer documentation",
+   "number": 16760,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16760#issuecomment-5560934466",
+   "excerpt": "If upgrading mermaid version causes you to make more changes to other mermaid diagrams, just make the syntax compatible. Else upgrade.",
+   "review_id": null
+  },
   {
    "id": "14525210291",
    "type": "PullRequestReviewEvent",
@@ -21981,14 +22061,14 @@
   "JabRef/jabref#16877": "koppor"
  },
  "stats": {
-  "additions": 3829,
-  "deletions": 1636,
-  "changed_files": 352,
+  "additions": 3985,
+  "deletions": 1691,
+  "changed_files": 359,
   "components": {
-   "(root)": 47,
+   "(root)": 48,
+   "jabgui": 3521,
+   "jablib": 1505,
    "docs": 203,
-   "jabgui": 3315,
-   "jablib": 1501,
    ".github": 57,
    "latex-conv": 1,
    "openfasttrace": 31,
@@ -22013,10 +22093,10 @@
   },
   {
    "login": "subhramit",
-   "points": 217,
+   "points": 219,
    "merged": 4,
    "reviews": 43,
-   "other": 119
+   "other": 121
   },
   {
    "login": "Siedlerchr",
@@ -22041,10 +22121,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 55,
-   "merged": 2,
+   "points": 59,
+   "merged": 3,
    "reviews": 8,
-   "other": 33
+   "other": 34
   },
   {
    "login": "calixtus",
