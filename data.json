@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T14:55:47+00:00",
+ "generated_at": "2026-09-06T14:57:12+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1815,6 +1815,26 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16872",
+   "repo": "JabRef/jabref",
+   "number": 16872,
+   "title": "Pin issue only when the PR author is the assignee",
+   "url": "https://github.com/JabRef/jabref/pull/16872",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-06T14:56:06Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16877",
    "repo": "JabRef/jabref",
    "number": 16877,
@@ -1987,26 +2007,6 @@
     "status: ready-for-review"
    ],
    "updated_at": "2026-09-06T14:15:22Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16872",
-   "repo": "JabRef/jabref",
-   "number": 16872,
-   "title": "Pin issue only when the PR author is the assignee",
-   "url": "https://github.com/JabRef/jabref/pull/16872",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T14:07:46Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
