@@ -93,10 +93,13 @@ def card(item, column):
     }
 
 
+# [impl->req~bots-excluded~1]
 def keep(item):
     return repo_of(item).lower() not in EXCLUDE and not item["user"]["login"].endswith(BOT_SUFFIX)
 
 
+# [impl->req~one-column-per-item~1]
+# [impl->req~in-progress-recent~1]
 def collect_cards():
     """Search per column, then dedupe so each item lives in exactly one column (done > progress > backlog)."""
     columns = [
@@ -127,6 +130,8 @@ def collect_cards():
     return list(seen.values())
 
 
+# [impl->req~events-accumulate~1]
+# [impl->req~no-self-review-points~1]
 def collect_events(previous):
     """Events since START. The public feed only returns the newest 300 per user, so events seen in earlier runs
     (previous data.json) are kept; otherwise active participants would lose points as JabCon goes on."""
@@ -281,6 +286,7 @@ def pr_stats(c, cached):
             "refactorings": refactorings(pr, files, c["repo"])}
 
 
+# [impl->req~scoring~1]
 def leaderboard(cards, events, private):
     score = {p: {"merged": 0, "reviews": 0, "other": 0} for p in PARTICIPANTS}
     for counts in private.values():
@@ -302,6 +308,7 @@ def leaderboard(cards, events, private):
     return [{"login": p, "points": v["merged"] * 3 + v["reviews"] * 2 + v["other"], **v} for p, v in score.items()]
 
 
+# [impl->req~milestones~1]
 def milestones(previous):
     """Milestone progress; the closed count when first seen (usually JabCon start) is kept as the baseline."""
     result = []
@@ -318,6 +325,7 @@ def milestones(previous):
     return result
 
 
+# [impl->req~private-counts-only~1]
 def private_activity():
     """Counts only (no titles, no numbers): data.json is public, the repos are not."""
     result = {}
@@ -352,6 +360,7 @@ def focus_progress():
             "url": f"https://github.com/issues?q={urllib.parse.quote(FOCUS_Q + ' is:open')}"}
 
 
+# [impl->req~jabcon-window~1]
 def main():
     args = sys.argv[1:]
     out = args[args.index("--out") + 1] if "--out" in args else "data.json"

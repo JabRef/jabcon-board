@@ -19,6 +19,8 @@ function ago(iso) {
   return `${Math.floor(s / 86400)} d ago`;
 }
 
+// [impl->req~column-order~1]
+// [impl->req~github-colours~1]
 function renderColumn(id, cards) {
   const org = data.config.org + '/';
   const last = (c) => c.merged_at || c.closed_at || c.updated_at;
@@ -45,6 +47,7 @@ function renderColumn(id, cards) {
   updateMore(box);
 }
 
+// [impl->req~column-overflow~1]
 function updateMore(box) {
   const cards = [...box.children];
   const above = cards.filter((c) => c.offsetTop + c.offsetHeight <= box.scrollTop + 1).length;
@@ -54,6 +57,9 @@ function updateMore(box) {
   section.querySelector('.more.below').textContent = below ? `▼ ${below} more` : '';
 }
 
+// [impl->req~milestones~1]
+// [impl->req~nerd-corner~1]
+// [impl->req~leaderboard-breakdown~1]
 function renderStats() {
   const s = data.stats;
   $('#totals').innerHTML = `<span>${s.changed_files} files</span><span class="add">+${s.additions}</span><span class="del">−${s.deletions}</span>`;
@@ -82,6 +88,8 @@ function renderStats() {
 }
 
 // Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1.
+// [impl->req~scoring~1]
+// [impl->req~no-self-review-points~1]
 function eventPoints(e) {
   if (e.self) return 0; // own PR
   if (e.type === 'PullRequestReviewEvent') return 2;
@@ -93,6 +101,7 @@ function eventPoints(e) {
   return 0;
 }
 
+// [impl->req~ticker-deep-links~1]
 function eventRow(e) {
   const org = data.config.org + '/', pts = eventPoints(e);
   return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
@@ -103,6 +112,7 @@ function renderTicker() {
 }
 
 // Click on a leaderboard avatar: full-screen list of everything that contributor scored (or did not) during JabCon.
+// [impl->req~contributor-detail~1]
 function showDetail(login) {
   const l = data.leaderboard.find((x) => x.login === login) || { points: 0, merged: 0, reviews: 0, other: 0 };
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
@@ -115,6 +125,8 @@ $('#detail .back').addEventListener('click', () => { $('#detail').hidden = true;
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#detail').hidden = true; });
 $('#leaderboard').addEventListener('click', (e) => { const who = e.target.closest('.leader')?.dataset.login; if (who) showDetail(who); });
 
+// [impl->req~leader-change-bell~1]
+// [impl->req~done-confetti~1]
 function celebrate(prev) {
   if (!prev) return;
   const leader = data.leaderboard[0]?.login, wasLeader = prev.leaderboard[0]?.login;
@@ -174,6 +186,7 @@ function render() {
 // GitHub runs a */5 schedule only best-effort (observed 7-20 min between runs), so the ring is sized for a typical gap
 const REFRESH_MS = 10 * 60000;
 
+// [impl->req~timeline~1]
 function renderProgress() {
   const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
   const pct = (iso) => `${(100 * (Date.parse(iso) - start) / (end - start)).toFixed(2)}%`;
@@ -190,6 +203,8 @@ function renderProgress() {
   $('#to').textContent = fmt(data.config.jabcon_end);
 }
 
+// [impl->req~refresh-ring~1]
+// [impl->req~clock-timezone~1]
 function tick() {
   const now = new Date();
   $('#clock').textContent = now.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data?.config.timezone });
@@ -213,6 +228,7 @@ function tick() {
     : 'JabCon is over – thank you!';
 }
 
+// [impl->req~auto-reload~1]
 async function load() {
   try {
     const r = await fetch('data.json?ts=' + Date.now(), { cache: 'no-store' });
@@ -230,6 +246,7 @@ async function load() {
 const video = $('#gource');
 video.addEventListener('ended', () => { video.loop = true; video.src = `${VIDEO}?ts=${Date.now()}`; video.play().catch(() => {}); });
 video.addEventListener('error', () => video.removeAttribute('src')); // no rendering yet: hide, retry next hour
+// [impl->req~gource-refresh~1]
 function loadVideo() {
   if (video.getAttribute('src')) { video.loop = false; return; } // finish the current loop, then swap
   video.loop = true;
@@ -247,6 +264,7 @@ if (params.get('still')) document.documentElement.classList.add('still');
 // Browser zoom is a no-op here: the layout is in vw/vh, so a zoomed viewport shrinks the text right back.
 // Ctrl+wheel therefore scales the page itself; the factor survives the self-reloads via localStorage. Ctrl+0 resets.
 let scale = parseFloat(params.get('scale')) || parseFloat(localStorage.getItem('scale')) || 1;
+// [impl->req~scaling~1]
 function applyScale() {
   document.documentElement.style.fontSize = `min(${1.146 * scale}vw, ${2.037 * scale}vh)`;
   try { localStorage.setItem('scale', scale); } catch (e) { /* private mode */ }
