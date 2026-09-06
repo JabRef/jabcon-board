@@ -80,11 +80,31 @@ function renderStats() {
     `<div class="private">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
   $('#refactorings').innerHTML = data.refactorings.map((r) =>
     `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
+  renderAiModels();
   $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
     const why = `${l.merged} merged PRs × 3 = ${l.merged * 3}\n${l.reviews} reviews × 2 = ${l.reviews * 2}\n${l.other} comments / issues / pushes × 1 = ${l.other}`;
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
     return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
   }).join('');
+}
+
+
+// Pie chart of the AI assistants credited in the merged PRs' commits, legend on its right.
+// [impl->req~ai-models~1]
+function renderAiModels() {
+  const models = Object.entries(data.ai_models || {});
+  const total = models.reduce((sum, [, n]) => sum + n, 0);
+  $('#aimodels').hidden = !total;
+  if (!total) return;
+  let acc = 0;
+  const slices = models.map(([, n], i) => {
+    const from = 100 * acc / total;
+    acc += n;
+    return `${COLORS[i % COLORS.length]} ${from.toFixed(2)}% ${(100 * acc / total).toFixed(2)}%`;
+  });
+  $('#aimodels .chart').innerHTML = `<div class="pie" style="background:conic-gradient(${slices.join(',')})"></div>
+    <ul class="legend">${models.map(([name, n], i) =>
+      `<li><i style="background:${COLORS[i % COLORS.length]}"></i>${esc(name)} <span class="muted">${n}</span></li>`).join('')}</ul>`;
 }
 
 // Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1.

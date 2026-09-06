@@ -249,6 +249,36 @@ DETECTORS = [
 DETECTORS = [(w, re.compile(rx, re.M), label) for w, rx, label in DETECTORS]
 
 
+# Names of the AI assistants that sign commits; the first match on a trailer line wins, so keep the
+# specific model names above the generic tool names.
+# [impl->req~ai-models~1]
+AI_MODELS = [re.compile(p, re.I) for p in [
+    r"Claude (?:Opus|Sonnet|Haiku|Fable)[\w .]*",
+    r"GPT-[\w.]+", r"Gemini [\w.]+", r"Devstral|Codestral|Qwen[\w.-]*|Llama[\w.-]*",
+    r"Claude Code", r"Claude", r"GitHub Copilot", r"Copilot", r"Cursor", r"Codex", r"Gemini",
+    r"Junie", r"Windsurf", r"Aider", r"Devin",
+]]
+AI_TRAILER = re.compile(r"\s*(co-authored-by\s*:|assisted-by\s*:|.*generated with)", re.I)
+
+
+def ai_models(messages):
+    """AI assistants credited in a PR's commit messages (co-author trailers, tool sign-off lines)."""
+    found = set()
+    for msg in messages:
+        for line in msg.splitlines():
+            if not AI_TRAILER.match(line):
+                continue
+            for rx in AI_MODELS:
+                hit = rx.search(line)
+                if hit:
+                    found.add(hit.group(0).strip())
+                    break
+    # a Claude Code commit signs both the tool and the model; the model is the interesting half
+    if any(f.lower().startswith(("claude opus", "claude sonnet", "claude haiku", "claude fable")) for f in found):
+        found -= {"Claude", "Claude Code"}
+    return sorted(found)
+
+
 def refactorings(pr, files, repo):
     """Nerdy facts about a merged PR, mined from its patches. Returns [(weight, text)]."""
     found = []
@@ -275,15 +305,17 @@ def refactorings(pr, files, repo):
 
 
 def pr_stats(c, cached):
-    if c["id"] in cached and "refactorings" in cached[c["id"]]:
+    if c["id"] in cached and "ai" in cached[c["id"]]:
         return cached[c["id"]]
     pr, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}")
     files, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/files", {"per_page": 100})
+    commits, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/commits", {"per_page": 100})
     comps = {}
     for f in files:
         comps[component(c["repo"], f["filename"])] = comps.get(component(c["repo"], f["filename"]), 0) + f["changes"]
     return {"additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps,
-            "refactorings": refactorings(pr, files, c["repo"])}
+            "refactorings": refactorings(pr, files, c["repo"]),
+            "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
 # [impl->req~scoring~1]
@@ -392,8 +424,13 @@ def main():
     private = private_activity()
     nerdy = sorted(({"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
                     for c in cards for w, t in c.get("stats", {}).get("refactorings", [])), key=lambda r: -r["weight"])[:5]
+    ai_used = {}
+    for c in cards:
+        for m in c.get("stats", {}).get("ai", []):
+            ai_used[m] = ai_used.get(m, 0) + 1
     data = {
         "refactorings": nerdy,
+        "ai_models": dict(sorted(ai_used.items(), key=lambda kv: -kv[1])),
         "milestones": milestones(previous_milestones),
         "focus": focus_progress(),
         "private_activity": private,
