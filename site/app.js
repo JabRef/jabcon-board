@@ -2,6 +2,7 @@
 const VIDEO = 'https://files.jabref.org/gource/jabcon-2026.mp4';
 const COLORS = ['#58a6ff', '#3fb950', '#d29922', '#f778ba', '#a371f7', '#ff7b72', '#79c0ff', '#56d364', '#e3b341', '#ffa657'];
 let previous = null;
+let raw = null;
 let data = null;
 let color = {};
 
@@ -256,13 +257,18 @@ function tick() {
     : 'JabCon is over – thank you!';
 }
 
-// [impl->req~auto-reload~1]
+// [impl->req~auto-reload~2]
 async function load() {
   try {
     const r = await fetch('data.json?ts=' + Date.now(), { cache: 'no-store' });
     if (!r.ok) throw new Error(r.statusText);
+    const text = await r.text();
+    // Re-rendering identical data replaces the node under the mouse, which kills the open title tooltip and
+    // shows no new one until the pointer moves again — on a wall display it never does. Only render on a change.
+    if (text === raw) return;
+    raw = text;
     previous = data;
-    data = await r.json();
+    data = JSON.parse(text);
     render();
     celebrate(previous);
   } catch (e) {
