@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T07:47:10+00:00",
+ "generated_at": "2026-09-06T07:54:08+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -3762,6 +3762,20 @@
  ],
  "events": [
   {
+   "id": "14510739497",
+   "type": "IssuesEvent",
+   "action": "unassigned",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T07:51:52Z",
+   "summary": "unassigned issue #16729: Groups tree diff should show removed, modified, and added groups.",
+   "number": 16729,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16729",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14510624489",
    "type": "WatchEvent",
    "action": "started",
@@ -6645,24 +6659,23 @@
    "url": "https://github.com/JabRef/jabref/issues/16860",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14479887216",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:18:46Z",
-   "summary": "reviewed PR #16859 (dismissed)",
-   "number": 16859,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16859#pullrequestreview-5120828619",
-   "excerpt": "",
-   "review_id": 5120828619,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14510739497",
+   "type": "IssuesEvent",
+   "action": "unassigned",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T07:51:52Z",
+   "summary": "unassigned issue #16729: Groups tree diff should show removed, modified, and added groups.",
+   "number": 16729,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16729",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14510624489",
    "type": "WatchEvent",
@@ -16050,10 +16063,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 89,
+   "points": 90,
    "merged": 1,
    "reviews": 22,
-   "other": 42
+   "other": 43
   },
   {
    "login": "pluto-han",
