@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T20:45:35+00:00",
+ "generated_at": "2026-09-06T20:52:35+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2694,7 +2694,7 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T20:45:31Z",
+   "updated_at": "2026-09-06T20:50:57Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2715,7 +2715,7 @@
     "status: ready-for-review",
     "dev: ci-cd"
    ],
-   "updated_at": "2026-09-06T20:44:34Z",
+   "updated_at": "2026-09-06T20:47:21Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3449,9 +3449,10 @@
    "assignees": [],
    "labels": [
     "component: bib(la)tex",
-    "component: import-load"
+    "component: import-load",
+    "status: changes-required"
    ],
-   "updated_at": "2026-09-06T20:34:45Z",
+   "updated_at": "2026-09-06T20:51:25Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3469,11 +3470,33 @@
    "author": "Devansh-18155",
    "assignees": [],
    "labels": [
+    "component: fetcher",
     "component: entry-editor",
     "status: changes-required",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T20:33:03Z",
+   "updated_at": "2026-09-06T20:50:43Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2015",
+   "repo": "openjdk/jfx",
+   "number": 2015,
+   "title": "8375588: Enhanced property metadata",
+   "url": "https://github.com/openjdk/jfx/pull/2015",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-06T20:46:28Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3518,27 +3541,6 @@
     "good second issue"
    ],
    "updated_at": "2026-09-06T20:28:30Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2015",
-   "repo": "openjdk/jfx",
-   "number": 2015,
-   "title": "8375588: Enhanced property metadata",
-   "url": "https://github.com/openjdk/jfx/pull/2015",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "csr"
-   ],
-   "updated_at": "2026-09-06T20:22:24Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4958,6 +4960,62 @@
   }
  ],
  "events": [
+  {
+   "id": "20272641982",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "Devansh-18155/jabref",
+   "created_at": "2026-09-06T20:52:57Z",
+   "summary": "pushed 0 commit(s) to fix/citations-tab-ui",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Devansh-18155/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20272570300",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "koppor/jfx",
+   "created_at": "2026-09-06T20:51:47Z",
+   "summary": "pushed 0 commit(s) to master",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/koppor/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20272423841",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T20:49:27Z",
+   "summary": "created branch fix/citations-tab-ui",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20272291660",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "Devansh-18155/jabref",
+   "created_at": "2026-09-06T20:47:19Z",
+   "summary": "pushed 0 commit(s) to fix/citations-tab-ui",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Devansh-18155/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20272112244",
    "type": "PushEvent",
@@ -7822,65 +7880,65 @@
    "url": "https://github.com/JabRef/jabref/issues/16868",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14523402296",
-   "type": "IssuesEvent",
-   "action": "closed",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:14:39Z",
-   "summary": "closed issue #16729: Groups tree diff should show removed, modified, and added groups.",
-   "number": 16729,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16729",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14523402356",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:14:38Z",
-   "summary": "merged PR #16877",
-   "number": 16877,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16877",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14523402216",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:14:37Z",
-   "summary": "merged PR #16868",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16868",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20254610354",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref-git-test",
-   "created_at": "2026-09-06T16:14:19Z",
-   "summary": "pushed 0 commit(s) to main",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref-git-test",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "20272641982",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "Devansh-18155/jabref",
+   "created_at": "2026-09-06T20:52:57Z",
+   "summary": "pushed 0 commit(s) to fix/citations-tab-ui",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Devansh-18155/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20272570300",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "koppor/jfx",
+   "created_at": "2026-09-06T20:51:47Z",
+   "summary": "pushed 0 commit(s) to master",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/koppor/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20272423841",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T20:49:27Z",
+   "summary": "created branch fix/citations-tab-ui",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20272291660",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "Devansh-18155/jabref",
+   "created_at": "2026-09-06T20:47:19Z",
+   "summary": "pushed 0 commit(s) to fix/citations-tab-ui",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Devansh-18155/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20272112244",
    "type": "PushEvent",
@@ -24542,6 +24600,20 @@
    "review_id": null
   },
   {
+   "id": "20272551932",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-04T13:37:42Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "20127721191",
    "type": "PushEvent",
    "action": null,
@@ -25015,10 +25087,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 267,
+   "points": 269,
    "merged": 5,
    "reviews": 58,
-   "other": 136
+   "other": 138
   },
   {
    "login": "InAnYan",
@@ -25043,17 +25115,17 @@
   },
   {
    "login": "koppor",
-   "points": 146,
+   "points": 147,
    "merged": 14,
    "reviews": 6,
-   "other": 92
+   "other": 93
   },
   {
    "login": "pluto-han",
-   "points": 65,
+   "points": 66,
    "merged": 4,
    "reviews": 8,
-   "other": 37
+   "other": 38
   },
   {
    "login": "calixtus",
