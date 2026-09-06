@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T20:52:35+00:00",
+ "generated_at": "2026-09-06T20:59:35+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2660,6 +2660,48 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16883",
+   "repo": "JabRef/jabref",
+   "number": 16883,
+   "title": "Fix status label update for reviews on fork PRs",
+   "url": "https://github.com/JabRef/jabref/pull/16883",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "dev: ci-cd",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T20:56:56Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16810",
+   "repo": "JabRef/jabref",
+   "number": 16810,
+   "title": "Keep library close working when cleanup throws an Error",
+   "url": "https://github.com/JabRef/jabref/pull/16810",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: devcall"
+   ],
+   "updated_at": "2026-09-06T20:56:44Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16857",
    "repo": "JabRef/jabref",
    "number": 16857,
@@ -2672,6 +2714,7 @@
    "labels": [
     "component: ui",
     "component: cleanup-ops",
+    "status: ready-for-review",
     "component: libre-office",
     "dev: code-quality",
     "component: search",
@@ -2684,7 +2727,6 @@
     "component: external-files",
     "component: maintable",
     "component: entry-editor",
-    "status: changes-required",
     "component: automatic-field-editor",
     "component: external-changes",
     "component: welcome-tab",
@@ -2694,7 +2736,7 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T20:50:57Z",
+   "updated_at": "2026-09-06T20:55:06Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2776,27 +2818,6 @@
    ],
    "labels": [],
    "updated_at": "2026-09-06T20:39:25Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16883",
-   "repo": "JabRef/jabref",
-   "number": 16883,
-   "title": "Fix status label update for reviews on fork PRs",
-   "url": "https://github.com/JabRef/jabref/pull/16883",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "dev: ci-cd"
-   ],
-   "updated_at": "2026-09-06T20:22:56Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3152,27 +3173,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16810",
-   "repo": "JabRef/jabref",
-   "number": 16810,
-   "title": "Keep library close working when cleanup throws an Error",
-   "url": "https://github.com/JabRef/jabref/pull/16810",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "status: devcall"
-   ],
-   "updated_at": "2026-09-06T03:39:29Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16827",
    "repo": "JabRef/jabref",
    "number": 16827,
@@ -3438,28 +3438,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16865",
-   "repo": "JabRef/jabref",
-   "number": 16865,
-   "title": "Fix parsing of percent comments in BibTeX files",
-   "url": "https://github.com/JabRef/jabref/pull/16865",
-   "type": "pr",
-   "draft": false,
-   "author": "albCarlosRodrigues",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: import-load",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T20:51:25Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16874",
    "repo": "JabRef/jabref",
    "number": 16874,
@@ -3475,7 +3453,29 @@
     "status: changes-required",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T20:50:43Z",
+   "updated_at": "2026-09-06T20:59:12Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16865",
+   "repo": "JabRef/jabref",
+   "number": 16865,
+   "title": "Fix parsing of percent comments in BibTeX files",
+   "url": "https://github.com/JabRef/jabref/pull/16865",
+   "type": "pr",
+   "draft": false,
+   "author": "albCarlosRodrigues",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: import-load",
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-06T20:51:25Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4961,6 +4961,79 @@
  ],
  "events": [
   {
+   "id": "20273061814",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:59:47Z",
+   "summary": "pushed 0 commit(s) to fulltext-download-background-task",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530991669",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:59:13Z",
+   "summary": "reviewed PR #16874 (approved)",
+   "number": 16874,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126598188",
+   "excerpt": "",
+   "review_id": 5126598188,
+   "self": false
+  },
+  {
+   "id": "14530950886",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "Siedlerchr",
+   "repo": "dortania/MetallibSupportPkg",
+   "created_at": "2026-09-06T20:57:30Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/dortania/MetallibSupportPkg",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530920638",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:56:17Z",
+   "summary": "reviewed PR #16883 (approved)",
+   "number": 16883,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16883#pullrequestreview-5126592250",
+   "excerpt": "",
+   "review_id": 5126592250,
+   "self": false
+  },
+  {
+   "id": "14530891924",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "JohnnyGoodNews",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:55:08Z",
+   "summary": "reviewed PR #16857 (approved)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5126589944",
+   "excerpt": "",
+   "review_id": 5126589944,
+   "self": false
+  },
+  {
    "id": "20272641982",
    "type": "PushEvent",
    "action": null,
@@ -4985,6 +5058,34 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/koppor/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530855604",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:50:57Z",
+   "summary": "labeled PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16857",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530855529",
+   "type": "PullRequestEvent",
+   "action": "unlabeled",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:50:57Z",
+   "summary": "unlabeled PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16857",
    "excerpt": "",
    "review_id": null
   },
@@ -7782,107 +7883,82 @@
    "excerpt": "But why there needs to be a show error dialog? Can it be done without side effects? It should be visible in a text field (it will become re\u2026",
    "review_id": 5125849146,
    "self": false
-  },
-  {
-   "id": "20255607416",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-06T16:29:21Z",
-   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20255539801",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-06T16:28:19Z",
-   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20255227207",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-06T16:23:31Z",
-   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20255001941",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-06T16:20:06Z",
-   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20254920224",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-06T16:18:52Z",
-   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14523448630",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:16:19Z",
-   "summary": "opened PR #16882",
-   "number": 16882,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16882",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14525196538",
-   "type": "PullRequestEvent",
-   "action": "labeled",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:14:50Z",
-   "summary": "labeled PR #16868",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16868",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "20273061814",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:59:47Z",
+   "summary": "pushed 0 commit(s) to fulltext-download-background-task",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530991669",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:59:13Z",
+   "summary": "reviewed PR #16874 (approved)",
+   "number": 16874,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126598188",
+   "excerpt": "",
+   "review_id": 5126598188,
+   "self": false
+  },
+  {
+   "id": "14530950886",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "Siedlerchr",
+   "repo": "dortania/MetallibSupportPkg",
+   "created_at": "2026-09-06T20:57:30Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/dortania/MetallibSupportPkg",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530920638",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:56:17Z",
+   "summary": "reviewed PR #16883 (approved)",
+   "number": 16883,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16883#pullrequestreview-5126592250",
+   "excerpt": "",
+   "review_id": 5126592250,
+   "self": false
+  },
+  {
+   "id": "14530891924",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "JohnnyGoodNews",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:55:08Z",
+   "summary": "reviewed PR #16857 (approved)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5126589944",
+   "excerpt": "",
+   "review_id": 5126589944,
+   "self": false
+  },
   {
    "id": "20272641982",
    "type": "PushEvent",
@@ -7908,6 +7984,34 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/koppor/jfx",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530855604",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:50:57Z",
+   "summary": "labeled PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16857",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14530855529",
+   "type": "PullRequestEvent",
+   "action": "unlabeled",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T20:50:57Z",
+   "summary": "unlabeled PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16857",
    "excerpt": "",
    "review_id": null
   },
@@ -15929,6 +16033,20 @@
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16830#issuecomment-5556822928",
    "excerpt": "Merged origin/main into this branch to resolve the merge conflict.",
+   "review_id": null
+  },
+  {
+   "id": "14530931704",
+   "type": "PullRequestEvent",
+   "action": "unlabeled",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T03:39:29Z",
+   "summary": "unlabeled PR #16810",
+   "number": 16810,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16810",
+   "excerpt": "",
    "review_id": null
   },
   {
@@ -25057,7 +25175,8 @@
   "JabRef/jabref#16882": "subhramit",
   "JabRef/jabref#16879": "InAnYan",
   "JabRef/jabref#16874": "Devansh-18155",
-  "JabRef/jabref#16865": "albCarlosRodrigues"
+  "JabRef/jabref#16865": "albCarlosRodrigues",
+  "JabRef/jabref#16883": "koppor"
  },
  "stats": {
   "additions": 8482,
@@ -25087,10 +25206,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 269,
+   "points": 272,
    "merged": 5,
-   "reviews": 58,
-   "other": 138
+   "reviews": 59,
+   "other": 139
   },
   {
    "login": "InAnYan",
@@ -25108,9 +25227,9 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 170,
+   "points": 172,
    "merged": 5,
-   "reviews": 39,
+   "reviews": 40,
    "other": 77
   },
   {
@@ -25142,18 +25261,18 @@
    "other": 1
   },
   {
+   "login": "JohnnyGoodNews",
+   "points": 10,
+   "merged": 0,
+   "reviews": 4,
+   "other": 2
+  },
+  {
    "login": "ThiloteE",
    "points": 9,
    "merged": 0,
    "reviews": 0,
    "other": 9
-  },
-  {
-   "login": "JohnnyGoodNews",
-   "points": 8,
-   "merged": 0,
-   "reviews": 3,
-   "other": 2
   },
   {
    "login": "ryan-carpenter",
