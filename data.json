@@ -52,8 +52,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 3,
-   "closed": 123,
+   "open": 2,
+   "closed": 124,
    "baseline": 113
   },
   {
@@ -85,9 +85,9 @@
   "JabRef/jabref-issue-melting-pot": {
    "opened": 4,
    "closed": 3,
-   "comments": 1,
+   "comments": 2,
    "by": {
-    "koppor": 2,
+    "koppor": 3,
     "Maran23": 0,
     "InAnYan": 1,
     "pluto-han": 0,
@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T19:15:53+00:00",
+ "generated_at": "2026-09-06T19:23:19+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -501,6 +501,67 @@
      [
       3,
       "JSpecify null-marked"
+     ],
+     [
+      2,
+      "immutable collection literals"
+     ]
+    ],
+    "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16651",
+   "repo": "JabRef/jabref",
+   "number": 16651,
+   "title": "Add auto-commit, push & pull features for Git",
+   "url": "https://github.com/JabRef/jabref/pull/16651",
+   "type": "pr",
+   "draft": false,
+   "author": "LoayTarek5",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: libre-office",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "component: shared-database",
+    "component: slr",
+    "good second issue",
+    "component: welcome-tab",
+    "component: git",
+    "component: welcome-walkthrough",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T19:21:06Z",
+   "closed_at": "2026-09-06T19:21:06Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T19:21:06Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 1392,
+    "deletions": 290,
+    "changed_files": 50,
+    "components": {
+     "(root)": 4,
+     "docs": 11,
+     "jabgui": 1444,
+     "jablib": 223
+    },
+    "refactorings": [
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "streams"
+     ],
+     [
+      2,
+      "markdown javadoc"
      ],
      [
       2,
@@ -1803,6 +1864,32 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/12630",
+   "repo": "JabRef/jabref",
+   "number": 12630,
+   "title": "Add Git integration as separate SLR library feature",
+   "url": "https://github.com/JabRef/jabref/issues/12630",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "LoayTarek5"
+   ],
+   "labels": [
+    "dev: code-quality",
+    "component: slr",
+    "\ud83d\udccc Pinned",
+    "good second issue",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T19:22:02Z",
+   "closed_at": "2026-09-06T19:21:07Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/JabRefOnline/issues/2992",
    "repo": "JabRef/JabRefOnline",
    "number": 2992,
@@ -2299,49 +2386,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16875",
-   "repo": "JabRef/jabref",
-   "number": 16875,
-   "title": "Require SHA-pinned GitHub Actions in AGENTS.md",
-   "url": "https://github.com/JabRef/jabref/pull/16875",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-06T19:15:50Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16882",
-   "repo": "JabRef/jabref",
-   "number": 16882,
-   "title": "Gracefully handle JGit errors",
-   "url": "https://github.com/JabRef/jabref/pull/16882",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "good first issue",
-    "project: jabcon",
-    "component: git"
-   ],
-   "updated_at": "2026-09-06T19:14:48Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16879",
    "repo": "JabRef/jabref",
    "number": 16879,
@@ -2354,7 +2398,7 @@
    "labels": [
     "status: changes-required"
    ],
-   "updated_at": "2026-09-06T19:14:41Z",
+   "updated_at": "2026-09-06T19:23:11Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2396,12 +2440,55 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T19:11:28Z",
+   "updated_at": "2026-09-06T19:17:24Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16875",
+   "repo": "JabRef/jabref",
+   "number": 16875,
+   "title": "Require SHA-pinned GitHub Actions in AGENTS.md",
+   "url": "https://github.com/JabRef/jabref/pull/16875",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review"
+   ],
+   "updated_at": "2026-09-06T19:15:50Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16882",
+   "repo": "JabRef/jabref",
+   "number": 16882,
+   "title": "Gracefully handle JGit errors",
+   "url": "https://github.com/JabRef/jabref/pull/16882",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "good first issue",
+    "project: jabcon",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T19:14:48Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16791",
@@ -3085,37 +3172,6 @@
     "first contrib"
    ],
    "updated_at": "2026-09-06T19:13:19Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16651",
-   "repo": "JabRef/jabref",
-   "number": 16651,
-   "title": "Add auto-commit, push & pull features for Git",
-   "url": "https://github.com/JabRef/jabref/pull/16651",
-   "type": "pr",
-   "draft": false,
-   "author": "LoayTarek5",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: libre-office",
-    "component: import-load",
-    "component: export-or-save",
-    "component: preferences",
-    "component: shared-database",
-    "component: slr",
-    "good second issue",
-    "component: welcome-tab",
-    "component: git",
-    "component: welcome-walkthrough",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T19:10:02Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4602,6 +4658,108 @@
   }
  ],
  "events": [
+  {
+   "id": "14528416034",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:21:07Z",
+   "summary": "closed issue #12630: Add Git integration as separate SLR library feature",
+   "number": 12630,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/12630",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14528411909",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:20:57Z",
+   "summary": "commented on #16879: fix(ai): keep group chat window after library edits",
+   "number": 16879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16879#issuecomment-5561560695",
+   "excerpt": "Need to think about that - we see different use cases here maybe... We need to ensure that the JavaDoc is up-to-date - and refs getUid() as\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14528316535",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:17:31Z",
+   "summary": "reviewed PR #16879 (changes_requested)",
+   "number": 16879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16879#pullrequestreview-5126336363",
+   "excerpt": "Add Java comment, why a \"weak\" datatype is used - maybe just BibDatabaseContextequqal needs to be linked (as reason why it does not work) -\u2026",
+   "review_id": 5126336363,
+   "self": false
+  },
+  {
+   "id": "14528314015",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:17:26Z",
+   "summary": "reviewed PR #16857 (commented)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5126337621",
+   "excerpt": "This is a bit weird. Method is named joural, returns a GuiUndoManager and checks journalAfterClose but does not use it?",
+   "review_id": 5126337621,
+   "self": false
+  },
+  {
+   "id": "14528313480",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:17:24Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944989917",
+   "excerpt": "This is a bit weird. Method is named joural, returns a GuiUndoManager and checks journalAfterClose but does not use it?",
+   "review_id": 5126337621,
+   "self": false
+  },
+  {
+   "id": "14528310774",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:17:17Z",
+   "summary": "commented on #16879: fix(ai): keep group chat window after library edits",
+   "number": 16879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16879#issuecomment-5561536786",
+   "excerpt": "@koppor  that works as designed that bibdatabasecontext also checks the contents, because how would you ohterwise say that two different in\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14528296987",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:16:47Z",
+   "summary": "commented on PR #16879",
+   "number": 16879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16879#discussion_r3944988528",
+   "excerpt": "Add Java comment, why a \"weak\" datatype is used - maybe just BibDatabaseContextequqal needs to be linked (as reason why it does not work) -\u2026",
+   "review_id": 5126336363,
+   "self": false
+  },
   {
    "id": "14528272020",
    "type": "IssueCommentEvent",
@@ -7403,113 +7561,111 @@
    "url": "https://github.com/JabRef/jabref/pull/16875#issuecomment-5559805038",
    "excerpt": "shoudl got a a skill file  I think, we rarely touch them by hand and most of the time qodo or dependabit take of these",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14520087472",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
+   "id": "14528416034",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:15:13Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
+   "created_at": "2026-09-06T19:21:07Z",
+   "summary": "closed issue #12630: Add Git integration as separate SLR library feature",
+   "number": 12630,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944201533",
-   "excerpt": "Too obvious comments in this methods?",
-   "review_id": 5125483424,
-   "self": false
-  },
-  {
-   "id": "14520013952",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:12:35Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944194164",
-   "excerpt": "Yeah, that's strange",
-   "review_id": 5125483424,
-   "self": false
-  },
-  {
-   "id": "14519996065",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:11:56Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944192483",
-   "excerpt": "I think we can use get here since we already checked that it's present",
-   "review_id": 5125483424,
-   "self": false
-  },
-  {
-   "id": "14519942847",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:09:59Z",
-   "summary": "opened PR #16877",
-   "number": 16877,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16877",
+   "url": "https://github.com/JabRef/jabref/issues/12630",
    "excerpt": "",
    "review_id": null
   },
   {
-   "id": "14519853484",
-   "type": "PullRequestReviewCommentEvent",
+   "id": "14528411909",
+   "type": "IssueCommentEvent",
    "action": "created",
-   "actor": "InAnYan",
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:06:46Z",
-   "summary": "commented on PR #16857",
-   "number": 16857,
+   "created_at": "2026-09-06T19:20:57Z",
+   "summary": "commented on #16879: fix(ai): keep group chat window after library edits",
+   "number": 16879,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944179688",
-   "excerpt": "Yeah",
-   "review_id": 5125483424,
-   "self": false
+   "url": "https://github.com/JabRef/jabref/pull/16879#issuecomment-5561560695",
+   "excerpt": "Need to think about that - we see different use cases here maybe... We need to ensure that the JavaDoc is up-to-date - and refs getUid() as\u2026",
+   "review_id": null
   },
   {
-   "id": "14519774572",
+   "id": "14528316535",
    "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:59Z",
-   "summary": "reviewed PR #16872 (commented)",
-   "number": 16872,
+   "created_at": "2026-09-06T19:17:31Z",
+   "summary": "reviewed PR #16879 (changes_requested)",
+   "number": 16879,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#pullrequestreview-5125544162",
-   "excerpt": "Fixed: the group is repository-wide (link-issue-ensure-assignment), not per pull request, precisely because the secret is one ledger. A que\u2026",
-   "review_id": 5125544162,
-   "self": true
+   "url": "https://github.com/JabRef/jabref/pull/16879#pullrequestreview-5126336363",
+   "excerpt": "Add Java comment, why a \"weak\" datatype is used - maybe just BibDatabaseContextequqal needs to be linked (as reason why it does not work) -\u2026",
+   "review_id": 5126336363,
+   "self": false
   },
   {
-   "id": "14519774582",
+   "id": "14528314015",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:17:26Z",
+   "summary": "reviewed PR #16857 (commented)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5126337621",
+   "excerpt": "This is a bit weird. Method is named joural, returns a GuiUndoManager and checks journalAfterClose but does not use it?",
+   "review_id": 5126337621,
+   "self": false
+  },
+  {
+   "id": "14528313480",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:17:24Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944989917",
+   "excerpt": "This is a bit weird. Method is named joural, returns a GuiUndoManager and checks journalAfterClose but does not use it?",
+   "review_id": 5126337621,
+   "self": false
+  },
+  {
+   "id": "14528310774",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:17:17Z",
+   "summary": "commented on #16879: fix(ai): keep group chat window after library edits",
+   "number": 16879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16879#issuecomment-5561536786",
+   "excerpt": "@koppor  that works as designed that bibdatabasecontext also checks the contents, because how would you ohterwise say that two different in\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14528296987",
    "type": "PullRequestReviewCommentEvent",
    "action": "created",
    "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:58Z",
-   "summary": "commented on PR #16872",
-   "number": 16872,
+   "created_at": "2026-09-06T19:16:47Z",
+   "summary": "commented on PR #16879",
+   "number": 16879,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#discussion_r3944172320",
-   "excerpt": "Fixed: the group is repository-wide (link-issue-ensure-assignment), not per pull request, precisely because the secret is one ledger. A que\u2026",
-   "review_id": 5125544162,
-   "self": true
-  }
- ],
- "all_events": [
+   "url": "https://github.com/JabRef/jabref/pull/16879#discussion_r3944988528",
+   "excerpt": "Add Java comment, why a \"weak\" datatype is used - maybe just BibDatabaseContextequqal needs to be linked (as reason why it does not work) -\u2026",
+   "review_id": 5126336363,
+   "self": false
+  },
   {
    "id": "14528272020",
    "type": "IssueCommentEvent",
@@ -23024,17 +23180,18 @@
   "JabRef/jabref#16880": "Stewori",
   "JabRef/jabref#16877": "koppor",
   "JabRef/jabref#16875": "koppor",
-  "JabRef/jabref#16882": "subhramit"
+  "JabRef/jabref#16882": "subhramit",
+  "JabRef/jabref#16879": "InAnYan"
  },
  "stats": {
-  "additions": 4253,
-  "deletions": 1767,
-  "changed_files": 372,
+  "additions": 5645,
+  "deletions": 2057,
+  "changed_files": 422,
   "components": {
-   "(root)": 49,
-   "jabgui": 3735,
-   "jablib": 1505,
-   "docs": 208,
+   "(root)": 53,
+   "jabgui": 5179,
+   "jablib": 1728,
+   "docs": 219,
    ".github": 181,
    "latex-conv": 1,
    "openfasttrace": 31,
@@ -23066,31 +23223,31 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 159,
+   "points": 160,
    "merged": 4,
    "reviews": 37,
-   "other": 73
+   "other": 74
   },
   {
    "login": "Maran23",
-   "points": 134,
+   "points": 137,
    "merged": 1,
-   "reviews": 39,
-   "other": 53
+   "reviews": 40,
+   "other": 54
   },
   {
    "login": "koppor",
-   "points": 118,
+   "points": 123,
    "merged": 12,
-   "reviews": 2,
-   "other": 78
+   "reviews": 3,
+   "other": 81
   },
   {
    "login": "pluto-han",
-   "points": 64,
+   "points": 65,
    "merged": 4,
    "reviews": 8,
-   "other": 36
+   "other": 37
   },
   {
    "login": "calixtus",
