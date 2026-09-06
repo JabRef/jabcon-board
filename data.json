@@ -42,9 +42,9 @@
   }
  ],
  "ai_models": {
-  "Claude Opus 5": 8,
+  "Claude Opus 5": 10,
+  "Claude Fable 5.1": 6,
   "Claude Fable 5": 5,
-  "Claude Fable 5.1": 5,
   "Cursor": 1
  },
  "milestones": [
@@ -84,11 +84,11 @@
  },
  "private_activity": {
   "JabRef/jabref-issue-melting-pot": {
-   "opened": 4,
+   "opened": 5,
    "closed": 4,
    "comments": 4,
    "by": {
-    "koppor": 4,
+    "koppor": 5,
     "Maran23": 0,
     "InAnYan": 1,
     "pluto-han": 0,
@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T21:31:30+00:00",
+ "generated_at": "2026-09-06T21:39:47+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -556,6 +556,104 @@
       "immutable collection literals"
      ]
     ],
+    "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "repo": "JabRef/jabref",
+   "number": 16862,
+   "title": "Remove ready-for-review label when a PR is converted to draft",
+   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "dev: ci-cd"
+   ],
+   "updated_at": "2026-09-06T21:37:06Z",
+   "closed_at": "2026-09-06T21:36:58Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T21:36:58Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 34,
+    "deletions": 2,
+    "changed_files": 2,
+    "components": {
+     ".github": 36
+    },
+    "refactorings": [],
+    "ai": [
+     "Claude Fable 5.1",
+     "Claude Opus 5"
+    ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16876",
+   "repo": "JabRef/jabref",
+   "number": 16876,
+   "title": "Label CI and build-system changes automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16876",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "dev: ci-cd"
+   ],
+   "updated_at": "2026-09-06T21:34:19Z",
+   "closed_at": "2026-09-06T21:34:17Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T21:34:17Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 18,
+    "deletions": 0,
+    "changed_files": 1,
+    "components": {
+     ".github": 18
+    },
+    "refactorings": [],
+    "ai": [
+     "Claude Opus 5"
+    ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16885",
+   "repo": "JabRef/jabref",
+   "number": 16885,
+   "title": "Remove malformed markdown and duplicate entry from CHANGELOG.md",
+   "url": "https://github.com/JabRef/jabref/pull/16885",
+   "type": "pr",
+   "draft": false,
+   "author": "Stewori",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T21:33:35Z",
+   "closed_at": "2026-09-06T21:32:16Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T21:32:16Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 0,
+    "deletions": 1,
+    "changed_files": 1,
+    "components": {
+     "(root)": 1
+    },
+    "refactorings": [],
     "ai": []
    }
   },
@@ -2768,24 +2866,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16885",
-   "repo": "JabRef/jabref",
-   "number": 16885,
-   "title": "Remove malformed markdown and duplicate entry from CHANGELOG.md",
-   "url": "https://github.com/JabRef/jabref/pull/16885",
-   "type": "pr",
-   "draft": false,
-   "author": "Stewori",
-   "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-06T21:30:52Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16800",
    "repo": "JabRef/jabref",
    "number": 16800,
@@ -2800,7 +2880,7 @@
     "component: shared-database",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-06T21:24:52Z",
+   "updated_at": "2026-09-06T21:37:12Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2848,27 +2928,6 @@
     "component: citation-relations"
    ],
    "updated_at": "2026-09-06T21:20:31Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16862",
-   "repo": "JabRef/jabref",
-   "number": 16862,
-   "title": "Remove ready-for-review label when a PR is converted to draft",
-   "url": "https://github.com/JabRef/jabref/pull/16862",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "dev: ci-cd"
-   ],
-   "updated_at": "2026-09-06T21:14:41Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3134,26 +3193,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T14:35:33Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16876",
-   "repo": "JabRef/jabref",
-   "number": 16876,
-   "title": "Label CI and build-system changes automatically",
-   "url": "https://github.com/JabRef/jabref/pull/16876",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-06T14:05:25Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3536,12 +3575,12 @@
    "author": "Devansh-18155",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
     "component: fetcher",
     "component: entry-editor",
-    "good second issue"
+    "good second issue",
+    "status: to-be-merged"
    ],
-   "updated_at": "2026-09-06T21:27:35Z",
+   "updated_at": "2026-09-06T21:39:24Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -5048,6 +5087,161 @@
   }
  ],
  "events": [
+  {
+   "id": "20275544493",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T21:39:55Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275370828",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:37:01Z",
+   "summary": "deleted branch draft-removes-label",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531955523",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:36:58Z",
+   "summary": "merged PR #16862",
+   "number": 16862,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16862",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275208602",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:34:19Z",
+   "summary": "deleted branch labeler-dev-labels",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275207444",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:34:18Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531890248",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:34:17Z",
+   "summary": "merged PR #16876",
+   "number": 16876,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16876",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531869361",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:33:27Z",
+   "summary": "reviewed PR #16876 (approved)",
+   "number": 16876,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16876#pullrequestreview-5126678834",
+   "excerpt": "",
+   "review_id": 5126678834,
+   "self": false
+  },
+  {
+   "id": "20275139893",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:33:10Z",
+   "summary": "pushed 0 commit(s) to labeler-dev-labels",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531858930",
+   "type": "IssuesEvent",
+   "action": "opened",
+   "actor": "ryan-carpenter",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:33:03Z",
+   "summary": "opened issue #16886: Sidepane items should have a predictable order",
+   "number": 16886,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16886",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275085721",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:32:17Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531839944",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Stewori",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:32:16Z",
+   "summary": "merged PR #16885",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16885",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14531832027",
    "type": "PullRequestReviewEvent",
@@ -7812,167 +8006,164 @@
    "excerpt": "I think just checking the propertty would be sufficient?",
    "review_id": 5125841269,
    "self": true
-  },
-  {
-   "id": "14526130192",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:56:33Z",
-   "summary": "reviewed PR #16845 (commented)",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5126138947",
-   "excerpt": "done",
-   "review_id": 5126138947,
-   "self": true
-  },
-  {
-   "id": "14526133251",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:56:32Z",
-   "summary": "commented on PR #16845",
-   "number": 16845,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3944781616",
-   "excerpt": "done",
-   "review_id": 5126138947,
-   "self": true
-  },
-  {
-   "id": "20261357706",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "pluto-han",
-   "repo": "pluto-han/jabref",
-   "created_at": "2026-09-06T17:56:29Z",
-   "summary": "pushed 0 commit(s) to select-new-entry",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/pluto-han/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14525606094",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "apache/spark",
-   "created_at": "2026-09-06T17:36:46Z",
-   "summary": "commented on #58225: [SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "number": 58225,
-   "merged": false,
-   "url": "https://github.com/apache/spark/pull/58225#issuecomment-5560962949",
-   "excerpt": "@LuciferYang CI is now green, could you take a final look?",
-   "review_id": null
-  },
-  {
-   "id": "14525558367",
-   "type": "IssuesEvent",
-   "action": "closed",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:34:57Z",
-   "summary": "closed issue #16640: Rework LibreOffice CSL Style Inference flow",
-   "number": 16640,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16640",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14525558343",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:34:56Z",
-   "summary": "merged PR #16870",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16870",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14525469681",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:31:36Z",
-   "summary": "commented on #16760: Enhance developer documentation",
-   "number": 16760,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16760#issuecomment-5560934466",
-   "excerpt": "If upgrading mermaid version causes you to make more changes to other mermaid diagrams, just make the syntax compatible. Else upgrade.",
-   "review_id": null
-  },
-  {
-   "id": "14525210291",
-   "type": "PullRequestReviewEvent",
-   "action": "dismissed",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:21:39Z",
-   "summary": "reviewed PR #16870 (dismissed)",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125274713",
-   "excerpt": "Left some nitpicks",
-   "review_id": 5125274713,
-   "self": false
-  },
-  {
-   "id": "14525137435",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:18:48Z",
-   "summary": "commented on #16651: Add auto-commit, push & pull features for Git",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5560863073",
-   "excerpt": "@InAnYan took the opportunity to address, your comments felt valid. Can you take a look again now?",
-   "review_id": null
-  },
-  {
-   "id": "14525113504",
-   "type": "PullRequestReviewEvent",
-   "action": "dismissed",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:17:53Z",
-   "summary": "reviewed PR #16651 (dismissed)",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#pullrequestreview-5125819479",
-   "excerpt": "Needs one final review.",
-   "review_id": 5125819479,
-   "self": false
-  },
-  {
-   "id": "20258859715",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "LoayTarek5/jabref",
-   "created_at": "2026-09-06T17:17:51Z",
-   "summary": "pushed 0 commit(s) to git-integration-slr",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/LoayTarek5/jabref",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "20275544493",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T21:39:55Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275370828",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:37:01Z",
+   "summary": "deleted branch draft-removes-label",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531955523",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:36:58Z",
+   "summary": "merged PR #16862",
+   "number": 16862,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16862",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275208602",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:34:19Z",
+   "summary": "deleted branch labeler-dev-labels",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275207444",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:34:18Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531890248",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:34:17Z",
+   "summary": "merged PR #16876",
+   "number": 16876,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16876",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531869361",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:33:27Z",
+   "summary": "reviewed PR #16876 (approved)",
+   "number": 16876,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16876#pullrequestreview-5126678834",
+   "excerpt": "",
+   "review_id": 5126678834,
+   "self": false
+  },
+  {
+   "id": "20275139893",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:33:10Z",
+   "summary": "pushed 0 commit(s) to labeler-dev-labels",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531858930",
+   "type": "IssuesEvent",
+   "action": "opened",
+   "actor": "ryan-carpenter",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:33:03Z",
+   "summary": "opened issue #16886: Sidepane items should have a predictable order",
+   "number": 16886,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16886",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20275085721",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:32:17Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531839944",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Stewori",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:32:16Z",
+   "summary": "merged PR #16885",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16885",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14531832027",
    "type": "PullRequestReviewEvent",
@@ -25051,6 +25242,20 @@
    "self": false
   },
   {
+   "id": "20275297384",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-04T14:08:39Z",
+   "summary": "pushed 0 commit(s) to oft-trace-decisions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14434812029",
    "type": "IssueCommentEvent",
    "action": "created",
@@ -25524,18 +25729,19 @@
   "JabRef/jabref#16874": "Devansh-18155",
   "JabRef/jabref#16865": "albCarlosRodrigues",
   "JabRef/jabref#16883": "koppor",
-  "JabRef/jabref#16885": "Stewori"
+  "JabRef/jabref#16885": "Stewori",
+  "JabRef/jabref#16876": "koppor"
  },
  "stats": {
-  "additions": 9303,
-  "deletions": 4166,
-  "changed_files": 610,
+  "additions": 9355,
+  "deletions": 4169,
+  "changed_files": 614,
   "components": {
-   "(root)": 59,
+   "(root)": 60,
    "jabgui": 7263,
    "jablib": 4864,
    "docs": 442,
-   ".github": 297,
+   ".github": 351,
    "jabsrv": 27,
    "jabref-website": 124,
    "openfasttrace": 31,
@@ -25575,17 +25781,17 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 172,
+   "points": 173,
    "merged": 5,
    "reviews": 40,
-   "other": 77
+   "other": 78
   },
   {
    "login": "koppor",
-   "points": 152,
-   "merged": 15,
+   "points": 160,
+   "merged": 17,
    "reviews": 6,
-   "other": 95
+   "other": 97
   },
   {
    "login": "pluto-han",
@@ -25596,15 +25802,15 @@
   },
   {
    "login": "calixtus",
-   "points": 45,
+   "points": 50,
    "merged": 1,
-   "reviews": 11,
-   "other": 20
+   "reviews": 12,
+   "other": 23
   },
   {
    "login": "Stewori",
-   "points": 13,
-   "merged": 3,
+   "points": 16,
+   "merged": 4,
    "reviews": 1,
    "other": 2
   },
@@ -25624,10 +25830,10 @@
   },
   {
    "login": "ryan-carpenter",
-   "points": 2,
+   "points": 3,
    "merged": 0,
    "reviews": 0,
-   "other": 2
+   "other": 3
   }
  ]
 }
