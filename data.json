@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T16:53:05+00:00",
+ "generated_at": "2026-09-06T17:00:10+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2090,75 +2090,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16870",
-   "repo": "JabRef/jabref",
-   "number": 16870,
-   "title": "Add infer style button",
-   "url": "https://github.com/JabRef/jabref/pull/16870",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good second issue"
-   ],
-   "updated_at": "2026-09-06T16:51:05Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16845",
-   "repo": "JabRef/jabref",
-   "number": 16845,
-   "title": "Select newly added entry",
-   "url": "https://github.com/JabRef/jabref/pull/16845",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: import-load",
-    "component: external-files",
-    "component: maintable",
-    "good first issue",
-    "status: changes-required",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-06T16:45:59Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16882",
-   "repo": "JabRef/jabref",
-   "number": 16882,
-   "title": "Gracefully handle JGit errors",
-   "url": "https://github.com/JabRef/jabref/pull/16882",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "good first issue",
-    "status: changes-required",
-    "component: git"
-   ],
-   "updated_at": "2026-09-06T16:44:22Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16857",
    "repo": "JabRef/jabref",
    "number": 16857,
@@ -2192,7 +2123,94 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T15:43:09Z",
+   "updated_at": "2026-09-06T16:59:26Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref-koppor/pull/761",
+   "repo": "JabRef/jabref-koppor",
+   "number": 761,
+   "title": "Update experimental branch hourly",
+   "url": "https://github.com/JabRef/jabref-koppor/pull/761",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-06T16:57:57Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16882",
+   "repo": "JabRef/jabref",
+   "number": 16882,
+   "title": "Gracefully handle JGit errors",
+   "url": "https://github.com/JabRef/jabref/pull/16882",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "good first issue",
+    "status: changes-required",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T16:57:52Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16870",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "title": "Add infer style button",
+   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good second issue"
+   ],
+   "updated_at": "2026-09-06T16:53:33Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16845",
+   "repo": "JabRef/jabref",
+   "number": 16845,
+   "title": "Select newly added entry",
+   "url": "https://github.com/JabRef/jabref/pull/16845",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "component: external-files",
+    "component: maintable",
+    "good first issue",
+    "status: changes-required",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-06T16:45:59Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3358,6 +3376,30 @@
    "focus": true
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16703",
+   "repo": "JabRef/jabref",
+   "number": 16703,
+   "title": "Gracefully handle jgit errors",
+   "url": "https://github.com/JabRef/jabref/issues/16703",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "good first issue",
+    "\ud83d\udccc Pinned",
+    "component: git"
+   ],
+   "updated_at": "2026-09-06T16:57:48Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16640",
    "repo": "JabRef/jabref",
    "number": 16640,
@@ -3376,30 +3418,6 @@
     "size: medium"
    ],
    "updated_at": "2026-09-06T16:49:42Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16703",
-   "repo": "JabRef/jabref",
-   "number": 16703,
-   "title": "Gracefully handle jgit errors",
-   "url": "https://github.com/JabRef/jabref/issues/16703",
-   "type": "issue",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [
-    "subhramit"
-   ],
-   "labels": [
-    "good first issue",
-    "\ud83d\udccc Pinned",
-    "component: git"
-   ],
-   "updated_at": "2026-09-06T16:40:55Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4460,6 +4478,76 @@
   }
  ],
  "events": [
+  {
+   "id": "20257584509",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:59:09Z",
+   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14524573713",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref-koppor",
+   "created_at": "2026-09-06T16:57:57Z",
+   "summary": "opened PR #761",
+   "number": 761,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref-koppor/issues/761",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20257501449",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref-koppor",
+   "created_at": "2026-09-06T16:57:53Z",
+   "summary": "created branch hourly-experimental",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref-koppor",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20257441831",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T16:56:59Z",
+   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14524457087",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:53:33Z",
+   "summary": "commented on #16870: Add infer style button",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560719310",
+   "excerpt": "Definitely a big improvement, thanks!",
+   "review_id": null
+  },
   {
    "id": "14524388641",
    "type": "PullRequestReviewEvent",
@@ -7305,30 +7393,17 @@
    "excerpt": "this \"preference\" is not JabRef's preference, but the user-defined-preference stored in meta.xml in .odt file.",
    "review_id": 5125349754,
    "self": true
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14517764025",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:48:30Z",
-   "summary": "reviewed PR #11879 (dismissed)",
-   "number": 11879,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/11879#pullrequestreview-5125345633",
-   "excerpt": "",
-   "review_id": 5125345633,
-   "self": false
-  },
-  {
-   "id": "20240582213",
+   "id": "20257584509",
    "type": "PushEvent",
    "action": null,
-   "actor": "Maran23",
+   "actor": "calixtus",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:47:49Z",
-   "summary": "pushed 0 commit(s) to common-style",
+   "created_at": "2026-09-06T16:59:09Z",
+   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
@@ -7336,52 +7411,61 @@
    "review_id": null
   },
   {
-   "id": "14517730790",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:47:12Z",
-   "summary": "reviewed PR #16864 (approved)",
-   "number": 16864,
+   "id": "14524573713",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref-koppor",
+   "created_at": "2026-09-06T16:57:57Z",
+   "summary": "opened PR #761",
+   "number": 761,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16864#pullrequestreview-5125340475",
-   "excerpt": "I think we use the message templates and they are stored somewhere , but I'm not sure",
-   "review_id": 5125340475,
-   "self": false
+   "url": "https://github.com/JabRef/jabref-koppor/issues/761",
+   "excerpt": "",
+   "review_id": null
   },
   {
-   "id": "14517722122",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:46:54Z",
-   "summary": "commented on PR #16864",
-   "number": 16864,
+   "id": "20257501449",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref-koppor",
+   "created_at": "2026-09-06T16:57:53Z",
+   "summary": "created branch hourly-experimental",
+   "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16864#discussion_r3943971038",
-   "excerpt": "I think we use the message templates and they are stored somewhere , but I'm not sure",
-   "review_id": 5125340475,
-   "self": false
+   "url": "https://github.com/JabRef/jabref-koppor",
+   "excerpt": "",
+   "review_id": null
   },
   {
-   "id": "14517718755",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:46:47Z",
-   "summary": "reviewed PR #16868 (commented)",
-   "number": 16868,
+   "id": "20257441831",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T16:56:59Z",
+   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
+   "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125339763",
-   "excerpt": "Not sure either, I think primary is a fix",
-   "review_id": 5125339763,
-   "self": true
-  }
- ],
- "all_events": [
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14524457087",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:53:33Z",
+   "summary": "commented on #16870: Add infer style button",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560719310",
+   "excerpt": "Definitely a big improvement, thanks!",
+   "review_id": null
+  },
   {
    "id": "14524388641",
    "type": "PullRequestReviewEvent",
@@ -21828,10 +21912,10 @@
   },
   {
    "login": "subhramit",
-   "points": 210,
+   "points": 211,
    "merged": 4,
    "reviews": 41,
-   "other": 116
+   "other": 117
   },
   {
    "login": "Siedlerchr",
@@ -21856,17 +21940,17 @@
   },
   {
    "login": "pluto-han",
-   "points": 54,
+   "points": 55,
    "merged": 2,
    "reviews": 8,
-   "other": 32
+   "other": 33
   },
   {
    "login": "calixtus",
-   "points": 34,
+   "points": 35,
    "merged": 0,
    "reviews": 10,
-   "other": 14
+   "other": 15
   },
   {
    "login": "Stewori",
