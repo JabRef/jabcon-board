@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T15:39:55+00:00",
+ "generated_at": "2026-09-06T15:47:28+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -365,6 +365,37 @@
       "immutable collection literals"
      ]
     ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16880",
+   "repo": "JabRef/jabref",
+   "number": 16880,
+   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
+   "url": "https://github.com/JabRef/jabref/pull/16880",
+   "type": "pr",
+   "draft": false,
+   "author": "Stewori",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "component: ai",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T15:44:04Z",
+   "closed_at": "2026-09-06T15:44:04Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T15:44:04Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 2,
+    "deletions": 2,
+    "changed_files": 1,
+    "components": {
+     "jablib": 4
+    },
+    "refactorings": []
    }
   },
   {
@@ -1476,7 +1507,7 @@
     "\ud83d\udccd Assigned",
     "component: git"
    ],
-   "updated_at": "2026-09-06T15:35:49Z",
+   "updated_at": "2026-09-06T15:40:29Z",
    "closed_at": "2026-09-06T15:26:43Z",
    "state_reason": "completed",
    "merged_at": null,
@@ -1866,19 +1897,24 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16879",
+   "id": "https://github.com/JabRef/jabref/pull/16845",
    "repo": "JabRef/jabref",
-   "number": 16879,
-   "title": "fix(ai): keep group chat window after library edits",
-   "url": "https://github.com/JabRef/jabref/pull/16879",
+   "number": 16845,
+   "title": "Select newly added entry",
+   "url": "https://github.com/JabRef/jabref/pull/16845",
    "type": "pr",
    "draft": false,
-   "author": "InAnYan",
+   "author": "pluto-han",
    "assignees": [],
    "labels": [
-    "status: changes-required"
+    "component: import-load",
+    "component: external-files",
+    "component: maintable",
+    "good first issue",
+    "status: changes-required",
+    "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T15:34:50Z",
+   "updated_at": "2026-09-06T15:46:56Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1910,7 +1946,6 @@
     "component: external-files",
     "component: maintable",
     "component: entry-editor",
-    "status: changes-required",
     "component: automatic-field-editor",
     "component: external-changes",
     "component: welcome-tab",
@@ -1920,7 +1955,7 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T15:33:17Z",
+   "updated_at": "2026-09-06T15:43:09Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1928,21 +1963,19 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16880",
+   "id": "https://github.com/JabRef/jabref/pull/16879",
    "repo": "JabRef/jabref",
-   "number": 16880,
-   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
-   "url": "https://github.com/JabRef/jabref/pull/16880",
+   "number": 16879,
+   "title": "fix(ai): keep group chat window after library edits",
+   "url": "https://github.com/JabRef/jabref/pull/16879",
    "type": "pr",
    "draft": false,
-   "author": "Stewori",
+   "author": "InAnYan",
    "assignees": [],
    "labels": [
-    "status: changes-required",
-    "component: ai",
-    "status: to-be-merged"
+    "status: changes-required"
    ],
-   "updated_at": "2026-09-06T15:32:39Z",
+   "updated_at": "2026-09-06T15:34:50Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2321,31 +2354,6 @@
     "component: export-or-save"
    ],
    "updated_at": "2026-09-06T04:29:58Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16845",
-   "repo": "JabRef/jabref",
-   "number": 16845,
-   "title": "Select newly added entry",
-   "url": "https://github.com/JabRef/jabref/pull/16845",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: import-load",
-    "component: external-files",
-    "component: maintable",
-    "good first issue",
-    "status: changes-required",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-06T03:43:02Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4306,6 +4314,50 @@
  ],
  "events": [
   {
+   "id": "14522644008",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:46:57Z",
+   "summary": "reviewed PR #16845 (approved)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125841269",
+   "excerpt": "I think just checking the propertty would be sufficient?",
+   "review_id": 5125841269,
+   "self": false
+  },
+  {
+   "id": "14522639414",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:46:46Z",
+   "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3944462303",
+   "excerpt": "I think just checking the propertty would be sufficient?",
+   "review_id": 5125841269,
+   "self": false
+  },
+  {
+   "id": "14522566790",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Stewori",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:44:04Z",
+   "summary": "merged PR #16880",
+   "number": 16880,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16880",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14522425385",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -4389,7 +4441,7 @@
    "number": 16704,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5560227150",
-   "excerpt": "This no longer happens in current main.",
+   "excerpt": "This no longer happens in current main, potentially post https://github.com/JabRef/jabref/pull/16722.",
    "review_id": null
   },
   {
@@ -7187,51 +7239,53 @@
    "url": "https://github.com/JabRef/jabref/issues/16330",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14517043169",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:19:53Z",
-   "summary": "merged PR #16853",
-   "number": 16853,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16853",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14517032103",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:19:26Z",
-   "summary": "commented on #16548: Rework Citations Tab UI",
-   "number": 16548,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16548#issuecomment-5559166068",
-   "excerpt": "Go ahead",
-   "review_id": null
-  },
-  {
-   "id": "20238632889",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:18:39Z",
-   "summary": "pushed 0 commit(s) to fix-sync",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14522644008",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:46:57Z",
+   "summary": "reviewed PR #16845 (approved)",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#pullrequestreview-5125841269",
+   "excerpt": "I think just checking the propertty would be sufficient?",
+   "review_id": 5125841269,
+   "self": false
+  },
+  {
+   "id": "14522639414",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:46:46Z",
+   "summary": "commented on PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16845#discussion_r3944462303",
+   "excerpt": "I think just checking the propertty would be sufficient?",
+   "review_id": 5125841269,
+   "self": false
+  },
+  {
+   "id": "14522566790",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Stewori",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:44:04Z",
+   "summary": "merged PR #16880",
+   "number": 16880,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16880",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14522425385",
    "type": "PullRequestReviewEvent",
@@ -7316,7 +7370,7 @@
    "number": 16704,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5560227150",
-   "excerpt": "This no longer happens in current main.",
+   "excerpt": "This no longer happens in current main, potentially post https://github.com/JabRef/jabref/pull/16722.",
    "review_id": null
   },
   {
@@ -20989,13 +21043,13 @@
   "JabRef/jabref#16880": "Stewori"
  },
  "stats": {
-  "additions": 3574,
-  "deletions": 1502,
-  "changed_files": 341,
+  "additions": 3576,
+  "deletions": 1504,
+  "changed_files": 342,
   "components": {
    "(root)": 46,
    "jabgui": 2964,
-   "jablib": 1497,
+   "jablib": 1501,
    "docs": 202,
    "latex-conv": 1,
    ".github": 25,
@@ -21014,10 +21068,10 @@
  "leaderboard": [
   {
    "login": "InAnYan",
-   "points": 209,
+   "points": 212,
    "merged": 1,
-   "reviews": 51,
-   "other": 104
+   "reviews": 52,
+   "other": 105
   },
   {
    "login": "subhramit",
@@ -21063,8 +21117,8 @@
   },
   {
    "login": "Stewori",
-   "points": 9,
-   "merged": 2,
+   "points": 12,
+   "merged": 3,
    "reviews": 1,
    "other": 1
   },
