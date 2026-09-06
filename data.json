@@ -42,8 +42,8 @@
   }
  ],
  "ai_models": {
+  "Claude Opus 5": 5,
   "Claude Fable 5": 4,
-  "Claude Opus 5": 4,
   "Claude Fable 5.1": 4
  },
  "milestones": [
@@ -52,8 +52,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 4,
-   "closed": 122,
+   "open": 3,
+   "closed": 123,
    "baseline": 113
   },
   {
@@ -77,17 +77,17 @@
  ],
  "focus": {
   "label": "project: jabcon",
-  "open": 8,
-  "closed": 7,
+  "open": 7,
+  "closed": 8,
   "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
  },
  "private_activity": {
   "JabRef/jabref-issue-melting-pot": {
-   "opened": 3,
+   "opened": 4,
    "closed": 3,
    "comments": 1,
    "by": {
-    "koppor": 1,
+    "koppor": 2,
     "Maran23": 0,
     "InAnYan": 1,
     "pluto-han": 0,
@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T19:04:32+00:00",
+ "generated_at": "2026-09-06T19:15:53+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -142,6 +142,31 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/issues/16035",
+   "repo": "JabRef/jabref",
+   "number": 16035,
+   "title": "Select and focus newly added entry",
+   "url": "https://github.com/JabRef/jabref/issues/16035",
+   "type": "issue",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "good first issue",
+    "project: jabcon",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-06T19:09:08Z",
+   "closed_at": "2026-09-06T19:08:02Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": true
+  },
   {
    "id": "https://github.com/JabRef/jabref/pull/16870",
    "repo": "JabRef/jabref",
@@ -480,6 +505,93 @@
      [
       2,
       "immutable collection literals"
+     ]
+    ],
+    "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16872",
+   "repo": "JabRef/jabref",
+   "number": 16872,
+   "title": "Pin issue only when the PR author is the assignee",
+   "url": "https://github.com/JabRef/jabref/pull/16872",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "dev: ci-cd"
+   ],
+   "updated_at": "2026-09-06T19:09:36Z",
+   "closed_at": "2026-09-06T19:09:29Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T19:09:29Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 103,
+    "deletions": 26,
+    "changed_files": 2,
+    "components": {
+     ".github": 124,
+     "docs": 5
+    },
+    "refactorings": [],
+    "ai": [
+     "Claude Opus 5"
+    ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16845",
+   "repo": "JabRef/jabref",
+   "number": 16845,
+   "title": "Select newly added entry",
+   "url": "https://github.com/JabRef/jabref/pull/16845",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: import-load",
+    "component: external-files",
+    "component: maintable",
+    "good first issue",
+    "component: diff-merge",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T19:08:14Z",
+   "closed_at": "2026-09-06T19:08:01Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T19:08:01Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 165,
+    "deletions": 50,
+    "changed_files": 11,
+    "components": {
+     "(root)": 1,
+     "jabgui": 214
+    },
+    "refactorings": [
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "streams"
+     ],
+     [
+      2,
+      "immutable collection literals"
+     ],
+     [
+      2,
+      "Optional"
      ]
     ],
     "ai": []
@@ -2187,24 +2299,19 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16845",
+   "id": "https://github.com/JabRef/jabref/pull/16875",
    "repo": "JabRef/jabref",
-   "number": 16845,
-   "title": "Select newly added entry",
-   "url": "https://github.com/JabRef/jabref/pull/16845",
+   "number": 16875,
+   "title": "Require SHA-pinned GitHub Actions in AGENTS.md",
+   "url": "https://github.com/JabRef/jabref/pull/16875",
    "type": "pr",
    "draft": false,
-   "author": "pluto-han",
+   "author": "koppor",
    "assignees": [],
    "labels": [
-    "component: import-load",
-    "component: external-files",
-    "component: maintable",
-    "good first issue",
-    "component: diff-merge",
-    "status: to-be-merged"
+    "status: ready-for-review"
    ],
-   "updated_at": "2026-09-06T18:59:38Z",
+   "updated_at": "2026-09-06T19:15:50Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2227,12 +2334,32 @@
     "project: jabcon",
     "component: git"
    ],
-   "updated_at": "2026-09-06T18:58:12Z",
+   "updated_at": "2026-09-06T19:14:48Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16879",
+   "repo": "JabRef/jabref",
+   "number": 16879,
+   "title": "fix(ai): keep group chat window after library edits",
+   "url": "https://github.com/JabRef/jabref/pull/16879",
+   "type": "pr",
+   "draft": false,
+   "author": "InAnYan",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-06T19:14:41Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
   },
   {
    "id": "https://github.com/JabRef/jabref/pull/16857",
@@ -2247,6 +2374,7 @@
    "labels": [
     "component: ui",
     "component: cleanup-ops",
+    "status: ready-for-review",
     "component: libre-office",
     "dev: code-quality",
     "component: search",
@@ -2268,12 +2396,34 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T18:56:23Z",
+   "updated_at": "2026-09-06T19:11:28Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
    "column": "progress",
    "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16791",
+   "repo": "JabRef/jabref",
+   "number": 16791,
+   "title": "Ship JEP 514 AOT cache in jabkit app image",
+   "url": "https://github.com/JabRef/jabref/pull/16791",
+   "type": "pr",
+   "draft": true,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: devcall",
+    "component: jabkit",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-06T19:10:32Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": true
   },
   {
    "id": "https://github.com/NixOS/nixpkgs/pull/546687",
@@ -2338,26 +2488,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16879",
-   "repo": "JabRef/jabref",
-   "number": 16879,
-   "title": "fix(ai): keep group chat window after library edits",
-   "url": "https://github.com/JabRef/jabref/pull/16879",
-   "type": "pr",
-   "draft": false,
-   "author": "InAnYan",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T15:34:50Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/openjdk/jfx/pull/2297",
    "repo": "openjdk/jfx",
    "number": 2297,
@@ -2391,26 +2521,6 @@
     "status:ready-for-review"
    ],
    "updated_at": "2026-09-06T15:12:25Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16872",
-   "repo": "JabRef/jabref",
-   "number": 16872,
-   "title": "Pin issue only when the PR author is the assignee",
-   "url": "https://github.com/JabRef/jabref/pull/16872",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-06T15:06:23Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2464,26 +2574,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T14:35:33Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16875",
-   "repo": "JabRef/jabref",
-   "number": 16875,
-   "title": "Require SHA-pinned GitHub Actions in AGENTS.md",
-   "url": "https://github.com/JabRef/jabref/pull/16875",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review"
-   ],
-   "updated_at": "2026-09-06T14:15:22Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2758,28 +2848,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16791",
-   "repo": "JabRef/jabref",
-   "number": 16791,
-   "title": "Ship JEP 514 AOT cache in jabkit app image",
-   "url": "https://github.com/JabRef/jabref/pull/16791",
-   "type": "pr",
-   "draft": true,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: devcall",
-    "component: jabkit",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-09-05T11:11:09Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
-  },
-  {
    "id": "https://github.com/openjdk/jfx/pull/2295",
    "repo": "openjdk/jfx",
    "number": 2295,
@@ -3002,38 +3070,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16651",
-   "repo": "JabRef/jabref",
-   "number": 16651,
-   "title": "Add auto-commit, push & pull features for Git",
-   "url": "https://github.com/JabRef/jabref/pull/16651",
-   "type": "pr",
-   "draft": false,
-   "author": "LoayTarek5",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "status: ready-for-review",
-    "component: libre-office",
-    "component: import-load",
-    "component: export-or-save",
-    "component: preferences",
-    "component: shared-database",
-    "component: slr",
-    "good second issue",
-    "component: welcome-tab",
-    "component: git",
-    "component: welcome-walkthrough",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T19:01:16Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16849",
    "repo": "JabRef/jabref",
    "number": 16849,
@@ -3048,7 +3084,38 @@
     "component: fetcher",
     "first contrib"
    ],
-   "updated_at": "2026-09-06T15:26:23Z",
+   "updated_at": "2026-09-06T19:13:19Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16651",
+   "repo": "JabRef/jabref",
+   "number": 16651,
+   "title": "Add auto-commit, push & pull features for Git",
+   "url": "https://github.com/JabRef/jabref/pull/16651",
+   "type": "pr",
+   "draft": false,
+   "author": "LoayTarek5",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: libre-office",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "component: shared-database",
+    "component: slr",
+    "good second issue",
+    "component: welcome-tab",
+    "component: git",
+    "component: welcome-walkthrough",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T19:10:02Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3338,31 +3405,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16035",
-   "repo": "JabRef/jabref",
-   "number": 16035,
-   "title": "Select and focus newly added entry",
-   "url": "https://github.com/JabRef/jabref/issues/16035",
-   "type": "issue",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [
-    "pluto-han"
-   ],
-   "labels": [
-    "good first issue",
-    "project: jabcon",
-    "\ud83d\udccd Assigned",
-    "\ud83d\udccc Pinned"
-   ],
-   "updated_at": "2026-09-06T18:44:39Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": true
   },
   {
    "id": "https://github.com/JabRef/jabref/issues/12468",
@@ -4560,6 +4602,222 @@
   }
  ],
  "events": [
+  {
+   "id": "14528272020",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:15:50Z",
+   "summary": "commented on #16875: Require SHA-pinned GitHub Actions in AGENTS.md",
+   "number": 16875,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16875#issuecomment-5561527728",
+   "excerpt": "a skill makes sense indeed.",
+   "review_id": null
+  },
+  {
+   "id": "14528264652",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:15:35Z",
+   "summary": "reviewed PR #16875 (approved)",
+   "number": 16875,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16875#pullrequestreview-5126333900",
+   "excerpt": "",
+   "review_id": 5126333900,
+   "self": false
+  },
+  {
+   "id": "14528244404",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:14:50Z",
+   "summary": "reviewed PR #16882 (commented)",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16882#pullrequestreview-5126332238",
+   "excerpt": "nesting ternary operations is not a good idea for readability. I would recommend a normal if-else",
+   "review_id": 5126332238,
+   "self": false
+  },
+  {
+   "id": "14528243910",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:14:48Z",
+   "summary": "commented on PR #16882",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16882#discussion_r3944983823",
+   "excerpt": "nesting ternary operations is not a good idea for readability. I would recommend a normal if-else",
+   "review_id": 5126332238,
+   "self": false
+  },
+  {
+   "id": "14528241092",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:14:41Z",
+   "summary": "commented on #16879: fix(ai): keep group chat window after library edits",
+   "number": 16879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16879#issuecomment-5561520750",
+   "excerpt": "This is strange, isn't it? I filed https://github.com/JabRef/jabref-issue-melting-pot/issues/1359",
+   "review_id": null
+  },
+  {
+   "id": "14528205415",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:13:21Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5126329064",
+   "excerpt": "The implementation tags should be placed close to the code that it is related to. It's not related to the whole method, but rather to this\u2026",
+   "review_id": 5126329064,
+   "self": false
+  },
+  {
+   "id": "14528204577",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:13:19Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3944980241",
+   "excerpt": "The implementation tags should be placed close to the code that it is related to. It's not related to the whole method, but rather to this\u2026",
+   "review_id": 5126329064,
+   "self": false
+  },
+  {
+   "id": "14528131633",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:10:36Z",
+   "summary": "commented on #16878: Drop stray org.jetbrains.annotations use from jablib",
+   "number": 16878,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16878#issuecomment-5561495736",
+   "excerpt": "Supersed by https://github.com/JabRef/jabref/pull/16880",
+   "review_id": null
+  },
+  {
+   "id": "14528104115",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:09:31Z",
+   "summary": "labeled PR #16872",
+   "number": 16872,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16872",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20266105580",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:09:30Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14528102306",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:09:29Z",
+   "summary": "merged PR #16872",
+   "number": 16872,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16872",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20266013702",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T19:08:03Z",
+   "summary": "deleted branch select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14528062345",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:08:03Z",
+   "summary": "closed issue #16035: Select and focus newly added entry",
+   "number": 16035,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16035",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14528062369",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:08:01Z",
+   "summary": "merged PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16845",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14527980238",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:05:06Z",
+   "summary": "reviewed PR #16857 (approved)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5126310702",
+   "excerpt": "",
+   "review_id": 5126310702,
+   "self": false
+  },
   {
    "id": "14527973779",
    "type": "IssueCommentEvent",
@@ -7249,45 +7507,148 @@
    "excerpt": "Fixed: the group is repository-wide (link-issue-ensure-assignment), not per pull request, precisely because the secret is one ledger. A que\u2026",
    "review_id": 5125544162,
    "self": true
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14519773744",
-   "type": "PullRequestReviewCommentEvent",
+   "id": "14528272020",
+   "type": "IssueCommentEvent",
    "action": "created",
-   "actor": "koppor",
+   "actor": "Maran23",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:57Z",
-   "summary": "commented on PR #16872",
-   "number": 16872,
+   "created_at": "2026-09-06T19:15:50Z",
+   "summary": "commented on #16875: Require SHA-pinned GitHub Actions in AGENTS.md",
+   "number": 16875,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#discussion_r3944172273",
-   "excerpt": "Fixed: the job has a concurrency group with cancel-in-progress: false.",
-   "review_id": 5125544103,
-   "self": true
+   "url": "https://github.com/JabRef/jabref/pull/16875#issuecomment-5561527728",
+   "excerpt": "a skill makes sense indeed.",
+   "review_id": null
   },
   {
-   "id": "14519773717",
+   "id": "14528264652",
    "type": "PullRequestReviewEvent",
    "action": "created",
-   "actor": "koppor",
+   "actor": "Maran23",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:57Z",
-   "summary": "reviewed PR #16872 (commented)",
-   "number": 16872,
+   "created_at": "2026-09-06T19:15:35Z",
+   "summary": "reviewed PR #16875 (approved)",
+   "number": 16875,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#pullrequestreview-5125544103",
-   "excerpt": "Fixed: the job has a concurrency group with cancel-in-progress: false.",
-   "review_id": 5125544103,
-   "self": true
+   "url": "https://github.com/JabRef/jabref/pull/16875#pullrequestreview-5126333900",
+   "excerpt": "",
+   "review_id": 5126333900,
+   "self": false
   },
   {
-   "id": "20245764772",
+   "id": "14528244404",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:14:50Z",
+   "summary": "reviewed PR #16882 (commented)",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16882#pullrequestreview-5126332238",
+   "excerpt": "nesting ternary operations is not a good idea for readability. I would recommend a normal if-else",
+   "review_id": 5126332238,
+   "self": false
+  },
+  {
+   "id": "14528243910",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Maran23",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:14:48Z",
+   "summary": "commented on PR #16882",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16882#discussion_r3944983823",
+   "excerpt": "nesting ternary operations is not a good idea for readability. I would recommend a normal if-else",
+   "review_id": 5126332238,
+   "self": false
+  },
+  {
+   "id": "14528241092",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:14:41Z",
+   "summary": "commented on #16879: fix(ai): keep group chat window after library edits",
+   "number": 16879,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16879#issuecomment-5561520750",
+   "excerpt": "This is strange, isn't it? I filed https://github.com/JabRef/jabref-issue-melting-pot/issues/1359",
+   "review_id": null
+  },
+  {
+   "id": "14528205415",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:13:21Z",
+   "summary": "reviewed PR #16849 (commented)",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5126329064",
+   "excerpt": "The implementation tags should be placed close to the code that it is related to. It's not related to the whole method, but rather to this\u2026",
+   "review_id": 5126329064,
+   "self": false
+  },
+  {
+   "id": "14528204577",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:13:19Z",
+   "summary": "commented on PR #16849",
+   "number": 16849,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3944980241",
+   "excerpt": "The implementation tags should be placed close to the code that it is related to. It's not related to the whole method, but rather to this\u2026",
+   "review_id": 5126329064,
+   "self": false
+  },
+  {
+   "id": "14528131633",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:10:36Z",
+   "summary": "commented on #16878: Drop stray org.jetbrains.annotations use from jablib",
+   "number": 16878,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16878#issuecomment-5561495736",
+   "excerpt": "Supersed by https://github.com/JabRef/jabref/pull/16880",
+   "review_id": null
+  },
+  {
+   "id": "14528104115",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:09:31Z",
+   "summary": "labeled PR #16872",
+   "number": 16872,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16872",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20266105580",
    "type": "PushEvent",
    "action": null,
-   "actor": "calixtus",
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:57Z",
-   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
+   "created_at": "2026-09-06T19:09:30Z",
+   "summary": "pushed 0 commit(s) to main",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
@@ -7295,185 +7656,76 @@
    "review_id": null
   },
   {
-   "id": "14519773212",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:56Z",
-   "summary": "reviewed PR #16872 (commented)",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#pullrequestreview-5125544054",
-   "excerpt": "Fixed: the pull request comment and the issue note carry separate markers and are posted independently, and the strike is keyed by pull req\u2026",
-   "review_id": 5125544054,
-   "self": true
-  },
-  {
-   "id": "14519773220",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:55Z",
-   "summary": "commented on PR #16872",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#discussion_r3944172230",
-   "excerpt": "Fixed: the pull request comment and the issue note carry separate markers and are posted independently, and the strike is keyed by pull req\u2026",
-   "review_id": 5125544054,
-   "self": true
-  },
-  {
-   "id": "14519772714",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:55Z",
-   "summary": "reviewed PR #16872 (commented)",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#pullrequestreview-5125544014",
-   "excerpt": "Fixed: the warning step re-reads the assignees and exits without warning or striking when the author is assigned (or the issue unassigned)\u2026",
-   "review_id": 5125544014,
-   "self": true
-  },
-  {
-   "id": "14519772711",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:54Z",
-   "summary": "commented on PR #16872",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#discussion_r3944172197",
-   "excerpt": "Fixed: the warning step re-reads the assignees and exits without warning or striking when the author is assigned (or the issue unassigned)\u2026",
-   "review_id": 5125544014,
-   "self": true
-  },
-  {
-   "id": "14519772276",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:54Z",
-   "summary": "reviewed PR #16872 (commented)",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#pullrequestreview-5125543980",
-   "excerpt": "Fixed: assignment now goes through POST /issues/{n}/assignees, which adds and is idempotent, so a concurrently added assignee is never drop\u2026",
-   "review_id": 5125543980,
-   "self": true
-  },
-  {
-   "id": "14519772285",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:53Z",
-   "summary": "commented on PR #16872",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#discussion_r3944172173",
-   "excerpt": "Fixed: assignment now goes through POST /issues/{n}/assignees, which adds and is idempotent, so a concurrently added assignee is never drop\u2026",
-   "review_id": 5125543980,
-   "self": true
-  },
-  {
-   "id": "14519771805",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:53Z",
-   "summary": "reviewed PR #16872 (commented)",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#pullrequestreview-5125543947",
-   "excerpt": "Added req~ci.link-issue.assignment-check~1 to docs/requirements/ci.md.",
-   "review_id": 5125543947,
-   "self": true
-  },
-  {
-   "id": "14519771794",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:52Z",
-   "summary": "commented on PR #16872",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#discussion_r3944172148",
-   "excerpt": "Added req~ci.link-issue.assignment-check~1 to docs/requirements/ci.md.",
-   "review_id": 5125543947,
-   "self": true
-  },
-  {
-   "id": "14519771185",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:52Z",
-   "summary": "reviewed PR #16872 (commented)",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#pullrequestreview-5125543884",
-   "excerpt": "Fixed: both actions are pinned to their full commit SHAs again (the rewritten job block won the merge with main and reintroduced the tags).",
-   "review_id": 5125543884,
-   "self": true
-  },
-  {
-   "id": "14519771270",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T14:03:51Z",
-   "summary": "commented on PR #16872",
-   "number": 16872,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16872#discussion_r3944172091",
-   "excerpt": "Fixed: both actions are pinned to their full commit SHAs again (the rewritten job block won the merge with main and reintroduced the tags).",
-   "review_id": 5125543884,
-   "self": true
-  },
-  {
-   "id": "20245601808",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "Siedlerchr",
-   "repo": "JabRef/latex-conv",
-   "created_at": "2026-09-06T14:01:33Z",
-   "summary": "pushed 0 commit(s) to main",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/latex-conv",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14519706024",
+   "id": "14528102306",
    "type": "PullRequestEvent",
    "action": "merged",
-   "actor": "Stewori",
-   "repo": "JabRef/latex-conv",
-   "created_at": "2026-09-06T14:01:32Z",
-   "summary": "merged PR #12",
-   "number": 12,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:09:29Z",
+   "summary": "merged PR #16872",
+   "number": 16872,
    "merged": false,
-   "url": "https://github.com/JabRef/latex-conv/issues/12",
+   "url": "https://github.com/JabRef/jabref/issues/16872",
    "excerpt": "",
    "review_id": null
-  }
- ],
- "all_events": [
+  },
+  {
+   "id": "20266013702",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-06T19:08:03Z",
+   "summary": "deleted branch select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14528062345",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:08:03Z",
+   "summary": "closed issue #16035: Select and focus newly added entry",
+   "number": 16035,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16035",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14528062369",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:08:01Z",
+   "summary": "merged PR #16845",
+   "number": 16845,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16845",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14527980238",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T19:05:06Z",
+   "summary": "reviewed PR #16857 (approved)",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#pullrequestreview-5126310702",
+   "excerpt": "",
+   "review_id": 5126310702,
+   "self": false
+  },
   {
    "id": "14527973779",
    "type": "IssueCommentEvent",
@@ -22770,18 +23022,20 @@
   "JabRef/jabref#16708": "Maran23",
   "JabRef/jabref#16872": "koppor",
   "JabRef/jabref#16880": "Stewori",
-  "JabRef/jabref#16877": "koppor"
+  "JabRef/jabref#16877": "koppor",
+  "JabRef/jabref#16875": "koppor",
+  "JabRef/jabref#16882": "subhramit"
  },
  "stats": {
-  "additions": 3985,
-  "deletions": 1691,
-  "changed_files": 359,
+  "additions": 4253,
+  "deletions": 1767,
+  "changed_files": 372,
   "components": {
-   "(root)": 48,
-   "jabgui": 3521,
+   "(root)": 49,
+   "jabgui": 3735,
    "jablib": 1505,
-   "docs": 203,
-   ".github": 57,
+   "docs": 208,
+   ".github": 181,
    "latex-conv": 1,
    "openfasttrace": 31,
    "build-logic": 112,
@@ -22797,18 +23051,18 @@
  },
  "leaderboard": [
   {
+   "login": "InAnYan",
+   "points": 245,
+   "merged": 1,
+   "reviews": 62,
+   "other": 118
+  },
+  {
    "login": "subhramit",
    "points": 245,
    "merged": 4,
    "reviews": 52,
    "other": 129
-  },
-  {
-   "login": "InAnYan",
-   "points": 240,
-   "merged": 1,
-   "reviews": 60,
-   "other": 117
   },
   {
    "login": "Siedlerchr",
@@ -22819,24 +23073,24 @@
   },
   {
    "login": "Maran23",
-   "points": 128,
+   "points": 134,
    "merged": 1,
-   "reviews": 37,
-   "other": 51
+   "reviews": 39,
+   "other": 53
   },
   {
    "login": "koppor",
-   "points": 111,
-   "merged": 11,
+   "points": 118,
+   "merged": 12,
    "reviews": 2,
-   "other": 74
+   "other": 78
   },
   {
    "login": "pluto-han",
-   "points": 60,
-   "merged": 3,
+   "points": 64,
+   "merged": 4,
    "reviews": 8,
-   "other": 35
+   "other": 36
   },
   {
    "login": "calixtus",
