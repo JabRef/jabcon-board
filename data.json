@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T07:54:08+00:00",
+ "generated_at": "2026-09-06T08:04:29+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -208,6 +208,36 @@
       "immutable collection literals"
      ]
     ]
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16867",
+   "repo": "JabRef/jabref",
+   "number": 16867,
+   "title": "New Crowdin updates",
+   "url": "https://github.com/JabRef/jabref/pull/16867",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T07:57:01Z",
+   "closed_at": "2026-09-06T07:57:00Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T07:57:00Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 43,
+    "deletions": 0,
+    "changed_files": 25,
+    "components": {
+     "jablib": 43
+    },
+    "refactorings": []
    }
   },
   {
@@ -1303,27 +1333,6 @@
    "state_reason": "completed",
    "merged_at": null,
    "column": "done",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16867",
-   "repo": "JabRef/jabref",
-   "number": 16867,
-   "title": "New Crowdin updates",
-   "url": "https://github.com/JabRef/jabref/pull/16867",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: changes-required",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T07:45:52Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
    "focus": false
   },
   {
@@ -3761,6 +3770,34 @@
   }
  ],
  "events": [
+  {
+   "id": "20222150413",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T07:57:01Z",
+   "summary": "deleted branch l10n_main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14510855134",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T07:57:00Z",
+   "summary": "merged PR #16867",
+   "number": 16867,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16867",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14510739497",
    "type": "IssuesEvent",
@@ -6631,37 +6668,37 @@
    "excerpt": "",
    "review_id": 5120828619,
    "self": true
-  },
-  {
-   "id": "20128961272",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "InAnYan",
-   "repo": "InAnYan/jabref",
-   "created_at": "2026-09-05T10:21:40Z",
-   "summary": "pushed 0 commit(s) to fix/devdocs-ai-requirements-tree",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/InAnYan/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14479908417",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:19:37Z",
-   "summary": "opened PR #16860",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16860",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "20222150413",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T07:57:01Z",
+   "summary": "deleted branch l10n_main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14510855134",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T07:57:00Z",
+   "summary": "merged PR #16867",
+   "number": 16867,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16867",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14510739497",
    "type": "IssuesEvent",
@@ -16012,11 +16049,11 @@
   "JabRef/jabref#16864": "ZiadAbdElFatah"
  },
  "stats": {
-  "additions": 2315,
+  "additions": 2358,
   "deletions": 396,
-  "changed_files": 185,
+  "changed_files": 210,
   "components": {
-   "jablib": 941,
+   "jablib": 984,
    "docs": 150,
    "(root)": 40,
    "jabgui": 1218,
@@ -16055,18 +16092,18 @@
    "other": 43
   },
   {
+   "login": "Siedlerchr",
+   "points": 93,
+   "merged": 2,
+   "reviews": 22,
+   "other": 43
+  },
+  {
    "login": "koppor",
    "points": 90,
    "merged": 8,
    "reviews": 2,
    "other": 62
-  },
-  {
-   "login": "Siedlerchr",
-   "points": 90,
-   "merged": 1,
-   "reviews": 22,
-   "other": 43
   },
   {
    "login": "pluto-han",
