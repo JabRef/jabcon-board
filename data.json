@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T12:48:46+00:00",
+ "generated_at": "2026-09-06T12:55:41+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1502,6 +1502,85 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16850",
+   "repo": "JabRef/jabref",
+   "number": 16850,
+   "title": "Migrate JavaFX tests from TestFX",
+   "url": "https://github.com/JabRef/jabref/pull/16850",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [
+    "Maran23"
+   ],
+   "labels": [
+    "component: internationalization",
+    "status: ready-for-review",
+    "component: search",
+    "component: groups",
+    "component: export-or-save",
+    "component: preferences",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "component: keybinding",
+    "component: automatic-field-editor",
+    "component: theming",
+    "component: jabsrv",
+    "component: diff-merge",
+    "component: lsp"
+   ],
+   "updated_at": "2026-09-06T12:54:27Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16871",
+   "repo": "JabRef/jabref",
+   "number": 16871,
+   "title": "add subset search",
+   "url": "https://github.com/JabRef/jabref/pull/16871",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "good first issue"
+   ],
+   "updated_at": "2026-09-06T12:51:51Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16870",
+   "repo": "JabRef/jabref",
+   "number": 16870,
+   "title": "Add infer style button",
+   "url": "https://github.com/JabRef/jabref/pull/16870",
+   "type": "pr",
+   "draft": false,
+   "author": "pluto-han",
+   "assignees": [],
+   "labels": [
+    "component: libre-office",
+    "component: preferences",
+    "good second issue"
+   ],
+   "updated_at": "2026-09-06T12:50:28Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/11879",
    "repo": "JabRef/jabref",
    "number": 11879,
@@ -1532,28 +1611,6 @@
     "component: lsp"
    ],
    "updated_at": "2026-09-06T12:48:39Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16870",
-   "repo": "JabRef/jabref",
-   "number": 16870,
-   "title": "Add infer style button",
-   "url": "https://github.com/JabRef/jabref/pull/16870",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "component: preferences",
-    "good second issue"
-   ],
-   "updated_at": "2026-09-06T12:48:30Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1643,64 +1700,6 @@
     "status: ready-for-review"
    ],
    "updated_at": "2026-09-06T12:44:29Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16871",
-   "repo": "JabRef/jabref",
-   "number": 16871,
-   "title": "add subset search",
-   "url": "https://github.com/JabRef/jabref/pull/16871",
-   "type": "pr",
-   "draft": false,
-   "author": "pluto-han",
-   "assignees": [],
-   "labels": [
-    "component: libre-office",
-    "good first issue",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T12:39:07Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16850",
-   "repo": "JabRef/jabref",
-   "number": 16850,
-   "title": "Migrate JavaFX tests from TestFX",
-   "url": "https://github.com/JabRef/jabref/pull/16850",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [
-    "Maran23"
-   ],
-   "labels": [
-    "component: internationalization",
-    "status: ready-for-review",
-    "component: search",
-    "component: groups",
-    "component: export-or-save",
-    "component: preferences",
-    "component: external-files",
-    "component: maintable",
-    "component: entry-editor",
-    "component: keybinding",
-    "component: automatic-field-editor",
-    "component: theming",
-    "component: jabsrv",
-    "component: diff-merge",
-    "component: lsp"
-   ],
-   "updated_at": "2026-09-06T12:37:41Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2318,7 +2317,7 @@
    "labels": [
     "status: changes-required"
    ],
-   "updated_at": "2026-09-06T12:47:12Z",
+   "updated_at": "2026-09-06T12:52:07Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3980,6 +3979,65 @@
   }
  ],
  "events": [
+  {
+   "id": "14517920478",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:54:33Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5559350668",
+   "excerpt": "Another is to actually use the git feature and the user has to take a deliberate decision, so it will hit a subgroup of a subgroup of users\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14517834443",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:51:20Z",
+   "summary": "reviewed PR #16864 (changes_requested)",
+   "number": 16864,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16864#pullrequestreview-5125351519",
+   "excerpt": "Qodo comment 1 still relevant?",
+   "review_id": 5125351519,
+   "self": false
+  },
+  {
+   "id": "14517813403",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:50:29Z",
+   "summary": "reviewed PR #16870 (commented)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125349754",
+   "excerpt": "this \"preference\" is not JabRef's preference, but the user-defined-preference stored in meta.xml in .odt file.",
+   "review_id": 5125349754,
+   "self": true
+  },
+  {
+   "id": "14517812730",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:50:28Z",
+   "summary": "commented on PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943980463",
+   "excerpt": "this \"preference\" is not JabRef's preference, but the user-defined-preference stored in meta.xml in .odt file.",
+   "review_id": 5125349754,
+   "self": true
+  },
   {
    "id": "14517764025",
    "type": "PullRequestReviewEvent",
@@ -6822,66 +6880,68 @@
    "excerpt": "Good eye. I kept this one",
    "review_id": 5122170374,
    "self": true
-  },
-  {
-   "id": "20157867874",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-05T17:10:53Z",
-   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14487454929",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T15:16:43Z",
-   "summary": "commented on #16352: (Idea) Move Open Office Preferences to a dedicated Preference tab",
-   "number": 16352,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16352#issuecomment-5552754751",
-   "excerpt": "Please open a new issue - rework Open Office panel UI",
-   "review_id": null
-  },
-  {
-   "id": "14486817857",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T14:53:55Z",
-   "summary": "reviewed PR #16846 (approved)",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#pullrequestreview-5121693365",
-   "excerpt": "",
-   "review_id": 5121693365,
-   "self": false
-  },
-  {
-   "id": "14485908430",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T14:19:50Z",
-   "summary": "commented on #16846: Remove hardcoded styling",
-   "number": 16846,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16846#issuecomment-5552425947",
-   "excerpt": "@ZiadAbdElFatah  you can only add new abbreviations to a a new custom list, not the jabref bulitin list",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14517920478",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "ThiloteE",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:54:33Z",
+   "summary": "commented on #16704: Show \"Nothing to commit\" if there is nothing to commit",
+   "number": 16704,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16704#issuecomment-5559350668",
+   "excerpt": "Another is to actually use the git feature and the user has to take a deliberate decision, so it will hit a subgroup of a subgroup of users\u2026",
+   "review_id": null
+  },
+  {
+   "id": "14517834443",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:51:20Z",
+   "summary": "reviewed PR #16864 (changes_requested)",
+   "number": 16864,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16864#pullrequestreview-5125351519",
+   "excerpt": "Qodo comment 1 still relevant?",
+   "review_id": 5125351519,
+   "self": false
+  },
+  {
+   "id": "14517813403",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:50:29Z",
+   "summary": "reviewed PR #16870 (commented)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125349754",
+   "excerpt": "this \"preference\" is not JabRef's preference, but the user-defined-preference stored in meta.xml in .odt file.",
+   "review_id": 5125349754,
+   "self": true
+  },
+  {
+   "id": "14517812730",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T12:50:28Z",
+   "summary": "commented on PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943980463",
+   "excerpt": "this \"preference\" is not JabRef's preference, but the user-defined-preference stored in meta.xml in .odt file.",
+   "review_id": 5125349754,
+   "self": true
+  },
   {
    "id": "14517764025",
    "type": "PullRequestReviewEvent",
@@ -18460,9 +18520,9 @@
   },
   {
    "login": "InAnYan",
-   "points": 161,
+   "points": 163,
    "merged": 1,
-   "reviews": 41,
+   "reviews": 42,
    "other": 76
   },
   {
@@ -18502,10 +18562,10 @@
   },
   {
    "login": "ThiloteE",
-   "points": 6,
+   "points": 7,
    "merged": 0,
    "reviews": 0,
-   "other": 6
+   "other": 7
   },
   {
    "login": "Stewori",
