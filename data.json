@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T17:38:37+00:00",
+ "generated_at": "2026-09-06T17:45:39+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2166,6 +2166,32 @@
    "state_reason": "completed",
    "merged_at": null,
    "column": "done",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/NixOS/nixpkgs/pull/546687",
+   "repo": "NixOS/nixpkgs",
+   "number": 546687,
+   "title": "authpass: init at 1.9.12-unstable-2026-07-27",
+   "url": "https://github.com/NixOS/nixpkgs/pull/546687",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "8.has: documentation",
+    "8.has: package (new)",
+    "2.status: merge conflict",
+    "10.rebuild-linux: 1-10",
+    "10.rebuild-darwin: 1-10",
+    "10.rebuild-darwin: 1",
+    "llm-assisted"
+   ],
+   "updated_at": "2026-09-06T17:40:56Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
    "focus": false
   },
   {
