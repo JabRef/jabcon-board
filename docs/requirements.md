@@ -125,7 +125,7 @@ Needs: impl
 
 Merged PR (as author) 3 points, review 2, comment / issue / push / PR opened or labeled 1. On a JabCon item (focus label or configured
 milestone) each counts tenfold; elsewhere the configured `repo_factors` apply, keyed by repo or org (anything in the
-JabRef org and upstream JavaFX work count fivefold).
+JabRef org and upstream JavaFX work count fivefold and sixfold).
 The ticker shows the same points per event as the leaderboard sums.
 
 Needs: impl
