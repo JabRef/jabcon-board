@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T07:39:23+00:00",
+ "generated_at": "2026-09-06T07:47:10+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1315,8 +1315,11 @@
    "draft": false,
    "author": "Siedlerchr",
    "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-06T07:31:47Z",
+   "labels": [
+    "status: changes-required",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T07:45:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3758,6 +3761,20 @@
   }
  ],
  "events": [
+  {
+   "id": "14510624489",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "Siedlerchr",
+   "repo": "TGRRRR/heading-outliner",
+   "created_at": "2026-09-06T07:46:39Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/TGRRRR/heading-outliner",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14510199463",
    "type": "PullRequestEvent",
@@ -6643,24 +6660,23 @@
    "excerpt": "",
    "review_id": 5120828619,
    "self": false
-  },
-  {
-   "id": "14479846788",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:16:58Z",
-   "summary": "reviewed PR #16849 (changes_requested)",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120713792",
-   "excerpt": "Okay, nice! I left some comments.",
-   "review_id": 5120713792,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "14510624489",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "Siedlerchr",
+   "repo": "TGRRRR/heading-outliner",
+   "created_at": "2026-09-06T07:46:39Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/TGRRRR/heading-outliner",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14510199463",
    "type": "PullRequestEvent",
