@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T05:38:11+00:00",
+ "generated_at": "2026-09-06T05:45:07+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1306,6 +1306,26 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
+   "repo": "JabRef/JabRef-Browser-Extension-experimental",
+   "number": 88,
+   "title": "chore(experimental): release 3.3.0",
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "autorelease: pending"
+   ],
+   "updated_at": "2026-09-06T05:42:30Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/11879",
    "repo": "JabRef/jabref",
    "number": 11879,
@@ -1334,26 +1354,6 @@
     "component: jabsrv"
    ],
    "updated_at": "2026-09-06T04:34:56Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
-   "repo": "JabRef/JabRef-Browser-Extension-experimental",
-   "number": 88,
-   "title": "chore(experimental): release 3.3.0",
-   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental/pull/88",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "autorelease: pending"
-   ],
-   "updated_at": "2026-09-06T04:34:29Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3740,6 +3740,48 @@
   }
  ],
  "events": [
+  {
+   "id": "20214068246",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/JabRef-Browser-Extension-experimental",
+   "created_at": "2026-09-06T05:42:29Z",
+   "summary": "pushed 0 commit(s) to release-please--branches--experimental--components--jabrefbrowserextension",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20214166471",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/JabRef-Browser-Extension-experimental",
+   "created_at": "2026-09-06T05:42:14Z",
+   "summary": "pushed 0 commit(s) to release-please--branches--experimental--components--jabrefbrowserextension",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20213844673",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref-koppor",
+   "created_at": "2026-09-06T05:39:02Z",
+   "summary": "pushed 0 commit(s) to experimental",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref-koppor",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20209756087",
    "type": "PushEvent",
@@ -6605,53 +6647,51 @@
    "excerpt": "I think this is already tested above?",
    "review_id": 5120713792,
    "self": false
-  },
-  {
-   "id": "14479669657",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:09:08Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940243331",
-   "excerpt": "What is this? I don't understand the meaning of this line",
-   "review_id": 5120713792,
-   "self": false
-  },
-  {
-   "id": "14479635689",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:07:32Z",
-   "summary": "commented on #16826: Register the autosave manager for library changes again",
-   "number": 16826,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16826#issuecomment-5551074642",
-   "excerpt": "On this branch",
-   "review_id": null
-  },
-  {
-   "id": "14479611119",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:06:31Z",
-   "summary": "commented on PR #16849",
-   "number": 16849,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16849#discussion_r3940237189",
-   "excerpt": "No need, it's automatically added in the URLDownload",
-   "review_id": 5120713792,
-   "self": false
   }
  ],
  "all_events": [
+  {
+   "id": "20214068246",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/JabRef-Browser-Extension-experimental",
+   "created_at": "2026-09-06T05:42:29Z",
+   "summary": "pushed 0 commit(s) to release-please--branches--experimental--components--jabrefbrowserextension",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20214166471",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/JabRef-Browser-Extension-experimental",
+   "created_at": "2026-09-06T05:42:14Z",
+   "summary": "pushed 0 commit(s) to release-please--branches--experimental--components--jabrefbrowserextension",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/JabRef-Browser-Extension-experimental",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20213844673",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref-koppor",
+   "created_at": "2026-09-06T05:39:02Z",
+   "summary": "pushed 0 commit(s) to experimental",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref-koppor",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20209756087",
    "type": "PushEvent",
@@ -15780,10 +15820,10 @@
   },
   {
    "login": "koppor",
-   "points": 87,
+   "points": 90,
    "merged": 8,
    "reviews": 2,
-   "other": 59
+   "other": 62
   },
   {
    "login": "Siedlerchr",
