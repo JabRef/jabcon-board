@@ -19,7 +19,7 @@
 </header>
 <!-- [impl->req~heading-tooltips~1] -->
 <main>
-  <section class="column" id="backlog"><h2 title="What is waiting to be picked up: open items with the JabCon focus label, open PRs marked ready-for-review, and anything open assigned to a participant.&#10;Why: this is where you look for your next task.">Backlog <span class="count"></span></h2><div class="more above"></div><div class="cards"></div><div class="more below"></div></section>
+  <section class="column" id="backlog"><h2 title="What is waiting to be picked up: open items with the JabCon focus label or in one of the JabCon milestones.&#10;Why: this is where you look for your next task.">Backlog <span class="count"></span></h2><div class="more above"></div><div class="cards"></div><div class="more below"></div></section>
   <section class="column" id="progress"><h2 title="What is being worked on right now: open PRs authored or reviewed by a participant and touched since JabCon started.&#10;Why: it shows who is busy with what, and which PRs are waiting for a review.">In progress <span class="count"></span></h2><div class="more above"></div><div class="cards"></div><div class="more below"></div></section>
   <section class="column" id="done"><h2 title="What landed during JabCon: PRs merged or closed and issues closed since the start (earlier work does not count).&#10;Why: the visible result of the event — every card here is a finished piece of work.">Done <span class="count"></span></h2><div class="more above"></div><div class="cards"></div><div class="more below"></div></section>
   <section id="stats">
@@ -28,7 +28,7 @@
     <div id="leaderboard"></div>
   </section>
   <section id="activity">
-    <h2 title="The newest GitHub events of the participants — pushes, comments, reviews, opened and closed items — with the points they scored.&#10;Why: the live pulse of JabCon; the gource video below replays the same history as a visualisation.">Latest activity</h2>
+    <h2 title="The newest GitHub events of the participants — pushes, comments, reviews, opened and closed items — with the points they scored. Events on JabCon items (focus label or milestone) come first and score tenfold; everything else follows below the divider.&#10;Why: the live pulse of JabCon; the gource video below replays the same history as a visualisation.">Latest activity</h2>
     <ul id="ticker"></ul>
     <video id="gource" autoplay muted loop playsinline></video>
   <div id="gource-missing">gource video not rendered yet<br><a href="https://files.jabref.org/gource/jabcon-2026.mp4">files.jabref.org/gource/jabcon-2026.mp4</a></div>
