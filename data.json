@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T08:26:00+00:00",
+ "generated_at": "2026-09-06T08:37:29+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1346,13 +1346,13 @@
    "author": "Siedlerchr",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
+    "status: changes-required",
     "good second issue",
     "component: external-changes",
     "component: git",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T08:20:12Z",
+   "updated_at": "2026-09-06T08:33:44Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2640,7 +2640,7 @@
     "good second issue",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T08:19:19Z",
+   "updated_at": "2026-09-06T08:31:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
