@@ -20,6 +20,8 @@ Also syntax-check the JS before committing: `node -e "new Function(require('fs')
 
 ## Verify what you push
 
+Always finish on `main`: merge the task branch into `main` and push it. A branch left unmerged deploys nothing.
+
 A local screenshot of the state you just built is not enough; load the page fresh and look at the default state too.
 Push first, fix up after is fine (users see features early), but state the deployed short SHA after every push.
 
