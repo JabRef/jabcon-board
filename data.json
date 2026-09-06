@@ -47,8 +47,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 11,
-   "closed": 117,
+   "open": 10,
+   "closed": 118,
    "baseline": 113
   },
   {
@@ -72,8 +72,8 @@
  ],
  "focus": {
   "label": "project: jabcon",
-  "open": 10,
-  "closed": 2,
+  "open": 9,
+  "closed": 3,
   "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
  },
  "private_activity": {
@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T08:59:14+00:00",
+ "generated_at": "2026-09-06T09:18:48+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -137,6 +137,59 @@
   "exclude_repos": []
  },
  "cards": [
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16855",
+   "repo": "JabRef/jabref",
+   "number": 16855,
+   "title": "Fix invalid regex handling in search",
+   "url": "https://github.com/JabRef/jabref/pull/16855",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: search",
+    "component: entry-editor",
+    "component: entry-preview",
+    "project: jabcon",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T09:12:57Z",
+   "closed_at": "2026-09-06T09:12:49Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T09:12:48Z",
+   "column": "done",
+   "focus": true,
+   "stats": {
+    "additions": 297,
+    "deletions": 77,
+    "changed_files": 20,
+    "components": {
+     "(root)": 1,
+     "jabgui": 135,
+     "jablib": 238
+    },
+    "refactorings": [
+     [
+      3,
+      "arrow switch"
+     ],
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "streams"
+     ],
+     [
+      2,
+      "markdown javadoc"
+     ]
+    ]
+   }
+  },
   {
    "id": "https://github.com/JabRef/jabref/issues/16352",
    "repo": "JabRef/jabref",
@@ -1072,6 +1125,29 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16539",
+   "repo": "JabRef/jabref",
+   "number": 16539,
+   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "type": "issue",
+   "draft": false,
+   "author": "ryan-carpenter",
+   "assignees": [
+    "subhramit"
+   ],
+   "labels": [
+    "component: search",
+    "\ud83d\udccc Pinned"
+   ],
+   "updated_at": "2026-09-06T09:13:45Z",
+   "closed_at": "2026-09-06T09:12:50Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/11454",
    "repo": "JabRef/jabref",
    "number": 11454,
@@ -1336,30 +1412,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16855",
-   "repo": "JabRef/jabref",
-   "number": 16855,
-   "title": "Fix invalid regex handling in search",
-   "url": "https://github.com/JabRef/jabref/pull/16855",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: search",
-    "component: entry-editor",
-    "component: entry-preview",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-09-06T08:59:02Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16868",
    "repo": "JabRef/jabref",
    "number": 16868,
@@ -1370,13 +1422,13 @@
    "author": "Siedlerchr",
    "assignees": [],
    "labels": [
-    "status: changes-required",
+    "status: ready-for-review",
     "good second issue",
     "component: external-changes",
     "component: git",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T08:53:28Z",
+   "updated_at": "2026-09-06T09:00:12Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2125,6 +2177,28 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16863",
+   "repo": "JabRef/jabref",
+   "number": 16863,
+   "title": "Fix PDF URL import when no file directory is configured (#16306)",
+   "url": "https://github.com/JabRef/jabref/pull/16863",
+   "type": "pr",
+   "draft": false,
+   "author": "LoveChauhan-18",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: external-files",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-06T09:14:10Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16849",
    "repo": "JabRef/jabref",
    "number": 16849,
@@ -2623,6 +2697,31 @@
    "focus": true
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16693",
+   "repo": "JabRef/jabref",
+   "number": 16693,
+   "title": "Allow subset search in Style Select Dialog",
+   "url": "https://github.com/JabRef/jabref/issues/16693",
+   "type": "issue",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [
+    "pluto-han"
+   ],
+   "labels": [
+    "component: libre-office",
+    "good first issue",
+    "\ud83d\udccd Assigned",
+    "\ud83d\udd14 reminder-sent"
+   ],
+   "updated_at": "2026-09-06T09:18:08Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16729",
    "repo": "JabRef/jabref",
    "number": 16729,
@@ -2664,29 +2763,6 @@
     "component: ui"
    ],
    "updated_at": "2026-09-05T21:08:18Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16539",
-   "repo": "JabRef/jabref",
-   "number": 16539,
-   "title": "Symbols in search produce regex PatternSyntaxException exceptions",
-   "url": "https://github.com/JabRef/jabref/issues/16539",
-   "type": "issue",
-   "draft": false,
-   "author": "ryan-carpenter",
-   "assignees": [
-    "subhramit"
-   ],
-   "labels": [
-    "component: search",
-    "\ud83d\udccc Pinned"
-   ],
-   "updated_at": "2026-09-05T18:28:36Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3818,6 +3894,134 @@
  ],
  "events": [
   {
+   "id": "14512763368",
+   "type": "IssuesEvent",
+   "action": "unassigned",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:18:10Z",
+   "summary": "unassigned issue #16693: Allow subset search in Style Select Dialog",
+   "number": 16693,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16693",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512763363",
+   "type": "IssuesEvent",
+   "action": "assigned",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:18:10Z",
+   "summary": "assigned issue #16693: Allow subset search in Style Select Dialog",
+   "number": 16693,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16693",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512665920",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:14:13Z",
+   "summary": "reviewed PR #16863 (commented)",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#pullrequestreview-5124839819",
+   "excerpt": "Maybe add a debug/trac/warn logging?",
+   "review_id": 5124839819,
+   "self": false
+  },
+  {
+   "id": "14512665380",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:14:10Z",
+   "summary": "commented on PR #16863",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#discussion_r3943515277",
+   "excerpt": "Maybe add a debug/trac/warn logging?",
+   "review_id": 5124839819,
+   "self": false
+  },
+  {
+   "id": "20226931320",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T09:12:51Z",
+   "summary": "deleted branch patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512631004",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:12:50Z",
+   "summary": "closed issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512630929",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:12:48Z",
+   "summary": "merged PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16855",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512556154",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:09:39Z",
+   "summary": "commented on #16863: Fix PDF URL import when no file directory is configured (#16306)",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#issuecomment-5558237444",
+   "excerpt": "Any screenshots?",
+   "review_id": null
+  },
+  {
+   "id": "14512316045",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:59:44Z",
+   "summary": "commented on #16745: Implement DNB Fetcher + as isbn fetcher",
+   "number": 16745,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16745#issuecomment-5558186577",
+   "excerpt": "also implement the ISBN Fetcher part",
+   "review_id": null
+  },
+  {
    "id": "14512299579",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -3861,6 +4065,34 @@
    "excerpt": "Changelog is pushed",
    "review_id": 5124795653,
    "self": true
+  },
+  {
+   "id": "14512327130",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:28Z",
+   "summary": "labeled PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512327030",
+   "type": "PullRequestEvent",
+   "action": "unlabeled",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:28Z",
+   "summary": "unlabeled PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14511391111",
@@ -6554,170 +6786,137 @@
    "url": "https://github.com/Maran23/jfx",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14480308125",
-   "type": "PullRequestReviewEvent",
-   "action": "dismissed",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:36:26Z",
-   "summary": "reviewed PR #16860 (dismissed)",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
-   "excerpt": "",
-   "review_id": 5120868338,
-   "self": true
-  },
-  {
-   "id": "14480297210",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:35:55Z",
-   "summary": "opened PR #16861",
-   "number": 16861,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16861",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20131166420",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:35:51Z",
-   "summary": "pushed 0 commit(s) to aux-sync-path",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14480222739",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:32:38Z",
-   "summary": "reviewed PR #16850 (commented)",
-   "number": 16850,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16850#pullrequestreview-5120883614",
-   "excerpt": "uses locks now",
-   "review_id": 5120883614,
-   "self": true
-  },
-  {
-   "id": "14480222552",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:32:37Z",
-   "summary": "commented on PR #16850",
-   "number": 16850,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16850#discussion_r3940309808",
-   "excerpt": "uses locks now",
-   "review_id": 5120883614,
-   "self": true
-  },
-  {
-   "id": "14480099646",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:27:21Z",
-   "summary": "reviewed PR #16860 (dismissed)",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120868338",
-   "excerpt": "",
-   "review_id": 5120868338,
-   "self": false
-  },
-  {
-   "id": "14480074628",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:26:19Z",
-   "summary": "commented on #16858: Fix wrong source tab label at startup",
-   "number": 16858,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16858#issuecomment-5551162932",
-   "excerpt": "@subhramit  Feel free to fix it, I'm out of tokens right now",
-   "review_id": null
-  },
-  {
-   "id": "14480069794",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:26:07Z",
-   "summary": "reviewed PR #16620 (dismissed)",
-   "number": 16620,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16620#pullrequestreview-5120864247",
-   "excerpt": "this looks good code-wise. The event handler is a good idea.",
-   "review_id": 5120864247,
-   "self": false
-  },
-  {
-   "id": "14480021438",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:24:00Z",
-   "summary": "commented on #16859: Configure navigation tree hierarchy for AI requirements in devdocs",
-   "number": 16859,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16859#issuecomment-5551152323",
-   "excerpt": "BTW grandparent is important, because htere is also a code howtos section AI",
-   "review_id": null
-  },
-  {
-   "id": "14480020469",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:24:00Z",
-   "summary": "reviewed PR #16860 (commented)",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120859028",
-   "excerpt": "good catch",
-   "review_id": 5120859028,
-   "self": true
-  },
-  {
-   "id": "14480020129",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:23:58Z",
-   "summary": "commented on PR #16860",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16860#discussion_r3940284056",
-   "excerpt": "good catch",
-   "review_id": 5120859028,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14512763368",
+   "type": "IssuesEvent",
+   "action": "unassigned",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:18:10Z",
+   "summary": "unassigned issue #16693: Allow subset search in Style Select Dialog",
+   "number": 16693,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16693",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512763363",
+   "type": "IssuesEvent",
+   "action": "assigned",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:18:10Z",
+   "summary": "assigned issue #16693: Allow subset search in Style Select Dialog",
+   "number": 16693,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16693",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512665920",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:14:13Z",
+   "summary": "reviewed PR #16863 (commented)",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#pullrequestreview-5124839819",
+   "excerpt": "Maybe add a debug/trac/warn logging?",
+   "review_id": 5124839819,
+   "self": false
+  },
+  {
+   "id": "14512665380",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:14:10Z",
+   "summary": "commented on PR #16863",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#discussion_r3943515277",
+   "excerpt": "Maybe add a debug/trac/warn logging?",
+   "review_id": 5124839819,
+   "self": false
+  },
+  {
+   "id": "20226931320",
+   "type": "DeleteEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T09:12:51Z",
+   "summary": "deleted branch patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512631004",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:12:50Z",
+   "summary": "closed issue #16539: Symbols in search produce regex PatternSyntaxException exceptions",
+   "number": 16539,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16539",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512630929",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:12:48Z",
+   "summary": "merged PR #16855",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16855",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512556154",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:09:39Z",
+   "summary": "commented on #16863: Fix PDF URL import when no file directory is configured (#16306)",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#issuecomment-5558237444",
+   "excerpt": "Any screenshots?",
+   "review_id": null
+  },
+  {
+   "id": "14512316045",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:59:44Z",
+   "summary": "commented on #16745: Implement DNB Fetcher + as isbn fetcher",
+   "number": 16745,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16745#issuecomment-5558186577",
+   "excerpt": "also implement the ISBN Fetcher part",
+   "review_id": null
+  },
   {
    "id": "14512299579",
    "type": "PullRequestReviewEvent",
@@ -6762,6 +6961,34 @@
    "excerpt": "Changelog is pushed",
    "review_id": 5124795653,
    "self": true
+  },
+  {
+   "id": "14512327130",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:28Z",
+   "summary": "labeled PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14512327030",
+   "type": "PullRequestEvent",
+   "action": "unlabeled",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:28Z",
+   "summary": "unlabeled PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
+   "excerpt": "",
+   "review_id": null
   },
   {
    "id": "14511391111",
@@ -16197,17 +16424,18 @@
   "JabRef/jabref#16855": "subhramit",
   "JabRef/jabref#16862": "koppor",
   "JabRef/jabref#16864": "ZiadAbdElFatah",
-  "JabRef/jabref#16868": "Siedlerchr"
+  "JabRef/jabref#16868": "Siedlerchr",
+  "JabRef/jabref#16863": "LoveChauhan-18"
  },
  "stats": {
-  "additions": 2358,
-  "deletions": 396,
-  "changed_files": 210,
+  "additions": 2655,
+  "deletions": 473,
+  "changed_files": 230,
   "components": {
-   "jablib": 984,
+   "(root)": 41,
+   "jabgui": 1353,
+   "jablib": 1222,
    "docs": 150,
-   "(root)": 40,
-   "jabgui": 1218,
    ".github": 25,
    "openfasttrace": 31,
    "build-logic": 112,
@@ -16223,8 +16451,8 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 149,
-   "merged": 2,
+   "points": 152,
+   "merged": 3,
    "reviews": 26,
    "other": 91
   },
@@ -16244,10 +16472,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 95,
+   "points": 100,
    "merged": 2,
-   "reviews": 23,
-   "other": 43
+   "reviews": 24,
+   "other": 46
   },
   {
    "login": "koppor",
@@ -16258,10 +16486,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 40,
+   "points": 43,
    "merged": 1,
    "reviews": 8,
-   "other": 21
+   "other": 24
   },
   {
    "login": "calixtus",
