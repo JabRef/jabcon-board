@@ -162,6 +162,9 @@ def collect_events(previous):
                             or f"https://github.com/{e['repo']['name']}" + (f"/issues/{number}" if number else "")),
                     "excerpt": excerpt((payload.get("comment") or payload.get("review") or {}).get("body")),
                     "review_id": (payload.get("review") or {}).get("id") or (payload.get("comment") or {}).get("pull_request_review_id"),
+                    "before": payload.get("before"), "head": payload.get("head"),
+                    # resolved once below and cached in data.json
+                    "commits": seen.get(e["id"], {}).get("commits"), "sync": seen.get(e["id"], {}).get("sync"),
                 }
             if len(data) < 100 or datetime.fromisoformat(data[-1]["created_at"].replace("Z", "+00:00")) < START:
                 break
@@ -179,6 +182,20 @@ def collect_events(previous):
                 except urllib.error.HTTPError:
                     PR_AUTHORS[key] = ""
             e["self"] = PR_AUTHORS[key] == e["actor"]
+    # the public feed carries no commit list: resolve the push once; a push to a repo outside the org without a
+    # commit by the actor (fork sync) scores nothing; in the org that shape is a squash merge, which keeps its point
+    # [impl->req~no-fork-sync-points~1]
+    for e in events:
+        if e["type"] == "PushEvent" and e.get("commits") is None and e.get("before"):
+            try:
+                cmp, _ = get(f"/repos/{e['repo']}/compare/{e['before']}...{e['head']}")
+                e["commits"] = cmp["total_commits"]
+                e["sync"] = (not e["repo"].startswith(CONFIG["org"] + "/")
+                             and not any((c.get("author") or {}).get("login") == e["actor"] for c in cmp["commits"]))
+            except urllib.error.HTTPError:  # new branch: before is all zeros
+                e["commits"], e["sync"] = 0, False
+            branch = e["summary"].removeprefix("pushed to ")
+            e["summary"] = f"synced {branch}" if e["sync"] else f"pushed {e['commits']} commit(s) to {branch}"
     # a review made of inline comments only has an empty body: borrow the first inline comment's excerpt
     first_comment = {}
     for e in reversed(events):
@@ -331,7 +348,7 @@ def leaderboard(cards, events, private):
         s = score.get(e["actor"])
         if s is None:
             continue
-        if e.get("self"):
+        if e.get("self") or e.get("sync"):
             continue
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1

@@ -119,6 +119,13 @@ Reviews and review comments on a PR authored by the reviewer score nothing (they
 
 Needs: impl
 
+### No points for syncing a fork
+`req~no-fork-sync-points~1`
+
+A push to a repo outside the org that contains no commit by the pusher (fork sync) scores nothing and reads "synced <branch>".
+
+Needs: impl
+
 ### Leaderboard breakdown
 `req~leaderboard-breakdown~1`
 

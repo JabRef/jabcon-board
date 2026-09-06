@@ -110,8 +110,9 @@ function renderAiModels() {
 // Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1.
 // [impl->req~scoring~1]
 // [impl->req~no-self-review-points~1]
+// [impl->req~no-fork-sync-points~1]
 function eventPoints(e) {
-  if (e.self) return 0; // own PR
+  if (e.self || e.sync) return 0; // own PR, fork sync
   if (e.type === 'PullRequestReviewEvent') return 2;
   if (['IssueCommentEvent', 'IssuesEvent', 'PushEvent'].includes(e.type)) return 1;
   if (e.type === 'PullRequestEvent' && e.merged) {
