@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T08:37:29+00:00",
+ "generated_at": "2026-09-06T08:45:06+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -2125,6 +2125,29 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "status: changes-required",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-06T08:39:13Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16739",
    "repo": "JabRef/jabref",
    "number": 16739,
@@ -2185,29 +2208,6 @@
     "status: changes-required"
    ],
    "updated_at": "2026-09-05T20:06:38Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "status: changes-required",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-05T18:44:45Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -10473,7 +10473,7 @@
    "actor": "Siedlerchr",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-05T09:36:28Z",
-   "summary": "reviewed PR #16849 (approved)",
+   "summary": "reviewed PR #16849 (dismissed)",
    "number": 16849,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16849#pullrequestreview-5120707554",
