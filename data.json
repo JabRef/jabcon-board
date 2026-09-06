@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T04:22:36+00:00",
+ "generated_at": "2026-09-06T04:33:32+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1306,6 +1306,51 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16805",
+   "repo": "JabRef/jabref",
+   "number": 16805,
+   "title": "Do not offer a backup that differs only in modification dates",
+   "url": "https://github.com/JabRef/jabref/pull/16805",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: bib(la)tex",
+    "component: import-load",
+    "component: backup",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-06T04:31:24Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16830",
+   "repo": "JabRef/jabref",
+   "number": 16830,
+   "title": "Preserve file attributes when replacing a file atomically",
+   "url": "https://github.com/JabRef/jabref/pull/16830",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: export-or-save"
+   ],
+   "updated_at": "2026-09-06T04:29:58Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/11879",
    "repo": "JabRef/jabref",
    "number": 11879,
@@ -1334,51 +1379,6 @@
     "component: jabsrv"
    ],
    "updated_at": "2026-09-06T04:14:41Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16805",
-   "repo": "JabRef/jabref",
-   "number": 16805,
-   "title": "Do not offer a backup that differs only in modification dates",
-   "url": "https://github.com/JabRef/jabref/pull/16805",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: import-load",
-    "status: changes-required",
-    "component: backup",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-06T04:13:58Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16830",
-   "repo": "JabRef/jabref",
-   "number": 16830,
-   "title": "Preserve file attributes when replacing a file atomically",
-   "url": "https://github.com/JabRef/jabref/pull/16830",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: export-or-save",
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T04:13:41Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
