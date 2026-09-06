@@ -19,6 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - run: scripts/gh-pages.sh prepare
+      - run: sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
       - run: curl -sfo gource.mp4 https://files.jabref.org/gource/jabcon-2026.mp4
       - run: python3 scripts/highlights.py out/data.json gource.mp4 out/highlights.mp4
       - run: scripts/gh-pages.sh push
