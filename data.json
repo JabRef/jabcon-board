@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T09:59:02+00:00",
+ "generated_at": "2026-09-06T10:17:21+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1425,7 +1425,7 @@
     "component: import-load",
     "status: changes-required"
    ],
-   "updated_at": "2026-09-06T09:57:03Z",
+   "updated_at": "2026-09-06T10:14:06Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1445,9 +1445,10 @@
    "labels": [
     "component: libre-office",
     "component: preferences",
+    "status: changes-required",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T09:45:40Z",
+   "updated_at": "2026-09-06T10:05:03Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2196,6 +2197,50 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16707",
+   "repo": "JabRef/jabref",
+   "number": 16707,
+   "title": "Fix/16703 graceful jgit errors",
+   "url": "https://github.com/JabRef/jabref/pull/16707",
+   "type": "pr",
+   "draft": true,
+   "author": "aawhan0",
+   "assignees": [],
+   "labels": [
+    "good first issue",
+    "status: changes-required",
+    "component: git",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-06T10:14:59Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/openjdk/jfx/pull/2015",
+   "repo": "openjdk/jfx",
+   "number": 2015,
+   "title": "8375588: Enhanced property metadata",
+   "url": "https://github.com/openjdk/jfx/pull/2015",
+   "type": "pr",
+   "draft": false,
+   "author": "mstr2",
+   "assignees": [],
+   "labels": [
+    "rfr",
+    "csr"
+   ],
+   "updated_at": "2026-09-06T10:02:11Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16863",
    "repo": "JabRef/jabref",
    "number": 16863,
@@ -2210,7 +2255,7 @@
     "component: external-files",
     "first contrib"
    ],
-   "updated_at": "2026-09-06T09:56:10Z",
+   "updated_at": "2026-09-06T10:00:40Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2264,29 +2309,6 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16707",
-   "repo": "JabRef/jabref",
-   "number": 16707,
-   "title": "Fix/16703 graceful jgit errors",
-   "url": "https://github.com/JabRef/jabref/pull/16707",
-   "type": "pr",
-   "draft": true,
-   "author": "aawhan0",
-   "assignees": [],
-   "labels": [
-    "good first issue",
-    "status: changes-required",
-    "component: git",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-06T03:23:50Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
    "id": "https://github.com/JabRef/jabref/pull/16864",
    "repo": "JabRef/jabref",
    "number": 16864,
@@ -2324,27 +2346,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-05T18:03:28Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/openjdk/jfx/pull/2015",
-   "repo": "openjdk/jfx",
-   "number": 2015,
-   "title": "8375588: Enhanced property metadata",
-   "url": "https://github.com/openjdk/jfx/pull/2015",
-   "type": "pr",
-   "draft": false,
-   "author": "mstr2",
-   "assignees": [],
-   "labels": [
-    "rfr",
-    "csr"
-   ],
-   "updated_at": "2026-09-05T14:36:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2733,7 +2734,7 @@
     "good second issue",
     "size: medium"
    ],
-   "updated_at": "2026-09-06T09:55:34Z",
+   "updated_at": "2026-09-06T10:02:58Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3913,6 +3914,106 @@
   }
  ],
  "events": [
+  {
+   "id": "14514089242",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:14:59Z",
+   "summary": "commented on #16707: Fix/16703 graceful jgit errors",
+   "number": 16707,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16707#issuecomment-5558554769",
+   "excerpt": "any updates? @aawhan0",
+   "review_id": null
+  },
+  {
+   "id": "20230654106",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-06T10:13:05Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14513854325",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:05:04Z",
+   "summary": "reviewed PR #16870 (commented)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125006061",
+   "excerpt": "it is designed only for citationstyle",
+   "review_id": 5125006061,
+   "self": true
+  },
+  {
+   "id": "14513854015",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:05:03Z",
+   "summary": "commented on PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943619499",
+   "excerpt": "it is designed only for citationstyle",
+   "review_id": 5125006061,
+   "self": true
+  },
+  {
+   "id": "20230160971",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:05:02Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20229899370",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-06T10:00:51Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14513739260",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:00:12Z",
+   "summary": "commented on #16863: Fix PDF URL import when no file directory is configured (#16306)",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#issuecomment-5558483004",
+   "excerpt": "yes please, for each step",
+   "review_id": null
+  },
   {
    "id": "14513683545",
    "type": "IssueCommentEvent",
@@ -6703,86 +6804,75 @@
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14480495814",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:44:52Z",
-   "summary": "merged PR #16826",
-   "number": 16826,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16826",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14480494217",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:44:49Z",
-   "summary": "reviewed PR #16858 (approved)",
-   "number": 16858,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16858#pullrequestreview-5120907556",
-   "excerpt": "",
-   "review_id": 5120907556,
-   "self": false
-  },
-  {
-   "id": "14480491945",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:44:42Z",
-   "summary": "commented on #16858: Fix wrong source tab label at startup",
-   "number": 16858,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16858#issuecomment-5551247711",
-   "excerpt": "Done",
-   "review_id": null
-  },
-  {
-   "id": "14480484796",
+   "id": "14514089242",
    "type": "IssueCommentEvent",
    "action": "created",
    "actor": "pluto-han",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:44:22Z",
-   "summary": "commented on #16620: Fix closing of combo box popup on Escape key",
-   "number": 16620,
+   "created_at": "2026-09-06T10:14:59Z",
+   "summary": "commented on #16707: Fix/16703 graceful jgit errors",
+   "number": 16707,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16620#issuecomment-5551246266",
-   "excerpt": "not working for OCR",
+   "url": "https://github.com/JabRef/jabref/pull/16707#issuecomment-5558554769",
+   "excerpt": "any updates? @aawhan0",
    "review_id": null
   },
   {
-   "id": "14480483649",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:44:19Z",
-   "summary": "commented on #16861: Resolve LaTeX aux file paths relative to the library file",
-   "number": 16861,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16861#issuecomment-5551246003",
-   "excerpt": "Discussion:",
-   "review_id": null
-  },
-  {
-   "id": "20174864797",
+   "id": "20230654106",
    "type": "PushEvent",
    "action": null,
-   "actor": "subhramit",
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-06T10:13:05Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14513854325",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "pluto-han",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:44:15Z",
-   "summary": "pushed 0 commit(s) to biblatexource",
+   "created_at": "2026-09-06T10:05:04Z",
+   "summary": "reviewed PR #16870 (commented)",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125006061",
+   "excerpt": "it is designed only for citationstyle",
+   "review_id": 5125006061,
+   "self": true
+  },
+  {
+   "id": "14513854015",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:05:03Z",
+   "summary": "commented on PR #16870",
+   "number": 16870,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16870#discussion_r3943619499",
+   "excerpt": "it is designed only for citationstyle",
+   "review_id": 5125006061,
+   "self": true
+  },
+  {
+   "id": "20230160971",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:05:02Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
@@ -6790,22 +6880,33 @@
    "review_id": null
   },
   {
-   "id": "14480472803",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "Maran23",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:43:51Z",
-   "summary": "reviewed PR #16755 (commented)",
-   "number": 16755,
+   "id": "20229899370",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-06T10:00:51Z",
+   "summary": "pushed 0 commit(s) to fix/bibtex-unmatched-braces-recovery",
+   "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16755#pullrequestreview-5120905748",
-   "excerpt": "(as follow-up)",
-   "review_id": 5120905748,
-   "self": false
-  }
- ],
- "all_events": [
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14513739260",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "pluto-han",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T10:00:12Z",
+   "summary": "commented on #16863: Fix PDF URL import when no file directory is configured (#16306)",
+   "number": 16863,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16863#issuecomment-5558483004",
+   "excerpt": "yes please, for each step",
+   "review_id": null
+  },
   {
    "id": "14513683545",
    "type": "IssueCommentEvent",
@@ -16466,6 +16567,20 @@
    "review_id": null
   },
   {
+   "id": "20230382382",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "pluto-han",
+   "repo": "pluto-han/jabref",
+   "created_at": "2026-09-04T08:50:34Z",
+   "summary": "pushed 0 commit(s) to select-new-entry",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/pluto-han/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14414851461",
    "type": "WatchEvent",
    "action": "started",
@@ -16540,7 +16655,8 @@
   "JabRef/jabref#16862": "koppor",
   "JabRef/jabref#16864": "ZiadAbdElFatah",
   "JabRef/jabref#16868": "Siedlerchr",
-  "JabRef/jabref#16863": "LoveChauhan-18"
+  "JabRef/jabref#16863": "LoveChauhan-18",
+  "JabRef/jabref#16870": "pluto-han"
  },
  "stats": {
   "additions": 2655,
@@ -16587,10 +16703,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 101,
+   "points": 104,
    "merged": 2,
    "reviews": 24,
-   "other": 47
+   "other": 50
   },
   {
    "login": "koppor",
@@ -16601,10 +16717,10 @@
   },
   {
    "login": "pluto-han",
-   "points": 44,
+   "points": 47,
    "merged": 1,
    "reviews": 8,
-   "other": 25
+   "other": 28
   },
   {
    "login": "calixtus",
