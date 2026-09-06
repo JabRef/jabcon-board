@@ -77,7 +77,7 @@ function renderStats() {
   $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
     const why = `${l.merged} merged PRs × 3 = ${l.merged * 3}\n${l.reviews} reviews × 2 = ${l.reviews * 2}\n${l.other} comments / issues / pushes × 1 = ${l.other}`;
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
-    return `<div class="leader" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
+    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
   }).join('');
 }
 
@@ -93,13 +93,27 @@ function eventPoints(e) {
   return 0;
 }
 
-function renderTicker() {
-  const org = data.config.org + '/';
-  $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map((e) => {
-    const pts = eventPoints(e);
-    return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
-  }).join('');
+function eventRow(e) {
+  const org = data.config.org + '/', pts = eventPoints(e);
+  return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
 }
+
+function renderTicker() {
+  $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map(eventRow).join('');
+}
+
+// Click on a leaderboard avatar: full-screen list of everything that contributor scored (or did not) during JabCon.
+function showDetail(login) {
+  const l = data.leaderboard.find((x) => x.login === login) || { points: 0, merged: 0, reviews: 0, other: 0 };
+  const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
+    .sort((a, b) => b.created_at.localeCompare(a.created_at));
+  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 · ${l.reviews} reviews × 2 · ${l.other} other × 1</span>`;
+  $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
+  $('#detail').hidden = false;
+}
+$('#detail .back').addEventListener('click', () => { $('#detail').hidden = true; });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#detail').hidden = true; });
+$('#leaderboard').addEventListener('click', (e) => { const who = e.target.closest('.leader')?.dataset.login; if (who) showDetail(who); });
 
 function celebrate(prev) {
   if (!prev) return;
