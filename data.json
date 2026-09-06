@@ -2,6 +2,14 @@
  "refactorings": [
   {
    "weight": 5,
+   "text": "record GroupDiffMode",
+   "repo": "JabRef/jabref",
+   "number": 16868,
+   "author": "Siedlerchr",
+   "url": "https://github.com/JabRef/jabref/pull/16868"
+  },
+  {
+   "weight": 5,
    "text": "record UndoableGroupChange",
    "repo": "JabRef/jabref",
    "number": 16835,
@@ -31,20 +39,12 @@
    "number": 16620,
    "author": "Devansh-18155",
    "url": "https://github.com/JabRef/jabref/pull/16620"
-  },
-  {
-   "weight": 4,
-   "text": "sequenced collections",
-   "repo": "JabRef/jabref",
-   "number": 16835,
-   "author": "koppor",
-   "url": "https://github.com/JabRef/jabref/pull/16835"
   }
  ],
  "ai_models": {
   "Claude Fable 5": 4,
-  "Claude Fable 5.1": 4,
-  "Claude Opus 5": 3
+  "Claude Opus 5": 4,
+  "Claude Fable 5.1": 4
  },
  "milestones": [
   {
@@ -52,8 +52,8 @@
    "repo": "JabRef/jabref",
    "title": "6.0-beta",
    "url": "https://github.com/JabRef/jabref/milestone/36",
-   "open": 6,
-   "closed": 120,
+   "open": 5,
+   "closed": 121,
    "baseline": 113
   },
   {
@@ -101,7 +101,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T16:06:59+00:00",
+ "generated_at": "2026-09-06T16:22:10+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -376,6 +376,91 @@
      ]
     ],
     "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16868",
+   "repo": "JabRef/jabref",
+   "number": 16868,
+   "title": "Show group changes in Git diff",
+   "url": "https://github.com/JabRef/jabref/pull/16868",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "good second issue",
+    "component: external-changes",
+    "component: git",
+    "component: diff-merge",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T16:14:50Z",
+   "closed_at": "2026-09-06T16:14:38Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T16:14:37Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 224,
+    "deletions": 129,
+    "changed_files": 8,
+    "components": {
+     "(root)": 1,
+     "docs": 1,
+     "jabgui": 351
+    },
+    "refactorings": [
+     [
+      5,
+      "record GroupDiffMode"
+     ],
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "markdown javadoc"
+     ],
+     [
+      2,
+      "immutable collection literals"
+     ]
+    ],
+    "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16877",
+   "repo": "JabRef/jabref",
+   "number": 16877,
+   "title": "Label CI/CD and build-system pull requests automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16877",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T16:14:45Z",
+   "closed_at": "2026-09-06T16:14:38Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T16:14:38Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 29,
+    "deletions": 3,
+    "changed_files": 2,
+    "components": {
+     ".github": 32
+    },
+    "refactorings": [],
+    "ai": [
+     "Claude Opus 5"
+    ]
    }
   },
   {
@@ -1552,6 +1637,30 @@
    }
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16729",
+   "repo": "JabRef/jabref",
+   "number": 16729,
+   "title": "Groups tree diff should show removed, modified, and added groups.",
+   "url": "https://github.com/JabRef/jabref/issues/16729",
+   "type": "issue",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [
+    "Siedlerchr"
+   ],
+   "labels": [
+    "\ud83d\udccc Pinned",
+    "good second issue",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-06T16:15:43Z",
+   "closed_at": "2026-09-06T16:14:39Z",
+   "state_reason": "completed",
+   "merged_at": null,
+   "column": "done",
+   "focus": false
+  },
+  {
    "id": "https://github.com/ejwa/gitinspector/issues/249",
    "repo": "ejwa/gitinspector",
    "number": 249,
@@ -1981,45 +2090,21 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16868",
+   "id": "https://github.com/JabRef/jabref/pull/16882",
    "repo": "JabRef/jabref",
-   "number": 16868,
-   "title": "Show group changes in Git diff",
-   "url": "https://github.com/JabRef/jabref/pull/16868",
+   "number": 16882,
+   "title": "Gracefully handle JGit errors",
+   "url": "https://github.com/JabRef/jabref/pull/16882",
    "type": "pr",
    "draft": false,
-   "author": "Siedlerchr",
+   "author": "subhramit",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
-    "good second issue",
-    "component: external-changes",
-    "component: git",
-    "component: diff-merge",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T16:04:27Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16877",
-   "repo": "JabRef/jabref",
-   "number": 16877,
-   "title": "Label CI/CD and build-system pull requests automatically",
-   "url": "https://github.com/JabRef/jabref/pull/16877",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
+    "good first issue",
     "status: changes-required",
-    "status: to-be-merged"
+    "component: git"
    ],
-   "updated_at": "2026-09-06T16:04:08Z",
+   "updated_at": "2026-09-06T16:21:26Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3273,23 +3358,23 @@
    "focus": true
   },
   {
-   "id": "https://github.com/JabRef/jabref/issues/16729",
+   "id": "https://github.com/JabRef/jabref/issues/16703",
    "repo": "JabRef/jabref",
-   "number": 16729,
-   "title": "Groups tree diff should show removed, modified, and added groups.",
-   "url": "https://github.com/JabRef/jabref/issues/16729",
+   "number": 16703,
+   "title": "Gracefully handle jgit errors",
+   "url": "https://github.com/JabRef/jabref/issues/16703",
    "type": "issue",
    "draft": false,
-   "author": "koppor",
+   "author": "subhramit",
    "assignees": [
-    "Siedlerchr"
+    "subhramit"
    ],
    "labels": [
+    "good first issue",
     "\ud83d\udccc Pinned",
-    "good second issue",
-    "component: diff-merge"
+    "component: git"
    ],
-   "updated_at": "2026-09-06T15:53:14Z",
+   "updated_at": "2026-09-06T16:21:23Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4375,6 +4460,118 @@
   }
  ],
  "events": [
+  {
+   "id": "20255001941",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T16:20:06Z",
+   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20254920224",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T16:18:52Z",
+   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523448630",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:16:19Z",
+   "summary": "opened PR #16882",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16882",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523402296",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:39Z",
+   "summary": "closed issue #16729: Groups tree diff should show removed, modified, and added groups.",
+   "number": 16729,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16729",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523402356",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:38Z",
+   "summary": "merged PR #16877",
+   "number": 16877,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16877",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523402216",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:37Z",
+   "summary": "merged PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20254610354",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref-git-test",
+   "created_at": "2026-09-06T16:14:19Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref-git-test",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523324387",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "koppor",
+   "repo": "ungerts/adr-instructions-maven-plugin",
+   "created_at": "2026-09-06T16:11:48Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/ungerts/adr-instructions-maven-plugin",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14523021115",
    "type": "PullRequestReviewCommentEvent",
@@ -7183,129 +7380,121 @@
    "url": "https://github.com/pluto-han/jabref",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14517405685",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:34:17Z",
-   "summary": "reviewed PR #16868 (commented)",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125303003",
-   "excerpt": "Is it a fix or addition?",
-   "review_id": 5125303003,
-   "self": false
-  },
-  {
-   "id": "14517404100",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:34:13Z",
-   "summary": "commented on PR #16868",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#discussion_r3943940367",
-   "excerpt": "There was a pr with this dialog and it already supported all metadata changes and respected the diff method",
-   "review_id": 5125303003,
-   "self": false
-  },
-  {
-   "id": "14517372595",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:33:00Z",
-   "summary": "reviewed PR #16868 (commented)",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5125306295",
-   "excerpt": "Is this constructor needed anywhere",
-   "review_id": 5125306295,
-   "self": false
-  },
-  {
-   "id": "14517371932",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:32:58Z",
-   "summary": "commented on PR #16868",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#discussion_r3943937520",
-   "excerpt": "Is this constructor needed anywhere",
-   "review_id": 5125306295,
-   "self": false
-  },
-  {
-   "id": "14517331536",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:31:21Z",
-   "summary": "commented on PR #16868",
-   "number": 16868,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16868#discussion_r3943934095",
-   "excerpt": "Is it a fix or addition?",
-   "review_id": 5125303003,
-   "self": false
-  },
-  {
-   "id": "14517319651",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:30:52Z",
-   "summary": "reviewed PR #16871 (commented)",
-   "number": 16871,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16871#pullrequestreview-5125301906",
-   "excerpt": "For example, a search for Springer lecture or SPRINGER LECTURE or springer lecture should match Springer - Lecture Notes in Computer Scienc\u2026",
-   "review_id": 5125301906,
-   "self": false
-  },
-  {
-   "id": "14517318953",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:30:50Z",
-   "summary": "commented on PR #16871",
-   "number": 16871,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16871#discussion_r3943932866",
-   "excerpt": "For example, a search for Springer lecture or SPRINGER LECTURE or springer lecture should match Springer - Lecture Notes in Computer Scienc\u2026",
-   "review_id": 5125301906,
-   "self": false
-  },
-  {
-   "id": "14517316766",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:30:45Z",
-   "summary": "reviewed PR #16870 (commented)",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125301709",
-   "excerpt": "yep, updated",
-   "review_id": 5125301709,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "20255001941",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T16:20:06Z",
+   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20254920224",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-06T16:18:52Z",
+   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523448630",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:16:19Z",
+   "summary": "opened PR #16882",
+   "number": 16882,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16882",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523402296",
+   "type": "IssuesEvent",
+   "action": "closed",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:39Z",
+   "summary": "closed issue #16729: Groups tree diff should show removed, modified, and added groups.",
+   "number": 16729,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16729",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523402356",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:38Z",
+   "summary": "merged PR #16877",
+   "number": 16877,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16877",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523402216",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T16:14:37Z",
+   "summary": "merged PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16868",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20254610354",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref-git-test",
+   "created_at": "2026-09-06T16:14:19Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref-git-test",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14523324387",
+   "type": "WatchEvent",
+   "action": "started",
+   "actor": "koppor",
+   "repo": "ungerts/adr-instructions-maven-plugin",
+   "created_at": "2026-09-06T16:11:48Z",
+   "summary": "starred",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/ungerts/adr-instructions-maven-plugin",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14523021115",
    "type": "PullRequestReviewCommentEvent",
@@ -21403,16 +21592,16 @@
   "JabRef/jabref#16877": "koppor"
  },
  "stats": {
-  "additions": 3576,
-  "deletions": 1504,
-  "changed_files": 342,
+  "additions": 3829,
+  "deletions": 1636,
+  "changed_files": 352,
   "components": {
-   "(root)": 46,
-   "jabgui": 2964,
+   "(root)": 47,
+   "jabgui": 3315,
    "jablib": 1501,
-   "docs": 202,
+   "docs": 203,
+   ".github": 57,
    "latex-conv": 1,
-   ".github": 25,
    "openfasttrace": 31,
    "build-logic": 112,
    "jabsrv": 23,
@@ -21435,17 +21624,17 @@
   },
   {
    "login": "subhramit",
-   "points": 200,
+   "points": 203,
    "merged": 4,
    "reviews": 40,
-   "other": 108
+   "other": 111
   },
   {
    "login": "Siedlerchr",
-   "points": 148,
-   "merged": 3,
+   "points": 152,
+   "merged": 4,
    "reviews": 35,
-   "other": 69
+   "other": 70
   },
   {
    "login": "Maran23",
@@ -21456,8 +21645,8 @@
   },
   {
    "login": "koppor",
-   "points": 108,
-   "merged": 10,
+   "points": 111,
+   "merged": 11,
    "reviews": 2,
    "other": 74
   },
