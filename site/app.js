@@ -149,7 +149,7 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#detail
 $('#leaderboard').addEventListener('click', (e) => { const who = e.target.closest('.leader')?.dataset.login; if (who) showDetail(who); });
 
 // [impl->req~leader-change-bell~1]
-// [impl->req~done-confetti~1]
+// [impl->req~done-confetti~2]
 function celebrate(prev) {
   if (!prev) return;
   const leader = data.leaderboard[0]?.login, wasLeader = prev.leaderboard[0]?.login;
@@ -160,7 +160,7 @@ function celebrate(prev) {
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
     const who = c.type === 'pr' ? c.author : c.assignees[0] || c.author;
-    toast(`🎉 ${who} ${c.type === 'pr' ? 'merged' : 'closed'} #${c.number}`);
+    toast(`🎉 ${who} ${c.type === 'pr' ? 'merged' : 'closed'} #${c.number} ${c.title}`);
     if (window.confetti) confetti({ particleCount: 200, spread: 90, origin: { y: 0.7 } });
   }
 }
