@@ -26,23 +26,23 @@
   },
   {
    "weight": 5,
+   "text": "pattern-matching switch",
+   "repo": "JabRef/jabref",
+   "number": 16857,
+   "author": "calixtus",
+   "url": "https://github.com/JabRef/jabref/pull/16857"
+  },
+  {
+   "weight": 5,
    "text": "record RemoteChanges",
    "repo": "JabRef/jabref",
    "number": 11879,
    "author": "koppor",
    "url": "https://github.com/JabRef/jabref/pull/11879"
-  },
-  {
-   "weight": 5,
-   "text": "record UndoableGroupChange",
-   "repo": "JabRef/jabref",
-   "number": 16835,
-   "author": "koppor",
-   "url": "https://github.com/JabRef/jabref/pull/16835"
   }
  ],
  "ai_models": {
-  "Claude Opus 5": 7,
+  "Claude Opus 5": 8,
   "Claude Fable 5": 5,
   "Claude Fable 5.1": 5,
   "Cursor": 1
@@ -71,7 +71,7 @@
    "repo": "JabRef/jabref-issue-melting-pot",
    "title": "v6",
    "url": "https://github.com/JabRef/jabref-issue-melting-pot/milestone/1",
-   "open": 20,
+   "open": 21,
    "closed": 41,
    "baseline": 39
   }
@@ -86,9 +86,9 @@
   "JabRef/jabref-issue-melting-pot": {
    "opened": 4,
    "closed": 4,
-   "comments": 3,
+   "comments": 4,
    "by": {
-    "koppor": 3,
+    "koppor": 4,
     "Maran23": 0,
     "InAnYan": 1,
     "pluto-han": 0,
@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T21:15:54+00:00",
+ "generated_at": "2026-09-06T21:23:54+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -557,6 +557,80 @@
      ]
     ],
     "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16857",
+   "repo": "JabRef/jabref",
+   "number": 16857,
+   "title": "Fix undo C - One undomanager / journal per library and some cleanups",
+   "url": "https://github.com/JabRef/jabref/pull/16857",
+   "type": "pr",
+   "draft": false,
+   "author": "calixtus",
+   "assignees": [],
+   "labels": [
+    "component: ui",
+    "component: cleanup-ops",
+    "status: ready-for-review",
+    "component: libre-office",
+    "dev: code-quality",
+    "component: search",
+    "component: groups",
+    "component: citationkey-generator",
+    "component: import-load",
+    "component: export-or-save",
+    "component: preferences",
+    "component: shared-database",
+    "component: external-files",
+    "component: maintable",
+    "component: entry-editor",
+    "component: automatic-field-editor",
+    "component: external-changes",
+    "component: welcome-tab",
+    "component: citation-relations",
+    "component: welcome-walkthrough",
+    "component: diff-merge",
+    "status: to-be-merged",
+    "component: xmp",
+    "component: special-fields"
+   ],
+   "updated_at": "2026-09-06T21:16:33Z",
+   "closed_at": "2026-09-06T21:16:32Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T21:16:31Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 750,
+    "deletions": 627,
+    "changed_files": 103,
+    "components": {
+     "(root)": 2,
+     "docs": 19,
+     "jabgui": 1308
+    },
+    "refactorings": [
+     [
+      5,
+      "pattern-matching switch"
+     ],
+     [
+      3,
+      "arrow switch"
+     ],
+     [
+      3,
+      "JSpecify null-marked"
+     ],
+     [
+      2,
+      "markdown javadoc"
+     ]
+    ],
+    "ai": [
+     "Claude Opus 5"
+    ]
    }
   },
   {
@@ -2694,20 +2768,21 @@
    "focus": false
   },
   {
-   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "id": "https://github.com/JabRef/jabref/pull/16800",
    "repo": "JabRef/jabref",
-   "number": 16862,
-   "title": "Remove ready-for-review label when a PR is converted to draft",
-   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "number": 16800,
+   "title": "Fill shared database login from a pasted connection URL",
+   "url": "https://github.com/JabRef/jabref/pull/16800",
    "type": "pr",
    "draft": false,
    "author": "koppor",
    "assignees": [],
    "labels": [
-    "status: ready-for-review",
-    "dev: ci-cd"
+    "component: ui",
+    "component: shared-database",
+    "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-06T21:14:41Z",
+   "updated_at": "2026-09-06T21:22:19Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2725,10 +2800,57 @@
    "author": "koppor",
    "assignees": [],
    "labels": [
-    "component: external-files",
-    "status: changes-required"
+    "status: ready-for-review",
+    "component: external-files"
    ],
-   "updated_at": "2026-09-06T21:12:42Z",
+   "updated_at": "2026-09-06T21:21:52Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16884",
+   "repo": "JabRef/jabref",
+   "number": 16884,
+   "title": "Separate AI features behind Service Provider Interface (SPI)",
+   "url": "https://github.com/JabRef/jabref/pull/16884",
+   "type": "pr",
+   "draft": true,
+   "author": "InAnYan",
+   "assignees": [],
+   "labels": [
+    "component: groups",
+    "component: fetcher",
+    "component: jabkit",
+    "component: preferences",
+    "component: entry-editor",
+    "component: ai",
+    "component: citation-relations"
+   ],
+   "updated_at": "2026-09-06T21:20:31Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16862",
+   "repo": "JabRef/jabref",
+   "number": 16862,
+   "title": "Remove ready-for-review label when a PR is converted to draft",
+   "url": "https://github.com/JabRef/jabref/pull/16862",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "dev: ci-cd"
+   ],
+   "updated_at": "2026-09-06T21:14:41Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2751,49 +2873,6 @@
     "status: no-bot-comments"
    ],
    "updated_at": "2026-09-06T21:05:27Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16857",
-   "repo": "JabRef/jabref",
-   "number": 16857,
-   "title": "Fix undo C - One undomanager / journal per library and some cleanups",
-   "url": "https://github.com/JabRef/jabref/pull/16857",
-   "type": "pr",
-   "draft": false,
-   "author": "calixtus",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: cleanup-ops",
-    "status: ready-for-review",
-    "component: libre-office",
-    "dev: code-quality",
-    "component: search",
-    "component: groups",
-    "component: citationkey-generator",
-    "component: import-load",
-    "component: export-or-save",
-    "component: preferences",
-    "component: shared-database",
-    "component: external-files",
-    "component: maintable",
-    "component: entry-editor",
-    "component: automatic-field-editor",
-    "component: external-changes",
-    "component: welcome-tab",
-    "component: citation-relations",
-    "component: welcome-walkthrough",
-    "component: diff-merge",
-    "status: to-be-merged",
-    "component: xmp",
-    "component: special-fields"
-   ],
-   "updated_at": "2026-09-06T21:04:16Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2832,28 +2911,6 @@
    "assignees": [],
    "labels": [],
    "updated_at": "2026-09-06T20:42:35Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16800",
-   "repo": "JabRef/jabref",
-   "number": 16800,
-   "title": "Fill shared database login from a pasted connection URL",
-   "url": "https://github.com/JabRef/jabref/pull/16800",
-   "type": "pr",
-   "draft": true,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "component: ui",
-    "component: shared-database",
-    "status: no-bot-comments"
-   ],
-   "updated_at": "2026-09-06T20:42:17Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3466,7 +3523,7 @@
     "component: entry-editor",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T21:12:22Z",
+   "updated_at": "2026-09-06T21:23:38Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4974,6 +5031,92 @@
  ],
  "events": [
   {
+   "id": "14531599669",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:22:48Z",
+   "summary": "reviewed PR #16874 (approved)",
+   "number": 16874,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126649593",
+   "excerpt": "",
+   "review_id": 5126649593,
+   "self": false
+  },
+  {
+   "id": "14531592636",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:22:31Z",
+   "summary": "reviewed PR #16874 (dismissed)",
+   "number": 16874,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126598188",
+   "excerpt": "",
+   "review_id": 5126598188,
+   "self": false
+  },
+  {
+   "id": "20274343826",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-06T21:20:31Z",
+   "summary": "pushed 0 commit(s) to feat/separate-ai-editions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531518409",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:19:36Z",
+   "summary": "opened PR #16884",
+   "number": 16884,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16884",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20274278508",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-06T21:19:26Z",
+   "summary": "created branch feat/separate-ai-editions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531442622",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:16:31Z",
+   "summary": "merged PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16857",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14531395399",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -5110,7 +5253,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T20:59:13Z",
-   "summary": "reviewed PR #16874 (approved)",
+   "summary": "reviewed PR #16874 (dismissed)",
    "number": 16874,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126598188",
@@ -7807,94 +7950,95 @@
    "url": "https://github.com/JabRef/jabref-koppor",
    "excerpt": "",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "20257441831",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "subhramit/jabref",
-   "created_at": "2026-09-06T16:56:59Z",
-   "summary": "pushed 0 commit(s) to fix-jgit-exceptions",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/subhramit/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14524457087",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:53:33Z",
-   "summary": "commented on #16870: Add infer style button",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560719310",
-   "excerpt": "Definitely a big improvement, thanks!",
-   "review_id": null
-  },
-  {
-   "id": "14525203045",
-   "type": "PullRequestEvent",
-   "action": "labeled",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:53:33Z",
-   "summary": "labeled PR #16870",
-   "number": 16870,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16870",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14524388641",
+   "id": "14531599669",
    "type": "PullRequestReviewEvent",
    "action": "created",
    "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:51:05Z",
-   "summary": "reviewed PR #16870 (approved)",
-   "number": 16870,
+   "created_at": "2026-09-06T21:22:48Z",
+   "summary": "reviewed PR #16874 (approved)",
+   "number": 16874,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125990246",
+   "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126649593",
    "excerpt": "",
-   "review_id": 5125990246,
+   "review_id": 5126649593,
    "self": false
   },
   {
-   "id": "14524384727",
-   "type": "IssueCommentEvent",
-   "action": "created",
+   "id": "14531592636",
+   "type": "PullRequestReviewEvent",
+   "action": "dismissed",
    "actor": "subhramit",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:50:56Z",
-   "summary": "commented on #16870: Add infer style button",
-   "number": 16870,
+   "created_at": "2026-09-06T21:22:31Z",
+   "summary": "reviewed PR #16874 (dismissed)",
+   "number": 16874,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#issuecomment-5560704821",
-   "excerpt": "Took the opportunity to finish it. Should insert the style into meta in non-zotero mode as well now.",
+   "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126598188",
+   "excerpt": "",
+   "review_id": 5126598188,
+   "self": false
+  },
+  {
+   "id": "20274343826",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-06T21:20:31Z",
+   "summary": "pushed 0 commit(s) to feat/separate-ai-editions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
    "review_id": null
   },
   {
-   "id": "20256908204",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "subhramit",
-   "repo": "pluto-han/jabref",
-   "created_at": "2026-09-06T16:48:54Z",
-   "summary": "pushed 0 commit(s) to infer-style-button",
-   "number": null,
+   "id": "14531518409",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:19:36Z",
+   "summary": "opened PR #16884",
+   "number": 16884,
    "merged": false,
-   "url": "https://github.com/pluto-han/jabref",
+   "url": "https://github.com/JabRef/jabref/issues/16884",
    "excerpt": "",
    "review_id": null
-  }
- ],
- "all_events": [
+  },
+  {
+   "id": "20274278508",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "InAnYan",
+   "repo": "InAnYan/jabref",
+   "created_at": "2026-09-06T21:19:26Z",
+   "summary": "created branch feat/separate-ai-editions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/InAnYan/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14531442622",
+   "type": "PullRequestEvent",
+   "action": "merged",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:16:31Z",
+   "summary": "merged PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16857",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14531395399",
    "type": "PullRequestReviewEvent",
@@ -8032,7 +8176,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T20:59:13Z",
-   "summary": "reviewed PR #16874 (approved)",
+   "summary": "reviewed PR #16874 (dismissed)",
    "number": 16874,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16874#pullrequestreview-5126598188",
@@ -25304,14 +25448,14 @@
   "JabRef/jabref#16883": "koppor"
  },
  "stats": {
-  "additions": 8553,
-  "deletions": 3539,
-  "changed_files": 507,
+  "additions": 9303,
+  "deletions": 4166,
+  "changed_files": 610,
   "components": {
-   "(root)": 57,
-   "jabgui": 5955,
+   "(root)": 59,
+   "jabgui": 7263,
    "jablib": 4864,
-   "docs": 423,
+   "docs": 442,
    ".github": 297,
    "jabsrv": 27,
    "jabref-website": 124,
@@ -25331,17 +25475,17 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 277,
+   "points": 281,
    "merged": 5,
-   "reviews": 61,
+   "reviews": 63,
    "other": 140
   },
   {
    "login": "InAnYan",
-   "points": 252,
+   "points": 253,
    "merged": 2,
    "reviews": 64,
-   "other": 118
+   "other": 119
   },
   {
    "login": "Maran23",
@@ -25359,10 +25503,10 @@
   },
   {
    "login": "koppor",
-   "points": 151,
+   "points": 152,
    "merged": 15,
    "reviews": 6,
-   "other": 94
+   "other": 95
   },
   {
    "login": "pluto-han",
@@ -25373,8 +25517,8 @@
   },
   {
    "login": "calixtus",
-   "points": 40,
-   "merged": 0,
+   "points": 43,
+   "merged": 1,
    "reviews": 10,
    "other": 20
   },
