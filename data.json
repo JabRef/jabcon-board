@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T14:35:14+00:00",
+ "generated_at": "2026-09-06T14:42:42+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1848,7 +1848,45 @@
     "component: xmp",
     "component: special-fields"
    ],
-   "updated_at": "2026-09-06T14:32:26Z",
+   "updated_at": "2026-09-06T14:41:15Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16878",
+   "repo": "JabRef/jabref",
+   "number": 16878,
+   "title": "Drop stray org.jetbrains.annotations use from jablib",
+   "url": "https://github.com/JabRef/jabref/pull/16878",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "component: ai"
+   ],
+   "updated_at": "2026-09-06T14:41:44Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/vsch/flexmark-java/pull/680",
+   "repo": "vsch/flexmark-java",
+   "number": 680,
+   "title": "Replace JetBrains nullness annotations with JSpecify",
+   "url": "https://github.com/vsch/flexmark-java/pull/680",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-06T14:35:33Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4174,6 +4212,48 @@
   }
  ],
  "events": [
+  {
+   "id": "20248239579",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:40:56Z",
+   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14520772231",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:39:53Z",
+   "summary": "opened PR #16878",
+   "number": 16878,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16878",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20248126058",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T14:39:18Z",
+   "summary": "created branch flexmark-annotations",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14520654434",
    "type": "PullRequestEvent",
@@ -7073,53 +7153,51 @@
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14516572478",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "pluto-han",
+   "id": "20248239579",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "calixtus",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:01:17Z",
-   "summary": "opened PR #16871",
-   "number": 16871,
+   "created_at": "2026-09-06T14:40:56Z",
+   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
+   "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16871",
+   "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
   },
   {
-   "id": "14516550991",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "subhramit",
+   "id": "14520772231",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:00:26Z",
-   "summary": "reviewed PR #16870 (changes_requested)",
-   "number": 16870,
+   "created_at": "2026-09-06T14:39:53Z",
+   "summary": "opened PR #16878",
+   "number": 16878,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125221539",
-   "excerpt": "Quick look as I'm travelling again, I don't think we are writing the style into meta.xml when zotero compatibility mode is disabled - we ar\u2026",
-   "review_id": 5125221539,
-   "self": false
+   "url": "https://github.com/JabRef/jabref/issues/16878",
+   "excerpt": "",
+   "review_id": null
   },
   {
-   "id": "14516550968",
-   "type": "PullRequestReviewEvent",
-   "action": "updated",
-   "actor": "subhramit",
+   "id": "20248126058",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:00:26Z",
-   "summary": "reviewed PR #16870 (changes_requested)",
-   "number": 16870,
+   "created_at": "2026-09-06T14:39:18Z",
+   "summary": "created branch flexmark-annotations",
+   "number": null,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16870#pullrequestreview-5125221539",
-   "excerpt": "Quick look as I'm travelling again, I don't think we are writing the style into meta.xml when zotero compatibility mode is disabled - we ar\u2026",
-   "review_id": 5125221539,
-   "self": false
-  }
- ],
- "all_events": [
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14520654434",
    "type": "PullRequestEvent",
@@ -20146,10 +20224,10 @@
   },
   {
    "login": "calixtus",
-   "points": 29,
+   "points": 30,
    "merged": 0,
    "reviews": 9,
-   "other": 11
+   "other": 12
   },
   {
    "login": "ThiloteE",
