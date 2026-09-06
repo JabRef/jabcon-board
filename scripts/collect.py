@@ -338,11 +338,20 @@ def pr_stats(c, cached):
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
-# [impl->req~scoring~2]
+# [impl->req~scoring~3]
 def leaderboard(cards, events, private):
-    """Merged PR 3, review 2, other 1; on a JabCon item (focus label / milestone) each counts tenfold."""
-    score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "points": 0} for p in PARTICIPANTS}
+    """Merged PR 3, review 2, other 1; tenfold on a JabCon item (focus label / milestone), times the configured
+    repo_factors elsewhere (e.g. upstream JavaFX work)."""
+    score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "boosted": 0, "points": 0} for p in PARTICIPANTS}
     jabcon = {(c["repo"], c["number"]) for c in cards if c["focus"]}
+    repo_factors = CONFIG.get("repo_factors", {})
+
+    def factor(s, repo, number):
+        f = 10 if (repo, number) in jabcon else repo_factors.get(repo, 1)
+        s["milestone"] += f == 10
+        s["boosted"] += f != 10 and f != 1
+        return f
+
     for counts in private.values():
         for p, n in counts["by"].items():
             score[p]["other"] += n
@@ -350,23 +359,20 @@ def leaderboard(cards, events, private):
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in score:
             score[c["author"]]["merged"] += 1
-            score[c["author"]]["milestone"] += c["focus"]
-            score[c["author"]]["points"] += 30 if c["focus"] else 3
+            score[c["author"]]["points"] += 3 * factor(score[c["author"]], c["repo"], c["number"])
     for e in events:
         s = score.get(e["actor"])
         if s is None:
             continue
         if e.get("self") or e.get("sync"):
             continue
-        factor = 10 if (e["repo"], e.get("number")) in jabcon else 1
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
         elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "IssuesEvent", "PushEvent"):
             s["other"] += 1
         else:
             continue
-        s["milestone"] += factor == 10
-        s["points"] += (2 if e["type"] == "PullRequestReviewEvent" else 1) * factor
+        s["points"] += (2 if e["type"] == "PullRequestReviewEvent" else 1) * factor(s, e["repo"], e.get("number"))
     return [{"login": p, **v} for p, v in score.items()]
 
 
