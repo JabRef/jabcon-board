@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T21:23:54+00:00",
+ "generated_at": "2026-09-06T21:31:30+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -556,6 +556,38 @@
       "immutable collection literals"
      ]
     ],
+    "ai": []
+   }
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16880",
+   "repo": "JabRef/jabref",
+   "number": 16880,
+   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
+   "url": "https://github.com/JabRef/jabref/pull/16880",
+   "type": "pr",
+   "draft": false,
+   "author": "Stewori",
+   "assignees": [],
+   "labels": [
+    "status: changes-required",
+    "component: ai",
+    "status: to-be-merged"
+   ],
+   "updated_at": "2026-09-06T21:24:04Z",
+   "closed_at": "2026-09-06T15:44:04Z",
+   "state_reason": null,
+   "merged_at": "2026-09-06T15:44:04Z",
+   "column": "done",
+   "focus": false,
+   "stats": {
+    "additions": 2,
+    "deletions": 2,
+    "changed_files": 1,
+    "components": {
+     "jablib": 4
+    },
+    "refactorings": [],
     "ai": []
    }
   },
@@ -1098,38 +1130,6 @@
     "ai": [
      "Claude Opus 5"
     ]
-   }
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16880",
-   "repo": "JabRef/jabref",
-   "number": 16880,
-   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
-   "url": "https://github.com/JabRef/jabref/pull/16880",
-   "type": "pr",
-   "draft": false,
-   "author": "Stewori",
-   "assignees": [],
-   "labels": [
-    "status: changes-required",
-    "component: ai",
-    "status: to-be-merged"
-   ],
-   "updated_at": "2026-09-06T15:44:04Z",
-   "closed_at": "2026-09-06T15:44:04Z",
-   "state_reason": null,
-   "merged_at": "2026-09-06T15:44:04Z",
-   "column": "done",
-   "focus": false,
-   "stats": {
-    "additions": 2,
-    "deletions": 2,
-    "changed_files": 1,
-    "components": {
-     "jablib": 4
-    },
-    "refactorings": [],
-    "ai": []
    }
   },
   {
@@ -2154,7 +2154,7 @@
    "author": "Stewori",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-06T15:08:40Z",
+   "updated_at": "2026-09-06T21:24:04Z",
    "closed_at": "2026-09-06T15:08:40Z",
    "state_reason": null,
    "merged_at": null,
@@ -2768,6 +2768,24 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16885",
+   "repo": "JabRef/jabref",
+   "number": 16885,
+   "title": "Remove malformed markdown and duplicate entry from CHANGELOG.md",
+   "url": "https://github.com/JabRef/jabref/pull/16885",
+   "type": "pr",
+   "draft": false,
+   "author": "Stewori",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-06T21:30:52Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16800",
    "repo": "JabRef/jabref",
    "number": 16800,
@@ -2782,7 +2800,7 @@
     "component: shared-database",
     "status: no-bot-comments"
    ],
-   "updated_at": "2026-09-06T21:22:19Z",
+   "updated_at": "2026-09-06T21:24:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3511,7 +3529,7 @@
    "id": "https://github.com/JabRef/jabref/pull/16874",
    "repo": "JabRef/jabref",
    "number": 16874,
-   "title": "Improve Layout , progress indication and DOI in citations Tab",
+   "title": "Rework Citations Tab",
    "url": "https://github.com/JabRef/jabref/pull/16874",
    "type": "pr",
    "draft": false,
@@ -3523,7 +3541,7 @@
     "component: entry-editor",
     "good second issue"
    ],
-   "updated_at": "2026-09-06T21:23:38Z",
+   "updated_at": "2026-09-06T21:27:35Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -5031,6 +5049,64 @@
  ],
  "events": [
   {
+   "id": "14531832027",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:31:59Z",
+   "summary": "reviewed PR #16885 (approved)",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16885#pullrequestreview-5126675058",
+   "excerpt": "",
+   "review_id": 5126675058,
+   "self": false
+  },
+  {
+   "id": "14531804111",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:30:53Z",
+   "summary": "reviewed PR #16885 (approved)",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16885#pullrequestreview-5126671810",
+   "excerpt": "",
+   "review_id": 5126671810,
+   "self": false
+  },
+  {
+   "id": "14531772217",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Stewori",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:29:37Z",
+   "summary": "opened PR #16885",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16885",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20274769720",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Stewori",
+   "repo": "Stewori/jabref",
+   "created_at": "2026-09-06T21:27:32Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Stewori/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "14531599669",
    "type": "PullRequestReviewEvent",
    "action": "created",
@@ -6026,7 +6102,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T20:10:15Z",
-   "summary": "commented on #16874: Improve Layout , progress indication and DOI in citations Tab",
+   "summary": "commented on #16874: Rework Citations Tab",
    "number": 16874,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16874#issuecomment-5561856707",
@@ -7318,7 +7394,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T18:37:45Z",
-   "summary": "commented on #16874: Improve Layout , progress indication and DOI in citations Tab",
+   "summary": "commented on #16874: Rework Citations Tab",
    "number": 16874,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16874#issuecomment-5561306722",
@@ -7894,65 +7970,67 @@
    "url": "https://github.com/LoayTarek5/jabref",
    "excerpt": "",
    "review_id": null
-  },
-  {
-   "id": "14525192395",
-   "type": "PullRequestEvent",
-   "action": "labeled",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T17:10:49Z",
-   "summary": "labeled PR #16882",
-   "number": 16882,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16882",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20257584509",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "calixtus",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T16:59:09Z",
-   "summary": "pushed 0 commit(s) to fix-undoredoevenmore",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14524573713",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "koppor",
-   "repo": "JabRef/jabref-koppor",
-   "created_at": "2026-09-06T16:57:57Z",
-   "summary": "opened PR #761",
-   "number": 761,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref-koppor/issues/761",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20257501449",
-   "type": "CreateEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/jabref-koppor",
-   "created_at": "2026-09-06T16:57:53Z",
-   "summary": "created branch hourly-experimental",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref-koppor",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14531832027",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:31:59Z",
+   "summary": "reviewed PR #16885 (approved)",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16885#pullrequestreview-5126675058",
+   "excerpt": "",
+   "review_id": 5126675058,
+   "self": false
+  },
+  {
+   "id": "14531804111",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:30:53Z",
+   "summary": "reviewed PR #16885 (approved)",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16885#pullrequestreview-5126671810",
+   "excerpt": "",
+   "review_id": 5126671810,
+   "self": false
+  },
+  {
+   "id": "14531772217",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Stewori",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:29:37Z",
+   "summary": "opened PR #16885",
+   "number": 16885,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16885",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20274769720",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "Stewori",
+   "repo": "Stewori/jabref",
+   "created_at": "2026-09-06T21:27:32Z",
+   "summary": "pushed 0 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Stewori/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14531599669",
    "type": "PullRequestReviewEvent",
@@ -8949,7 +9027,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T20:10:15Z",
-   "summary": "commented on #16874: Improve Layout , progress indication and DOI in citations Tab",
+   "summary": "commented on #16874: Rework Citations Tab",
    "number": 16874,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16874#issuecomment-5561856707",
@@ -10241,7 +10319,7 @@
    "actor": "subhramit",
    "repo": "JabRef/jabref",
    "created_at": "2026-09-06T18:37:45Z",
-   "summary": "commented on #16874: Improve Layout , progress indication and DOI in citations Tab",
+   "summary": "commented on #16874: Rework Citations Tab",
    "number": 16874,
    "merged": false,
    "url": "https://github.com/JabRef/jabref/pull/16874#issuecomment-5561306722",
@@ -25445,7 +25523,8 @@
   "JabRef/jabref#16879": "InAnYan",
   "JabRef/jabref#16874": "Devansh-18155",
   "JabRef/jabref#16865": "albCarlosRodrigues",
-  "JabRef/jabref#16883": "koppor"
+  "JabRef/jabref#16883": "koppor",
+  "JabRef/jabref#16885": "Stewori"
  },
  "stats": {
   "additions": 9303,
@@ -25475,9 +25554,9 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 281,
+   "points": 283,
    "merged": 5,
-   "reviews": 63,
+   "reviews": 64,
    "other": 140
   },
   {
@@ -25517,17 +25596,17 @@
   },
   {
    "login": "calixtus",
-   "points": 43,
+   "points": 45,
    "merged": 1,
-   "reviews": 10,
+   "reviews": 11,
    "other": 20
   },
   {
    "login": "Stewori",
-   "points": 12,
+   "points": 13,
    "merged": 3,
    "reviews": 1,
-   "other": 1
+   "other": 2
   },
   {
    "login": "JohnnyGoodNews",
