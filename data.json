@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T08:52:06+00:00",
+ "generated_at": "2026-09-06T08:59:14+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1336,6 +1336,30 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16855",
+   "repo": "JabRef/jabref",
+   "number": 16855,
+   "title": "Fix invalid regex handling in search",
+   "url": "https://github.com/JabRef/jabref/pull/16855",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "component: search",
+    "component: entry-editor",
+    "component: entry-preview",
+    "project: jabcon"
+   ],
+   "updated_at": "2026-09-06T08:59:02Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": true
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16868",
    "repo": "JabRef/jabref",
    "number": 16868,
@@ -1352,7 +1376,7 @@
     "component: git",
     "component: diff-merge"
    ],
-   "updated_at": "2026-09-06T08:33:44Z",
+   "updated_at": "2026-09-06T08:53:28Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1651,30 +1675,6 @@
    "merged_at": null,
    "column": "progress",
    "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16855",
-   "repo": "JabRef/jabref",
-   "number": 16855,
-   "title": "Fix invalid regex handling in search",
-   "url": "https://github.com/JabRef/jabref/pull/16855",
-   "type": "pr",
-   "draft": false,
-   "author": "subhramit",
-   "assignees": [],
-   "labels": [
-    "status: ready-for-review",
-    "component: search",
-    "component: entry-editor",
-    "component: entry-preview",
-    "project: jabcon"
-   ],
-   "updated_at": "2026-09-05T18:43:18Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": true
   },
   {
    "id": "https://github.com/apache/spark/pull/58225",
@@ -2137,10 +2137,9 @@
    "labels": [
     "component: bib(la)tex",
     "component: fetcher",
-    "status: changes-required",
     "first contrib"
    ],
-   "updated_at": "2026-09-06T08:39:13Z",
+   "updated_at": "2026-09-06T08:54:23Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3818,6 +3817,51 @@
   }
  ],
  "events": [
+  {
+   "id": "14512299579",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:59:04Z",
+   "summary": "reviewed PR #16855 (approved)",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#pullrequestreview-5124806743",
+   "excerpt": "",
+   "review_id": 5124806743,
+   "self": false
+  },
+  {
+   "id": "14512171259",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:30Z",
+   "summary": "reviewed PR #16868 (commented)",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5124795653",
+   "excerpt": "Changelog is pushed",
+   "review_id": 5124795653,
+   "self": true
+  },
+  {
+   "id": "14512170497",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:28Z",
+   "summary": "commented on PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#discussion_r3943473163",
+   "excerpt": "Changelog is pushed",
+   "review_id": 5124795653,
+   "self": true
+  },
   {
    "id": "14511391111",
    "type": "PullRequestReviewEvent",
@@ -6671,54 +6715,54 @@
    "excerpt": "good catch",
    "review_id": 5120859028,
    "self": true
-  },
-  {
-   "id": "14480005217",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:23:23Z",
-   "summary": "reviewed PR #16860 (commented)",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120855230",
-   "excerpt": "added",
-   "review_id": 5120855230,
-   "self": true
-  },
-  {
-   "id": "14480004666",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:23:22Z",
-   "summary": "commented on PR #16860",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16860#discussion_r3940281817",
-   "excerpt": "added",
-   "review_id": 5120855230,
-   "self": true
-  },
-  {
-   "id": "14480001401",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "pluto-han",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:23:15Z",
-   "summary": "reviewed PR #16860 (commented)",
-   "number": 16860,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16860#pullrequestreview-5120854469",
-   "excerpt": "no need",
-   "review_id": 5120854469,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14512299579",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:59:04Z",
+   "summary": "reviewed PR #16855 (approved)",
+   "number": 16855,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16855#pullrequestreview-5124806743",
+   "excerpt": "",
+   "review_id": 5124806743,
+   "self": false
+  },
+  {
+   "id": "14512171259",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:30Z",
+   "summary": "reviewed PR #16868 (commented)",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#pullrequestreview-5124795653",
+   "excerpt": "Changelog is pushed",
+   "review_id": 5124795653,
+   "self": true
+  },
+  {
+   "id": "14512170497",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T08:53:28Z",
+   "summary": "commented on PR #16868",
+   "number": 16868,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16868#discussion_r3943473163",
+   "excerpt": "Changelog is pushed",
+   "review_id": 5124795653,
+   "self": true
+  },
   {
    "id": "14511391111",
    "type": "PullRequestReviewEvent",
@@ -16200,9 +16244,9 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 93,
+   "points": 95,
    "merged": 2,
-   "reviews": 22,
+   "reviews": 23,
    "other": 43
   },
   {
