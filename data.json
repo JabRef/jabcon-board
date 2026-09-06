@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T01:16:29+00:00",
+ "generated_at": "2026-09-06T01:38:51+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -3792,6 +3792,20 @@
    "review_id": null
   },
   {
+   "id": "20197160028",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T18:27:54Z",
+   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
    "id": "20161154738",
    "type": "PushEvent",
    "action": null,
@@ -6505,21 +6519,6 @@
    "excerpt": "Mitigated in 1c2526e96d: the attributes are applied only when the target still matches the snapshot taken right after the commit, so a file\u2026",
    "review_id": 5120796099,
    "self": true
-  },
-  {
-   "id": "14479562050",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:04:19Z",
-   "summary": "reviewed PR #16830 (commented)",
-   "number": 16830,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16830#pullrequestreview-5120796045",
-   "excerpt": "Fixed in 1c2526e96d: the directive is the last line of the file again.",
-   "review_id": 5120796045,
-   "self": true
   }
  ],
  "all_events": [
@@ -6704,6 +6703,20 @@
    "number": null,
    "merged": false,
    "url": "https://github.com/subhramit/spark",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20197160028",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "subhramit",
+   "repo": "subhramit/jabref",
+   "created_at": "2026-09-05T18:27:54Z",
+   "summary": "pushed 0 commit(s) to patternsyntaxexceptions",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/subhramit/jabref",
    "excerpt": "",
    "review_id": null
   },
@@ -15546,10 +15559,10 @@
  "leaderboard": [
   {
    "login": "subhramit",
-   "points": 148,
+   "points": 149,
    "merged": 2,
    "reviews": 26,
-   "other": 90
+   "other": 91
   },
   {
    "login": "InAnYan",
