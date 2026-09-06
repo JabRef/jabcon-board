@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T13:52:38+00:00",
+ "generated_at": "2026-09-06T14:00:01+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1725,6 +1725,44 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/latex-conv/pull/12",
+   "repo": "JabRef/latex-conv",
+   "number": 12,
+   "title": "Add APIdia badge to latex-conv API documentation.",
+   "url": "https://github.com/JabRef/latex-conv/pull/12",
+   "type": "pr",
+   "draft": false,
+   "author": "Stewori",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-06T13:58:33Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16872",
+   "repo": "JabRef/jabref",
+   "number": 16872,
+   "title": "Pin issue only when the PR author is the assignee",
+   "url": "https://github.com/JabRef/jabref/pull/16872",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [
+    "status: changes-required"
+   ],
+   "updated_at": "2026-09-06T13:55:21Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16875",
    "repo": "JabRef/jabref",
    "number": 16875,
@@ -1734,8 +1772,28 @@
    "draft": false,
    "author": "koppor",
    "assignees": [],
+   "labels": [
+    "status: ready-for-review"
+   ],
+   "updated_at": "2026-09-06T13:54:48Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16876",
+   "repo": "JabRef/jabref",
+   "number": 16876,
+   "title": "Label CI and build-system changes automatically",
+   "url": "https://github.com/JabRef/jabref/pull/16876",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-06T13:52:46Z",
+   "updated_at": "2026-09-06T13:54:26Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1978,26 +2036,6 @@
     "component: lsp"
    ],
    "updated_at": "2026-09-06T12:54:27Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16872",
-   "repo": "JabRef/jabref",
-   "number": 16872,
-   "title": "Pin issue only when the PR author is the assignee",
-   "url": "https://github.com/JabRef/jabref/pull/16872",
-   "type": "pr",
-   "draft": false,
-   "author": "koppor",
-   "assignees": [],
-   "labels": [
-    "status: changes-required"
-   ],
-   "updated_at": "2026-09-06T12:25:36Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -2472,7 +2510,7 @@
     "rfr",
     "csr"
    ],
-   "updated_at": "2026-09-06T13:40:43Z",
+   "updated_at": "2026-09-06T13:55:52Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4084,6 +4122,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14519625782",
+   "type": "IssueCommentEvent",
+   "action": "created",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/latex-conv",
+   "created_at": "2026-09-06T13:58:33Z",
+   "summary": "commented on #12: Add APIdia badge to latex-conv API documentation.",
+   "number": 12,
+   "merged": false,
+   "url": "https://github.com/JabRef/latex-conv/pull/12#issuecomment-5559705885",
+   "excerpt": "@Stewori  Merge?",
+   "review_id": null
+  },
+  {
+   "id": "14519621246",
+   "type": "MemberEvent",
+   "action": "added",
+   "actor": "JohnnyGoodNews",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:58:24Z",
+   "summary": "member",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20244992908",
    "type": "PushEvent",
@@ -6982,37 +7048,37 @@
    "excerpt": "This is was already an issue before",
    "review_id": 5124729182,
    "self": true
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14511234911",
-   "type": "PullRequestEvent",
-   "action": "opened",
+   "id": "14519625782",
+   "type": "IssueCommentEvent",
+   "action": "created",
    "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T08:13:18Z",
-   "summary": "opened PR #16868",
-   "number": 16868,
+   "repo": "JabRef/latex-conv",
+   "created_at": "2026-09-06T13:58:33Z",
+   "summary": "commented on #12: Add APIdia badge to latex-conv API documentation.",
+   "number": 12,
    "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16868",
-   "excerpt": "",
+   "url": "https://github.com/JabRef/latex-conv/pull/12#issuecomment-5559705885",
+   "excerpt": "@Stewori  Merge?",
    "review_id": null
   },
   {
-   "id": "20222150413",
-   "type": "DeleteEvent",
-   "action": null,
-   "actor": "koppor",
+   "id": "14519621246",
+   "type": "MemberEvent",
+   "action": "added",
+   "actor": "JohnnyGoodNews",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T07:57:01Z",
-   "summary": "deleted branch l10n_main",
+   "created_at": "2026-09-06T13:58:24Z",
+   "summary": "member",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  }
- ],
- "all_events": [
+  },
   {
    "id": "20244992908",
    "type": "PushEvent",
@@ -19378,10 +19444,10 @@
   },
   {
    "login": "Siedlerchr",
-   "points": 131,
+   "points": 132,
    "merged": 2,
    "reviews": 32,
-   "other": 61
+   "other": 62
   },
   {
    "login": "Maran23",
