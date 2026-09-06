@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T15:21:01+00:00",
+ "generated_at": "2026-09-06T15:24:31+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1842,17 +1842,39 @@
    "focus": false
   },
   {
-   "id": "https://github.com/apache/spark/pull/58225",
-   "repo": "apache/spark",
-   "number": 58225,
-   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
-   "url": "https://github.com/apache/spark/pull/58225",
+   "id": "https://github.com/openjdk/jfx/pull/2297",
+   "repo": "openjdk/jfx",
+   "number": 2297,
+   "title": "8391883: Headless Tests may throw Exception when matching a KeyCharacterCombination",
+   "url": "https://github.com/openjdk/jfx/pull/2297",
    "type": "pr",
    "draft": false,
-   "author": "subhramit",
+   "author": "Maran23",
    "assignees": [],
-   "labels": [],
-   "updated_at": "2026-09-06T15:20:36Z",
+   "labels": [
+    "rfr"
+   ],
+   "updated_at": "2026-09-06T15:24:09Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16880",
+   "repo": "JabRef/jabref",
+   "number": 16880,
+   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
+   "url": "https://github.com/JabRef/jabref/pull/16880",
+   "type": "pr",
+   "draft": false,
+   "author": "Stewori",
+   "assignees": [],
+   "labels": [
+    "component: ai"
+   ],
+   "updated_at": "2026-09-06T15:23:19Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1870,7 +1892,25 @@
    "author": "InAnYan",
    "assignees": [],
    "labels": [],
-   "updated_at": "2026-09-06T15:19:29Z",
+   "updated_at": "2026-09-06T15:23:05Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/apache/spark/pull/58225",
+   "repo": "apache/spark",
+   "number": 58225,
+   "title": "[SPARK-58945][SQL] Fix mismatched `messageParameters` keys that cause `INTERNAL_ERROR`",
+   "url": "https://github.com/apache/spark/pull/58225",
+   "type": "pr",
+   "draft": false,
+   "author": "subhramit",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-06T15:20:36Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -1952,26 +1992,6 @@
     "status:ready-for-review"
    ],
    "updated_at": "2026-09-06T15:12:25Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16880",
-   "repo": "JabRef/jabref",
-   "number": 16880,
-   "title": "AsyncEmbeddingModel: Switch NotNull annotation to NonNull from jspecify.",
-   "url": "https://github.com/JabRef/jabref/pull/16880",
-   "type": "pr",
-   "draft": false,
-   "author": "Stewori",
-   "assignees": [],
-   "labels": [
-    "component: ai"
-   ],
-   "updated_at": "2026-09-06T15:12:11Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3154,6 +3174,29 @@
    "focus": true
   },
   {
+   "id": "https://github.com/JabRef/jabref/issues/16029",
+   "repo": "JabRef/jabref",
+   "number": 16029,
+   "title": "Improve Theme Picker",
+   "url": "https://github.com/JabRef/jabref/issues/16029",
+   "type": "issue",
+   "draft": false,
+   "author": "Maran23",
+   "assignees": [
+    "Maran23",
+    "ZiadAbdElFatah"
+   ],
+   "labels": [
+    "component: ui"
+   ],
+   "updated_at": "2026-09-06T15:22:56Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "backlog",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/issues/16729",
    "repo": "JabRef/jabref",
    "number": 16729,
@@ -3196,30 +3239,6 @@
     "size: medium"
    ],
    "updated_at": "2026-09-06T13:45:16Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "backlog",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/issues/16029",
-   "repo": "JabRef/jabref",
-   "number": 16029,
-   "title": "Improve Theme Picker",
-   "url": "https://github.com/JabRef/jabref/issues/16029",
-   "type": "issue",
-   "draft": false,
-   "author": "Maran23",
-   "assignees": [
-    "Maran23",
-    "hasnaaabdelrahman",
-    "ZiadAbdElFatah"
-   ],
-   "labels": [
-    "component: ui"
-   ],
-   "updated_at": "2026-09-05T21:08:18Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4257,6 +4276,35 @@
   }
  ],
  "events": [
+  {
+   "id": "14522007384",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:23:20Z",
+   "summary": "reviewed PR #16880 (approved)",
+   "number": 16880,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16880#pullrequestreview-5125785223",
+   "excerpt": "",
+   "review_id": 5125785223,
+   "self": false
+  },
+  {
+   "id": "14521987763",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T15:22:36Z",
+   "summary": "opened PR #2297",
+   "number": 2297,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/issues/2297",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20251051984",
    "type": "PushEvent",
@@ -7153,39 +7201,38 @@
    "excerpt": "Not applicable, same as the earlier thread on this: JabRefen.properties is the only bundle edited in this repository. The translated bundle\u2026",
    "review_id": 5125269588,
    "self": true
-  },
-  {
-   "id": "14516932252",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:15:30Z",
-   "summary": "reviewed PR #16838 (commented)",
-   "number": 16838,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5125269588",
-   "excerpt": "Not applicable, same as the earlier thread on this: JabRefen.properties is the only bundle edited in this repository. The translated bundle\u2026",
-   "review_id": 5125269588,
-   "self": true
-  },
-  {
-   "id": "14516931657",
-   "type": "PullRequestReviewEvent",
-   "action": "created",
-   "actor": "koppor",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T12:15:29Z",
-   "summary": "reviewed PR #16838 (commented)",
-   "number": 16838,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16838#pullrequestreview-5125269537",
-   "excerpt": "Fixed in cd63284. All six conflict tests now compare the complete stderr output, for example:",
-   "review_id": 5125269537,
-   "self": true
   }
  ],
  "all_events": [
+  {
+   "id": "14522007384",
+   "type": "PullRequestReviewEvent",
+   "action": "created",
+   "actor": "calixtus",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T15:23:20Z",
+   "summary": "reviewed PR #16880 (approved)",
+   "number": 16880,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16880#pullrequestreview-5125785223",
+   "excerpt": "",
+   "review_id": 5125785223,
+   "self": false
+  },
+  {
+   "id": "14521987763",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Maran23",
+   "repo": "openjdk/jfx",
+   "created_at": "2026-09-06T15:22:36Z",
+   "summary": "opened PR #2297",
+   "number": 2297,
+   "merged": false,
+   "url": "https://github.com/openjdk/jfx/issues/2297",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "20251051984",
    "type": "PushEvent",
@@ -20809,7 +20856,8 @@
   "JabRef/jabref#16873": "koppor",
   "JabRef/jabref#16857": "calixtus",
   "JabRef/jabref#16708": "Maran23",
-  "JabRef/jabref#16872": "koppor"
+  "JabRef/jabref#16872": "koppor",
+  "JabRef/jabref#16880": "Stewori"
  },
  "stats": {
   "additions": 3574,
@@ -20879,9 +20927,9 @@
   },
   {
    "login": "calixtus",
-   "points": 31,
+   "points": 33,
    "merged": 0,
-   "reviews": 9,
+   "reviews": 10,
    "other": 13
   },
   {
