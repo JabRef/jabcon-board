@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T13:45:37+00:00",
+ "generated_at": "2026-09-06T13:52:38+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1725,6 +1725,48 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16875",
+   "repo": "JabRef/jabref",
+   "number": 16875,
+   "title": "Require SHA-pinned GitHub Actions in AGENTS.md",
+   "url": "https://github.com/JabRef/jabref/pull/16875",
+   "type": "pr",
+   "draft": false,
+   "author": "koppor",
+   "assignees": [],
+   "labels": [],
+   "updated_at": "2026-09-06T13:52:46Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16868",
+   "repo": "JabRef/jabref",
+   "number": 16868,
+   "title": "Show group changes in Git diff",
+   "url": "https://github.com/JabRef/jabref/pull/16868",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "status: ready-for-review",
+    "good second issue",
+    "component: external-changes",
+    "component: git",
+    "component: diff-merge"
+   ],
+   "updated_at": "2026-09-06T13:48:58Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16870",
    "repo": "JabRef/jabref",
    "number": 16870,
@@ -1762,30 +1804,6 @@
     "component: git"
    ],
    "updated_at": "2026-09-06T13:39:39Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16868",
-   "repo": "JabRef/jabref",
-   "number": 16868,
-   "title": "Show group changes in Git diff",
-   "url": "https://github.com/JabRef/jabref/pull/16868",
-   "type": "pr",
-   "draft": false,
-   "author": "Siedlerchr",
-   "assignees": [],
-   "labels": [
-    "status: changes-required",
-    "good second issue",
-    "component: external-changes",
-    "component: git",
-    "component: diff-merge"
-   ],
-   "updated_at": "2026-09-06T13:37:04Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -4066,6 +4084,78 @@
   }
  ],
  "events": [
+  {
+   "id": "20244992908",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:52:53Z",
+   "summary": "pushed 0 commit(s) to pinned-label-author-check",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14519471270",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:52:45Z",
+   "summary": "opened PR #16876",
+   "number": 16876,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16876",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14519468045",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:52:39Z",
+   "summary": "opened PR #16875",
+   "number": 16875,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16875",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14519430611",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:51:16Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944139678",
+   "excerpt": "I think qodo's right",
+   "review_id": 5125483424,
+   "self": false
+  },
+  {
+   "id": "14519318123",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:47:06Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944126950",
+   "excerpt": "Yeah, makes sence",
+   "review_id": 5125483424,
+   "self": false
+  },
   {
    "id": "14519283609",
    "type": "PullRequestReviewCommentEvent",
@@ -6920,79 +7010,81 @@
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  },
+  }
+ ],
+ "all_events": [
   {
-   "id": "14510855134",
-   "type": "PullRequestEvent",
-   "action": "merged",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T07:57:00Z",
-   "summary": "merged PR #16867",
-   "number": 16867,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16867",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14510739497",
-   "type": "IssuesEvent",
-   "action": "unassigned",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T07:51:52Z",
-   "summary": "unassigned issue #16729: Groups tree diff should show removed, modified, and added groups.",
-   "number": 16729,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16729",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14510624489",
-   "type": "WatchEvent",
-   "action": "started",
-   "actor": "Siedlerchr",
-   "repo": "TGRRRR/heading-outliner",
-   "created_at": "2026-09-06T07:46:39Z",
-   "summary": "starred",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/TGRRRR/heading-outliner",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "14510199463",
-   "type": "PullRequestEvent",
-   "action": "opened",
-   "actor": "Siedlerchr",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T07:28:35Z",
-   "summary": "opened PR #16867",
-   "number": 16867,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16867",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20220421680",
+   "id": "20244992908",
    "type": "PushEvent",
    "action": null,
-   "actor": "Siedlerchr",
+   "actor": "koppor",
    "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T07:28:30Z",
-   "summary": "pushed 0 commit(s) to l10n_main",
+   "created_at": "2026-09-06T13:52:53Z",
+   "summary": "pushed 0 commit(s) to pinned-label-author-check",
    "number": null,
    "merged": false,
    "url": "https://github.com/JabRef/jabref",
    "excerpt": "",
    "review_id": null
-  }
- ],
- "all_events": [
+  },
+  {
+   "id": "14519471270",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:52:45Z",
+   "summary": "opened PR #16876",
+   "number": 16876,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16876",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14519468045",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "koppor",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:52:39Z",
+   "summary": "opened PR #16875",
+   "number": 16875,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16875",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "14519430611",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:51:16Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944139678",
+   "excerpt": "I think qodo's right",
+   "review_id": 5125483424,
+   "self": false
+  },
+  {
+   "id": "14519318123",
+   "type": "PullRequestReviewCommentEvent",
+   "action": "created",
+   "actor": "InAnYan",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T13:47:06Z",
+   "summary": "commented on PR #16857",
+   "number": 16857,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/pull/16857#discussion_r3944126950",
+   "excerpt": "Yeah, makes sence",
+   "review_id": 5125483424,
+   "self": false
+  },
   {
    "id": "14519283609",
    "type": "PullRequestReviewCommentEvent",
@@ -19279,10 +19371,10 @@
   },
   {
    "login": "InAnYan",
-   "points": 189,
+   "points": 191,
    "merged": 1,
    "reviews": 49,
-   "other": 88
+   "other": 90
   },
   {
    "login": "Siedlerchr",
@@ -19300,10 +19392,10 @@
   },
   {
    "login": "koppor",
-   "points": 98,
+   "points": 99,
    "merged": 10,
    "reviews": 2,
-   "other": 64
+   "other": 65
   },
   {
    "login": "pluto-han",
