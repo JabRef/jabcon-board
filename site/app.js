@@ -19,7 +19,7 @@ function ago(iso) {
   return `${Math.floor(s / 86400)} d ago`;
 }
 
-// [impl->req~column-order~1]
+// [impl->req~column-order~2]
 // [impl->req~github-colours~1]
 function renderColumn(id, cards) {
   const org = data.config.org + '/';
@@ -82,7 +82,7 @@ function renderStats() {
     `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
   renderAiModels();
   $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
-    const why = `${l.merged} merged PRs × 3 = ${l.merged * 3}\n${l.reviews} reviews × 2 = ${l.reviews * 2}\n${l.other} comments / issues / pushes × 1 = ${l.other}`;
+    const why = `${l.merged} merged PRs × 3\n${l.reviews} reviews × 2\n${l.other} comments / issues / pushes × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10`;
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
     return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
   }).join('');
@@ -107,18 +107,17 @@ function renderAiModels() {
       `<li><i style="background:${COLORS[i % COLORS.length]}"></i>${esc(name)} <span class="muted">${n}</span></li>`).join('')}</ul>`;
 }
 
-// Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1.
-// [impl->req~scoring~1]
+// Mirrors the scoring in collect.py: merged PR (author) 3, review 2, comment / issue / push 1; tenfold on a JabCon item.
+// [impl->req~scoring~2]
 // [impl->req~no-self-review-points~1]
 // [impl->req~no-fork-sync-points~1]
+const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e.number);
 function eventPoints(e) {
   if (e.self || e.sync) return 0; // own PR, fork sync
-  if (e.type === 'PullRequestReviewEvent') return 2;
-  if (['IssueCommentEvent', 'IssuesEvent', 'PushEvent'].includes(e.type)) return 1;
-  if (e.type === 'PullRequestEvent' && e.merged) {
-    const pr = data.cards.find((c) => c.column === 'done' && c.repo === e.repo && c.number === e.number);
-    if (pr && pr.author === e.actor) return 3;
-  }
+  const card = cardOf(e), factor = card?.focus ? 10 : 1;
+  if (e.type === 'PullRequestReviewEvent') return 2 * factor;
+  if (['IssueCommentEvent', 'IssuesEvent', 'PushEvent'].includes(e.type)) return factor;
+  if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return 3 * factor;
   return 0;
 }
 
@@ -128,8 +127,11 @@ function eventRow(e) {
   return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
 }
 
+// [impl->req~activity-grouped~1]
 function renderTicker() {
-  $('#ticker').innerHTML = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 40).map(eventRow).join('');
+  const events = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent');
+  const jabcon = events.filter((e) => cardOf(e)?.focus), rest = events.filter((e) => !cardOf(e)?.focus);
+  $('#ticker').innerHTML = jabcon.slice(0, 5).map(eventRow).join('') + (jabcon.length ? '<li class="divider">other</li>' : '') + rest.slice(0, 20).map(eventRow).join('');
 }
 
 // Click on a leaderboard avatar: full-screen list of everything that contributor scored (or did not) during JabCon.
@@ -138,7 +140,7 @@ function showDetail(login) {
   const l = data.leaderboard.find((x) => x.login === login) || { points: 0, merged: 0, reviews: 0, other: 0 };
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
-  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 · ${l.reviews} reviews × 2 · ${l.other} other × 1</span>`;
+  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 · ${l.reviews} reviews × 2 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10</span>`;
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
 }

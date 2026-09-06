@@ -21,11 +21,19 @@ Open PRs of participants count as "in progress" only when updated since the JabC
 
 Needs: impl
 
-### Focus items first, then newest first
-`req~column-order~1`
+### JabCon items first, then newest first
+`req~column-order~2`
 
-Items carrying the focus label (config `focus_label`) come first, separated by an "other" divider; within each group
-the most recently merged / closed / updated item is on top.
+JabCon items (focus label `focus_label` or one of the configured `milestones`) come first, separated by an "other"
+divider; within each group the most recently merged / closed / updated item is on top.
+
+Needs: impl
+
+### Backlog shows JabCon items only
+`req~backlog-jabcon-only~1`
+
+The backlog lists open items carrying the focus label or belonging to a configured milestone in a public repo,
+nothing else (an issue merely assigned to a participant elsewhere on GitHub is not a JabCon task).
 
 Needs: impl
 
@@ -113,10 +121,10 @@ Needs: impl
 ## Scoring
 
 ### Points
-`req~scoring~1`
+`req~scoring~2`
 
-Merged PR (as author) 3 points, review 2, comment / issue / push 1. The ticker shows the same points per event as the
-leaderboard sums.
+Merged PR (as author) 3 points, review 2, comment / issue / push 1. On a JabCon item (focus label or configured
+milestone) each counts tenfold. The ticker shows the same points per event as the leaderboard sums.
 
 Needs: impl
 
@@ -156,6 +164,14 @@ Needs: impl
 
 Each activity row links to the concrete comment, review or issue (not just the repo), shows an excerpt, the repo
 badge and the points, newest first.
+
+Needs: impl
+
+### JabCon activity on top
+`req~activity-grouped~1`
+
+The ticker shows events on JabCon items first and everything else below an "other" divider, newest first within
+each group.
 
 Needs: impl
 
