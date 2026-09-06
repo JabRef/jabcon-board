@@ -227,5 +227,13 @@ The stats show the top refactorings detected in merged PRs (records, sealed type
 
 Needs: impl
 
+### AI models
+`req~ai-models~1`
+
+The nerd corner shows which AI assistants were credited in the merged PRs' commits (co-author trailers and tool
+sign-off lines) as a pie chart with a legend beside it, one slice per model, counted in PRs.
+
+Needs: impl
+
 <!-- markdownlint-disable-file MD022 -->
 
