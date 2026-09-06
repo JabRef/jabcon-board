@@ -341,13 +341,13 @@ def pr_stats(c, cached):
 # [impl->req~scoring~3]
 def leaderboard(cards, events, private):
     """Merged PR 3, review 2, other 1; tenfold on a JabCon item (focus label / milestone), times the configured
-    repo_factors elsewhere (e.g. upstream JavaFX work)."""
+    repo_factors elsewhere (keys are repos or whole orgs, e.g. the JabRef org and upstream JavaFX work)."""
     score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "boosted": 0, "points": 0} for p in PARTICIPANTS}
     jabcon = {(c["repo"], c["number"]) for c in cards if c["focus"]}
     repo_factors = CONFIG.get("repo_factors", {})
 
     def factor(s, repo, number):
-        f = 10 if (repo, number) in jabcon else repo_factors.get(repo, 1)
+        f = 10 if (repo, number) in jabcon else repo_factors.get(repo) or repo_factors.get(repo.split("/")[0], 1)
         s["milestone"] += f == 10
         s["boosted"] += f != 10 and f != 1
         return f
