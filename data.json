@@ -78,7 +78,7 @@
  ],
  "focus": {
   "label": "project: jabcon",
-  "open": 6,
+  "open": 7,
   "closed": 9,
   "url": "https://github.com/issues?q=org%3AJabRef%20label%3A%22project%3A%20jabcon%22%20is%3Aopen"
  },
@@ -102,7 +102,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T21:54:04+00:00",
+ "generated_at": "2026-09-06T21:57:26+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -3552,29 +3552,7 @@
    "labels": [
     "rfr"
    ],
-   "updated_at": "2026-09-06T21:54:09Z",
-   "closed_at": null,
-   "state_reason": null,
-   "merged_at": null,
-   "column": "progress",
-   "focus": false
-  },
-  {
-   "id": "https://github.com/JabRef/jabref/pull/16849",
-   "repo": "JabRef/jabref",
-   "number": 16849,
-   "title": "Add SWHID identifier and Software Heritage fetcher",
-   "url": "https://github.com/JabRef/jabref/pull/16849",
-   "type": "pr",
-   "draft": false,
-   "author": "7amo10",
-   "assignees": [],
-   "labels": [
-    "component: bib(la)tex",
-    "component: fetcher",
-    "first contrib"
-   ],
-   "updated_at": "2026-09-06T21:47:29Z",
+   "updated_at": "2026-09-06T21:56:24Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3594,10 +3572,33 @@
    "labels": [
     "component: fetcher",
     "component: entry-editor",
+    "project: jabcon",
     "good second issue",
     "status: to-be-merged"
    ],
-   "updated_at": "2026-09-06T21:39:24Z",
+   "updated_at": "2026-09-06T21:55:01Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": true
+  },
+  {
+   "id": "https://github.com/JabRef/jabref/pull/16849",
+   "repo": "JabRef/jabref",
+   "number": 16849,
+   "title": "Add SWHID identifier and Software Heritage fetcher",
+   "url": "https://github.com/JabRef/jabref/pull/16849",
+   "type": "pr",
+   "draft": false,
+   "author": "7amo10",
+   "assignees": [],
+   "labels": [
+    "component: bib(la)tex",
+    "component: fetcher",
+    "first contrib"
+   ],
+   "updated_at": "2026-09-06T21:47:29Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -5063,6 +5064,24 @@
  ],
  "events": [
   {
+   "id": "20276587519",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T21:57:16Z",
+   "summary": "pushed 1 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null,
+   "before": "5c483fbc49c993c5885b4f6b931a57d3f055ed4f",
+   "head": "27df71c24557874361229530b6b9a329a461cfcb",
+   "commits": 1,
+   "sync": false
+  },
+  {
    "id": "20276152494",
    "type": "PushEvent",
    "action": null,
@@ -5189,6 +5208,24 @@
    "head": "b7a3b8a1b41282e64cef3b4fd28599298e4922ea",
    "commits": 1,
    "sync": false
+  },
+  {
+   "id": "14532394239",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:39:24Z",
+   "summary": "labeled PR #16874",
+   "number": 16874,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16874",
+   "excerpt": "",
+   "review_id": null,
+   "before": null,
+   "head": null,
+   "commits": null,
+   "sync": null
   },
   {
    "id": "20275370828",
@@ -8745,46 +8782,27 @@
    "commits": null,
    "sync": null,
    "self": false
-  },
-  {
-   "id": "14526834885",
-   "type": "PullRequestReviewCommentEvent",
-   "action": "created",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T18:21:59Z",
-   "summary": "commented on PR #16651",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#discussion_r3944856476",
-   "excerpt": ":)",
-   "review_id": 5126212920,
-   "before": null,
-   "head": null,
-   "commits": null,
-   "sync": null,
-   "self": false
-  },
-  {
-   "id": "14526816276",
-   "type": "IssueCommentEvent",
-   "action": "created",
-   "actor": "subhramit",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-06T18:21:16Z",
-   "summary": "commented on #16651: Add auto-commit, push & pull features for Git",
-   "number": 16651,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/pull/16651#issuecomment-5561213839",
-   "excerpt": "I have a similar idea about OpenOffice, since now its preferences are also divided across the panel settings and preferences tab.",
-   "review_id": null,
-   "before": null,
-   "head": null,
-   "commits": null,
-   "sync": null
   }
  ],
  "all_events": [
+  {
+   "id": "20276587519",
+   "type": "PushEvent",
+   "action": null,
+   "actor": "koppor",
+   "repo": "JabRef/jabcon-board",
+   "created_at": "2026-09-06T21:57:16Z",
+   "summary": "pushed 1 commit(s) to main",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabcon-board",
+   "excerpt": "",
+   "review_id": null,
+   "before": "5c483fbc49c993c5885b4f6b931a57d3f055ed4f",
+   "head": "27df71c24557874361229530b6b9a329a461cfcb",
+   "commits": 1,
+   "sync": false
+  },
   {
    "id": "20276152494",
    "type": "PushEvent",
@@ -8912,6 +8930,24 @@
    "head": "b7a3b8a1b41282e64cef3b4fd28599298e4922ea",
    "commits": 1,
    "sync": false
+  },
+  {
+   "id": "14532394239",
+   "type": "PullRequestEvent",
+   "action": "labeled",
+   "actor": "subhramit",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T21:39:24Z",
+   "summary": "labeled PR #16874",
+   "number": 16874,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16874",
+   "excerpt": "",
+   "review_id": null,
+   "before": null,
+   "head": null,
+   "commits": null,
+   "sync": null
   },
   {
    "id": "20275370828",
@@ -30266,10 +30302,10 @@
   },
   {
    "login": "koppor",
-   "points": 160,
+   "points": 161,
    "merged": 17,
    "reviews": 6,
-   "other": 97
+   "other": 98
   },
   {
    "login": "pluto-han",
