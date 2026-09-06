@@ -96,7 +96,7 @@
    }
   }
  },
- "generated_at": "2026-09-06T09:28:26+00:00",
+ "generated_at": "2026-09-06T09:37:55+00:00",
  "config": {
   "org": "JabRef",
   "focus_label": "project: jabcon",
@@ -1412,6 +1412,26 @@
    "focus": false
   },
   {
+   "id": "https://github.com/JabRef/jabref/pull/16869",
+   "repo": "JabRef/jabref",
+   "number": 16869,
+   "title": "fix(bibtex): recover after unmatched braces",
+   "url": "https://github.com/JabRef/jabref/pull/16869",
+   "type": "pr",
+   "draft": false,
+   "author": "Siedlerchr",
+   "assignees": [],
+   "labels": [
+    "component: import-load"
+   ],
+   "updated_at": "2026-09-06T09:35:19Z",
+   "closed_at": null,
+   "state_reason": null,
+   "merged_at": null,
+   "column": "progress",
+   "focus": false
+  },
+  {
    "id": "https://github.com/JabRef/jabref/pull/16853",
    "repo": "JabRef/jabref",
    "number": 16853,
@@ -2191,7 +2211,7 @@
     "component: external-files",
     "first contrib"
    ],
-   "updated_at": "2026-09-06T09:14:10Z",
+   "updated_at": "2026-09-06T09:37:50Z",
    "closed_at": null,
    "state_reason": null,
    "merged_at": null,
@@ -3893,6 +3913,34 @@
   }
  ],
  "events": [
+  {
+   "id": "14513098024",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:32:07Z",
+   "summary": "opened PR #16869",
+   "number": 16869,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16869",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20228051689",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-06T09:30:58Z",
+   "summary": "created branch fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14512961144",
    "type": "IssueCommentEvent",
@@ -6758,37 +6806,37 @@
    "excerpt": "big lambda, is it possible to extract to a new method?",
    "review_id": 5120899624,
    "self": false
-  },
-  {
-   "id": "14480350110",
-   "type": "IssuesEvent",
-   "action": "closed",
-   "actor": "InAnYan",
-   "repo": "JabRef/jabref",
-   "created_at": "2026-09-05T10:38:22Z",
-   "summary": "closed issue #16607: Floating titles get in the way when not needed",
-   "number": 16607,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabref/issues/16607",
-   "excerpt": "",
-   "review_id": null
-  },
-  {
-   "id": "20137519465",
-   "type": "PushEvent",
-   "action": null,
-   "actor": "koppor",
-   "repo": "JabRef/jabcon-board",
-   "created_at": "2026-09-05T10:38:22Z",
-   "summary": "pushed 0 commit(s) to main",
-   "number": null,
-   "merged": false,
-   "url": "https://github.com/JabRef/jabcon-board",
-   "excerpt": "",
-   "review_id": null
   }
  ],
  "all_events": [
+  {
+   "id": "14513098024",
+   "type": "PullRequestEvent",
+   "action": "opened",
+   "actor": "Siedlerchr",
+   "repo": "JabRef/jabref",
+   "created_at": "2026-09-06T09:32:07Z",
+   "summary": "opened PR #16869",
+   "number": 16869,
+   "merged": false,
+   "url": "https://github.com/JabRef/jabref/issues/16869",
+   "excerpt": "",
+   "review_id": null
+  },
+  {
+   "id": "20228051689",
+   "type": "CreateEvent",
+   "action": null,
+   "actor": "Siedlerchr",
+   "repo": "Siedlerchr/jabref",
+   "created_at": "2026-09-06T09:30:58Z",
+   "summary": "created branch fix/bibtex-unmatched-braces-recovery",
+   "number": null,
+   "merged": false,
+   "url": "https://github.com/Siedlerchr/jabref",
+   "excerpt": "",
+   "review_id": null
+  },
   {
    "id": "14512961144",
    "type": "IssueCommentEvent",
