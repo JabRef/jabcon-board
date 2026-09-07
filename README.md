@@ -23,7 +23,8 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 - The video is rendered by `gource-jabcon.yml` in [JabRef/jabref](https://github.com/JabRef/jabref) to
   `https://files.jabref.org/gource/jabcon-2026.mp4`; the URL is set at the top of `site/app.js`.
 - `scripts/highlights.py data.json jabcon-2026.mp4 highlights.mp4 [count]` cuts a highlights reel from that video: a
-  Star-Wars crawl per biggest merged PR, then a BOOM into the gource moment it was merged. Needs only `ffmpeg`.
+  Star-Wars crawl per biggest merged PR, then a BOOM into the gource moment it was merged. Needs `ffmpeg` and `gh`
+  (the merge commits on `main` locate the moments; PRs the video does not contain yet are left out).
   `.github/workflows/highlights.yml` renders it hourly to <https://jabref.github.io/jabcon-board/highlights.mp4>.
 
 ## Configuration
