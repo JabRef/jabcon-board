@@ -1,5 +1,5 @@
-# Cuts a highlights reel from the JabRef gource video (scripts/highlights.py) and publishes it to gh-pages as
-# highlights.mp4, hourly. Its own concurrency group: sharing gh-pages with the 5-minute Board would cancel queued runs.
+# Cuts a highlights reel and a commentated run from the JabRef gource video (scripts/highlights.py) and publishes them
+# to gh-pages as highlights.mp4 and commentary.mp4, hourly. Its own concurrency group: sharing gh-pages with the 5-minute Board would cancel queued runs.
 name: Highlights
 
 on:
@@ -21,7 +21,7 @@ jobs:
       - run: scripts/gh-pages.sh prepare
       - run: sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
       - run: curl -sfo gource.mp4 https://files.jabref.org/gource/jabcon-2026.mp4
-      - run: python3 scripts/highlights.py out/data.json gource.mp4 out/highlights.mp4
+      - run: python3 scripts/highlights.py out/data.json gource.mp4 out/highlights.mp4 6 out/commentary.mp4
         env:
           GH_TOKEN: ${{ github.token }}
       - run: scripts/gh-pages.sh push

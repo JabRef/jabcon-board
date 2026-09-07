@@ -3,10 +3,14 @@
 footage leading up to its merge, then a BOOM at the merge moment. Only seconds in which gource moves are used, so the
 reel never shows a still. Only needs ffmpeg (drawtext, perspective) and the board's data.json.
 
-    scripts/highlights.py data.json jabcon-2026.mp4 highlights.mp4 [count]
+    scripts/highlights.py data.json jabcon-2026.mp4 highlights.mp4 [count] [commentary.mp4]
+
+With a fifth argument, a second video is written: the full gource run with a sports commentator's subtitles, one line
+per merge, phrased from the board's data (no language model involved; see commentary()).
 """
 import json
 import os
+import random
 import re
 import subprocess
 import sys
@@ -16,6 +20,7 @@ from datetime import datetime, timedelta
 
 DATA, VIDEO, OUT = sys.argv[1:4]
 COUNT = int(sys.argv[4]) if len(sys.argv) > 4 else 6
+COMMENTARY = sys.argv[5] if len(sys.argv) > 5 else None
 REPO = "JabRef/jabref"
 # gource's timeline, fitted against the clock gource draws into the frames (JabRef/jabref's gource-jabcon.yml asks for
 # 100 s/day and --auto-skip-seconds 30; the rendered video runs 1.5x faster, and starts a quarter hour early).
@@ -209,7 +214,72 @@ for i, c in enumerate(top):
     highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {merger(c)}")
 highlight("outro", "To be continued...\n\n\n\n\n", moving[-CRAWL:])
 
+
+
+def commentary(out):
+    """The whole gource run with a commentator's subtitles: an opener, a line at every merge, a word when a night is
+    skipped, and a closing tally. Lines are picked from phrase banks by PR size, seeded by PR number so a re-render
+    says the same things."""
+    MIN, MAX, LATE = 2.5, 5.0, 3.0  # a line shows 2.5 to 5 s; when it cannot start within 3 s of its moment it is dropped
+    cues = []  # (moment, hold, text)
+    size = lambda c: c["stats"]["additions"] + c["stats"]["deletions"]
+    big = ["WHAT A MONSTER! {who} lands {title}: {add} lines added, {dele} gone!",
+           "Ohh, the crowd is on its feet! {who} with {title}, {add} new lines!",
+           "That's a heavyweight from {who}: {title}. {add} lines added, {dele} removed!"]
+    mid = ["{who} slots it in: {title}. {add} lines, clean finish.",
+           "Nicely worked by {who}: {title}.",
+           "And {who} delivers: {title}. {add} lines added."]
+    small = ["A quick one from {who}: {title}.", "{who} keeps it tidy: {title}.", "Tap-in for {who}: {title}."]
+    reviewed = [" {rev} waves it through.", " Reviewed by {rev}, no complaints.", " {rev} had a look first, all clear."]
+    cues.append((0, 6, f"Good evening and welcome to JabCon {start.year}! {len(merged)} pull requests merged into {REPO} so far. Let's go!"))
+    for c in merged:
+        at = moment(c)
+        if at is None:
+            continue
+        rng = random.Random(c["number"])
+        bank = big if size(c) > 800 else mid if size(c) > 150 else small
+        text = rng.choice(bank).format(who=people(c)[0], title=c["title"], add=c["stats"]["additions"], dele=c["stats"]["deletions"])
+        revs = involved(c, {"PullRequestReviewEvent"}, people(c))
+        if revs:
+            text += rng.choice(reviewed).format(rev=" and ".join(revs[:2]))
+        cues.append((at, MAX, text))
+    for t, nxt in zip(commits, commits[1:]):
+        if (nxt - t).total_seconds() * SECONDS_PER_DAY / 86400 > SKIP_CAP and position.get(nxt, 1e9) < moving_end:
+            cues.append((position[nxt] - 1.5, 4, f"The night falls over the repository... and we're back on {nxt.strftime('%A')} morning!"))
+    lead = data["leaderboard"][0]
+    cues.append((moving_end, duration - moving_end, f"And that's the state of play: {len(merged)} merged, {data['stats']['additions']} lines added. "
+                 f"{display(lead['login'])} leads the table with {lead['points']} points. Back to the studio!"))
+    lines, free = [], 0.0  # (start, end, text): one line at a time, each waiting for the previous one to be read
+    for at, hold, text in sorted(cues):
+        begin = max(at, free)
+        if begin - at > LATE:
+            continue
+        if lines and lines[-1][1] > begin:
+            lines[-1] = (lines[-1][0], begin, lines[-1][2])
+        lines.append((begin, min(begin + hold, duration), text))
+        free = begin + MIN
+    ass = os.path.join(tmp, "commentary.ass")
+    fmt = lambda t: f"{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}"
+    esc = lambda x: x.replace("\\", "").replace("{", "(").replace("}", ")")
+    open(ass, "w").write(f"""[Script Info]
+ScriptType: v4.00+
+PlayResX: {W}
+PlayResY: {H}
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,{FONT},52,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,3,10,0,2,200,200,60,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+""" + "".join(f"Dialogue: 0,{fmt(a)},{fmt(b)},Default,,0,0,0,,{{\\fad(150,300)}}{esc(t)}\n" for a, b, t in lines))
+    run("-i", VIDEO, "-vf", f"subtitles='{ass}'", "-an", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-y", out)
+    print(out, f"{len(lines)} lines of commentary")
+
+
 lst = os.path.join(tmp, "list.txt")
 open(lst, "w").write("".join(f"file '{s}'\n" for s in segments))
 run("-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", "-y", OUT)
+if COMMENTARY:
+    commentary(COMMENTARY)
 print(OUT, f"{len(top)} highlights of {len(shown)} PRs in the video ({len(merged)} merged), {len(moving)} moving of {len(motion)} seconds, tmp {tmp}")
