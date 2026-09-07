@@ -1,6 +1,8 @@
 'use strict';
 const VIDEO = 'https://files.jabref.org/gource/jabcon-2026.mp4';
 const HIGHLIGHTS = 'highlights.mp4'; // rendered hourly by .github/workflows/highlights.yml next to this file
+const COMMENTARY = 'commentary.mp4'; // same, the full run with a commentator's subtitles
+const PLAYLIST = [VIDEO, HIGHLIGHTS, COMMENTARY];
 const COLORS = ['#58a6ff', '#3fb950', '#d29922', '#f778ba', '#a371f7', '#ff7b72', '#79c0ff', '#56d364', '#e3b341', '#ffa657'];
 let previous = null;
 let raw = null;
@@ -296,19 +298,19 @@ async function load() {
 }
 
 const video = $('#gource');
-let current = HIGHLIGHTS; // toggled before each load, so the wall starts with the gource run
-// [impl->req~gource-alternate~1] a full gource run, then the highlights reel, and so on; every swap fetches the newest rendering
+let current = COMMENTARY; // advanced before each load, so the wall starts with the gource run
+// [impl->req~gource-alternate~2] the gource run, the highlights reel, the commentated run, and again; every swap fetches the newest rendering
 function nextVideo() {
-  current = current === VIDEO ? HIGHLIGHTS : VIDEO;
+  current = PLAYLIST[(PLAYLIST.indexOf(current) + 1) % PLAYLIST.length];
   video.src = `${current}?ts=${Date.now()}`;
   video.play().catch(() => {});
 }
 video.addEventListener('ended', nextVideo);
 $('#next-video').addEventListener('click', nextVideo); // [impl->req~gource-next~1]
-// load failed: skip the reel, or hide the player (placeholder shows) and retry in 30 s. Besides "not rendered yet", this
+// load failed: skip to the next video, or (gource itself) hide the player (placeholder shows) and retry in 30 s. Besides "not rendered yet", this
 // happens when files.jabref.org swaps the file (every 15 min) under a running download: the browser's next range request
 // hits a different ETag and the media errors out.
-video.addEventListener('error', () => { if (current === HIGHLIGHTS) nextVideo(); else { video.removeAttribute('src'); setTimeout(loadVideo, 30000); } });
+video.addEventListener('error', () => { if (current !== VIDEO) nextVideo(); else { video.removeAttribute('src'); setTimeout(loadVideo, 30000); } });
 // [impl->req~gource-speed~2] re-applied per source: a src swap resets the rate; the reel's crawl is only readable at 1x
 video.addEventListener('loadedmetadata', () => { video.playbackRate = current === VIDEO ? 3 : 1; });
 // [impl->req~gource-refresh~2]

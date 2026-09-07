@@ -26,7 +26,9 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
   Star-Wars crawl per biggest merged PR over the gource footage leading up to it, then a BOOM at the merge moment.
   Only seconds in which gource moves are used, so the reel never shows a still. Needs `ffmpeg` and `gh`
   (the merge commits on `main` locate the moments; PRs the video does not contain yet are left out).
-  `.github/workflows/highlights.yml` renders it hourly to <https://jabref.github.io/jabcon-board/highlights.mp4>.
+  With a fifth argument it also writes the full run with a sports commentator's subtitles, one line per merge, phrased
+  from the board's data (no language model). `.github/workflows/highlights.yml` renders both hourly to
+  <https://jabref.github.io/jabcon-board/highlights.mp4> and `commentary.mp4`; the wall plays the three videos in turn.
 
 ## Configuration
 
