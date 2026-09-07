@@ -402,7 +402,7 @@ def leaderboard(cards, events, private):
     return [{"login": p, **v} for p, v in score.items()]
 
 
-# [impl->req~milestones~1]
+# [impl->req~milestones~2]
 def milestones(previous):
     """Milestone progress; the closed count when first seen (usually JabCon start) is kept as the baseline."""
     result = []

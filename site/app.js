@@ -62,7 +62,7 @@ function updateMore(box) {
   section.querySelector('.more.below').textContent = below ? `▼ ${below} more` : '';
 }
 
-// [impl->req~milestones~1]
+// [impl->req~milestones~2]
 // [impl->req~nerd-corner~1]
 // [impl->req~leaderboard-breakdown~1]
 function renderStats() {
@@ -73,16 +73,19 @@ function renderStats() {
   $('#components').innerHTML = comps.map(([name, n]) =>
     `<span>${esc(name)}</span><div class="bar" style="width:${(100 * n / max).toFixed(1)}%"></div><span>${n}</span>`).join('');
   const f = data.focus;
-  $('#milestones').innerHTML = (f ? `<div class="milestone focus"><div class="label">${link(f.url, `${esc(f.label)}`)}
+  const focusWhy = f && `Issues labeled "${f.label}" across the org — the JabCon focus.\n${f.closed} of ${f.closed + f.open} closed, ${f.open} to go.\nThe green bar is the closed share.`;
+  $('#milestones').innerHTML = (f ? `<div class="milestone focus" title="${esc(focusWhy)}"><div class="label">${link(f.url, `${esc(f.label)}`)}
       <span>${f.closed}/${f.closed + f.open} <span class="muted">${f.open} to go</span></span></div>
       <div class="bar"><div class="during" style="width:${(100 * f.closed / (f.closed + f.open || 1)).toFixed(1)}%"></div></div></div>` : '') +
     (data.milestones || []).map((m) => {
     const total = m.open + m.closed || 1, during = m.closed - m.baseline;
-    return `<div class="milestone"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}
+    // the label is truncated on narrow screens, so the tooltip repeats the full milestone name
+    const why = `Milestone "${m.title}" in ${m.repo}.\n${m.closed} of ${total} issues closed, ${m.open} to go.\n+${during} of them were closed since JabCon started (${m.baseline} were already done then).\nBlue bar: closed before JabCon, green tail: closed during it.`;
+    return `<div class="milestone" title="${esc(why)}"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}
       <span>${m.closed}/${total}${during ? ` <span class="muted">+${during}</span>` : ''} <span class="muted">${m.open} to go</span></span></div>
       <div class="bar"><div class="during" style="width:${(100 * m.closed / total).toFixed(1)}%"></div><div class="before" style="width:${(100 * m.baseline / total).toFixed(1)}%"></div></div></div>`;
   }).join('') + Object.entries(data.private_activity || {}).map(([repo, c]) =>
-    `<div class="private">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
+    `<div class="private" title="${esc(`${repo} is private: only counts since JabCon started, never titles or numbers.`)}">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
   $('#refactorings').innerHTML = data.refactorings.map((r) =>
     `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
   renderAiModels();
