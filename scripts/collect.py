@@ -336,7 +336,7 @@ def complexity(files):
     return 1 + sum(len(BRANCH.findall(l)) for l in added)
 
 
-# [impl->req~nerd-records~1]
+# [impl->req~nerd-records~2]
 IDENT = re.compile(r"\b[A-Za-z_$][A-Za-z0-9_$]{15,}\b")
 METHOD = re.compile(r"^\+(\s*)(?:(?:public|private|protected|static|final|abstract|synchronized|default)\s+)+[\w.<>\[\],?\s]+?\s(\w+)\s*\([^;]*\)\s*(?:throws [\w., ]+)?\{\s*$")
 
@@ -381,25 +381,27 @@ def sup(s, key):
 # (title, what makes a winner - None if the PR does not qualify -, how to phrase it). Biggest wins, so the
 # shortest method competes on a negated line count.
 RECORD_KINDS = [
-    ("Longest identifier", lambda s: len(sup(s, "identifier") or "") or None, lambda s: f"{sup(s, 'identifier')} ({len(sup(s, 'identifier'))} chars)"),
-    ("Longest method", lambda s: (sup(s, "longest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'longest_method')[0]}(), {sup(s, 'longest_method')[1]} lines"),
-    ("Shortest method", lambda s: -(sup(s, "shortest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'shortest_method')[0]}(), {sup(s, 'shortest_method')[1]} lines"),
-    ("Most code written", lambda s: s.get("additions") or None, lambda s: f"+{s['additions']} lines"),
-    ("Most code deleted", lambda s: s.get("deletions") or None, lambda s: f"\u2212{s['deletions']} lines"),
-    ("Most tangled diff", lambda s: s.get("complexity") or None, lambda s: f"complexity {s['complexity']}"),
-    ("Wordiest changelog entry", lambda s: len(sup(s, "changelog") or "") or None, lambda s: f"{sup(s, 'changelog')[:40]} ({len(sup(s, 'changelog'))} chars)"),
+    ("Longest identifier", lambda s: len(sup(s, "identifier") or "") or None, lambda s: f"{sup(s, 'identifier')} ({len(sup(s, 'identifier'))} chars)", "\U0001f4cf"),
+    ("Longest method", lambda s: (sup(s, "longest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'longest_method')[0]}(), {sup(s, 'longest_method')[1]} lines", "\U0001f40d"),
+    ("Shortest method", lambda s: -(sup(s, "shortest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'shortest_method')[0]}(), {sup(s, 'shortest_method')[1]} lines", "\U0001f90f"),
+    ("Most code written", lambda s: s.get("additions") or None, lambda s: f"+{s['additions']} lines", "\u270d\ufe0f"),
+    ("Most code deleted", lambda s: s.get("deletions") or None, lambda s: f"\u2212{s['deletions']} lines", "\U0001f525"),
+    ("Most tangled diff", lambda s: s.get("complexity") or None, lambda s: f"complexity {s['complexity']}", "\U0001f35d"),
+    ("Wordiest changelog entry", lambda s: len(sup(s, "changelog") or "") or None, lambda s: f"{sup(s, 'changelog')[:40]} ({len(sup(s, 'changelog'))} chars)", "\U0001f4dc"),
 ]
 
 
-def records(cards):
-    """One record holder per category, across every PR that has stats."""
+def records(cards, exclude=()):
+    """One record holder per category, across every PR that has stats. The excluded authors do not hold records - the
+    board's own maintainer asked to be left out of the record bonus, so the runner-up collects it."""
     out = []
-    for title, size, text in RECORD_KINDS:
-        ranked = [(size(c["stats"]), c) for c in cards if c.get("stats") and size(c["stats"]) is not None]
+    for title, size, text, emoji in RECORD_KINDS:
+        ranked = [(size(c["stats"]), c) for c in cards
+                  if c.get("stats") and size(c["stats"]) is not None and c["author"] not in exclude]
         if ranked:
             c = max(ranked, key=lambda p: p[0])[1]
-            out.append({"title": title, "text": text(c["stats"]), "repo": c["repo"], "number": c["number"],
-                        "author": c["author"], "url": c["url"]})
+            out.append({"title": title, "text": text(c["stats"]), "emoji": emoji, "repo": c["repo"],
+                        "number": c["number"], "author": c["author"], "url": c["url"]})
     return out
 
 
@@ -478,7 +480,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~5]
+# [impl->req~bonus-points~6]
 BONUS = 100
 # the repos JabRef builds on (config): a fix there ships to everybody, not just to JabRef
 DEPENDENCIES = {r.lower() for r in CONFIG.get("dependency_repos", [])}
@@ -500,7 +502,7 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~5]
+# [impl->req~bonus-points~6]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -512,7 +514,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~5]
+# [impl->req~bonus-points~6]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, _, _ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -551,6 +553,9 @@ def bonuses(cards, events, joined=None):
         t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
     # awards the data cannot see (config): the jury's own +100
     out = [{**a, "points": BONUS} for a in CONFIG.get("honorary_awards", []) if a["login"] in tally]
+    # every nerd corner record pays, minus the authors who asked to be left out (the runner-up then holds it)
+    out += [{"login": r["author"], "title": r["title"], "text": r["text"], "emoji": r["emoji"], "points": BONUS}
+            for r in records(cards, exclude=CONFIG.get("record_bonus_exclude", [])) if r["author"] in tally]
     # the newest face in the org: whoever's first issue or PR here is the most recent
     dated = {p: d for p, d in (joined or {}).items() if d and p in tally}
     if dated:

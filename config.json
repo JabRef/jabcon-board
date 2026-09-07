@@ -71,5 +71,8 @@
       "text": "keeps JabCon hydrated",
       "emoji": "🍸"
     }
+  ],
+  "record_bonus_exclude": [
+    "koppor"
   ]
 }

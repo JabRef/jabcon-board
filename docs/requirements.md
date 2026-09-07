@@ -135,14 +135,16 @@ The ticker shows the same points per event as the leaderboard sums.
 Needs: impl
 
 ### Bonus points
-`req~bonus-points~5`
+`req~bonus-points~6`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
 most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
 activity between 22:00 and 06:00, most before 08:00, most activity in repositories outside the org, most activity in
 JabRef's configured `dependency_repos` (openjdk/jfx, ICU4J, jgit, ...), and the most distinct repositories outside
 the org that are not dependencies. Everybody tied for a category gets the award. The contributor whose first issue or PR in the org is the most recent gets a
-newcomer award. Configured `honorary_awards` add +100 for what the data cannot see. The leaderboard
+newcomer award. Every nerd corner record pays +100 to the PR's author as well, except for the authors listed in
+`record_bonus_exclude` — there the runner-up holds the record bonus. Configured `honorary_awards` add +100 for what
+the data cannot see. The leaderboard
 shows one emoji per award under the login and names the category in the tooltip and the contributor detail view.
 
 Needs: impl
@@ -321,11 +323,11 @@ Together with the records below they take turns, five lines at a time, so everyt
 Needs: impl
 
 ### Nerd corner records
-`req~nerd-records~1`
+`req~nerd-records~2`
 
 The nerd corner also lists one record holder per funny category, mined from the merged PRs' diffs: longest
 identifier, longest and shortest method, most code written, most code deleted, most tangled diff (cyclomatic
-complexity) and wordiest changelog entry. Each line names the PR and its author.
+complexity) and wordiest changelog entry. Each line carries the category's icon and names the PR and its author.
 
 Needs: impl
 
