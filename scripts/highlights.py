@@ -7,6 +7,7 @@ reel never shows a still. Only needs ffmpeg (drawtext, perspective) and the boar
 """
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -37,8 +38,15 @@ duration = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entri
 
 # the commits gource animates: main since JabCon started, by author date (gource's clock), via gh (GH_TOKEN in CI)
 log = subprocess.check_output(["gh", "api", "--paginate", f"repos/{REPO}/commits?sha=main&since={start.isoformat()}&per_page=100",
-                               "--jq", ".[].commit.author.date"], text=True).split()
-commits = sorted(datetime.fromisoformat(d.replace("Z", "+00:00")) for d in log)
+                               "--jq", ".[] | [.commit.author.date, .commit.message] | @json"], text=True).splitlines()
+commits, coauthors = [], {}  # author date -> Co-authored-by names of that commit (noreply addresses give the login)
+for d, message in map(json.loads, log):
+    t = datetime.fromisoformat(d.replace("Z", "+00:00"))
+    commits.append(t)
+    for m in re.finditer(r"^co-authored-by:\s*([^<\n]+?)\s*<([^>]*)>", message, re.I | re.M):
+        login = re.fullmatch(r"(?:\d+\+)?([^@]+)@users\.noreply\.github\.com", m[2])
+        coauthors.setdefault(t, []).append(login[1] if login else m[1])
+commits.sort()
 position, video_t, prev = {}, 0.0, start + START_OFFSET  # commit time -> video second
 for t in commits:
     if t < prev:
@@ -49,10 +57,20 @@ for t in commits:
 moving_end = max((v for v in position.values() if v + END_HOLD <= duration + 1), default=0) + 3
 
 
+def nearest(c):
+    return min(position, key=lambda t: abs((t - when(c)).total_seconds()), default=None)
+
+
+def people(c):
+    """PR author plus the merge commit's co-authors, in order, without duplicates."""
+    names = [c["author"]] + coauthors.get(nearest(c), [])
+    return list(dict.fromkeys(n for n in names if n.lower() not in {x.lower() for x in names[:names.index(n)]}))
+
+
 def moment(c):
     """Video second of a merged PR's commit: the closest one within 25 minutes (the merge queue rebases the commit well
     before the merge is recorded), None when the video does not contain it yet."""
-    t = min(position, key=lambda t: abs((t - when(c)).total_seconds()), default=None)
+    t = nearest(c)
     if t is None or abs((t - when(c)).total_seconds()) > 1500 or position[t] > moving_end:
         return None
     return position[t]
@@ -137,7 +155,7 @@ year = start.year
 highlight("intro", f"JabCon {year}\n\n{len(merged)} pull requests merged\ninto {REPO}\n\nThese are the {len(top)} biggest.\n\n\n\n\n",
           moving[:CRAWL], title="A long time ago in a repository far, far away....")
 for i, c in enumerate(top):
-    body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\nby {c['author']}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
+    body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\nby {textwrap.fill(', '.join(people(c)), 34)}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
     before, after = around(int(moment(c)))
     highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {c['author']}".replace("'", ""))
 highlight("outro", "To be continued...\n\n\n\n\n", moving[-CRAWL:])
