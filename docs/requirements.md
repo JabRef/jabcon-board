@@ -132,6 +132,14 @@ The ticker shows the same points per event as the leaderboard sums.
 
 Needs: impl
 
+### The points badge explains itself
+`req~points-tooltip~1`
+
+Hovering the `+n` badge of an activity row (ticker or contributor detail) shows how that number came about: what the
+event was worth and, when it is not 1, the factor and the repo or JabCon item it comes from.
+
+Needs: impl
+
 ### No review points on one's own PR
 `req~no-self-review-points~1`
 
