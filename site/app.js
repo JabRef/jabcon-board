@@ -123,22 +123,43 @@ function renderAiModels() {
 const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e.number);
 const reviewPoints = (cc) => (cc == null ? 2 : cc <= 2 ? 1 : cc >= 20 ? 3 : 2);
 const boostText = () => Object.entries(data.config.repo_factors || {}).map(([r, f]) => `${r} × ${f}`).join(', ') || 'boosted repos';
-function eventPoints(e) {
-  if (e.self || e.sync) return 0; // own PR, fork sync
-  const rf = data.config.repo_factors || {};
-  const card = cardOf(e), factor = card?.focus ? 10 : rf[e.repo] || rf[e.repo.split('/')[0]] || 1;
-  if (e.type === 'PullRequestReviewEvent') return reviewPoints(card?.stats?.complexity) * factor;
-  if (['IssueCommentEvent', 'PushEvent'].includes(e.type)) return factor;
-  if (e.type === 'IssuesEvent') return ['labeled', 'unlabeled'].includes(e.action) ? 0 : factor;
-  if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !e.merged))) return factor;
-  if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return 3 * factor;
-  return 0;
+// What the event is worth before the factor, and the words for it, so the score and its explanation cannot drift apart.
+// [impl->req~points-tooltip~1]
+function eventBase(e) {
+  const card = cardOf(e);
+  if (e.self) return [0, 'review on own PR'];
+  if (e.sync) return [0, 'fork sync'];
+  if (e.type === 'PullRequestReviewEvent') {
+    const cc = card?.stats?.complexity;
+    return [reviewPoints(cc), `review of a ${cc == null ? 'diff of unknown complexity' : cc <= 2 ? 'trivial' : cc >= 20 ? 'complex' : 'medium'} diff`];
+  }
+  if (e.type === 'PushEvent') return [1, 'push'];
+  if (e.type === 'IssueCommentEvent') return [1, 'comment'];
+  if (e.type === 'IssuesEvent') return ['labeled', 'unlabeled'].includes(e.action) ? [0, 'labeling (a workflow looks like triage)'] : [1, `issue ${e.action}`];
+  if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !e.merged))) return [1, `PR ${e.action}`];
+  if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return [3, 'merged PR'];
+  return [0, 'nothing scores for this'];
+}
+// [impl->req~points-tooltip~1]
+function eventFactor(e) {
+  const rf = data.config.repo_factors || {}, org = e.repo.split('/')[0];
+  if (cardOf(e)?.focus) return [10, 'JabCon item'];
+  if (rf[e.repo]) return [rf[e.repo], e.repo];
+  if (rf[org]) return [rf[org], org];
+  return [1, ''];
+}
+const eventPoints = (e) => eventBase(e)[0] * eventFactor(e)[0];
+// [impl->req~points-tooltip~1]
+function pointsWhy(e) {
+  const [base, what] = eventBase(e), [f, where] = eventFactor(e);
+  if (!base) return `no points: ${what}`;
+  return f === 1 ? `${what}: ${base}` : `${what} ${base} × ${f} (${where}) = ${base * f}`;
 }
 
 // [impl->req~ticker-deep-links~1]
 function eventRow(e) {
   const org = data.config.org + '/', pts = eventPoints(e);
-  return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}${pts ? `<span class="pts">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
+  return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}${pts ? `<span class="pts" title="${esc(pointsWhy(e))}">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
 }
 
 // [impl->req~activity-grouped~1]
