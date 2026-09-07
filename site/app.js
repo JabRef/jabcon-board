@@ -259,7 +259,9 @@ function tick() {
   const age = now - Date.parse(data.generated_at);
   $('#updated').style.setProperty('--p', Math.min(1, age / REFRESH_MS));
   $('#updated').classList.toggle('overdue', age > REFRESH_MS);
-  $('#updated').title = `last update ${ago(data.generated_at)}`;
+  $('#updated').title = `Last data run ${ago(data.generated_at)}, the next one is ${age > REFRESH_MS ? 'overdue' : `expected in ${Math.ceil((REFRESH_MS - age) / 60000)} min`}.
+The ring fills over the ${REFRESH_MS / 60000} minutes between data runs (a full turn takes that long, so it barely moves while you watch), pulses when a run is late, and turns amber with "!" when data is older than 30 min.
+Why: shows at a glance whether the board is current.`;
   $('#data-time').textContent = `data ${new Date(data.generated_at).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone })}`;
   $('#header').classList.toggle('stale', age > 30 * 60000);
   const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
