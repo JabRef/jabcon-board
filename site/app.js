@@ -304,6 +304,7 @@ function nextVideo() {
   video.play().catch(() => {});
 }
 video.addEventListener('ended', nextVideo);
+$('#next-video').addEventListener('click', nextVideo); // [impl->req~gource-next~1]
 // no rendering yet: skip the reel, or hide the player (placeholder shows) and retry in 15 minutes
 video.addEventListener('error', () => { if (current === HIGHLIGHTS) nextVideo(); else video.removeAttribute('src'); });
 // [impl->req~gource-speed~2] re-applied per source: a src swap resets the rate; the reel's crawl is only readable at 1x
