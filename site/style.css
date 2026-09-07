@@ -35,7 +35,7 @@ header.stale #updated { background: var(--warn); }
 header.stale #updated::after { content: "!"; display: grid; place-items: center; font-weight: bold; }
 #logo { height: 3.5rem; }
 main {
-  display: grid; height: calc(100vh - 5rem); gap: .8rem; padding: .8rem;
+  display: grid; height: calc(100dvh - 5rem); gap: .8rem; padding: .8rem;
   grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 11fr 9fr;
 }
 section { background: rgba(22, 27, 34, .8); /* translucent so the ambient glow shows through */ border: 1px solid var(--border); border-radius: .6rem; padding: .6rem .8rem; overflow: hidden; display: flex; flex-direction: column; }
@@ -186,3 +186,28 @@ html.still body, html.still body::before, html.still section { animation: none; 
 .pts.zero { color: var(--muted); font-weight: normal; }
 #detail .repo { flex: none; font-size: .75rem; color: var(--muted); background: var(--border); padding: .1rem .4rem; border-radius: .3rem; }
 #detail li.other { opacity: .65; }
+
+/* Phones and small tablets: one scrolling column with readable text instead of the wall layout.
+   The page scrolls (no more content hidden under the browser toolbars) and nothing is clipped. */
+/* [impl->req~mobile-layout~1] */
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+  html, body { height: auto; overflow: visible; }
+  header { flex-wrap: wrap; height: auto; gap: .6rem 1rem; padding: .6rem .8rem; }
+  header h1, #clock { font-size: 1.5rem; }
+  #timeline { order: 3; flex-basis: 100%; }
+  #logo { height: 2.2rem; }
+  main { display: block; height: auto; padding: .6rem; }
+  main > section { margin-bottom: .6rem; overflow: visible; }
+  .cards, #ticker { max-height: 70vh; overflow-y: auto; }
+  #statsrow, #nerd { display: block; overflow: visible; }
+  #aimodels { margin-top: .6rem; }
+  #leaderboard { flex-wrap: wrap; gap: .6rem; }
+  #gource { max-height: none; }
+  /* touch has no un-hover: keep a tap from enlarging the video for good */
+  #gource[src]:hover, #gource[src]:has(~ .video-nav:hover) { position: static; width: 100%; height: auto; box-shadow: none; }
+  .video-nav { position: static; }
+  #gource[src]:hover ~ .video-nav, .video-nav:hover { display: inline-block; }
+  #footer { position: static; justify-content: flex-end; padding: 0 .8rem .8rem; }
+  #detail { padding: .8rem; }
+}
