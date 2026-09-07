@@ -62,9 +62,21 @@ def nearest(c):
 
 
 def people(c):
-    """PR author plus the merge commit's co-authors, in order, without duplicates."""
-    names = [c["author"]] + coauthors.get(nearest(c), [])
-    return list(dict.fromkeys(n for n in names if n.lower() not in {x.lower() for x in names[:names.index(n)]}))
+    """PR author plus the merge commit's co-authors, without duplicates; AI models collapse into one "Claude", named last."""
+    names, seen = [], set()
+    for n in [c["author"]] + coauthors.get(nearest(c), []):
+        n = "Claude" if n.startswith("Claude") else n
+        if n.lower() not in seen and not n.endswith("[bot]"):
+            seen.add(n.lower())
+            names.append(n)
+    return sorted(names, key=lambda n: n == "Claude")
+
+
+def involved(c, types, exclude):
+    """Logins with an event of these types on the PR (from the board's data), minus those already credited (a
+    co-author's real name counts when it contains the login, e.g. "Subhramit Basu" for subhramit)."""
+    actors = {e["actor"] for e in data["all_events"] if e["repo"] == REPO and e["number"] == c["number"] and e["type"] in types}
+    return sorted((a for a in actors if not any(a.lower() in x.lower() for x in exclude)), key=str.lower)
 
 
 def moment(c):
@@ -155,7 +167,16 @@ year = start.year
 highlight("intro", f"JabCon {year}\n\n{len(merged)} pull requests merged\ninto {REPO}\n\nThese are the {len(top)} biggest.\n\n\n\n\n",
           moving[:CRAWL], title="A long time ago in a repository far, far away....")
 for i, c in enumerate(top):
-    body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\nby {textwrap.fill(', '.join(people(c)), 34)}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
+    authors = people(c)
+    reviewers = involved(c, {"PullRequestReviewEvent"}, authors)
+    commenters = involved(c, {"IssueCommentEvent", "PullRequestReviewCommentEvent"}, authors + reviewers)
+    credits = f"by {', '.join(authors)}"
+    if reviewers:
+        credits += f"\nreviews by {', '.join(reviewers)}"
+    if commenters:
+        credits += f"\ncomments by {', '.join(commenters)}"
+    credits = "\n".join(textwrap.fill(line, 34) for line in credits.split("\n"))
+    body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\n{credits}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
     before, after = around(int(moment(c)))
     highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {c['author']}".replace("'", ""))
 highlight("outro", "To be continued...\n\n\n\n\n", moving[-CRAWL:])
