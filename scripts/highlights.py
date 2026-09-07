@@ -10,15 +10,18 @@ import subprocess
 import sys
 import tempfile
 import textwrap
-from datetime import datetime
+from datetime import datetime, timedelta
 
 DATA, VIDEO, OUT = sys.argv[1:4]
 COUNT = int(sys.argv[4]) if len(sys.argv) > 4 else 6
 REPO = "JabRef/jabref"
-SECONDS_PER_DAY = 100  # gource_seconds_per_day in JabRef/jabref's gource-jabcon.yml
-# ponytail: gource's --auto-skip-seconds is 30, but the rendered video is shorter than that simulation; 12 matches the
-# real length best. Positions are stretched to the real duration anyway, so this only tunes the in-between spacing.
-SKIP_CAP = float(os.environ.get("SKIP_CAP", 12))
+# gource's timeline, fitted against the clock gource draws into the frames (JabRef/jabref's gource-jabcon.yml asks for
+# 100 s/day and --auto-skip-seconds 30; the rendered video runs 1.5x faster, and starts a quarter hour early).
+# ponytail: refit these three when the clock in the video drifts from the "merged by" labels.
+SECONDS_PER_DAY = float(os.environ.get("SECONDS_PER_DAY", 67))
+SKIP_CAP = float(os.environ.get("SKIP_CAP", 23))  # video seconds of idling before gource skips to the next commit
+START_OFFSET = timedelta(minutes=-15)
+END_HOLD = 10  # gource holds the final frame this long after the last commit; the graph settles over the first 3 s
 CRAWL, SPEED = 7, 165  # seconds per card, crawl px/s
 LEAD, TAIL = 5, 6  # gource seconds shown before the boom hits at the merge moment, and after
 W, H = 1920, 1080
@@ -31,13 +34,31 @@ when = lambda c: datetime.fromisoformat(c["merged_at"].replace("Z", "+00:00"))
 merged = sorted((c for c in data["cards"] if c["repo"] == REPO and c.get("merged_at")), key=when)
 duration = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", VIDEO]))
 
-# simulate gource's timeline (idle stretches skipped), then stretch it onto the real video length
-position, video_t, prev = {}, 0.0, start
-for c in merged:
-    video_t += min(SKIP_CAP, (when(c) - prev).total_seconds() * SECONDS_PER_DAY / 86400)
-    position[c["number"]], prev = video_t, when(c)
-scale = duration / video_t if video_t else 1
-top = sorted(sorted(merged, key=lambda c: -(c["stats"].get("complexity") or 0))[:COUNT], key=when)
+# the commits gource animates: main since JabCon started, by author date (gource's clock), via gh (GH_TOKEN in CI)
+log = subprocess.check_output(["gh", "api", "--paginate", f"repos/{REPO}/commits?sha=main&since={start.isoformat()}&per_page=100",
+                               "--jq", ".[].commit.author.date"], text=True).split()
+commits = sorted(datetime.fromisoformat(d.replace("Z", "+00:00")) for d in log)
+position, video_t, prev = {}, 0.0, start + START_OFFSET  # commit time -> video second
+for t in commits:
+    if t < prev:
+        continue
+    video_t += min(SKIP_CAP, (t - prev).total_seconds() * SECONDS_PER_DAY / 86400)
+    position[t], prev = video_t, t
+# the video may lag behind the log by a render: only commits that fit before the final hold are in it
+moving_end = max((v for v in position.values() if v + END_HOLD <= duration + 1), default=0) + 3
+
+
+def moment(c):
+    """Video second of a merged PR's commit: the closest one within 25 minutes (the merge queue rebases the commit well
+    before the merge is recorded), None when the video does not contain it yet."""
+    t = min(position, key=lambda t: abs((t - when(c)).total_seconds()), default=None)
+    if t is None or abs((t - when(c)).total_seconds()) > 1500 or position[t] + TAIL > moving_end:
+        return None
+    return position[t]
+
+
+shown = [c for c in merged if moment(c) is not None]
+top = sorted(sorted(shown, key=lambda c: -(c["stats"].get("complexity") or 0))[:COUNT], key=when)
 
 tmp = tempfile.mkdtemp()
 segments = []
@@ -69,7 +90,7 @@ def crawl(name, text, title=""):
 def boom(name, at, label):
     """BOOM at the merge moment: white flash, zoom punch, camera shake and an RGB-split glitch over half a second, with a
     bass hit; the clip runs LEAD seconds of plain gource before, so the eye has settled when it hits."""
-    at = max(0.0, min(at - LEAD, duration - LEAD - TAIL))
+    at = max(0.0, at - LEAD)
     b, clip = LEAD, LEAD + TAIL
     vf = (f"scale={W * 1.2}:{H * 1.2},"
           f"crop={W}:{H}:x='{W * 0.1}+if(between(t,{b},{b + 0.6}),(random(0)-0.5)*160*({b + 0.6}-t),0)'"
@@ -92,10 +113,10 @@ crawl("intro", f"JabCon {year}\n\n{len(merged)} pull requests merged\ninto {REPO
 for i, c in enumerate(top):
     body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\nby {c['author']}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
     crawl(f"crawl{i}", body)
-    boom(f"boom{i}", position[c["number"]] * scale, f"#{c['number']} merged by {c['author']}".replace("'", ""))
+    boom(f"boom{i}", moment(c), f"#{c['number']} merged by {c['author']}".replace("'", ""))
 crawl("outro", "To be continued...\n\n\n\n\n")
 
 lst = os.path.join(tmp, "list.txt")
 open(lst, "w").write("".join(f"file '{s}'\n" for s in segments))
 run("-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", "-y", OUT)
-print(OUT, f"{len(top)} highlights, {len(segments)} segments, tmp {tmp}")
+print(OUT, f"{len(top)} highlights of {len(shown)} PRs in the video ({len(merged)} merged), footage moves until {moving_end:.0f}s of {duration:.0f}s, tmp {tmp}")

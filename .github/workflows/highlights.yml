@@ -22,4 +22,6 @@ jobs:
       - run: sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
       - run: curl -sfo gource.mp4 https://files.jabref.org/gource/jabcon-2026.mp4
       - run: python3 scripts/highlights.py out/data.json gource.mp4 out/highlights.mp4
+        env:
+          GH_TOKEN: ${{ github.token }}
       - run: scripts/gh-pages.sh push
