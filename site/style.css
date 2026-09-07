@@ -99,7 +99,7 @@ section h2 .count { float: right; color: var(--fg); }
 .leader { position: relative; cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
 .leader img { width: 2.6rem; height: 2.6rem; border-radius: 50%; border: .25rem solid var(--c); display: block; margin: 0 auto .2rem; }
 .leader .pts { font-size: 1rem; font-weight: bold; font-variant-numeric: tabular-nums; }
-/* [impl->req~leaderboard-slot-machine~3] a spinning reel is blurred and amber, one still holding the old total is gray */
+/* [impl->req~leaderboard-slot-machine~4] a spinning reel is blurred and amber, one still holding the old total is gray */
 .leader .pts.rolling { color: var(--warn); filter: blur(.04rem); }
 .leader .pts.pending { color: var(--muted); }
 .delta { position: absolute; top: -.2rem; left: 50%; transform: translateX(-50%); font-size: .85rem; font-weight: bold;
