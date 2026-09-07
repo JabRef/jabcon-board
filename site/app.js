@@ -99,13 +99,16 @@ function renderStats() {
 
 // Slot machine: new numbers do not just appear, they spin into place, lowest contributor first and the leader last,
 // the whole board settled within SLOT_TOTAL_MS. A reel that has not had its turn shows the previous total, grayed.
-// Within a reel the digits lock right to left, and the gain pops out of the settled number and flies off the top.
+// Within a reel the digits lock right to left. Only once every reel stands still do the gains pop, in the same order,
+// so the three acts (rolling, points, badges) never overlap.
 // One interval drives every reel; the next render's call cancels it, which also drops the then-stale nodes.
-// [impl->req~leaderboard-slot-machine~3]
-const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500;
-let slotTimer;
+// [impl->req~leaderboard-slot-machine~4]
+const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500, POP_STAGGER_MS = 500;
+let slotTimer, popTimers = [];
 function slotMachine() {
   clearInterval(slotTimer);
+  popTimers.forEach(clearTimeout); // pending pops point at the leaderboard nodes this render is replacing
+  popTimers = [];
   const reels = [...document.querySelectorAll('#leaderboard .pts')].reverse();
   if (!reels.length || document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const was = Object.fromEntries((previous?.leaderboard || []).map((l) => [l.login, l.points]));
@@ -125,15 +128,17 @@ function slotMachine() {
       r.el.classList.remove('pending');
       r.el.classList.toggle('rolling', locked < r.final.length);
       r.el.textContent = [...r.final].map((d, i) => (i >= r.final.length - locked ? d : Math.floor(Math.random() * 10))).join('');
-      if (locked >= r.final.length) { r.settled = true; popPoints(r.el, r.gain); } else running = true;
+      if (locked >= r.final.length) r.settled = true; else running = true;
     }
-    if (!running) clearInterval(slotTimer);
+    if (running) return;
+    clearInterval(slotTimer);
+    plan.forEach((r, i) => popTimers.push(setTimeout(() => popPoints(r.el, r.gain), i * POP_STAGGER_MS)));
   }, 60);
 }
 
 // The gain jumps out of the reel, hangs there long enough to be read, then flies off the top of the screen and
 // settles as a badge over the avatar. Fixed and on <body>, so no ancestor of the fixed video is transformed.
-// [impl->req~leaderboard-slot-machine~3]
+// [impl->req~leaderboard-slot-machine~4]
 function popPoints(el, gain) {
   if (gain <= 0) return;
   const box = el.getBoundingClientRect(), pop = document.createElement('div');
