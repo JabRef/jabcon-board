@@ -19,3 +19,10 @@ assert ("a", "Chatterbox") in got and ("b", "Chatterbox") in got, "tied on comme
 assert ("b", "Night owl") not in got, got
 assert all(b["points"] == 100 for b in collect.bonuses(cards, events))
 print("ok")
+
+# AI-assisted merged PRs count a quarter
+collect.PARTICIPANTS = ["a"]
+pr = {"column": "done", "type": "pr", "author": "a", "repo": "x/y", "number": 1, "focus": False}
+assert collect.leaderboard([pr], [], {})[0]["points"] == 3
+assert collect.leaderboard([{**pr, "stats": {"ai": ["Claude Opus 5"]}}], [], {})[0]["points"] == 1  # 3 * 0.25, rounded
+print("ok")
