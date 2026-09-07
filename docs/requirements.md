@@ -298,9 +298,19 @@ is skipped with a warning, not a failed run.
 Needs: impl
 
 ### Nerd corner
-`req~nerd-corner~1`
+`req~nerd-corner~2`
 
 The stats show the top refactorings detected in merged PRs (records, sealed types, pattern matching, ...).
+Together with the records below they take turns, five lines at a time, so everything is readable from the wall.
+
+Needs: impl
+
+### Nerd corner records
+`req~nerd-records~1`
+
+The nerd corner also lists one record holder per funny category, mined from the merged PRs' diffs: longest
+identifier, longest and shortest method, most code written, most code deleted, most tangled diff (cyclomatic
+complexity) and wordiest changelog entry. Each line names the PR and its author.
 
 Needs: impl
 

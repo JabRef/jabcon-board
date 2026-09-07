@@ -39,7 +39,7 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 `private_repos` lists private repos whose issue activity is counted for the leaderboard and shown as counts only (no titles) under the milestones. Milestones and `private_repos` need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.
 Bot activity is excluded.
 
-"Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...).
+"Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...), plus one record holder per funny category (longest identifier, longest and shortest method, most code written or deleted, most tangled diff, wordiest changelog entry).
 
 ## Leaderboard points
 
