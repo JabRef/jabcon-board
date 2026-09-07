@@ -155,8 +155,9 @@ function renderAiModels() {
 const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e.number);
 const reviewPoints = (cc) => (cc == null ? 2 : cc <= 2 ? 1 : cc >= 20 ? 3 : 2);
 const boostText = () => Object.entries(data.config.repo_factors || {}).map(([r, f]) => `${r} × ${f}`).join(', ') || 'boosted repos';
+const NOSCORE = { CreateEvent: 'creating a branch or tag', DeleteEvent: 'deleting a branch', WatchEvent: 'starring a repo', ForkEvent: 'forking a repo', MemberEvent: 'a membership change', PullRequestReviewCommentEvent: 'a review comment (its review scored)' };
 // What the event is worth before the factor, and the words for it, so the score and its explanation cannot drift apart.
-// [impl->req~points-tooltip~1]
+// [impl->req~points-tooltip~2]
 function eventBase(e) {
   const card = cardOf(e);
   if (e.self) return [0, 'review on own PR'];
@@ -170,9 +171,10 @@ function eventBase(e) {
   if (e.type === 'IssuesEvent') return ['labeled', 'unlabeled'].includes(e.action) ? [0, 'labeling (a workflow looks like triage)'] : [1, `issue ${e.action}`];
   if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !e.merged))) return [1, `PR ${e.action}`];
   if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return [3, 'merged PR'];
-  return [0, 'nothing scores for this'];
+  if (e.type === 'PullRequestEvent') return [0, e.merged || e.action === 'merged' ? 'a merge scores for the PR author only' : `PR ${e.action}: only opening and closing score`];
+  return [0, NOSCORE[e.type] || 'this kind of event never scores'];
 }
-// [impl->req~points-tooltip~1]
+// [impl->req~points-tooltip~2]
 function eventFactor(e) {
   const rf = data.config.repo_factors || {}, org = e.repo.split('/')[0];
   if (cardOf(e)?.focus) return [10, 'JabCon item'];
@@ -181,7 +183,7 @@ function eventFactor(e) {
   return [1, ''];
 }
 const eventPoints = (e) => eventBase(e)[0] * eventFactor(e)[0];
-// [impl->req~points-tooltip~1]
+// [impl->req~points-tooltip~2]
 function pointsWhy(e) {
   const [base, what] = eventBase(e), [f, where] = eventFactor(e);
   if (!base) return `no points: ${what}`;
@@ -191,7 +193,7 @@ function pointsWhy(e) {
 // [impl->req~ticker-deep-links~1]
 function eventRow(e) {
   const org = data.config.org + '/', pts = eventPoints(e);
-  return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}${pts ? `<span class="pts" title="${esc(pointsWhy(e))}">+${pts}</span>` : ''}${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
+  return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}<span class="pts${pts ? '' : ' zero'}" title="${esc(pointsWhy(e))}">+${pts}</span>${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
 }
 
 // [impl->req~activity-grouped~1]

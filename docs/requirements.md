@@ -133,10 +133,11 @@ The ticker shows the same points per event as the leaderboard sums.
 Needs: impl
 
 ### The points badge explains itself
-`req~points-tooltip~1`
+`req~points-tooltip~2`
 
-Hovering the `+n` badge of an activity row (ticker or contributor detail) shows how that number came about: what the
-event was worth and, when it is not 1, the factor and the repo or JabCon item it comes from.
+Every activity row (ticker or contributor detail) carries a `+n` badge, `+0` in muted grey when the event scored
+nothing. Hovering it shows how that number came about: what the event was worth and, when it is not 1, the factor
+and the repo or JabCon item it comes from — or, for `+0`, why it scored nothing (own PR, fork sync, labeling).
 
 Needs: impl
 

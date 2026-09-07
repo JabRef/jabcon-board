@@ -171,5 +171,6 @@ html.still body, html.still body::before, html.still section { animation: none; 
 #detail .what > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #detail .excerpt { color: var(--muted); font-style: italic; font-size: .85em; }
 #detail .pts { flex: none; font-weight: bold; color: var(--ok); cursor: help; }
+.pts.zero { color: var(--muted); font-weight: normal; }
 #detail .repo { flex: none; font-size: .75rem; color: var(--muted); background: var(--border); padding: .1rem .4rem; border-radius: .3rem; }
 #detail li.other { opacity: .65; }
