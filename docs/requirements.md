@@ -133,12 +133,13 @@ The ticker shows the same points per event as the leaderboard sums.
 Needs: impl
 
 ### Bonus points
-`req~bonus-points~2`
+`req~bonus-points~3`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
 most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
-activity between 22:00 and 06:00, most before 08:00, most activity in repositories outside the org (upstream
-work such as openjdk/jfx). Everybody tied for a category gets the award. The leaderboard
+activity between 22:00 and 06:00, most before 08:00, most activity in repositories outside the org, most activity in
+JabRef's configured `dependency_repos` (openjdk/jfx, ICU4J, jgit, ...), and the most distinct repositories outside
+the org that are not dependencies. Everybody tied for a category gets the award. The leaderboard
 shows one emoji per award under the login and names the category in the tooltip and the contributor detail view.
 
 Needs: impl

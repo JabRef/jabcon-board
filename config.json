@@ -39,5 +39,29 @@
   "repo_factors": {
     "JabRef": 5,
     "openjdk/jfx": 6
-  }
+  },
+  "dependency_repos": [
+    "openjdk/jfx",
+    "unicode-org/icu",
+    "eclipse-jgit/jgit",
+    "apache/lucene",
+    "citation-style-language/styles",
+    "citation-style-language/locales",
+    "michel-kraemer/citeproc-java",
+    "controlsfx/controlsfx",
+    "tinylog-org/tinylog",
+    "java-diff-utils/java-diff-utils",
+    "vsch/flexmark-java",
+    "jhy/jsoup",
+    "FasterXML/jackson-databind",
+    "FasterXML/jackson-dataformats-text",
+    "harawata/appdirs",
+    "h2database/h2database",
+    "pgjdbc/pgjdbc",
+    "langchain4j/langchain4j",
+    "remkop/picocli",
+    "mockito/mockito",
+    "junit-team/junit-framework",
+    "gradle/gradle"
+  ]
 }
