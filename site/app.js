@@ -103,12 +103,19 @@ function renderStats() {
 // so the three acts (rolling, points, badges) never overlap.
 // One interval drives every reel; the next render's call cancels it, which also drops the then-stale nodes.
 // [impl->req~leaderboard-slot-machine~4]
-const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500, POP_STAGGER_MS = 500;
+const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500, POP_STAGGER_MS = 500, POP_MS = 5000;
 let slotTimer, popTimers = [];
+// The bell for a new leader is the finale, so it waits for the reels and the pops. Nothing pending means it rings now
+// (still mode, reduced motion, first load). A new render flushes what is still queued: it belongs to older data.
+// [impl->req~leader-change-bell~2]
+let slotsRunning = false, afterSlots = [];
+function whenSlotsSettled(fn) { slotsRunning ? afterSlots.push(fn) : fn(); }
+function settleSlots() { slotsRunning = false; const queue = afterSlots; afterSlots = []; queue.forEach((fn) => fn()); }
 function slotMachine() {
   clearInterval(slotTimer);
   popTimers.forEach(clearTimeout); // pending pops point at the leaderboard nodes this render is replacing
   popTimers = [];
+  settleSlots();
   const reels = [...document.querySelectorAll('#leaderboard .pts')].reverse();
   if (!reels.length || document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const was = Object.fromEntries((previous?.leaderboard || []).map((l) => [l.login, l.points]));
@@ -118,6 +125,7 @@ function slotMachine() {
     el.classList.add('pending');
     return { el, final, gain: before == null ? 0 : Number(final) - before, start: i * (SLOT_TOTAL_MS - SLOT_ROLL_MS) / Math.max(1, reels.length - 1) };
   });
+  slotsRunning = true;
   const t0 = performance.now();
   slotTimer = setInterval(() => {
     const t = performance.now() - t0;
@@ -133,6 +141,7 @@ function slotMachine() {
     if (running) return;
     clearInterval(slotTimer);
     plan.forEach((r, i) => popTimers.push(setTimeout(() => popPoints(r.el, r.gain), i * POP_STAGGER_MS)));
+    popTimers.push(setTimeout(settleSlots, (plan.length - 1) * POP_STAGGER_MS + POP_MS));
   }, 60);
 }
 
@@ -151,7 +160,7 @@ function popPoints(el, gain) {
     { transform: 'translate(-50%, -1.5rem) scale(1.8)', opacity: 1, offset: 0.1 },
     { transform: 'translate(-50%, -2rem) scale(1.8)', opacity: 1, offset: 0.55 },
     { transform: `translate(-50%, ${-box.top - 40}px) scale(1.2)`, opacity: 0 }],
-  { duration: 5000, easing: 'cubic-bezier(.3,.9,.4,1)' }).onfinish = () => {
+  { duration: POP_MS, easing: 'cubic-bezier(.3,.9,.4,1)' }).onfinish = () => {
     pop.remove();
     const badge = document.createElement('div'); // survives until the next render, so the last gain stays readable
     badge.className = 'delta';
@@ -267,15 +276,15 @@ $('#leaderboard').addEventListener('click', (e) => {
   if (who) { pushedDetail = true; location.hash = `user/${encodeURIComponent(who)}`; }
 });
 
-// [impl->req~leader-change-bell~1]
+// [impl->req~leader-change-bell~2]
 // [impl->req~done-confetti~2]
 function celebrate(prev) {
   if (!prev) return;
   const leader = data.leaderboard[0]?.login, wasLeader = prev.leaderboard[0]?.login;
-  if (leader && wasLeader && leader !== wasLeader) {
+  if (leader && wasLeader && leader !== wasLeader) whenSlotsSettled(() => {
     bell();
     toast(`🔔 ${leader} takes the lead!`);
-  }
+  });
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
     // the name is the author, not the merger: credit it with "by", never as the one who merged
