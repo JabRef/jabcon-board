@@ -9,6 +9,7 @@ import os
 import subprocess
 import sys
 import tempfile
+import textwrap
 from datetime import datetime
 
 DATA, VIDEO, OUT = sys.argv[1:4]
@@ -50,7 +51,8 @@ def crawl(name, text, title=""):
     """Yellow text crawling into the distance; the tilt is a perspective warp of a flat scrolling canvas."""
     path = os.path.join(tmp, f"{name}.txt")
     open(path, "w").write(text)
-    vf = (f"drawtext=textfile='{path}':font='{FONT}':fontsize=54:fontcolor=#ffd23f:line_spacing=18:x=(w-text_w)/2"
+    vf = (f"geq=r=0:g='4*max(0,(Y-{H // 2})/{H // 2})':b='48*max(0,(Y-{H // 2})/{H // 2})',"
+          f"drawtext=textfile='{path}':font='{FONT}':fontsize=54:fontcolor=#ffd23f:line_spacing=18:x=(w-text_w)/2"
           f":y=h-t*{SPEED},"
           # narrow the top: letters lean towards the vanishing point, as in the real crawl
           f"perspective=x0={W * 0.3}:y0=0:x1={W * 0.7}:y1=0:x2=0:y2={H}:x3={W}:y3={H}:sense=destination,"
@@ -58,6 +60,7 @@ def crawl(name, text, title=""):
     if title:
         vf = f"drawtext=text='{title}':font='{FONT}':fontsize=40:fontcolor=#4bd5ee:x=(w-text_w)/2:y=h*0.42:enable='lt(t,2.2)'," + vf
     out = os.path.join(tmp, f"{name}.mp4")
+    # a faint glow at the bottom makes the frame edge visible, so text entering there reads as entering, not as cut off
     run("-f", "lavfi", "-i", f"color=black:s={W}x{H}:d={CRAWL}", "-f", "lavfi", "-i", f"anullsrc=r=44100:cl=stereo:d={CRAWL}",
         "-vf", vf, *ENC, out)
     segments.append(out)
@@ -87,7 +90,7 @@ year = start.year
 crawl("intro", f"JabCon {year}\n\n{len(merged)} pull requests merged\ninto {REPO}\n\nThese are the {len(top)} biggest.\n\n\n\n\n",
       "A long time ago in a repository far, far away....")
 for i, c in enumerate(top):
-    body = f"Episode {i + 1}\n\n{c['title']}\n\nby {c['author']}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
+    body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\nby {c['author']}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
     crawl(f"crawl{i}", body)
     boom(f"boom{i}", position[c["number"]] * scale, f"#{c['number']} merged by {c['author']}".replace("'", ""))
 crawl("outro", "To be continued...\n\n\n\n\n")
