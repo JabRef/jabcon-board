@@ -182,10 +182,11 @@ function celebrate(prev) {
   }
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
-    // no name on a PR: the author did not merge it, and the merger is not in the card data
-    const who = c.assignees[0] || c.author;
-    toast(c.type === 'pr' ? `🎉 #${c.number} ${c.title} got ${c.merged_at ? 'merged' : 'closed'}`
-                          : `🎉 ${who} closed #${c.number} ${c.title}`);
+    // the name is the author, not the merger: credit it with "by", never as the one who merged
+    if (c.type === 'pr')
+      toast(`🎉 PR #${c.number} ${c.title} by ${c.author} ${c.merged_at ? 'merged' : 'closed'}`);
+    else
+      toast(`🎉 ${c.assignees[0] || c.author} closed #${c.number} ${c.title}`);
     if (window.confetti) confetti({ particleCount: 200, spread: 90, origin: { y: 0.7 } });
   }
 }
