@@ -80,9 +80,9 @@ function renderStats() {
     (data.milestones || []).map((m) => {
     const total = m.open + m.closed || 1, during = m.closed - m.baseline;
     // the label is truncated on narrow screens, so the tooltip repeats the full milestone name
-    const why = `Milestone "${m.title}" in ${m.repo}.\n${m.closed} of ${total} issues closed, ${m.open} to go.\n+${during} of them were closed since JabCon started (${m.baseline} were already done then).\nBlue bar: closed before JabCon, green tail: closed during it.`;
+    const why = `Milestone "${m.title}" in ${m.repo}.\n${m.closed} of ${total} issues closed, ${m.open} to go.\n${during} of them were closed since JabCon started (${m.baseline} were already done then).\nBlue bar: closed before JabCon, green tail: closed during it.`;
     return `<div class="milestone" title="${esc(why)}"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}
-      <span>${m.closed}/${total}${during ? ` <span class="muted">+${during}</span>` : ''} <span class="muted">${m.open} to go</span></span></div>
+      <span>${during} closed <span class="muted">${m.open} to go</span></span></div>
       <div class="bar"><div class="during" style="width:${(100 * m.closed / total).toFixed(1)}%"></div><div class="before" style="width:${(100 * m.baseline / total).toFixed(1)}%"></div></div></div>`;
   }).join('') + Object.entries(data.private_activity || {}).map(([repo, c]) =>
     `<div class="private" title="${esc(`${repo} is private: only counts since JabCon started, never titles or numbers.`)}">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
