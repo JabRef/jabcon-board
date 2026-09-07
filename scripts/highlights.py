@@ -80,9 +80,8 @@ def involved(c, types, exclude):
 
 
 def merger(c):
-    """Who pressed merge: the actor of the merge event in the board's data (None when no participant did)."""
-    return next((e["actor"] for e in data["all_events"] if e["repo"] == REPO and e["number"] == c["number"]
-                 and e["type"] == "PullRequestEvent" and e["action"] == "merged"), None)
+    """Who pressed merge (a maintainer, or the merge queue on their behalf), from the PR itself."""
+    return subprocess.check_output(["gh", "api", f"repos/{REPO}/pulls/{c['number']}", "--jq", ".merged_by.login"], text=True).strip()
 
 
 def moment(c):
@@ -184,7 +183,7 @@ for i, c in enumerate(top):
     credits = "\n".join(textwrap.fill(line, 34) for line in credits.split("\n"))
     body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\n{credits}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
     before, after = around(int(moment(c)))
-    highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged" + (f" by {merger(c)}" if merger(c) else ""))
+    highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {merger(c)}")
 highlight("outro", "To be continued...\n\n\n\n\n", moving[-CRAWL:])
 
 lst = os.path.join(tmp, "list.txt")
