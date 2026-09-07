@@ -324,7 +324,7 @@ def refactorings(pr, files, repo):
     return sorted(found, reverse=True)[:4]
 
 
-# [impl->req~scoring~5]
+# [impl->req~scoring~6]
 BRANCH = re.compile(r"\b(if|for|while|case|catch)\b|&&|\|\|")
 CODE = (".java", ".kt", ".js", ".ts", ".py", ".sh", ".fxml")
 
@@ -360,9 +360,9 @@ def pr_stats(c, cached):
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
-# [impl->req~scoring~5]
+# [impl->req~scoring~6]
 def leaderboard(cards, events, private):
-    """Merged PR 3, review 1..3 by the complexity of the reviewed diff, other (comment, issue, push, PR opened / labeled) 1; tenfold on a JabCon item (focus label / milestone), times the configured
+    """Merged PR 3, review 1..3 by the complexity of the reviewed diff, other (comment, issue, push, PR opened / labeled / closed unmerged) 1; tenfold on a JabCon item (focus label / milestone), times the configured
     repo_factors elsewhere (keys are repos or whole orgs, e.g. the JabRef org and upstream JavaFX work)."""
     score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "boosted": 0, "points": 0} for p in PARTICIPANTS}
     jabcon = {(c["repo"], c["number"]) for c in cards if c["focus"]}
@@ -392,7 +392,8 @@ def leaderboard(cards, events, private):
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
         elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "IssuesEvent", "PushEvent") \
-                or (e["type"] == "PullRequestEvent" and e.get("action") in ("opened", "labeled")):
+                or (e["type"] == "PullRequestEvent" and (e.get("action") in ("opened", "labeled")
+                                                        or (e.get("action") == "closed" and not e.get("merged")))):
             s["other"] += 1
         else:
             continue
