@@ -7,3 +7,15 @@ events = [{"actor": "a", "type": "IssuesEvent", "action": action, "repo": "x/y",
           for action in ("labeled", "unlabeled", "opened", "closed")]
 assert collect.leaderboard([], events, {})[0]["points"] == 2, "only opened / closed score"
 print("ok")
+
+# bonus round: the top of each category gets +100, ties share it
+collect.PARTICIPANTS = ["a", "b"]
+cards = [{"column": "done", "type": "pr", "author": "a", "repo": "x/y", "number": 1}]
+events = [{"actor": "a", "type": "IssueCommentEvent", "repo": "x/y", "number": 1, "created_at": "2026-09-05T23:30:00Z"},
+          {"actor": "b", "type": "IssueCommentEvent", "repo": "x/z", "number": 2, "created_at": "2026-09-05T12:00:00Z"}]
+got = {(b["login"], b["title"]) for b in collect.bonuses(cards, events)}
+assert ("a", "Closer") in got and ("a", "Night owl") in got, got
+assert ("a", "Chatterbox") in got and ("b", "Chatterbox") in got, "tied on comments"
+assert ("b", "Night owl") not in got, got
+assert all(b["points"] == 100 for b in collect.bonuses(cards, events))
+print("ok")

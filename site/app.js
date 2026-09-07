@@ -88,11 +88,19 @@ function renderStats() {
   renderNerd();
   renderAiModels();
   $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
-    const why = `${l.merged} merged PRs × 3\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`;
+    const why = `${l.merged} merged PRs × 3\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`
+      + (l.bonuses || []).map((b) => `\n+${b.points} ${b.title}: ${b.text}`).join('');
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
-    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
+    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div>${bonusRow(l)}</div>`;
   }).join('');
   slotMachine();
+}
+
+// [impl->req~bonus-points~1] the +100 awards a contributor holds, one emoji each, the category in the tooltip
+function bonusRow(l) {
+  return (l.bonuses || []).length
+    ? `<div class="bonuses">${l.bonuses.map((b) => `<span title="${esc(`+${b.points} ${b.title}: ${b.text}`)}">${b.emoji}</span>`).join('')}</div>`
+    : '';
 }
 
 // The nerd corner holds more than fits: the detected refactorings and the funny records (longest identifier,
@@ -268,6 +276,7 @@ function showDetail(login) {
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
   $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
+  $('#detail h2').innerHTML += (l.bonuses || []).map((b) => ` <span class="bonus" title="${esc(b.text)}">${b.emoji} ${esc(b.title)} +${b.points}</span>`).join('');
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
 }
