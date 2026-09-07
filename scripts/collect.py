@@ -324,7 +324,7 @@ def refactorings(pr, files, repo):
     return sorted(found, reverse=True)[:4]
 
 
-# [impl->req~scoring~7]
+# [impl->req~scoring~8]
 BRANCH = re.compile(r"\b(if|for|while|case|catch)\b|&&|\|\|")
 CODE = (".java", ".kt", ".js", ".ts", ".py", ".sh", ".fxml")
 
@@ -427,11 +427,14 @@ def pr_stats(c, cached):
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
-# [impl->req~scoring~7]
+AI_FACTOR = 0.25  # writing it without an assistant is the harder craft, for now
+
+# [impl->req~scoring~8]
 def leaderboard(cards, events, private):
     """Merged PR 3, review 1..3 by the complexity of the reviewed diff, other (comment, issue, push, PR opened / closed unmerged) 1; tenfold on a JabCon item (focus label / milestone), times the configured
-    repo_factors elsewhere (keys are repos or whole orgs, e.g. the JabRef org and upstream JavaFX work)."""
-    score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "boosted": 0, "points": 0} for p in PARTICIPANTS}
+    repo_factors elsewhere (keys are repos or whole orgs, e.g. the JabRef org and upstream JavaFX work); a quarter of
+    that for a merged PR whose commits credit an AI assistant."""
+    score = {p: {"merged": 0, "reviews": 0, "other": 0, "milestone": 0, "boosted": 0, "ai": 0, "points": 0} for p in PARTICIPANTS}
     jabcon = {(c["repo"], c["number"]) for c in cards if c["focus"]}
     cc = {(c["repo"], c["number"]): c.get("stats", {}).get("complexity") for c in cards if c["type"] == "pr"}
     repo_factors = CONFIG.get("repo_factors", {})
@@ -448,8 +451,11 @@ def leaderboard(cards, events, private):
             score[p]["points"] += n
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in score:
-            score[c["author"]]["merged"] += 1
-            score[c["author"]]["points"] += 3 * factor(score[c["author"]], c["repo"], c["number"])
+            s = score[c["author"]]
+            s["merged"] += 1
+            ai = bool(c.get("stats", {}).get("ai"))
+            s["ai"] += ai
+            s["points"] += 3 * factor(s, c["repo"], c["number"]) * (AI_FACTOR if ai else 1)
     for e in events:
         s = score.get(e["actor"])
         if s is None:
@@ -467,7 +473,7 @@ def leaderboard(cards, events, private):
             continue
         base = review_points(cc.get((e["repo"], e.get("number")))) if e["type"] == "PullRequestReviewEvent" else 1
         s["points"] += base * factor(s, e["repo"], e.get("number"))
-    return [{"login": p, **v} for p, v in score.items()]
+    return [{"login": p, **v, "points": round(v["points"])} for p, v in score.items()]
 
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice

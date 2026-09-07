@@ -122,12 +122,14 @@ Needs: impl
 ## Scoring
 
 ### Points
-`req~scoring~7`
+`req~scoring~8`
 
 Merged PR (as author) 3 points, review 1 to 3 by the cyclomatic complexity of the reviewed diff (branch points in the
 added code lines: 1 for a trivial diff such as docs, config or renames, 3 from 20 branch points on), comment / issue / push / PR opened or closed without merge 1 (closing a PR is triage work like closing an issue; merging someone else's PR still scores nothing). Labeling scores nothing: the public feed reports a labeling workflow under the user who triggered it, so it cannot be told from hand triage. On a JabCon item (focus label or configured
 milestone) each counts tenfold; elsewhere the configured `repo_factors` apply, keyed by repo or org (anything in the
 JabRef org and upstream JavaFX work count fivefold and sixfold).
+A merged PR whose commits credit an AI assistant (the same trailers the nerd corner's AI chart counts) scores a
+quarter of that: human-only code is the harder craft.
 The ticker shows the same points per event as the leaderboard sums.
 
 Needs: impl
