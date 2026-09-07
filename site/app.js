@@ -88,7 +88,7 @@ function renderStats() {
   renderNerd();
   renderAiModels();
   $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
-    const why = `${l.merged} merged PRs × 3\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`
+    const why = `${l.merged} merged PRs × 3 (${l.ai || 0} of them AI-assisted × 0.25)\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`
       + (l.bonuses || []).map((b) => `\n+${b.points} ${b.title}: ${b.text}`).join('');
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
     return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div>${bonusRow(l)}</div>`;
@@ -213,7 +213,7 @@ function renderAiModels() {
 
 // Mirrors the scoring in collect.py: merged PR (author) 3, review 1..3 by the complexity of the reviewed diff, comment / issue / push / PR opened or closed unmerged 1; tenfold on a JabCon
 // item, times config.repo_factors elsewhere (keys are repos or orgs: the JabRef org, upstream JavaFX work).
-// [impl->req~scoring~7]
+// [impl->req~scoring~8]
 // [impl->req~no-self-review-points~1]
 // [impl->req~no-fork-sync-points~1]
 const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e.number);
@@ -275,7 +275,7 @@ function showDetail(login) {
   const l = data.leaderboard.find((x) => x.login === login) || { points: 0, merged: 0, reviews: 0, other: 0 };
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
-  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
+  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 (${l.ai || 0} AI-assisted × 0.25) · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
   $('#detail h2').innerHTML += (l.bonuses || []).map((b) => ` <span class="bonus" title="${esc(b.text)}">${b.emoji} ${esc(b.title)} +${b.points}</span>`).join('');
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
