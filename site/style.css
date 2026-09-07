@@ -113,6 +113,7 @@ section h2 .count { float: right; color: var(--fg); }
 #ticker li.other { opacity: .65; }
 #ticker li.divider { display: block; margin-top: .3rem; }
 #ticker .excerpt { color: var(--muted); font-style: italic; font-size: .85em; }
+.subject { color: var(--muted); }
 #ticker .pts { flex: none; font-size: .7rem; font-weight: bold; color: var(--ok); cursor: help; }
 #gource { width: 100%; max-height: 32%; object-fit: contain; background: #000; border-radius: .4rem; margin-top: .4rem; }
 #gource:not([src]) { display: none; }
