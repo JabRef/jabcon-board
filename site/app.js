@@ -250,7 +250,7 @@ function renderProgress() {
   $('#to').textContent = fmt(data.config.jabcon_end);
 }
 
-// [impl->req~refresh-ring~1]
+// [impl->req~refresh-ring~2]
 // [impl->req~clock-timezone~1]
 function tick() {
   const now = new Date();
@@ -259,7 +259,7 @@ function tick() {
   const age = now - Date.parse(data.generated_at);
   $('#updated').style.setProperty('--p', Math.min(1, age / REFRESH_MS));
   $('#updated').classList.toggle('overdue', age > REFRESH_MS);
-  $('#updated').title = `last update ${ago(data.generated_at)}`;
+  $('#updated').title = `Data freshness: last update ${ago(data.generated_at)}. The ring fills over ${REFRESH_MS / 60000} min, one turn per data run; full and pulsing means the run is late, amber "!" means the data is stale.`;
   $('#data-time').textContent = `data ${new Date(data.generated_at).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone })}`;
   $('#header').classList.toggle('stale', age > 30 * 60000);
   const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
