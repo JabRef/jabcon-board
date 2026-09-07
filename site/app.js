@@ -3,6 +3,7 @@ const VIDEO = 'https://files.jabref.org/gource/jabcon-2026.mp4';
 const HIGHLIGHTS = 'highlights.mp4'; // rendered hourly by .github/workflows/highlights.yml next to this file
 const COMMENTARY = 'commentary.mp4'; // same, the full run with a commentator's subtitles
 const PLAYLIST = [VIDEO, HIGHLIGHTS, COMMENTARY];
+const NAMES = { [VIDEO]: 'full', [HIGHLIGHTS]: 'highlights', [COMMENTARY]: 'commentary' };
 const COLORS = ['#58a6ff', '#3fb950', '#d29922', '#f778ba', '#a371f7', '#ff7b72', '#79c0ff', '#56d364', '#e3b341', '#ffa657'];
 let previous = null;
 let raw = null;
@@ -300,13 +301,18 @@ async function load() {
 const video = $('#gource');
 let current = COMMENTARY; // advanced before each load, so the wall starts with the gource run
 // [impl->req~gource-alternate~2] the gource run, the highlights reel, the commentated run, and again; every swap fetches the newest rendering
-function nextVideo() {
-  current = PLAYLIST[(PLAYLIST.indexOf(current) + 1) % PLAYLIST.length];
+const neighbour = (step) => PLAYLIST[(PLAYLIST.indexOf(current) + step + PLAYLIST.length) % PLAYLIST.length];
+function stepVideo(step) {
+  current = neighbour(step);
   video.src = `${current}?ts=${Date.now()}`;
   video.play().catch(() => {});
+  $('#prev-video').textContent = `◀ ${NAMES[neighbour(-1)]}`; // [impl->req~gource-next~2] buttons name where they lead
+  $('#next-video').textContent = `${NAMES[neighbour(1)]} ▶`;
 }
+const nextVideo = () => stepVideo(1);
 video.addEventListener('ended', nextVideo);
-$('#next-video').addEventListener('click', nextVideo); // [impl->req~gource-next~1]
+$('#next-video').addEventListener('click', nextVideo);
+$('#prev-video').addEventListener('click', () => stepVideo(-1));
 // load failed: skip to the next video, or (gource itself) hide the player (placeholder shows) and retry in 30 s. Besides "not rendered yet", this
 // happens when files.jabref.org swaps the file (every 15 min) under a running download: the browser's next range request
 // hits a different ETag and the media errors out.
