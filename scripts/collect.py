@@ -5,14 +5,21 @@ Usage: GITHUB_TOKEN=... python scripts/collect.py [--force] [--out data.json]
 Outside the JabCon window the script exits without writing unless --force is given.
 Stats for merged PRs are reused from an existing output file (merged PRs never change).
 """
+import base64
+import email.utils
+import gzip
+import hashlib
 import json
+import mailbox
 import os
 import re
 import sys
+import tempfile
 import time
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from email.header import decode_header, make_header
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = json.load(open(os.path.join(ROOT, "config.json")))
@@ -30,6 +37,9 @@ FOCUS = CONFIG.get("focus_label", "")
 FOCUS_Q = f'org:{CONFIG["org"]} label:"{FOCUS}"' if FOCUS else ""
 MILESTONE_REFS = set(CONFIG.get("milestones", []))
 BOT_SUFFIX = "[bot]"
+# list address -> the repo whose repo_factor and link a post to it uses
+MAILING_LISTS = CONFIG.get("mailing_lists", {})
+MAIL_ARCHIVE = "https://mail.openjdk.org/archives/list/{}/"
 PR_AUTHORS = {}  # "owner/repo#n" -> login, loaded from the previous data.json
 
 
@@ -207,6 +217,80 @@ def collect_events(previous):
     for e in events:
         if e["type"] == "PullRequestReviewEvent" and not e.get("excerpt"):
             e["excerpt"] = first_comment.get(e.get("review_id"), "")
+    return events
+
+
+def header(msg, name):
+    return " ".join(str(make_header(decode_header(msg.get(name, "")))).split())
+
+
+def plain_text(msg):
+    for part in msg.walk():
+        if part.get_content_type() == "text/plain":
+            body = part.get_payload(decode=True) or b""
+            return body.decode(part.get_content_charset() or "utf-8", "replace")
+    return ""
+
+
+# [impl->req~mailing-lists~1]
+def mail_events():
+    """Participants' posts to the configured mailing lists, read from the HyperKitty archive.
+
+    Mails sent from an @openjdk.org address are the Skara bot mirroring GitHub PR activity that the events API
+    already reports; counting them again would double every JavaFX review. Only real mail is left."""
+    if not MAILING_LISTS:
+        return []
+    who = {}
+    for p in PARTICIPANTS:
+        u, _ = get(f"/users/{p}")
+        if u.get("email"):
+            who[u["email"].lower()] = p
+        if u.get("name") and " " in u["name"]:  # a one-word display name ("Christoph") also matches strangers
+            who[u["name"].lower()] = p
+    events = []
+    for addr, repo in MAILING_LISTS.items():
+        window = {"start": START_DATE, "end": (datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%d")}
+        url = MAIL_ARCHIVE.format(addr) + "export/jabcon.mbox.gz?" + urllib.parse.urlencode(window)
+        req = urllib.request.Request(url, headers={"User-Agent": "jabcon-board"})
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                raw = gzip.decompress(resp.read())
+        except Exception as e:  # a mail archive being down must not cost the board its GitHub data
+            print(f"mailing list {addr}: {e}", file=sys.stderr)
+            continue
+        with tempfile.NamedTemporaryFile(suffix=".mbox") as f:  # mailbox.mbox only reads from a path
+            f.write(raw)
+            f.flush()
+            for m in mailbox.mbox(f.name):
+                name, sender = email.utils.parseaddr(header(m, "From"))
+                if sender.lower().endswith("@openjdk.org"):
+                    continue
+                login = who.get(sender.lower()) or who.get(name.lower())
+                mid = (m.get("Message-ID") or "").strip().strip("<>")
+                if not login or not mid:
+                    continue
+                try:
+                    when = email.utils.parsedate_to_datetime(m.get("Date"))
+                except (TypeError, ValueError):
+                    continue
+                if when < START:
+                    continue
+                # HyperKitty addresses a message by the base32 of the SHA-1 of its Message-ID
+                hashid = base64.b32encode(hashlib.sha1(mid.encode()).digest()).decode()
+                subject = re.sub(r"^(\[External\]\s*:\s*)+", "", header(m, "Subject"))
+                # drop the quoted mail and the "On ... wrote:" line above it, so the excerpt is what was written now
+                body = "\n".join(l for l in plain_text(m).splitlines() if not re.match(r"\s*On .*wrote:\s*$", l))
+                events.append({
+                    "id": "mail:" + hashid,
+                    "type": "MailEvent",
+                    "actor": login,
+                    "repo": repo,
+                    "created_at": when.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                    "summary": f"mailed {addr.split('@')[0]}: {subject}",
+                    "url": MAIL_ARCHIVE.format(addr) + f"message/{hashid}/",
+                    "excerpt": excerpt(body),
+                    "number": None,
+                })
     return events
 
 
@@ -466,7 +550,7 @@ def leaderboard(cards, events, private):
             continue
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
-        elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "PushEvent") \
+        elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "PushEvent", "MailEvent") \
                 or (e["type"] == "IssuesEvent" and e.get("action") not in ("labeled", "unlabeled")) \
                 or (e["type"] == "PullRequestEvent" and (e.get("action") == "opened"
                                                         or (e.get("action") == "closed" and not e.get("merged")))):
@@ -642,7 +726,9 @@ def main():
             pass
     ms = milestones(previous_milestones)
     cards = collect_cards(ms)
-    events = collect_events(previous_events)
+    # the archive export always covers the whole window, so stored mail events are replaced rather than kept
+    events = collect_events([e for e in previous_events if e["type"] != "MailEvent"]) + mail_events()
+    events.sort(key=lambda e: e["created_at"], reverse=True)
     for c in cards:
         if c["type"] == "pr" and c["column"] != "backlog":
             c["stats"] = pr_stats(c, cached)

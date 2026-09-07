@@ -6,6 +6,9 @@ collect.PARTICIPANTS = ["a"]
 events = [{"actor": "a", "type": "IssuesEvent", "action": action, "repo": "x/y", "number": 1}
           for action in ("labeled", "unlabeled", "opened", "closed")]
 assert collect.leaderboard([], events, {})[0]["points"] == 2, "only opened / closed score"
+events = [{"actor": "a", "type": "MailEvent", "repo": "openjdk/jfx", "number": None}]
+collect.CONFIG["repo_factors"] = {"openjdk/jfx": 6}
+assert collect.leaderboard([], events, {})[0]["points"] == 6, "a mailing list post scores like a comment"
 print("ok")
 
 # bonus round: the top of each category gets +100, ties share it

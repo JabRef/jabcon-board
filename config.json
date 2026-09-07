@@ -36,6 +36,10 @@
     "JabRef/jabref-issue-melting-pot"
   ],
   "exclude_repos": [],
+  "mailing_lists": {
+    "openjfx-dev@openjdk.org": "openjdk/jfx",
+    "openjfx-discuss@openjdk.org": "openjdk/jfx"
+  },
   "repo_factors": {
     "JabRef": 5,
     "openjdk/jfx": 6
