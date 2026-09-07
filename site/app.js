@@ -264,11 +264,14 @@ function eventRow(e) {
   return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}${title ? ` <span class="subject">${esc(title)}</span>` : ''}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}<span class="pts${pts ? '' : ' zero'}" title="${esc(pointsWhy(e))}">+${pts}</span>${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
 }
 
-// [impl->req~activity-grouped~1]
+// The two groups share one window of the newest events instead of the JabCon group getting a fixed five rows:
+// the ticker is clipped, so a fixed block pushed the newest activity out of sight whenever JabCon items were quiet.
+// The divider therefore moves with how much recent activity is on JabCon items.
+// [impl->req~activity-grouped~2]
 function renderTicker() {
-  const events = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent');
-  const jabcon = events.filter((e) => cardOf(e)?.focus), rest = events.filter((e) => !cardOf(e)?.focus);
-  $('#ticker').innerHTML = jabcon.slice(0, 5).map(eventRow).join('') + (jabcon.length ? '<li class="divider">other</li>' : '') + rest.slice(0, 20).map(eventRow).join('');
+  const recent = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 25);
+  const jabcon = recent.filter((e) => cardOf(e)?.focus), rest = recent.filter((e) => !cardOf(e)?.focus);
+  $('#ticker').innerHTML = jabcon.map(eventRow).join('') + (jabcon.length ? '<li class="divider">other</li>' : '') + rest.map(eventRow).join('');
 }
 
 // Click on a leaderboard avatar: full-screen list of everything that contributor scored (or did not) during JabCon.
