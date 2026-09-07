@@ -104,7 +104,7 @@ section h2 .count { float: right; color: var(--fg); }
 /* [impl->req~leaderboard-slot-machine~4] a spinning reel is blurred and amber, one still holding the old total is gray */
 .leader .pts.rolling { color: var(--warn); filter: blur(.04rem); }
 .leader .pts.pending { color: var(--muted); }
-/* [impl->req~bonus-points~2] the +100 awards sit under the login, small enough not to shove the leaderboard around */
+/* [impl->req~bonus-points~3] the +100 awards sit under the login, small enough not to shove the leaderboard around */
 .leader .bonuses { font-size: .7rem; letter-spacing: .1rem; line-height: 1; cursor: help; }
 #detail .bonus { font-size: .8rem; color: var(--ok); }
 .delta { position: absolute; top: -.2rem; left: 50%; transform: translateX(-50%); font-size: .85rem; font-weight: bold;
