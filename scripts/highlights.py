@@ -30,6 +30,7 @@ SECONDS_PER_DAY = float(os.environ.get("SECONDS_PER_DAY", 67))
 SKIP_CAP = float(os.environ.get("SKIP_CAP", 23))  # video seconds of idling before gource skips to the next commit
 START_OFFSET = timedelta(minutes=-15)
 END_HOLD = 10  # gource holds the final frame this long after the last commit; the graph settles over the first 3 s
+SIZE, LEAD = 54, 72  # crawl fontsize, and the line advance it produces (fontsize + line_spacing)
 SPEED, LINE = 165, 56  # crawl px/s, px per text line (measured: 54 px font plus spacing, after the perspective)
 TAIL = 6  # moving gource seconds after the boom; the crawl runs over the moving seconds before it
 W, H = 1920, 1080

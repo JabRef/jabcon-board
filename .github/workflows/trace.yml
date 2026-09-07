@@ -1,4 +1,5 @@
 # Requirements trace (OpenFastTrace): every requirement in docs/requirements.md needs an [impl->req~...] tag in the code.
+# Plus the script self-checks, so a broken scripts/*.py is caught here and not an hour later in a video render.
 name: Trace
 
 on:
@@ -12,3 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - run: scripts/trace.sh -v failures
+      - name: Script self-checks
+        run: for t in test_*.py; do python3 "$t"; done
+        working-directory: scripts
