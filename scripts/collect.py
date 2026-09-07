@@ -336,13 +336,80 @@ def complexity(files):
     return 1 + sum(len(BRANCH.findall(l)) for l in added)
 
 
+# [impl->req~nerd-records~1]
+IDENT = re.compile(r"\b[A-Za-z_$][A-Za-z0-9_$]{15,}\b")
+METHOD = re.compile(r"^\+(\s*)(?:(?:public|private|protected|static|final|abstract|synchronized|default)\s+)+[\w.<>\[\],?\s]+?\s(\w+)\s*\([^;]*\)\s*(?:throws [\w., ]+)?\{\s*$")
+
+
+def methods(patch):
+    """(name, lines) of the methods opened in a patch's added lines. ponytail: brace at the signature's own
+    indentation ends the method, no parser; one whose closing brace is outside the hunk is skipped."""
+    lines = [l for l in patch.splitlines() if l[:1] in "+ "]  # removed lines are not part of the new file
+    for i, l in enumerate(lines):
+        m = l.startswith("+") and METHOD.match(l)
+        if not m:
+            continue
+        for j in range(i + 1, len(lines)):
+            if lines[j][1:] == m.group(1) + "}":
+                yield m.group(2), j - i + 1
+                break
+
+
+def superlatives(files):
+    """Records worth bragging about, mined from a PR's added lines: longest identifier, longest and shortest
+    method, fattest changelog entry."""
+    out = {}
+    added = [l[1:] for f in files if f["filename"].endswith(CODE) for l in f.get("patch", "").splitlines() if l.startswith("+")]
+    names = [i for l in added for i in IDENT.findall(l)]
+    if names:
+        out["identifier"] = max(names, key=len)
+    found = [m for f in files if f["filename"].endswith(".java") for m in methods(f.get("patch", ""))]
+    if found:
+        out["longest_method"] = max(found, key=lambda m: m[1])
+        out["shortest_method"] = min(found, key=lambda m: m[1])
+    entries = [l[1:].strip().lstrip("-*").strip() for f in files if f["filename"].endswith("CHANGELOG.md")
+               for l in f.get("patch", "").splitlines() if l.startswith("+") and l[1:].lstrip()[:1] in "-*"]
+    if entries:
+        out["changelog"] = max(entries, key=len)
+    return out
+
+
+def sup(s, key):
+    return (s.get("sup") or {}).get(key)
+
+
+# (title, what makes a winner - None if the PR does not qualify -, how to phrase it). Biggest wins, so the
+# shortest method competes on a negated line count.
+RECORD_KINDS = [
+    ("Longest identifier", lambda s: len(sup(s, "identifier") or "") or None, lambda s: f"{sup(s, 'identifier')} ({len(sup(s, 'identifier'))} chars)"),
+    ("Longest method", lambda s: (sup(s, "longest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'longest_method')[0]}(), {sup(s, 'longest_method')[1]} lines"),
+    ("Shortest method", lambda s: -(sup(s, "shortest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'shortest_method')[0]}(), {sup(s, 'shortest_method')[1]} lines"),
+    ("Most code written", lambda s: s.get("additions") or None, lambda s: f"+{s['additions']} lines"),
+    ("Most code deleted", lambda s: s.get("deletions") or None, lambda s: f"\u2212{s['deletions']} lines"),
+    ("Most tangled diff", lambda s: s.get("complexity") or None, lambda s: f"complexity {s['complexity']}"),
+    ("Wordiest changelog entry", lambda s: len(sup(s, "changelog") or "") or None, lambda s: f"{sup(s, 'changelog')[:40]} ({len(sup(s, 'changelog'))} chars)"),
+]
+
+
+def records(cards):
+    """One record holder per category, across every PR that has stats."""
+    out = []
+    for title, size, text in RECORD_KINDS:
+        ranked = [(size(c["stats"]), c) for c in cards if c.get("stats") and size(c["stats"]) is not None]
+        if ranked:
+            c = max(ranked, key=lambda p: p[0])[1]
+            out.append({"title": title, "text": text(c["stats"]), "repo": c["repo"], "number": c["number"],
+                        "author": c["author"], "url": c["url"]})
+    return out
+
+
 def review_points(cc):
     """Review of a trivial diff 1, complex diff 3, else (or unknown PR) 2."""
     return 2 if cc is None else 1 if cc <= 2 else 3 if cc >= 20 else 2
 
 
 def pr_stats(c, cached):
-    if c["id"] in cached and "ai" in cached[c["id"]] and "complexity" in cached[c["id"]]:
+    if c["id"] in cached and "ai" in cached[c["id"]] and "complexity" in cached[c["id"]] and "sup" in cached[c["id"]]:
         return cached[c["id"]]
     if c["column"] != "done":  # open PR under review: only its complexity, refetched when the PR changes
         if cached.get(c["id"], {}).get("updated_at") == c["updated_at"]:
@@ -356,7 +423,7 @@ def pr_stats(c, cached):
     for f in files:
         comps[component(c["repo"], f["filename"])] = comps.get(component(c["repo"], f["filename"]), 0) + f["changes"]
     return {"additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "complexity": complexity(files),
-            "refactorings": refactorings(pr, files, c["repo"]),
+            "refactorings": refactorings(pr, files, c["repo"]), "sup": superlatives(files),
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
@@ -494,6 +561,7 @@ def main():
             ai_used[m] = ai_used.get(m, 0) + 1
     data = {
         "refactorings": nerdy,
+        "records": records(cards),
         "ai_models": dict(sorted(ai_used.items(), key=lambda kv: -kv[1])),
         "milestones": ms,
         "focus": focus_progress(),

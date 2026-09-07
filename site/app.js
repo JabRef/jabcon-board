@@ -63,7 +63,6 @@ function updateMore(box) {
 }
 
 // [impl->req~milestones~2]
-// [impl->req~nerd-corner~1]
 // [impl->req~leaderboard-breakdown~1]
 function renderStats() {
   const s = data.stats;
@@ -86,8 +85,7 @@ function renderStats() {
       <div class="bar"><div class="during" style="width:${(100 * m.closed / total).toFixed(1)}%"></div><div class="before" style="width:${(100 * m.baseline / total).toFixed(1)}%"></div></div></div>`;
   }).join('') + Object.entries(data.private_activity || {}).map(([repo, c]) =>
     `<div class="private" title="${esc(`${repo} is private: only counts since JabCon started, never titles or numbers.`)}">${esc(repo.split('/')[1])}: ${c.closed} closed · ${c.opened} opened · ${c.comments} comments</div>`).join('');
-  $('#refactorings').innerHTML = data.refactorings.map((r) =>
-    `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
+  renderNerd();
   renderAiModels();
   $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
     const why = `${l.merged} merged PRs × 3\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`;
@@ -95,6 +93,23 @@ function renderStats() {
     return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
   }).join('');
   slotMachine();
+}
+
+// The nerd corner holds more than fits: the detected refactorings and the funny records (longest identifier,
+// most code deleted, ...) take turns, NERD_PAGE lines at a time, so the whole set is readable from the wall.
+// [impl->req~nerd-corner~2]
+// [impl->req~nerd-records~1]
+const NERD_PAGE = 5, NERD_MS = 12000;
+let nerdPage = 0, nerdTimer;
+
+function renderNerd() {
+  const items = [...data.refactorings.map((r) => ({...r, title: ''})), ...(data.records || [])];
+  const pages = Math.ceil(items.length / NERD_PAGE) || 1;
+  nerdPage %= pages;
+  $('#refactorings').innerHTML = items.slice(nerdPage * NERD_PAGE, (nerdPage + 1) * NERD_PAGE).map((r) =>
+    `<li>${avatar(r.author)}${r.title ? `<span class="title">${esc(r.title)}:</span>` : ''}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
+  clearInterval(nerdTimer);
+  nerdTimer = setInterval(() => { nerdPage++; renderNerd(); }, NERD_MS);
 }
 
 // Slot machine: new numbers do not just appear, they spin into place, lowest contributor first and the leader last,
