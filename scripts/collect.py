@@ -41,6 +41,9 @@ BOT_SUFFIX = "[bot]"
 MAILING_LISTS = CONFIG.get("mailing_lists", {})
 MAIL_ARCHIVE = "https://mail.openjdk.org/archives/list/{}/"
 PR_AUTHORS = {}  # "owner/repo#n" -> login, loaded from the previous data.json
+# a comment signed by the robot or naming Claude is the assistant talking, not the participant
+# [impl->req~no-ai-comment-points~1]
+AI_COMMENT = re.compile(r"\U0001f916|\bclaude\b", re.I)
 
 
 def get(path, params=None, token=None):
@@ -174,6 +177,8 @@ def collect_events(previous):
                     "url": ((payload.get("comment") or payload.get("review") or {}).get("html_url")
                             or f"https://github.com/{e['repo']['name']}" + (f"/issues/{number}" if number else "")),
                     "excerpt": excerpt((payload.get("comment") or payload.get("review") or {}).get("body")),
+                    # [impl->req~no-ai-comment-points~1] a comment the assistant wrote scores nothing
+                    "ai": bool(AI_COMMENT.search((payload.get("comment") or payload.get("review") or {}).get("body") or "")),
                     "review_id": (payload.get("review") or {}).get("id") or (payload.get("comment") or {}).get("pull_request_review_id"),
                     "before": payload.get("before"), "head": payload.get("head"),
                     # resolved once below and cached in data.json
@@ -182,6 +187,10 @@ def collect_events(previous):
             if len(data) < 100 or datetime.fromisoformat(data[-1]["created_at"].replace("Z", "+00:00")) < START:
                 break
     events = list(seen.values())
+    # events cached before the rule existed have no full body left; their stored excerpt is all there is to check
+    # [impl->req~no-ai-comment-points~1]
+    for e in events:
+        e.setdefault("ai", bool(AI_COMMENT.search(e.get("excerpt") or "")))
     events.sort(key=lambda e: e["created_at"], reverse=True)
     # reviewing one's own PR (e.g. replying to review threads) scores nothing; the slimmed PR object in the event
     # has no author, so resolve it once per PR and cache in data.json
@@ -546,7 +555,7 @@ def leaderboard(cards, events, private):
         s = score.get(e["actor"])
         if s is None:
             continue
-        if e.get("self") or e.get("sync"):
+        if e.get("self") or e.get("sync") or e.get("ai"):
             continue
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
@@ -611,7 +620,7 @@ def bonuses(cards, events, joined=None):
             tally[c["author"]]["merged"] += 1
     for e in events:
         t = tally.get(e["actor"])
-        if t is None or e.get("self") or e.get("sync"):
+        if t is None or e.get("self") or e.get("sync") or e.get("ai"):
             continue
         repos[e["actor"]].add(e["repo"])
         owner, name = e["repo"].lower().split("/")
