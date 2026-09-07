@@ -105,9 +105,9 @@ function renderStats() {
 // [impl->req~leaderboard-slot-machine~4]
 const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500, POP_STAGGER_MS = 500, POP_MS = 5000;
 let slotTimer, popTimers = [];
-// The bell for a new leader is the finale, so it waits for the reels and the pops. Nothing pending means it rings now
+// The bell rings at once, the toast naming the new leader waits for the reels and the pops. Nothing pending means it rings now
 // (still mode, reduced motion, first load). A new render flushes what is still queued: it belongs to older data.
-// [impl->req~leader-change-bell~2]
+// [impl->req~leader-change-bell~3]
 let slotsRunning = false, afterSlots = [];
 function whenSlotsSettled(fn) { slotsRunning ? afterSlots.push(fn) : fn(); }
 function settleSlots() { slotsRunning = false; const queue = afterSlots; afterSlots = []; queue.forEach((fn) => fn()); }
@@ -276,15 +276,15 @@ $('#leaderboard').addEventListener('click', (e) => {
   if (who) { pushedDetail = true; location.hash = `user/${encodeURIComponent(who)}`; }
 });
 
-// [impl->req~leader-change-bell~2]
+// [impl->req~leader-change-bell~3]
 // [impl->req~done-confetti~2]
 function celebrate(prev) {
   if (!prev) return;
   const leader = data.leaderboard[0]?.login, wasLeader = prev.leaderboard[0]?.login;
-  if (leader && wasLeader && leader !== wasLeader) whenSlotsSettled(() => {
-    bell();
-    toast(`🔔 ${leader} takes the lead!`);
-  });
+  if (leader && wasLeader && leader !== wasLeader) {
+    bell(); // the bell opens the act: it makes the room look up while the reels are still rolling
+    whenSlotsSettled(() => toast(`🔔 ${leader} takes the lead!`)); // the name comes once the numbers stand
+  }
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
     // the name is the author, not the merger: credit it with "by", never as the one who merged
