@@ -134,6 +134,15 @@ The ticker shows the same points per event as the leaderboard sums.
 
 Needs: impl
 
+### AI-written comments score nothing
+`req~no-ai-comment-points~1`
+
+A comment or review whose body carries the robot emoji or names Claude was written by an assistant, not by the
+participant: it scores no points and counts for no bonus. Events cached before this rule kept no body; they are
+checked against their stored excerpt instead.
+
+Needs: impl
+
 ### Bonus points
 `req~bonus-points~6`
 

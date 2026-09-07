@@ -226,6 +226,7 @@ function eventBase(e) {
   const card = cardOf(e);
   if (e.self) return [0, 'review on own PR'];
   if (e.sync) return [0, 'fork sync'];
+  if (e.ai) return [0, 'written by an AI assistant']; // [impl->req~no-ai-comment-points~1]
   if (e.type === 'PullRequestReviewEvent') {
     const cc = card?.stats?.complexity;
     return [reviewPoints(cc), `review of a ${cc == null ? 'diff of unknown complexity' : cc <= 2 ? 'trivial' : cc >= 20 ? 'complex' : 'medium'} diff`];

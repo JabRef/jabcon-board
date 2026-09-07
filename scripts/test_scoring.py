@@ -37,3 +37,12 @@ got = [b for b in collect.bonuses([], [], joined) if b["title"] == "Newcomer"]
 assert [b["login"] for b in got] == ["b"] and got[0]["text"].endswith("2026-08-30"), got
 assert not [b for b in collect.bonuses([], [], {"a": None}) if b["title"] == "Newcomer"]
 print("ok")
+
+# a comment written by the assistant scores nothing and feeds no bonus
+collect.PARTICIPANTS = ["a"]
+ai = {"actor": "a", "type": "IssueCommentEvent", "repo": "x/y", "number": 1, "ai": True, "created_at": "2026-09-05T12:00:00Z"}
+assert collect.leaderboard([], [ai], {})[0]["points"] == 0
+assert not [b for b in collect.bonuses([], [ai]) if b["title"] == "Chatterbox"]
+assert collect.AI_COMMENT.search("Nice, \U0001f916 generated") and collect.AI_COMMENT.search("thanks, Claude!")
+assert not collect.AI_COMMENT.search("looks good to me")
+print("ok")
