@@ -128,7 +128,8 @@ function eventPoints(e) {
   const rf = data.config.repo_factors || {};
   const card = cardOf(e), factor = card?.focus ? 10 : rf[e.repo] || rf[e.repo.split('/')[0]] || 1;
   if (e.type === 'PullRequestReviewEvent') return reviewPoints(card?.stats?.complexity) * factor;
-  if (['IssueCommentEvent', 'IssuesEvent', 'PushEvent'].includes(e.type)) return factor;
+  if (['IssueCommentEvent', 'PushEvent'].includes(e.type)) return factor;
+  if (e.type === 'IssuesEvent') return ['labeled', 'unlabeled'].includes(e.action) ? 0 : factor;
   if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !e.merged))) return factor;
   if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return 3 * factor;
   return 0;

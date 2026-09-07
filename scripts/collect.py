@@ -391,7 +391,8 @@ def leaderboard(cards, events, private):
             continue
         if e["type"] == "PullRequestReviewEvent":
             s["reviews"] += 1
-        elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "IssuesEvent", "PushEvent") \
+        elif e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "PushEvent") \
+                or (e["type"] == "IssuesEvent" and e.get("action") not in ("labeled", "unlabeled")) \
                 or (e["type"] == "PullRequestEvent" and (e.get("action") == "opened"
                                                         or (e.get("action") == "closed" and not e.get("merged")))):
             s["other"] += 1
