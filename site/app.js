@@ -15,6 +15,8 @@ const avatar = (login, cls = 'avatar') => `<img class="${cls}" src="https://gith
 const link = (url, inner, cls = '') => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${inner}</a>`;
 const repoLink = (repo, text) => link(`https://github.com/${repo}`, esc(text), 'repo');
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmt = (n) => Number(n).toLocaleString('en-US');
+const group = (s) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 function ago(iso) {
   const s = Math.max(0, (Date.now() - Date.parse(iso)) / 1000);
@@ -91,7 +93,7 @@ function renderStats() {
     const why = `${l.merged} merged PRs × 3 (${l.ai || 0} of them AI-assisted × 0.25)\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`
       + (l.bonuses || []).map((b) => `\n+${b.points} ${b.title}: ${b.text}`).join('');
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
-    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div>${bonusRow(l)}</div>`;
+    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${fmt(l.points)}</div><div>${esc(l.login)}</div>${bonusRow(l)}</div>`;
   }).join('');
   slotMachine();
 }
@@ -150,8 +152,8 @@ function slotMachine() {
   if (!reels.length || document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const was = Object.fromEntries((previous?.leaderboard || []).map((l) => [l.login, l.points]));
   const plan = reels.map((el, i) => {
-    const final = el.textContent, before = was[el.parentElement.dataset.login];
-    el.textContent = before ?? final;
+    const final = el.textContent.replace(/,/g, ''), before = was[el.parentElement.dataset.login];
+    el.textContent = group(String(before ?? final));
     el.classList.add('pending');
     return { el, final, gain: before == null ? 0 : Number(final) - before, start: i * (SLOT_TOTAL_MS - SLOT_ROLL_MS) / Math.max(1, reels.length - 1) };
   });
@@ -165,7 +167,7 @@ function slotMachine() {
       const locked = Math.floor(r.final.length * (t - r.start) / SLOT_ROLL_MS); // digits held from the right
       r.el.classList.remove('pending');
       r.el.classList.toggle('rolling', locked < r.final.length);
-      r.el.textContent = [...r.final].map((d, i) => (i >= r.final.length - locked ? d : Math.floor(Math.random() * 10))).join('');
+      r.el.textContent = group([...r.final].map((d, i) => (i >= r.final.length - locked ? d : Math.floor(Math.random() * 10))).join(''));
       if (locked >= r.final.length) r.settled = true; else running = true;
     }
     if (running) return;
@@ -182,7 +184,7 @@ function popPoints(el, gain) {
   if (gain <= 0) return;
   const box = el.getBoundingClientRect(), pop = document.createElement('div');
   pop.className = 'pop';
-  pop.textContent = `+${gain}`;
+  pop.textContent = `+${fmt(gain)}`;
   pop.style.left = `${box.left + box.width / 2}px`;
   pop.style.top = `${box.top}px`;
   document.body.appendChild(pop);
@@ -194,7 +196,7 @@ function popPoints(el, gain) {
     pop.remove();
     const badge = document.createElement('div'); // survives until the next render, so the last gain stays readable
     badge.className = 'delta';
-    badge.textContent = `+${gain}`;
+    badge.textContent = `+${fmt(gain)}`;
     el.parentElement.appendChild(badge);
   };
 }
@@ -288,7 +290,7 @@ function showDetail(login) {
   const l = data.leaderboard.find((x) => x.login === login) || { points: 0, merged: 0, reviews: 0, other: 0 };
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
-  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 (${l.ai || 0} AI-assisted × 0.25) · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
+  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${fmt(l.points)} points · ${l.merged} merged × 3 (${l.ai || 0} AI-assisted × 0.25) · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
   $('#detail h2').innerHTML += (l.bonuses || []).map((b) => ' ' + bonusLink(b, login, `${b.emoji} ${esc(b.title)} +${b.points}`)).join('');
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
