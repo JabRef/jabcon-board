@@ -202,19 +202,29 @@ pointer stays over it (no flicker, no jump); moving the pointer to the free stri
 
 Needs: impl
 
-### Video plays at triple speed
-`req~gource-speed~1`
+### Gource run and highlights reel alternate
+`req~gource-alternate~1`
 
-The gource video plays at three times its recorded speed, so a run through the repository history fits the wall's
-attention span.
+The player shows a full run of the gource video, then the highlights reel (`highlights.mp4` next to the site), then
+the gource video again. Two players side by side would leave each too small in the column; the enlarged view
+works for whichever is playing. A missing reel is skipped, not shown as a broken player.
 
 Needs: impl
 
-### Video refreshes without cutting a loop
-`req~gource-refresh~1`
+### Gource plays at triple speed, the reel at normal speed
+`req~gource-speed~2`
 
-A newer rendering is picked up every 15 minutes, after the current loop finished. When no video exists yet, a
-placeholder with the URL is shown instead of a broken player.
+The gource video plays at three times its recorded speed, so a run through the repository history fits the wall's
+attention span. The highlights reel plays at recorded speed: its text crawl is not readable faster.
+
+Needs: impl
+
+### Video refreshes without cutting a run
+`req~gource-refresh~2`
+
+Every swap between the two videos loads the newest rendering, so a fresh one is picked up after the current run
+finished. When no video exists yet, a placeholder with the URL is shown instead of a broken player, and loading
+is retried every 15 minutes.
 
 Needs: impl
 
