@@ -35,6 +35,6 @@ jobs:
           # optional fine-grained PAT for milestones in private repos
           MILESTONE_TOKEN: ${{ secrets.BOARD_TOKEN }}
         run: python3 scripts/collect.py --out out/data.json ${{ inputs.force && '--force' || '' }}
-      - run: scripts/gh-pages.sh push
+      - run: scripts/gh-pages.sh push pace
         env:
           GH_TOKEN: ${{ github.token }} # gh run list: is a Pages deployment still running?
