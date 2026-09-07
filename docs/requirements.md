@@ -214,11 +214,12 @@ skipped, not shown as a broken player.
 
 Needs: impl
 
-### A button skips to the other video
-`req~gource-next~1`
+### Buttons skip to the previous and next video
+`req~gource-next~2`
 
-While the video is enlarged by hover, a "next" button in its top right corner switches to the next video at once,
-without waiting for the current run to end. The video stays enlarged while the pointer is on the button.
+While the video is enlarged by hover, a button in each top corner switches to the previous or next video at once,
+without waiting for the current run to end. Each button is named after the video it leads to ("full", "highlights",
+"commentary"). The video stays enlarged while the pointer is on a button.
 
 Needs: impl
 
