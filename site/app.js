@@ -101,7 +101,7 @@ function renderStats() {
 // the whole board settled within SLOT_TOTAL_MS. A reel that has not had its turn shows the previous total, grayed.
 // Within a reel the digits lock right to left, and the gain pops out of the settled number and flies off the top.
 // One interval drives every reel; the next render's call cancels it, which also drops the then-stale nodes.
-// [impl->req~leaderboard-slot-machine~2]
+// [impl->req~leaderboard-slot-machine~3]
 const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500;
 let slotTimer;
 function slotMachine() {
@@ -131,8 +131,9 @@ function slotMachine() {
   }, 60);
 }
 
-// The gain jumps out of the reel and flies off the top of the screen. Fixed and on <body>, so no ancestor of the
-// fixed video is transformed. [impl->req~leaderboard-slot-machine~2]
+// The gain jumps out of the reel, hangs there long enough to be read, then flies off the top of the screen and
+// settles as a badge over the avatar. Fixed and on <body>, so no ancestor of the fixed video is transformed.
+// [impl->req~leaderboard-slot-machine~3]
 function popPoints(el, gain) {
   if (gain <= 0) return;
   const box = el.getBoundingClientRect(), pop = document.createElement('div');
@@ -142,9 +143,16 @@ function popPoints(el, gain) {
   pop.style.top = `${box.top}px`;
   document.body.appendChild(pop);
   pop.animate([{ transform: 'translate(-50%, 0) scale(1)', opacity: 1 },
-    { transform: 'translate(-50%, -1.5rem) scale(1.8)', opacity: 1, offset: 0.25 },
+    { transform: 'translate(-50%, -1.5rem) scale(1.8)', opacity: 1, offset: 0.1 },
+    { transform: 'translate(-50%, -2rem) scale(1.8)', opacity: 1, offset: 0.55 },
     { transform: `translate(-50%, ${-box.top - 40}px) scale(1.2)`, opacity: 0 }],
-  { duration: 2000, easing: 'cubic-bezier(.2,.8,.4,1)' }).onfinish = () => pop.remove();
+  { duration: 5000, easing: 'cubic-bezier(.3,.9,.4,1)' }).onfinish = () => {
+    pop.remove();
+    const badge = document.createElement('div'); // survives until the next render, so the last gain stays readable
+    badge.className = 'delta';
+    badge.textContent = `+${gain}`;
+    el.parentElement.appendChild(badge);
+  };
 }
 
 
