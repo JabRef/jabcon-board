@@ -472,8 +472,11 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~2]
+# [impl->req~bonus-points~3]
 BONUS = 100
+# the repos JabRef builds on (config): a fix there ships to everybody, not just to JabRef
+DEPENDENCIES = {r.lower() for r in CONFIG.get("dependency_repos", [])}
+DEP_NAMES = {r.split("/")[1] for r in DEPENDENCIES}  # a fork of a dependency (Someone/jfx) is dependency work too
 # (title, tally key, how to phrase the number, emoji)
 BONUS_KINDS = [
     ("Chatterbox", "comments", "{} comments", "\U0001f4ac"),
@@ -484,17 +487,21 @@ BONUS_KINDS = [
     ("Closer", "merged", "{} merged PRs", "\U0001f3c1"),
     ("Night owl", "night", "{} events between 22:00 and 06:00", "\U0001f989"),
     ("Early bird", "early", "{} events before 08:00", "\U0001f426"),
-    # upstream work (openjdk/jfx and friends) is where the org's fixes land in somebody else's release
+    # upstream work is where the org's fixes land in somebody else's release
     ("Ambassador", "upstream", "{} events outside the " + CONFIG["org"] + " org", "\u2615"),
+    ("Dependency whisperer", "dependency", "{} events in JabRef's dependencies", "\U0001f527"),
+    ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8"),
 ]
 
 
-# [impl->req~bonus-points~2]
+# [impl->req~bonus-points~3]
 def bonuses(cards, events):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, _, _ in BONUS_KINDS), 0) for p in PARTICIPANTS}
+    logins = {p.lower() for p in PARTICIPANTS}
     touched = {p: set() for p in PARTICIPANTS}
     repos = {p: set() for p in PARTICIPANTS}
+    exotic = {p: set() for p in PARTICIPANTS}
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in tally:
             tally[c["author"]]["merged"] += 1
@@ -503,7 +510,14 @@ def bonuses(cards, events):
         if t is None or e.get("self") or e.get("sync"):
             continue
         repos[e["actor"]].add(e["repo"])
-        t["upstream"] += not e["repo"].startswith(CONFIG["org"] + "/")
+        owner, name = e["repo"].lower().split("/")
+        # a repo owned by a participant is their own fork, not a foreign codebase - unless it forks a dependency
+        if owner != CONFIG["org"].lower() and (owner not in logins or name in DEP_NAMES):
+            t["upstream"] += 1
+            if e["repo"].lower() in DEPENDENCIES or name in DEP_NAMES:
+                t["dependency"] += 1
+            else:
+                exotic[e["actor"]].add(e["repo"])
         if e.get("number"):
             touched[e["actor"]].add((e["repo"], e["number"]))
         hour = datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).astimezone(START.tzinfo).hour
@@ -516,7 +530,7 @@ def bonuses(cards, events):
         elif e["type"] == "PullRequestEvent" and e.get("action") == "opened":
             t["opened"] += 1
     for p, t in tally.items():
-        t["touched"], t["repos"] = len(touched[p]), len(repos[p])
+        t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
     out = []
     for title, key, phrase, emoji in BONUS_KINDS:
         best = max((t[key] for t in tally.values()), default=0)
