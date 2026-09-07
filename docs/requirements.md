@@ -204,19 +204,20 @@ pointer stays over it (no flicker, no jump); moving the pointer to the free stri
 
 Needs: impl
 
-### Gource run and highlights reel alternate
-`req~gource-alternate~1`
+### Gource run, highlights reel and commentated run take turns
+`req~gource-alternate~2`
 
 The player shows a full run of the gource video, then the highlights reel (`highlights.mp4` next to the site), then
-the gource video again. Two players side by side would leave each too small in the column; the enlarged view
-works for whichever is playing. A missing reel is skipped, not shown as a broken player.
+the full run again with a commentator's subtitles (`commentary.mp4`), then starts over. Players side by side would
+leave each too small in the column; the enlarged view works for whichever is playing. A missing rendering is
+skipped, not shown as a broken player.
 
 Needs: impl
 
 ### A button skips to the other video
 `req~gource-next~1`
 
-While the video is enlarged by hover, a "next" button in its top right corner switches to the other video at once,
+While the video is enlarged by hover, a "next" button in its top right corner switches to the next video at once,
 without waiting for the current run to end. The video stays enlarged while the pointer is on the button.
 
 Needs: impl
@@ -225,7 +226,7 @@ Needs: impl
 `req~gource-speed~2`
 
 The gource video plays at three times its recorded speed, so a run through the repository history fits the wall's
-attention span. The highlights reel plays at recorded speed: its text crawl is not readable faster.
+attention span. The highlights reel and the commentated run play at recorded speed: their text is not readable faster.
 
 Needs: impl
 
