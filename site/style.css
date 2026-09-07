@@ -148,7 +148,7 @@ body { animation: glow 40s ease-in-out infinite; }
 @keyframes breathe { 50% { border-color: #3d4654; } }
 @media (prefers-reduced-motion: reduce) { body, body::before, section { animation: none; } }
 html.still body, html.still body::before, html.still section { animation: none; }
-/* [impl->req~contributor-detail~1] */
+/* [impl->req~contributor-detail~2] */
 #detail[hidden] { display: none; }
 #detail { position: fixed; inset: 0; z-index: 20; background: var(--bg); padding: 1rem 2rem; display: flex; flex-direction: column; gap: .6rem; }
 #detail .bar { display: flex; align-items: center; gap: 1.5rem; }
