@@ -1,5 +1,6 @@
 'use strict';
 const VIDEO = 'https://files.jabref.org/gource/jabcon-2026.mp4';
+const HIGHLIGHTS = 'highlights.mp4'; // rendered hourly by .github/workflows/highlights.yml next to this file
 const COLORS = ['#58a6ff', '#3fb950', '#d29922', '#f778ba', '#a371f7', '#ff7b72', '#79c0ff', '#56d364', '#e3b341', '#ffa657'];
 let previous = null;
 let raw = null;
@@ -278,15 +279,20 @@ async function load() {
 }
 
 const video = $('#gource');
-video.addEventListener('ended', () => { video.loop = true; video.src = `${VIDEO}?ts=${Date.now()}`; video.play().catch(() => {}); });
-video.addEventListener('error', () => video.removeAttribute('src')); // no rendering yet: hide, retry next hour
-video.addEventListener('loadedmetadata', () => { video.playbackRate = 3; }); // [impl->req~gource-speed~1] re-applied per source: a src swap resets the rate
-// [impl->req~gource-refresh~1]
-function loadVideo() {
-  if (video.getAttribute('src')) { video.loop = false; return; } // finish the current loop, then swap
-  video.loop = true;
-  video.src = `${VIDEO}?ts=${Date.now()}`;
+let current = HIGHLIGHTS; // toggled before each load, so the wall starts with the gource run
+// [impl->req~gource-alternate~1] a full gource run, then the highlights reel, and so on; every swap fetches the newest rendering
+function nextVideo() {
+  current = current === VIDEO ? HIGHLIGHTS : VIDEO;
+  video.src = `${current}?ts=${Date.now()}`;
+  video.play().catch(() => {});
 }
+video.addEventListener('ended', nextVideo);
+// no rendering yet: skip the reel, or hide the player (placeholder shows) and retry in 15 minutes
+video.addEventListener('error', () => { if (current === HIGHLIGHTS) nextVideo(); else video.removeAttribute('src'); });
+// [impl->req~gource-speed~2] re-applied per source: a src swap resets the rate; the reel's crawl is only readable at 1x
+video.addEventListener('loadedmetadata', () => { video.playbackRate = current === VIDEO ? 3 : 1; });
+// [impl->req~gource-refresh~2]
+function loadVideo() { if (!video.getAttribute('src')) nextVideo(); }
 
 document.querySelectorAll('.cards').forEach((b) => b.addEventListener('scroll', () => updateMore(b)));
 // clicking "n more" pages the column in that direction (for desktop use; the wall never scrolls)
