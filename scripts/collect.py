@@ -472,7 +472,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~1]
+# [impl->req~bonus-points~2]
 BONUS = 100
 # (title, tally key, how to phrase the number, emoji)
 BONUS_KINDS = [
@@ -484,10 +484,12 @@ BONUS_KINDS = [
     ("Closer", "merged", "{} merged PRs", "\U0001f3c1"),
     ("Night owl", "night", "{} events between 22:00 and 06:00", "\U0001f989"),
     ("Early bird", "early", "{} events before 08:00", "\U0001f426"),
+    # upstream work (openjdk/jfx and friends) is where the org's fixes land in somebody else's release
+    ("Ambassador", "upstream", "{} events outside the " + CONFIG["org"] + " org", "\u2615"),
 ]
 
 
-# [impl->req~bonus-points~1]
+# [impl->req~bonus-points~2]
 def bonuses(cards, events):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, _, _ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -501,6 +503,7 @@ def bonuses(cards, events):
         if t is None or e.get("self") or e.get("sync"):
             continue
         repos[e["actor"]].add(e["repo"])
+        t["upstream"] += not e["repo"].startswith(CONFIG["org"] + "/")
         if e.get("number"):
             touched[e["actor"]].add((e["repo"], e["number"]))
         hour = datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).astimezone(START.tzinfo).hour
