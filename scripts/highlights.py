@@ -38,14 +38,30 @@ duration = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entri
 
 # the commits gource animates: main since JabCon started, by author date (gource's clock), via gh (GH_TOKEN in CI)
 log = subprocess.check_output(["gh", "api", "--paginate", f"repos/{REPO}/commits?sha=main&since={start.isoformat()}&per_page=100",
-                               "--jq", ".[] | [.commit.author.date, .commit.message] | @json"], text=True).splitlines()
-commits, coauthors = [], {}  # author date -> Co-authored-by names of that commit (noreply addresses give the login)
-for d, message in map(json.loads, log):
+                               "--jq", ".[] | [.commit.author.date, .commit.author.name, .commit.message] | @json"], text=True).splitlines()
+commits, author_of, coauthors, by_number = [], {}, {}, {}  # author date -> the name gource shows / the Co-authored-by
+# trailers; PR number -> author date (squash and queue merges carry "(#1234)" in the title)
+names = {}
+
+
+def display(login):
+    """The name gource would show for a GitHub login: the profile name, or the login when there is none."""
+    if login not in names:
+        user = subprocess.run(["gh", "api", f"users/{login}", "--jq", ".name // .login"], text=True, capture_output=True)
+        names[login] = user.stdout.strip() if user.returncode == 0 and user.stdout.strip() else login
+    return names[login]
+
+
+for d, author, message in map(json.loads, log):
     t = datetime.fromisoformat(d.replace("Z", "+00:00"))
     commits.append(t)
+    author_of[t] = author
+    for n in re.findall(r"\(#(\d+)\)", message.split("\n")[0]):
+        by_number[int(n)] = t
     for m in re.finditer(r"^co-authored-by:\s*([^<\n]+?)\s*<([^>]*)>", message, re.I | re.M):
         login = re.fullmatch(r"(?:\d+\+)?([^@]+)@users\.noreply\.github\.com", m[2])
-        coauthors.setdefault(t, []).append(login[1] if login else m[1])
+        # a trailer naming just a login ("subhramit <mail>") is looked up like a noreply address
+        coauthors.setdefault(t, []).append(display(login[1] if login else m[1]) if login or re.fullmatch(r"[\w-]+", m[1]) else m[1])
 commits.sort()
 position, video_t, prev = {}, 0.0, start + START_OFFSET  # commit time -> video second
 for t in commits:
@@ -58,30 +74,35 @@ moving_end = max((v for v in position.values() if v + END_HOLD <= duration + 1),
 
 
 def nearest(c):
+    """The PR's commit: by number from its title, else the closest by time."""
+    if c["number"] in by_number:
+        return by_number[c["number"]]
     return min(position, key=lambda t: abs((t - when(c)).total_seconds()), default=None)
 
 
 def people(c):
-    """PR author plus the merge commit's co-authors, without duplicates; AI models collapse into one "Claude", named last."""
-    names, seen = [], set()
-    for n in [c["author"]] + coauthors.get(nearest(c), []):
+    """The merge commit's author (the name gource shows) plus its co-authors, without duplicates; AI models collapse
+    into one "Claude", named last."""
+    out, seen = [], set()
+    for n in [author_of.get(nearest(c), c["author"])] + coauthors.get(nearest(c), []):
         n = "Claude" if n.startswith("Claude") else n
         if n.lower() not in seen and not n.endswith("[bot]"):
             seen.add(n.lower())
-            names.append(n)
-    return sorted(names, key=lambda n: n == "Claude")
+            out.append(n)
+    return sorted(out, key=lambda n: n == "Claude")
 
 
 def involved(c, types, exclude):
-    """Logins with an event of these types on the PR (from the board's data), minus those already credited (a
-    co-author's real name counts when it contains the login, e.g. "Subhramit Basu" for subhramit)."""
+    """Display names of those with an event of these types on the PR (from the board's data), minus those already
+    credited under that name or login."""
     actors = {e["actor"] for e in data["all_events"] if e["repo"] == REPO and e["number"] == c["number"] and e["type"] in types}
-    return sorted((a for a in actors if not any(a.lower() in x.lower() for x in exclude)), key=str.lower)
+    credited = {x.lower() for x in exclude}
+    return sorted({display(a) for a in actors if a.lower() not in credited and display(a).lower() not in credited}, key=str.lower)
 
 
 def merger(c):
     """Who pressed merge (a maintainer, or the merge queue on their behalf), from the PR itself."""
-    return subprocess.check_output(["gh", "api", f"repos/{REPO}/pulls/{c['number']}", "--jq", ".merged_by.login"], text=True).strip()
+    return display(subprocess.check_output(["gh", "api", f"repos/{REPO}/pulls/{c['number']}", "--jq", ".merged_by.login"], text=True).strip())
 
 
 def moment(c):
