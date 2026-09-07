@@ -305,8 +305,10 @@ function nextVideo() {
 }
 video.addEventListener('ended', nextVideo);
 $('#next-video').addEventListener('click', nextVideo); // [impl->req~gource-next~1]
-// no rendering yet: skip the reel, or hide the player (placeholder shows) and retry in 15 minutes
-video.addEventListener('error', () => { if (current === HIGHLIGHTS) nextVideo(); else video.removeAttribute('src'); });
+// load failed: skip the reel, or hide the player (placeholder shows) and retry in 30 s. Besides "not rendered yet", this
+// happens when files.jabref.org swaps the file (every 15 min) under a running download: the browser's next range request
+// hits a different ETag and the media errors out.
+video.addEventListener('error', () => { if (current === HIGHLIGHTS) nextVideo(); else { video.removeAttribute('src'); setTimeout(loadVideo, 30000); } });
 // [impl->req~gource-speed~2] re-applied per source: a src swap resets the rate; the reel's crawl is only readable at 1x
 video.addEventListener('loadedmetadata', () => { video.playbackRate = current === VIDEO ? 3 : 1; });
 // [impl->req~gource-refresh~2]

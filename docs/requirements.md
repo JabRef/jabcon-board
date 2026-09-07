@@ -232,8 +232,8 @@ Needs: impl
 `req~gource-refresh~2`
 
 Every swap between the two videos loads the newest rendering, so a fresh one is picked up after the current run
-finished. When no video exists yet, a placeholder with the URL is shown instead of a broken player, and loading
-is retried every 15 minutes.
+finished. When the gource video fails to load (not rendered yet, or replaced on the server mid-download), a
+placeholder with the URL is shown instead of a broken player, and loading is retried after 30 seconds.
 
 Needs: impl
 
