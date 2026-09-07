@@ -96,7 +96,7 @@ function renderStats() {
   slotMachine();
 }
 
-// [impl->req~bonus-points~5] the +100 awards a contributor holds, one emoji each, the category in the tooltip
+// [impl->req~bonus-points~6] the +100 awards a contributor holds, one emoji each, the category in the tooltip
 function bonusRow(l) {
   return (l.bonuses || []).length
     ? `<div class="bonuses">${l.bonuses.map((b) => `<span title="${esc(`+${b.points} ${b.title}: ${b.text}`)}">${b.emoji}</span>`).join('')}</div>`
@@ -106,7 +106,7 @@ function bonusRow(l) {
 // The nerd corner holds more than fits: the detected refactorings and the funny records (longest identifier,
 // most code deleted, ...) take turns, NERD_PAGE lines at a time, so the whole set is readable from the wall.
 // [impl->req~nerd-corner~2]
-// [impl->req~nerd-records~1]
+// [impl->req~nerd-records~2]
 const NERD_PAGE = 5, NERD_MS = 12000;
 let nerdPage = 0, nerdTimer;
 
@@ -115,7 +115,7 @@ function renderNerd() {
   const pages = Math.ceil(items.length / NERD_PAGE) || 1;
   nerdPage %= pages;
   $('#refactorings').innerHTML = items.slice(nerdPage * NERD_PAGE, (nerdPage + 1) * NERD_PAGE).map((r) =>
-    `<li>${avatar(r.author)}${r.title ? `<span class="title">${esc(r.title)}:</span>` : ''}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
+    `<li>${avatar(r.author)}${r.title ? `<span class="title">${r.emoji || ''} ${esc(r.title)}:</span>` : ''}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
   clearInterval(nerdTimer);
   nerdTimer = setInterval(() => { nerdPage++; renderNerd(); }, NERD_MS);
 }
