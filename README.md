@@ -15,6 +15,9 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
   in any repository and writes `data.json`. Cards from the configured org are shown normally, other repos dimmed.
   The ring next to the logo fills up over the typical gap between data runs (10 min; GitHub runs the 5-minute schedule only best-effort), turns gray when a run is late and amber when data is older than 30 min. "In progress" only lists open PRs touched since the start; "Backlog" lists the org's `ready-for-review` PRs
   and everything assigned to a participant.
+- Posts by participants to the `mailing_lists` are read from the OpenJDK HyperKitty archive and join the ticker.
+  Senders are matched by the public name and e-mail of their GitHub profile; mail from an `@openjdk.org` address is
+  the Skara bot mirroring GitHub pull request activity and is skipped, so JavaFX reviews are not counted twice.
 - `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute, the video every 15 minutes, and reloads itself when a new version of the site was deployed.
 - `.github/workflows/board.yml` runs every 5 minutes (and on push to `main`), copies `site/` and a fresh
   `data.json` to the `gh-pages` branch. Outside the JabCon window it publishes the site but skips data collection.
@@ -35,6 +38,7 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 `config.json`: `jabcon_start` / `jabcon_end` (ISO timestamps with offset), `phases` (label + end time, drawn on the header progress bar), `timezone` (for the clock),
 `participants` (GitHub logins; their order sets the colours), `org` (highlighting and the ready-for-review backlog), `focus_label` (a label in the org, e.g. `project: jabcon`: its open items are always in the Backlog, labeled cards form the first group of every column, and a progress bar for it sits above the milestones),
 `exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board),
+`mailing_lists` (archive address -> the repo whose factor and link its posts use, e.g. `openjfx-dev@openjdk.org` -> `openjdk/jfx`),
 `milestones` (`owner/repo/number`; progress bars in the stats panel, green = closed since the board first saw the milestone).
 `private_repos` lists private repos whose issue activity is counted for the leaderboard and shown as counts only (no titles) under the milestones. Milestones and `private_repos` need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.
 Bot activity is excluded.
@@ -53,6 +57,7 @@ Recomputed at every data run from activity since `jabcon_start`, in any public r
 | Issue opened or closed, PR closed without merge | 1 | the actor |
 | Push | 1 per push event (not per commit) | the pusher |
 | Issue opened / closed / commented in a `private_repos` repo | 1 | the actor |
+| Mail to a configured mailing list | 1 | the sender |
 
 Labeling, assigning, starring, forking and merging someone else's PR score nothing. Hover a leaderboard entry to see
 the breakdown; the activity ticker shows the points of each entry. A bell rings when position 1 changes (browsers may

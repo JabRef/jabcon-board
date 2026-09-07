@@ -149,6 +149,15 @@ shows one emoji per award under the login and names the category in the tooltip 
 
 Needs: impl
 
+### Mailing list posts count
+`req~mailing-lists~1`
+
+Posts by a participant to a list in `mailing_lists` score like a comment (1 point, times the factor of the repo the
+list is mapped to) and show up in the ticker with a link into the archive. Mail sent from an `@openjdk.org` address
+is the Skara bot mirroring GitHub pull request activity, which the board already counts, and is left out.
+
+Needs: impl
+
 ### Activity rows name the PR or issue
 `req~event-titles~1`
 
