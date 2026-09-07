@@ -9,6 +9,7 @@ With a fifth argument, a second video is written: the full gource run with a spo
 per merge, phrased from the board's data (no language model involved; see commentary()).
 """
 import json
+import math
 import os
 import random
 import re
@@ -29,8 +30,8 @@ SECONDS_PER_DAY = float(os.environ.get("SECONDS_PER_DAY", 67))
 SKIP_CAP = float(os.environ.get("SKIP_CAP", 23))  # video seconds of idling before gource skips to the next commit
 START_OFFSET = timedelta(minutes=-15)
 END_HOLD = 10  # gource holds the final frame this long after the last commit; the graph settles over the first 3 s
-CRAWL, SPEED = 7, 165  # seconds per card, crawl px/s
-TAIL = 6  # moving gource seconds after the boom; the crawl runs over the CRAWL moving seconds before it
+SPEED, LINE = 165, 56  # crawl px/s, px per text line (measured: 54 px font plus spacing, after the perspective)
+TAIL = 6  # moving gource seconds after the boom; the crawl runs over the moving seconds before it
 W, H = 1920, 1080
 FONT = "DejaVu Sans"
 ENC = ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", "30", "-c:a", "aac", "-ar", "44100", "-ac", "2", "-shortest", "-y"]
@@ -191,14 +192,19 @@ def highlight(name, text, before, after=None, title="", label=""):
     segments.append(out)
 
 
-def around(second):
-    """The last CRAWL moving seconds before this one and the first TAIL moving seconds from it on."""
-    return [k for k in moving if k < second][-CRAWL:], [k for k in moving if k >= second][:TAIL]
+def crawl_seconds(text):
+    """Long enough for the last line to rise to about 60 % of the frame height."""
+    return math.ceil((H * 0.4 + (len(text.rstrip("\n").split("\n")) - 1) * LINE) / SPEED)
+
+
+def around(second, n):
+    """The last n moving seconds before this one and the first TAIL moving seconds from it on."""
+    return [k for k in moving if k < second][-n:], [k for k in moving if k >= second][:TAIL]
 
 
 year = start.year
-highlight("intro", f"JabCon {year}\n\n{len(merged)} pull requests merged\ninto {REPO}\n\nThese are the {len(top)} biggest.\n\n\n\n\n",
-          moving[:CRAWL], title="A long time ago in a repository far, far away....")
+intro = f"JabCon {year}\n\n{len(merged)} pull requests merged\ninto {REPO}\n\nThese are the {len(top)} biggest.\n\n\n\n\n"
+highlight("intro", intro, moving[:crawl_seconds(intro)], title="A long time ago in a repository far, far away....")
 for i, c in enumerate(top):
     authors = people(c)
     reviewers = involved(c, {"PullRequestReviewEvent"}, authors)
@@ -210,9 +216,9 @@ for i, c in enumerate(top):
         credits += f"\ncomments by {', '.join(commenters)}"
     credits = "\n".join(textwrap.fill(line, 34) for line in credits.split("\n"))
     body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\n{credits}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
-    before, after = around(int(moment(c)))
+    before, after = around(int(moment(c)), crawl_seconds(body))
     highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {merger(c)}")
-highlight("outro", "To be continued...\n\n\n\n\n", moving[-CRAWL:])
+highlight("outro", "To be continued...\n\n\n\n\n", moving[-crawl_seconds("To be continued..."):])
 
 
 
