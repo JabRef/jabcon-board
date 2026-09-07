@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: read # gh run list, to see whether Pages is still deploying
 
 concurrency:
   group: gh-pages
@@ -35,3 +36,5 @@ jobs:
           MILESTONE_TOKEN: ${{ secrets.BOARD_TOKEN }}
         run: python3 scripts/collect.py --out out/data.json ${{ inputs.force && '--force' || '' }}
       - run: scripts/gh-pages.sh push
+        env:
+          GH_TOKEN: ${{ github.token }} # gh run list: is a Pages deployment still running?

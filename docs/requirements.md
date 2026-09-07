@@ -96,6 +96,15 @@ Outside `jabcon_start`..`jabcon_end` the collector exits without touching the da
 
 Needs: impl
 
+### Publishing waits for the running deployment
+`req~publish-pacing~1`
+
+A push to `gh-pages` cancels the GitHub Pages deployment of the previous one. When a deployment takes longer than the
+publish interval, no deployment ever completes and the live site freezes while the branch keeps moving, so a push is
+skipped while a deployment younger than 20 minutes is still running; the next run publishes.
+
+Needs: impl
+
 ### Bots are ignored
 `req~bots-excluded~1`
 
