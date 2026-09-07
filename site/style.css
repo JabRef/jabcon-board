@@ -96,12 +96,15 @@ section h2 .count { float: right; color: var(--fg); }
 #components { display: grid; grid-template-columns: fit-content(5rem) minmax(1.5rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
 #leaderboard { display: flex; gap: .8rem; margin-top: auto; padding-top: .3rem; align-items: flex-end; }
-.leader { cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
+.leader { position: relative; cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
 .leader img { width: 2.6rem; height: 2.6rem; border-radius: 50%; border: .25rem solid var(--c); display: block; margin: 0 auto .2rem; }
 .leader .pts { font-size: 1rem; font-weight: bold; font-variant-numeric: tabular-nums; }
-/* [impl->req~leaderboard-slot-machine~2] a spinning reel is blurred and amber, one still holding the old total is gray */
+/* [impl->req~leaderboard-slot-machine~3] a spinning reel is blurred and amber, one still holding the old total is gray */
 .leader .pts.rolling { color: var(--warn); filter: blur(.04rem); }
 .leader .pts.pending { color: var(--muted); }
+.delta { position: absolute; top: -.2rem; left: 50%; transform: translateX(-50%); font-size: .85rem; font-weight: bold;
+  color: var(--ok); text-shadow: 0 0 .3rem #000, 0 0 .6rem #000; animation: delta-in 1.2s ease-out both; }
+@keyframes delta-in { from { opacity: 0; } to { opacity: 1; } }
 .pop { position: fixed; z-index: 50; pointer-events: none; font-size: 1.4rem; font-weight: bold; color: var(--ok); text-shadow: 0 0 .4rem #000, 0 0 .8rem #000; }
 .leader:first-child img { width: 3.4rem; height: 3.4rem; }
 #activity { position: relative; }
