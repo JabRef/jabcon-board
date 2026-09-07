@@ -94,6 +94,38 @@ function renderStats() {
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
     return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
   }).join('');
+  slotMachine();
+}
+
+// Slot machine: new numbers do not just appear, they spin into place, lowest contributor first and the leader last,
+// the whole board settled within SLOT_TOTAL_MS. Until its turn a reel keeps the previous total, so the change is visible.
+// One interval drives every reel; the next render's call cancels it, which also drops the then-stale nodes.
+// [impl->req~leaderboard-slot-machine~1]
+const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500;
+let slotTimer;
+function slotMachine() {
+  clearInterval(slotTimer);
+  const reels = [...document.querySelectorAll('#leaderboard .pts')].reverse();
+  if (!reels.length || document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const was = Object.fromEntries((previous?.leaderboard || []).map((l) => [l.login, l.points]));
+  const plan = reels.map((el, i) => {
+    const final = el.textContent;
+    el.textContent = was[el.parentElement.dataset.login] ?? final;
+    return { el, final, start: i * (SLOT_TOTAL_MS - SLOT_ROLL_MS) / Math.max(1, reels.length - 1) };
+  });
+  const t0 = performance.now();
+  slotTimer = setInterval(() => {
+    const t = performance.now() - t0;
+    let running = false;
+    for (const { el, final, start } of plan) {
+      if (t < start) { running = true; continue; }
+      if (t >= start + SLOT_ROLL_MS) { el.textContent = final; el.classList.remove('rolling'); continue; }
+      running = true;
+      el.classList.add('rolling');
+      el.textContent = String(Math.floor(Math.random() * 10 ** final.length)).padStart(final.length, '0');
+    }
+    if (!running) clearInterval(slotTimer);
+  }, 60);
 }
 
 

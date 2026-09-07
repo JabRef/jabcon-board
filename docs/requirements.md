@@ -301,5 +301,14 @@ sign-off lines) as a pie chart with a legend beside it, one slice per model, cou
 
 Needs: impl
 
+### Leaderboard slot machine
+`req~leaderboard-slot-machine~1`
+
+When new data arrives the leaderboard totals spin like a slot machine before settling on the new number, starting
+with the lowest contributor and ending with the leader, all of them settled within 30 s. A reel shows the previous
+total until its turn. Off with `?still=1` or reduced-motion.
+
+Needs: impl
+
 <!-- markdownlint-disable-file MD022 -->
 
