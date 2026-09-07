@@ -189,8 +189,11 @@ function celebrate(prev) {
   }
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
-    const who = c.type === 'pr' ? c.author : c.assignees[0] || c.author;
-    toast(`🎉 ${who} ${c.type === 'pr' ? 'merged' : 'closed'} #${c.number} ${c.title}`);
+    // the name is the author, not the merger: credit it with "by", never as the one who merged
+    if (c.type === 'pr')
+      toast(`🎉 PR #${c.number} ${c.title} by ${c.author} ${c.merged_at ? 'merged' : 'closed'}`);
+    else
+      toast(`🎉 ${c.assignees[0] || c.author} closed #${c.number} ${c.title}`);
     if (window.confetti) confetti({ particleCount: 200, spread: 90, origin: { y: 0.7 } });
   }
 }
