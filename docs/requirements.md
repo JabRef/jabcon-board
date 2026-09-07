@@ -153,10 +153,11 @@ Hovering a leaderboard avatar shows how the points add up.
 Needs: impl
 
 ### Contributor detail view
-`req~contributor-detail~1`
+`req~contributor-detail~2`
 
 Clicking a leaderboard avatar opens a full-screen list of that contributor's activity with the points per row.
 It has a Back button (the wall runs a kiosk browser without chrome) and closes on Escape. It is hidden until clicked.
+The view is a `#user/<login>` route: the browser's Back button closes it, and the link can be shared.
 
 Needs: impl
 

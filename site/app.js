@@ -142,7 +142,7 @@ function renderTicker() {
 }
 
 // Click on a leaderboard avatar: full-screen list of everything that contributor scored (or did not) during JabCon.
-// [impl->req~contributor-detail~1]
+// [impl->req~contributor-detail~2]
 function showDetail(login) {
   const l = data.leaderboard.find((x) => x.login === login) || { points: 0, merged: 0, reviews: 0, other: 0 };
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
@@ -151,9 +151,25 @@ function showDetail(login) {
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
 }
-$('#detail .back').addEventListener('click', () => { $('#detail').hidden = true; });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#detail').hidden = true; });
-$('#leaderboard').addEventListener('click', (e) => { const who = e.target.closest('.leader')?.dataset.login; if (who) showDetail(who); });
+// The detail view is a route (#user/<login>), so the browser's Back button and a shared link both work.
+// [impl->req~contributor-detail~2]
+let pushedDetail = false; // only then is a history.back() ours to take; a deep link must not leave the site
+function route() {
+  const login = decodeURIComponent((location.hash.match(/^#user\/(.+)$/) || [])[1] || '');
+  if (login && data) showDetail(login);
+  else { $('#detail').hidden = true; pushedDetail = pushedDetail && !!login; }
+}
+function closeDetail() {
+  if (pushedDetail) history.back();
+  else location.replace('#');
+}
+window.addEventListener('hashchange', route);
+$('#detail .back').addEventListener('click', closeDetail);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDetail(); });
+$('#leaderboard').addEventListener('click', (e) => {
+  const who = e.target.closest('.leader')?.dataset.login;
+  if (who) { pushedDetail = true; location.hash = `user/${encodeURIComponent(who)}`; }
+});
 
 // [impl->req~leader-change-bell~1]
 // [impl->req~done-confetti~2]
@@ -211,6 +227,7 @@ function render() {
   renderTicker();
   renderProgress();
   tick();
+  route(); // a deep link renders once the data is there; an open detail view follows the refreshed data
 }
 
 // GitHub runs a */5 schedule only best-effort (observed 7-20 min between runs), so the ring is sized for a typical gap
