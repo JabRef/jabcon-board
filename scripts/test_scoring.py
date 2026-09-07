@@ -26,3 +26,11 @@ pr = {"column": "done", "type": "pr", "author": "a", "repo": "x/y", "number": 1,
 assert collect.leaderboard([pr], [], {})[0]["points"] == 3
 assert collect.leaderboard([{**pr, "stats": {"ai": ["Claude Opus 5"]}}], [], {})[0]["points"] == 1  # 3 * 0.25, rounded
 print("ok")
+
+# newcomer: the most recent first contribution wins
+collect.PARTICIPANTS = ["a", "b"]
+joined = {"a": "2020-01-01T00:00:00Z", "b": "2026-08-30T00:00:00Z"}
+got = [b for b in collect.bonuses([], [], joined) if b["title"] == "Newcomer"]
+assert [b["login"] for b in got] == ["b"] and got[0]["text"].endswith("2026-08-30"), got
+assert not [b for b in collect.bonuses([], [], {"a": None}) if b["title"] == "Newcomer"]
+print("ok")
