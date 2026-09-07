@@ -90,7 +90,7 @@ function renderStats() {
     `<li>${avatar(r.author)}<span class="what">${esc(r.text)}</span>${link(r.url, `${esc(r.repo)}#${r.number}`, 'repo')}</li>`).join('');
   renderAiModels();
   $('#leaderboard').innerHTML = data.leaderboard.map((l) => {
-    const why = `${l.merged} merged PRs × 3\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / labeled / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`;
+    const why = `${l.merged} merged PRs × 3\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`;
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
     return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${l.points}</div><div>${esc(l.login)}</div></div>`;
   }).join('');
@@ -115,9 +115,9 @@ function renderAiModels() {
       `<li><i style="background:${COLORS[i % COLORS.length]}"></i>${esc(name)} <span class="muted">${n}</span></li>`).join('')}</ul>`;
 }
 
-// Mirrors the scoring in collect.py: merged PR (author) 3, review 1..3 by the complexity of the reviewed diff, comment / issue / push / PR opened, labeled or closed unmerged 1; tenfold on a JabCon
+// Mirrors the scoring in collect.py: merged PR (author) 3, review 1..3 by the complexity of the reviewed diff, comment / issue / push / PR opened or closed unmerged 1; tenfold on a JabCon
 // item, times config.repo_factors elsewhere (keys are repos or orgs: the JabRef org, upstream JavaFX work).
-// [impl->req~scoring~6]
+// [impl->req~scoring~7]
 // [impl->req~no-self-review-points~1]
 // [impl->req~no-fork-sync-points~1]
 const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e.number);
@@ -129,7 +129,7 @@ function eventPoints(e) {
   const card = cardOf(e), factor = card?.focus ? 10 : rf[e.repo] || rf[e.repo.split('/')[0]] || 1;
   if (e.type === 'PullRequestReviewEvent') return reviewPoints(card?.stats?.complexity) * factor;
   if (['IssueCommentEvent', 'IssuesEvent', 'PushEvent'].includes(e.type)) return factor;
-  if (e.type === 'PullRequestEvent' && (['opened', 'labeled'].includes(e.action) || (e.action === 'closed' && !e.merged))) return factor;
+  if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !e.merged))) return factor;
   if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return 3 * factor;
   return 0;
 }
