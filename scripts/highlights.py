@@ -79,6 +79,12 @@ def involved(c, types, exclude):
     return sorted((a for a in actors if not any(a.lower() in x.lower() for x in exclude)), key=str.lower)
 
 
+def merger(c):
+    """Who pressed merge: the actor of the merge event in the board's data (None when no participant did)."""
+    return next((e["actor"] for e in data["all_events"] if e["repo"] == REPO and e["number"] == c["number"]
+                 and e["type"] == "PullRequestEvent" and e["action"] == "merged"), None)
+
+
 def moment(c):
     """Video second of a merged PR's commit: the closest one within 25 minutes (the merge queue rebases the commit well
     before the merge is recorded), None when the video does not contain it yet."""
@@ -178,7 +184,7 @@ for i, c in enumerate(top):
     credits = "\n".join(textwrap.fill(line, 34) for line in credits.split("\n"))
     body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\n{credits}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
     before, after = around(int(moment(c)))
-    highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {c['author']}".replace("'", ""))
+    highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged" + (f" by {merger(c)}" if merger(c) else ""))
 highlight("outro", "To be continued...\n\n\n\n\n", moving[-CRAWL:])
 
 lst = os.path.join(tmp, "list.txt")
