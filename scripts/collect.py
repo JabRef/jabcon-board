@@ -478,7 +478,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~4]
+# [impl->req~bonus-points~5]
 BONUS = 100
 # the repos JabRef builds on (config): a fix there ships to everybody, not just to JabRef
 DEPENDENCIES = {r.lower() for r in CONFIG.get("dependency_repos", [])}
@@ -500,8 +500,20 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~4]
-def bonuses(cards, events):
+# [impl->req~bonus-points~5]
+def first_seen(previous):
+    """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
+    out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
+    for p in PARTICIPANTS:
+        if p in out:
+            continue
+        found, _ = get("/search/issues", {"q": f"org:{CONFIG['org']} author:{p}", "sort": "created", "order": "asc", "per_page": 1})
+        out[p] = (found.get("items") or [{}])[0].get("created_at")
+    return out
+
+
+# [impl->req~bonus-points~5]
+def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, _, _ in BONUS_KINDS), 0) for p in PARTICIPANTS}
     logins = {p.lower() for p in PARTICIPANTS}
@@ -539,6 +551,12 @@ def bonuses(cards, events):
         t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
     # awards the data cannot see (config): the jury's own +100
     out = [{**a, "points": BONUS} for a in CONFIG.get("honorary_awards", []) if a["login"] in tally]
+    # the newest face in the org: whoever's first issue or PR here is the most recent
+    dated = {p: d for p, d in (joined or {}).items() if d and p in tally}
+    if dated:
+        newest = max(dated.values())
+        out += [{"login": p, "title": "Newcomer", "text": f"first {CONFIG['org']} contribution {newest[:10]}",
+                 "emoji": "\U0001f423", "points": BONUS} for p, d in dated.items() if d == newest]
     for title, key, phrase, emoji in BONUS_KINDS:
         best = max((t[key] for t in tally.values()), default=0)
         out += [{"login": p, "title": title, "text": phrase.format(best), "emoji": emoji, "points": BONUS}
@@ -606,7 +624,7 @@ def main():
     if "--force" not in args and not (START <= now <= END):
         print(f"outside JabCon window ({START} .. {END}), nothing to do")
         return
-    cached, previous_milestones, previous_events = {}, [], []
+    cached, previous_milestones, previous_events, previous_joined = {}, [], [], {}
     if os.path.exists(out):
         try:
             previous = json.load(open(out))
@@ -614,6 +632,7 @@ def main():
             previous_milestones = previous.get("milestones", [])
             previous_events = previous.get("all_events", [])
             PR_AUTHORS.update(previous.get("pr_authors", {}))
+            previous_joined = previous.get("first_seen", {})
         except (ValueError, KeyError):
             pass
     ms = milestones(previous_milestones)
@@ -635,9 +654,10 @@ def main():
     for c in cards:
         for m in c.get("stats", {}).get("ai", []):
             ai_used[m] = ai_used.get(m, 0) + 1
+    joined = first_seen(previous_joined)
     board = leaderboard(cards, events, private)
     by_login = {l["login"]: l for l in board}
-    for b in bonuses(cards, events):
+    for b in bonuses(cards, events, joined):
         l = by_login[b["login"]]
         l["points"] += b["points"]
         l.setdefault("bonuses", []).append(b)
@@ -654,6 +674,7 @@ def main():
         "events": events[:200],
         "all_events": events,
         "pr_authors": PR_AUTHORS,
+        "first_seen": joined,
         "stats": totals,
         "leaderboard": sorted(board, key=lambda l: -l["points"]),
     }
