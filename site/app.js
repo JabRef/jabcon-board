@@ -232,6 +232,8 @@ function eventBase(e) {
   }
   if (e.type === 'PushEvent') return [1, 'push'];
   if (e.type === 'IssueCommentEvent') return [1, 'comment'];
+  // [impl->req~mailing-lists~1]
+  if (e.type === 'MailEvent') return [1, 'mailing list post'];
   if (e.type === 'IssuesEvent') return ['labeled', 'unlabeled'].includes(e.action) ? [0, 'labeling (a workflow looks like triage)'] : [1, `issue ${e.action}`];
   if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !e.merged))) return [1, `PR ${e.action}`];
   if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return [3, 'merged PR'];
