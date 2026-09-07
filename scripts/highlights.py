@@ -178,13 +178,18 @@ for i, c in enumerate(top):
     authors = people(c)
     reviewers = involved(c, {"PullRequestReviewEvent"}, authors)
     commenters = involved(c, {"IssueCommentEvent", "PullRequestReviewCommentEvent"}, authors + reviewers)
-    credits = f"by {', '.join(authors)}"
+    credits = [f"by {', '.join(authors)}"]
     if reviewers:
-        credits += f"\nreviews by {', '.join(reviewers)}"
+        credits.append(f"reviews by {', '.join(reviewers)}")
     if commenters:
-        credits += f"\ncomments by {', '.join(commenters)}"
-    credits = "\n".join(textwrap.fill(line, 34) for line in credits.split("\n"))
-    body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\n{credits}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines"
+        credits.append(f"comments by {', '.join(commenters)}")
+    st = c["stats"]
+    comps = sorted(st.get("components", {}), key=lambda k: -st["components"][k])[:3]
+    facts = [f"+{st['additions']} / -{st['deletions']} lines in {st['changed_files']} files", f"complexity {st['complexity']}"]
+    if comps:
+        facts.append("touching " + ", ".join(comps))
+    body = "\n".join(textwrap.fill(line, 34) for line in
+                     [f"Episode {i + 1}", "", c["title"], "", *credits, "", *facts])
     before, after = around(int(moment(c)))
     highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {merger(c)}")
 highlight("outro", "To be continued...", moving[-CRAWL:])
