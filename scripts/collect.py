@@ -573,29 +573,36 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~6]
+# [impl->req~bonus-points~7]
 BONUS = 100
+
+
+def search_url(query, sort=None, order=None):
+    """Where a bonus comes from, as a GitHub issue search everybody can click."""
+    q = {"q": query, "type": "issues", **({"s": sort, "o": order} if sort else {})}
+    return "https://github.com/search?" + urllib.parse.urlencode(q)
+
 # the repos JabRef builds on (config): a fix there ships to everybody, not just to JabRef
 DEPENDENCIES = {r.lower() for r in CONFIG.get("dependency_repos", [])}
 DEP_NAMES = {r.split("/")[1] for r in DEPENDENCIES}  # a fork of a dependency (Someone/jfx) is dependency work too
 # (title, tally key, how to phrase the number, emoji)
 BONUS_KINDS = [
-    ("Chatterbox", "comments", "{} comments", "\U0001f4ac"),
-    ("Busy bee", "touched", "touched {} PRs and issues", "\U0001f41d"),
-    ("Globetrotter", "repos", "worked on {} repositories", "\U0001f30d"),
-    ("Idea machine", "opened", "opened {} PRs", "\U0001f4a1"),
-    ("Gatekeeper", "reviews", "{} reviews", "\U0001f6e1\ufe0f"),
-    ("Closer", "merged", "{} merged PRs", "\U0001f3c1"),
-    ("Night owl", "night", "{} events between 22:00 and 06:00", "\U0001f989"),
-    ("Early bird", "early", "{} events before 08:00", "\U0001f426"),
+    ("Chatterbox", "comments", "{} comments", "\U0001f4ac", f"org:{CONFIG['org']} commenter:{{}} updated:>={START_DATE}"),
+    ("Busy bee", "touched", "touched {} PRs and issues", "\U0001f41d", f"involves:{{}} updated:>={START_DATE}"),
+    ("Globetrotter", "repos", "worked on {} repositories", "\U0001f30d", None),
+    ("Idea machine", "opened", "opened {} PRs", "\U0001f4a1", f"is:pr author:{{}} created:>={START_DATE}"),
+    ("Gatekeeper", "reviews", "{} reviews", "\U0001f6e1\ufe0f", f"reviewed-by:{{}} updated:>={START_DATE}"),
+    ("Closer", "merged", "{} merged PRs", "\U0001f3c1", f"is:pr author:{{}} is:merged merged:>={START_DATE}"),
+    ("Night owl", "night", "{} events between 22:00 and 06:00", "\U0001f989", None),
+    ("Early bird", "early", "{} events before 08:00", "\U0001f426", None),
     # upstream work is where the org's fixes land in somebody else's release
-    ("Ambassador", "upstream", "{} events outside the " + CONFIG["org"] + " org", "\u2615"),
-    ("Dependency whisperer", "dependency", "{} events in JabRef's dependencies", "\U0001f527"),
-    ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8"),
+    ("Ambassador", "upstream", "{} events outside the " + CONFIG["org"] + " org", "\u2615", f"-org:{CONFIG['org']} involves:{{}} updated:>={START_DATE}"),
+    ("Dependency whisperer", "dependency", "{} events in JabRef's dependencies", "\U0001f527", None),
+    ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8", None),
 ]
 
 
-# [impl->req~bonus-points~6]
+# [impl->req~bonus-points~7]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -607,10 +614,10 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~6]
+# [impl->req~bonus-points~7]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
-    tally = {p: dict.fromkeys((k for _, k, _, _ in BONUS_KINDS), 0) for p in PARTICIPANTS}
+    tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
     logins = {p.lower() for p in PARTICIPANTS}
     touched = {p: set() for p in PARTICIPANTS}
     repos = {p: set() for p in PARTICIPANTS}
@@ -647,17 +654,21 @@ def bonuses(cards, events, joined=None):
     # awards the data cannot see (config): the jury's own +100
     out = [{**a, "points": BONUS} for a in CONFIG.get("honorary_awards", []) if a["login"] in tally]
     # every nerd corner record pays, minus the authors who asked to be left out (the runner-up then holds it)
-    out += [{"login": r["author"], "title": r["title"], "text": r["text"], "emoji": r["emoji"], "points": BONUS}
+    out += [{"login": r["author"], "title": r["title"], "text": r["text"], "emoji": r["emoji"], "points": BONUS,
+             "url": r["url"]}
             for r in records(cards, exclude=CONFIG.get("record_bonus_exclude", [])) if r["author"] in tally]
     # the newest face in the org: whoever's first issue or PR here is the most recent
     dated = {p: d for p, d in (joined or {}).items() if d and p in tally}
     if dated:
         newest = max(dated.values())
         out += [{"login": p, "title": "Newcomer", "text": f"first {CONFIG['org']} contribution {newest[:10]}",
-                 "emoji": "\U0001f423", "points": BONUS} for p, d in dated.items() if d == newest]
-    for title, key, phrase, emoji in BONUS_KINDS:
+                 "emoji": "\U0001f423", "points": BONUS,
+                 "url": search_url(f"org:{CONFIG['org']} author:{p}", sort="created", order="asc")}
+                for p, d in dated.items() if d == newest]
+    for title, key, phrase, emoji, query in BONUS_KINDS:
         best = max((t[key] for t in tally.values()), default=0)
-        out += [{"login": p, "title": title, "text": phrase.format(best), "emoji": emoji, "points": BONUS}
+        out += [{"login": p, "title": title, "text": phrase.format(best), "emoji": emoji, "points": BONUS,
+                 "url": search_url(query.format(p)) if query else None}
                 for p, t in tally.items() if best and t[key] == best]
     return out
 

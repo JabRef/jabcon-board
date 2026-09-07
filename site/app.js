@@ -96,10 +96,17 @@ function renderStats() {
   slotMachine();
 }
 
-// [impl->req~bonus-points~6] the +100 awards a contributor holds, one emoji each, the category in the tooltip
+// [impl->req~bonus-points~7] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
+// The emoji links to what earned it - the record's PR or a GitHub search; an award with no such page opens the
+// contributor's detail view instead.
+function bonusLink(b, login, inner) {
+  const why = esc(`+${b.points} ${b.title}: ${b.text}`);
+  return b.url ? `<a class="bonus" href="${esc(b.url)}" target="_blank" rel="noopener" title="${why}">${inner}</a>`
+    : `<a class="bonus" href="#user/${encodeURIComponent(login)}" title="${why}">${inner}</a>`;
+}
 function bonusRow(l) {
   return (l.bonuses || []).length
-    ? `<div class="bonuses">${l.bonuses.map((b) => `<span title="${esc(`+${b.points} ${b.title}: ${b.text}`)}">${b.emoji}</span>`).join('')}</div>`
+    ? `<div class="bonuses">${l.bonuses.map((b) => bonusLink(b, l.login, b.emoji)).join('')}</div>`
     : '';
 }
 
@@ -279,7 +286,7 @@ function showDetail(login) {
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
   $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${l.points} points · ${l.merged} merged × 3 (${l.ai || 0} AI-assisted × 0.25) · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
-  $('#detail h2').innerHTML += (l.bonuses || []).map((b) => ` <span class="bonus" title="${esc(b.text)}">${b.emoji} ${esc(b.title)} +${b.points}</span>`).join('');
+  $('#detail h2').innerHTML += (l.bonuses || []).map((b) => ' ' + bonusLink(b, login, `${b.emoji} ${esc(b.title)} +${b.points}`)).join('');
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
 }
@@ -299,6 +306,7 @@ window.addEventListener('hashchange', route);
 $('#detail .back').addEventListener('click', closeDetail);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDetail(); });
 $('#leaderboard').addEventListener('click', (e) => {
+  if (e.target.closest('a')) return; // a bonus emoji links to what earned it, the detail view must not steal the click
   const who = e.target.closest('.leader')?.dataset.login;
   if (who) { pushedDetail = true; location.hash = `user/${encodeURIComponent(who)}`; }
 });

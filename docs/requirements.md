@@ -144,7 +144,7 @@ checked against their stored excerpt instead.
 Needs: impl
 
 ### Bonus points
-`req~bonus-points~6`
+`req~bonus-points~7`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
 most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
@@ -155,6 +155,8 @@ newcomer award. Every nerd corner record pays +100 to the PR's author as well, e
 `record_bonus_exclude` — there the runner-up holds the record bonus. Configured `honorary_awards` add +100 for what
 the data cannot see. The leaderboard
 shows one emoji per award under the login and names the category in the tooltip and the contributor detail view.
+Each emoji links to what earned it: the record's PR, or a GitHub search for the comments, reviews, PRs or repositories
+that were counted; an award with nothing to point at opens the contributor's detail view.
 
 Needs: impl
 
