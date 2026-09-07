@@ -198,10 +198,11 @@ each group.
 Needs: impl
 
 ### Lead change rings a bell
-`req~leader-change-bell~2`
+`req~leader-change-bell~3`
 
-When the top of the leaderboard changes, a bell sounds and a toast names the new leader — as the finale, after
-every reel has settled and every gain has popped, so the announcement is the last thing that happens.
+When the top of the leaderboard changes, a bell sounds at once, so the room looks up while the reels are still
+rolling. The toast naming the new leader follows as the finale, after every reel has settled and every gain has
+popped.
 
 Needs: impl
 
