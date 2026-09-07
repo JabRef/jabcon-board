@@ -272,8 +272,8 @@ Needs: impl
 `req~milestones~2`
 
 Configured milestones are listed with open/closed counts, a progress bar and how many were closed during JabCon
-(baseline taken at the first run). Hovering a row spells out the full milestone name, the counts, the "+n" closed
-since JabCon started and what the two bar colours mean. Milestones in private repos need `BOARD_TOKEN`; a missing one
+(baseline taken at the first run). The row counts what was closed since JabCon started; hovering it spells out the
+full milestone name, the overall counts and what the two bar colours mean. Milestones in private repos need `BOARD_TOKEN`; a missing one
 is skipped with a warning, not a failed run.
 
 Needs: impl
