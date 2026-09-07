@@ -18,7 +18,8 @@ SECONDS_PER_DAY = 100  # gource_seconds_per_day in JabRef/jabref's gource-jabcon
 # ponytail: gource's --auto-skip-seconds is 30, but the rendered video is shorter than that simulation; 12 matches the
 # real length best. Positions are stretched to the real duration anyway, so this only tunes the in-between spacing.
 SKIP_CAP = float(os.environ.get("SKIP_CAP", 12))
-CRAWL, CLIP = 9, 6  # seconds per card / per gource clip
+CRAWL, SPEED = 7, 165  # seconds per card, crawl px/s
+LEAD, TAIL = 5, 6  # gource seconds shown before the boom hits at the merge moment, and after
 W, H = 1920, 1080
 FONT = "DejaVu Sans"
 ENC = ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", "30", "-c:a", "aac", "-ar", "44100", "-ac", "2", "-shortest", "-y"]
@@ -50,7 +51,7 @@ def crawl(name, text, title=""):
     path = os.path.join(tmp, f"{name}.txt")
     open(path, "w").write(text)
     vf = (f"drawtext=textfile='{path}':font='{FONT}':fontsize=54:fontcolor=#ffd23f:line_spacing=18:x=(w-text_w)/2"
-          f":y=h-t*{(H + 400) / CRAWL},"
+          f":y=h-t*{SPEED},"
           # narrow the top: letters lean towards the vanishing point, as in the real crawl
           f"perspective=x0={W * 0.3}:y0=0:x1={W * 0.7}:y1=0:x2=0:y2={H}:x3={W}:y3={H}:sense=destination,"
           "fade=t=out:st=%d:d=0.5" % (CRAWL - 0.5))
@@ -63,18 +64,22 @@ def crawl(name, text, title=""):
 
 
 def boom(name, at, label):
-    """BOOM: white flash, zoom punch, camera shake and an RGB-split glitch over the first half second, with a bass hit."""
-    at = max(0.0, min(at - CLIP / 3, duration - CLIP))
+    """BOOM at the merge moment: white flash, zoom punch, camera shake and an RGB-split glitch over half a second, with a
+    bass hit; the clip runs LEAD seconds of plain gource before, so the eye has settled when it hits."""
+    at = max(0.0, min(at - LEAD, duration - LEAD - TAIL))
+    b, clip = LEAD, LEAD + TAIL
     vf = (f"scale={W * 1.2}:{H * 1.2},"
-          f"crop={W}:{H}:x='{W * 0.1}+if(lt(t,0.6),(random(0)-0.5)*160*(0.6-t),0)':y='{H * 0.1}+if(lt(t,0.6),(random(0)-0.5)*160*(0.6-t),0)',"
-          f"zoompan=z='if(lt(in,15),1.6-in*0.04,1)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps=30,"
-          "rgbashift=rh=25:bh=-25:enable='lt(t,0.35)',"
-          "fade=t=in:st=0:d=0.4:color=white,"
+          f"crop={W}:{H}:x='{W * 0.1}+if(between(t,{b},{b + 0.6}),(random(0)-0.5)*160*({b + 0.6}-t),0)'"
+          f":y='{H * 0.1}+if(between(t,{b},{b + 0.6}),(random(0)-0.5)*160*({b + 0.6}-t),0)',"
+          f"zoompan=z='if(between(in,{b * 30},{b * 30 + 15}),1.6-(in-{b * 30})*0.04,1)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps=30,"
+          f"rgbashift=rh=25:bh=-25:enable='between(t,{b},{b + 0.35})',"
+          f"eq=brightness='if(between(t,{b},{b + 0.4}),({b + 0.4}-t)/0.4,0)':saturation='if(between(t,{b},{b + 0.4}),0,1)':eval=frame,"
           f"drawtext=text='{label}':font='{FONT}':fontsize=64:fontcolor=white:borderw=3:bordercolor=black"
-          f":x=(w-text_w)/2:y=h-140:alpha='if(lt(t,0.5),0,min(1,(t-0.5)*2))'")
-    af = "aevalsrc='exp(-5*t)*(0.9*sin(2*PI*48*t)+0.5*sin(2*PI*31*t)+0.6*exp(-40*t)*(random(0)*2-1))':c=stereo:s=44100:d=%d" % CLIP
+          f":x=(w-text_w)/2:y=h-140:alpha='if(lt(t,{b + 0.5}),0,min(1,(t-{b + 0.5})*2))'")
+    af = (f"aevalsrc='if(gte(t,{b}),exp(-5*(t-{b}))*(0.9*sin(2*PI*48*(t-{b}))+0.5*sin(2*PI*31*(t-{b}))"
+          f"+0.6*exp(-40*(t-{b}))*(random(0)*2-1)),0)':c=stereo:s=44100:d={clip}")
     out = os.path.join(tmp, f"{name}.mp4")
-    run("-ss", f"{at:.2f}", "-t", str(CLIP), "-i", VIDEO, "-f", "lavfi", "-i", af, "-vf", vf, "-map", "0:v", "-map", "1:a", *ENC, out)
+    run("-ss", f"{at:.2f}", "-t", str(clip), "-i", VIDEO, "-f", "lavfi", "-i", af, "-vf", vf, "-map", "0:v", "-map", "1:a", *ENC, out)
     segments.append(out)
 
 
