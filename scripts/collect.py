@@ -470,6 +470,58 @@ def leaderboard(cards, events, private):
     return [{"login": p, **v} for p, v in score.items()]
 
 
+# The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
+# (breadth, chattiness, night shifts). Everybody tied for a category gets it.
+# [impl->req~bonus-points~1]
+BONUS = 100
+# (title, tally key, how to phrase the number, emoji)
+BONUS_KINDS = [
+    ("Chatterbox", "comments", "{} comments", "\U0001f4ac"),
+    ("Busy bee", "touched", "touched {} PRs and issues", "\U0001f41d"),
+    ("Globetrotter", "repos", "worked on {} repositories", "\U0001f30d"),
+    ("Idea machine", "opened", "opened {} PRs", "\U0001f4a1"),
+    ("Gatekeeper", "reviews", "{} reviews", "\U0001f6e1\ufe0f"),
+    ("Closer", "merged", "{} merged PRs", "\U0001f3c1"),
+    ("Night owl", "night", "{} events between 22:00 and 06:00", "\U0001f989"),
+    ("Early bird", "early", "{} events before 08:00", "\U0001f426"),
+]
+
+
+# [impl->req~bonus-points~1]
+def bonuses(cards, events):
+    """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
+    tally = {p: dict.fromkeys((k for _, k, _, _ in BONUS_KINDS), 0) for p in PARTICIPANTS}
+    touched = {p: set() for p in PARTICIPANTS}
+    repos = {p: set() for p in PARTICIPANTS}
+    for c in cards:
+        if c["column"] == "done" and c["type"] == "pr" and c["author"] in tally:
+            tally[c["author"]]["merged"] += 1
+    for e in events:
+        t = tally.get(e["actor"])
+        if t is None or e.get("self") or e.get("sync"):
+            continue
+        repos[e["actor"]].add(e["repo"])
+        if e.get("number"):
+            touched[e["actor"]].add((e["repo"], e["number"]))
+        hour = datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).astimezone(START.tzinfo).hour
+        t["night"] += hour >= 22 or hour < 6
+        t["early"] += 6 <= hour < 8
+        if e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent"):
+            t["comments"] += 1
+        elif e["type"] == "PullRequestReviewEvent":
+            t["reviews"] += 1
+        elif e["type"] == "PullRequestEvent" and e.get("action") == "opened":
+            t["opened"] += 1
+    for p, t in tally.items():
+        t["touched"], t["repos"] = len(touched[p]), len(repos[p])
+    out = []
+    for title, key, phrase, emoji in BONUS_KINDS:
+        best = max((t[key] for t in tally.values()), default=0)
+        out += [{"login": p, "title": title, "text": phrase.format(best), "emoji": emoji, "points": BONUS}
+                for p, t in tally.items() if best and t[key] == best]
+    return out
+
+
 # [impl->req~milestones~2]
 def milestones(previous):
     """Milestone progress; the closed count when first seen (usually JabCon start) is kept as the baseline."""
@@ -559,6 +611,12 @@ def main():
     for c in cards:
         for m in c.get("stats", {}).get("ai", []):
             ai_used[m] = ai_used.get(m, 0) + 1
+    board = leaderboard(cards, events, private)
+    by_login = {l["login"]: l for l in board}
+    for b in bonuses(cards, events):
+        l = by_login[b["login"]]
+        l["points"] += b["points"]
+        l.setdefault("bonuses", []).append(b)
     data = {
         "refactorings": nerdy,
         "records": records(cards),
@@ -573,7 +631,7 @@ def main():
         "all_events": events,
         "pr_authors": PR_AUTHORS,
         "stats": totals,
-        "leaderboard": sorted(leaderboard(cards, events, private), key=lambda l: -l["points"]),
+        "leaderboard": sorted(board, key=lambda l: -l["points"]),
     }
     with open(out, "w") as f:
         json.dump(data, f, indent=1)

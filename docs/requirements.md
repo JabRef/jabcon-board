@@ -132,6 +132,16 @@ The ticker shows the same points per event as the leaderboard sums.
 
 Needs: impl
 
+### Bonus points
+`req~bonus-points~1`
+
+A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
+most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
+activity between 22:00 and 06:00, most before 08:00. Everybody tied for a category gets the award. The leaderboard
+shows one emoji per award under the login and names the category in the tooltip and the contributor detail view.
+
+Needs: impl
+
 ### Activity rows name the PR or issue
 `req~event-titles~1`
 
