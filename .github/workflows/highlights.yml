@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  actions: read # gh run list, to see whether Pages is still deploying
 
 concurrency:
   group: highlights
@@ -26,5 +25,3 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
       - run: scripts/gh-pages.sh push
-        env:
-          GH_TOKEN: ${{ github.token }} # gh run list: is a Pages deployment still running?

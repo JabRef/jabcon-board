@@ -101,7 +101,8 @@ Needs: impl
 
 A push to `gh-pages` cancels the GitHub Pages deployment of the previous one. When a deployment takes longer than the
 publish interval, no deployment ever completes and the live site freezes while the branch keeps moving, so a push is
-skipped while a deployment younger than 20 minutes is still running; the next run publishes.
+skipped while a deployment younger than 20 minutes is still running; the next run publishes. Only the
+five-minute data publisher waits that way — the hourly video render publishes whatever it just spent half an hour on.
 
 Needs: impl
 
