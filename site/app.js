@@ -222,12 +222,12 @@ function renderAiModels() {
 
 // Mirrors the scoring in collect.py: merged PR (author) 3, review 1..3 by the complexity of the reviewed diff, comment / issue / push / PR opened or closed unmerged 1; tenfold on a JabCon
 // item, times config.repo_factors elsewhere (keys are repos or orgs: the JabRef org, upstream JavaFX work).
-// [impl->req~scoring~8]
+// [impl->req~scoring~9]
 // [impl->req~no-self-review-points~1]
 // [impl->req~no-fork-sync-points~1]
 const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e.number);
 const reviewPoints = (cc) => (cc == null ? 2 : cc <= 2 ? 1 : cc >= 20 ? 3 : 2);
-const boostText = () => Object.entries(data.config.repo_factors || {}).map(([r, f]) => `${r} × ${f}`).join(', ') || 'boosted repos';
+const boostText = () => Object.entries(data.config.repo_factors || {}).filter(([, f]) => f !== 1).map(([r, f]) => `${r} × ${f}`).join(', ') || 'boosted repos';
 const NOSCORE = { CreateEvent: 'creating a branch or tag', DeleteEvent: 'deleting a branch', WatchEvent: 'starring a repo', ForkEvent: 'forking a repo', MemberEvent: 'a membership change', PullRequestReviewCommentEvent: 'a review comment (its review scored)' };
 // What the event is worth before the factor, and the words for it, so the score and its explanation cannot drift apart.
 // [impl->req~points-tooltip~2]
