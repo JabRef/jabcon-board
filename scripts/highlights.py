@@ -41,7 +41,7 @@ log = subprocess.check_output(["gh", "api", "--paginate", f"repos/{REPO}/commits
                                "--jq", ".[] | [.commit.author.date, .commit.author.name, .commit.message] | @json"], text=True).splitlines()
 # logins the board knows; a co-author trailer naming just a login ("subhramit <mail>") is resolved only for these,
 # lest "Christoph <mail>" becomes some unrelated GitHub user called Christoph
-known = {l.lower() for l in data["config"]["participants"]} | {l.lower() for l in data["pr_authors"]} | {e["actor"].lower() for e in data["all_events"]}
+known = {l.lower() for l in data["config"]["participants"]} | {l.lower() for l in data["pr_authors"].values()} | {e["actor"].lower() for e in data["all_events"]}
 commits, author_of, coauthors, by_number = [], {}, {}, {}  # author date -> the name gource shows / the Co-authored-by
 # trailers; PR number -> author date (squash and queue merges carry "(#1234)" in the title)
 names = {}
