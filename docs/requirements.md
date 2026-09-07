@@ -327,6 +327,14 @@ browser), Ctrl+0 resets. Browser zoom is not a usable substitute (viewport units
 
 Needs: impl
 
+### Readable on a phone
+`req~mobile-layout~1`
+
+Below 900 px the board becomes one scrolling column with text at a readable size, so a phone shows every section
+including the footer instead of clipping whatever falls below the browser toolbars.
+
+Needs: impl
+
 ### Ambient motion against TV dimming
 `req~ambient-motion~1`
 
