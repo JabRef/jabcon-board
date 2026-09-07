@@ -216,10 +216,11 @@ badge and the points, newest first.
 Needs: impl
 
 ### JabCon activity on top
-`req~activity-grouped~1`
+`req~activity-grouped~2`
 
-The ticker shows events on JabCon items first and everything else below an "other" divider, newest first within
-each group.
+The ticker takes the newest events and shows those on JabCon items above an "other" divider, everything else
+below it, newest first within each group. Both groups come out of the same window, so the divider moves with how
+much recent activity is on JabCon items and the newest events stay visible in the clipped panel.
 
 Needs: impl
 
