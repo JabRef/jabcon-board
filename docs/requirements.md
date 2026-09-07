@@ -72,10 +72,11 @@ A bar shows the elapsed part of JabCon, the configured phases with the time left
 Needs: impl
 
 ### Refresh ring
-`req~refresh-ring~1`
+`req~refresh-ring~2`
 
 A ring fills over the expected refresh interval since the data was generated, pulses when a run is late and the
-header turns stale (amber "!") when data is older than 30 minutes or the fetch fails.
+header turns stale (amber "!") when data is older than 30 minutes or the fetch fails. Hovering it explains what the
+ring means and how old the data is.
 
 Needs: impl
 
