@@ -162,8 +162,10 @@ def highlight(name, text, before, after=None, title="", label=""):
     path = os.path.join(tmp, f"{name}.txt")
     open(path, "w").write(text)
     n = len(before)
-    text_v = (f"[1:v]drawtext=textfile='{path}':font='{FONT}':fontsize=54:fontcolor=#ffd23f:line_spacing=18:x=(w-text_w)/2"
-              f":y=h-t*{SPEED},"
+    # pace the crawl so the whole block clears the top within the card, however many lines it has
+    speed = (H + LEAD * len(text.splitlines())) / n
+    text_v = (f"[1:v]drawtext=textfile='{path}':font='{FONT}':fontsize={SIZE}:fontcolor=#ffd23f:line_spacing={LEAD - SIZE}:x=(w-text_w)/2"
+              f":y=h-t*{speed},"
               # narrow the top: letters lean towards the vanishing point, as in the real crawl
               f"perspective=x0={W * 0.3}:y0=0:x1={W * 0.7}:y1=0:x2=0:y2={H}:x3={W}:y3={H}:sense=destination,format=gbrp[text];")
     if title:
@@ -209,17 +211,21 @@ for i, c in enumerate(top):
     authors = people(c)
     reviewers = involved(c, {"PullRequestReviewEvent"}, authors)
     commenters = involved(c, {"IssueCommentEvent", "PullRequestReviewCommentEvent"}, authors + reviewers)
-    credits = f"by {', '.join(authors)}"
+    credits = [f"by {', '.join(authors)}"]
     if reviewers:
-        credits += f"\nreviews by {', '.join(reviewers)}"
+        credits.append(f"reviews by {', '.join(reviewers)}")
     if commenters:
-        credits += f"\ncomments by {', '.join(commenters)}"
-    credits = "\n".join(textwrap.fill(line, 34) for line in credits.split("\n"))
-    body = f"Episode {i + 1}\n\n{textwrap.fill(c['title'], 34)}\n\n{credits}\n\n+{c['stats']['additions']} / -{c['stats']['deletions']} lines\n\n\n\n\n"
+        credits.append(f"comments by {', '.join(commenters)}")
+    st = c["stats"]
+    comps = sorted(st.get("components", {}), key=lambda k: -st["components"][k])[:3]
+    facts = [f"+{st['additions']} / -{st['deletions']} lines in {st['changed_files']} files", f"complexity {st['complexity']}"]
+    if comps:
+        facts.append("touching " + ", ".join(comps))
+    body = "\n".join(textwrap.fill(line, 34) for line in
+                     [f"Episode {i + 1}", "", c["title"], "", *credits, "", *facts])
     before, after = around(int(moment(c)), crawl_seconds(body))
     highlight(f"pr{i}", body, before, after, label=f"#{c['number']} merged by {merger(c)}")
 highlight("outro", "To be continued...\n\n\n\n\n", moving[-crawl_seconds("To be continued..."):])
-
 
 
 def commentary(out):
