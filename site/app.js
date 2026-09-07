@@ -191,9 +191,11 @@ function pointsWhy(e) {
 }
 
 // [impl->req~ticker-deep-links~1]
+// [impl->req~event-titles~1]
 function eventRow(e) {
-  const org = data.config.org + '/', pts = eventPoints(e);
-  return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}<span class="pts${pts ? '' : ' zero'}" title="${esc(pointsWhy(e))}">+${pts}</span>${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
+  const org = data.config.org + '/', pts = eventPoints(e), card = cardOf(e);
+  const title = card && !e.summary.includes(card.title) ? card.title : ''; // most summaries carry it already; reviews do not
+  return `<li class="${e.repo.startsWith(org) ? '' : 'other'}">${avatar(e.actor)}<span class="when">${ago(e.created_at)}</span>${link(e.number ? `https://github.com/${e.repo}/issues/${e.number}` : e.url, `<span class="what"><span class="line"><b>${esc(e.actor)}</b> ${esc(e.summary.replace(' (commented)', ''))}${title ? ` <span class="subject">${esc(title)}</span>` : ''}</span>${e.excerpt ? `<span class="excerpt">“${esc(e.excerpt)}”</span>` : ''}</span>`, 'main')}<span class="pts${pts ? '' : ' zero'}" title="${esc(pointsWhy(e))}">+${pts}</span>${repoLink(e.repo, e.repo.startsWith(org) ? e.repo.slice(org.length) : e.repo)}</li>`;
 }
 
 // [impl->req~activity-grouped~1]

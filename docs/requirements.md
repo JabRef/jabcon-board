@@ -132,6 +132,14 @@ The ticker shows the same points per event as the leaderboard sums.
 
 Needs: impl
 
+### Activity rows name the PR or issue
+`req~event-titles~1`
+
+An activity row that refers to a tracked PR or issue shows its title next to the number, so "reviewed PR #2225"
+says what was reviewed.
+
+Needs: impl
+
 ### The points badge explains itself
 `req~points-tooltip~2`
 
