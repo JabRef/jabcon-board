@@ -96,7 +96,7 @@ function renderStats() {
   slotMachine();
 }
 
-// [impl->req~bonus-points~3] the +100 awards a contributor holds, one emoji each, the category in the tooltip
+// [impl->req~bonus-points~4] the +100 awards a contributor holds, one emoji each, the category in the tooltip
 function bonusRow(l) {
   return (l.bonuses || []).length
     ? `<div class="bonuses">${l.bonuses.map((b) => `<span title="${esc(`+${b.points} ${b.title}: ${b.text}`)}">${b.emoji}</span>`).join('')}</div>`

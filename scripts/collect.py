@@ -478,7 +478,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~3]
+# [impl->req~bonus-points~4]
 BONUS = 100
 # the repos JabRef builds on (config): a fix there ships to everybody, not just to JabRef
 DEPENDENCIES = {r.lower() for r in CONFIG.get("dependency_repos", [])}
@@ -500,7 +500,7 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~3]
+# [impl->req~bonus-points~4]
 def bonuses(cards, events):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, _, _ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -537,7 +537,8 @@ def bonuses(cards, events):
             t["opened"] += 1
     for p, t in tally.items():
         t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
-    out = []
+    # awards the data cannot see (config): the jury's own +100
+    out = [{**a, "points": BONUS} for a in CONFIG.get("honorary_awards", []) if a["login"] in tally]
     for title, key, phrase, emoji in BONUS_KINDS:
         best = max((t[key] for t in tally.values()), default=0)
         out += [{"login": p, "title": title, "text": phrase.format(best), "emoji": emoji, "points": BONUS}

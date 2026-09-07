@@ -63,5 +63,13 @@
     "mockito/mockito",
     "junit-team/junit-framework",
     "gradle/gradle"
+  ],
+  "honorary_awards": [
+    {
+      "login": "calixtus",
+      "title": "Gin o'clock",
+      "text": "keeps JabCon hydrated",
+      "emoji": "🍸"
+    }
   ]
 }
