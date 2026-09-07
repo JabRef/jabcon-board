@@ -417,7 +417,7 @@ def refactorings(pr, files, repo):
     return sorted(found, reverse=True)[:4]
 
 
-# [impl->req~scoring~8]
+# [impl->req~scoring~9]
 BRANCH = re.compile(r"\b(if|for|while|case|catch)\b|&&|\|\|")
 CODE = (".java", ".kt", ".js", ".ts", ".py", ".sh", ".fxml")
 
@@ -524,7 +524,7 @@ def pr_stats(c, cached):
 
 AI_FACTOR = 0.25  # writing it without an assistant is the harder craft, for now
 
-# [impl->req~scoring~8]
+# [impl->req~scoring~9]
 def leaderboard(cards, events, private):
     """Merged PR 3, review 1..3 by the complexity of the reviewed diff, other (comment, issue, push, PR opened / closed unmerged) 1; tenfold on a JabCon item (focus label / milestone), times the configured
     repo_factors elsewhere (keys are repos or whole orgs, e.g. the JabRef org and upstream JavaFX work); a quarter of

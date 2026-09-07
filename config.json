@@ -41,6 +41,7 @@
     "openjfx-discuss@openjdk.org": "openjdk/jfx"
   },
   "repo_factors": {
+    "JabRef/jabcon-board": 1,
     "JabRef": 5,
     "openjdk/jfx": 6
   },
