@@ -39,6 +39,9 @@ duration = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entri
 # the commits gource animates: main since JabCon started, by author date (gource's clock), via gh (GH_TOKEN in CI)
 log = subprocess.check_output(["gh", "api", "--paginate", f"repos/{REPO}/commits?sha=main&since={start.isoformat()}&per_page=100",
                                "--jq", ".[] | [.commit.author.date, .commit.author.name, .commit.message] | @json"], text=True).splitlines()
+# logins the board knows; a co-author trailer naming just a login ("subhramit <mail>") is resolved only for these,
+# lest "Christoph <mail>" becomes some unrelated GitHub user called Christoph
+known = {l.lower() for l in data["config"]["participants"]} | {l.lower() for l in data["pr_authors"]} | {e["actor"].lower() for e in data["all_events"]}
 commits, author_of, coauthors, by_number = [], {}, {}, {}  # author date -> the name gource shows / the Co-authored-by
 # trailers; PR number -> author date (squash and queue merges carry "(#1234)" in the title)
 names = {}
@@ -60,8 +63,7 @@ for d, author, message in map(json.loads, log):
         by_number[int(n)] = t
     for m in re.finditer(r"^co-authored-by:\s*([^<\n]+?)\s*<([^>]*)>", message, re.I | re.M):
         login = re.fullmatch(r"(?:\d+\+)?([^@]+)@users\.noreply\.github\.com", m[2])
-        # a trailer naming just a login ("subhramit <mail>") is looked up like a noreply address
-        coauthors.setdefault(t, []).append(display(login[1] if login else m[1]) if login or re.fullmatch(r"[\w-]+", m[1]) else m[1])
+        coauthors.setdefault(t, []).append(display(login[1] if login else m[1]) if login or m[1].lower() in known else m[1])
 commits.sort()
 position, video_t, prev = {}, 0.0, start + START_OFFSET  # commit time -> video second
 for t in commits:
