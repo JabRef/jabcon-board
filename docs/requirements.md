@@ -212,6 +212,14 @@ works for whichever is playing. A missing reel is skipped, not shown as a broken
 
 Needs: impl
 
+### A button skips to the other video
+`req~gource-next~1`
+
+While the video is enlarged by hover, a "next" button in its top right corner switches to the other video at once,
+without waiting for the current run to end. The video stays enlarged while the pointer is on the button.
+
+Needs: impl
+
 ### Gource plays at triple speed, the reel at normal speed
 `req~gource-speed~2`
 
