@@ -98,9 +98,10 @@ function renderStats() {
 }
 
 // Slot machine: new numbers do not just appear, they spin into place, lowest contributor first and the leader last,
-// the whole board settled within SLOT_TOTAL_MS. Until its turn a reel keeps the previous total, so the change is visible.
+// the whole board settled within SLOT_TOTAL_MS. A reel that has not had its turn shows the previous total, grayed.
+// Within a reel the digits lock right to left, and the gain pops out of the settled number and flies off the top.
 // One interval drives every reel; the next render's call cancels it, which also drops the then-stale nodes.
-// [impl->req~leaderboard-slot-machine~1]
+// [impl->req~leaderboard-slot-machine~2]
 const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500;
 let slotTimer;
 function slotMachine() {
@@ -109,23 +110,41 @@ function slotMachine() {
   if (!reels.length || document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const was = Object.fromEntries((previous?.leaderboard || []).map((l) => [l.login, l.points]));
   const plan = reels.map((el, i) => {
-    const final = el.textContent;
-    el.textContent = was[el.parentElement.dataset.login] ?? final;
-    return { el, final, start: i * (SLOT_TOTAL_MS - SLOT_ROLL_MS) / Math.max(1, reels.length - 1) };
+    const final = el.textContent, before = was[el.parentElement.dataset.login];
+    el.textContent = before ?? final;
+    el.classList.add('pending');
+    return { el, final, gain: before == null ? 0 : Number(final) - before, start: i * (SLOT_TOTAL_MS - SLOT_ROLL_MS) / Math.max(1, reels.length - 1) };
   });
   const t0 = performance.now();
   slotTimer = setInterval(() => {
     const t = performance.now() - t0;
     let running = false;
-    for (const { el, final, start } of plan) {
-      if (t < start) { running = true; continue; }
-      if (t >= start + SLOT_ROLL_MS) { el.textContent = final; el.classList.remove('rolling'); continue; }
-      running = true;
-      el.classList.add('rolling');
-      el.textContent = String(Math.floor(Math.random() * 10 ** final.length)).padStart(final.length, '0');
+    for (const r of plan) {
+      if (t < r.start || r.settled) { running = running || !r.settled; continue; }
+      const locked = Math.floor(r.final.length * (t - r.start) / SLOT_ROLL_MS); // digits held from the right
+      r.el.classList.remove('pending');
+      r.el.classList.toggle('rolling', locked < r.final.length);
+      r.el.textContent = [...r.final].map((d, i) => (i >= r.final.length - locked ? d : Math.floor(Math.random() * 10))).join('');
+      if (locked >= r.final.length) { r.settled = true; popPoints(r.el, r.gain); } else running = true;
     }
     if (!running) clearInterval(slotTimer);
   }, 60);
+}
+
+// The gain jumps out of the reel and flies off the top of the screen. Fixed and on <body>, so no ancestor of the
+// fixed video is transformed. [impl->req~leaderboard-slot-machine~2]
+function popPoints(el, gain) {
+  if (gain <= 0) return;
+  const box = el.getBoundingClientRect(), pop = document.createElement('div');
+  pop.className = 'pop';
+  pop.textContent = `+${gain}`;
+  pop.style.left = `${box.left + box.width / 2}px`;
+  pop.style.top = `${box.top}px`;
+  document.body.appendChild(pop);
+  pop.animate([{ transform: 'translate(-50%, 0) scale(1)', opacity: 1 },
+    { transform: 'translate(-50%, -1.5rem) scale(1.8)', opacity: 1, offset: 0.25 },
+    { transform: `translate(-50%, ${-box.top - 40}px) scale(1.2)`, opacity: 0 }],
+  { duration: 2000, easing: 'cubic-bezier(.2,.8,.4,1)' }).onfinish = () => pop.remove();
 }
 
 
