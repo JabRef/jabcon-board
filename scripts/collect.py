@@ -573,10 +573,11 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~11]
+# [impl->req~bonus-points~12]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
+MERGED_FLOOR = 3  # one hand-written PR is not a habit
 THANKS = re.compile(r"\bth(?:ank|x)", re.I)
 
 
@@ -617,11 +618,13 @@ BONUS_KINDS = [
     ("Essayist", "essay", "{} characters per comment on average", "\U0001f4dd", None),
     ("Freight train", "freight", "{} commits per push", "\U0001f69a", None),
     ("Weekend warrior", "weekend", "{}% of their activity on a weekend", "\U0001f3d6\ufe0f", None),
+    ("Reporter", "reported", "{} issues opened", "\U0001f41b", f"is:issue author:{{}} created:>={START_DATE}"),
+    ("Handmade", "handmade", "{}% of their merged PRs written without an assistant", "\u270b", None),
     ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8", None),
 ]
 
 
-# [impl->req~bonus-points~11]
+# [impl->req~bonus-points~12]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -633,7 +636,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~11]
+# [impl->req~bonus-points~12]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -649,9 +652,12 @@ def bonuses(cards, events, joined=None):
     reach = {p: set() for p in PARTICIPANTS}  # the PR authors whose work they reviewed
     reviews_of = {}  # (repo, number) -> (first review's time, its author), for the first responder award
     scored = []  # the events that counted, for the tallies computed after the loop
+    handmade = {p: [0, 0] for p in PARTICIPANTS}  # merged PRs, of them written without an assistant
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in tally:
             tally[c["author"]]["merged"] += 1
+            handmade[c["author"]][0] += 1
+            handmade[c["author"]][1] += not (c.get("stats") or {}).get("ai")
         if c["author"] in comps:
             comps[c["author"]] |= by_pr[(c["repo"], c["number"])]
             labelled[c["author"]] |= labels_of[(c["repo"], c["number"])]
@@ -698,6 +704,8 @@ def bonuses(cards, events, joined=None):
             labelled[e["actor"]] |= labels_of.get((e["repo"], e.get("number")), set())
         elif e["type"] == "PullRequestEvent" and e.get("action") == "opened":
             t["opened"] += 1
+        elif e["type"] == "IssuesEvent" and e.get("action") == "opened":
+            t["reported"] += 1
     for p, t in tally.items():
         t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
         t["diverse"], t["labelled"] = len(comps[p]), len(labelled[p])
@@ -714,6 +722,9 @@ def bonuses(cards, events, joined=None):
         said = [e.get("excerpt") or "" for e in mine if e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent")]
         if len(said) >= EVENT_FLOOR:  # the excerpt is capped, so this measures who fills the first line, not essays
             t["essay"] = round(sum(len(x) for x in said) / len(said))
+        merged, by_hand = handmade[p]
+        if merged >= MERGED_FLOOR:
+            t["handmade"] = round(100 * by_hand / merged)
         pushes = [e.get("commits") or 0 for e in mine if e["type"] == "PushEvent"]
         if len(pushes) >= EVENT_FLOOR:
             t["freight"] = round(sum(pushes) / len(pushes), 1)
