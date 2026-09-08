@@ -106,17 +106,15 @@ function bonusLink(b, login, inner) {
   return b.url ? `<a class="bonus" href="${esc(b.url)}" target="_blank" rel="noopener" title="${why}">${inner}</a>`
     : `<a class="bonus" href="#user/${encodeURIComponent(login)}" title="${why}">${inner}</a>`;
 }
-function bonusRow(l) {
-  return (l.bonuses || []).length
-    ? `<div class="bonuses">${l.bonuses.map((b) => bonusLink(b, l.login, b.emoji)).join('')}</div>`
-    : '';
+function bonusRow(l) { // always rendered, empty included: equal heights keep the leaderboard on one baseline
+  return `<div class="bonuses">${(l.bonuses || []).map((b) => bonusLink(b, l.login, b.emoji)).join('')}</div>`;
 }
 
 // The nerd corner holds more than fits: the detected refactorings and the funny records (longest identifier,
 // most code deleted, ...) take turns, NERD_PAGE lines at a time, so the whole set is readable from the wall.
-// [impl->req~nerd-corner~2]
+// [impl->req~nerd-corner~3]
 // [impl->req~nerd-records~2]
-const NERD_PAGE = 5, NERD_MS = 12000;
+const NERD_PAGE = 4, NERD_MS = 12000;
 let nerdPage = 0, nerdTimer;
 
 function renderNerd() {
