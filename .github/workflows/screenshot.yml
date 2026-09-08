@@ -26,8 +26,10 @@ jobs:
         if: steps.window.outputs.active == 'true'
         run: |
           mkdir -p screenshots
+          snapshot="screenshots/$(date -u +%Y-%m-%dT%H-%M-%SZ).png"
           google-chrome --headless=new --no-sandbox --hide-scrollbars --window-size=1920,1080 --virtual-time-budget=10000 \
-            --screenshot="screenshots/$(date -u +%Y-%m-%dT%H-%M-%SZ).png" "https://jabref.github.io/jabcon-board/"
+            --screenshot="$snapshot" "https://jabref.github.io/jabcon-board/"
+          cp "$snapshot" site/og-board.png
       - name: Commit
         if: steps.window.outputs.active == 'true'
         run: |
