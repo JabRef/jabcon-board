@@ -108,7 +108,7 @@ section h2 .count { float: right; color: var(--fg); }
 /* [impl->req~leaderboard-slot-machine~4] a spinning reel is blurred and amber, one still holding the old total is gray */
 .leader .pts.rolling { color: var(--warn); filter: blur(.04rem); }
 .leader .pts.pending { color: var(--muted); }
-/* [impl->req~bonus-points~12] the +100 awards sit under the login, small enough not to shove the leaderboard around */
+/* [impl->req~bonus-points~13] the +100 awards sit under the login, small enough not to shove the leaderboard around */
 .leader .bonuses { display: flex; flex-wrap: wrap; justify-content: center; gap: .05rem .1rem; max-width: 5.5rem;
   margin: 0 auto; font-size: .7rem; line-height: 1.2; cursor: help; }
 #detail .bonus { font-size: .8rem; color: var(--ok); }
