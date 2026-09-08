@@ -374,6 +374,8 @@ DETECTORS = [
     (2, r"\bOptional\.(ofNullable|of)\(|\.ifPresentOrElse\(", "Optional"),
 ]
 DETECTORS = [(w, re.compile(rx, re.M), label) for w, rx, label in DETECTORS]
+MODULE_FILES = (".gradle", ".gradle.kts", "pom.xml", "module-info.java")
+MODULE_DECLARATION = re.compile(r"\bmodule\s*(?:\([^\n)]*\)|[\w.]+\s*\{)|<module>[^<]+</module>")
 
 
 # Names of the AI assistants that sign commits; the first match on a trailer line wins, so keep the
@@ -418,7 +420,14 @@ def refactorings(pr, files, repo):
         found.append((3 + min(len(removed), 5), f"deleted {', '.join(f['filename'].rsplit('/', 1)[-1].removesuffix('.java') for f in removed[:3])}" + (" …" if len(removed) > 3 else "")))
     if pr["deletions"] > pr["additions"] * 1.5 and pr["deletions"] > 50:
         found.append((4, f"net −{pr['deletions'] - pr['additions']} lines"))
-    if any(f["filename"].endswith("module-info.java") for f in files):
+    module_files = [f for f in files if f["filename"].endswith(MODULE_FILES)]
+    module_added = sum(len(MODULE_DECLARATION.findall(l[1:])) for f in module_files
+                       for l in f.get("patch", "").splitlines() if l.startswith("+"))
+    module_removed = sum(len(MODULE_DECLARATION.findall(l[1:])) for f in module_files
+                         for l in f.get("patch", "").splitlines() if l.startswith("-"))
+    if module_added or module_removed:
+        found.append((4, f"module metadata changed (+{module_added} / −{module_removed})"))
+    elif any(f["filename"].endswith("module-info.java") for f in files):
         found.append((4, "module boundary changed"))
     added = "\n".join(l for f in files if f["filename"].endswith(".java") for l in f.get("patch", "").splitlines() if l.startswith("+"))
     hits = {}

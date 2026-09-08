@@ -451,9 +451,10 @@ is skipped with a warning, not a failed run.
 Needs: impl
 
 ### Nerd corner
-`req~nerd-corner~3`
+`req~nerd-corner~4`
 
-The stats show the top refactorings detected in merged PRs (records, sealed types, pattern matching, ...).
+The stats show the top refactorings detected in merged PRs (records, sealed types, pattern matching, module metadata
+added or removed, ...).
 Together with the records below they take turns, four lines at a time, so everything is readable from the wall and
 nothing is cut off by the leaderboard below.
 
