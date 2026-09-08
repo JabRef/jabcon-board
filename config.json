@@ -79,5 +79,10 @@
   ],
   "record_bonus_exclude": [
     "koppor"
+  ],
+  "news_feeds": [
+    "https://blog.jabref.org/feed.xml",
+    "https://inside.java/feed.xml",
+    "https://news.ycombinator.com/rss"
   ]
 }

@@ -363,6 +363,15 @@ enlarged video).
 
 Needs: impl
 
+### Newsticker
+`req~newsticker~1`
+
+Headlines from the feeds in `news_feeds` (config) scroll along the bottom edge of the wall, so there is something to
+read in quiet hours. The feeds are interleaved so none dominates; each headline links to its article. A feed that is
+down is skipped, not a failed run. The strip stays still with `?still=1` or reduced-motion.
+
+Needs: impl
+
 ### Milestones
 `req~milestones~2`
 

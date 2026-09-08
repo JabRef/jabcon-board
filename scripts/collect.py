@@ -18,6 +18,7 @@ import tempfile
 import time
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.header import decode_header, make_header
 
@@ -801,6 +802,38 @@ def private_activity():
     return result
 
 
+# [impl->req~newsticker~1]
+def headlines(feed):
+    """(title, link) per item of an RSS or Atom document, newest first as the feed lists them."""
+    out = []
+    for item in ET.fromstring(feed).iter():
+        if item.tag.split("}")[-1] not in ("item", "entry"):
+            continue
+        title = link = ""
+        for child in item:
+            tag = child.tag.split("}")[-1]
+            if tag == "title":
+                title = " ".join((child.text or "").split())
+            elif tag == "link" and not link:
+                link = (child.text or child.get("href") or "").strip()
+        if title and link:
+            out.append((title, link))
+    return out
+
+
+def news(per_feed=8):
+    """Headlines of the configured feeds, interleaved so no feed hogs the ticker; a dead feed is skipped."""
+    columns = []
+    for url in CONFIG.get("news_feeds", []):
+        req = urllib.request.Request(url, headers={"User-Agent": "jabcon-board"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                columns.append(headlines(resp.read())[:per_feed])
+        except Exception as e:
+            print(f"news feed {url}: {e}", file=sys.stderr)
+    return [{"title": t, "url": u} for i in range(per_feed) for col in columns if i < len(col) for t, u in [col[i]]]
+
+
 def focus_progress():
     """Open vs. closed-since-start counts for the focus label, drawn like a milestone."""
     if not FOCUS:
@@ -864,6 +897,7 @@ def main():
         "ai_models": dict(sorted(ai_used.items(), key=lambda kv: -kv[1])),
         "milestones": ms,
         "focus": focus_progress(),
+        "news": news(),
         "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,

@@ -279,6 +279,16 @@ function eventRow(e) {
 // the ticker is clipped, so a fixed block pushed the newest activity out of sight whenever JabCon items were quiet.
 // The divider therefore moves with how much recent activity is on JabCon items.
 // [impl->req~activity-grouped~2]
+// [impl->req~newsticker~1] one headline strip along the bottom, scrolling at reading pace whatever its length
+function renderNews() {
+  const items = data.news || [];
+  const strip = $('#news span');
+  const html = items.map((n) => link(n.url, esc(n.title), 'headline')).join('<i>✦</i>');
+  if (strip.innerHTML === html) return; // an unchanged strip keeps scrolling instead of jumping back to the start
+  strip.innerHTML = html;
+  strip.style.animationDuration = `${Math.max(20, items.reduce((n, i) => n + i.title.length, 0) / 6)}s`;
+}
+
 function renderTicker() {
   const recent = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 25);
   const jabcon = recent.filter((e) => cardOf(e)?.focus), rest = recent.filter((e) => !cardOf(e)?.focus);
@@ -395,6 +405,7 @@ function render() {
   for (const col of ['backlog', 'progress', 'done']) renderColumn(col, data.cards.filter((c) => c.column === col));
   renderStats();
   renderTicker();
+  renderNews();
   renderProgress();
   tick();
   route(); // a deep link renders once the data is there; an open detail view follows the refreshed data

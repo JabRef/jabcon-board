@@ -39,7 +39,7 @@ header.stale #updated { background: var(--warn); }
 header.stale #updated::after { content: "!"; display: grid; place-items: center; font-weight: bold; }
 #logo { height: 3.5rem; }
 main {
-  display: grid; height: calc(100dvh - 5rem); gap: .8rem; padding: .8rem;
+  display: grid; height: calc(100dvh - 5rem - 1.6rem); gap: .8rem; padding: .8rem;
   grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 11fr 9fr;
 }
 section { background: rgba(22, 27, 34, .8); /* translucent so the ambient glow shows through */ border: 1px solid var(--border); border-radius: .6rem; padding: .6rem .8rem; overflow: hidden; display: flex; flex-direction: column; }
@@ -148,7 +148,15 @@ a.bonus { text-decoration: none; }
 #next-video { right: 1.5vw; }
 #prev-video { left: 11.5vw; }
 #gource[src]:hover ~ .video-nav, .video-nav:hover { display: block; }
-#footer { position: fixed; right: 1rem; bottom: .1rem; display: flex; gap: 1rem; font-size: .6rem; color: var(--muted); font-family: monospace; }
+#footer { height: 1.6rem; display: flex; align-items: center; gap: 1rem; padding: 0 1rem 0 0; font-size: .6rem; color: var(--muted); font-family: monospace; }
+/* [impl->req~newsticker~1] headlines from the configured feeds run right to left along the bottom edge; the text is
+   its own animated element (no fixed-positioned descendants), so animating its transform is safe */
+#news { flex: 1; overflow: hidden; font-family: system-ui, sans-serif; font-size: .9rem; white-space: nowrap; }
+#news span { display: inline-block; padding-left: 100vw; animation: marquee 60s linear infinite; }
+#news:empty, #news span:empty { display: none; }
+#news a { color: var(--fg); text-decoration: none; }
+#news i { color: var(--accent); font-style: normal; padding: 0 1.2rem; }
+@keyframes marquee { to { transform: translateX(-100%); } }
 #components span:nth-child(3n+1) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #components span:nth-child(3n) { text-align: end; font-variant-numeric: tabular-nums; }
 
@@ -172,8 +180,9 @@ body { animation: glow 40s ease-in-out infinite; }
   100% { transform: translate(25%, -15%) scale(.9); }
 }
 @keyframes breathe { 50% { border-color: #3d4654; } }
-@media (prefers-reduced-motion: reduce) { body, body::before, section { animation: none; } }
-html.still body, html.still body::before, html.still section { animation: none; }
+@media (prefers-reduced-motion: reduce) { body, body::before, section, #news span { animation: none; } #news span { padding-left: 0; } }
+html.still body, html.still body::before, html.still section, html.still #news span { animation: none; }
+html.still #news span { padding-left: 0; }
 /* [impl->req~contributor-detail~2] */
 #detail[hidden] { display: none; }
 #detail { position: fixed; inset: 0; z-index: 20; background: var(--bg); padding: 1rem 2rem; display: flex; flex-direction: column; gap: .6rem; }
@@ -215,7 +224,8 @@ html.still body, html.still body::before, html.still section { animation: none; 
   #gource[src]:hover, #gource[src]:has(~ .video-nav:hover) { position: static; width: 100%; height: auto; box-shadow: none; }
   .video-nav { position: static; }
   #gource[src]:hover ~ .video-nav, .video-nav:hover { display: inline-block; }
-  #footer { position: static; justify-content: flex-end; padding: 0 .8rem .8rem; }
+  #footer { height: auto; flex-wrap: wrap; justify-content: flex-end; padding: 0 .8rem .8rem; }
+  #news { flex-basis: 100%; }
   #detail { padding: .8rem; }
 }
 
