@@ -80,6 +80,9 @@
   "record_bonus_exclude": [
     "koppor"
   ],
+  "nerd_prs": [
+    "JabRef/jabref#16986"
+  ],
   "exclude_titles": [
     "New Crowdin updates"
   ],
