@@ -573,7 +573,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~8]
+# [impl->req~bonus-points~9]
 BONUS = 100
 
 
@@ -599,11 +599,12 @@ BONUS_KINDS = [
     ("Ambassador", "upstream", "{} events outside the " + CONFIG["org"] + " org", "\u2615", f"-org:{CONFIG['org']} involves:{{}} updated:>={START_DATE}"),
     ("Dependency whisperer", "dependency", "{} events in JabRef's dependencies", "\U0001f527", None),
     ("Jack of all trades", "diverse", "touched {} components, writing or reviewing", "\U0001f3a8", None),
+    ("Component collector", "labelled", "{} \"component:\" labels written or reviewed", "\U0001f3f7\ufe0f", None),
     ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8", None),
 ]
 
 
-# [impl->req~bonus-points~8]
+# [impl->req~bonus-points~9]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -615,7 +616,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~8]
+# [impl->req~bonus-points~9]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -624,12 +625,15 @@ def bonuses(cards, events, joined=None):
     repos = {p: set() for p in PARTICIPANTS}
     exotic = {p: set() for p in PARTICIPANTS}
     comps = {p: set() for p in PARTICIPANTS}  # components written or reviewed: the breadth of the code itself
+    labelled = {p: set() for p in PARTICIPANTS}  # the same breadth as the maintainers see it, in "component:" labels
     by_pr = {(c["repo"], c["number"]): set(c.get("stats", {}).get("components") or ()) for c in cards}
+    labels_of = {(c["repo"], c["number"]): {l for l in c.get("labels") or () if l.startswith("component:")} for c in cards}
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in tally:
             tally[c["author"]]["merged"] += 1
         if c["author"] in comps:
             comps[c["author"]] |= by_pr[(c["repo"], c["number"])]
+            labelled[c["author"]] |= labels_of[(c["repo"], c["number"])]
     for e in events:
         t = tally.get(e["actor"])
         if t is None or e.get("self") or e.get("sync") or e.get("ai"):
@@ -653,11 +657,12 @@ def bonuses(cards, events, joined=None):
         elif e["type"] == "PullRequestReviewEvent":
             t["reviews"] += 1
             comps[e["actor"]] |= by_pr.get((e["repo"], e.get("number")), set())
+            labelled[e["actor"]] |= labels_of.get((e["repo"], e.get("number")), set())
         elif e["type"] == "PullRequestEvent" and e.get("action") == "opened":
             t["opened"] += 1
     for p, t in tally.items():
         t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
-        t["diverse"] = len(comps[p])
+        t["diverse"], t["labelled"] = len(comps[p]), len(labelled[p])
     # awards the data cannot see (config): the jury's own +100
     out = [{**a, "points": BONUS} for a in CONFIG.get("honorary_awards", []) if a["login"] in tally]
     # every nerd corner record pays, minus the authors who asked to be left out (the runner-up then holds it)
