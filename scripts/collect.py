@@ -573,12 +573,13 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~14]
+# [impl->req~bonus-points~15]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
 MERGED_FLOOR = 3  # one hand-written PR is not a habit
 STRICT_FLOOR = 3  # a single "changes requested" is not a temperament
+SMALL, MEDIUM = 50, 500  # changed lines; above that a PR is large
 THANKS = re.compile(r"\bth(?:ank|x)", re.I)
 
 
@@ -623,11 +624,14 @@ BONUS_KINDS = [
     ("Handmade", "handmade", "{}% of their merged PRs written without an assistant", "\u270b", None),
     ("Hard to please", "strict", "{}% of their reviews asked for changes", "\U0001f6a7", None),
     ("Big picture", "issuey", "{}% of their activity went into issues, not code", "\U0001f52d", None),
+    ("Featherweight", "small", "{} merged PRs of at most 50 changed lines", "\U0001fab6", None),
+    ("Middleweight", "medium", "{} merged PRs between 50 and 500 changed lines", "\u2696\ufe0f", None),
+    ("Heavyweight", "large", "{} merged PRs above 500 changed lines", "\U0001f418", None),
     ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8", None),
 ]
 
 
-# [impl->req~bonus-points~14]
+# [impl->req~bonus-points~15]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -639,7 +643,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~14]
+# [impl->req~bonus-points~15]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -664,6 +668,10 @@ def bonuses(cards, events, joined=None):
             tally[c["author"]]["merged"] += 1
             handmade[c["author"]][0] += 1
             handmade[c["author"]][1] += not (c.get("stats") or {}).get("ai")
+            st = c.get("stats") or {}
+            changed = st.get("additions", 0) + st.get("deletions", 0)
+            if st:  # the same small / medium / large the "size:" labels talk about, but measured on every PR
+                tally[c["author"]]["small" if changed <= SMALL else "medium" if changed <= MEDIUM else "large"] += 1
         if c["author"] in comps:
             comps[c["author"]] |= by_pr[(c["repo"], c["number"])]
             labelled[c["author"]] |= labels_of[(c["repo"], c["number"])]
