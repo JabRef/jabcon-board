@@ -573,8 +573,10 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~9]
+# [impl->req~bonus-points~10]
 BONUS = 100
+REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
+THANKS = re.compile(r"\bth(?:ank|x)", re.I)
 
 
 def search_url(query, sort=None, order=None):
@@ -600,11 +602,21 @@ BONUS_KINDS = [
     ("Dependency whisperer", "dependency", "{} events in JabRef's dependencies", "\U0001f527", None),
     ("Jack of all trades", "diverse", "touched {} components, writing or reviewing", "\U0001f3a8", None),
     ("Component collector", "labelled", "{} \"component:\" labels written or reviewed", "\U0001f3f7\ufe0f", None),
+    ("Reviewer's reviewer", "reviewshare", "{}% of everything they did was reviewing", "\U0001f50d", None),
+    ("Actions over words", "terse", "{} reviews per comment written", "\U0001f910", None),
+    ("Rubber stamp", "approvals", "{} approvals given", "\u2705", None),
+    ("Janitor", "deleted", "{} branches cleaned up", "\U0001f9f9", None),
+    ("Widest reach", "reach", "reviewed the PRs of {} different authors", "\U0001f91d", None),
+    ("Socratic", "questions", "{} questions asked", "\u2753", None),
+    ("Most gracious", "thanks", "said thank you {} times", "\U0001f64f", None),
+    ("Always on", "hours", "active in {} of the 24 hours", "\U0001f570\ufe0f", None),
+    ("Magnet", "magnet", "their PRs pulled {} reviews", "\U0001f9f2", None),
+    ("First responder", "first", "first to review {} PRs", "\u26a1", None),
     ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8", None),
 ]
 
 
-# [impl->req~bonus-points~9]
+# [impl->req~bonus-points~10]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -616,7 +628,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~9]
+# [impl->req~bonus-points~10]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -628,6 +640,10 @@ def bonuses(cards, events, joined=None):
     labelled = {p: set() for p in PARTICIPANTS}  # the same breadth as the maintainers see it, in "component:" labels
     by_pr = {(c["repo"], c["number"]): set(c.get("stats", {}).get("components") or ()) for c in cards}
     labels_of = {(c["repo"], c["number"]): {l for l in c.get("labels") or () if l.startswith("component:")} for c in cards}
+    hours = {p: set() for p in PARTICIPANTS}
+    reach = {p: set() for p in PARTICIPANTS}  # the PR authors whose work they reviewed
+    reviews_of = {}  # (repo, number) -> (first review's time, its author), for the first responder award
+    scored = []  # the events that counted, for the tallies computed after the loop
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in tally:
             tally[c["author"]]["merged"] += 1
@@ -652,10 +668,27 @@ def bonuses(cards, events, joined=None):
         hour = datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).astimezone(START.tzinfo).hour
         t["night"] += hour >= 22 or hour < 6
         t["early"] += 6 <= hour < 8
+        hours[e["actor"]].add(hour)
+        scored.append(e)
+        t["deleted"] += e["type"] == "DeleteEvent"
+        # only the first line of a comment survives in the excerpt, so these two read what is visible on the board
+        excerpt_ = e.get("excerpt") or ""
+        if e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent", "PullRequestReviewEvent"):
+            t["questions"] += "?" in excerpt_
+            t["thanks"] += bool(THANKS.search(excerpt_))
         if e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent"):
             t["comments"] += 1
         elif e["type"] == "PullRequestReviewEvent":
             t["reviews"] += 1
+            t["approvals"] += "(approved)" in (e.get("summary") or "")
+            author = PR_AUTHORS.get(f"{e['repo']}#{e.get('number')}")
+            if author:
+                reach[e["actor"]].add(author)
+                if author in tally:
+                    tally[author]["magnet"] += 1  # a review someone else gave to their PR
+            key = (e["repo"], e.get("number"))
+            if e["created_at"] < reviews_of.get(key, ("9",))[0]:
+                reviews_of[key] = (e["created_at"], e["actor"])
             comps[e["actor"]] |= by_pr.get((e["repo"], e.get("number")), set())
             labelled[e["actor"]] |= labels_of.get((e["repo"], e.get("number")), set())
         elif e["type"] == "PullRequestEvent" and e.get("action") == "opened":
@@ -663,6 +696,15 @@ def bonuses(cards, events, joined=None):
     for p, t in tally.items():
         t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
         t["diverse"], t["labelled"] = len(comps[p]), len(labelled[p])
+        t["hours"], t["reach"] = len(hours[p]), len(reach[p])
+        mine = [e for e in scored if e["actor"] == p]
+        # ratios need a body of work behind them, or one review out of two events wins the category
+        if t["reviews"] >= REVIEW_FLOOR:
+            t["reviewshare"] = round(100 * t["reviews"] / len(mine))
+            t["terse"] = round(t["reviews"] / max(1, t["comments"]), 2)
+    for _, (_, actor) in reviews_of.items():
+        if actor in tally:
+            tally[actor]["first"] += 1
     # awards the data cannot see (config): the jury's own +100
     out = [{**a, "points": BONUS} for a in CONFIG.get("honorary_awards", []) if a["login"] in tally]
     # every nerd corner record pays, minus the authors who asked to be left out (the runner-up then holds it)
