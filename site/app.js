@@ -279,14 +279,42 @@ function eventRow(e) {
 // the ticker is clipped, so a fixed block pushed the newest activity out of sight whenever JabCon items were quiet.
 // The divider therefore moves with how much recent activity is on JabCon items.
 // [impl->req~activity-grouped~2]
-// [impl->req~newsticker~1] one headline strip along the bottom, scrolling at reading pace whatever its length
+// [impl->req~newsticker~2] one strip of headlines along the bottom, phrased from the board's data like the gource
+// commentary: the tally, the latest merges, what is still left, and who earned which sticker. Seeded by PR number so
+// a refresh says the same things, and only re-rendered on a change, so the scroll never jumps back.
+function newsItems() {
+  const merged = data.cards.filter((c) => c.merged_at).sort((a, b) => b.merged_at.localeCompare(a.merged_at));
+  const closed = data.cards.filter((c) => c.type === 'issue' && c.column === 'done');
+  const items = [[`JabCon ${new Date(data.config.jabcon_start).getFullYear()}: ${merged.length} PRs merged, ${closed.length} issues closed, +${fmt(data.stats.additions)} / −${fmt(data.stats.deletions)} lines`]];
+  const big = ['WHAT A MONSTER! {who} lands {title}: {add} lines added, {del} gone!', 'The crowd is on its feet! {who} with {title}, {add} new lines!', "That's a heavyweight from {who}: {title}. {add} lines added, {del} removed!"];
+  const mid = ['{who} slots it in: {title}. {add} lines, clean finish.', 'Nicely worked by {who}: {title}.', 'And {who} delivers: {title}. {add} lines added.'];
+  const small = ['A quick one from {who}: {title}.', '{who} keeps it tidy: {title}.', 'Tap-in for {who}: {title}.'];
+  const reviewed = [' {rev} waves it through.', ' Reviewed by {rev}, no complaints.', ' {rev} had a look first, all clear.'];
+  for (const c of merged.slice(0, 8)) {
+    const st = c.stats || {}, size = (st.additions || 0) + (st.deletions || 0);
+    const bank = size > 800 ? big : size > 150 ? mid : small;
+    let text = bank[c.number % bank.length].replace('{who}', c.author).replace('{title}', c.title).replace('{add}', fmt(st.additions || 0)).replace('{del}', fmt(st.deletions || 0));
+    const revs = [...new Set(data.all_events.filter((e) => e.type === 'PullRequestReviewEvent' && e.repo === c.repo && e.number === c.number && e.actor !== c.author).map((e) => e.actor))];
+    if (revs.length) text += reviewed[c.number % reviewed.length].replace('{rev}', revs.slice(0, 2).join(' and '));
+    items.push([text, c.url]);
+  }
+  for (const c of closed.slice(0, 5)) items.push([`${c.assignees[0] || c.author} closed #${c.number} ${c.title}`, c.url]);
+  const backlog = data.cards.filter((c) => c.column === 'backlog');
+  if (backlog.length) items.push([`Still waiting: ${backlog.length} items in the backlog — ${backlog.slice(0, 3).map((c) => `#${c.number} ${c.title}`).join(', ')}${backlog.length > 3 ? ', …' : ''}`]);
+  for (const m of data.milestones) items.push([`${m.title}: ${m.open ? `${m.open} to go, ` : 'done! '}${m.closed - m.baseline} closed during JabCon`, m.url]);
+  if (data.focus) items.push([`${data.focus.label}: ${data.focus.closed} done, ${data.focus.open} open`, data.focus.url]);
+  for (const l of data.leaderboard) for (const b of l.bonuses || []) items.push([`${b.emoji} ${l.login} earns the ${b.title} sticker: ${b.text}`, b.url || `#user/${encodeURIComponent(l.login)}`]);
+  const [lead, second] = data.leaderboard;
+  if (lead) items.push([`${lead.login} leads the table with ${fmt(lead.points)} points${second ? `, ${second.login} is ${fmt(lead.points - second.points)} behind` : ''}`, `#user/${encodeURIComponent(lead.login)}`]);
+  return items;
+}
 function renderNews() {
-  const items = data.news || [];
+  const items = newsItems();
   const strip = $('#news span');
-  const html = items.map((n) => link(n.url, esc(n.title), 'headline')).join('<i>✦</i>');
-  if (strip.innerHTML === html) return; // an unchanged strip keeps scrolling instead of jumping back to the start
+  const html = items.map(([t, url]) => (url ? link(url, esc(t), 'headline') : esc(t))).join('<i>✦</i>');
+  if (strip.innerHTML === html) return;
   strip.innerHTML = html;
-  strip.style.animationDuration = `${Math.max(20, items.reduce((n, i) => n + i.title.length, 0) / 6)}s`;
+  strip.style.animationDuration = `${Math.max(20, items.reduce((n, [t]) => n + t.length, 0) / 6)}s`;
 }
 
 function renderTicker() {
