@@ -46,3 +46,12 @@ assert not [b for b in collect.bonuses([], [ai]) if b["title"] == "Chatterbox"]
 assert collect.AI_COMMENT.search("Nice, \U0001f916 generated") and collect.AI_COMMENT.search("thanks, Claude!")
 assert not collect.AI_COMMENT.search("looks good to me")
 print("ok")
+
+# a sticker's "since" survives the next run; a new one gets the run's time
+from datetime import datetime, timezone
+old = {"leaderboard": [{"login": "a", "bonuses": [{"login": "a", "title": "Closer", "since": "2026-09-05T10:00:00+00:00"}]}]}
+now = datetime(2026, 9, 8, tzinfo=timezone.utc)
+got = collect.stamp([{"login": "a", "title": "Closer"}, {"login": "b", "title": "Closer"}], old, now)
+assert [b["since"] for b in got] == ["2026-09-05T10:00:00+00:00", "2026-09-08T00:00:00+00:00"]
+assert collect.stamp([{"login": "a", "title": "X"}], None, now)[0]["since"].startswith("2026-09-08")
+print("ok")
