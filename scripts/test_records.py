@@ -13,6 +13,9 @@ multiline = [
     {"filename": "src/module-info.java", "status": "modified", "patch": "@@ -1,2 +1,2 @@\n-module old.name {\n+module new.name {\n"},
 ]
 assert module_changes(multiline) == (3, 3), module_changes(multiline)
+assert declarations("open module example.module { }", "src/module-info.java") == ["open module example.module {"]
+assert declarations("<modules><module>core</module></modules><!-- <module>fake</module> -->", "pom.xml") == ["<module>core</module>"]
+assert declarations('module("example", "https://example.test/path") // module("fake")', "build.gradle.kts")
 
 split_files = [{"filename": "build.gradle.kts", "status": "modified", "patch": "@@ -20,3 +20,3 @@\n-    \"old\",\n+    \"new\",\n"}]
 old_source = "module(\n    \"old\",\n    \"example.module\"\n)\n"
@@ -21,6 +24,15 @@ original_source_at = collect.source_at
 collect.source_at = lambda repo, path, ref: old_source if ref == "base" else new_source
 try:
     assert module_changes(split_files, "o/r", "base", "head") == (1, 1)
+finally:
+    collect.source_at = original_source_at
+
+renamed = [{"filename": "build.gradle.kts", "previous_filename": "old/pom.xml", "status": "renamed"}]
+collect.source_at = lambda repo, path, ref: (
+    "<module>old</module>" if path == "old/pom.xml" else 'module("new", "example.module")'
+)
+try:
+    assert module_changes(renamed, "o/r", "base", "head") == (1, 1)
 finally:
     collect.source_at = original_source_at
 

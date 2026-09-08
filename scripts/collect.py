@@ -392,8 +392,8 @@ DETECTORS = [
 DETECTORS = [(w, re.compile(rx, re.M), label) for w, rx, label in DETECTORS]
 MODULE_FILES = (".gradle", ".gradle.kts", "pom.xml", "module-info.java")
 GRADLE_MODULE = re.compile(r"(?m)^[ \t]*module\s*\((?:[^()\"']|\"(?:\\.|[^\"])*\"|'(?:\\.|[^'])*'|\([^()]*\))*\)")
-JAVA_MODULE = re.compile(r"(?m)^[ \t]*module\s+[\w.]+\s*\{")
-MAVEN_MODULE = re.compile(r"(?m)^[ \t]*<module>\s*[^<]+?\s*</module>")
+JAVA_MODULE = re.compile(r"(?m)^[ \t]*(?:open[ \t]+)?module[ \t]+[\w.]+\s*\{")
+MAVEN_MODULE = re.compile(r"<module>\s*[^<]+?\s*</module>")
 
 
 # Names of the AI assistants that sign commits; the first match on a trailer line wins, so keep the
@@ -461,12 +461,49 @@ def source_at(repo, path, ref):
     return base64.b64decode(data["content"]).decode()
 
 
+def strip_comments(text):
+    """Remove source comments without treating comment markers inside strings as comments."""
+    out = []
+    quote = None
+    i = 0
+    while i < len(text):
+        if quote:
+            out.append(text[i])
+            if text[i] == "\\" and i + 1 < len(text):
+                out.append(text[i + 1])
+                i += 2
+                continue
+            if text[i] == quote:
+                quote = None
+            i += 1
+            continue
+        if text.startswith("//", i):
+            newline = text.find("\n", i + 2)
+            i = len(text) if newline < 0 else newline
+            continue
+        if text.startswith("/*", i):
+            end = text.find("*/", i + 2)
+            i = len(text) if end < 0 else end + 2
+            continue
+        if text.startswith("<!--", i):
+            end = text.find("-->", i + 4)
+            i = len(text) if end < 0 else end + 3
+            continue
+        if text[i] in "\"'":
+            quote = text[i]
+        out.append(text[i])
+        i += 1
+    return "".join(out)
+
+
 def declarations(text, filename):
     """Extract normalized module declarations from one complete source file."""
-    text = re.sub(r"//[^\n]*|/\*.*?\*/|<!--[\s\S]*?-->", "", text, flags=re.S)
+    text = strip_comments(text)
     if filename.endswith((".gradle", ".gradle.kts")):
         text = re.sub(r'"""[\s\S]*?"""', "", text)
         text = re.sub(r"'''[\s\S]*?'''", "", text)
+    elif filename.endswith("pom.xml"):
+        text = re.sub(r"<!\[CDATA\[[\s\S]*?\]\]>", "", text)
     pattern = GRADLE_MODULE if filename.endswith((".gradle", ".gradle.kts")) else MAVEN_MODULE if filename.endswith("pom.xml") else JAVA_MODULE
     return [re.sub(r"\s+", " ", match).strip() for match in pattern.findall(text)]
 
@@ -483,7 +520,8 @@ def module_changes(files, repo=None, base=None, head=None):
         if repo and head and f["status"] != "removed":
             new_text = source_at(repo, f["filename"], head)
         if old_text is not None or new_text is not None:
-            old_declarations = declarations(old_text or "", f["filename"])
+            old_filename = f.get("previous_filename", f["filename"])
+            old_declarations = declarations(old_text or "", old_filename)
             new_declarations = declarations(new_text or "", f["filename"])
         else:
             old_declarations, new_declarations = patch_declarations(f.get("patch", ""), f["filename"])
