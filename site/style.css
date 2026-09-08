@@ -149,9 +149,9 @@ a.bonus { text-decoration: none; }
 #prev-video { left: 11.5vw; }
 #gource[src]:hover ~ .video-nav, .video-nav:hover { display: block; }
 #footer { height: 1.6rem; display: flex; align-items: center; gap: 1rem; padding: 0 1rem 0 0; font-size: .6rem; color: var(--muted); font-family: monospace; }
-/* [impl->req~newsticker~1] headlines from the configured feeds run right to left along the bottom edge; the text is
+/* [impl->req~newsticker~2] headlines from the configured feeds run right to left along the bottom edge; the text is
    its own animated element (no fixed-positioned descendants), so animating its transform is safe */
-#news { flex: 1; overflow: hidden; font-family: system-ui, sans-serif; font-size: .9rem; white-space: nowrap; }
+#news { flex: 1; overflow: hidden; color: var(--fg); font-family: system-ui, sans-serif; font-size: .9rem; white-space: nowrap; }
 #news span { display: inline-block; padding-left: 100vw; animation: marquee 60s linear infinite; }
 #news:empty, #news span:empty { display: none; }
 #news a { color: var(--fg); text-decoration: none; }
