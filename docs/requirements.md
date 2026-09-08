@@ -64,11 +64,12 @@ Needs: impl
 ## Header
 
 ### Social sharing metadata
-`req~social-sharing-metadata~2`
+`req~social-sharing-metadata~3`
 
 The published board declares a canonical URL, description, and preview metadata for Open Graph-compatible social
 networks and messengers, plus a Twitter/X card, so a shared link has a useful title, summary, and current 1920×1080
-board snapshot. The scheduled screenshot job refreshes the stable preview image together with the archived capture.
+board snapshot. The page also identifies JabRef's verified fediverse account for Mastodon previews. The scheduled
+screenshot job refreshes the stable preview image together with the archived capture.
 
 Needs: impl
 
