@@ -115,7 +115,7 @@ function bonusRow(l) { // always rendered, empty included: equal heights keep th
 
 // The nerd corner holds more than fits: the detected refactorings and the funny records (longest identifier,
 // most code deleted, ...) take turns, NERD_PAGE lines at a time, so the whole set is readable from the wall.
-// [impl->req~nerd-corner~4]
+// [impl->req~nerd-corner~5]
 // [impl->req~nerd-records~2]
 const NERD_PAGE = 4, NERD_MS = 12000;
 let nerdPage = 0, nerdTimer;
