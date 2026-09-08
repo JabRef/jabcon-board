@@ -378,8 +378,9 @@ function render() {
   route(); // a deep link renders once the data is there; an open detail view follows the refreshed data
 }
 
-// GitHub runs a */5 schedule only best-effort (observed 7-20 min between runs), so the ring is sized for a typical gap
-const REFRESH_MS = 10 * 60000;
+// GitHub runs a */5 schedule only best-effort (measured over a night: median 9 min between runs, 40 at worst), so the
+// ring is sized for the long end of a healthy gap and only pulses when a run is really missing
+const REFRESH_MS = 15 * 60000;
 
 // [impl->req~timeline~1]
 function renderProgress() {
