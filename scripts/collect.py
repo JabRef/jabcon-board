@@ -37,6 +37,11 @@ FOCUS = CONFIG.get("focus_label", "")
 FOCUS_Q = f'org:{CONFIG["org"]} label:"{FOCUS}"' if FOCUS else ""
 MILESTONE_REFS = set(CONFIG.get("milestones", []))
 BOT_SUFFIX = "[bot]"
+# work an automation does under a human account (Crowdin's translation PRs and the branch they live on)
+# [impl->req~automation-excluded~1]
+EXCLUDE_TITLE = re.compile("|".join(CONFIG.get("exclude_titles") or ["(?!)"]), re.I)
+EXCLUDE_BRANCH = set(CONFIG.get("exclude_branches", []))
+AUTOMATED = set()  # (repo, number) of the items skipped above, so their events go too
 # list address -> the repo whose repo_factor and link a post to it uses
 MAILING_LISTS = CONFIG.get("mailing_lists", {})
 MAIL_ARCHIVE = "https://mail.openjdk.org/archives/list/{}/"
@@ -113,6 +118,9 @@ def card(item, column):
 
 # [impl->req~bots-excluded~1]
 def keep(item):
+    if EXCLUDE_TITLE.search(item["title"]):
+        AUTOMATED.add((repo_of(item), item["number"]))
+        return False
     return repo_of(item).lower() not in EXCLUDE and not item["user"]["login"].endswith(BOT_SUFFIX)
 
 
@@ -187,7 +195,10 @@ def collect_events(previous):
                 }
             if len(data) < 100 or datetime.fromisoformat(data[-1]["created_at"].replace("Z", "+00:00")) < START:
                 break
-    events = list(seen.values())
+    # [impl->req~automation-excluded~1] the automation's own PRs and pushes are not the participant's work
+    events = [e for e in seen.values()
+              if (e["repo"], e.get("number")) not in AUTOMATED
+              and (e["type"] != "PushEvent" or ((e.get("summary") or " ").split()[-1] not in EXCLUDE_BRANCH))]
     # events cached before the rule existed have no full body left; their stored excerpt is all there is to check
     # [impl->req~no-ai-comment-points~1]
     for e in events:
@@ -213,7 +224,7 @@ def collect_events(previous):
             try:
                 cmp, _ = get(f"/repos/{e['repo']}/compare/{e['before']}...{e['head']}")
                 e["commits"] = cmp["total_commits"]
-                # [impl->req~bonus-points~17] the old head is no ancestor of the new one: history was rewritten
+                # [impl->req~bonus-points~18] the old head is no ancestor of the new one: history was rewritten
                 e["forced"] = cmp["status"] in ("diverged", "behind")
                 e["sync"] = (not e["repo"].startswith(CONFIG["org"] + "/")
                              and not any((c.get("author") or {}).get("login") == e["actor"] for c in cmp["commits"]))
@@ -576,7 +587,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~17]
+# [impl->req~bonus-points~18]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
@@ -639,7 +650,7 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~17]
+# [impl->req~bonus-points~18]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -651,7 +662,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~17]
+# [impl->req~bonus-points~18]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -765,6 +776,19 @@ def bonuses(cards, events, joined=None):
     out += [{"login": r["author"], "title": r["title"], "text": r["text"], "emoji": r["emoji"], "points": BONUS,
              "url": r["url"]}
             for r in records(cards, exclude=CONFIG.get("record_bonus_exclude", [])) if r["author"] in tally]
+    # the shortest way from "opened" to "merged"
+    fast = [(datetime.fromisoformat(c["merged_at"].replace("Z", "+00:00"))
+             - datetime.fromisoformat(c["created_at"].replace("Z", "+00:00")), c)
+            for c in cards if c.get("merged_at") and c.get("created_at") and c["author"] in tally]
+    if fast:
+        quickest = min(fast)[0]
+        for delta, c in fast:
+            if delta == quickest:
+                mins = round(delta.total_seconds() / 60)
+                when = f"{mins} minutes" if mins < 120 else f"{round(mins / 60)} hours"
+                out.append({"login": c["author"], "title": "Speedrun", "emoji": "\U0001f3ce\ufe0f",
+                            "text": f"{c['repo'].split('/')[-1]}#{c['number']} merged {when} after opening",
+                            "points": BONUS, "url": c["url"]})
     # necromancy: bringing the oldest sleeping item back into the conversation
     born = {(c["repo"], c["number"]): c for c in cards if c.get("created_at")}
     woke = {}
