@@ -39,11 +39,15 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 `participants` (GitHub logins; their order sets the colours), `org` (highlighting and the ready-for-review backlog), `focus_label` (a label in the org, e.g. `project: jabcon`: its open items are always in the Backlog, labeled cards form the first group of every column, and a progress bar for it sits above the milestones),
 `exclude_repos` (`owner/name` entries to hide, e.g. when unrelated activity dominates the board),
 `mailing_lists` (archive address -> the repo whose factor and link its posts use, e.g. `openjfx-dev@openjdk.org` -> `openjdk/jfx`),
-`milestones` (`owner/repo/number`; progress bars in the stats panel, green = closed since the board first saw the milestone).
+`milestones` (`owner/repo/number`; progress bars in the stats panel, green = closed since the board first saw the milestone),
+`repo_factors` (multipliers keyed by repo or whole org; a repo entry beats its org entry, which is how `JabRef/jabcon-board` stays at 1 while the rest of the org counts fivefold),
+`dependency_repos` (JabRef's own dependency stack, for the 🔧 bonus; forks of them count too),
+`record_bonus_exclude` (logins that keep their nerd corner records but pass the +100 to the runner-up),
+`honorary_awards` (`login`, `title`, `text`, `emoji`, optional `url`: +100 for what the API cannot see).
 `private_repos` lists private repos whose issue activity is counted for the leaderboard and shown as counts only (no titles) under the milestones. Milestones and `private_repos` need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.
 Bot activity is excluded.
 
-"Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...), plus one record holder per funny category (longest identifier, longest and shortest method, most code written or deleted, most tangled diff, wordiest changelog entry).
+"Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...), plus one record holder per funny category (longest identifier, longest and shortest method, most code written or deleted, most tangled diff, wordiest changelog entry). Each record carries an icon and pays its author +100 bonus points.
 
 ## Leaderboard points
 
@@ -59,10 +63,53 @@ Recomputed at every data run from activity since `jabcon_start`, in any public r
 | Issue opened / closed / commented in a `private_repos` repo | 1 | the actor |
 | Mail to a configured mailing list | 1 | the sender |
 
+Each of these is multiplied: ten-fold on a JabCon item (focus label or a configured milestone), otherwise by
+`repo_factors` (repo before org). A merged PR whose commits credit an AI assistant scores a **quarter** — writing it
+by hand is the harder craft. A comment or review whose body carries 🤖 or names Claude was written by the assistant
+and scores **nothing at all**, and counts for no bonus either.
+
 Labeling, assigning, starring, forking and merging someone else's PR score nothing. Hover a leaderboard entry to see
 the breakdown; the activity ticker shows the points of each entry. A bell rings when position 1 changes (browsers may
 need one click on the page after load before they allow sound). Weights live in `leaderboard()` in `scripts/collect.py`
 and, for the ticker badge, in `eventPoints()` in `site/app.js`.
+
+## Bonus points
+
+A second evaluation, like the bonus round in a game: **+100 for every superlative a contributor holds**, shared by
+everyone tied for it. The icons sit under the login on the leaderboard and in the contributor detail view; each links
+to what earned it (the record's PR, or the GitHub search behind the number). Self-reviews, fork syncs and
+AI-written comments count for none of them.
+
+| Icon | Award | Who gets it |
+|---|---|---|
+| 💬 | Chatterbox | most comments |
+| 🐝 | Busy bee | most PRs and issues touched |
+| 🌍 | Globetrotter | most repositories worked on |
+| 💡 | Idea machine | most PRs opened |
+| 🛡️ | Gatekeeper | most reviews |
+| 🏁 | Closer | most merged PRs |
+| 🦉 | Night owl | most activity between 22:00 and 06:00 |
+| 🐦 | Early bird | most activity before 08:00 |
+| ☕ | Ambassador | most activity outside the org (own forks do not count) |
+| 🔧 | Dependency whisperer | most activity in `dependency_repos` and their forks |
+| 🎨 | Jack of all trades | widest set of components written or reviewed (by changed files) |
+| 🏷️ | Component collector | most distinct `component:` labels written or reviewed |
+| 🛸 | Exotic explorer | most foreign repositories that are not dependencies |
+| 🔍 | Reviewer's reviewer | largest share of own activity spent reviewing (from 10 reviews on) |
+| 🤐 | Actions over words | most reviews per comment written (from 10 reviews on) |
+| ✅ | Rubber stamp | most approvals given |
+| 🧹 | Janitor | most branches deleted |
+| 🤝 | Widest reach | reviewed the PRs of the most different authors |
+| ❓ | Socratic | most questions asked |
+| 🙏 | Most gracious | most thanks said |
+| 🕰️ | Always on | active in the most hours of the day |
+| 🧲 | Magnet | own PRs pulled in the most reviews |
+| ⚡ | First responder | first to review the most PRs |
+| 🐣 | Newcomer | most recent first issue or PR in the org |
+| 📏🐍🤏✍️🔥🍝📜 | Nerd corner records | longest identifier, longest and shortest method, most code written, most deleted, most tangled diff, wordiest changelog entry |
+| 🍸 … | `honorary_awards` | whatever the jury decides |
+
+Categories, thresholds and the 100 itself live in `BONUS_KINDS` and `BONUS` in `scripts/collect.py`.
 
 ## Manual runs
 
