@@ -155,11 +155,12 @@ checked against their stored excerpt instead.
 Needs: impl
 
 ### Bonus points
-`req~bonus-points~8`
+`req~bonus-points~9`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
 most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
-activity between 22:00 and 06:00, most before 08:00, most activity in repositories outside the org, the widest set of components written or reviewed, most activity in
+activity between 22:00 and 06:00, most before 08:00, most activity in repositories outside the org, the widest set of components written or reviewed (by the changed files, and
+again by the PRs' "component:" labels), most activity in
 JabRef's configured `dependency_repos` (openjdk/jfx, ICU4J, jgit, ...), and the most distinct repositories outside
 the org that are not dependencies. Everybody tied for a category gets the award. The contributor whose first issue or PR in the org is the most recent gets a
 newcomer award. Every nerd corner record pays +100 to the PR's author as well, except for the authors listed in
