@@ -63,6 +63,14 @@ Needs: impl
 
 ## Header
 
+### Social sharing metadata
+`req~social-sharing-metadata~1`
+
+The published board declares a canonical URL, description, and preview metadata for Open Graph-compatible social
+networks and messengers, plus a Twitter/X card, so a shared link has a useful title, summary, and image.
+
+Needs: impl
+
 ### Timeline with phases
 `req~timeline~1`
 
@@ -479,4 +487,3 @@ fades in as a badge over its contributor's avatar and stays there until the next
 Needs: impl
 
 <!-- markdownlint-disable-file MD022 -->
-
