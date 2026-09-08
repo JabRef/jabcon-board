@@ -6,6 +6,7 @@ Outside the JabCon window the script exits without writing unless --force is giv
 Stats for merged PRs are reused from an existing output file (merged PRs never change).
 """
 import base64
+from collections import Counter
 import email.utils
 import gzip
 import hashlib
@@ -68,6 +69,19 @@ def get(path, params=None, token=None):
                 continue
             print(f"GET {url} -> {e.code}", file=sys.stderr)
             raise
+
+
+def get_all(path, params=None, token=None):
+    """Fetch every page of a GitHub list endpoint."""
+    params = dict(params or {})
+    per_page = params.get("per_page", 100)
+    items = []
+    for page in range(1, 100):
+        page_items, _ = get(path, {**params, "page": page, "per_page": per_page}, token)
+        items.extend(page_items)
+        if len(page_items) < per_page:
+            break
+    return items
 
 
 def search(query):
@@ -375,7 +389,7 @@ DETECTORS = [
 ]
 DETECTORS = [(w, re.compile(rx, re.M), label) for w, rx, label in DETECTORS]
 MODULE_FILES = (".gradle", ".gradle.kts", "pom.xml", "module-info.java")
-MODULE_DECLARATION = re.compile(r"\bmodule\s*(?:\([^\n)]*\)|[\w.]+\s*\{)|<module>[^<]+</module>")
+MODULE_DECLARATION = re.compile(r"\bmodule\s*\([^)]*\)|\bmodule\s+[\w.]+\s*\{|<module>.*?</module>", re.S)
 
 
 # Names of the AI assistants that sign commits; the first match on a trailer line wins, so keep the
@@ -410,6 +424,7 @@ def ai_models(messages):
 
 def refactorings(pr, files, repo):
     """Nerdy facts about a merged PR, mined from its patches. Returns [(weight, text)]."""
+    # [impl->req~nerd-corner~5]
     found = []
     renamed = [f for f in files if f["status"] == "renamed"]
     removed = [f for f in files if f["status"] == "removed" and f["filename"].endswith(".java")]
@@ -420,11 +435,7 @@ def refactorings(pr, files, repo):
         found.append((3 + min(len(removed), 5), f"deleted {', '.join(f['filename'].rsplit('/', 1)[-1].removesuffix('.java') for f in removed[:3])}" + (" …" if len(removed) > 3 else "")))
     if pr["deletions"] > pr["additions"] * 1.5 and pr["deletions"] > 50:
         found.append((4, f"net −{pr['deletions'] - pr['additions']} lines"))
-    module_files = [f for f in files if f["filename"].endswith(MODULE_FILES)]
-    module_added = sum(len(MODULE_DECLARATION.findall(l[1:])) for f in module_files
-                       for l in f.get("patch", "").splitlines() if l.startswith("+"))
-    module_removed = sum(len(MODULE_DECLARATION.findall(l[1:])) for f in module_files
-                         for l in f.get("patch", "").splitlines() if l.startswith("-"))
+    module_added, module_removed = module_changes(files)
     if module_added or module_removed:
         found.append((4, f"module metadata changed (+{module_added} / −{module_removed})"))
     elif any(f["filename"].endswith("module-info.java") for f in files):
@@ -438,6 +449,29 @@ def refactorings(pr, files, repo):
             break
     found += [(w, t) for t, w in hits.items()]
     return sorted(found, reverse=True)[:4]
+
+
+def module_changes(files):
+    """Return added and removed module declarations reconstructed from changed hunks."""
+    added, removed = Counter(), Counter()
+    for f in files:
+        if not f["filename"].endswith(MODULE_FILES) or not f.get("patch"):
+            continue
+        for hunk in re.split(r"(?=^@@ )", f["patch"], flags=re.M):
+            new, old = [], []
+            for line in hunk.splitlines():
+                if line.startswith(("@@", "+++", "---")):
+                    continue
+                if line.startswith("+"):
+                    new.append(line[1:])
+                elif line.startswith("-"):
+                    old.append(line[1:])
+                elif line.startswith(" "):
+                    new.append(line[1:])
+                    old.append(line[1:])
+            added.update(MODULE_DECLARATION.findall("\n".join(new)))
+            removed.update(MODULE_DECLARATION.findall("\n".join(old)))
+    return sum((added - removed).values()), sum((removed - added).values())
 
 
 # [impl->req~scoring~9]
@@ -526,21 +560,24 @@ def review_points(cc):
     return 2 if cc is None else 1 if cc <= 2 else 3 if cc >= 20 else 2
 
 
+STATS_VERSION = 2
+
+
 def pr_stats(c, cached):
-    if c["id"] in cached and "ai" in cached[c["id"]] and "complexity" in cached[c["id"]] and "sup" in cached[c["id"]]:
+    if c["id"] in cached and cached[c["id"]].get("stats_version") == STATS_VERSION and "ai" in cached[c["id"]] and "complexity" in cached[c["id"]] and "sup" in cached[c["id"]]:
         return cached[c["id"]]
     if c["column"] != "done":  # open PR under review: only its complexity, refetched when the PR changes
         if cached.get(c["id"], {}).get("updated_at") == c["updated_at"]:
             return cached[c["id"]]
-        files, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/files", {"per_page": 100})
+        files = get_all(f"/repos/{c['repo']}/pulls/{c['number']}/files")
         return {"complexity": complexity(files), "updated_at": c["updated_at"]}
     pr, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}")
-    files, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/files", {"per_page": 100})
-    commits, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}/commits", {"per_page": 100})
+    files = get_all(f"/repos/{c['repo']}/pulls/{c['number']}/files")
+    commits = get_all(f"/repos/{c['repo']}/pulls/{c['number']}/commits")
     comps = {}
     for f in files:
         comps[component(c["repo"], f["filename"])] = comps.get(component(c["repo"], f["filename"]), 0) + f["changes"]
-    return {"additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "complexity": complexity(files),
+    return {"stats_version": STATS_VERSION, "additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "complexity": complexity(files),
             "refactorings": refactorings(pr, files, c["repo"]), "sup": superlatives(files),
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
