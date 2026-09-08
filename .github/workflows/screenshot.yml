@@ -26,13 +26,15 @@ jobs:
         if: steps.window.outputs.active == 'true'
         run: |
           mkdir -p screenshots
+          snapshot="screenshots/$(date -u +%Y-%m-%dT%H-%M-%SZ).png"
           google-chrome --headless=new --no-sandbox --hide-scrollbars --window-size=1920,1080 --virtual-time-budget=10000 \
-            --screenshot="screenshots/$(date -u +%Y-%m-%dT%H-%M-%SZ).png" "https://jabref.github.io/jabcon-board/"
+            --screenshot="$snapshot" "https://jabref.github.io/jabcon-board/"
+          cp "$snapshot" site/og-board.png # [impl->req~social-sharing-metadata~2]
       - name: Commit
         if: steps.window.outputs.active == 'true'
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add screenshots
+          git add screenshots site/og-board.png
           git commit -q -m "Add screenshot $(date -u +%FT%TZ)"
           git pull --rebase -q origin main && git push origin HEAD:main

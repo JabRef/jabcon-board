@@ -64,10 +64,11 @@ Needs: impl
 ## Header
 
 ### Social sharing metadata
-`req~social-sharing-metadata~1`
+`req~social-sharing-metadata~2`
 
 The published board declares a canonical URL, description, and preview metadata for Open Graph-compatible social
-networks and messengers, plus a Twitter/X card, so a shared link has a useful title, summary, and image.
+networks and messengers, plus a Twitter/X card, so a shared link has a useful title, summary, and current 1920×1080
+board snapshot. The scheduled screenshot job refreshes the stable preview image together with the archived capture.
 
 Needs: impl
 
