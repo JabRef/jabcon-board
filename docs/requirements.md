@@ -363,6 +363,14 @@ enlarged video).
 
 Needs: impl
 
+### Stickers remember when they were earned
+`req~sticker-since~1`
+
+Each award carries the time it was first seen, kept across runs, so the newsticker lists the newest stickers first
+and says "just earned" for those under three hours old and "holds" for the rest.
+
+Needs: impl
+
 ### Newsticker
 `req~newsticker~2`
 

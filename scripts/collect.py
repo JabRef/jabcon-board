@@ -760,6 +760,15 @@ def bonuses(cards, events, joined=None):
 
 
 # [impl->req~milestones~2]
+# [impl->req~sticker-since~1]
+def stamp(awards, previous, now):
+    """Each award keeps the time it was first seen (from the previous data.json), a new one gets this run's time."""
+    held = {(b["login"], b["title"]): b.get("since") for l in (previous or {}).get("leaderboard", []) for b in l.get("bonuses", [])}
+    for b in awards:
+        b["since"] = held.get((b["login"], b["title"])) or now.isoformat(timespec="seconds")
+    return awards
+
+
 def milestones(previous):
     """Milestone progress; the closed count when first seen (usually JabCon start) is kept as the baseline."""
     result = []
@@ -819,7 +828,7 @@ def main():
     if "--force" not in args and not (START <= now <= END):
         print(f"outside JabCon window ({START} .. {END}), nothing to do")
         return
-    cached, previous_milestones, previous_events, previous_joined = {}, [], [], {}
+    cached, previous_milestones, previous_events, previous_joined, previous = {}, [], [], {}, None
     if os.path.exists(out):
         try:
             previous = json.load(open(out))
@@ -854,7 +863,7 @@ def main():
     joined = first_seen(previous_joined)
     board = leaderboard(cards, events, private)
     by_login = {l["login"]: l for l in board}
-    for b in bonuses(cards, events, joined):
+    for b in stamp(bonuses(cards, events, joined), previous, now):
         l = by_login[b["login"]]
         l["points"] += b["points"]
         l.setdefault("bonuses", []).append(b)
