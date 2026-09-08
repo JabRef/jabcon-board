@@ -291,6 +291,9 @@ function newsItems() {
   const mid = ['{who} slots it in: {title}. {add} lines, clean finish.', 'Nicely worked by {who}: {title}.', 'And {who} delivers: {title}. {add} lines added.'];
   const small = ['A quick one from {who}: {title}.', '{who} keeps it tidy: {title}.', 'Tap-in for {who}: {title}.'];
   const reviewed = [' {rev} waves it through.', ' Reviewed by {rev}, no complaints.', ' {rev} had a look first, all clear.'];
+  // [impl->req~sticker-moves~1]
+  if (changes.points.length) items.push([`Latest run (${ago(changes.at)}): ${changes.points.map(([l, d]) => `${l} ${d > 0 ? '+' : '−'}${fmt(Math.abs(d))}`).join(', ')}`]);
+  for (const m of changes.moves) items.push([moveText(m), `#user/${encodeURIComponent(m.to[0])}`]);
   for (const c of merged.slice(0, 8)) {
     const st = c.stats || {}, size = (st.additions || 0) + (st.deletions || 0);
     const bank = size > 800 ? big : size > 150 ? mid : small;
@@ -384,8 +387,31 @@ $('#components').addEventListener('click', (e) => {
 
 // [impl->req~leader-change-bell~3]
 // [impl->req~done-confetti~2]
+// [impl->req~sticker-moves~1] what the latest data run changed: points gained per contributor and stickers that
+// changed hands. Kept until the next change, so the newsticker can tell it; a hand-over is also toasted.
+let changes = { at: null, points: [], moves: [] };
+function noteChanges(prev) {
+  if (!prev) return;
+  const holders = (board) => {
+    const h = {};
+    for (const l of board) for (const b of l.bonuses || []) (h[b.title] ||= { emoji: b.emoji, logins: new Set() }).logins.add(l.login);
+    return h;
+  };
+  const was = holders(prev.leaderboard), now = holders(data.leaderboard), moves = [];
+  for (const [title, { emoji, logins }] of Object.entries(now)) {
+    const before = was[title]?.logins || new Set();
+    const gained = [...logins].filter((l) => !before.has(l)), lost = [...before].filter((l) => !logins.has(l));
+    if (gained.length) moves.push({ emoji, title, from: lost, to: gained });
+  }
+  const pts = Object.fromEntries(prev.leaderboard.map((l) => [l.login, l.points]));
+  const points = data.leaderboard.map((l) => [l.login, l.points - (pts[l.login] ?? l.points)]).filter(([, d]) => d).sort((a, b) => b[1] - a[1]);
+  if (moves.length || points.length) changes = { at: data.generated_at, points, moves };
+}
+const moveText = (m) => `${m.emoji} the ${m.title} sticker ${m.from.length ? `moves from ${m.from.join(' and ')} to ${m.to.join(' and ')}` : `goes to ${m.to.join(' and ')}`}`;
+
 function celebrate(prev) {
   if (!prev) return;
+  for (const m of changes.at === data.generated_at ? changes.moves : []) whenSlotsSettled(() => toast(moveText(m)));
   const leader = data.leaderboard[0]?.login, wasLeader = prev.leaderboard[0]?.login;
   if (leader && wasLeader && leader !== wasLeader) {
     bell(); // the bell opens the act: it makes the room look up while the reels are still rolling
@@ -511,6 +537,7 @@ async function load() {
     raw = text;
     previous = data;
     data = JSON.parse(text);
+    noteChanges(previous);
     render();
     celebrate(previous);
   } catch (e) {
