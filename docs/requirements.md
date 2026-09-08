@@ -164,7 +164,7 @@ checked against their stored excerpt instead.
 Needs: impl
 
 ### Bonus points
-`req~bonus-points~16`
+`req~bonus-points~17`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
 most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
