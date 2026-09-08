@@ -163,8 +163,17 @@ checked against their stored excerpt instead.
 
 Needs: impl
 
+### Automated work is not counted
+`req~automation-excluded~1`
+
+Items whose title matches one of the configured `exclude_titles` and pushes to one of the `exclude_branches` are an
+automation working under a human account (Crowdin's translation PRs): they yield no card, no ticker entry, no points
+and no bonus, the same way bot accounts are skipped.
+
+Needs: impl
+
 ### Bonus points
-`req~bonus-points~14`
+`req~bonus-points~19`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
 most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
@@ -172,7 +181,8 @@ activity between 22:00 and 06:00, most before 08:00, most activity in repositori
 again by the PRs' "component:" labels), most activity in
 JabRef's configured `dependency_repos` (openjdk/jfx, ICU4J, jgit, ...), and the most distinct repositories outside
 the org that are not dependencies. Everybody tied for a category gets the award. The contributor whose first issue or PR in the org is the most recent gets a
-newcomer award. Every nerd corner record pays +100 to the PR's author as well, except for the authors listed in
+newcomer award, the one who brought the oldest item of somebody else back into the conversation a necromancer award, and the author
+of the PR that went from opened to merged in the shortest time a speedrun award. Every nerd corner record pays +100 to the PR's author as well, except for the authors listed in
 `record_bonus_exclude` — there the runner-up holds the record bonus. Configured `honorary_awards` add +100 for what
 the data cannot see. The leaderboard
 shows one emoji per award under the login and names the category in the tooltip and the contributor detail view.
@@ -262,6 +272,24 @@ Needs: impl
 The ticker takes the newest events and shows those on JabCon items above an "other" divider, everything else
 below it, newest first within each group. Both groups come out of the same window, so the divider moves with how
 much recent activity is on JabCon items and the newest events stay visible in the clipped panel.
+
+Needs: impl
+
+### Merges show up in the ticker
+`req~merge-credit-rows~1`
+
+A merged pull request scores for its author, who did not merge it and therefore has no event for it. The ticker
+adds a row for every merged PR the author has no merge event of their own for, so the points and the "merged" toast
+have something to point at in Latest activity.
+
+Needs: impl
+
+### A gain says where it came from
+`req~gain-source~1`
+
+The "+n" popping out of a reel names its source underneath: a sticker, a merged PR, a review, private-repo work,
+other activity, or earlier work re-scored. A data run re-scores what already happened (a focus label added, a
+resolved diff complexity) and counts work no ticker row can name, so a gain need not have a fresh event behind it.
 
 Needs: impl
 
