@@ -116,6 +116,7 @@ AI-written comments count for none of them.
 | 🔭 | Big picture | largest share of own activity spent on issues rather than code (from 5 events on) |
 | 🚧 | Hard to please | largest share of own reviews that asked for changes (from 3 reviews on) |
 | ✋ | Handmade | largest share of merged PRs written without an AI assistant (from 3 merged PRs on) |
+| 🧟 | Necromancer | activity on the oldest item somebody else opened |
 | 🐣 | Newcomer | most recent first issue or PR in the org |
 | 📏🐍🤏✍️🔥🍝📜 | Nerd corner records | longest identifier, longest and shortest method, most code written, most deleted, most tangled diff, wordiest changelog entry |
 | 🍸 … | `honorary_awards` | whatever the jury decides |

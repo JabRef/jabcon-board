@@ -99,6 +99,7 @@ def card(item, column):
         "author": item["user"]["login"],
         "assignees": [a["login"] for a in item.get("assignees", [])],
         "labels": [l["name"] for l in item.get("labels", [])],
+        "created_at": item.get("created_at"),  # how old the item is, for the necromancer award
         "updated_at": item["updated_at"],
         "closed_at": item.get("closed_at"),
         "state_reason": item.get("state_reason"),  # issues: completed | not_planned | duplicate | reopened
@@ -573,7 +574,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~15]
+# [impl->req~bonus-points~16]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
@@ -581,6 +582,10 @@ MERGED_FLOOR = 3  # one hand-written PR is not a habit
 STRICT_FLOOR = 3  # a single "changes requested" is not a temperament
 SMALL, MEDIUM = 50, 500  # changed lines; above that a PR is large
 THANKS = re.compile(r"\bth(?:ank|x)", re.I)
+
+
+def now_utc():
+    return datetime.now(timezone.utc)
 
 
 def search_url(query, sort=None, order=None):
@@ -631,7 +636,7 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~15]
+# [impl->req~bonus-points~16]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -643,7 +648,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~15]
+# [impl->req~bonus-points~16]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -756,6 +761,21 @@ def bonuses(cards, events, joined=None):
     out += [{"login": r["author"], "title": r["title"], "text": r["text"], "emoji": r["emoji"], "points": BONUS,
              "url": r["url"]}
             for r in records(cards, exclude=CONFIG.get("record_bonus_exclude", [])) if r["author"] in tally]
+    # necromancy: bringing the oldest sleeping item back into the conversation
+    born = {(c["repo"], c["number"]): c for c in cards if c.get("created_at")}
+    woke = {}
+    for e in scored:
+        c = born.get((e["repo"], e.get("number")))
+        if c and c["author"] != e["actor"] and c["created_at"] < woke.get(e["actor"], {"created_at": "9"})["created_at"]:
+            woke[e["actor"]] = c
+    if woke:
+        oldest = min(c["created_at"] for c in woke.values())
+        for p, c in woke.items():
+            if c["created_at"] == oldest:
+                days = (now_utc() - datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))).days
+                out.append({"login": p, "title": "Necromancer", "emoji": "\U0001f9df",
+                            "text": f"woke {c['repo'].split('/')[-1]}#{c['number']}, {days} days old",
+                            "points": BONUS, "url": c["url"]})
     # the newest face in the org: whoever's first issue or PR here is the most recent
     dated = {p: d for p, d in (joined or {}).items() if d and p in tally}
     if dated:
