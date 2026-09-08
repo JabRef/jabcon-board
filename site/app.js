@@ -71,8 +71,11 @@ function renderStats() {
   $('#totals').innerHTML = `<span>${fmt(s.changed_files)} files</span><span class="add">+${fmt(s.additions)}</span><span class="del">−${fmt(s.deletions)}</span>`;
   const comps = Object.entries(s.components).sort((a, b) => b[1] - a[1]).slice(0, 5);
   const max = comps[0]?.[1] || 1;
-  $('#components').innerHTML = comps.map(([name, n]) =>
-    `<span>${esc(name)}</span><div class="bar" style="width:${(100 * n / max).toFixed(1)}%"></div><span>${fmt(n)}</span>`).join('');
+  const compWhy = 'Lines changed (added + removed) in this component. Click for the PRs behind the number.';
+  $('#components').innerHTML = comps.map(([name, n]) => {
+    const a = `data-comp="${esc(name)}" title="${esc(compWhy)}"`;
+    return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${fmt(n)}</span>`;
+  }).join('');
   const f = data.focus;
   const focusWhy = f && `Issues labeled "${f.label}" across the org — the JabCon focus.\n${f.closed} of ${f.closed + f.open} closed, ${f.open} to go.\nThe green bar is the closed share.`;
   $('#milestones').innerHTML = (f ? `<div class="milestone focus" title="${esc(focusWhy)}"><div class="label">${link(f.url, `${esc(f.label)}`)}
@@ -293,13 +296,28 @@ function showDetail(login) {
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
 }
-// The detail view is a route (#user/<login>), so the browser's Back button and a shared link both work.
+// Click a component row: the merged PRs that touched it, biggest first, so a surprising total (32k removed lines,
+// say) can be traced back to the PRs it came from.
+// [impl->req~component-detail~1]
+function showComponentDetail(name) {
+  const lines = (c) => c.stats.components[name];
+  const prs = data.cards.filter((c) => c.stats?.components?.[name]).sort((a, b) => lines(b) - lines(a));
+  const total = prs.reduce((sum, c) => sum + lines(c), 0);
+  $('#detail h2').innerHTML = `${esc(name)} <span class="muted">${fmt(total)} lines changed in ${prs.length} PR${prs.length === 1 ? '' : 's'}, biggest first</span>`;
+  $('#detail ul').innerHTML = prs.map((c) => `<li>${avatar(c.author)}${link(c.url,
+    `<span class="what"><span class="line"><b>#${c.number}</b> ${esc(c.title)}</span></span>`, 'main')}<span class="pts" title="${esc(`lines changed in ${name}`)}">${fmt(lines(c))}</span><span class="add" title="over the whole PR">+${fmt(c.stats.additions || 0)}</span><span class="del" title="over the whole PR">\u2212${fmt(c.stats.deletions || 0)}</span>${repoLink(c.repo, c.repo)}</li>`).join('')
+    || '<li class="muted">no PRs recorded for this component</li>';
+  $('#detail').hidden = false;
+}
+
+// The detail view is a route (#user/<login>, #component/<name>), so the browser's Back button and a shared link both work.
 // [impl->req~contributor-detail~2]
+// [impl->req~component-detail~1]
 let pushedDetail = false; // only then is a history.back() ours to take; a deep link must not leave the site
 function route() {
-  const login = decodeURIComponent((location.hash.match(/^#user\/(.+)$/) || [])[1] || '');
-  if (login && data) showDetail(login);
-  else { $('#detail').hidden = true; pushedDetail = pushedDetail && !!login; }
+  const [, kind, arg] = location.hash.match(/^#(user|component)\/(.+)$/) || [];
+  if (arg && data) (kind === 'user' ? showDetail : showComponentDetail)(decodeURIComponent(arg));
+  else { $('#detail').hidden = true; pushedDetail = pushedDetail && !!arg; }
 }
 function closeDetail() {
   if (pushedDetail) history.back();
@@ -312,6 +330,12 @@ $('#leaderboard').addEventListener('click', (e) => {
   if (e.target.closest('a')) return; // a bonus emoji links to what earned it, the detail view must not steal the click
   const who = e.target.closest('.leader')?.dataset.login;
   if (who) { pushedDetail = true; location.hash = `user/${encodeURIComponent(who)}`; }
+});
+
+// [impl->req~component-detail~1]
+$('#components').addEventListener('click', (e) => {
+  const comp = e.target.closest('[data-comp]')?.dataset.comp;
+  if (comp) { pushedDetail = true; location.hash = `component/${encodeURIComponent(comp)}`; }
 });
 
 // [impl->req~leader-change-bell~3]
