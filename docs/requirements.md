@@ -452,11 +452,12 @@ is skipped with a warning, not a failed run.
 Needs: impl
 
 ### Nerd corner
-`req~nerd-corner~5`
+`req~nerd-corner~6`
 
 The stats show the top refactorings detected in merged PRs (records, sealed types, pattern matching, module metadata
 added or removed, ...). Module metadata detection handles multiline changes, large pull requests and recomputes
-cached statistics when its schema changes.
+cached statistics when its schema changes. Explicitly linked upstream PRs may contribute Nerd corner facts without
+entering participant cards or leaderboard activity.
 Together with the records below they take turns, four lines at a time, so everything is readable from the wall and
 nothing is cut off by the leaderboard below.
 

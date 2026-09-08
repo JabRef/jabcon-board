@@ -428,7 +428,7 @@ def ai_models(messages):
 
 def refactorings(pr, files, repo):
     """Nerdy facts about a merged PR, mined from its patches. Returns [(weight, text)]."""
-    # [impl->req~nerd-corner~5]
+    # [impl->req~nerd-corner~6]
     found = []
     renamed = [f for f in files if f["status"] == "renamed"]
     removed = [f for f in files if f["status"] == "removed" and f["filename"].endswith(".java")]
@@ -614,6 +614,19 @@ def pr_stats(c, cached):
     return {"stats_version": STATS_VERSION, "additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "complexity": complexity(files),
             "refactorings": refactorings(pr, files, c["repo"]), "sup": superlatives(files),
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
+
+
+def configured_nerd_prs():
+    """Refactorings from explicitly linked upstream PRs that are not participant cards, such as bot PRs."""
+    out = []
+    for ref in CONFIG.get("nerd_prs", []):
+        repo, number = ref.rsplit("#", 1)
+        pr, _ = get(f"/repos/{repo}/pulls/{number}")
+        files = get_all(f"/repos/{repo}/pulls/{number}/files")
+        for weight, text in refactorings(pr, files, repo):
+            out.append({"weight": weight, "text": text, "repo": repo, "number": int(number),
+                        "author": pr["user"]["login"], "url": pr["html_url"]})
+    return out
 
 
 AI_FACTOR = 0.25  # writing it without an assistant is the harder craft, for now
@@ -998,8 +1011,11 @@ def main():
         for comp, n in c.get("stats", {}).get("components", {}).items():
             totals["components"][comp] = totals["components"].get(comp, 0) + n
     private = private_activity()
-    nerdy = sorted(({"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
-                    for c in cards for w, t in c.get("stats", {}).get("refactorings", [])), key=lambda r: -r["weight"])[:5]
+    nerdy = [{"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
+             for c in cards for w, t in c.get("stats", {}).get("refactorings", [])]
+    known = {(r["repo"], r["number"]) for r in nerdy}
+    nerdy += [r for r in configured_nerd_prs() if (r["repo"], r["number"]) not in known]
+    nerdy = sorted(nerdy, key=lambda r: -r["weight"])[:5]
     ai_used = {}
     for c in cards:
         for m in c.get("stats", {}).get("ai", []):
