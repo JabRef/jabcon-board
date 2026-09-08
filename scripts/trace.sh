@@ -9,7 +9,11 @@ if [ ! -f "$JAR" ]; then
   mkdir -p "$(dirname "$JAR")"
   curl -sSL -o "$JAR" "https://github.com/itsallcode/openfasttrace/releases/download/$VERSION/openfasttrace-$VERSION.jar"
 fi
-echo "$SHA256  $JAR" | sha256sum -c --quiet
+if [ "$(uname -s)" = Darwin ]; then
+  printf '%s  %s\n' "$SHA256" "$JAR" | shasum -a 256 -c --quiet
+else
+  echo "$SHA256  $JAR" | sha256sum -c --quiet
+fi
 # ponytail: OFT's tag importer knows no .css; the stylesheet is fed through a .c-named symlink so its /* [impl->...] */ tags count
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 ln -s "$PWD/site/style.css" "$tmp/style.css.c"
