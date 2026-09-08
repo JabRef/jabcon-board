@@ -477,8 +477,8 @@ RECORD_KINDS = [
     ("Longest identifier", lambda s: len(sup(s, "identifier") or "") or None, lambda s: f"{sup(s, 'identifier')} ({len(sup(s, 'identifier'))} chars)", "\U0001f4cf"),
     ("Longest method", lambda s: (sup(s, "longest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'longest_method')[0]}(), {sup(s, 'longest_method')[1]} lines", "\U0001f40d"),
     ("Shortest method", lambda s: -(sup(s, "shortest_method") or [0, 0])[1] or None, lambda s: f"{sup(s, 'shortest_method')[0]}(), {sup(s, 'shortest_method')[1]} lines", "\U0001f90f"),
-    ("Most code written", lambda s: s.get("additions") or None, lambda s: f"+{s['additions']} lines", "\u270d\ufe0f"),
-    ("Most code deleted", lambda s: s.get("deletions") or None, lambda s: f"\u2212{s['deletions']} lines", "\U0001f525"),
+    ("Most code written", lambda s: s.get("additions") or None, lambda s: f"+{s['additions']:,} lines", "\u270d\ufe0f"),
+    ("Most code deleted", lambda s: s.get("deletions") or None, lambda s: f"\u2212{s['deletions']:,} lines", "\U0001f525"),
     ("Most tangled diff", lambda s: s.get("complexity") or None, lambda s: f"complexity {s['complexity']}", "\U0001f35d"),
     ("Wordiest changelog entry", lambda s: len(sup(s, "changelog") or "") or None, lambda s: f"{sup(s, 'changelog')[:40]} ({len(sup(s, 'changelog'))} chars)", "\U0001f4dc"),
 ]
