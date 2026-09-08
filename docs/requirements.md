@@ -364,11 +364,13 @@ enlarged video).
 Needs: impl
 
 ### Newsticker
-`req~newsticker~1`
+`req~newsticker~2`
 
-Headlines from the feeds in `news_feeds` (config) scroll along the bottom edge of the wall, so there is something to
-read in quiet hours. The feeds are interleaved so none dominates; each headline links to its article. A feed that is
-down is skipped, not a failed run. The strip stays still with `?still=1` or reduced-motion.
+A headline strip scrolls along the bottom edge of the wall, so there is something to read in quiet hours. It is
+phrased from the board's own data in the gource commentator's voice: the tally so far, the latest merged PRs (with
+their reviewers), recently closed issues, what is still left (backlog, milestones, focus label), every sticker earned
+and by whom, and who leads. Headlines link to the item, sticker or contributor. The strip stays still with `?still=1`
+or reduced-motion.
 
 Needs: impl
 
