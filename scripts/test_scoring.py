@@ -54,4 +54,6 @@ now = datetime(2026, 9, 8, tzinfo=timezone.utc)
 got = collect.stamp([{"login": "a", "title": "Closer"}, {"login": "b", "title": "Closer"}], old, now)
 assert [b["since"] for b in got] == ["2026-09-05T10:00:00+00:00", "2026-09-08T00:00:00+00:00"]
 assert collect.stamp([{"login": "a", "title": "X"}], None, now)[0]["since"].startswith("2026-09-08")
+unstamped = {"leaderboard": [{"login": "a", "bonuses": [{"login": "a", "title": "Closer"}]}]}
+assert collect.stamp([{"login": "a", "title": "Closer"}], unstamped, now)[0]["since"] == collect.START.isoformat(timespec="seconds")
 print("ok")

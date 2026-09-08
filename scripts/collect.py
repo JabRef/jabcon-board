@@ -763,7 +763,8 @@ def bonuses(cards, events, joined=None):
 # [impl->req~sticker-since~1]
 def stamp(awards, previous, now):
     """Each award keeps the time it was first seen (from the previous data.json), a new one gets this run's time."""
-    held = {(b["login"], b["title"]): b.get("since") for l in (previous or {}).get("leaderboard", []) for b in l.get("bonuses", [])}
+    # an award from before the stamps existed is old, not new: it dates from the start rather than from this run
+    held = {(b["login"], b["title"]): b.get("since") or START.isoformat(timespec="seconds") for l in (previous or {}).get("leaderboard", []) for b in l.get("bonuses", [])}
     for b in awards:
         b["since"] = held.get((b["login"], b["title"])) or now.isoformat(timespec="seconds")
     return awards
