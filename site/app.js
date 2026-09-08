@@ -397,6 +397,14 @@ function renderProgress() {
   $('#ticks').innerHTML = phases.slice(0, -1).map((p) => `<span style="left:${pct(p.end)}"></span>`).join('');
   $('#from').textContent = fmt(data.config.jabcon_start);
   $('#to').textContent = fmt(data.config.jabcon_end);
+  // [impl->req~activity-heat-strip~1]
+  const hours = new Array(Math.ceil((end - start) / 3600000)).fill(0);
+  for (const e of data.all_events || []) {
+    const h = Math.floor((Date.parse(e.created_at) - start) / 3600000);
+    if (h >= 0 && h < hours.length) hours[h]++;
+  }
+  const max = Math.max(1, ...hours);
+  $('#heat').innerHTML = hours.map((n, h) => `<span style="--o:${(n / max).toFixed(3)}" title="${fmt(new Date(start + h * 3600000).toISOString())} · ${n} event${n === 1 ? '' : 's'}"></span>`).join('');
 }
 
 // [impl->req~refresh-ring~2]
