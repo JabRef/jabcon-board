@@ -80,6 +80,15 @@ ring means and how old the data is.
 
 Needs: impl
 
+### Activity heat strip under the timeline
+`req~activity-heat-strip~1`
+
+A row of cells under the timeline bar, one per JabCon hour, shows how many participant events fell into that hour
+(brightness relative to the busiest hour); hovering a cell names the hour and the count. The strip shares the bar's
+time axis, so working hours and night gaps are visible without taking panel space.
+
+Needs: impl
+
 ### Times in the JabCon timezone
 `req~clock-timezone~1`
 
