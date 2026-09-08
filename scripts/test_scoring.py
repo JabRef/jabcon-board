@@ -57,3 +57,17 @@ assert collect.stamp([{"login": "a", "title": "X"}], None, now)[0]["since"].star
 unstamped = {"leaderboard": [{"login": "a", "bonuses": [{"login": "a", "title": "Closer"}]}]}
 assert collect.stamp([{"login": "a", "title": "Closer"}], unstamped, now)[0]["since"] == collect.START.isoformat(timespec="seconds")
 print("ok")
+
+# necromancer: the oldest item somebody else opened, woken by an event
+collect.PARTICIPANTS = ["a", "b"]
+old = {"repo": "x/y", "number": 1, "type": "issue", "column": "backlog", "author": "z", "url": "u1",
+       "created_at": "2015-01-01T00:00:00Z", "labels": []}
+new = {**old, "number": 2, "url": "u2", "created_at": "2026-01-01T00:00:00Z"}
+events = [{"actor": "a", "type": "IssueCommentEvent", "repo": "x/y", "number": 1, "created_at": "2026-09-05T12:00:00Z"},
+          {"actor": "b", "type": "IssueCommentEvent", "repo": "x/y", "number": 2, "created_at": "2026-09-05T12:00:00Z"}]
+got = [b for b in collect.bonuses([old, new], events) if b["title"] == "Necromancer"]
+assert [b["login"] for b in got] == ["a"] and got[0]["url"] == "u1", got
+assert "y#1" in got[0]["text"], got
+# one's own old issue is not necromancy
+assert not [b for b in collect.bonuses([{**old, "author": "a"}], events[:1]) if b["title"] == "Necromancer"]
+print("ok")
