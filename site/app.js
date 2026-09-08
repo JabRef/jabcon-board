@@ -132,11 +132,11 @@ function renderNerd() {
 
 // Slot machine: new numbers do not just appear, they spin into place, lowest contributor first and the leader last,
 // the whole board settled within SLOT_TOTAL_MS. A reel that has not had its turn shows the previous total, grayed.
-// Within a reel the digits lock right to left. Only once every reel stands still do the gains pop, in the same order,
-// so the three acts (rolling, points, badges) never overlap.
+// Within a reel the digits lock right to left, and the moment one stands still its gain pops out of it, so each
+// contributor gets their own roll-then-points beat before the next reel takes over.
 // One interval drives every reel; the next render's call cancels it, which also drops the then-stale nodes.
-// [impl->req~leaderboard-slot-machine~4]
-const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500, POP_STAGGER_MS = 500, POP_MS = 5000;
+// [impl->req~leaderboard-slot-machine~5]
+const SLOT_TOTAL_MS = 30000, SLOT_ROLL_MS = 2500, POP_MS = 5000;
 let slotTimer, popTimers = [];
 // The bell rings at once, the toast naming the new leader waits for the reels and the pops. Nothing pending means it rings now
 // (still mode, reduced motion, first load). A new render flushes what is still queued: it belongs to older data.
@@ -169,20 +169,21 @@ function slotMachine() {
       r.el.classList.remove('pending');
       r.el.classList.toggle('rolling', locked < r.final.length);
       r.el.textContent = group([...r.final].map((d, i) => (i >= r.final.length - locked ? d : Math.floor(Math.random() * 10))).join(''));
-      if (locked >= r.final.length) r.settled = true; else running = true;
+      if (locked < r.final.length) { running = true; continue; }
+      r.settled = true;
+      popPoints(r.el, r.gain); // this reel's gain, right where it stopped, before the next reel takes over
     }
     if (running) return;
     clearInterval(slotTimer);
-    plan.forEach((r, i) => popTimers.push(setTimeout(() => popPoints(r.el, r.gain), i * POP_STAGGER_MS)));
-    popTimers.push(setTimeout(settleSlots, (plan.length - 1) * POP_STAGGER_MS + POP_MS));
+    popTimers.push(setTimeout(settleSlots, POP_MS)); // the last gain still has to fly off
   }, 60);
 }
 
 // The gain jumps out of the reel, hangs there long enough to be read, then flies off the top of the screen and
-// settles as a badge over the avatar. Fixed and on <body>, so no ancestor of the fixed video is transformed.
-// [impl->req~leaderboard-slot-machine~4]
+// settles as a badge over the avatar. A contributor who gained nothing gets a +0, so every reel has its beat. Fixed and on <body>, so no ancestor of the fixed video is transformed.
+// [impl->req~leaderboard-slot-machine~5]
 function popPoints(el, gain) {
-  if (gain <= 0) return;
+  if (gain < 0) return;
   const box = el.getBoundingClientRect(), pop = document.createElement('div');
   pop.className = 'pop';
   pop.textContent = `+${fmt(gain)}`;
