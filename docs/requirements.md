@@ -237,6 +237,15 @@ The view is a `#user/<login>` route: the browser's Back button closes it, and th
 
 Needs: impl
 
+### Component detail view
+`req~component-detail~1`
+
+Clicking a row in the Components box opens the same full-screen view, listing the PRs that touched that component
+ranked by the lines they changed in it, each with the PR's own added and removed lines. It is a `#component/<name>`
+route, so Back, Escape and a shared link work like the contributor view.
+
+Needs: impl
+
 ## Activity
 
 ### Ticker rows deep-link
