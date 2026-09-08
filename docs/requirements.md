@@ -265,6 +265,24 @@ much recent activity is on JabCon items and the newest events stay visible in th
 
 Needs: impl
 
+### Merges show up in the ticker
+`req~merge-credit-rows~1`
+
+A merged pull request scores for its author, who did not merge it and therefore has no event for it. The ticker
+adds a row for every merged PR the author has no merge event of their own for, so the points and the "merged" toast
+have something to point at in Latest activity.
+
+Needs: impl
+
+### A gain says where it came from
+`req~gain-source~1`
+
+The "+n" popping out of a reel names its source underneath: a sticker, a merged PR, a review, private-repo work,
+other activity, or earlier work re-scored. A data run re-scores what already happened (a focus label added, a
+resolved diff complexity) and counts work no ticker row can name, so a gain need not have a fresh event behind it.
+
+Needs: impl
+
 ### Lead change rings a bell
 `req~leader-change-bell~3`
 
