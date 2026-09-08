@@ -1,10 +1,30 @@
 #!/usr/bin/env python3
 """Self-check for the nerd corner records: python3 scripts/test_records.py"""
-from collect import refactorings, superlatives, records
+import collect
+from collect import get_all, module_changes, refactorings, superlatives, records
 
 module_patch = "@@ -1,2 +1,3 @@\n+    module(\"example\", \"example.module\")\n-    module(\"old\", \"old.module\")\n"
 module_facts = refactorings({"additions": 1, "deletions": 1}, [{"filename": "build.gradle.kts", "status": "modified", "patch": module_patch}], "o/r")
 assert module_facts == [(4, "module metadata changed (+1 / −1)")], module_facts
+
+multiline = [
+    {"filename": "build.gradle.kts", "status": "modified", "patch": "@@ -1,3 +1,4 @@\n module(\n-    \"old\",\n+    \"new\",\n     \"example.module\"\n )\n"},
+    {"filename": "pom.xml", "status": "modified", "patch": "@@ -1,2 +1,3 @@\n-<module>old</module>\n+<module>\n+  new\n+</module>\n"},
+    {"filename": "src/module-info.java", "status": "modified", "patch": "@@ -1,2 +1,2 @@\n-module old.name {\n+module new.name {\n"},
+]
+assert module_changes(multiline) == (3, 3), module_changes(multiline)
+
+calls = []
+def fake_get(path, params=None, token=None):
+    calls.append(params["page"])
+    return ([{"page": params["page"]}] if params["page"] < 3 else []), {}
+original_get = collect.get
+collect.get = fake_get
+try:
+    assert get_all("/items", {"per_page": 1}) == [{"page": 1}, {"page": 2}]
+finally:
+    collect.get = original_get
+assert calls == [1, 2, 3], calls
 
 patch = ("@@ -1 +1,9 @@\n"
          "+    public void anExtraordinarilyLongMethodName(int x) {\n"
