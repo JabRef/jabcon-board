@@ -279,10 +279,11 @@ function eventRow(e) {
 // the ticker is clipped, so a fixed block pushed the newest activity out of sight whenever JabCon items were quiet.
 // The divider therefore moves with how much recent activity is on JabCon items.
 // [impl->req~activity-grouped~2]
-// [impl->req~newsticker~2] one strip of headlines along the bottom, phrased from the board's data like the gource
+// [impl->req~newsticker~3] one strip of headlines along the bottom, phrased from the board's data like the gource
 // commentary: the tally, the latest merges, what is still left, and who earned which sticker. Seeded by PR number so
 // a refresh says the same things, and only re-rendered on a change, so the scroll never jumps back.
 const FRESH_MS = 3 * 3600000; // a sticker counts as just earned for this long
+const CATCHUP_MS = 6 * 3600000, QUIET_MS = 16 * 3600000; // the catch-up window, and how long a pause must be to be "back" from (a night is 8-10 h)
 function newsItems() {
   const merged = data.cards.filter((c) => c.merged_at).sort((a, b) => b.merged_at.localeCompare(a.merged_at));
   const closed = data.cards.filter((c) => c.type === 'issue' && c.column === 'done');
@@ -307,14 +308,38 @@ function newsItems() {
   if (backlog.length) items.push([`Still waiting: ${backlog.length} items in the backlog — ${backlog.slice(0, 3).map((c) => `#${c.number} ${c.title}`).join(', ')}${backlog.length > 3 ? ', …' : ''}`]);
   for (const m of data.milestones) items.push([`${m.title}: ${m.open ? `${m.open} to go, ` : 'done! '}${m.closed - m.baseline} closed during JabCon`, m.url]);
   if (data.focus) items.push([`${data.focus.label}: ${data.focus.closed} done, ${data.focus.open} open`, data.focus.url]);
-  // [impl->req~sticker-since~1] freshly earned stickers come first and say so
-  const stickers = data.leaderboard.flatMap((l) => (l.bonuses || []).map((b) => [l, b])).sort(([, a], [, b]) => (b.since || '').localeCompare(a.since || ''));
-  for (const [l, b] of stickers) {
-    const fresh = b.since && Date.now() - new Date(b.since) < FRESH_MS;
-    items.push([`${b.emoji} ${l.login} ${fresh ? 'just earned' : 'holds'} the ${b.title} sticker: ${b.text}`, b.url || `#user/${encodeURIComponent(l.login)}`]);
-  }
   const [lead, second] = data.leaderboard;
   if (lead) items.push([`${lead.login} leads the table with ${fmt(lead.points)} points${second ? `, ${second.login} is ${fmt(lead.points - second.points)} behind` : ''}`, `#user/${encodeURIComponent(lead.login)}`]);
+  // [impl->req~catch-up~1] the race: who scored most in the last hours, who is closing in on the place above, who is back
+  const since = Date.now() - CATCHUP_MS, participants = new Set(data.config.participants);
+  const recent = {}, latest = {}, before = {};
+  for (const e of data.all_events) { // newest first
+    if (!participants.has(e.actor)) continue;
+    const t = Date.parse(e.created_at);
+    if (t >= since) recent[e.actor] = (recent[e.actor] || 0) + eventPoints(e);
+    if (!(e.actor in latest)) latest[e.actor] = t;
+    else if (!(e.actor in before) && latest[e.actor] - t > QUIET_MS) before[e.actor] = t; // the pause that ended with their latest event
+  }
+  const hours = CATCHUP_MS / 3600000, user = (l) => `#user/${encodeURIComponent(l)}`;
+  const gainers = Object.entries(recent).filter(([, p]) => p > 0).sort((a, b) => b[1] - a[1]);
+  const pts = (p) => `${fmt(p)} point${p === 1 ? '' : 's'}`;
+  for (const [l, p] of gainers.slice(0, 3)) items.push([`${l} scored ${pts(p)} in the last ${hours} hours`, user(l)]);
+  data.leaderboard.forEach((l, i) => {
+    const above = data.leaderboard[i - 1];
+    const gap = above ? above.points - l.points : Infinity; // only a gap this pace closes within a day or so counts as catching up
+    if (above && (recent[l.login] || 0) > (recent[above.login] || 0) && gap <= 5 * recent[l.login])
+      items.push([`${l.login} is catching up on ${above.login}: ${pts(gap)} behind, ${pts(recent[l.login])} scored in the last ${hours} hours`, user(l.login)]);
+  });
+  for (const [l, t] of Object.entries(before)) if (latest[l] >= since) items.push([`${l} is back after ${Math.round((latest[l] - t) / 3600000)} hours of silence`, user(l)]);
+  // [impl->req~sticker-since~1] freshly earned stickers come first and say so
+  const stickers = data.leaderboard.flatMap((l) => (l.bonuses || []).map((b) => [l, b])).sort(([, a], [, b]) => (b.since || '').localeCompare(a.since || '')).map(([l, b]) => {
+    const fresh = b.since && Date.now() - new Date(b.since) < FRESH_MS;
+    return [`${b.emoji} ${l.login} ${fresh ? 'just earned' : 'holds'} the ${b.title} sticker: ${b.text}`, b.url || user(l.login)];
+  });
+  // [impl->req~newsticker~3] one sticker between every two headlines, so a screen width is never stickers only
+  const mixed = [];
+  for (let i = 0; i < Math.max(items.length, stickers.length); i++) mixed.push(...items.slice(i, i + 1), ...stickers.slice(i, i + 1));
+  return mixed;
   return items;
 }
 function renderNews() {
