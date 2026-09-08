@@ -76,11 +76,13 @@ def get_all(path, params=None, token=None):
     params = dict(params or {})
     per_page = params.get("per_page", 100)
     items = []
-    for page in range(1, 100):
+    page = 1
+    while True:
         page_items, _ = get(path, {**params, "page": page, "per_page": per_page}, token)
         items.extend(page_items)
         if len(page_items) < per_page:
             break
+        page += 1
     return items
 
 
@@ -389,7 +391,9 @@ DETECTORS = [
 ]
 DETECTORS = [(w, re.compile(rx, re.M), label) for w, rx, label in DETECTORS]
 MODULE_FILES = (".gradle", ".gradle.kts", "pom.xml", "module-info.java")
-MODULE_DECLARATION = re.compile(r"\bmodule\s*\([^)]*\)|\bmodule\s+[\w.]+\s*\{|<module>.*?</module>", re.S)
+GRADLE_MODULE = re.compile(r"(?m)^[ \t]*module\s*\((?:[^()\"']|\"(?:\\.|[^\"])*\"|'(?:\\.|[^'])*'|\([^()]*\))*\)")
+JAVA_MODULE = re.compile(r"(?m)^[ \t]*(?:open[ \t]+)?module[ \t]+[\w.]+\s*\{")
+MAVEN_MODULE = re.compile(r"<module>\s*[^<]+?\s*</module>")
 
 
 # Names of the AI assistants that sign commits; the first match on a trailer line wins, so keep the
@@ -424,7 +428,7 @@ def ai_models(messages):
 
 def refactorings(pr, files, repo):
     """Nerdy facts about a merged PR, mined from its patches. Returns [(weight, text)]."""
-    # [impl->req~nerd-corner~5]
+    # [impl->req~nerd-corner~6]
     found = []
     renamed = [f for f in files if f["status"] == "renamed"]
     removed = [f for f in files if f["status"] == "removed" and f["filename"].endswith(".java")]
@@ -435,7 +439,7 @@ def refactorings(pr, files, repo):
         found.append((3 + min(len(removed), 5), f"deleted {', '.join(f['filename'].rsplit('/', 1)[-1].removesuffix('.java') for f in removed[:3])}" + (" …" if len(removed) > 3 else "")))
     if pr["deletions"] > pr["additions"] * 1.5 and pr["deletions"] > 50:
         found.append((4, f"net −{pr['deletions'] - pr['additions']} lines"))
-    module_added, module_removed = module_changes(files)
+    module_added, module_removed = module_changes(files, repo, pr.get("base", {}).get("sha"), pr.get("head", {}).get("sha"))
     if module_added or module_removed:
         found.append((4, f"module metadata changed (+{module_added} / −{module_removed})"))
     elif any(f["filename"].endswith("module-info.java") for f in files):
@@ -451,27 +455,95 @@ def refactorings(pr, files, repo):
     return sorted(found, reverse=True)[:4]
 
 
-def module_changes(files):
-    """Return added and removed module declarations reconstructed from changed hunks."""
+def source_at(repo, path, ref):
+    """Read a small source file at a PR ref; module descriptors are kept well below the API size limit."""
+    data, _ = get(f"/repos/{repo}/contents/{urllib.parse.quote(path, safe='/')}", {"ref": ref})
+    return base64.b64decode(data["content"]).decode()
+
+
+def strip_comments(text):
+    """Remove source comments without treating comment markers inside strings as comments."""
+    out = []
+    quote = None
+    i = 0
+    while i < len(text):
+        if quote:
+            out.append(text[i])
+            if text[i] == "\\" and i + 1 < len(text):
+                out.append(text[i + 1])
+                i += 2
+                continue
+            if text[i] == quote:
+                quote = None
+            i += 1
+            continue
+        if text.startswith("//", i):
+            newline = text.find("\n", i + 2)
+            i = len(text) if newline < 0 else newline
+            continue
+        if text.startswith("/*", i):
+            end = text.find("*/", i + 2)
+            i = len(text) if end < 0 else end + 2
+            continue
+        if text.startswith("<!--", i):
+            end = text.find("-->", i + 4)
+            i = len(text) if end < 0 else end + 3
+            continue
+        if text[i] in "\"'":
+            quote = text[i]
+        out.append(text[i])
+        i += 1
+    return "".join(out)
+
+
+def declarations(text, filename):
+    """Extract normalized module declarations from one complete source file."""
+    text = strip_comments(text)
+    if filename.endswith((".gradle", ".gradle.kts")):
+        text = re.sub(r'"""[\s\S]*?"""', "", text)
+        text = re.sub(r"'''[\s\S]*?'''", "", text)
+    elif filename.endswith("pom.xml"):
+        text = re.sub(r"<!\[CDATA\[[\s\S]*?\]\]>", "", text)
+    pattern = GRADLE_MODULE if filename.endswith((".gradle", ".gradle.kts")) else MAVEN_MODULE if filename.endswith("pom.xml") else JAVA_MODULE
+    return [re.sub(r"\s+", " ", match).strip() for match in pattern.findall(text)]
+
+
+def module_changes(files, repo=None, base=None, head=None):
+    """Return added and removed module declarations from complete files, or reconstructed patch hunks in tests."""
     added, removed = Counter(), Counter()
     for f in files:
-        if not f["filename"].endswith(MODULE_FILES) or not f.get("patch"):
+        if not f["filename"].endswith(MODULE_FILES):
             continue
-        for hunk in re.split(r"(?=^@@ )", f["patch"], flags=re.M):
-            new, old = [], []
-            for line in hunk.splitlines():
-                if line.startswith(("@@", "+++", "---")):
-                    continue
-                if line.startswith("+"):
-                    new.append(line[1:])
-                elif line.startswith("-"):
-                    old.append(line[1:])
-                elif line.startswith(" "):
-                    new.append(line[1:])
-                    old.append(line[1:])
-            added.update(MODULE_DECLARATION.findall("\n".join(new)))
-            removed.update(MODULE_DECLARATION.findall("\n".join(old)))
+        old_text = new_text = None
+        if repo and base and f["status"] != "added":
+            old_text = source_at(repo, f.get("previous_filename", f["filename"]), base)
+        if repo and head and f["status"] != "removed":
+            new_text = source_at(repo, f["filename"], head)
+        if old_text is not None or new_text is not None:
+            old_filename = f.get("previous_filename", f["filename"])
+            old_declarations = declarations(old_text or "", old_filename)
+            new_declarations = declarations(new_text or "", f["filename"])
+        else:
+            old_declarations, new_declarations = patch_declarations(f.get("patch", ""), f["filename"])
+        added.update(new_declarations)
+        removed.update(old_declarations)
     return sum((added - removed).values()), sum((removed - added).values())
+
+
+def patch_declarations(patch, filename):
+    """Build the old and new views available in a patch, used when source refs are unavailable in unit tests."""
+    new, old = [], []
+    for line in patch.splitlines():
+        if line.startswith(("@@", "+++", "---")):
+            continue
+        if line.startswith("+"):
+            new.append(line[1:])
+        elif line.startswith("-"):
+            old.append(line[1:])
+        elif line.startswith(" "):
+            new.append(line[1:])
+            old.append(line[1:])
+    return declarations("\n".join(old), filename), declarations("\n".join(new), filename)
 
 
 # [impl->req~scoring~9]
@@ -580,6 +652,19 @@ def pr_stats(c, cached):
     return {"stats_version": STATS_VERSION, "additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "complexity": complexity(files),
             "refactorings": refactorings(pr, files, c["repo"]), "sup": superlatives(files),
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
+
+
+def configured_nerd_prs():
+    """Refactorings from explicitly linked upstream PRs that are not participant cards, such as bot PRs."""
+    out = []
+    for ref in CONFIG.get("nerd_prs", []):
+        repo, number = ref.rsplit("#", 1)
+        pr, _ = get(f"/repos/{repo}/pulls/{number}")
+        files = get_all(f"/repos/{repo}/pulls/{number}/files")
+        for weight, text in refactorings(pr, files, repo):
+            out.append({"weight": weight, "text": text, "repo": repo, "number": int(number),
+                        "author": pr["user"]["login"], "url": pr["html_url"]})
+    return out
 
 
 AI_FACTOR = 0.25  # writing it without an assistant is the harder craft, for now
@@ -964,8 +1049,11 @@ def main():
         for comp, n in c.get("stats", {}).get("components", {}).items():
             totals["components"][comp] = totals["components"].get(comp, 0) + n
     private = private_activity()
-    nerdy = sorted(({"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
-                    for c in cards for w, t in c.get("stats", {}).get("refactorings", [])), key=lambda r: -r["weight"])[:5]
+    nerdy = [{"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
+             for c in cards for w, t in c.get("stats", {}).get("refactorings", [])]
+    known = {(r["repo"], r["number"]) for r in nerdy}
+    nerdy += [r for r in configured_nerd_prs() if (r["repo"], r["number"]) not in known]
+    nerdy = sorted(nerdy, key=lambda r: -r["weight"])[:5]
     ai_used = {}
     for c in cards:
         for m in c.get("stats", {}).get("ai", []):

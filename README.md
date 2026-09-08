@@ -43,6 +43,7 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 `repo_factors` (multipliers keyed by repo or whole org; a repo entry beats its org entry, which is how `JabRef/jabcon-board` stays at 1 while the rest of the org counts fivefold),
 `dependency_repos` (JabRef's own dependency stack, for the 🔧 bonus; forks of them count too),
 `record_bonus_exclude` (logins that keep their nerd corner records but pass the +100 to the runner-up),
+`nerd_prs` (explicit `owner/repo#number` PRs whose refactorings appear in Nerd corner without becoming participant cards),
 `honorary_awards` (`login`, `title`, `text`, `emoji`, optional `url`: +100 for what the API cannot see).
 `private_repos` lists private repos whose issue activity is counted for the leaderboard and shown as counts only (no titles) under the milestones. Milestones and `private_repos` need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.
 Bot activity is excluded, and so is automation running under a human account: `exclude_titles` (item titles, e.g.
