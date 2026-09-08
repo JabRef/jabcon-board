@@ -54,15 +54,15 @@ Bot activity is excluded, and so is automation running under a human account: `e
 
 Recomputed at every data run from activity since `jabcon_start`, in any public repository (bots excluded):
 
-| Activity | Points | Credited to |
-|---|---|---|
-| Pull request merged | 3 | the PR author (not the person who pressed merge) |
-| Review submitted (approve, request changes, comment) | 1, 2 or 3 by the complexity of the reviewed diff (branch points in added code: trivial, normal, 20+) | the reviewer |
-| Issue comment or review comment | 1 | the commenter |
-| Issue opened or closed, PR closed without merge | 1 | the actor |
-| Push | 1 per push event (not per commit) | the pusher |
-| Issue opened / closed / commented in a `private_repos` repo | 1 | the actor |
-| Mail to a configured mailing list | 1 | the sender |
+| Activity                                                    | Points                                                                                               | Credited to                                      |
+|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| Pull request merged                                         | 3                                                                                                    | the PR author (not the person who pressed merge) |
+| Review submitted (approve, request changes, comment)        | 1, 2 or 3 by the complexity of the reviewed diff (branch points in added code: trivial, normal, 20+) | the reviewer                                     |
+| Issue comment or review comment                             | 1                                                                                                    | the commenter                                    |
+| Issue opened or closed, PR closed without merge             | 1                                                                                                    | the actor                                        |
+| Push                                                        | 1 per push event (not per commit)                                                                    | the pusher                                       |
+| Issue opened / closed / commented in a `private_repos` repo | 1                                                                                                    | the actor                                        |
+| Mail to a configured mailing list                           | 1                                                                                                    | the sender                                       |
 
 Each of these is multiplied: ten-fold on a JabCon item (focus label or a configured milestone), otherwise by
 `repo_factors` (repo before org). A merged PR whose commits credit an AI assistant scores a **quarter** — writing it
@@ -81,49 +81,49 @@ everyone tied for it. The icons sit under the login on the leaderboard and in th
 to what earned it (the record's PR, or the GitHub search behind the number). Self-reviews, fork syncs and
 AI-written comments count for none of them.
 
-| Icon | Award | Who gets it |
-|---|---|---|
-| 💬 | Chatterbox | most comments |
-| 🐝 | Busy bee | most PRs and issues touched |
-| 🌍 | Globetrotter | most repositories worked on |
-| 💡 | Idea machine | most PRs opened |
-| 🛡️ | Gatekeeper | most reviews |
-| 🏁 | Closer | most merged PRs |
-| 🦉 | Night owl | most activity between 22:00 and 06:00 |
-| 🐦 | Early bird | most activity before 08:00 |
-| ☕ | Ambassador | most activity outside the org (own forks do not count) |
-| 🔧 | Dependency whisperer | most activity in `dependency_repos` and their forks |
-| 🎨 | Jack of all trades | widest set of components written or reviewed (by changed files) |
-| 🏷️ | Component collector | most distinct `component:` labels written or reviewed |
-| 🛸 | Exotic explorer | most foreign repositories that are not dependencies |
-| 🔍 | Reviewer's reviewer | largest share of own activity spent reviewing (from 10 reviews on) |
-| 🤐 | Actions over words | most reviews per comment written (from 10 reviews on) |
-| ✅ | Rubber stamp | most approvals given |
-| 💥 | Force of nature | most force pushes (the pushed branch's previous head is no ancestor of the new one) |
-| 🧹 | Janitor | most branches deleted |
-| 🤝 | Widest reach | reviewed the PRs of the most different authors |
-| ❓ | Socratic | most questions asked |
-| 🙏 | Most gracious | most thanks said |
-| 🕰️ | Always on | active in the most hours of the day |
-| 🧲 | Magnet | own PRs pulled in the most reviews |
-| ⚡ | First responder | first to review the most PRs |
-| 🚀 | All killer, no filler | largest share of own activity that is landing a PR (from 5 events on) |
-| 📝 | Essayist | longest comments on average (from 5 comments on) |
-| 🚚 | Freight train | most commits per push (from 5 pushes on) |
-| 🏖️ | Weekend warrior | largest share of own activity on a weekend (from 5 events on) |
-| 🐛 | Reporter | most issues opened |
-| 🪶 | Featherweight | most merged PRs of at most 50 changed lines |
-| ⚖️ | Middleweight | most merged PRs between 50 and 500 changed lines |
-| 🐘 | Heavyweight | most merged PRs above 500 changed lines |
-| 🗣️ | Sounding board | largest share of own activity spent commenting (from 5 events on) |
-| 🔭 | Big picture | largest share of own activity spent on issues rather than code (from 5 events on) |
-| 🚧 | Hard to please | largest share of own reviews that asked for changes (from 3 reviews on) |
-| ✋ | Handmade | largest share of merged PRs written without an AI assistant (from 3 merged PRs on) |
-| 🏎️ | Speedrun | shortest time from opening a PR to its merge |
-| 🧟 | Necromancer | activity on the oldest item somebody else opened |
-| 🐣 | Newcomer | most recent first issue or PR in the org |
-| 📏🐍🤏✍️🔥🍝📜 | Nerd corner records | longest identifier, longest and shortest method, most code written, most deleted, most tangled diff, wordiest changelog entry |
-| 🍸 … | `honorary_awards` | whatever the jury decides |
+| Icon           | Award                 | Who gets it                                                                                                                   |
+|----------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| 💬             | Chatterbox            | most comments                                                                                                                 |
+| 🐝             | Busy bee              | most PRs and issues touched                                                                                                   |
+| 🌍             | Globetrotter          | most repositories worked on                                                                                                   |
+| 💡             | Idea machine          | most PRs opened                                                                                                               |
+| 🛡️             | Gatekeeper            | most reviews                                                                                                                  |
+| 🏁             | Closer                | most merged PRs                                                                                                               |
+| 🦉             | Night owl             | most activity between 22:00 and 06:00                                                                                         |
+| 🐦             | Early bird            | most activity before 08:00                                                                                                    |
+| ☕             | Ambassador            | most activity outside the org (own forks do not count)                                                                        |
+| 🔧             | Dependency whisperer  | most activity in `dependency_repos` and their forks                                                                           |
+| 🎨             | Jack of all trades    | widest set of components written or reviewed (by changed files)                                                               |
+| 🏷️             | Component collector   | most distinct `component:` labels written or reviewed                                                                         |
+| 🛸             | Exotic explorer       | most foreign repositories that are not dependencies                                                                           |
+| 🔍             | Reviewer's reviewer   | largest share of own activity spent reviewing (from 10 reviews on)                                                            |
+| 🤐             | Actions over words    | most reviews per comment written (from 10 reviews on)                                                                         |
+| ✅             | Rubber stamp          | most approvals given                                                                                                          |
+| 💥             | Force of nature       | most force pushes (the pushed branch's previous head is no ancestor of the new one)                                           |
+| 🧹             | Janitor               | most branches deleted                                                                                                         |
+| 🤝             | Widest reach          | reviewed the PRs of the most different authors                                                                                |
+| ❓             | Socratic              | most questions asked                                                                                                          |
+| 🙏             | Most gracious         | most thanks said                                                                                                              |
+| 🕰️             | Always on             | active in the most hours of the day                                                                                           |
+| 🧲             | Magnet                | own PRs pulled in the most reviews                                                                                            |
+| ⚡             | First responder       | first to review the most PRs                                                                                                  |
+| 🚀             | All killer, no filler | largest share of own activity that is landing a PR (from 5 events on)                                                         |
+| 📝             | Essayist              | longest comments on average (from 5 comments on)                                                                              |
+| 🚚             | Freight train         | most commits per push (from 5 pushes on)                                                                                      |
+| 🏖️             | Weekend warrior       | largest share of own activity on a weekend (from 5 events on)                                                                 |
+| 🐛             | Reporter              | most issues opened                                                                                                            |
+| 🪶             | Featherweight         | most merged PRs of at most 50 changed lines                                                                                   |
+| ⚖️             | Middleweight          | most merged PRs between 50 and 500 changed lines                                                                              |
+| 🐘             | Heavyweight           | most merged PRs above 500 changed lines                                                                                       |
+| 🗣️             | Sounding board        | largest share of own activity spent commenting (from 5 events on)                                                             |
+| 🔭             | Big picture           | largest share of own activity spent on issues rather than code (from 5 events on)                                             |
+| 🚧             | Hard to please        | largest share of own reviews that asked for changes (from 3 reviews on)                                                       |
+| ✋             | Handmade              | largest share of merged PRs written without an AI assistant (from 3 merged PRs on)                                            |
+| 🏎️             | Speedrun              | shortest time from opening a PR to its merge                                                                                  |
+| 🧟             | Necromancer           | activity on the oldest item somebody else opened                                                                              |
+| 🐣             | Newcomer              | most recent first issue or PR in the org                                                                                      |
+| 📏🐍🤏✍️🔥🍝📜 | Nerd corner records   | longest identifier, longest and shortest method, most code written, most deleted, most tangled diff, wordiest changelog entry |
+| 🍸 …           | `honorary_awards`     | whatever the jury decides                                                                                                     |
 
 Categories, thresholds and the 100 itself live in `BONUS_KINDS` and `BONUS` in `scripts/collect.py`.
 
