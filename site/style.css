@@ -105,10 +105,10 @@ section h2 .count { float: right; color: var(--fg); }
 .leader { position: relative; cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
 .leader img { width: 2.6rem; height: 2.6rem; border-radius: 50%; border: .25rem solid var(--c); display: block; margin: 0 auto .1rem; }
 .leader .pts { font-size: 1rem; font-weight: bold; font-variant-numeric: tabular-nums; }
-/* [impl->req~leaderboard-slot-machine~4] a spinning reel is blurred and amber, one still holding the old total is gray */
+/* [impl->req~leaderboard-slot-machine~5] a spinning reel is blurred and amber, one still holding the old total is gray */
 .leader .pts.rolling { color: var(--warn); filter: blur(.04rem); }
 .leader .pts.pending { color: var(--muted); }
-/* [impl->req~bonus-points~14] the +100 awards sit under the login in a box of a fixed two-row height, so a
+/* [impl->req~bonus-points~19] the +100 awards sit under the login in a box of a fixed two-row height, so a
    contributor with eight awards and one with none still line up - the row reads as one line, not a staircase */
 .leader .bonuses { display: flex; flex-wrap: wrap; justify-content: center; align-content: flex-start;
   gap: .05rem .1rem; max-width: 5.5rem; height: 1.75rem; overflow: hidden; margin: 0 auto; font-size: .75rem;
@@ -119,6 +119,8 @@ a.bonus { text-decoration: none; }
   color: var(--ok); text-shadow: 0 0 .3rem #000, 0 0 .6rem #000; animation: delta-in 1.2s ease-out both; }
 @keyframes delta-in { from { opacity: 0; } to { opacity: 1; } }
 .pop { position: fixed; z-index: 50; pointer-events: none; font-size: 1.4rem; font-weight: bold; color: var(--ok); text-shadow: 0 0 .4rem #000, 0 0 .8rem #000; }
+/* [impl->req~gain-source~1] the source rides along under the number, small enough not to fight it */
+.pop i { display: block; font-style: normal; font-weight: normal; font-size: .45em; text-align: center; }
 .leader:first-child img { width: 3.4rem; height: 3.4rem; }
 #activity { position: relative; }
 #ticker { list-style: none; margin: 0; padding: 0; overflow: hidden; flex: 1; font-size: .95rem; }
