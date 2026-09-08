@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Self-check for the nerd corner records: python3 scripts/test_records.py"""
-from collect import superlatives, records
+from collect import refactorings, superlatives, records
+
+module_patch = "@@ -1,2 +1,3 @@\n+    module(\"example\", \"example.module\")\n-    module(\"old\", \"old.module\")\n"
+module_facts = refactorings({"additions": 1, "deletions": 1}, [{"filename": "build.gradle.kts", "status": "modified", "patch": module_patch}], "o/r")
+assert module_facts == [(4, "module metadata changed (+1 / −1)")], module_facts
 
 patch = ("@@ -1 +1,9 @@\n"
          "+    public void anExtraordinarilyLongMethodName(int x) {\n"
