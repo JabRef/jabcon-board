@@ -101,16 +101,18 @@ section h2 .count { float: right; color: var(--fg); }
 #totals .add { color: var(--ok); } #totals .del { color: #f85149; }
 #components { display: grid; grid-template-columns: fit-content(5rem) minmax(1.5rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
-#leaderboard { display: flex; gap: .8rem; margin-top: auto; padding-top: .3rem; align-items: flex-end; }
+#leaderboard { display: flex; gap: .8rem; margin-top: auto; align-items: flex-end; }
 .leader { position: relative; cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
-.leader img { width: 2.6rem; height: 2.6rem; border-radius: 50%; border: .25rem solid var(--c); display: block; margin: 0 auto .2rem; }
+.leader img { width: 2.6rem; height: 2.6rem; border-radius: 50%; border: .25rem solid var(--c); display: block; margin: 0 auto .1rem; }
 .leader .pts { font-size: 1rem; font-weight: bold; font-variant-numeric: tabular-nums; }
 /* [impl->req~leaderboard-slot-machine~4] a spinning reel is blurred and amber, one still holding the old total is gray */
 .leader .pts.rolling { color: var(--warn); filter: blur(.04rem); }
 .leader .pts.pending { color: var(--muted); }
-/* [impl->req~bonus-points~13] the +100 awards sit under the login, small enough not to shove the leaderboard around */
-.leader .bonuses { display: flex; flex-wrap: wrap; justify-content: center; gap: .05rem .1rem; max-width: 5.5rem;
-  margin: 0 auto; font-size: .7rem; line-height: 1.2; cursor: help; }
+/* [impl->req~bonus-points~13] the +100 awards sit under the login in a box of a fixed two-row height, so a
+   contributor with eight awards and one with none still line up - the row reads as one line, not a staircase */
+.leader .bonuses { display: flex; flex-wrap: wrap; justify-content: center; align-content: flex-start;
+  gap: .05rem .1rem; max-width: 5.5rem; height: 1.75rem; overflow: hidden; margin: 0 auto; font-size: .75rem;
+  line-height: 1.2; cursor: help; }
 #detail .bonus { font-size: .8rem; color: var(--ok); }
 a.bonus { text-decoration: none; }
 .delta { position: absolute; top: -.2rem; left: 50%; transform: translateX(-50%); font-size: .85rem; font-weight: bold;

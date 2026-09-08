@@ -365,10 +365,11 @@ is skipped with a warning, not a failed run.
 Needs: impl
 
 ### Nerd corner
-`req~nerd-corner~2`
+`req~nerd-corner~3`
 
 The stats show the top refactorings detected in merged PRs (records, sealed types, pattern matching, ...).
-Together with the records below they take turns, five lines at a time, so everything is readable from the wall.
+Together with the records below they take turns, four lines at a time, so everything is readable from the wall and
+nothing is cut off by the leaderboard below.
 
 Needs: impl
 
