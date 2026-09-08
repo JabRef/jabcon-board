@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Self-check for the nerd corner records: python3 scripts/test_records.py"""
 import collect
-from collect import get_all, module_changes, refactorings, superlatives, records
+from collect import declarations, get_all, module_changes, refactorings, superlatives, records
 
 module_patch = "@@ -1,2 +1,3 @@\n+    module(\"example\", \"example.module\")\n-    module(\"old\", \"old.module\")\n"
 module_facts = refactorings({"additions": 1, "deletions": 1}, [{"filename": "build.gradle.kts", "status": "modified", "patch": module_patch}], "o/r")
@@ -14,17 +14,36 @@ multiline = [
 ]
 assert module_changes(multiline) == (3, 3), module_changes(multiline)
 
+split_files = [{"filename": "build.gradle.kts", "status": "modified", "patch": "@@ -20,3 +20,3 @@\n-    \"old\",\n+    \"new\",\n"}]
+old_source = "module(\n    \"old\",\n    \"example.module\"\n)\n"
+new_source = "module(\n    \"new\",\n    \"example.module\"\n)\n"
+original_source_at = collect.source_at
+collect.source_at = lambda repo, path, ref: old_source if ref == "base" else new_source
+try:
+    assert module_changes(split_files, "o/r", "base", "head") == (1, 1)
+finally:
+    collect.source_at = original_source_at
+
+assert declarations('''
+// module("fake")
+val sample = "module(\\"fake\\")"
+val text = """
+module("fake")
+"""
+''', "build.gradle.kts") == []
+assert declarations('module("example", "example.module")', "build.gradle.kts")
+
 calls = []
 def fake_get(path, params=None, token=None):
     calls.append(params["page"])
-    return ([{"page": params["page"]}] if params["page"] < 3 else []), {}
+    return ([{"page": params["page"]}] if params["page"] <= 100 else []), {}
 original_get = collect.get
 collect.get = fake_get
 try:
-    assert get_all("/items", {"per_page": 1}) == [{"page": 1}, {"page": 2}]
+    assert len(get_all("/items", {"per_page": 1})) == 100
 finally:
     collect.get = original_get
-assert calls == [1, 2, 3], calls
+assert calls[-1] == 101, calls[-3:]
 
 patch = ("@@ -1 +1,9 @@\n"
          "+    public void anExtraordinarilyLongMethodName(int x) {\n"
