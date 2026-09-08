@@ -45,7 +45,8 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 `record_bonus_exclude` (logins that keep their nerd corner records but pass the +100 to the runner-up),
 `honorary_awards` (`login`, `title`, `text`, `emoji`, optional `url`: +100 for what the API cannot see).
 `private_repos` lists private repos whose issue activity is counted for the leaderboard and shown as counts only (no titles) under the milestones. Milestones and `private_repos` need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.
-Bot activity is excluded.
+Bot activity is excluded, and so is automation running under a human account: `exclude_titles` (item titles, e.g.
+`New Crowdin updates`) and `exclude_branches` (e.g. `l10n_main`) drop those items, their events and their points.
 
 "Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...), plus one record holder per funny category (longest identifier, longest and shortest method, most code written or deleted, most tangled diff, wordiest changelog entry). Each record carries an icon and pays its author +100 bonus points.
 
@@ -98,6 +99,7 @@ AI-written comments count for none of them.
 | 🔍 | Reviewer's reviewer | largest share of own activity spent reviewing (from 10 reviews on) |
 | 🤐 | Actions over words | most reviews per comment written (from 10 reviews on) |
 | ✅ | Rubber stamp | most approvals given |
+| 💥 | Force of nature | most force pushes (the pushed branch's previous head is no ancestor of the new one) |
 | 🧹 | Janitor | most branches deleted |
 | 🤝 | Widest reach | reviewed the PRs of the most different authors |
 | ❓ | Socratic | most questions asked |
@@ -110,9 +112,15 @@ AI-written comments count for none of them.
 | 🚚 | Freight train | most commits per push (from 5 pushes on) |
 | 🏖️ | Weekend warrior | largest share of own activity on a weekend (from 5 events on) |
 | 🐛 | Reporter | most issues opened |
+| 🪶 | Featherweight | most merged PRs of at most 50 changed lines |
+| ⚖️ | Middleweight | most merged PRs between 50 and 500 changed lines |
+| 🐘 | Heavyweight | most merged PRs above 500 changed lines |
+| 🗣️ | Sounding board | largest share of own activity spent commenting (from 5 events on) |
 | 🔭 | Big picture | largest share of own activity spent on issues rather than code (from 5 events on) |
 | 🚧 | Hard to please | largest share of own reviews that asked for changes (from 3 reviews on) |
 | ✋ | Handmade | largest share of merged PRs written without an AI assistant (from 3 merged PRs on) |
+| 🏎️ | Speedrun | shortest time from opening a PR to its merge |
+| 🧟 | Necromancer | activity on the oldest item somebody else opened |
 | 🐣 | Newcomer | most recent first issue or PR in the org |
 | 📏🐍🤏✍️🔥🍝📜 | Nerd corner records | longest identifier, longest and shortest method, most code written, most deleted, most tangled diff, wordiest changelog entry |
 | 🍸 … | `honorary_awards` | whatever the jury decides |

@@ -79,5 +79,11 @@
   ],
   "record_bonus_exclude": [
     "koppor"
+  ],
+  "exclude_titles": [
+    "New Crowdin updates"
+  ],
+  "exclude_branches": [
+    "l10n_main"
   ]
 }
