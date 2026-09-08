@@ -119,6 +119,8 @@ a.bonus { text-decoration: none; }
   color: var(--ok); text-shadow: 0 0 .3rem #000, 0 0 .6rem #000; animation: delta-in 1.2s ease-out both; }
 @keyframes delta-in { from { opacity: 0; } to { opacity: 1; } }
 .pop { position: fixed; z-index: 50; pointer-events: none; font-size: 1.4rem; font-weight: bold; color: var(--ok); text-shadow: 0 0 .4rem #000, 0 0 .8rem #000; }
+/* [impl->req~gain-source~1] the source rides along under the number, small enough not to fight it */
+.pop i { display: block; font-style: normal; font-weight: normal; font-size: .45em; text-align: center; }
 .leader:first-child img { width: 3.4rem; height: 3.4rem; }
 #activity { position: relative; }
 #ticker { list-style: none; margin: 0; padding: 0; overflow: hidden; flex: 1; font-size: .95rem; }
