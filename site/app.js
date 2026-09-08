@@ -68,11 +68,11 @@ function updateMore(box) {
 // [impl->req~leaderboard-breakdown~1]
 function renderStats() {
   const s = data.stats;
-  $('#totals').innerHTML = `<span>${s.changed_files} files</span><span class="add">+${s.additions}</span><span class="del">−${s.deletions}</span>`;
+  $('#totals').innerHTML = `<span>${fmt(s.changed_files)} files</span><span class="add">+${fmt(s.additions)}</span><span class="del">−${fmt(s.deletions)}</span>`;
   const comps = Object.entries(s.components).sort((a, b) => b[1] - a[1]).slice(0, 5);
   const max = comps[0]?.[1] || 1;
   $('#components').innerHTML = comps.map(([name, n]) =>
-    `<span>${esc(name)}</span><div class="bar" style="width:${(100 * n / max).toFixed(1)}%"></div><span>${n}</span>`).join('');
+    `<span>${esc(name)}</span><div class="bar" style="width:${(100 * n / max).toFixed(1)}%"></div><span>${fmt(n)}</span>`).join('');
   const f = data.focus;
   const focusWhy = f && `Issues labeled "${f.label}" across the org — the JabCon focus.\n${f.closed} of ${f.closed + f.open} closed, ${f.open} to go.\nThe green bar is the closed share.`;
   $('#milestones').innerHTML = (f ? `<div class="milestone focus" title="${esc(focusWhy)}"><div class="label">${link(f.url, `${esc(f.label)}`)}
