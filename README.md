@@ -98,6 +98,7 @@ AI-written comments count for none of them.
 | 🔍 | Reviewer's reviewer | largest share of own activity spent reviewing (from 10 reviews on) |
 | 🤐 | Actions over words | most reviews per comment written (from 10 reviews on) |
 | ✅ | Rubber stamp | most approvals given |
+| 💥 | Force of nature | most force pushes (the pushed branch's previous head is no ancestor of the new one) |
 | 🧹 | Janitor | most branches deleted |
 | 🤝 | Widest reach | reviewed the PRs of the most different authors |
 | ❓ | Socratic | most questions asked |
