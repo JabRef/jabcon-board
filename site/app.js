@@ -178,14 +178,34 @@ function slotMachine() {
   }, 60);
 }
 
+// Where the gain came from, in three words under the "+n". A data run does not only bring new events: it also
+// re-scores earlier work (a focus label added to an item multiplies its events by ten, a resolved diff complexity
+// changes what a review was worth), credits a merge to the PR's author, or counts private-repo work that no ticker
+// row may name. Those gains have nothing recent in "Latest activity" to point at, which is exactly what looks wrong.
+// [impl->req~gain-source~1]
+function gainSource(login) {
+  const was = (previous?.leaderboard || []).find((l) => l.login === login), now = data.leaderboard.find((l) => l.login === login);
+  if (!was || !now) return '';
+  const held = new Set((was.bonuses || []).map((b) => b.title));
+  const sticker = (now.bonuses || []).find((b) => !held.has(b.title));
+  if (sticker) return `${sticker.emoji} ${sticker.title} sticker`;
+  if (now.merged > was.merged) return 'merged PR';
+  if (now.reviews > was.reviews) return 'review';
+  const priv = (d) => Object.values(d.private_activity || {}).reduce((n, c) => n + (c.by?.[login] || 0), 0);
+  if (priv(data) > priv(previous)) return 'private repo work';
+  if (now.other > was.other) return 'comment, push or issue';
+  return 'earlier work re-scored';
+}
+
 // The gain jumps out of the reel, hangs there long enough to be read, then flies off the top of the screen and
 // settles as a badge over the avatar. Fixed and on <body>, so no ancestor of the fixed video is transformed.
 // [impl->req~leaderboard-slot-machine~4]
 function popPoints(el, gain) {
   if (gain <= 0) return;
+  const why = gainSource(el.parentElement.dataset.login);
   const box = el.getBoundingClientRect(), pop = document.createElement('div');
   pop.className = 'pop';
-  pop.textContent = `+${fmt(gain)}`;
+  pop.innerHTML = `+${fmt(gain)}${why ? `<i>${esc(why)}</i>` : ''}`;
   pop.style.left = `${box.left + box.width / 2}px`;
   pop.style.top = `${box.top}px`;
   document.body.appendChild(pop);
@@ -198,6 +218,7 @@ function popPoints(el, gain) {
     const badge = document.createElement('div'); // survives until the next render, so the last gain stays readable
     badge.className = 'delta';
     badge.textContent = `+${fmt(gain)}`;
+    badge.title = why;
     el.parentElement.appendChild(badge);
   };
 }
@@ -227,6 +248,9 @@ function renderAiModels() {
 // [impl->req~no-self-review-points~1]
 // [impl->req~no-fork-sync-points~1]
 const cardOf = (e) => data.cards.find((c) => c.repo === e.repo && c.number === e.number);
+// the feed is inconsistent about the merged flag: some merges only say so in the action, and dropping those cost the
+// author the three points collect.py credits them from the card
+const isMerge = (e) => e.type === 'PullRequestEvent' && (e.merged || e.action === 'merged');
 const reviewPoints = (cc) => (cc == null ? 2 : cc <= 2 ? 1 : cc >= 20 ? 3 : 2);
 const boostText = () => Object.entries(data.config.repo_factors || {}).filter(([, f]) => f !== 1).map(([r, f]) => `${r} × ${f}`).join(', ') || 'boosted repos';
 const NOSCORE = { CreateEvent: 'creating a branch or tag', DeleteEvent: 'deleting a branch', WatchEvent: 'starring a repo', ForkEvent: 'forking a repo', MemberEvent: 'a membership change', PullRequestReviewCommentEvent: 'a review comment (its review scored)' };
@@ -246,9 +270,9 @@ function eventBase(e) {
   // [impl->req~mailing-lists~1]
   if (e.type === 'MailEvent') return [1, 'mailing list post'];
   if (e.type === 'IssuesEvent') return ['labeled', 'unlabeled'].includes(e.action) ? [0, 'labeling (a workflow looks like triage)'] : [1, `issue ${e.action}`];
-  if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !e.merged))) return [1, `PR ${e.action}`];
-  if (e.type === 'PullRequestEvent' && e.merged && card?.column === 'done' && card.author === e.actor) return [3, 'merged PR'];
-  if (e.type === 'PullRequestEvent') return [0, e.merged || e.action === 'merged' ? 'a merge scores for the PR author only' : `PR ${e.action}: only opening and closing score`];
+  if (e.type === 'PullRequestEvent' && (e.action === 'opened' || (e.action === 'closed' && !isMerge(e)))) return [1, `PR ${e.action}`];
+  if (isMerge(e) && card?.column === 'done' && card.author === e.actor) return [3, 'merged PR'];
+  if (e.type === 'PullRequestEvent') return [0, isMerge(e) ? 'a merge scores for the PR author only' : `PR ${e.action}: only opening and closing score`];
   return [0, NOSCORE[e.type] || 'this kind of event never scores'];
 }
 // [impl->req~points-tooltip~2]
@@ -351,8 +375,20 @@ function renderNews() {
   strip.style.animationDuration = `${Math.max(20, items.reduce((n, [t]) => n + t.length, 0) / 6)}s`;
 }
 
+// A merge scores 3 x the factor for the PR's author, but merging is the merger's event, not the author's: without a
+// row of its own the ticker cannot show what the author's total (and the "merged" toast) just got.
+// [impl->req~merge-credit-rows~1]
+function mergeCredits() {
+  const own = new Set(data.events.filter(isMerge).map((e) => `${e.actor}@${e.repo}#${e.number}`));
+  const participants = new Set(data.config.participants);
+  return data.cards.filter((c) => c.type === 'pr' && c.merged_at && participants.has(c.author) && !own.has(`${c.author}@${c.repo}#${c.number}`))
+    .map((c) => ({ type: 'PullRequestEvent', action: 'closed', merged: true, actor: c.author, repo: c.repo, number: c.number,
+      created_at: c.merged_at, summary: `got #${c.number} merged`, url: c.url, excerpt: '' }));
+}
+
 function renderTicker() {
-  const recent = data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent').slice(0, 25);
+  const recent = [...data.events.filter((e) => e.type !== 'PullRequestReviewCommentEvent'), ...mergeCredits()]
+    .sort((a, b) => b.created_at.localeCompare(a.created_at)).slice(0, 25);
   const jabcon = recent.filter((e) => cardOf(e)?.focus), rest = recent.filter((e) => !cardOf(e)?.focus);
   $('#ticker').innerHTML = jabcon.map(eventRow).join('') + (jabcon.length ? '<li class="divider">other</li>' : '') + rest.map(eventRow).join('');
 }
