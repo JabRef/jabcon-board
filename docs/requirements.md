@@ -363,6 +363,16 @@ enlarged video).
 
 Needs: impl
 
+### Sticker hand-overs and point gains are announced
+`req~sticker-moves~1`
+
+When a data run moves a sticker to another contributor (or hands out a new one), the toast announces it after the
+reels have settled, and the newsticker repeats it. The newsticker also lists what the latest run changed on the
+leaderboard: every contributor's gain (or loss) in points, largest first. Both stay in the strip until the next run
+that changes something.
+
+Needs: impl
+
 ### Stickers remember when they were earned
 `req~sticker-since~1`
 
