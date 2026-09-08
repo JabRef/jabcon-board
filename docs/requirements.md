@@ -382,13 +382,24 @@ and says "just earned" for those under three hours old and "holds" for the rest.
 Needs: impl
 
 ### Newsticker
-`req~newsticker~2`
+`req~newsticker~3`
 
 A headline strip scrolls along the bottom edge of the wall, so there is something to read in quiet hours. It is
 phrased from the board's own data in the gource commentator's voice: the tally so far, the latest merged PRs (with
-their reviewers), recently closed issues, what is still left (backlog, milestones, focus label), every sticker earned
-and by whom, and who leads. Headlines link to the item, sticker or contributor. The strip stays still with `?still=1`
-or reduced-motion.
+their reviewers), recently closed issues, what is still left (backlog, milestones, focus label), who leads, the race
+(see the catch-up requirement), and every sticker earned and by whom. Stickers are woven in one at a time between
+the other headlines, so a screen width never shows stickers only. Headlines link to the item, sticker or
+contributor. The strip stays still with `?still=1` or reduced-motion.
+
+Needs: impl
+
+### The race is commented
+`req~catch-up~1`
+
+From the recent events the newsticker tells who scored most in the last six hours (top three), who is catching up
+on the place above (scored more than them in that window and the gap is at most five times that gain: points
+behind and points scored), and who is back after a pause of more than sixteen hours, so a night's sleep does not
+count.
 
 Needs: impl
 
