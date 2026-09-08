@@ -115,6 +115,7 @@ AI-written comments count for none of them.
 | 🪶 | Featherweight | most merged PRs of at most 50 changed lines |
 | ⚖️ | Middleweight | most merged PRs between 50 and 500 changed lines |
 | 🐘 | Heavyweight | most merged PRs above 500 changed lines |
+| 🗣️ | Sounding board | largest share of own activity spent commenting (from 5 events on) |
 | 🔭 | Big picture | largest share of own activity spent on issues rather than code (from 5 events on) |
 | 🚧 | Hard to please | largest share of own reviews that asked for changes (from 3 reviews on) |
 | ✋ | Handmade | largest share of merged PRs written without an AI assistant (from 3 merged PRs on) |
