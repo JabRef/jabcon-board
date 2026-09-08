@@ -282,6 +282,7 @@ function eventRow(e) {
 // [impl->req~newsticker~2] one strip of headlines along the bottom, phrased from the board's data like the gource
 // commentary: the tally, the latest merges, what is still left, and who earned which sticker. Seeded by PR number so
 // a refresh says the same things, and only re-rendered on a change, so the scroll never jumps back.
+const FRESH_MS = 3 * 3600000; // a sticker counts as just earned for this long
 function newsItems() {
   const merged = data.cards.filter((c) => c.merged_at).sort((a, b) => b.merged_at.localeCompare(a.merged_at));
   const closed = data.cards.filter((c) => c.type === 'issue' && c.column === 'done');
@@ -303,7 +304,12 @@ function newsItems() {
   if (backlog.length) items.push([`Still waiting: ${backlog.length} items in the backlog — ${backlog.slice(0, 3).map((c) => `#${c.number} ${c.title}`).join(', ')}${backlog.length > 3 ? ', …' : ''}`]);
   for (const m of data.milestones) items.push([`${m.title}: ${m.open ? `${m.open} to go, ` : 'done! '}${m.closed - m.baseline} closed during JabCon`, m.url]);
   if (data.focus) items.push([`${data.focus.label}: ${data.focus.closed} done, ${data.focus.open} open`, data.focus.url]);
-  for (const l of data.leaderboard) for (const b of l.bonuses || []) items.push([`${b.emoji} ${l.login} earns the ${b.title} sticker: ${b.text}`, b.url || `#user/${encodeURIComponent(l.login)}`]);
+  // [impl->req~sticker-since~1] freshly earned stickers come first and say so
+  const stickers = data.leaderboard.flatMap((l) => (l.bonuses || []).map((b) => [l, b])).sort(([, a], [, b]) => (b.since || '').localeCompare(a.since || ''));
+  for (const [l, b] of stickers) {
+    const fresh = b.since && Date.now() - new Date(b.since) < FRESH_MS;
+    items.push([`${b.emoji} ${l.login} ${fresh ? 'just earned' : 'holds'} the ${b.title} sticker: ${b.text}`, b.url || `#user/${encodeURIComponent(l.login)}`]);
+  }
   const [lead, second] = data.leaderboard;
   if (lead) items.push([`${lead.login} leads the table with ${fmt(lead.points)} points${second ? `, ${second.login} is ${fmt(lead.points - second.points)} behind` : ''}`, `#user/${encodeURIComponent(lead.login)}`]);
   return items;
