@@ -215,3 +215,9 @@ html.still body, html.still body::before, html.still section { animation: none; 
   #footer { position: static; justify-content: flex-end; padding: 0 .8rem .8rem; }
   #detail { padding: .8rem; }
 }
+
+/* [impl->req~component-detail~1] */
+#components [data-comp] { cursor: pointer; }
+#components [data-comp]:hover { filter: brightness(1.4); }
+#detail .add { flex: none; color: var(--ok); font-variant-numeric: tabular-nums; }
+#detail .del { flex: none; color: #f85149; font-variant-numeric: tabular-nums; }
