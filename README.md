@@ -105,6 +105,10 @@ AI-written comments count for none of them.
 | 🕰️ | Always on | active in the most hours of the day |
 | 🧲 | Magnet | own PRs pulled in the most reviews |
 | ⚡ | First responder | first to review the most PRs |
+| 🚀 | All killer, no filler | largest share of own activity that is landing a PR (from 5 events on) |
+| 📝 | Essayist | longest comments on average (from 5 comments on) |
+| 🚚 | Freight train | most commits per push (from 5 pushes on) |
+| 🏖️ | Weekend warrior | largest share of own activity on a weekend (from 5 events on) |
 | 🐣 | Newcomer | most recent first issue or PR in the org |
 | 📏🐍🤏✍️🔥🍝📜 | Nerd corner records | longest identifier, longest and shortest method, most code written, most deleted, most tangled diff, wordiest changelog entry |
 | 🍸 … | `honorary_awards` | whatever the jury decides |
