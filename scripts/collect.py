@@ -224,7 +224,7 @@ def collect_events(previous):
             try:
                 cmp, _ = get(f"/repos/{e['repo']}/compare/{e['before']}...{e['head']}")
                 e["commits"] = cmp["total_commits"]
-                # [impl->req~bonus-points~18] the old head is no ancestor of the new one: history was rewritten
+                # [impl->req~bonus-points~19] the old head is no ancestor of the new one: history was rewritten
                 e["forced"] = cmp["status"] in ("diverged", "behind")
                 e["sync"] = (not e["repo"].startswith(CONFIG["org"] + "/")
                              and not any((c.get("author") or {}).get("login") == e["actor"] for c in cmp["commits"]))
@@ -587,7 +587,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~18]
+# [impl->req~bonus-points~19]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
@@ -646,11 +646,12 @@ BONUS_KINDS = [
     ("Middleweight", "medium", "{} merged PRs between 50 and 500 changed lines", "\u2696\ufe0f", None),
     ("Heavyweight", "large", "{} merged PRs above 500 changed lines", "\U0001f418", None),
     ("Force of nature", "forced", "{} force pushes", "\U0001f4a5", None),
+    ("Sounding board", "talky", "{}% of everything they did was talking it through", "\U0001f5e3\ufe0f", None),
     ("Exotic explorer", "exotic", "{} strange repositories nobody else touched", "\U0001f6f8", None),
 ]
 
 
-# [impl->req~bonus-points~18]
+# [impl->req~bonus-points~19]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -662,7 +663,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~18]
+# [impl->req~bonus-points~19]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -754,6 +755,7 @@ def bonuses(cards, events, joined=None):
         if len(mine) >= EVENT_FLOOR:
             t["shipshare"] = round(100 * t["merged"] / len(mine))
             t["issuey"] = round(100 * on_issues[p] / len(mine))
+            t["talky"] = round(100 * t["comments"] / len(mine))
             weekend = sum(datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).weekday() >= 5 for e in mine)
             t["weekend"] = round(100 * weekend / len(mine))
         said = [e.get("excerpt") or "" for e in mine if e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent")]
