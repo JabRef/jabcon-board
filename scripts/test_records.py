@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Self-check for the nerd corner records: python3 scripts/test_records.py"""
 import collect
-from collect import declarations, get_all, module_changes, refactorings, superlatives, records
+from collect import declarations, get_all, module_changes, pick_nerdy, refactorings, superlatives, records
 
 module_patch = "@@ -1,2 +1,3 @@\n+    module(\"example\", \"example.module\")\n-    module(\"old\", \"old.module\")\n"
 module_facts = refactorings({"additions": 1, "deletions": 1}, [{"filename": "build.gradle.kts", "status": "modified", "patch": module_patch}], "o/r")
@@ -84,3 +84,10 @@ assert by_title["Shortest method"]["text"] == "two(), 2 lines", by_title
 assert "Wordiest changelog entry" in by_title
 assert records([{"stats": {}}]) == []
 print("ok")
+
+# [impl->req~nerd-variety~1] the corner never repeats a fact, and no one contributor fills it
+facts = [{"weight": w, "text": t, "author": a} for w, t, a in
+         [(9, "deleted A", "x"), (8, "deleted B", "x"), (7, "deleted C", "x"), (6, "virtual threads", "y"),
+          (5, "virtual threads", "z"), (4, "records", "z")]]
+picked = pick_nerdy(facts)
+assert [r["text"] for r in picked] == ["deleted A", "deleted B", "virtual threads", "records"], picked

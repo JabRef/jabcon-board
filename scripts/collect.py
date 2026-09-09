@@ -661,6 +661,23 @@ def pr_stats(c, cached):
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
 
+# [impl->req~nerd-variety~1]
+NERD_SLOTS, NERD_PER_AUTHOR = 5, 2
+
+
+def pick_nerdy(facts):
+    """The facts that make the wall: heaviest first, but the same text never twice and at most NERD_PER_AUTHOR
+    per contributor, so one busy refactorer does not fill the corner alone."""
+    out, per_author, seen = [], {}, set()
+    for r in sorted(facts, key=lambda r: -r["weight"]):
+        if r["text"] in seen or per_author.get(r["author"], 0) >= NERD_PER_AUTHOR:
+            continue
+        seen.add(r["text"])
+        per_author[r["author"]] = per_author.get(r["author"], 0) + 1
+        out.append(r)
+    return out[:NERD_SLOTS]
+
+
 def configured_nerd_prs():
     """Refactorings from explicitly linked upstream PRs that are not participant cards, such as bot PRs."""
     out = []
@@ -1119,7 +1136,7 @@ def main():
              for c in cards for w, t in c.get("stats", {}).get("refactorings", [])]
     known = {(r["repo"], r["number"]) for r in nerdy}
     nerdy += [r for r in configured_nerd_prs() if (r["repo"], r["number"]) not in known]
-    nerdy = sorted(nerdy, key=lambda r: -r["weight"])[:5]
+    nerdy = pick_nerdy(nerdy)
     ai_used = {}
     for c in cards:
         for m in c.get("stats", {}).get("ai", []):

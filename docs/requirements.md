@@ -555,6 +555,15 @@ complexity) and wordiest changelog entry. Each line carries the category's icon 
 
 Needs: impl
 
+### Nerd corner variety
+`req~nerd-variety~1`
+
+No fact appears twice, one contributor holds at most two of the detected facts, and a page mixes categories and
+authors: consecutive lines avoid repeating a record category, a fact's leading word ("deleted ...") or the same
+contributor's avatar while other items are still waiting.
+
+Needs: impl
+
 ### AI models
 `req~ai-models~1`
 
