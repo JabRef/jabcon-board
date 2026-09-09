@@ -133,6 +133,8 @@ def card(item, column):
         "state_reason": item.get("state_reason"),  # issues: completed | not_planned | duplicate | reopened
         "merged_at": (item.get("pull_request") or {}).get("merged_at"),
         "column": column,
+        # [impl->req~merge-queue-dwarf~4] which milestone the item belongs to, so a queued PR can be marked on its row
+        "milestone": f"{repo_of(item)}/{(item.get('milestone') or {}).get('number')}" if item.get("milestone") else None,
         # [impl->req~column-order~2] JabCon item: focus label or one of the configured milestones
         "focus": (bool(FOCUS) and FOCUS in [l["name"] for l in item.get("labels", [])])
                  or f"{repo_of(item)}/{(item.get('milestone') or {}).get('number')}" in MILESTONE_REFS,
@@ -1095,16 +1097,17 @@ def pr_goal(previous=None):
     mq = merge_queue(goal["repo"])
     if mq is None:  # the call failed: keep the dwarf swinging on the last count rather than letting him disappear
         old = (previous or {}).get("pr_goal") or {}
-        mq = {k: old[k] for k in ("queue", "queue_url") if k in old}
+        mq = {k: old[k] for k in ("queue", "queue_url", "queue_prs") if k in old}
     return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls", **mq}
 
 
-# [impl->req~merge-queue-dwarf~3]
+# [impl->req~merge-queue-dwarf~4]
 def merge_queue(repo):
     """How many PRs sit in the repository's merge queue, or None when the call failed - a repository without a
     queue answers 0, so the caller can tell "nothing queued" from "could not ask". Only GraphQL knows the queue."""
     owner, name = repo.split("/")
-    query = '{repository(owner:"%s",name:"%s"){mergeQueue{url entries{totalCount}}}}' % (owner, name)
+    query = ('{repository(owner:"%s",name:"%s"){mergeQueue{url entries(first:100)'
+             '{totalCount nodes{pullRequest{number}}}}}}' % (owner, name))
     try:
         req = urllib.request.Request(API + "/graphql", data=json.dumps({"query": query}).encode(),
                                      headers={"Content-Type": "application/json", "Authorization": "Bearer " + (TOKEN or "")})
@@ -1117,7 +1120,10 @@ def merge_queue(repo):
         print(f"::warning::merge queue of {repo} unavailable ({payload.get('errors')})", file=sys.stderr)
         return None
     mq = found.get("mergeQueue")
-    return {"queue": mq["entries"]["totalCount"], "queue_url": mq["url"]} if mq else {"queue": 0}
+    if not mq:
+        return {"queue": 0, "queue_prs": []}
+    return {"queue": mq["entries"]["totalCount"], "queue_url": mq["url"],
+            "queue_prs": [e["pullRequest"]["number"] for e in mq["entries"]["nodes"] if e.get("pullRequest")]}
 
 
 # [impl->req~trend-arrows~6]
