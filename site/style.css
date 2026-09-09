@@ -153,6 +153,13 @@ section h2 .count { float: right; color: var(--fg); }
 #wanderer svg { display: block; animation: bob .45s steps(2) infinite; } /* two frames of a walk: he reads as alive
    even while he is only crossing the board at his own slow pace */
 @keyframes bob { 50% { transform: translateY(-3px); } }
+/* [impl->req~release-party~1] the chorus line: dwarfs spread along the bottom edge for the length of the party,
+   over everything and in the way of nothing. The stagger comes from the script, one delay per dwarf */
+#party { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; display: flex; justify-content: space-around;
+  pointer-events: none; }
+#party svg { display: block; }
+#party span { animation: dance .5s ease-in-out infinite; }
+@keyframes dance { 0%, 100% { transform: translateY(0) rotate(-12deg); } 50% { transform: translateY(-18px) rotate(12deg); } }
 @keyframes hammer {
   0%, 40% { transform: rotate(-62deg); }
   52% { transform: rotate(8deg); }
@@ -212,7 +219,7 @@ a.bonus { text-decoration: none; }
 #gource-missing { margin-top: .4rem; padding: .6rem; border: 1px dashed var(--border); border-radius: .4rem; color: var(--muted); font-size: .8rem; text-align: center; }
 #gource-missing a { color: var(--muted); }
 #gource[src] ~ #gource-missing { display: none; } /* general sibling: the next button sits between the two */
-#toast { position: fixed; left: 50%; bottom: 2rem; transform: translateX(-50%); background: var(--ok); color: #000; font-size: 2rem; padding: .6rem 1.5rem; border-radius: 1rem; opacity: 0; transition: opacity .5s; pointer-events: none; max-width: 90vw; text-align: center; }
+#toast { position: fixed; z-index: 7; left: 50%; bottom: 2rem; transform: translateX(-50%); background: var(--ok); color: #000; font-size: 2rem; padding: .6rem 1.5rem; border-radius: 1rem; opacity: 0; transition: opacity .5s; pointer-events: none; max-width: 90vw; text-align: center; }
 #toast.show { opacity: 1; }
 /* hover enlarges the video; it must cover the small video completely (bottom/right edge) or hover flickers. The free strip on the left shrinks it again. */
 /* [impl->req~gource-hover~1] */

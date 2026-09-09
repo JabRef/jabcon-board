@@ -18,6 +18,9 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 - Posts by participants to the `mailing_lists` are read from the OpenJDK HyperKitty archive and join the ticker.
   Senders are matched by the public name and e-mail of their GitHub profile; mail from an `@openjdk.org` address is
   the Skara bot mirroring GitHub pull request activity and is skipped, so JavaFX reviews are not counted twice.
+- A new release of the `pr_goal` repository (prereleases included) sets off a party: the bell, a minute of
+  confetti and a chorus line of dancing dwarfs, plus a headline on the newsticker. Releases are cut by a bot, so
+  the collector asks the repository rather than the participants' event feeds.
 - `site/` is plain HTML/CSS/JS. It fetches `data.json` every minute, the video every 15 minutes, and reloads itself when a new version of the site was deployed.
 - `.github/workflows/board.yml` runs every 5 minutes (and on push to `main`), copies `site/` and a fresh
   `data.json` to the `gh-pages` branch. Outside the JabCon window it publishes the site but skips data collection.
