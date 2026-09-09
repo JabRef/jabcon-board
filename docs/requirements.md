@@ -125,12 +125,14 @@ then shows as stale, so a deployment is never held back by the API.
 Needs: impl
 
 ### Publishing waits for the running deployment
-`req~publish-pacing~1`
+`req~publish-pacing~2`
 
 A push to `gh-pages` cancels the GitHub Pages deployment of the previous one. When a deployment takes longer than the
 publish interval, no deployment ever completes and the live site freezes while the branch keeps moving, so a push is
 skipped while a deployment younger than 20 minutes is still running; the next run publishes. Only the
-five-minute data publisher waits that way — the hourly video render publishes whatever it just spent half an hour on.
+five-minute data publisher waits that way — the hourly video render publishes whatever it just spent half an hour on,
+and a run built from a commit the branch has not published yet does not wait either: data is five minutes old at
+worst, a held-back build of the site itself is invisible for as long as Pages stays busy.
 
 Needs: impl
 

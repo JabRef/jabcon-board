@@ -10,11 +10,13 @@ case "$1" in
   prepare)
     if git fetch -q origin gh-pages; then git worktree add -q out origin/gh-pages; else git worktree add -q --orphan -b gh-pages out; fi ;;
   push)
-    # [impl->req~publish-pacing~1] a push cancels the Pages deployment of the previous one; when deployments run longer
+    # [impl->req~publish-pacing~2] a push cancels the Pages deployment of the previous one; when deployments run longer
     # than the publish interval, every one of them is cancelled and the live site freezes while gh-pages keeps moving.
     # Only the five-minute data publisher waits ("push pace"); the hourly video render must not throw its work away.
-    # An older-than-20-minutes deployment counts as stuck and is overridden.
-    if [ "$2" = pace ]; then
+    # An older-than-20-minutes deployment counts as stuck and is overridden. Waiting costs a data run its five minutes,
+    # which is nothing - but it would hold back a new build of the site itself for as long as Pages stays busy, so a
+    # run carrying a commit the branch has not seen publishes right away.
+    if [ "$2" = pace ] && [ "$(cat out/version.txt 2>/dev/null)" = "$(git show origin/gh-pages:version.txt 2>/dev/null || true)" ]; then
       busy=$(gh run list --workflow pages-build-deployment --branch gh-pages --limit 20 --json status,createdAt \
         -q "[.[] | select(.status != \"completed\" and .createdAt > \"$(date -u -d '20 minutes ago' +%FT%TZ)\")] | length" 2>/dev/null || echo 0)
       if [ "${busy:-0}" -gt 0 ]; then echo "Pages is still deploying the previous push; publishing on the next run"; exit 0; fi
