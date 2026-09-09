@@ -433,6 +433,17 @@ def ai_models(messages):
     return sorted(found)
 
 
+def constructs(files):
+    """The modern-Java constructs a PR's added Java lines show: {label: weight}, one hit per detector."""
+    added = "\n".join(l for f in files if f["filename"].endswith(".java") for l in f.get("patch", "").splitlines() if l.startswith("+"))
+    hits = {}
+    for w, rx, label in DETECTORS:
+        for m in rx.finditer(added):
+            hits[label.format(*m.groups("")) if "{" in label else label] = w
+            break
+    return hits
+
+
 def refactorings(pr, files, repo):
     """Nerdy facts about a merged PR, mined from its patches. Returns [(weight, text)]."""
     # [impl->req~nerd-corner~6]
@@ -451,14 +462,7 @@ def refactorings(pr, files, repo):
         found.append((4, f"module metadata changed (+{module_added} / −{module_removed})"))
     elif any(f["filename"].endswith("module-info.java") for f in files):
         found.append((4, "module boundary changed"))
-    added = "\n".join(l for f in files if f["filename"].endswith(".java") for l in f.get("patch", "").splitlines() if l.startswith("+"))
-    hits = {}
-    for w, rx, label in DETECTORS:
-        for m in rx.finditer(added):
-            text = label.format(*m.groups("")) if "{" in label else label
-            hits[text] = w
-            break
-    found += [(w, t) for t, w in hits.items()]
+    found += [(w, t) for t, w in constructs(files).items()]
     return sorted(found, reverse=True)[:4]
 
 
@@ -565,13 +569,13 @@ def complexity(files):
     return 1 + sum(len(BRANCH.findall(l)) for l in added)
 
 
-# [impl->req~nerd-records~2]
+# [impl->req~nerd-records~3]
 IDENT = re.compile(r"\b[A-Za-z_$][A-Za-z0-9_$]{15,}\b")
 METHOD = re.compile(r"^\+(\s*)(?:(?:public|private|protected|static|final|abstract|synchronized|default)\s+)+[\w.<>\[\],?\s]+?\s(\w+)\s*\([^;]*\)\s*(?:throws [\w., ]+)?\{\s*$")
 
 
 def methods(patch):
-    """(name, lines) of the methods opened in a patch's added lines. ponytail: brace at the signature's own
+    """(name, lines, branch points) of the methods opened in a patch's added lines. ponytail: brace at the signature's own
     indentation ends the method, no parser; one whose closing brace is outside the hunk is skipped."""
     lines = [l for l in patch.splitlines() if l[:1] in "+ "]  # removed lines are not part of the new file
     for i, l in enumerate(lines):
@@ -580,13 +584,13 @@ def methods(patch):
             continue
         for j in range(i + 1, len(lines)):
             if lines[j][1:] == m.group(1) + "}":
-                yield m.group(2), j - i + 1
+                yield m.group(2), j - i + 1, 1 + sum(len(BRANCH.findall(l)) for l in lines[i:j + 1])
                 break
 
 
 def superlatives(files):
-    """Records worth bragging about, mined from a PR's added lines: longest identifier, longest and shortest
-    method, fattest changelog entry."""
+    """Records worth bragging about, mined from a PR's added lines: longest identifier, longest, shortest and
+    most sophisticated method, most modern Java, fattest changelog entry."""
     out = {}
     added = [l[1:] for f in files if f["filename"].endswith(CODE) for l in f.get("patch", "").splitlines() if l.startswith("+")]
     names = [i for l in added for i in IDENT.findall(l)]
@@ -596,6 +600,10 @@ def superlatives(files):
     if found:
         out["longest_method"] = max(found, key=lambda m: m[1])
         out["shortest_method"] = min(found, key=lambda m: m[1])
+        out["sophisticated_method"] = max(found, key=lambda m: m[2])
+    hits = constructs(files)
+    if hits:
+        out["modern"] = [sum(hits.values()), sorted(hits, key=lambda t: -hits[t])]
     entries = [l[1:].strip().lstrip("-*").strip() for f in files if f["filename"].endswith("CHANGELOG.md")
                for l in f.get("patch", "").splitlines() if l.startswith("+") and l[1:].lstrip()[:1] in "-*"]
     if entries:
@@ -616,6 +624,8 @@ RECORD_KINDS = [
     ("Most code written", lambda s: s.get("additions") or None, lambda s: f"+{s['additions']:,} lines", "\u270d\ufe0f"),
     ("Most code deleted", lambda s: s.get("deletions") or None, lambda s: f"\u2212{s['deletions']:,} lines", "\U0001f525"),
     ("Most tangled diff", lambda s: s.get("complexity") or None, lambda s: f"complexity {s['complexity']}", "\U0001f35d"),
+    ("Most sophisticated method", lambda s: (sup(s, "sophisticated_method") or [0, 0, 0])[2] or None, lambda s: f"{sup(s, 'sophisticated_method')[0]}(), complexity {sup(s, 'sophisticated_method')[2]}", "\U0001f9e0"),
+    ("Most modern Java", lambda s: (sup(s, "modern") or [0])[0] or None, lambda s: f"{', '.join(sup(s, 'modern')[1][:3])} ({len(sup(s, 'modern')[1])} constructs)", "\u2615"),
     ("Wordiest changelog entry", lambda s: len(sup(s, "changelog") or "") or None, lambda s: f"{sup(s, 'changelog')[:40]} ({len(sup(s, 'changelog'))} chars)", "\U0001f4dc"),
 ]
 
@@ -639,7 +649,7 @@ def review_points(cc):
     return 2 if cc is None else 1 if cc <= 2 else 3 if cc >= 20 else 2
 
 
-STATS_VERSION = 2
+STATS_VERSION = 3
 
 
 def pr_stats(c, cached):

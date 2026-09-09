@@ -578,11 +578,13 @@ nothing is cut off by the leaderboard below.
 Needs: impl
 
 ### Nerd corner records
-`req~nerd-records~2`
+`req~nerd-records~3`
 
 The nerd corner also lists one record holder per funny category, mined from the merged PRs' diffs: longest
-identifier, longest and shortest method, most code written, most code deleted, most tangled diff (cyclomatic
-complexity) and wordiest changelog entry. Each line carries the category's icon and names the PR and its author.
+identifier, longest, shortest and most sophisticated method (the single added method with the most branch points),
+most modern Java (the PR whose added code shows the weightiest set of modern constructs), most code written, most
+code deleted, most tangled diff (cyclomatic complexity) and wordiest changelog entry. Each line carries the
+category's icon and names the PR and its author.
 
 Needs: impl
 

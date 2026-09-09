@@ -63,14 +63,17 @@ patch = ("@@ -1 +1,9 @@\n"
          "+            System.out.println(x);\n"
          "+        }\n"
          "+    }\n"
+         "+        var names = List.of(\"a\");\n"
          "+    private int two() {\n"
          "+    }\n"
          "-    private int gone() {\n")
 sup = superlatives([{"filename": "src/A.java", "patch": patch},
                     {"filename": "CHANGELOG.md", "patch": "@@ -1 +1,2 @@\n+- We fixed a thing\n+not an entry\n"}])
 assert sup["identifier"] == "anExtraordinarilyLongMethodName", sup
-assert sup["longest_method"] == ("anExtraordinarilyLongMethodName", 5), sup
-assert sup["shortest_method"] == ("two", 2), sup
+assert sup["longest_method"] == ("anExtraordinarilyLongMethodName", 5, 2), sup
+assert sup["shortest_method"] == ("two", 2, 1), sup
+assert sup["sophisticated_method"] == ("anExtraordinarilyLongMethodName", 5, 2), sup
+assert sup["modern"] == [4, ["immutable collection literals", "local var inference"]], sup
 assert sup["changelog"] == "We fixed a thing", sup
 assert superlatives([{"filename": "README.md", "patch": "+short\n"}]) == {}
 
@@ -82,6 +85,8 @@ assert by_title["Most code written"]["number"] == 2
 assert by_title["Most code deleted"]["number"] == 1
 assert by_title["Shortest method"]["text"] == "two(), 2 lines", by_title
 assert "Wordiest changelog entry" in by_title
+assert by_title["Most sophisticated method"]["text"] == "anExtraordinarilyLongMethodName(), complexity 2", by_title
+assert by_title["Most modern Java"]["text"] == "immutable collection literals, local var inference (2 constructs)", by_title
 assert records([{"stats": {}}]) == []
 print("ok")
 
