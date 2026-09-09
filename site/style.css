@@ -116,6 +116,9 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal .bar { position: relative; display: block; height: .9rem; border-radius: .2rem; overflow: hidden;
   background: linear-gradient(90deg, var(--ok), var(--warn) var(--t), #f85149); }
 #prgoal .rest { position: absolute; top: 0; bottom: 0; right: 0; background: var(--border); }
+/* over the goal there is nothing left to fill, so the bar itself raises the alarm */
+#prgoal .bar.alarm { animation: alarm 1s steps(1) infinite; }
+@keyframes alarm { 50% { background: #f85149; box-shadow: 0 0 .6rem #f85149; } }
 #prgoal .tick { position: absolute; top: 0; bottom: 0; width: .15rem; background: var(--bg); transform: translateX(-50%); }
 #prgoal .scale { position: relative; display: block; height: .9rem; font-size: .65rem; color: var(--muted); }
 #prgoal .scale span { position: absolute; }
@@ -205,8 +208,8 @@ body { animation: glow 40s ease-in-out infinite; }
   100% { transform: translate(25%, -15%) scale(.9); }
 }
 @keyframes breathe { 50% { border-color: #3d4654; } }
-@media (prefers-reduced-motion: reduce) { body, body::before, section, #news span { animation: none; } #news span { padding-left: 0; } }
-html.still body, html.still body::before, html.still section, html.still #news span { animation: none; }
+@media (prefers-reduced-motion: reduce) { body, body::before, section, #news span, #prgoal .bar.alarm { animation: none; } #news span { padding-left: 0; } }
+html.still body, html.still body::before, html.still section, html.still #news span, html.still #prgoal .bar.alarm { animation: none; }
 html.still #news span { padding-left: 0; }
 /* [impl->req~contributor-detail~2] */
 #detail[hidden] { display: none; }
