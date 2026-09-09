@@ -1061,7 +1061,7 @@ def pr_goal():
     return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls"}
 
 
-# [impl->req~trend-arrows~2]
+# [impl->req~trend-arrows~3]
 def history(previous, now, data):
     """One sample per run of the numbers the board draws a tendency for, so the page can compare with an hour ago.
     Half a day of five-minute runs is plenty; older samples are dropped."""

@@ -28,7 +28,7 @@ function ago(iso) {
 
 // Tendency of a counted number: a triangle for the way it moved over the last hour (or over as much history as the
 // collector has kept so far), green when that is the good direction. Nothing is drawn without a second sample.
-// [impl->req~trend-arrows~2]
+// [impl->req~trend-arrows~3]
 const TREND_H = 1;
 function trend(key, goodDown, withValue) {
   const h = data.history || [];
@@ -52,7 +52,8 @@ function renderColumn(id, cards) {
   const nFocus = sorted.filter((c) => c.focus).length;
   const box = $(`#${id} .cards`);
   const scrollTop = box.scrollTop;
-  $(`#${id} .count`).innerHTML = `${cards.length}${id === 'done' ? '' : trend(id, id === 'backlog')}`;
+  // a shrinking column is good in both cases: the backlog was picked up, the work in progress landed
+  $(`#${id} .count`).innerHTML = `${cards.length}${id === 'done' ? '' : trend(id, true)}`;
   box.innerHTML = sorted.map((c, i) => (i === nFocus && nFocus && i < sorted.length ? '<div class="divider">other</div>' : '') + (() => {
     const other = !c.repo.startsWith(org);
     const tags = [];
