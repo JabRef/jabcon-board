@@ -572,8 +572,13 @@ function renderNews() {
   const strip = $('#news span');
   const html = items.map(([t, url]) => (url ? link(url, esc(t), 'headline') : esc(t))).join('<i>✦</i>');
   if (strip.innerHTML === html) return;
+  // The marquee's elapsed time keeps growing, so where it stands is (elapsed mod duration). After a few hours on the
+  // wall that quotient is large, and the second the duration changes - one headline's "3 min ago" ticking over is
+  // enough - the strip lands somewhere random and never gets through the list. So carry the position over by hand.
+  const anim = strip.getAnimations()[0], was = anim && anim.currentTime / anim.effect.getTiming().duration % 1;
   strip.innerHTML = html;
   strip.style.animationDuration = `${Math.max(20, items.reduce((n, [t]) => n + t.length, 0) / 6)}s`;
+  if (anim) anim.currentTime = was * anim.effect.getTiming().duration;
 }
 
 // [impl->req~news-scrub~1] The strip is one CSS animation, so dragging it is just scrubbing that animation:
