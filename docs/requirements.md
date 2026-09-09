@@ -182,6 +182,15 @@ and no bonus, the same way bot accounts are skipped.
 
 Needs: impl
 
+### A contributor's awards can be capped
+`req~bonus-cap~1`
+
+The `BONUS_CAP` environment variable (`{"login": n}`) limits how many awards a contributor holds: the ones held
+longest count, the rest score nothing and are not shown. It lives in the environment, not in `config.json`, because
+the board publishes its configuration.
+
+Needs: impl
+
 ### Bonus points
 `req~bonus-points~21`
 
