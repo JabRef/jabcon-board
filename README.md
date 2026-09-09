@@ -83,7 +83,8 @@ and, for the ticker badge, in `eventPoints()` in `site/app.js`.
 ## Bonus points
 
 A second evaluation, like the bonus round in a game: **+100 for every superlative a contributor holds**, shared by
-everyone tied for it. The icons sit under the login on the leaderboard and in the contributor detail view, newest first; each links
+everyone tied for it. Only what somebody contributed can win one: no award ranks *when* a person works or whether
+they used an assistant. The icons sit under the login on the leaderboard and in the contributor detail view, newest first; each links
 to what earned it (the record's PR, or the GitHub search behind the number). Self-reviews, fork syncs and
 AI-written comments count for none of them.
 
@@ -95,8 +96,6 @@ AI-written comments count for none of them.
 | 💡             | Idea machine          | most PRs opened                                                                                                               |
 | 🛡️             | Gatekeeper            | most reviews                                                                                                                  |
 | 🏁             | Closer                | most merged PRs                                                                                                               |
-| 🦉             | Night owl             | most activity between 22:00 and 06:00                                                                                         |
-| 🐦             | Early bird            | most activity before 08:00                                                                                                    |
 | ☕             | Ambassador            | most activity outside the org (own forks do not count)                                                                        |
 | 🔧             | Dependency whisperer  | most activity in `dependency_repos` and their forks                                                                           |
 | 🎨             | Jack of all trades    | widest set of components written or reviewed (by changed files)                                                               |
@@ -110,13 +109,11 @@ AI-written comments count for none of them.
 | 🤝             | Widest reach          | reviewed the PRs of the most different authors                                                                                |
 | ❓             | Socratic              | most questions asked                                                                                                          |
 | 🙏             | Most gracious         | most thanks said                                                                                                              |
-| 🕰️             | Always on             | active in the most hours of the day                                                                                           |
 | 🧲             | Magnet                | own PRs pulled in the most reviews                                                                                            |
 | ⚡             | First responder       | first to review the most PRs                                                                                                  |
 | 🚀             | All killer, no filler | largest share of own activity that is landing a PR (from 5 events on)                                                         |
 | 📝             | Essayist              | longest comments on average (from 5 comments on)                                                                              |
 | 🚚             | Freight train         | most commits per push (from 5 pushes on)                                                                                      |
-| 🏖️             | Weekend warrior       | largest share of own activity on a weekend (from 5 events on)                                                                 |
 | 🐛             | Reporter              | most issues opened                                                                                                            |
 | 🪶             | Featherweight         | most merged PRs of at most 50 changed lines                                                                                   |
 | ⚖️             | Middleweight          | most merged PRs between 50 and 500 changed lines                                                                              |
@@ -124,7 +121,6 @@ AI-written comments count for none of them.
 | 🗣️             | Sounding board        | largest share of own activity spent commenting (from 5 events on)                                                             |
 | 🔭             | Big picture           | largest share of own activity spent on issues rather than code (from 5 events on)                                             |
 | 🚧             | Hard to please        | largest share of own reviews that asked for changes (from 3 reviews on)                                                       |
-| ✋             | Handmade              | largest share of merged PRs written without an AI assistant (from 3 merged PRs on)                                            |
 | 🏎️             | Speedrun              | shortest time from opening a PR to its merge                                                                                  |
 | 🧟             | Necromancer           | activity on the oldest item somebody else opened                                                                              |
 | 🐣             | Newcomer              | most recent first issue or PR in the org                                                                                      |
@@ -132,6 +128,14 @@ AI-written comments count for none of them.
 | 🍸 …           | `honorary_awards`     | whatever the jury decides                                                                                                     |
 
 Categories, thresholds and the 100 itself live in `BONUS_KINDS` and `BONUS` in `scripts/collect.py`.
+
+## Data protection
+
+The board names people, so `site/privacy.html` (linked from the footer) is the GDPR Art. 13/14 notice: what is
+collected, from where, why, for how long, and how to be taken off the board — which is removing the login from
+`participants`, after which the next run drops that person's cards, events and points. Keep it honest when the data
+changes. Profile e-mail addresses are used in memory to match mailing list posts and never published. The page loads
+nothing from third parties (`confetti.browser.min.js` and the logo are vendored) and sets no cookies.
 
 ## Manual runs
 

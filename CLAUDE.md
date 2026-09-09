@@ -28,3 +28,5 @@ Push first, fix up after is fine (users see features early), but state the deplo
 ## Data
 
 `data.json` is public. Repos in `private_repos` contribute counts only, never titles or numbers.
+`site/privacy.html` is the GDPR notice the board runs under: keep it true when the collected data changes, and add no
+award that ranks *when* a person works or *how* they wrote the code (`req~no-behaviour-profiling~1`).

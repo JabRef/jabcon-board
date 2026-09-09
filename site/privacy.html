@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JabCon board — data protection</title>
+<meta name="robots" content="noindex">
+<!-- [impl->req~privacy-notice~1] Art. 13/14 GDPR: the data is about people and comes from GitHub, not from them.
+     Plain HTML, no JavaScript and no request to anybody else, so reading it stays as private as reading the board. -->
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0 auto; padding: 2rem 1.2rem 4rem; max-width: 42rem; background: #0d1117; color: #c9d1d9;
+         font: 1rem/1.6 system-ui, sans-serif; }
+  h1 { font-size: 1.4rem; } h2 { font-size: 1rem; margin: 1.6rem 0 .3rem; }
+  a { color: #58a6ff; } dt { font-weight: 600; margin-top: .6rem; } dd { margin: 0; }
+  footer { margin-top: 2.5rem; font-size: .85rem; color: #8b949e; }
+</style>
+</head>
+<body>
+<h1>What the JabCon board collects, and about whom</h1>
+
+<p>The <a href="./">JabCon board</a> is a wall display for <a href="https://contribute.jabref.org/">JabCon</a>, the
+JabRef developer meetup. It shows what the participants are working on while the meetup runs. Because it names
+people, the GDPR applies, and this page is the notice required by its Articles 13 and 14.</p>
+
+<h2>Who is responsible</h2>
+<p>The JabCon organisers, for the JabRef project. Reach them by opening an issue in
+<a href="https://github.com/JabRef/jabcon-board/issues">JabRef/jabcon-board</a> or by writing to
+<a href="mailto:privacy@jabref.org">privacy@jabref.org</a>.</p>
+
+<h2>What is shown, and where it comes from</h2>
+<dl>
+  <dt>Public GitHub activity of the participants</dt>
+  <dd>Login, pull requests and issues with their titles and links, reviews, comment excerpts, pushes and the time
+      each of these happened — read from the public GitHub search and events APIs, in any public repository.</dd>
+  <dt>Posts to the configured mailing lists</dt>
+  <dd>Sender, subject and an excerpt, read from the public archive. The public name and e-mail address of a
+      participant's GitHub profile are used to recognise their posts; neither is published or stored.</dd>
+  <dt>Private repositories</dt>
+  <dd>Only counts per participant, never titles, numbers or texts.</dd>
+</dl>
+<p>None of this is collected from the participants themselves; all of it is activity they published on GitHub or on
+a public mailing list. Nothing is collected about you for looking at this page: the board is a static site, sets no
+cookies, runs no analytics and loads nothing from anybody else. Its hosting is GitHub Pages, whose own logging is
+described in GitHub's privacy statement.</p>
+
+<h2>Why</h2>
+<p>To make the meetup's shared work visible in the room while it happens, and to keep the friendly competition on the
+leaderboard going. The legal basis is the participants' consent (Art. 6(1)(a) GDPR), which they gave when they joined
+the board; without it, our legitimate interest in showing the meetup's own work (Art. 6(1)(f)).</p>
+<p>The awards rank what somebody contributed. They deliberately do not rank <em>when</em> a person works, or whether
+they used an AI assistant: the board does not draw a picture of a person's habits.</p>
+
+<h2>How long</h2>
+<p>The published data covers the meetup window and is replaced at every run; the branch carrying it is deleted after
+JabCon. Screenshots of the board are kept in the repository as a record of the event.</p>
+
+<h2>Your rights</h2>
+<p>You can ask for access, rectification, erasure, restriction and data portability, object to the processing
+(Art. 21), withdraw your consent at any time with effect for the future, and complain to a supervisory authority.
+In practice the quickest route is to ask us to take you off the board: your login is removed from the configuration
+and your cards, activity and points are gone from the next update, a few minutes later.</p>
+
+<footer><a href="./">← back to the board</a></footer>
+</body>
+</html>
