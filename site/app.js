@@ -30,7 +30,7 @@ function ago(iso) {
 
 // Tendency of a counted number: a triangle for the way it moved over the last hour (or over as much history as the
 // collector has kept so far), green when that is the good direction. Nothing is drawn without a second sample.
-// [impl->req~trend-arrows~6]
+// [impl->req~trend-arrows~7]
 const TREND_H = 1;
 // The pair of samples every tendency compares: the newest, and the oldest one still inside the trend window.
 function trendSamples(at) {
@@ -122,10 +122,10 @@ function renderStats() {
   renderPrGoal();
   const comps = Object.entries(s.components).sort((a, b) => b[1] - a[1]).slice(0, 5);
   const max = comps[0]?.[1] || 1;
-  const compWhy = 'Lines changed (added + removed) in this component, and how much it grew or shrank (added \u2212 removed).\nClick for the PRs behind the number.';
+  const compWhy = 'How much this component grew or shrank: added \u2212 removed lines.\nThe bar is how much moved in it overall. Click for the PRs behind the number.';
   $('#components').innerHTML = comps.map(([name, n]) => {
     const a = `data-comp="${esc(name)}" title="${esc(compWhy)}"`;
-    return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${fmt(n)} ${net(s.components_net?.[name])}${trend((h) => h.components?.[name], false, true, true)}</span>`;
+    return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${net(s.components_net?.[name])}${trend((h) => h.components_net?.[name], true, true, true)}</span>`;
   }).join('');
   const queued = queuedCards();
   const queueMarkIf = (pred) => (queued.some(pred) ? queueMark(16) : '');
