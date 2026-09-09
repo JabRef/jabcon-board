@@ -605,15 +605,16 @@ On a phone they ride in the footer instead (`req~mobile-layout~2`), where a fixe
 Needs: impl
 
 ### Open-PR meter
-`req~pr-goal-meter~2`
+`req~pr-goal-meter~3`
 
-Right of the stats heading a meter shows how many PRs are open in the configured goal repository, scaled from zero
+Right of the stats heading a meter shows how many PRs are open in the configured goal repository and any repository
+configured to be counted along with it, scaled from zero
 to the goal, with the stretch target ticked on the bar and labelled on the scale below it. The filled part is
 coloured by the count: green near zero, amber at the stretch target, red at the goal.
 Past the goal the meter grows out of its box, ten pixels per PR too many, and its scale then spans the count
 with the goal ticked inside it. It also turns solid red and beats — swelling and glowing and back, like a health bar near zero
 (not with reduced motion or the still mode). The beat runs on the wall clock, so a data refresh redrawing the meter
-does not jump it back to the start of a cycle. A run whose count comes back implausibly empty keeps the previous one instead. Hovering names the repository and how many PRs still have to
+does not jump it back to the start of a cycle. A run whose count comes back implausibly empty keeps the previous one instead. Hovering names the repositories and how many PRs still have to
 go; clicking opens the PR list.
 
 Needs: impl
