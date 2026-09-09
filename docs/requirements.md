@@ -291,9 +291,9 @@ Needs: impl
 ### Components show how much they grew
 `req~component-net~1`
 
-Next to the lines changed, every row in the Components box and the header of the component detail view show the net
-size change: added minus removed lines, signed, green when the component grew and red when it shrank. 3 added and
-5 removed reads as −2.
+Every row in the Components box shows the net size change of that component instead of the lines it moved: added
+minus removed, signed, green when it grew and red when it shrank. 3 added and 5 removed reads as −2. The bar still
+carries how much moved in it overall, and the component detail header keeps both numbers.
 
 Needs: impl
 
@@ -544,13 +544,13 @@ the last known release rather than reading as "none".
 Needs: impl
 
 ### Tendency arrows
-`req~trend-arrows~6`
+`req~trend-arrows~7`
 
-The collector samples the open-PR count, the column sizes, the totals and per-component lines and everybody's points
+The collector samples the open-PR count, the column sizes, the totals and per-component net size and everybody's points
 on every run and keeps half a day of them. All three columns, the open-PR meter, the three stats totals and every
 component line show a triangle for the direction the number moved in the last hour, green when that is the good
 direction (fewer open PRs, a shorter backlog, less work still in progress because it landed, more done, more work
-done everywhere else), red otherwise, and a gray bar when the number did not move at all. Every mark carries the
+done everywhere else, a component that shrank — less code to maintain), red otherwise, and a gray bar when the number did not move at all. Every mark carries the
 size of the change next to it, so the board reads like a ticker. Hovering gives the change and the window it covers,
 which is shorter than an hour while the history is still that young. A number a run could not read is left out of
 that run's sample rather than stored as a zero, and an arrow is measured only against samples that carry the number,

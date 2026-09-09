@@ -106,7 +106,7 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal { margin-left: auto; letter-spacing: 0; text-transform: none; }
 #prgoal a { display: flex; align-items: center; gap: .6rem; }
 #prgoal .cap { color: var(--fg); font-size: .8rem; white-space: nowrap; }
-/* [impl->req~trend-arrows~6] */
+/* [impl->req~trend-arrows~7] */
 .trend { font-size: .7em; margin-left: .3em; vertical-align: middle; }
 .trend.good { color: var(--ok); }
 .trend.bad { color: #f85149; }
@@ -176,7 +176,7 @@ section h2 .count { float: right; color: var(--fg); }
   71% { opacity: .6; }
   80%, 100% { opacity: 0; }
 }
-#components { display: grid; grid-template-columns: fit-content(5rem) minmax(.6rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
+#components { display: grid; grid-template-columns: fit-content(5rem) minmax(1.5rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
 #leaderboard { display: flex; gap: .8rem; margin-top: auto; align-items: flex-end; }
 .leader { position: relative; cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
