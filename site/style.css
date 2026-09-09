@@ -138,6 +138,7 @@ section h2 .count { float: right; color: var(--fg); }
 /* [impl->req~merge-queue-dwarf~5] the countdown stands to his right, at his height and out of the bar's way */
 #prgoal .eta { position: absolute; top: calc((.9rem - 1em) / 2); white-space: nowrap; font-size: .7rem;
   font-variant-numeric: tabular-nums; color: #f2c94c; }
+#prgoal .eta.late { color: #f85149; } /* over the estimate: the same clock, in the colour of a bar over its goal */
 .dwarf .arm { transform-box: view-box; transform-origin: 10px 8px; animation: hammer 1.2s linear infinite; }
 /* the pocket-sized one sits in the flow of a card or a milestone row, mirrored like his big brother */
 .dwarf.mark { flex: none; display: inline-block; vertical-align: middle; transform: scaleX(-1); }
