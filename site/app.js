@@ -151,11 +151,14 @@ const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
 const QUEUE_MS = 1200; // one hammer swing, the same number as the CSS animation's duration
 
-// [impl->req~merge-queue-dwarf~2] While PRs wait in the merge queue a pixel dwarf stands at the left end of the
+// [impl->req~merge-queue-dwarf~3] While PRs wait in the merge queue a pixel dwarf stands at the left end of the
 // meter and hammers away at them; the block he hits is their share of the bar, and it flashes yellow on every hit.
 function dwarf(n) {
   const why = esc(`${n} PR${n === 1 ? '' : 's'} in the merge queue.\nThe dwarf is hammering their block off the bar.`);
-  return `<span class="dwarf" title="${why}"><svg viewBox="0 0 16 16" width="40" height="40" shape-rendering="crispEdges">
+  return `<span class="dwarf" title="${why}">${dwarfSvg()}</span>`;
+}
+function dwarfSvg() {
+  return `<svg viewBox="0 0 16 16" width="40" height="40" shape-rendering="crispEdges">
     <rect x="4" y="0" width="6" height="2" fill="#c0392b"/><rect x="3" y="2" width="9" height="1" fill="#c0392b"/>
     <rect x="5" y="3" width="5" height="2" fill="#e8b18a"/><rect x="8" y="3" width="1" height="1" fill="#2b2118"/>
     <rect x="4" y="5" width="7" height="3" fill="#dfe6ee"/>
@@ -163,7 +166,39 @@ function dwarf(n) {
     <rect x="5" y="12" width="2" height="3" fill="#4a3527"/><rect x="9" y="12" width="2" height="3" fill="#4a3527"/>
     <g class="arm"><rect x="10" y="8" width="4" height="1" fill="#8a5a2b"/><rect x="13" y="6" width="3" height="4" fill="#9aa5b1"/>
       <rect x="13" y="6" width="3" height="1" fill="#c9d1d9"/></g>
-  </svg></span>`;
+  </svg>`;
+}
+
+// [impl->req~merge-queue-dwarf~3] An empty queue leaves him nothing to hammer, so he strolls across the board:
+// a walk to a random spot at a dwarf's pace, a breather, and off again. Not while the board is held still.
+const WANDER_PX_S = 60, WANDER_REST_MS = 2500;
+let wanderAt = null, wanderTimer = 0;
+function wander(on) {
+  const el = $('#wanderer');
+  const still = document.documentElement.classList.contains('still')
+    || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!on || still) {
+    clearTimeout(wanderTimer);
+    if (el) el.remove();
+    wanderAt = null;
+    return;
+  }
+  if (el) return; // already out for his walk, and it must not restart on every render
+  document.body.insertAdjacentHTML('beforeend',
+    `<div id="wanderer" title="Nothing in the merge queue - the dwarf is taking a walk.">${dwarfSvg()}</div>`);
+  wanderAt = wanderAt || { x: innerWidth / 2, y: innerHeight - 80 };
+  wanderStep();
+}
+function wanderStep() {
+  const dwarfEl = $('#wanderer');
+  if (!dwarfEl) return;
+  const to = { x: Math.random() * (innerWidth - 40), y: Math.random() * (innerHeight - 40) };
+  const secs = Math.hypot(to.x - wanderAt.x, to.y - wanderAt.y) / WANDER_PX_S;
+  dwarfEl.style.transition = `transform ${secs.toFixed(1)}s linear`;
+  // he faces the way he is going, and the flip rides along in the same transform, so it turns as he sets off
+  dwarfEl.style.transform = `translate(${to.x}px, ${to.y}px) scaleX(${to.x < wanderAt.x ? -1 : 1})`;
+  wanderAt = to;
+  wanderTimer = setTimeout(wanderStep, secs * 1000 + WANDER_REST_MS);
 }
 function renderPrGoal() {
   const g = data.pr_goal;
@@ -191,6 +226,8 @@ function renderPrGoal() {
   // the same for the swing and the flash it sets off, which have to stay in step with each other above all
   const swing = `-${Date.now() % QUEUE_MS}ms`;
   document.querySelectorAll('#prgoal .arm, #prgoal .queue').forEach((el) => { el.style.animationDelay = swing; });
+  // [impl->req~merge-queue-dwarf~3] queue empty = no work at the bar, so he is off wandering instead
+  wander(!g.queue);
 }
 
 // [impl->req~bonus-points~21] the +100 awards a contributor holds, one emoji each, the category in the tooltip.

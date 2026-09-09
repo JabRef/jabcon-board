@@ -493,7 +493,7 @@ every run below the target.
 Needs: impl
 
 ### The merge queue gets a dwarf
-`req~merge-queue-dwarf~2`
+`req~merge-queue-dwarf~3`
 
 While PRs sit in the goal repository's merge queue, a pixel-art dwarf stands at the left end of the meter and
 hammers at it once every 1.2 seconds, big enough to be seen from across the room. The block he hits is as wide as
@@ -501,7 +501,9 @@ those PRs are on the bar's scale — but never thinner than half a rem, so a sin
 block and not two pixels — and flashes yellow with every strike, so the queue is visible as a length. Hovering him gives the count. No queue, no dwarf; with
 reduced motion or in the still mode nobody swings and the block simply stands out. The count comes from GraphQL,
 which alone knows the queue. A failed call never costs the dwarf: the last known count is kept and the run goes on.
-Only a repository that really has no queue answers zero, and then he is gone.
+Only a repository that really has no queue answers zero, and then he leaves the meter and wanders across the board
+instead: he walks to a spot at a dwarf's pace, faces the way he is going, rests a moment and sets off again, over
+everything but in the way of nothing. With reduced motion or in the still mode he stays away altogether.
 
 Needs: impl
 
