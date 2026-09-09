@@ -1081,7 +1081,7 @@ def pr_goal():
     return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls"}
 
 
-# [impl->req~trend-arrows~4]
+# [impl->req~trend-arrows~5]
 def history(previous, now, data):
     """One sample per run of the numbers the board draws a tendency for, so the page can compare with an hour ago.
     Half a day of five-minute runs is plenty; older samples are dropped."""
@@ -1093,6 +1093,8 @@ def history(previous, now, data):
     sample = {"t": now.isoformat(timespec="seconds"),
               "open_prs": (data["pr_goal"] or {}).get("open"),
               "points": {l["login"]: l["points"] for l in data["leaderboard"]},
+              "stats": {k: data["stats"][k] for k in ("changed_files", "additions", "deletions")},
+              "components": dict(data["stats"]["components"]),
               "parts": parts,
               **{col: sum(1 for c in data["cards"] if c["column"] == col) for col in ("backlog", "progress", "done")}}
     return ((previous or {}).get("history", []) + [sample])[-144:]

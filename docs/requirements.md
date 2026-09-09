@@ -491,13 +491,14 @@ every run below the target.
 Needs: impl
 
 ### Tendency arrows
-`req~trend-arrows~4`
+`req~trend-arrows~5`
 
-The collector samples the open-PR count, the column sizes and everybody's points on every run and keeps half a day
-of them. All three columns and the open-PR meter show a triangle for the direction the number moved in the
-last hour, green when that is the good direction (fewer open PRs, a shorter backlog, less work still in progress
-because it landed, more done), red otherwise, and a gray bar when the number did not move at all;
-each contributor shows their points gained in the same window. Hovering gives the change and the window it covers,
+The collector samples the open-PR count, the column sizes, the totals and per-component lines and everybody's points
+on every run and keeps half a day of them. All three columns, the open-PR meter, the three stats totals and every
+component line show a triangle for the direction the number moved in the last hour, green when that is the good
+direction (fewer open PRs, a shorter backlog, less work still in progress because it landed, more done, more work
+done everywhere else), red otherwise, and a gray bar when the number did not move at all. Every mark carries the
+size of the change next to it, so the board reads like a ticker. Hovering gives the change and the window it covers,
 which is shorter than an hour while the history is still that young.
 
 Needs: impl
