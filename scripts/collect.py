@@ -1071,17 +1071,21 @@ def focus_progress():
             "url": f"https://github.com/issues?q={urllib.parse.quote(FOCUS_Q + ' is:open')}"}
 
 
-# [impl->req~pr-goal-meter~1]
+# [impl->req~pr-goal-meter~2]
 def pr_goal():
     """How many PRs are open in the goal repo, for the meter against the configured targets."""
     goal = CONFIG.get("pr_goal")
     if not goal:
         return None
     n = get("/search/issues", {"q": f"repo:{goal['repo']} is:pr is:open", "per_page": 1})[0]["total_count"]
+    # GitHub's search index now and then answers 0 for a repo that plainly has open PRs. Reporting that would
+    # not just draw an empty meter, it would poison the history a trend arrow is measured against.
+    if not n:
+        return None
     return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls"}
 
 
-# [impl->req~trend-arrows~5]
+# [impl->req~trend-arrows~6]
 def history(previous, now, data):
     """One sample per run of the numbers the board draws a tendency for, so the page can compare with an hour ago.
     Half a day of five-minute runs is plenty; older samples are dropped."""
@@ -1164,7 +1168,7 @@ def main():
         "ai_models": dict(sorted(ai_used.items(), key=lambda kv: -kv[1])),
         "milestones": ms,
         "focus": focus_progress(),
-        "pr_goal": pr_goal(),
+        "pr_goal": pr_goal() or (previous or {}).get("pr_goal"),
         "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,

@@ -28,18 +28,19 @@ function ago(iso) {
 
 // Tendency of a counted number: a triangle for the way it moved over the last hour (or over as much history as the
 // collector has kept so far), green when that is the good direction. Nothing is drawn without a second sample.
-// [impl->req~trend-arrows~5]
+// [impl->req~trend-arrows~6]
 const TREND_H = 1;
 // The pair of samples every tendency compares: the newest, and the oldest one still inside the trend window.
-function trendSamples() {
-  const h = data.history || [];
+function trendSamples(at) {
+  // only samples that carry the number in question: a run that could not collect it must not read as a change
+  const h = (data.history || []).filter((s) => at(s) != null);
   return [h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop() || h[0], h.at(-1)];
 }
 // [impl->req~delta-detail~1] what moved a contributor's total in that window: the counts that changed, and the
 // stickers gained or lost, which are worth exactly 100 each. The other lines are counts, not points, since a single
 // review is worth between 1 and 30 depending on the diff and the repo.
 function deltaWhy(login) {
-  const [then, last] = trendSamples();
+  const [then, last] = trendSamples((s) => s.parts?.[login]);
   const a = then?.parts?.[login], b = last?.parts?.[login];
   if (!a || !b) return [];
   const lines = [['m', 'merged PRs'], ['r', 'reviews'], ['o', 'comments, issues and pushes'],
@@ -51,7 +52,7 @@ function deltaWhy(login) {
 }
 function trend(key, goodDown, withValue, flat, extra) {
   const at = (s) => (typeof key === 'function' ? key(s) : s?.[key]);
-  const [then, last] = trendSamples();
+  const [then, last] = trendSamples(at);
   if (!then || then === last || at(then) == null || at(last) == null) return '';
   const d = at(last) - at(then);
   if (!d && !flat) return '';
@@ -144,7 +145,7 @@ function renderStats() {
 
 // The open-PR meter next to the stats heading: how far the review backlog still is from the goal, with the stretch
 // target ticked on the bar. The colour runs green (zero open) to red at the goal; past the goal it flashes.
-// [impl->req~pr-goal-meter~1]
+// [impl->req~pr-goal-meter~2]
 let prgoalHtml;
 const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration

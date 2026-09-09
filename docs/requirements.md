@@ -491,7 +491,7 @@ every run below the target.
 Needs: impl
 
 ### Tendency arrows
-`req~trend-arrows~5`
+`req~trend-arrows~6`
 
 The collector samples the open-PR count, the column sizes, the totals and per-component lines and everybody's points
 on every run and keeps half a day of them. All three columns, the open-PR meter, the three stats totals and every
@@ -499,7 +499,9 @@ component line show a triangle for the direction the number moved in the last ho
 direction (fewer open PRs, a shorter backlog, less work still in progress because it landed, more done, more work
 done everywhere else), red otherwise, and a gray bar when the number did not move at all. Every mark carries the
 size of the change next to it, so the board reads like a ticker. Hovering gives the change and the window it covers,
-which is shorter than an hour while the history is still that young.
+which is shorter than an hour while the history is still that young. A number a run could not read is left out of
+that run's sample rather than stored as a zero, and an arrow is measured only against samples that carry the number,
+so a failed collection never reads as a change.
 
 Needs: impl
 
@@ -524,7 +526,7 @@ to it, stay visible in the corner even while a contributor or component detail v
 Needs: impl
 
 ### Open-PR meter
-`req~pr-goal-meter~1`
+`req~pr-goal-meter~2`
 
 Right of the stats heading a meter shows how many PRs are open in the configured goal repository, scaled from zero
 to the goal, with the stretch target ticked on the bar and labelled on the scale below it. The filled part is
@@ -532,7 +534,7 @@ coloured by the count: green near zero, amber at the stretch target, red at the 
 Past the goal the meter grows out of its box, ten pixels per PR too many, and its scale then spans the count
 with the goal ticked inside it. It also turns solid red and beats — swelling and glowing and back, like a health bar near zero
 (not with reduced motion or the still mode). The beat runs on the wall clock, so a data refresh redrawing the meter
-does not jump it back to the start of a cycle. Hovering names the repository and how many PRs still have to
+does not jump it back to the start of a cycle. A run whose count comes back implausibly empty keeps the previous one instead. Hovering names the repository and how many PRs still have to
 go; clicking opens the PR list.
 
 Needs: impl
