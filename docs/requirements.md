@@ -540,15 +540,17 @@ everything but in the way of nothing, bobbing in two frames so the walk is visib
 Needs: impl
 
 ### A release is celebrated
-`req~release-party~1`
+`req~release-party~2`
 
 When the goal repository publishes a release (prereleases included, and cut by a bot, so the collector asks the
-repository itself rather than waiting for a participant's event), the board notices on the next data run: it rings
-the bell, throws confetti for a minute and a chorus line of dwarfs dances along the bottom edge, each a beat behind
-the one before. A toast names the tag, and the newsticker keeps it as a headline for whoever missed the dance. It
-fires only when the tag differs from the one the previous run saw, never on the first reading and never twice for
-the same release; with reduced motion or in the still mode the news comes without the dance. A failed call keeps
-the last known release rather than reading as "none".
+repository itself rather than waiting for a participant's event), the board notices on the next data run: the bell
+rings and a toast names the tag, once, only when the tag differs from the one the previous run saw and never on the
+first reading. A chorus line of dwarfs dances along the bottom edge, each a beat behind the one before, with confetti
+for the first minute and dimmed at half the pace for the three hours after it; the dance follows the release's own
+timestamp, so a board opened or reloaded meanwhile joins the party for what is left of it. A release that happened
+during JabCon is marked on the header timeline where it falls, and the newsticker keeps it as a headline. With
+reduced motion or in the still mode the news comes without the dance. A failed call keeps the last known release
+rather than reading as "none".
 
 Needs: impl
 
