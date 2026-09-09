@@ -135,7 +135,7 @@ function renderPrGoal() {
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
 }
 
-// [impl->req~bonus-points~20] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
+// [impl->req~bonus-points~21] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
 // The emoji links to what earned it - the record's PR or a GitHub search; an award with no such page opens the
 // contributor's detail view instead.
 function bonusLink(b, login, inner) {
