@@ -288,6 +288,15 @@ route, so Back, Escape and a shared link work like the contributor view.
 
 Needs: impl
 
+### Points breakdown filters the detail list
+`req~breakdown-filter~1`
+
+Each part of the points breakdown in the contributor detail view (merged, AI-assisted, reviews, other, JabCon items,
+boosted repos) is clickable and narrows the list below to the events that part is made of. The active part is
+highlighted and a Clear chip next to it restores the full list; clicking the active part again does the same.
+
+Needs: impl
+
 ## Activity
 
 ### Ticker rows deep-link
