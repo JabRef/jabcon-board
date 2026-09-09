@@ -651,7 +651,7 @@ def review_points(cc):
     return 2 if cc is None else 1 if cc <= 2 else 3 if cc >= 20 else 2
 
 
-STATS_VERSION = 3
+STATS_VERSION = 4
 
 
 def pr_stats(c, cached):
@@ -665,10 +665,12 @@ def pr_stats(c, cached):
     pr, _ = get(f"/repos/{c['repo']}/pulls/{c['number']}")
     files = get_all(f"/repos/{c['repo']}/pulls/{c['number']}/files")
     commits = get_all(f"/repos/{c['repo']}/pulls/{c['number']}/commits")
-    comps = {}
+    comps, comps_net = {}, {}
     for f in files:
-        comps[component(c["repo"], f["filename"])] = comps.get(component(c["repo"], f["filename"]), 0) + f["changes"]
-    return {"stats_version": STATS_VERSION, "additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "complexity": complexity(files),
+        comp = component(c["repo"], f["filename"])
+        comps[comp] = comps.get(comp, 0) + f["changes"]
+        comps_net[comp] = comps_net.get(comp, 0) + f["additions"] - f["deletions"]
+    return {"stats_version": STATS_VERSION, "additions": pr["additions"], "deletions": pr["deletions"], "changed_files": pr["changed_files"], "components": comps, "components_net": comps_net, "complexity": complexity(files),
             "refactorings": refactorings(pr, files, c["repo"]), "sup": superlatives(files),
             "ai": ai_models(cm["commit"]["message"] for cm in commits)}
 
@@ -1196,12 +1198,13 @@ def main():
     for c in cards:
         if c["type"] == "pr" and c["column"] != "backlog":
             c["stats"] = pr_stats(c, cached)
-    totals = {"additions": 0, "deletions": 0, "changed_files": 0, "components": {}}
+    totals = {"additions": 0, "deletions": 0, "changed_files": 0, "components": {}, "components_net": {}}
     for c in cards:
         for k in ("additions", "deletions", "changed_files"):
             totals[k] += c.get("stats", {}).get(k, 0)
-        for comp, n in c.get("stats", {}).get("components", {}).items():
-            totals["components"][comp] = totals["components"].get(comp, 0) + n
+        for key in ("components", "components_net"):
+            for comp, n in c.get("stats", {}).get(key, {}).items():
+                totals[key][comp] = totals[key].get(comp, 0) + n
     private = private_activity()
     nerdy = [{"weight": w, "text": t, "repo": c["repo"], "number": c["number"], "author": c["author"], "url": c["url"]}
              for c in cards for w, t in c.get("stats", {}).get("refactorings", [])]

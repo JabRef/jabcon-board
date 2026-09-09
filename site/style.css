@@ -176,7 +176,7 @@ section h2 .count { float: right; color: var(--fg); }
   71% { opacity: .6; }
   80%, 100% { opacity: 0; }
 }
-#components { display: grid; grid-template-columns: fit-content(5rem) minmax(1.5rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
+#components { display: grid; grid-template-columns: fit-content(5rem) minmax(.6rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
 #leaderboard { display: flex; gap: .8rem; margin-top: auto; align-items: flex-end; }
 .leader { position: relative; cursor: pointer; text-align: center; font-size: .8rem; white-space: nowrap; }
@@ -245,6 +245,10 @@ a.bonus { text-decoration: none; }
 @keyframes marquee { to { transform: translateX(-100%); } }
 #components span:nth-child(3n+1) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #components span:nth-child(3n) { text-align: end; font-variant-numeric: tabular-nums; }
+/* [impl->req~component-net~1] */
+#components .net { font-size: .8em; }
+#components .net.add, #detail h2 .net { color: var(--ok); }
+#components .net.del, #detail h2 .net.del { color: #f85149; }
 
 /* Ambient motion so TVs with content-adaptive dimming don't treat the wall as a static image:
    a slow drifting glow behind the panels (whole-screen pixel change, low contrast) and a gentle
