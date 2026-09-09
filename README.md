@@ -25,7 +25,8 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 - `.github/workflows/board.yml` runs every 5 minutes (and on push to `main`), copies `site/` and a fresh
   `data.json` to the `gh-pages` branch. Outside the JabCon window it publishes the site but skips data collection.
   `gh-pages` is always a single commit (`scripts/gh-pages.sh` force-pushes a fresh one), so it never piles up old data or videos.
-- `.github/workflows/screenshot.yml` stores a screenshot under `screenshots/` every three hours during JabCon.
+- `.github/workflows/screenshot.yml` stores a screenshot under `screenshots/` every three hours during the day of a
+  JabCon day; the night hours are left out, because a screenshot stays on `main` forever.
 - The video is rendered by `gource-jabcon.yml` in [JabRef/jabref](https://github.com/JabRef/jabref) to
   `https://files.jabref.org/gource/jabcon-2026.mp4`; the URL is set at the top of `site/app.js`.
 - `scripts/highlights.py data.json jabcon-2026.mp4 highlights.mp4 [count]` cuts a highlights reel from that video: a
