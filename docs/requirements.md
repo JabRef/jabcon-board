@@ -450,6 +450,15 @@ enlarged video).
 
 Needs: impl
 
+### The wall can insist on moving
+`req~force-motion~1`
+
+A machine that asks for reduced motion (Windows switches it on with battery saver) otherwise stops the newsticker,
+the dwarf and the ambient motion, leaving a wall display that looks dead. `?still=0` keeps the board moving anyway;
+`?still=1` still holds it still, and without the parameter the machine's setting decides.
+
+Needs: impl
+
 ### Sticker hand-overs and point gains are announced
 `req~sticker-moves~1`
 
