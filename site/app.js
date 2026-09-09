@@ -193,18 +193,21 @@ function queueMark(px) {
 // markup: a text that changes every second would rebuild the meter and restart the swing on every beat.
 function etaText(iso) {
   const left = Math.round((Date.parse(iso) - Date.now()) / 1000);
-  if (left <= 0) return 'due'; // the estimate ran out; the next data run says whether it really merged
-  const h = Math.floor(left / 3600), m = Math.floor(left / 60) % 60, sec = left % 60;
+  const s = Math.abs(left), h = Math.floor(s / 3600), m = Math.floor(s / 60) % 60, sec = s % 60;
   // spelled out, or a bare "19:27" beside a wall clock reads as half past seven
-  return h ? `${h}:${String(m).padStart(2, '0')} h` : `${m}:${String(sec).padStart(2, '0')} min`;
+  const t = h ? `${h}:${String(m).padStart(2, '0')} h` : `${m}:${String(sec).padStart(2, '0')} min`;
+  // past the estimate the clock keeps running, with a plus: the queue is late, and how late is the news
+  return left > 0 ? t : `+${t}`;
 }
 function renderEta() {
   const el = $('#queue-eta'), eta = data?.pr_goal?.queue_eta;
   if (!el || !eta) return;
   el.textContent = etaText(eta);
-  el.title = 'GitHub expects the queue to be empty at '
+  const late = Date.parse(eta) < Date.now();
+  el.classList.toggle('late', late);
+  el.title = `GitHub expect${late ? 'ed' : 's'} the queue to be empty at `
     + new Date(eta).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone })
-    + ' - the longest estimate of everything queued.';
+    + ` - the longest estimate of everything queued.${late ? ' It is running over; the plus counts how far.' : ''}`;
 }
 
 // [impl->req~merge-queue-dwarf~5] An empty queue leaves him nothing to hammer, so he strolls across the board:
