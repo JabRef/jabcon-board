@@ -26,17 +26,21 @@ function ago(iso) {
   return `${Math.floor(s / 86400)} d ago`;
 }
 
-// Tendency of a counted number against an hour ago, from the samples the collector keeps: a triangle pointing the
-// way it moved, green when that is the good direction. Nothing is drawn while there is no sample that old yet.
-// [impl->req~trend-arrows~1]
+// Tendency of a counted number: a triangle for the way it moved over the last hour (or over as much history as the
+// collector has kept so far), green when that is the good direction. Nothing is drawn without a second sample.
+// [impl->req~trend-arrows~2]
 const TREND_H = 1;
-function trend(key, goodDown) {
+function trend(key, goodDown, withValue) {
   const h = data.history || [];
-  const then = h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop();
-  const d = then?.[key] == null || h.at(-1)?.[key] == null ? 0 : h.at(-1)[key] - then[key];
+  const at = (s) => (typeof key === 'function' ? key(s) : s?.[key]);
+  const then = h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop() || h[0];
+  const last = h.at(-1);
+  if (!then || then === last || at(then) == null || at(last) == null) return '';
+  const d = at(last) - at(then);
   if (!d) return '';
-  const why = `${d > 0 ? '+' : ''}${d} in the last hour`;
-  return `<span class="trend ${(d < 0) === !!goodDown ? 'good' : 'bad'}" title="${esc(why)}">${d > 0 ? '\u25b2' : '\u25bc'}</span>`;
+  const mins = Math.round((Date.parse(last.t) - Date.parse(then.t)) / 60000);
+  const why = `${d > 0 ? '+' : ''}${d} in the last ${mins < 90 ? `${mins} min` : `${Math.round(mins / 60)} h`}`;
+  return `<span class="trend ${(d < 0) === !!goodDown ? 'good' : 'bad'}" title="${esc(why)}">${d > 0 ? '\u25b2' : '\u25bc'}${withValue ? Math.abs(d) : ''}</span>`;
 }
 
 // [impl->req~column-order~2]
@@ -110,7 +114,7 @@ function renderStats() {
     const why = `${l.merged} merged PRs × 3 (${l.ai || 0} of them AI-assisted × 0.25)\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`
       + (l.bonuses || []).map((b) => `\n+${b.points} ${b.title}: ${b.text}`).join('');
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
-    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${fmt(l.points)}</div><div>${esc(l.login)}</div>${bonusRow(l)}</div>`;
+    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${fmt(l.points)}</div><div>${esc(l.login)}${trend((s) => s.points?.[l.login], false, true)}</div>${bonusRow(l)}</div>`;
   }).join('');
   slotMachine();
 }
