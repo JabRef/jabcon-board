@@ -26,6 +26,19 @@ function ago(iso) {
   return `${Math.floor(s / 86400)} d ago`;
 }
 
+// Tendency of a counted number against an hour ago, from the samples the collector keeps: a triangle pointing the
+// way it moved, green when that is the good direction. Nothing is drawn while there is no sample that old yet.
+// [impl->req~trend-arrows~1]
+const TREND_H = 1;
+function trend(key, goodDown) {
+  const h = data.history || [];
+  const then = h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop();
+  const d = then?.[key] == null || h.at(-1)?.[key] == null ? 0 : h.at(-1)[key] - then[key];
+  if (!d) return '';
+  const why = `${d > 0 ? '+' : ''}${d} in the last hour`;
+  return `<span class="trend ${(d < 0) === !!goodDown ? 'good' : 'bad'}" title="${esc(why)}">${d > 0 ? '\u25b2' : '\u25bc'}</span>`;
+}
+
 // [impl->req~column-order~2]
 // [impl->req~github-colours~1]
 function renderColumn(id, cards) {
@@ -35,7 +48,7 @@ function renderColumn(id, cards) {
   const nFocus = sorted.filter((c) => c.focus).length;
   const box = $(`#${id} .cards`);
   const scrollTop = box.scrollTop;
-  $(`#${id} .count`).textContent = cards.length;
+  $(`#${id} .count`).innerHTML = `${cards.length}${id === 'done' ? '' : trend(id, id === 'backlog')}`;
   box.innerHTML = sorted.map((c, i) => (i === nFocus && nFocus && i < sorted.length ? '<div class="divider">other</div>' : '') + (() => {
     const other = !c.repo.startsWith(org);
     const tags = [];
@@ -113,7 +126,7 @@ function renderPrGoal() {
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   $('#prgoal').innerHTML = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
-    <span class="cap">${g.open} open PRs</span>
+    <span class="cap">${g.open} open PRs${trend('open_prs', true)}</span>
     <span class="meter"><span class="bar" style="--t:${pct(g.target)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
 }
