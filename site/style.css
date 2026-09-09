@@ -119,7 +119,7 @@ section h2 .count { float: right; color: var(--fg); }
 /* over the goal there is nothing left to fill, so the bar goes solid red and beats like a health bar near zero:
    it never blends back into the gradient, it only dims and swells, ease-in-out both ways for a sine-like pulse */
 #prgoal .bar.alarm::after { content: ""; position: absolute; inset: 0; background: #f85149; }
-#prgoal .bar.alarm { animation: alarm 1.1s ease-in-out infinite alternate; }
+#prgoal .bar.alarm { animation: alarm 1.1s cubic-bezier(.37, 0, .63, 1) infinite alternate; } /* sine in-out: no hold at the turns */
 #prgoal .tick { z-index: 1; } /* the target stays readable through the pulsing */
 @keyframes alarm {
   from { filter: brightness(.6); transform: scale(1); box-shadow: none; }
