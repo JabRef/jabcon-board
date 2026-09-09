@@ -28,7 +28,7 @@ function ago(iso) {
 
 // Tendency of a counted number: a triangle for the way it moved over the last hour (or over as much history as the
 // collector has kept so far), green when that is the good direction. Nothing is drawn without a second sample.
-// [impl->req~trend-arrows~4]
+// [impl->req~trend-arrows~5]
 const TREND_H = 1;
 // The pair of samples every tendency compares: the newest, and the oldest one still inside the trend window.
 function trendSamples() {
@@ -60,7 +60,7 @@ function trend(key, goodDown, withValue, flat, extra) {
   const why = [d ? `${d > 0 ? '+' : ''}${d} in ${window}` : `unchanged in ${window}`, ...(extra || [])].join('\n');
   // a flat number gets a gray dash rather than no mark at all, the way a ticker shows an unmoved price
   const cls = !d ? 'flat' : (d < 0) === !!goodDown ? 'good' : 'bad';
-  return `<span class="trend ${cls}" title="${esc(why)}">${d ? (d > 0 ? '\u25b2' : '\u25bc') : '\u25ac'}${withValue ? Math.abs(d) : ''}</span>`;
+  return `<span class="trend ${cls}" title="${esc(why)}">${d ? (d > 0 ? '\u25b2' : '\u25bc') : '\u25ac'}${withValue && d ? fmt(Math.abs(d)) : ''}</span>`;
 }
 
 // [impl->req~column-order~2]
@@ -74,7 +74,7 @@ function renderColumn(id, cards) {
   const scrollTop = box.scrollTop;
   // a shrinking column is good in both cases: the backlog was picked up, the work in progress landed - and a
   // growing "done" is good for the same reason
-  $(`#${id} .count`).innerHTML = `${cards.length}${trend(id, id !== 'done', false, true)}`;
+  $(`#${id} .count`).innerHTML = `${cards.length}${trend(id, id !== 'done', true, true)}`;
   box.innerHTML = sorted.map((c, i) => (i === nFocus && nFocus && i < sorted.length ? '<div class="divider">other</div>' : '') + (() => {
     const other = !c.repo.startsWith(org);
     const tags = [];
@@ -107,14 +107,15 @@ function updateMore(box) {
 // [impl->req~leaderboard-breakdown~1]
 function renderStats() {
   const s = data.stats;
-  $('#totals').innerHTML = `<span>${fmt(s.changed_files)} files</span><span class="add">+${fmt(s.additions)}</span><span class="del">−${fmt(s.deletions)}</span>`;
+  const tot = (k) => trend((h) => h.stats?.[k], false, true, true);
+  $('#totals').innerHTML = `<span>${fmt(s.changed_files)} files${tot('changed_files')}</span><span class="add">+${fmt(s.additions)}${tot('additions')}</span><span class="del">−${fmt(s.deletions)}${tot('deletions')}</span>`;
   renderPrGoal();
   const comps = Object.entries(s.components).sort((a, b) => b[1] - a[1]).slice(0, 5);
   const max = comps[0]?.[1] || 1;
   const compWhy = 'Lines changed (added + removed) in this component. Click for the PRs behind the number.';
   $('#components').innerHTML = comps.map(([name, n]) => {
     const a = `data-comp="${esc(name)}" title="${esc(compWhy)}"`;
-    return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${fmt(n)}</span>`;
+    return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${fmt(n)}${trend((h) => h.components?.[name], false, true, true)}</span>`;
   }).join('');
   const f = data.focus;
   const focusWhy = f && `Issues labeled "${f.label}" across the org — the JabCon focus.\n${f.closed} of ${f.closed + f.open} closed, ${f.open} to go.\nThe green bar is the closed share.`;
@@ -154,7 +155,7 @@ function renderPrGoal() {
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   const html = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
-    <span class="cap">${g.open} open PRs${trend('open_prs', true, false, true)}</span>
+    <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>
     <span class="meter"><span class="bar ${g.open > g.max ? 'alarm' : ''}" style="--t:${pct(g.target)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
   if (html !== prgoalHtml) { // rebuilding the same meter would restart the alarm's beat mid-cycle for nothing
