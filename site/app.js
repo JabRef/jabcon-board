@@ -103,19 +103,18 @@ function renderStats() {
 }
 
 // The open-PR meter next to the stats heading: how far the review backlog still is from the goal, with the stretch
-// target ticked on the bar. Over the goal the bar is full and amber.
+// target ticked on the bar. The colour runs green (zero open) to red at the goal.
 // [impl->req~pr-goal-meter~1]
 function renderPrGoal() {
   const g = data.pr_goal;
   $('#prgoal').hidden = !g;
   if (!g) return;
   const pct = (n) => (100 * Math.min(n, g.max) / g.max).toFixed(1) + '%';
-  const cls = g.open > g.max ? 'over' : g.open <= g.target ? 'hit' : '';
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   $('#prgoal').innerHTML = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
     <span class="cap">${g.open} open PRs</span>
-    <span class="meter"><span class="bar"><span class="fill ${cls}" style="width:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
+    <span class="meter"><span class="bar" style="--t:${pct(g.target)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
 }
 
