@@ -278,7 +278,13 @@ body { animation: glow 40s ease-in-out infinite; }
   100% { transform: translate(25%, -15%) scale(.9); }
 }
 @keyframes breathe { 50% { border-color: #3d4654; } }
-@media (prefers-reduced-motion: reduce) { body, body::before, section, #news span, #prgoal .bar.alarm, .dwarf .arm, #prgoal .queue { animation: none; } #news span { padding-left: 0; } #prgoal .queue { opacity: .55; } }
+/* [impl->req~force-motion~1] `.motion` (from ?still=0) opts back out of the machine's reduced-motion setting */
+@media (prefers-reduced-motion: reduce) {
+  html:not(.motion) body, html:not(.motion) body::before, html:not(.motion) section, html:not(.motion) #news span,
+  html:not(.motion) #prgoal .bar.alarm, html:not(.motion) .dwarf .arm, html:not(.motion) #prgoal .queue { animation: none; }
+  html:not(.motion) #news span { padding-left: 0; }
+  html:not(.motion) #prgoal .queue { opacity: .55; }
+}
 html.still body, html.still body::before, html.still section, html.still #news span, html.still #prgoal .bar.alarm,
 html.still .dwarf .arm, html.still #prgoal .queue { animation: none; }
 html.still #prgoal .queue { opacity: .55; }

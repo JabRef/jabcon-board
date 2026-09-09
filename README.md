@@ -7,7 +7,7 @@ of the JabRef repository during the meetup.
 Requirements: [docs/requirements.md](docs/requirements.md), traced with OpenFastTrace (`scripts/trace.sh`).
 
 Live: <https://jabref.github.io/jabcon-board/> (only carries data while JabCon runs). The layout scales with the
-screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (remembered in the browser, Ctrl+0 resets); `?scale=0.8` / `?scale=1.2` sets it via the URL; `?still=1` to switch off the slow background animation that keeps TVs from dimming a "static" image.
+screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (remembered in the browser, Ctrl+0 resets); `?scale=0.8` / `?scale=1.2` sets it via the URL; `?still=1` to switch off the slow background animation that keeps TVs from dimming a "static" image, `?still=0` to keep the board moving even when the machine asks for reduced motion (Windows does that in battery saver, and a still board loses the newsticker and the dwarf too).
 
 ## How it works
 

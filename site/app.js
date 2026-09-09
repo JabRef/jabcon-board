@@ -216,11 +216,15 @@ function renderEta() {
 // a walk to a random spot at a dwarf's pace, a breather, and off again. Not while the board is held still.
 const WANDER_PX_S = 60, WANDER_REST_MS = 2500;
 let wanderAt = null, wanderTimer = 0;
+// [impl->req~force-motion~1] the one place that decides whether the board moves at all
+function heldStill() {
+  const html = document.documentElement;
+  return html.classList.contains('still')
+    || (!html.classList.contains('motion') && matchMedia('(prefers-reduced-motion: reduce)').matches);
+}
 function wander(on) {
   const el = $('#wanderer');
-  const still = document.documentElement.classList.contains('still')
-    || matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!on || still) {
+  if (!on || heldStill()) {
     clearTimeout(wanderTimer);
     if (el) el.remove();
     wanderAt = null;
@@ -346,7 +350,7 @@ function slotMachine() {
   popTimers = [];
   settleSlots();
   const reels = [...document.querySelectorAll('#leaderboard .pts')].reverse();
-  if (!reels.length || document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!reels.length || heldStill()) return;
   const was = Object.fromEntries((previous?.leaderboard || []).map((l) => [l.login, l.points]));
   const plan = reels.map((el, i) => {
     const final = el.textContent.replace(/,/g, ''), before = was[el.parentElement.dataset.login];
@@ -801,8 +805,7 @@ let partyTimer = 0;
 function releaseParty() {
   const rel = data.release;
   // the same rule as the wandering dwarf: reduced motion or a board held still gets the news, not the dance
-  if (!rel || !partyStage(Date.now() - Date.parse(rel.at)) || document.documentElement.classList.contains('still')
-      || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (!rel || !partyStage(Date.now() - Date.parse(rel.at)) || heldStill()) {
     clearTimeout(partyTimer);
     $('#party')?.remove();
     return;
@@ -957,7 +960,10 @@ document.querySelectorAll('.more').forEach((m) => m.addEventListener('click', ()
   box.scrollBy({ top: (m.classList.contains('above') ? -1 : 1) * box.clientHeight * 0.9, behavior: 'smooth' });
 }));
 const params = new URLSearchParams(location.search);
-if (params.get('still')) document.documentElement.classList.add('still');
+// [impl->req~force-motion~1] `?still=1` holds the board still, `?still=0` keeps it moving even when the machine asks
+// for reduced motion (a laptop on battery saver switches that on and the wall goes dead), nothing follows the machine.
+if (params.get('still') === '0') document.documentElement.classList.add('motion');
+else if (params.get('still')) document.documentElement.classList.add('still');
 // Browser zoom is a no-op here: the layout is in vw/vh, so a zoomed viewport shrinks the text right back.
 // Ctrl+wheel therefore scales the page itself; the factor survives the self-reloads via localStorage. Ctrl+0 resets.
 let scale = parseFloat(params.get('scale')) || parseFloat(localStorage.getItem('scale')) || 1;
