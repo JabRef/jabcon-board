@@ -322,7 +322,7 @@ function eventRow(e) {
 // the ticker is clipped, so a fixed block pushed the newest activity out of sight whenever JabCon items were quiet.
 // The divider therefore moves with how much recent activity is on JabCon items.
 // [impl->req~activity-grouped~2]
-// [impl->req~newsticker~3] one strip of headlines along the bottom, phrased from the board's data like the gource
+// [impl->req~newsticker~4] one strip of headlines along the bottom, phrased from the board's data like the gource
 // commentary: the tally, the latest merges, what is still left, and who earned which sticker. Seeded by PR number so
 // a refresh says the same things, and only re-rendered on a change, so the scroll never jumps back.
 const FRESH_MS = 3 * 3600000; // a sticker counts as just earned for this long
@@ -346,7 +346,8 @@ function newsItems() {
     if (revs.length) text += reviewed[c.number % reviewed.length].replace('{rev}', revs.slice(0, 2).join(' and '));
     items.push([text, c.url]);
   }
-  for (const c of closed.slice(0, 5)) items.push([`${c.assignees[0] || c.author} closed #${c.number} ${c.title}`, c.url]);
+  // no name: the card knows its author and assignee, neither of whom is necessarily who closed it
+  for (const c of closed.slice(0, 5)) items.push([`Closed: #${c.number} ${c.title}`, c.url]);
   const backlog = data.cards.filter((c) => c.column === 'backlog');
   if (backlog.length) items.push([`Still waiting: ${backlog.length} items in the backlog — ${backlog.slice(0, 3).map((c) => `#${c.number} ${c.title}`).join(', ')}${backlog.length > 3 ? ', …' : ''}`]);
   for (const m of data.milestones) items.push([`${m.title}: ${m.open ? `${m.open} to go, ` : 'done! '}${m.closed - m.baseline} closed during JabCon`, m.url]);
@@ -379,7 +380,7 @@ function newsItems() {
     const fresh = b.since && Date.now() - new Date(b.since) < FRESH_MS;
     return [`${b.emoji} ${l.login} ${fresh ? 'just earned' : 'holds'} the ${b.title} sticker: ${b.text}`, b.url || user(l.login)];
   });
-  // [impl->req~newsticker~3] one sticker between every two headlines, so a screen width is never stickers only
+  // [impl->req~newsticker~4] one sticker between every two headlines, so a screen width is never stickers only
   const mixed = [];
   for (let i = 0; i < Math.max(items.length, stickers.length); i++) mixed.push(...items.slice(i, i + 1), ...stickers.slice(i, i + 1));
   return mixed;
@@ -392,6 +393,36 @@ function renderNews() {
   if (strip.innerHTML === html) return;
   strip.innerHTML = html;
   strip.style.animationDuration = `${Math.max(20, items.reduce((n, [t]) => n + t.length, 0) / 6)}s`;
+}
+
+// [impl->req~news-scrub~1] The strip is one CSS animation, so dragging it is just scrubbing that animation:
+// pixels become milliseconds through the strip's own width and duration. Clicking a separator opens the full list,
+// for when the headline that just went past is worth reading properly.
+let newsDrag = 0;
+$('#news').addEventListener('pointerdown', (e) => {
+  const strip = $('#news span'), anim = strip.getAnimations()[0];
+  if (!anim) return; // reduced motion: nothing to scrub
+  const perPx = anim.effect.getTiming().duration / strip.offsetWidth, x0 = e.clientX, t0 = anim.currentTime;
+  anim.pause();
+  newsDrag = 0;
+  const move = (ev) => {
+    newsDrag = Math.max(newsDrag, Math.abs(ev.clientX - x0));
+    anim.currentTime = Math.max(0, t0 - (ev.clientX - x0) * perPx); // drag right, go back in time
+  };
+  document.addEventListener('pointermove', move);
+  document.addEventListener('pointerup', () => { document.removeEventListener('pointermove', move); anim.play(); }, { once: true });
+});
+$('#news').addEventListener('click', (e) => {
+  if (newsDrag > 4) return e.preventDefault(); // the drag ended on a headline; that is not a click on it
+  if (e.target.tagName === 'I') { pushedDetail = true; location.hash = 'news'; }
+});
+
+// [impl->req~news-scrub~1]
+function showNewsList() {
+  const cell = (t) => `<span class="what"><span class="line">${esc(t)}</span></span>`;
+  $('#detail h2').innerHTML = 'Headlines <span class="muted">everything the strip is saying, in order</span>';
+  $('#detail ul').innerHTML = newsItems().map(([t, url]) => `<li>${url ? link(url, cell(t), 'main') : cell(t)}</li>`).join('');
+  $('#detail').hidden = false;
 }
 
 // A merge scores 3 x the factor for the PR's author, but merging is the merger's event, not the author's: without a
@@ -444,6 +475,7 @@ let pushedDetail = false; // only then is a history.back() ours to take; a deep 
 function route() {
   const [, kind, arg] = location.hash.match(/^#(user|component)\/(.+)$/) || [];
   if (arg && data) (kind === 'user' ? showDetail : showComponentDetail)(decodeURIComponent(arg));
+  else if (location.hash === '#news' && data) showNewsList();
   else { $('#detail').hidden = true; pushedDetail = pushedDetail && !!arg; }
 }
 function closeDetail() {
