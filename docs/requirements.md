@@ -473,12 +473,12 @@ is skipped with a warning, not a failed run.
 Needs: impl
 
 ### Tendency arrows
-`req~trend-arrows~3`
+`req~trend-arrows~4`
 
 The collector samples the open-PR count, the column sizes and everybody's points on every run and keeps half a day
-of them. Backlog, in progress and the open-PR meter show a triangle for the direction the number moved in the last
-hour, green when that is the good direction (fewer open PRs, a shorter backlog, less work still in progress because
-it landed), red otherwise;
+of them. All three columns and the open-PR meter show a triangle for the direction the number moved in the
+last hour, green when that is the good direction (fewer open PRs, a shorter backlog, less work still in progress
+because it landed, more done), red otherwise, and a gray bar when the number did not move at all;
 each contributor shows their points gained in the same window. Hovering gives the change and the window it covers,
 which is shorter than an hour while the history is still that young.
 
