@@ -434,10 +434,13 @@ browser), Ctrl+0 resets. Browser zoom is not a usable substitute (viewport units
 Needs: impl
 
 ### Readable on a phone
-`req~mobile-layout~1`
+`req~mobile-layout~2`
 
 Below 900 px the board becomes one scrolling column with text at a readable size, so a phone shows every section
-including the footer instead of clipping whatever falls below the browser toolbars.
+including the footer instead of clipping whatever falls below the browser toolbars. Nothing sticks out sideways —
+the open-PR meter goes under the stats heading and takes the width that is left — and the page ends with the
+newsticker: no strip of empty scroll below it. The version stamp rides in the footer instead of the fixed corner,
+where it would sit on top of the headlines.
 
 Needs: impl
 
@@ -446,7 +449,8 @@ Needs: impl
 
 Slow, low-contrast animation keeps content-adaptive TVs from dimming; off with `?still=1` or reduced-motion.
 It must not animate `transform` / `filter` on ancestors of fixed-positioned elements (that would re-anchor the
-enlarged video).
+enlarged video, the corner stamp and the walking dwarf to the document instead of the screen), so the whole-screen
+brightening is an overlay of its own.
 
 Needs: impl
 
@@ -596,6 +600,7 @@ The corner shows the short commit the site was built from and when that commit w
 against what is pushed; hovering spells both out. The page polls that file and reloads itself once it changes, so a
 deployment reaches the wall within five minutes without anyone touching it. This stamp, and the data timestamp next
 to it, stay visible in the corner even while a contributor or component detail view covers the rest of the page.
+On a phone they ride in the footer instead (`req~mobile-layout~2`), where a fixed corner would cover the newsticker.
 
 Needs: impl
 

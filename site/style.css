@@ -269,9 +269,12 @@ body::before {
 }
 main { position: relative; z-index: 0; }
 section { animation: breathe 20s ease-in-out infinite; }
-/* every pixel changes slowly: the whole page brightens and darkens by ~10 % over 40 s */
-body { animation: glow 40s ease-in-out infinite; }
-@keyframes glow { 50% { filter: brightness(1.1); } }
+/* every pixel changes slowly: a white wash breathing over the whole screen. It has to be an overlay and not a
+   filter on body - a filter makes body the containing block of every fixed descendant, which re-anchors the
+   enlarged video, the corner stamp and the walking dwarf to the document instead of the screen */
+body::after { content: ""; position: fixed; inset: 0; z-index: 99; pointer-events: none;
+  background: #fff; opacity: 0; animation: glow 40s ease-in-out infinite; }
+@keyframes glow { 50% { opacity: .04; } }
 @keyframes drift {
   0%   { transform: translate(-25%, -20%) scale(.8); }
   50%  { transform: translate(15%, 10%) scale(1.1); }
@@ -280,12 +283,12 @@ body { animation: glow 40s ease-in-out infinite; }
 @keyframes breathe { 50% { border-color: #3d4654; } }
 /* [impl->req~force-motion~1] `.motion` (from ?still=0) opts back out of the machine's reduced-motion setting */
 @media (prefers-reduced-motion: reduce) {
-  html:not(.motion) body, html:not(.motion) body::before, html:not(.motion) section, html:not(.motion) #news span,
+  html:not(.motion) body::after, html:not(.motion) body::before, html:not(.motion) section, html:not(.motion) #news span,
   html:not(.motion) #prgoal .bar.alarm, html:not(.motion) .dwarf .arm, html:not(.motion) #prgoal .queue { animation: none; }
   html:not(.motion) #news span { padding-left: 0; }
   html:not(.motion) #prgoal .queue { opacity: .55; }
 }
-html.still body, html.still body::before, html.still section, html.still #news span, html.still #prgoal .bar.alarm,
+html.still body::after, html.still body::before, html.still section, html.still #news span, html.still #prgoal .bar.alarm,
 html.still .dwarf .arm, html.still #prgoal .queue { animation: none; }
 html.still #prgoal .queue { opacity: .55; }
 html.still #news span { padding-left: 0; }
@@ -311,7 +314,7 @@ html.still #news span { padding-left: 0; }
 
 /* Phones and small tablets: one scrolling column with readable text instead of the wall layout.
    The page scrolls (no more content hidden under the browser toolbars) and nothing is clipped. */
-/* [impl->req~mobile-layout~1] */
+/* [impl->req~mobile-layout~2] */
 @media (max-width: 900px) {
   html { font-size: 15px; }
   html, body { height: auto; overflow: visible; }
@@ -332,6 +335,14 @@ html.still #news span { padding-left: 0; }
   #gource[src]:hover ~ .video-nav, .video-nav:hover { display: inline-block; }
   #footer { height: auto; flex-wrap: wrap; justify-content: flex-end; padding: 0 .8rem .8rem; }
   #news { flex-basis: 100%; }
+  /* in the footer's flow, not pinned to the corner: a fixed stamp on a scrolling page rides along over whatever is
+     at the bottom of the screen, and at the end of the page that is the newsticker */
+  #stamp { position: static; }
+  /* the meter is as wide as a phone is: it goes under the heading and takes the width that is left, instead of
+     being pushed off the right edge and taking the whole page into a sideways scroll with it */
+  #stats h2 { flex-wrap: wrap; }
+  #prgoal { margin-left: 0; flex-basis: 100%; }
+  #prgoal .meter { flex: 1; width: auto !important; }
   #detail { padding: .8rem; }
 }
 
