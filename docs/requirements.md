@@ -420,14 +420,24 @@ and says "just earned" for those under three hours old and "holds" for the rest.
 Needs: impl
 
 ### Newsticker
-`req~newsticker~3`
+`req~newsticker~4`
 
 A headline strip scrolls along the bottom edge of the wall, so there is something to read in quiet hours. It is
 phrased from the board's own data in the gource commentator's voice: the tally so far, the latest merged PRs (with
-their reviewers), recently closed issues, what is still left (backlog, milestones, focus label), who leads, the race
+their reviewers), recently closed issues (without a name — the board cannot tell who closed one), what is still
+left (backlog, milestones, focus label), who leads, the race
 (see the catch-up requirement), and every sticker earned and by whom. Stickers are woven in one at a time between
 the other headlines, so a screen width never shows stickers only. Headlines link to the item, sticker or
 contributor. The strip stays still with `?still=1` or reduced-motion.
+
+Needs: impl
+
+### The newsticker can be scrolled back
+`req~news-scrub~1`
+
+Dragging the headline strip left or right scrolls it back and forth so a headline that already went past can be
+read again; it resumes where it was let go. Clicking a separator between two headlines opens the full list of
+headlines as a detail view.
 
 Needs: impl
 
