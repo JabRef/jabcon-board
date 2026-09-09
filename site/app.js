@@ -514,7 +514,7 @@ function newsItems() {
   const mid = ['{who} slots it in: {title}. {add} lines, clean finish.', 'Nicely worked by {who}: {title}.', 'And {who} delivers: {title}. {add} lines added.'];
   const small = ['A quick one from {who}: {title}.', '{who} keeps it tidy: {title}.', 'Tap-in for {who}: {title}.'];
   const reviewed = [' {rev} waves it through.', ' Reviewed by {rev}, no complaints.', ' {rev} had a look first, all clear.'];
-  // [impl->req~release-party~1]
+  // [impl->req~release-party~2]
   if (data.release) items.push([`\u{1f3f7}\u{fe0f} ${data.release.repo} ${data.release.name} released ${ago(data.release.at)}`, data.release.url]);
   // [impl->req~sticker-moves~1]
   if (changes.points.length) items.push([`Latest run (${ago(changes.at)}): ${changes.points.map(([l, d]) => `${l} ${d > 0 ? '+' : '−'}${fmt(Math.abs(d))}`).join(', ')}`]);
@@ -752,8 +752,11 @@ function celebrate(prev) {
     toast(`\u{1f3af} ${g.open} open PRs \u2014 the ${g.target} mark is reached!`);
     if (window.confetti) confetti({ particleCount: 300, spread: 120, origin: { y: 0.6 } });
   }
-  // [impl->req~release-party~1] a tag we had not seen in the run before; a first-ever reading is no release
-  if (data.release && prev.release && data.release.tag !== prev.release.tag) releaseParty(data.release);
+  // [impl->req~release-party~2] a tag we had not seen in the run before; a first-ever reading is no release
+  if (data.release && prev.release && data.release.tag !== prev.release.tag) {
+    bell();
+    toast(`\u{1f3f7}\u{fe0f} ${data.release.repo} ${data.release.name} is out!`);
+  }
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
     // the name is the author, not the merger: credit it with "by", never as the one who merged
@@ -788,24 +791,34 @@ function bell() {
 }
 document.addEventListener('click', () => { if (audio?.state === 'suspended') audio.resume(); }, { once: false });
 
-// [impl->req~release-party~1] The moment the hammering was for: a new tag on the goal repo. The bell rings, the
-// confetti keeps coming for a minute and a chorus line of dwarfs dances along the bottom edge.
-const PARTY_MS = 60000, PARTY_DWARFS = 9, PARTY_BURST_MS = 1500;
+// [impl->req~release-party~2] The moment the hammering was for: a new tag on the goal repo. The bell and the toast
+// belong to the run that first sees it; the dance is read off the release's own timestamp instead, so it lasts the
+// evening rather than a minute and a board opened - or reloaded by a deploy - meanwhile joins it.
+const PARTY_MS = 60000, PARTY_TAIL_MS = 3 * 3600000, PARTY_DWARFS = 9, PARTY_BURST_MS = 1500;
+// what a release of this age is owed: the confetti of the first minute, the dance of the hours after it, or nothing
+const partyStage = (age) => age < PARTY_MS ? 'confetti' : age < PARTY_TAIL_MS ? 'tail' : '';
 let partyTimer = 0;
-function releaseParty(rel) {
-  bell();
-  toast(`\u{1f3f7}\u{fe0f} ${rel.repo} ${rel.name} is out!`);
+function releaseParty() {
+  const rel = data.release;
   // the same rule as the wandering dwarf: reduced motion or a board held still gets the news, not the dance
-  if (document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  clearTimeout(partyTimer);
-  $('#party')?.remove();
+  if (!rel || !partyStage(Date.now() - Date.parse(rel.at)) || document.documentElement.classList.contains('still')
+      || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    clearTimeout(partyTimer);
+    $('#party')?.remove();
+    return;
+  }
   // each dwarf a beat behind the one before, so the row reads as a dance and not as one animation nine times
-  document.body.insertAdjacentHTML('beforeend', `<div id="party" title="${esc(rel.name)} is released!">`
-    + Array.from({ length: PARTY_DWARFS }, (_, i) => `<span style="animation-delay:-${i * 120}ms">${dwarfSvg(64)}</span>`).join('')
-    + '</div>');
-  const until = Date.now() + PARTY_MS;
+  if (!$('#party'))
+    document.body.insertAdjacentHTML('beforeend', `<div id="party" title="${esc(rel.name)} is released!">`
+      + Array.from({ length: PARTY_DWARFS }, (_, i) => `<span style="animation-delay:-${i * 120}ms">${dwarfSvg(64)}</span>`).join('')
+      + '</div>');
+  clearTimeout(partyTimer);
   (function burst() {
-    if (Date.now() > until) { $('#party')?.remove(); return; }
+    // the confetti is the first minute's business; after it the line dances on, dimmed and slower, so hours of
+    // celebration stay at the edge of the eye instead of in front of the cards
+    const stage = partyStage(Date.now() - Date.parse(rel.at));
+    $('#party')?.classList.toggle('tail', stage !== 'confetti');
+    if (stage !== 'confetti') return;
     if (window.confetti) confetti({ particleCount: 120, spread: 100, origin: { y: 0.85, x: Math.random() } });
     partyTimer = setTimeout(burst, PARTY_BURST_MS);
   })();
@@ -827,6 +840,7 @@ function render() {
   renderTicker();
   renderNews();
   renderProgress();
+  releaseParty(); // [impl->req~release-party~2] read off the release time, so it survives a reload
   tick();
   route(); // a deep link renders once the data is there; an open detail view follows the refreshed data
 }
@@ -841,13 +855,18 @@ function renderProgress() {
   const pct = (iso) => `${(100 * (Date.parse(iso) - start) / (end - start)).toFixed(2)}%`;
   const fmt = (iso) => new Date(iso).toLocaleString('en-GB', { weekday: 'short', hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone });
   const phases = data.config.phases || [];
+  // [impl->req~release-party~2] where the release landed on the timeline, so the moment still stands on the board
+  // hours later. The collector keeps the last release it knows of, and an older one has no place on this bar.
+  const rel = data.release, relAt = rel ? Date.parse(rel.at) : 0;
+  const mark = relAt >= start && relAt <= end ? rel : null;
   let from = data.config.jabcon_start;
   $('#phases').innerHTML = phases.map((p, i) => {
     const mid = new Date((Date.parse(from) + Date.parse(p.end)) / 2).toISOString();
     from = p.end;
     return `<span style="left:${pct(mid)}">${esc(p.label)} <b class="phase-left" data-end="${esc(p.end)}"></b></span>`;
-  }).join('');
-  $('#ticks').innerHTML = phases.slice(0, -1).map((p) => `<span style="left:${pct(p.end)}"></span>`).join('');
+  }).join('') + (mark ? `<span class="release" style="left:${pct(mark.at)}" title="${esc(mark.repo)} ${esc(mark.name)} released ${fmt(mark.at)}">\u{1f389}</span>` : '');
+  $('#ticks').innerHTML = phases.slice(0, -1).map((p) => `<span style="left:${pct(p.end)}"></span>`).join('')
+    + (mark ? `<span class="release" style="left:${pct(mark.at)}"></span>` : '');
   $('#from').textContent = fmt(data.config.jabcon_start);
   $('#to').textContent = fmt(data.config.jabcon_end);
   // [impl->req~activity-heat-strip~1]

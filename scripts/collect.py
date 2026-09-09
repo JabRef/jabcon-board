@@ -1116,7 +1116,7 @@ def merge_queue(repo):
 
 
 
-# [impl->req~release-party~1]
+# [impl->req~release-party~2]
 def latest_release():
     """The newest release of the goal repository, prereleases included - JabRef's alphas are the whole point.
     A release is cut by a bot, so no participant's event feed carries it; the board has to ask for it."""

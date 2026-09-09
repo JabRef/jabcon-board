@@ -24,6 +24,9 @@ header h1 { margin: 0; font-size: 2.4rem; letter-spacing: .05em; }
 #bar { position: relative; height: .7rem; background: var(--border); border-radius: .35rem; overflow: hidden; }
 #elapsed { height: 100%; background: var(--accent); border-radius: .35rem; width: 0; transition: width 1s linear; }
 #ticks span { position: absolute; top: 0; bottom: 0; width: .15rem; background: var(--bg); transform: translateX(-50%); }
+/* [impl->req~release-party~2] the release's moment on the timeline: a gold tick on the bar, its emoji above it */
+#ticks span.release { width: .25rem; background: var(--warn); box-shadow: 0 0 .5rem var(--warn); }
+#phases span.release { font-size: 1rem; line-height: 1; }
 #countdown { color: var(--fg); }
 /* one cell per JabCon hour under the bar; --o is the hour's share of the busiest hour */
 /* [impl->req~activity-heat-strip~1] */
@@ -153,12 +156,15 @@ section h2 .count { float: right; color: var(--fg); }
 #wanderer svg { display: block; animation: bob .45s steps(2) infinite; } /* two frames of a walk: he reads as alive
    even while he is only crossing the board at his own slow pace */
 @keyframes bob { 50% { transform: translateY(-3px); } }
-/* [impl->req~release-party~1] the chorus line: dwarfs spread along the bottom edge for the length of the party,
+/* [impl->req~release-party~2] the chorus line: dwarfs spread along the bottom edge for the length of the party,
    over everything and in the way of nothing. The stagger comes from the script, one delay per dwarf */
 #party { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; display: flex; justify-content: space-around;
   pointer-events: none; }
 #party svg { display: block; }
 #party span { animation: dance .5s ease-in-out infinite; }
+/* [impl->req~release-party~2] past the confetti minute the line dances on for hours, dimmed and at half the pace */
+#party.tail { opacity: .45; }
+#party.tail span { animation-duration: 2.4s; }
 @keyframes dance { 0%, 100% { transform: translateY(0) rotate(-12deg); } 50% { transform: translateY(-18px) rotate(12deg); } }
 @keyframes hammer {
   0%, 40% { transform: rotate(-62deg); }
