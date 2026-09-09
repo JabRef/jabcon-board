@@ -28,19 +28,22 @@ function ago(iso) {
 
 // Tendency of a counted number: a triangle for the way it moved over the last hour (or over as much history as the
 // collector has kept so far), green when that is the good direction. Nothing is drawn without a second sample.
-// [impl->req~trend-arrows~3]
+// [impl->req~trend-arrows~4]
 const TREND_H = 1;
-function trend(key, goodDown, withValue) {
+function trend(key, goodDown, withValue, flat) {
   const h = data.history || [];
   const at = (s) => (typeof key === 'function' ? key(s) : s?.[key]);
   const then = h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop() || h[0];
   const last = h.at(-1);
   if (!then || then === last || at(then) == null || at(last) == null) return '';
   const d = at(last) - at(then);
-  if (!d) return '';
+  if (!d && !flat) return '';
   const mins = Math.round((Date.parse(last.t) - Date.parse(then.t)) / 60000);
-  const why = `${d > 0 ? '+' : ''}${d} in the last ${mins < 90 ? `${mins} min` : `${Math.round(mins / 60)} h`}`;
-  return `<span class="trend ${(d < 0) === !!goodDown ? 'good' : 'bad'}" title="${esc(why)}">${d > 0 ? '\u25b2' : '\u25bc'}${withValue ? Math.abs(d) : ''}</span>`;
+  const window = `the last ${mins < 90 ? `${mins} min` : `${Math.round(mins / 60)} h`}`;
+  const why = d ? `${d > 0 ? '+' : ''}${d} in ${window}` : `unchanged in ${window}`;
+  // a flat number gets a gray dash rather than no mark at all, the way a ticker shows an unmoved price
+  const cls = !d ? 'flat' : (d < 0) === !!goodDown ? 'good' : 'bad';
+  return `<span class="trend ${cls}" title="${esc(why)}">${d ? (d > 0 ? '\u25b2' : '\u25bc') : '\u25ac'}${withValue ? Math.abs(d) : ''}</span>`;
 }
 
 // [impl->req~column-order~2]
@@ -52,8 +55,9 @@ function renderColumn(id, cards) {
   const nFocus = sorted.filter((c) => c.focus).length;
   const box = $(`#${id} .cards`);
   const scrollTop = box.scrollTop;
-  // a shrinking column is good in both cases: the backlog was picked up, the work in progress landed
-  $(`#${id} .count`).innerHTML = `${cards.length}${id === 'done' ? '' : trend(id, true)}`;
+  // a shrinking column is good in both cases: the backlog was picked up, the work in progress landed - and a
+  // growing "done" is good for the same reason
+  $(`#${id} .count`).innerHTML = `${cards.length}${trend(id, id !== 'done', false, true)}`;
   box.innerHTML = sorted.map((c, i) => (i === nFocus && nFocus && i < sorted.length ? '<div class="divider">other</div>' : '') + (() => {
     const other = !c.repo.startsWith(org);
     const tags = [];
@@ -131,7 +135,7 @@ function renderPrGoal() {
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   $('#prgoal').innerHTML = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
-    <span class="cap">${g.open} open PRs${trend('open_prs', true)}</span>
+    <span class="cap">${g.open} open PRs${trend('open_prs', true, false, true)}</span>
     <span class="meter"><span class="bar" style="--t:${pct(g.target)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
 }
