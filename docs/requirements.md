@@ -451,6 +451,16 @@ is skipped with a warning, not a failed run.
 
 Needs: impl
 
+### Open-PR meter
+`req~pr-goal-meter~1`
+
+Right of the stats heading a meter shows how many PRs are open in the configured goal repository, scaled from zero
+to the goal, with the stretch target ticked on the bar and labelled on the scale below it. Green at or below the
+stretch target, amber once the count is over the goal. Hovering names the repository and how many PRs still have to
+go; clicking opens the PR list.
+
+Needs: impl
+
 ### Nerd corner
 `req~nerd-corner~6`
 

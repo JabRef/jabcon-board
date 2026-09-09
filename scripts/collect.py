@@ -1015,6 +1015,16 @@ def focus_progress():
             "url": f"https://github.com/issues?q={urllib.parse.quote(FOCUS_Q + ' is:open')}"}
 
 
+# [impl->req~pr-goal-meter~1]
+def pr_goal():
+    """How many PRs are open in the goal repo, for the meter against the configured targets."""
+    goal = CONFIG.get("pr_goal")
+    if not goal:
+        return None
+    n = get("/search/issues", {"q": f"repo:{goal['repo']} is:pr is:open", "per_page": 1})[0]["total_count"]
+    return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls"}
+
+
 # [impl->req~jabcon-window~1]
 def main():
     args = sys.argv[1:]
@@ -1071,6 +1081,7 @@ def main():
         "ai_models": dict(sorted(ai_used.items(), key=lambda kv: -kv[1])),
         "milestones": ms,
         "focus": focus_progress(),
+        "pr_goal": pr_goal(),
         "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,
