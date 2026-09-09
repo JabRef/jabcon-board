@@ -78,7 +78,7 @@ and, for the ticker badge, in `eventPoints()` in `site/app.js`.
 ## Bonus points
 
 A second evaluation, like the bonus round in a game: **+100 for every superlative a contributor holds**, shared by
-everyone tied for it. The icons sit under the login on the leaderboard and in the contributor detail view; each links
+everyone tied for it. The icons sit under the login on the leaderboard and in the contributor detail view, newest first; each links
 to what earned it (the record's PR, or the GitHub search behind the number). Self-reviews, fork syncs and
 AI-written comments count for none of them.
 

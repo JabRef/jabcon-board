@@ -183,7 +183,7 @@ and no bonus, the same way bot accounts are skipped.
 Needs: impl
 
 ### Bonus points
-`req~bonus-points~19`
+`req~bonus-points~20`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
 most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
@@ -195,7 +195,7 @@ newcomer award, the one who brought the oldest item of somebody else back into t
 of the PR that went from opened to merged in the shortest time a speedrun award. Every nerd corner record pays +100 to the PR's author as well, except for the authors listed in
 `record_bonus_exclude` — there the runner-up holds the record bonus. Configured `honorary_awards` add +100 for what
 the data cannot see. The leaderboard
-shows one emoji per award under the login and names the category in the tooltip and the contributor detail view.
+shows one emoji per award under the login, newest first (by the time the award was first seen), and names the category in the tooltip and the contributor detail view.
 Each emoji links to what earned it: the record's PR, or a GitHub search for the comments, reviews, PRs or repositories
 that were counted; an award with nothing to point at opens the contributor's detail view.
 
