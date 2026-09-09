@@ -144,6 +144,8 @@ function renderStats() {
 // The open-PR meter next to the stats heading: how far the review backlog still is from the goal, with the stretch
 // target ticked on the bar. The colour runs green (zero open) to red at the goal; past the goal it flashes.
 // [impl->req~pr-goal-meter~1]
+let prgoalHtml;
+const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
 function renderPrGoal() {
   const g = data.pr_goal;
   $('#prgoal').hidden = !g;
@@ -151,10 +153,17 @@ function renderPrGoal() {
   const pct = (n) => (100 * Math.min(n, g.max) / g.max).toFixed(1) + '%';
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
-  $('#prgoal').innerHTML = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
+  const html = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
     <span class="cap">${g.open} open PRs${trend('open_prs', true, false, true)}</span>
     <span class="meter"><span class="bar ${g.open > g.max ? 'alarm' : ''}" style="--t:${pct(g.target)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
+  if (html !== prgoalHtml) { // rebuilding the same meter would restart the alarm's beat mid-cycle for nothing
+    prgoalHtml = html;
+    $('#prgoal').innerHTML = html;
+  }
+  // and when it does have to be rebuilt, the beat picks up where the old one stood: it runs on the wall clock
+  const bar = $('#prgoal .bar.alarm');
+  if (bar) bar.style.animationDelay = `-${Date.now() % (2 * ALARM_MS)}ms`;
 }
 
 // [impl->req~bonus-points~21] the +100 awards a contributor holds, one emoji each, the category in the tooltip.

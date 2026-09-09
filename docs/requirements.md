@@ -519,7 +519,8 @@ Right of the stats heading a meter shows how many PRs are open in the configured
 to the goal, with the stretch target ticked on the bar and labelled on the scale below it. The filled part is
 coloured by the count: green near zero, amber at the stretch target, red at the goal.
 Past the goal the bar turns solid red and beats — swelling and glowing and back, like a health bar near zero
-(not with reduced motion or the still mode). Hovering names the repository and how many PRs still have to
+(not with reduced motion or the still mode). The beat runs on the wall clock, so a data refresh redrawing the meter
+does not jump it back to the start of a cycle. Hovering names the repository and how many PRs still have to
 go; clicking opens the PR list.
 
 Needs: impl
