@@ -514,11 +514,12 @@ are worth exactly 100 each. The other lines are counts, not points, since a sing
 Needs: impl
 
 ### The footer names the deployed version
-`req~deployed-version~1`
+`req~deployed-version~2`
 
 The corner shows the short commit the site was built from and when that commit was made, so a wall can be checked
 against what is pushed; hovering spells both out. The page polls that file and reloads itself once it changes, so a
-deployment reaches the wall within five minutes without anyone touching it.
+deployment reaches the wall within five minutes without anyone touching it. This stamp, and the data timestamp next
+to it, stay visible in the corner even while a contributor or component detail view covers the rest of the page.
 
 Needs: impl
 
