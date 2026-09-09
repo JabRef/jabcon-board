@@ -1068,13 +1068,16 @@ def focus_progress():
             "url": f"https://github.com/issues?q={urllib.parse.quote(FOCUS_Q + ' is:open')}"}
 
 
-# [impl->req~pr-goal-meter~2]
+# [impl->req~pr-goal-meter~3]
 def pr_goal(previous=None):
-    """How many PRs are open in the goal repo, for the meter against the configured targets."""
+    """How many PRs are open in the goal repo (plus any repo counted along with it), for the meter against the
+    configured targets."""
     goal = CONFIG.get("pr_goal")
     if not goal:
         return None
-    n = get("/search/issues", {"q": f"repo:{goal['repo']} is:pr is:open", "per_page": 1})[0]["total_count"]
+    repos = [goal["repo"], *goal.get("also_repos", [])]
+    q = " ".join(f"repo:{r}" for r in repos) + " is:pr is:open"
+    n = get("/search/issues", {"q": q, "per_page": 1})[0]["total_count"]
     # GitHub's search index now and then answers 0 for a repo that plainly has open PRs. Reporting that would
     # not just draw an empty meter, it would poison the history a trend arrow is measured against.
     if not n:
@@ -1083,7 +1086,9 @@ def pr_goal(previous=None):
     if mq is None:  # the call failed: keep the dwarf swinging on the last count rather than letting him disappear
         old = (previous or {}).get("pr_goal") or {}
         mq = {k: old[k] for k in ("queue", "queue_url", "queue_prs", "queue_eta") if k in old}
-    return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls", **mq}
+    url = (f"https://github.com/{goal['repo']}/pulls" if len(repos) == 1
+           else f"https://github.com/search?q={urllib.parse.quote(q)}&type=pullrequests")
+    return {**goal, "open": n, "url": url, **mq}
 
 
 # [impl->req~merge-queue-dwarf~5]
