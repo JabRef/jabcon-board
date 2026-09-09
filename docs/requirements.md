@@ -536,12 +536,13 @@ so a failed collection never reads as a change.
 Needs: impl
 
 ### A contributor's change is explained
-`req~delta-detail~1`
+`req~delta-detail~2`
 
 Every history sample keeps the counts behind a contributor's total (merged PRs, reviews, other events, how many were
 AI-assisted, on JabCon items or in boosted repos, and the stickers held). Hovering the gain next to a login, and the
 contributor's own detail view, then say what moved it: the counts that changed and the stickers gained or lost, which
-are worth exactly 100 each. The other lines are counts, not points, since a single event is worth between 1 and 30.
+are worth exactly 100 each. A sticker that changed hands also names the other side: who took it, or whom it was taken
+from, as far as the same two samples show. The other lines are counts, not points, since a single event is worth between 1 and 30.
 
 Needs: impl
 

@@ -36,7 +36,7 @@ function trendSamples(at) {
   const h = (data.history || []).filter((s) => at(s) != null);
   return [h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop() || h[0], h.at(-1)];
 }
-// [impl->req~delta-detail~1] what moved a contributor's total in that window: the counts that changed, and the
+// [impl->req~delta-detail~2] what moved a contributor's total in that window: the counts that changed, and the
 // stickers gained or lost, which are worth exactly 100 each. The other lines are counts, not points, since a single
 // review is worth between 1 and 30 depending on the diff and the repo.
 function deltaWhy(login) {
@@ -46,8 +46,14 @@ function deltaWhy(login) {
   const lines = [['m', 'merged PRs'], ['r', 'reviews'], ['o', 'comments, issues and pushes'],
     ['a', 'of them AI-assisted'], ['k', 'on JabCon items'], ['x', 'in boosted repos']]
     .filter(([k]) => a[k] !== b[k]).map(([k, what]) => `${what} ${a[k]} → ${b[k]}`);
-  (a.b || []).filter((t) => !(b.b || []).includes(t)).forEach((t) => lines.push(`lost ${t} (−100)`));
-  (b.b || []).filter((t) => !(a.b || []).includes(t)).forEach((t) => lines.push(`earned ${t} (+100)`));
+  // the other side of a hand-over sits in the same two samples: whoever holds the sticker there and did not before
+  const held = (s, t) => Object.entries(s?.parts || {}).filter(([l, p]) => l !== login && (p.b || []).includes(t)).map(([l]) => l);
+  const side = (t, has, had, word) => {
+    const who = held(has, t).filter((l) => !held(had, t).includes(l));
+    return who.length ? ` ${word} ${who.join(' and ')}` : '';
+  };
+  (a.b || []).filter((t) => !(b.b || []).includes(t)).forEach((t) => lines.push(`lost ${t} (−100)${side(t, last, then, 'to')}`));
+  (b.b || []).filter((t) => !(a.b || []).includes(t)).forEach((t) => lines.push(`earned ${t} (+100)${side(t, then, last, 'from')}`));
   return lines;
 }
 function trend(key, goodDown, withValue, flat, extra) {
@@ -635,7 +641,7 @@ function showDetail(login) {
   if (segment) events = events.filter(SEGMENTS[segment]);
   $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${fmt(l.points)} points · ${seg('merged', `${l.merged} merged × 3`)} (${seg('ai', `${l.ai || 0} AI-assisted × 0.25`)}) · ${seg('reviews', `${l.reviews} reviews × 1..3`)} · ${seg('other', `${l.other} other × 1`)} · ${seg('milestone', `${l.milestone || 0} on JabCon items × 10`)} · ${seg('boosted', `${l.boosted || 0} in ${boostText()}`)}${segment ? ' <button class="seg clear" data-seg="">✕ clear filter</button>' : ''}</span>`;
   $('#detail h2').innerHTML += freshest(l).map((b) => ' ' + bonusLink(b, login, `${b.emoji} ${esc(b.title)} +${b.points}`)).join('');
-  // [impl->req~delta-detail~1] why the number moved: guessing from the ticker alone is not possible
+  // [impl->req~delta-detail~2] why the number moved: guessing from the ticker alone is not possible
   const moved = deltaWhy(login), gain = trend((s) => s.points?.[login], false, true, true);
   $('#detail h2').innerHTML += gain
     ? `<div class="moved">${gain} in the last hour${moved.length ? ': ' + moved.map(esc).join(' · ') : ''}</div>` : '';

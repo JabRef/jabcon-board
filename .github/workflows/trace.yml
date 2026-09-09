@@ -17,4 +17,4 @@ jobs:
         run: for t in test_*.py; do python3 "$t"; done
         working-directory: scripts
       - name: JS self-checks
-        run: node scripts/test_nerd_order.js && node scripts/test_trend_samples.js
+        run: node scripts/test_nerd_order.js && node scripts/test_trend_samples.js && node scripts/test_delta_why.js
