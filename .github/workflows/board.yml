@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - run: scripts/gh-pages.sh prepare
       - name: Copy site
-        run: cp -r site/. out/ && echo "${GITHUB_SHA::7}" > out/version.txt
+        run: cp -r site/. out/ && echo "${GITHUB_SHA::7} $(git log -1 --format=%cI)" > out/version.txt
       - name: Collect data
         env:
           GITHUB_TOKEN: ${{ github.token }}
