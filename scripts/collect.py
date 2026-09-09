@@ -1082,7 +1082,24 @@ def pr_goal():
     # not just draw an empty meter, it would poison the history a trend arrow is measured against.
     if not n:
         return None
-    return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls"}
+    return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls", **(merge_queue(goal["repo"]) or {})}
+
+
+# [impl->req~merge-queue-dwarf~1]
+def merge_queue(repo):
+    """How many PRs sit in the repository's merge queue. Only GraphQL knows the queue, and it is a nice-to-have:
+    when the call fails the meter simply goes without its dwarf."""
+    owner, name = repo.split("/")
+    query = '{repository(owner:"%s",name:"%s"){mergeQueue{url entries{totalCount}}}}' % (owner, name)
+    try:
+        req = urllib.request.Request(API + "/graphql", data=json.dumps({"query": query}).encode(),
+                                     headers={"Content-Type": "application/json", "Authorization": "Bearer " + (TOKEN or "")})
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            mq = ((json.load(resp).get("data") or {}).get("repository") or {}).get("mergeQueue")
+    except Exception as e:  # network, auth, schema - none of it is worth failing the run for
+        print(f"::warning::merge queue of {repo} unavailable ({e})", file=sys.stderr)
+        return None
+    return {"queue": mq["entries"]["totalCount"], "queue_url": mq["url"]} if mq else None
 
 
 # [impl->req~trend-arrows~6]
