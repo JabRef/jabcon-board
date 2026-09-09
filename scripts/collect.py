@@ -1072,7 +1072,7 @@ def focus_progress():
 
 
 # [impl->req~pr-goal-meter~2]
-def pr_goal():
+def pr_goal(previous=None):
     """How many PRs are open in the goal repo, for the meter against the configured targets."""
     goal = CONFIG.get("pr_goal")
     if not goal:
@@ -1082,24 +1082,32 @@ def pr_goal():
     # not just draw an empty meter, it would poison the history a trend arrow is measured against.
     if not n:
         return None
-    return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls", **(merge_queue(goal["repo"]) or {})}
+    mq = merge_queue(goal["repo"])
+    if mq is None:  # the call failed: keep the dwarf swinging on the last count rather than letting him disappear
+        old = (previous or {}).get("pr_goal") or {}
+        mq = {k: old[k] for k in ("queue", "queue_url") if k in old}
+    return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls", **mq}
 
 
 # [impl->req~merge-queue-dwarf~1]
 def merge_queue(repo):
-    """How many PRs sit in the repository's merge queue. Only GraphQL knows the queue, and it is a nice-to-have:
-    when the call fails the meter simply goes without its dwarf."""
+    """How many PRs sit in the repository's merge queue, or None when the call failed - a repository without a
+    queue answers 0, so the caller can tell "nothing queued" from "could not ask". Only GraphQL knows the queue."""
     owner, name = repo.split("/")
     query = '{repository(owner:"%s",name:"%s"){mergeQueue{url entries{totalCount}}}}' % (owner, name)
     try:
         req = urllib.request.Request(API + "/graphql", data=json.dumps({"query": query}).encode(),
                                      headers={"Content-Type": "application/json", "Authorization": "Bearer " + (TOKEN or "")})
         with urllib.request.urlopen(req, timeout=60) as resp:
-            mq = ((json.load(resp).get("data") or {}).get("repository") or {}).get("mergeQueue")
+            payload = json.load(resp)
     except Exception as e:  # network, auth, schema - none of it is worth failing the run for
-        print(f"::warning::merge queue of {repo} unavailable ({e})", file=sys.stderr)
+        payload = {"errors": str(e)}
+    found = (payload.get("data") or {}).get("repository")
+    if payload.get("errors") or not found:
+        print(f"::warning::merge queue of {repo} unavailable ({payload.get('errors')})", file=sys.stderr)
         return None
-    return {"queue": mq["entries"]["totalCount"], "queue_url": mq["url"]} if mq else None
+    mq = found.get("mergeQueue")
+    return {"queue": mq["entries"]["totalCount"], "queue_url": mq["url"]} if mq else {"queue": 0}
 
 
 # [impl->req~trend-arrows~6]
@@ -1185,7 +1193,7 @@ def main():
         "ai_models": dict(sorted(ai_used.items(), key=lambda kv: -kv[1])),
         "milestones": ms,
         "focus": focus_progress(),
-        "pr_goal": pr_goal() or (previous or {}).get("pr_goal"),
+        "pr_goal": pr_goal(previous) or (previous or {}).get("pr_goal"),
         "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,
