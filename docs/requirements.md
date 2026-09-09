@@ -288,6 +288,15 @@ route, so Back, Escape and a shared link work like the contributor view.
 
 Needs: impl
 
+### Components show how much they grew
+`req~component-net~1`
+
+Next to the lines changed, every row in the Components box and the header of the component detail view show the net
+size change: added minus removed lines, signed, green when the component grew and red when it shrank. 3 added and
+5 removed reads as −2.
+
+Needs: impl
+
 ### Points breakdown filters the detail list
 `req~breakdown-filter~1`
 

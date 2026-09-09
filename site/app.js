@@ -16,6 +16,8 @@ const link = (url, inner, cls = '') => `<a class="${cls}" href="${esc(url)}" tar
 const repoLink = (repo, text) => link(`https://github.com/${repo}`, esc(text), 'repo');
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const fmt = (n) => Number(n).toLocaleString('en-US');
+// Net size change of a component: added minus removed, signed. [impl->req~component-net~1]
+const net = (n) => (n == null ? '' : `<span class="net ${n < 0 ? 'del' : 'add'}">${n < 0 ? '\u2212' : '+'}${fmt(Math.abs(n))}</span>`);
 const group = (s) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 function ago(iso) {
@@ -120,10 +122,10 @@ function renderStats() {
   renderPrGoal();
   const comps = Object.entries(s.components).sort((a, b) => b[1] - a[1]).slice(0, 5);
   const max = comps[0]?.[1] || 1;
-  const compWhy = 'Lines changed (added + removed) in this component. Click for the PRs behind the number.';
+  const compWhy = 'Lines changed (added + removed) in this component, and how much it grew or shrank (added \u2212 removed).\nClick for the PRs behind the number.';
   $('#components').innerHTML = comps.map(([name, n]) => {
     const a = `data-comp="${esc(name)}" title="${esc(compWhy)}"`;
-    return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${fmt(n)}${trend((h) => h.components?.[name], false, true, true)}</span>`;
+    return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${fmt(n)} ${net(s.components_net?.[name])}${trend((h) => h.components?.[name], false, true, true)}</span>`;
   }).join('');
   const queued = queuedCards();
   const queueMarkIf = (pred) => (queued.some(pred) ? queueMark(16) : '');
@@ -669,7 +671,8 @@ function showComponentDetail(name) {
   const lines = (c) => c.stats.components[name];
   const prs = data.cards.filter((c) => c.stats?.components?.[name]).sort((a, b) => lines(b) - lines(a));
   const total = prs.reduce((sum, c) => sum + lines(c), 0);
-  $('#detail h2').innerHTML = `${esc(name)} <span class="muted">${fmt(total)} lines changed in ${prs.length} PR${prs.length === 1 ? '' : 's'}, biggest first</span>`;
+  const totalNet = prs.reduce((sum, c) => sum + (c.stats.components_net?.[name] ?? 0), 0);
+  $('#detail h2').innerHTML = `${esc(name)} <span class="muted">${fmt(total)} lines changed ${net(totalNet)} in ${prs.length} PR${prs.length === 1 ? '' : 's'}, biggest first</span>`;
   $('#detail ul').innerHTML = prs.map((c) => `<li>${avatar(c.author)}${link(c.url,
     `<span class="what"><span class="line"><b>#${c.number}</b> ${esc(c.title)}</span></span>`, 'main')}<span class="pts" title="${esc(`lines changed in ${name}`)}">${fmt(lines(c))}</span><span class="add" title="over the whole PR">+${fmt(c.stats.additions || 0)}</span><span class="del" title="over the whole PR">\u2212${fmt(c.stats.deletions || 0)}</span>${repoLink(c.repo, c.repo)}</li>`).join('')
     || '<li class="muted">no PRs recorded for this component</li>';
