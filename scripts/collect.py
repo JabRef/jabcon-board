@@ -1089,7 +1089,7 @@ def pr_goal(previous=None):
     return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls", **mq}
 
 
-# [impl->req~merge-queue-dwarf~1]
+# [impl->req~merge-queue-dwarf~2]
 def merge_queue(repo):
     """How many PRs sit in the repository's merge queue, or None when the call failed - a repository without a
     queue answers 0, so the caller can tell "nothing queued" from "could not ask". Only GraphQL knows the queue."""

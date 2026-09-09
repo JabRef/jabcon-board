@@ -129,13 +129,15 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal .scale { position: relative; display: block; height: .9rem; font-size: .65rem; color: var(--muted); }
 #prgoal .scale span { position: absolute; }
 #prgoal .scale .over { color: #f85149; font-weight: bold; } /* the count past the goal, where the meter now ends */
-/* [impl->req~merge-queue-dwarf~1] the dwarf swings from the left onto the bar; his block flashes on the hit, both
+/* [impl->req~merge-queue-dwarf~2] the dwarf swings from the left onto the bar; his block flashes on the hit, both
    animations share the 1.2 s cycle and the phase the script sets, so the flash lands with the hammer */
 #prgoal .dwarf { flex: none; align-self: center; margin-bottom: .9rem; margin-right: -.2rem; }
 #prgoal .dwarf svg { display: block; overflow: visible; }
 #prgoal .arm { transform-box: view-box; transform-origin: 10px 8px; animation: hammer 1.2s linear infinite; }
-#prgoal .queue { position: absolute; top: 0; bottom: 0; left: 0; z-index: 1; background: #f2c94c; opacity: 0;
-  animation: queueflash 1.2s linear infinite; }
+/* a single queued PR is 1.4% of the bar - two pixels nobody sees from across the room, so the block never goes
+   below a finger's width: what he hammers at is visible whenever anything is queued at all */
+#prgoal .queue { position: absolute; top: 0; bottom: 0; left: 0; z-index: 1; min-width: .5rem; background: #f2c94c;
+  opacity: 0; animation: queueflash 1.2s linear infinite; }
 @keyframes hammer {
   0%, 40% { transform: rotate(-62deg); }
   52% { transform: rotate(8deg); }

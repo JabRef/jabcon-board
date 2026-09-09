@@ -151,11 +151,11 @@ const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
 const QUEUE_MS = 1200; // one hammer swing, the same number as the CSS animation's duration
 
-// [impl->req~merge-queue-dwarf~1] While PRs wait in the merge queue a pixel dwarf stands at the left end of the
+// [impl->req~merge-queue-dwarf~2] While PRs wait in the merge queue a pixel dwarf stands at the left end of the
 // meter and hammers away at them; the block he hits is their share of the bar, and it flashes yellow on every hit.
 function dwarf(n) {
   const why = esc(`${n} PR${n === 1 ? '' : 's'} in the merge queue.\nThe dwarf is hammering their block off the bar.`);
-  return `<span class="dwarf" title="${why}"><svg viewBox="0 0 16 16" width="26" height="26" shape-rendering="crispEdges">
+  return `<span class="dwarf" title="${why}"><svg viewBox="0 0 16 16" width="40" height="40" shape-rendering="crispEdges">
     <rect x="4" y="0" width="6" height="2" fill="#c0392b"/><rect x="3" y="2" width="9" height="1" fill="#c0392b"/>
     <rect x="5" y="3" width="5" height="2" fill="#e8b18a"/><rect x="8" y="3" width="1" height="1" fill="#2b2118"/>
     <rect x="4" y="5" width="7" height="3" fill="#dfe6ee"/>
