@@ -30,17 +30,34 @@ function ago(iso) {
 // collector has kept so far), green when that is the good direction. Nothing is drawn without a second sample.
 // [impl->req~trend-arrows~4]
 const TREND_H = 1;
-function trend(key, goodDown, withValue, flat) {
+// The pair of samples every tendency compares: the newest, and the oldest one still inside the trend window.
+function trendSamples() {
   const h = data.history || [];
+  return [h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop() || h[0], h.at(-1)];
+}
+// [impl->req~delta-detail~1] what moved a contributor's total in that window: the counts that changed, and the
+// stickers gained or lost, which are worth exactly 100 each. The other lines are counts, not points, since a single
+// review is worth between 1 and 30 depending on the diff and the repo.
+function deltaWhy(login) {
+  const [then, last] = trendSamples();
+  const a = then?.parts?.[login], b = last?.parts?.[login];
+  if (!a || !b) return [];
+  const lines = [['m', 'merged PRs'], ['r', 'reviews'], ['o', 'comments, issues and pushes'],
+    ['a', 'of them AI-assisted'], ['k', 'on JabCon items'], ['x', 'in boosted repos']]
+    .filter(([k]) => a[k] !== b[k]).map(([k, what]) => `${what} ${a[k]} → ${b[k]}`);
+  (a.b || []).filter((t) => !(b.b || []).includes(t)).forEach((t) => lines.push(`lost ${t} (−100)`));
+  (b.b || []).filter((t) => !(a.b || []).includes(t)).forEach((t) => lines.push(`earned ${t} (+100)`));
+  return lines;
+}
+function trend(key, goodDown, withValue, flat, extra) {
   const at = (s) => (typeof key === 'function' ? key(s) : s?.[key]);
-  const then = h.filter((s) => Date.parse(s.t) <= Date.now() - TREND_H * 3600e3).pop() || h[0];
-  const last = h.at(-1);
+  const [then, last] = trendSamples();
   if (!then || then === last || at(then) == null || at(last) == null) return '';
   const d = at(last) - at(then);
   if (!d && !flat) return '';
   const mins = Math.round((Date.parse(last.t) - Date.parse(then.t)) / 60000);
   const window = `the last ${mins < 90 ? `${mins} min` : `${Math.round(mins / 60)} h`}`;
-  const why = d ? `${d > 0 ? '+' : ''}${d} in ${window}` : `unchanged in ${window}`;
+  const why = [d ? `${d > 0 ? '+' : ''}${d} in ${window}` : `unchanged in ${window}`, ...(extra || [])].join('\n');
   // a flat number gets a gray dash rather than no mark at all, the way a ticker shows an unmoved price
   const cls = !d ? 'flat' : (d < 0) === !!goodDown ? 'good' : 'bad';
   return `<span class="trend ${cls}" title="${esc(why)}">${d ? (d > 0 ? '\u25b2' : '\u25bc') : '\u25ac'}${withValue ? Math.abs(d) : ''}</span>`;
@@ -119,7 +136,7 @@ function renderStats() {
     const why = `${l.merged} merged PRs × 3 (${l.ai || 0} of them AI-assisted × 0.25)\n${l.reviews} reviews × 1..3 (by complexity of the diff)\n${l.other} comments / issues / pushes / PRs opened / closed × 1\n${l.milestone || 0} of these on JabCon items (focus label / milestone) × 10\n${l.boosted || 0} in ${boostText()}`
       + (l.bonuses || []).map((b) => `\n+${b.points} ${b.title}: ${b.text}`).join('');
     // the title must sit on the img itself: the avatar helper's own title would otherwise win over a wrapper's
-    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${fmt(l.points)}</div><div>${esc(l.login)}${trend((s) => s.points?.[l.login], false, true)}</div>${bonusRow(l)}</div>`;
+    return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${fmt(l.points)}</div><div>${esc(l.login)}${trend((s) => s.points?.[l.login], false, true, false, deltaWhy(l.login))}</div>${bonusRow(l)}</div>`;
   }).join('');
   slotMachine();
 }
@@ -475,6 +492,10 @@ function showDetail(login) {
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
   $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${fmt(l.points)} points · ${l.merged} merged × 3 (${l.ai || 0} AI-assisted × 0.25) · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
   $('#detail h2').innerHTML += freshest(l).map((b) => ' ' + bonusLink(b, login, `${b.emoji} ${esc(b.title)} +${b.points}`)).join('');
+  // [impl->req~delta-detail~1] why the number moved: guessing from the ticker alone is not possible
+  const moved = deltaWhy(login), gain = trend((s) => s.points?.[login], false, true, true);
+  $('#detail h2').innerHTML += gain
+    ? `<div class="moved">${gain} in the last hour${moved.length ? ': ' + moved.map(esc).join(' · ') : ''}</div>` : '';
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
 }
