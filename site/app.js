@@ -71,6 +71,7 @@ function renderColumn(id, cards) {
   const last = (c) => c.merged_at || c.closed_at || c.updated_at;
   const sorted = [...cards].sort((a, b) => (b.focus - a.focus) || last(b).localeCompare(last(a)));
   const nFocus = sorted.filter((c) => c.focus).length;
+  const queued = new Set(queuedCards().map((c) => c.id));
   const box = $(`#${id} .cards`);
   const scrollTop = box.scrollTop;
   // a shrinking column is good in both cases: the backlog was picked up, the work in progress landed - and a
@@ -88,7 +89,7 @@ function renderColumn(id, cards) {
     if (c.labels.includes('ready-for-review')) tags.push('<span class="tag rfr">ready for review</span>');
     return `<div class="card ${other ? 'other' : ''} ${c.draft ? 'draft' : ''} ${c.focus ? 'focus' : ''}" style="border-left-color:${color[c.author] || 'var(--border)'}">
       ${avatar(c.author)}${link(c.url, `<span class="num">${c.type === 'pr' ? '⇄' : '◉'} #${c.number}</span>
-      <span class="title">${esc(c.title)}</span>`, 'main')}${tags.join('')}${repoLink(c.repo, other ? c.repo : c.repo.slice(org.length))}</div>`;
+      <span class="title">${esc(c.title)}</span>`, 'main')}${tags.join('')}${queued.has(c.id) ? queueMark(18) : ''}${repoLink(c.repo, other ? c.repo : c.repo.slice(org.length))}</div>`;
   })()).join('');
   box.scrollTop = scrollTop;
   updateMore(box);
@@ -118,16 +119,18 @@ function renderStats() {
     const a = `data-comp="${esc(name)}" title="${esc(compWhy)}"`;
     return `<span ${a}>${esc(name)}</span><div class="bar" ${a} style="width:${(100 * n / max).toFixed(1)}%"></div><span ${a}>${fmt(n)}${trend((h) => h.components?.[name], false, true, true)}</span>`;
   }).join('');
+  const queued = queuedCards();
+  const queueMarkIf = (pred) => (queued.some(pred) ? queueMark(16) : '');
   const f = data.focus;
   const focusWhy = f && `Issues labeled "${f.label}" across the org — the JabCon focus.\n${f.closed} of ${f.closed + f.open} closed, ${f.open} to go.\nThe green bar is the closed share.`;
-  $('#milestones').innerHTML = (f ? `<div class="milestone focus" title="${esc(focusWhy)}"><div class="label">${link(f.url, `${esc(f.label)}`)}
+  $('#milestones').innerHTML = (f ? `<div class="milestone focus" title="${esc(focusWhy)}"><div class="label">${link(f.url, `${esc(f.label)}`)}${queueMarkIf((c) => c.labels.includes(f.label))}
       <span>${f.closed}/${f.closed + f.open} <span class="muted">${f.open} to go</span></span></div>
       <div class="bar"><div class="during" style="width:${(100 * f.closed / (f.closed + f.open || 1)).toFixed(1)}%"></div></div></div>` : '') +
     (data.milestones || []).map((m) => {
     const total = m.open + m.closed || 1, during = m.closed - m.baseline;
     // the label is truncated on narrow screens, so the tooltip repeats the full milestone name
     const why = `Milestone "${m.title}" in ${m.repo}.\n${m.closed} of ${total} issues closed, ${m.open} to go.\n${during} of them were closed since JabCon started (${m.baseline} were already done then).\nBlue bar: closed before JabCon, green tail: closed during it.`;
-    return `<div class="milestone" title="${esc(why)}"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}
+    return `<div class="milestone" title="${esc(why)}"><div class="label">${link(m.url, `${esc(m.title)} <span class="muted">${esc(m.repo.split('/')[1])}</span>`)}${queueMarkIf((c) => c.milestone === m.ref)}
       <span>${during} closed <span class="muted">${m.open} to go</span></span></div>
       <div class="bar"><div class="during" style="width:${(100 * m.closed / total).toFixed(1)}%"></div><div class="before" style="width:${(100 * m.baseline / total).toFixed(1)}%"></div></div></div>`;
   }).join('') + Object.entries(data.private_activity || {}).map(([repo, c]) =>
@@ -151,14 +154,14 @@ const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
 const QUEUE_MS = 1200; // one hammer swing, the same number as the CSS animation's duration
 
-// [impl->req~merge-queue-dwarf~3] While PRs wait in the merge queue a pixel dwarf stands at the left end of the
-// meter and hammers away at them; the block he hits is their share of the bar, and it flashes yellow on every hit.
-function dwarf(n) {
-  const why = esc(`${n} PR${n === 1 ? '' : 's'} in the merge queue.\nThe dwarf is hammering their block off the bar.`);
-  return `<span class="dwarf" title="${why}">${dwarfSvg()}</span>`;
+// [impl->req~merge-queue-dwarf~4] While PRs wait in the merge queue a pixel dwarf stands where the bar ends and
+// hammers at its tip; that last block is what the count is about to lose, and it flashes yellow on every hit.
+function dwarf(n, at) {
+  const why = esc(`${n} PR${n === 1 ? '' : 's'} in the merge queue.\nThe dwarf is hammering their block off the end of the bar.`);
+  return `<span class="dwarf" style="left:${at}" title="${why}">${dwarfSvg()}</span>`;
 }
-function dwarfSvg() {
-  return `<svg viewBox="0 0 16 16" width="40" height="40" shape-rendering="crispEdges">
+function dwarfSvg(px = 40) {
+  return `<svg viewBox="0 0 16 16" width="${px}" height="${px}" shape-rendering="crispEdges">
     <rect x="4" y="0" width="6" height="2" fill="#c0392b"/><rect x="3" y="2" width="9" height="1" fill="#c0392b"/>
     <rect x="5" y="3" width="5" height="2" fill="#e8b18a"/><rect x="8" y="3" width="1" height="1" fill="#2b2118"/>
     <rect x="4" y="5" width="7" height="3" fill="#dfe6ee"/>
@@ -169,7 +172,17 @@ function dwarfSvg() {
   </svg>`;
 }
 
-// [impl->req~merge-queue-dwarf~3] An empty queue leaves him nothing to hammer, so he strolls across the board:
+// [impl->req~merge-queue-dwarf~4] The same dwarf, pocket-sized, hammers wherever a queued PR shows up: on its card
+// and on the milestone row it belongs to. One animation everywhere - a second kind would only need explaining.
+function queuedCards() {
+  const g = data.pr_goal, nums = new Set(g?.queue_prs || []);
+  return nums.size ? data.cards.filter((c) => c.type === 'pr' && c.repo === g.repo && nums.has(c.number)) : [];
+}
+function queueMark(px) {
+  return `<span class="dwarf mark" title="Waiting in the merge queue">${dwarfSvg(px)}</span>`;
+}
+
+// [impl->req~merge-queue-dwarf~4] An empty queue leaves him nothing to hammer, so he strolls across the board:
 // a walk to a random spot at a dwarf's pace, a breather, and off again. Not while the board is held still.
 const WANDER_PX_S = 60, WANDER_REST_MS = 2500;
 let wanderAt = null, wanderTimer = 0;
@@ -211,11 +224,11 @@ function renderPrGoal() {
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   const html = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
-    <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>${g.queue ? dwarf(g.queue) : ''}
-    <span class="meter" style="width:calc(11rem + min(${over * OVER_PX}px, 20rem))"><span class="bar ${over ? 'alarm' : ''}" style="--t:${pct(g.target)};--g:${pct(g.max)}">${g.queue ? `<span class="queue" style="width:${pct(Math.min(g.queue, g.open))}"></span>` : ''}<span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span>${over ? `<span class="tick" style="left:${pct(g.max)}"></span>` : ''}</span>
+    <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>
+    <span class="meter" style="width:calc(11rem + min(${over * OVER_PX}px, 20rem))"><span class="bar ${over ? 'alarm' : ''}" style="--t:${pct(g.target)};--g:${pct(g.max)}">${g.queue ? `<span class="queue" style="right:${pct(span - g.open)};width:${pct(Math.min(g.queue, g.open))}"></span>` : ''}<span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span>${over ? `<span class="tick" style="left:${pct(g.max)}"></span>` : ''}</span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span>${over
         ? `<span style="left:${pct(g.max)};transform:translateX(-50%)">${g.max}</span><span class="over" style="right:0">${g.open}</span>`
-        : `<span style="right:0">${g.max}</span>`}</span></span></a>`;
+        : `<span style="right:0">${g.max}</span>`}</span>${g.queue ? dwarf(g.queue, pct(g.open)) : ''}</span></a>`;
   if (html !== prgoalHtml) { // rebuilding the same meter would restart the alarm's beat mid-cycle for nothing
     prgoalHtml = html;
     $('#prgoal').innerHTML = html;
@@ -225,8 +238,8 @@ function renderPrGoal() {
   if (bar) bar.style.animationDelay = `-${Date.now() % (2 * ALARM_MS)}ms`;
   // the same for the swing and the flash it sets off, which have to stay in step with each other above all
   const swing = `-${Date.now() % QUEUE_MS}ms`;
-  document.querySelectorAll('#prgoal .arm, #prgoal .queue').forEach((el) => { el.style.animationDelay = swing; });
-  // [impl->req~merge-queue-dwarf~3] queue empty = no work at the bar, so he is off wandering instead
+  document.querySelectorAll('.dwarf .arm, #prgoal .queue').forEach((el) => { el.style.animationDelay = swing; });
+  // [impl->req~merge-queue-dwarf~4] queue empty = no work at the bar, so he is off wandering instead
   wander(!g.queue);
 }
 
