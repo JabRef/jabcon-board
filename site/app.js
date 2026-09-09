@@ -135,7 +135,7 @@ function renderPrGoal() {
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
 }
 
-// [impl->req~bonus-points~19] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
+// [impl->req~bonus-points~20] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
 // The emoji links to what earned it - the record's PR or a GitHub search; an award with no such page opens the
 // contributor's detail view instead.
 function bonusLink(b, login, inner) {
@@ -143,8 +143,10 @@ function bonusLink(b, login, inner) {
   return b.url ? `<a class="bonus" href="${esc(b.url)}" target="_blank" rel="noopener" title="${why}">${inner}</a>`
     : `<a class="bonus" href="#user/${encodeURIComponent(login)}" title="${why}">${inner}</a>`;
 }
+// newest sticker first: the one just earned is what somebody walking past the wall should spot
+const freshest = (l) => [...(l.bonuses || [])].sort((a, b) => (b.since || '').localeCompare(a.since || ''));
 function bonusRow(l) { // always rendered, empty included: equal heights keep the leaderboard on one baseline
-  return `<div class="bonuses">${(l.bonuses || []).map((b) => bonusLink(b, l.login, b.emoji)).join('')}</div>`;
+  return `<div class="bonuses">${freshest(l).map((b) => bonusLink(b, l.login, b.emoji)).join('')}</div>`;
 }
 
 // The nerd corner holds more than fits: the detected refactorings and the funny records (longest identifier,
@@ -467,7 +469,7 @@ function showDetail(login) {
   const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
   $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${fmt(l.points)} points · ${l.merged} merged × 3 (${l.ai || 0} AI-assisted × 0.25) · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
-  $('#detail h2').innerHTML += (l.bonuses || []).map((b) => ' ' + bonusLink(b, login, `${b.emoji} ${esc(b.title)} +${b.points}`)).join('');
+  $('#detail h2').innerHTML += freshest(l).map((b) => ' ' + bonusLink(b, login, `${b.emoji} ${esc(b.title)} +${b.points}`)).join('');
   $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
   $('#detail').hidden = false;
 }

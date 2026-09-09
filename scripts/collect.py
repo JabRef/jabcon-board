@@ -240,7 +240,7 @@ def collect_events(previous):
             try:
                 cmp, _ = get(f"/repos/{e['repo']}/compare/{e['before']}...{e['head']}")
                 e["commits"] = cmp["total_commits"]
-                # [impl->req~bonus-points~19] the old head is no ancestor of the new one: history was rewritten
+                # [impl->req~bonus-points~20] the old head is no ancestor of the new one: history was rewritten
                 e["forced"] = cmp["status"] in ("diverged", "behind")
                 e["sync"] = (not e["repo"].startswith(CONFIG["org"] + "/")
                              and not any((c.get("author") or {}).get("login") == e["actor"] for c in cmp["commits"]))
@@ -718,7 +718,7 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~19]
+# [impl->req~bonus-points~20]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
@@ -782,7 +782,7 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~19]
+# [impl->req~bonus-points~20]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -794,7 +794,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~19]
+# [impl->req~bonus-points~20]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
