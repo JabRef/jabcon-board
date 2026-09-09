@@ -133,7 +133,7 @@ def card(item, column):
         "state_reason": item.get("state_reason"),  # issues: completed | not_planned | duplicate | reopened
         "merged_at": (item.get("pull_request") or {}).get("merged_at"),
         "column": column,
-        # [impl->req~merge-queue-dwarf~4] which milestone the item belongs to, so a queued PR can be marked on its row
+        # [impl->req~merge-queue-dwarf~5] which milestone the item belongs to, so a queued PR can be marked on its row
         "milestone": f"{repo_of(item)}/{(item.get('milestone') or {}).get('number')}" if item.get("milestone") else None,
         # [impl->req~column-order~2] JabCon item: focus label or one of the configured milestones
         "focus": (bool(FOCUS) and FOCUS in [l["name"] for l in item.get("labels", [])])
@@ -1097,17 +1097,17 @@ def pr_goal(previous=None):
     mq = merge_queue(goal["repo"])
     if mq is None:  # the call failed: keep the dwarf swinging on the last count rather than letting him disappear
         old = (previous or {}).get("pr_goal") or {}
-        mq = {k: old[k] for k in ("queue", "queue_url", "queue_prs") if k in old}
+        mq = {k: old[k] for k in ("queue", "queue_url", "queue_prs", "queue_eta") if k in old}
     return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls", **mq}
 
 
-# [impl->req~merge-queue-dwarf~4]
+# [impl->req~merge-queue-dwarf~5]
 def merge_queue(repo):
     """How many PRs sit in the repository's merge queue, or None when the call failed - a repository without a
     queue answers 0, so the caller can tell "nothing queued" from "could not ask". Only GraphQL knows the queue."""
     owner, name = repo.split("/")
     query = ('{repository(owner:"%s",name:"%s"){mergeQueue{url entries(first:100)'
-             '{totalCount nodes{pullRequest{number}}}}}}' % (owner, name))
+             '{totalCount nodes{estimatedTimeToMerge pullRequest{number}}}}}}' % (owner, name))
     try:
         req = urllib.request.Request(API + "/graphql", data=json.dumps({"query": query}).encode(),
                                      headers={"Content-Type": "application/json", "Authorization": "Bearer " + (TOKEN or "")})
@@ -1122,7 +1122,11 @@ def merge_queue(repo):
     mq = found.get("mergeQueue")
     if not mq:
         return {"queue": 0, "queue_prs": []}
-    return {"queue": mq["entries"]["totalCount"], "queue_url": mq["url"],
+    # GitHub's own estimate per entry, in seconds from now; the longest of them is when the queue is empty again.
+    # Stored as the moment it points at, so the board counts down against the wall clock and not against the run.
+    etas = [e["estimatedTimeToMerge"] for e in mq["entries"]["nodes"] if e.get("estimatedTimeToMerge")]
+    drained = (datetime.now(timezone.utc) + timedelta(seconds=max(etas))).isoformat() if etas else None
+    return {"queue": mq["entries"]["totalCount"], "queue_url": mq["url"], "queue_eta": drained,
             "queue_prs": [e["pullRequest"]["number"] for e in mq["entries"]["nodes"] if e.get("pullRequest")]}
 
 

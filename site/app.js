@@ -154,7 +154,7 @@ const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
 const QUEUE_MS = 1200; // one hammer swing, the same number as the CSS animation's duration
 
-// [impl->req~merge-queue-dwarf~4] While PRs wait in the merge queue a pixel dwarf stands where the bar ends and
+// [impl->req~merge-queue-dwarf~5] While PRs wait in the merge queue a pixel dwarf stands where the bar ends and
 // hammers at its tip; that last block is what the count is about to lose, and it flashes yellow on every hit.
 function dwarf(n, at) {
   const why = esc(`${n} PR${n === 1 ? '' : 's'} in the merge queue.\nThe dwarf is hammering their block off the end of the bar.`);
@@ -172,7 +172,7 @@ function dwarfSvg(px = 40) {
   </svg>`;
 }
 
-// [impl->req~merge-queue-dwarf~4] The same dwarf, pocket-sized, hammers wherever a queued PR shows up: on its card
+// [impl->req~merge-queue-dwarf~5] The same dwarf, pocket-sized, hammers wherever a queued PR shows up: on its card
 // and on the milestone row it belongs to. One animation everywhere - a second kind would only need explaining.
 function queuedCards() {
   const g = data.pr_goal, nums = new Set(g?.queue_prs || []);
@@ -182,7 +182,26 @@ function queueMark(px) {
   return `<span class="dwarf mark" title="Waiting in the merge queue">${dwarfSvg(px)}</span>`;
 }
 
-// [impl->req~merge-queue-dwarf~4] An empty queue leaves him nothing to hammer, so he strolls across the board:
+// [impl->req~merge-queue-dwarf~5] GitHub's own estimate for the last entry of the queue, counted down beside the
+// dwarf so the board says how long he still has to hammer. Filled by the second in `tick`, never in the meter's
+// markup: a text that changes every second would rebuild the meter and restart the swing on every beat.
+function etaText(iso) {
+  const left = Math.round((Date.parse(iso) - Date.now()) / 1000);
+  if (left <= 0) return 'due'; // the estimate ran out; the next data run says whether it really merged
+  const h = Math.floor(left / 3600), m = Math.floor(left / 60) % 60, sec = left % 60;
+  // spelled out, or a bare "19:27" beside a wall clock reads as half past seven
+  return h ? `${h}:${String(m).padStart(2, '0')} h` : `${m}:${String(sec).padStart(2, '0')} min`;
+}
+function renderEta() {
+  const el = $('#queue-eta'), eta = data?.pr_goal?.queue_eta;
+  if (!el || !eta) return;
+  el.textContent = etaText(eta);
+  el.title = 'GitHub expects the queue to be empty at '
+    + new Date(eta).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone })
+    + ' - the longest estimate of everything queued.';
+}
+
+// [impl->req~merge-queue-dwarf~5] An empty queue leaves him nothing to hammer, so he strolls across the board:
 // a walk to a random spot at a dwarf's pace, a breather, and off again. Not while the board is held still.
 const WANDER_PX_S = 60, WANDER_REST_MS = 2500;
 let wanderAt = null, wanderTimer = 0;
@@ -228,7 +247,8 @@ function renderPrGoal() {
     <span class="meter" style="width:calc(11rem + min(${over * OVER_PX}px, 20rem))"><span class="bar ${over ? 'alarm' : ''}" style="--t:${pct(g.target)};--g:${pct(g.max)}">${g.queue ? `<span class="queue" style="right:${pct(span - g.open)};width:${pct(Math.min(g.queue, g.open))}"></span>` : ''}<span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span>${over ? `<span class="tick" style="left:${pct(g.max)}"></span>` : ''}</span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span>${over
         ? `<span style="left:${pct(g.max)};transform:translateX(-50%)">${g.max}</span><span class="over" style="right:0">${g.open}</span>`
-        : `<span style="right:0">${g.max}</span>`}</span>${g.queue ? dwarf(g.queue, pct(g.open)) : ''}</span></a>`;
+        : `<span style="right:0">${g.max}</span>`}</span>${g.queue ? dwarf(g.queue, pct(g.open)) : ''}${g.queue && g.queue_eta
+        ? `<span class="eta" id="queue-eta" style="left:calc(${pct(g.open)} + 1.6rem)"></span>` : ''}</span></a>`;
   if (html !== prgoalHtml) { // rebuilding the same meter would restart the alarm's beat mid-cycle for nothing
     prgoalHtml = html;
     $('#prgoal').innerHTML = html;
@@ -239,7 +259,8 @@ function renderPrGoal() {
   // the same for the swing and the flash it sets off, which have to stay in step with each other above all
   const swing = `-${Date.now() % QUEUE_MS}ms`;
   document.querySelectorAll('.dwarf .arm, #prgoal .queue').forEach((el) => { el.style.animationDelay = swing; });
-  // [impl->req~merge-queue-dwarf~4] queue empty = no work at the bar, so he is off wandering instead
+  // [impl->req~merge-queue-dwarf~5] queue empty = no work at the bar, so he is off wandering instead
+  renderEta();
   wander(!g.queue);
 }
 
@@ -807,6 +828,7 @@ function tick() {
   $('#updated').title = `Data freshness: last data run ${ago(data.generated_at)}, the next one is ${age > REFRESH_MS ? 'overdue' : `expected in ${Math.ceil((REFRESH_MS - age) / 60000)} min`}. The ring fills over ${REFRESH_MS / 60000} min, one turn per data run; full and pulsing means the run is late, amber "!" means the data is stale.`;
   $('#data-time').textContent = `data ${new Date(data.generated_at).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: data.config.timezone })}`;
   $('#header').classList.toggle('stale', age > 30 * 60000);
+  renderEta(); // [impl->req~merge-queue-dwarf~5] the queue's countdown runs on the same second as the clock
   const start = Date.parse(data.config.jabcon_start), end = Date.parse(data.config.jabcon_end);
   $('#elapsed').style.width = `${Math.max(0, Math.min(100, 100 * (now - start) / (end - start)))}%`;
   const left = end - now;
