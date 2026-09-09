@@ -1,9 +1,11 @@
-# Archives a screenshot of the live board every three hours (for the blog post / a time-lapse after JabCon).
+# Archives a screenshot of the live board every three hours during the day (for the blog post / a time-lapse after
+# JabCon). Nothing is taken between 22:00 and 06:00 local time: a screenshot kept forever is a permanent record of who
+# was working at three in the morning, and the board does not keep that. [impl->req~no-behaviour-profiling~1]
 name: Screenshot
 
 on:
   schedule:
-    - cron: '30 */3 * * *'
+    - cron: '30 6,9,12,15,18 * * *'
   workflow_dispatch:
 
 permissions:
