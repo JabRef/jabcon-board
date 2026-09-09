@@ -579,23 +579,48 @@ function renderTicker() {
 
 // Click on a leaderboard avatar: full-screen list of everything that contributor scored (or did not) during JabCon.
 // [impl->req~contributor-detail~2]
+// Click a part of the points breakdown: the list below shrinks to the events that part is made of, so a surprising
+// total can be traced to its rows. One segment at a time, and a Clear chip to get back.
+// [impl->req~breakdown-filter~1]
+const SEGMENTS = {
+  merged: (e) => eventBase(e)[1] === 'merged PR',
+  ai: (e) => eventBase(e)[1] === 'merged PR' && !!cardOf(e)?.stats?.ai,
+  reviews: (e) => e.type === 'PullRequestReviewEvent' && eventBase(e)[0] > 0,
+  other: (e) => eventBase(e)[0] > 0 && e.type !== 'PullRequestReviewEvent' && eventBase(e)[1] !== 'merged PR',
+  milestone: (e) => eventPoints(e) > 0 && eventFactor(e)[1] === 'JabCon item',
+  boosted: (e) => eventPoints(e) > 0 && eventFactor(e)[0] !== 1 && eventFactor(e)[1] !== 'JabCon item',
+};
+let segment = null, segmentOf = null; // the active segment, and whose detail view it belongs to
+const seg = (key, text) => `<button class="seg${segment === key ? ' on' : ''}" data-seg="${key}">${text}</button>`;
+
 function showDetail(login) {
   const l = data.leaderboard.find((x) => x.login === login) || { points: 0, merged: 0, reviews: 0, other: 0 };
-  const events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
+  if (segmentOf !== login) { segment = null; segmentOf = login; }
+  let events = (data.all_events || []).filter((e) => e.actor === login && e.type !== 'PullRequestReviewCommentEvent')
     .sort((a, b) => b.created_at.localeCompare(a.created_at));
-  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${fmt(l.points)} points · ${l.merged} merged × 3 (${l.ai || 0} AI-assisted × 0.25) · ${l.reviews} reviews × 1..3 · ${l.other} other × 1 · ${l.milestone || 0} on JabCon items × 10 · ${l.boosted || 0} in ${boostText()}</span>`;
+  if (segment) events = events.filter(SEGMENTS[segment]);
+  $('#detail h2').innerHTML = `${avatar(login)} ${esc(login)} <span class="muted">${fmt(l.points)} points · ${seg('merged', `${l.merged} merged × 3`)} (${seg('ai', `${l.ai || 0} AI-assisted × 0.25`)}) · ${seg('reviews', `${l.reviews} reviews × 1..3`)} · ${seg('other', `${l.other} other × 1`)} · ${seg('milestone', `${l.milestone || 0} on JabCon items × 10`)} · ${seg('boosted', `${l.boosted || 0} in ${boostText()}`)}${segment ? ' <button class="seg clear" data-seg="">✕ clear filter</button>' : ''}</span>`;
   $('#detail h2').innerHTML += freshest(l).map((b) => ' ' + bonusLink(b, login, `${b.emoji} ${esc(b.title)} +${b.points}`)).join('');
   // [impl->req~delta-detail~1] why the number moved: guessing from the ticker alone is not possible
   const moved = deltaWhy(login), gain = trend((s) => s.points?.[login], false, true, true);
   $('#detail h2').innerHTML += gain
     ? `<div class="moved">${gain} in the last hour${moved.length ? ': ' + moved.map(esc).join(' · ') : ''}</div>` : '';
-  $('#detail ul').innerHTML = events.map(eventRow).join('') || '<li class="muted">no public activity yet</li>';
+  $('#detail ul').innerHTML = events.map(eventRow).join('')
+    || `<li class="muted">${segment ? 'no events of this kind in the collected activity' : 'no public activity yet'}</li>`;
   $('#detail').hidden = false;
 }
+// [impl->req~breakdown-filter~1]
+$('#detail h2').addEventListener('click', (e) => {
+  const key = e.target.closest('.seg')?.dataset.seg;
+  if (key === undefined) return;
+  segment = segment === key || !key ? null : key;
+  showDetail(segmentOf);
+});
 // Click a component row: the merged PRs that touched it, biggest first, so a surprising total (32k removed lines,
 // say) can be traced back to the PRs it came from.
 // [impl->req~component-detail~1]
 function showComponentDetail(name) {
+  segment = segmentOf = null;
   const lines = (c) => c.stats.components[name];
   const prs = data.cards.filter((c) => c.stats?.components?.[name]).sort((a, b) => lines(b) - lines(a));
   const total = prs.reduce((sum, c) => sum + lines(c), 0);
