@@ -44,7 +44,7 @@
     <div id="dates"><span id="from"></span><span id="countdown"></span><span id="to"></span></div>
   </div>
   <div id="updated" title=""></div>
-  <img id="logo" src="https://www.jabref.org/img/JabRef-icon-256.png" alt="">
+  <img id="logo" src="jabref-icon-256.png" alt="">
 </header>
 <!-- [impl->req~heading-tooltips~1] -->
 <main>
@@ -65,10 +65,12 @@
   <div id="gource-missing">gource video not rendered yet<br><a href="https://files.jabref.org/gource/jabcon-2026.mp4">files.jabref.org/gource/jabcon-2026.mp4</a></div>
   </section>
 </main>
-<div id="footer"><div id="news"><span></span></div><span id="stamp"><span id="data-time"></span><span id="version"></span></span></div>
+<div id="footer"><div id="news"><span></span></div><span id="stamp"><a id="privacy" href="privacy.html">what this board collects</a><span id="data-time"></span><span id="version"></span></span></div>
 <div id="detail" hidden><div class="bar"><button class="back">← Back</button><h2></h2></div><ul></ul></div>
 <div id="toast"></div>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<!-- [impl->req~no-third-party-requests~1] vendored, not from a CDN: nobody but this origin learns that
+     somebody is looking at the board. Update by re-downloading the same file from npm. -->
+<script src="confetti.browser.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

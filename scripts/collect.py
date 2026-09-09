@@ -249,7 +249,7 @@ def collect_events(previous):
             try:
                 cmp, _ = get(f"/repos/{e['repo']}/compare/{e['before']}...{e['head']}")
                 e["commits"] = cmp["total_commits"]
-                # [impl->req~bonus-points~21] the old head is no ancestor of the new one: history was rewritten
+                # [impl->req~bonus-points~22] the old head is no ancestor of the new one: history was rewritten
                 e["forced"] = cmp["status"] in ("diverged", "behind")
                 e["sync"] = (not e["repo"].startswith(CONFIG["org"] + "/")
                              and not any((c.get("author") or {}).get("login") == e["actor"] for c in cmp["commits"]))
@@ -755,12 +755,13 @@ def leaderboard(cards, events, private):
 
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
-# (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~21]
+# (breadth, chattiness, sheer volume). Everybody tied for a category gets it. No category may rank a person by when
+# they work or by how they wrote the code: that is a judgement about the person, not about the work.
+# [impl->req~no-behaviour-profiling~1]
+# [impl->req~bonus-points~22]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
-MERGED_FLOOR = 3  # one hand-written PR is not a habit
 STRICT_FLOOR = 3  # a single "changes requested" is not a temperament
 SMALL, MEDIUM = 50, 500  # changed lines; above that a PR is large
 QUIET_HOURS, DEEP_LINES, DEEP_COMMITS, DEEP_COMPLEXITY = 6, 100, 5, 20  # what counts as silence, and as coming back
@@ -787,8 +788,6 @@ BONUS_KINDS = [
     ("Idea machine", "opened", "opened {} PRs", "\U0001f4a1", f"is:pr author:{{}} created:>={START_DATE}"),
     ("Gatekeeper", "reviews", "{} reviews", "\U0001f6e1\ufe0f", f"reviewed-by:{{}} updated:>={START_DATE}"),
     ("Closer", "merged", "{} merged PRs", "\U0001f3c1", f"is:pr author:{{}} is:merged merged:>={START_DATE}"),
-    ("Night owl", "night", "{} events between 22:00 and 06:00", "\U0001f989", None),
-    ("Early bird", "early", "{} events before 08:00", "\U0001f426", None),
     # upstream work is where the org's fixes land in somebody else's release
     ("Ambassador", "upstream", "{} events outside the " + CONFIG["org"] + " org", "\u2615", f"-org:{CONFIG['org']} involves:{{}} updated:>={START_DATE}"),
     ("Dependency whisperer", "dependency", "{} events in JabRef's dependencies", "\U0001f527", None),
@@ -801,15 +800,12 @@ BONUS_KINDS = [
     ("Widest reach", "reach", "reviewed the PRs of {} different authors", "\U0001f91d", None),
     ("Socratic", "questions", "{} questions asked", "\u2753", None),
     ("Most gracious", "thanks", "said thank you {} times", "\U0001f64f", None),
-    ("Always on", "hours", "active in {} of the 24 hours", "\U0001f570\ufe0f", None),
     ("Magnet", "magnet", "their PRs pulled {} reviews", "\U0001f9f2", None),
     ("First responder", "first", "first to review {} PRs", "\u26a1", None),
     ("All killer, no filler", "shipshare", "{}% of everything they did was landing a PR", "\U0001f680", None),
     ("Essayist", "essay", "{} characters per comment on average", "\U0001f4dd", None),
     ("Freight train", "freight", "{} commits per push", "\U0001f69a", None),
-    ("Weekend warrior", "weekend", "{}% of their activity on a weekend", "\U0001f3d6\ufe0f", None),
     ("Reporter", "reported", "{} issues opened", "\U0001f41b", f"is:issue author:{{}} created:>={START_DATE}"),
-    ("Handmade", "handmade", "{}% of their merged PRs written without an assistant", "\u270b", None),
     ("Hard to please", "strict", "{}% of their reviews asked for changes", "\U0001f6a7", None),
     ("Big picture", "issuey", "{}% of their activity went into issues, not code", "\U0001f52d", None),
     ("Featherweight", "small", "{} merged PRs of at most 50 changed lines", "\U0001fab6", None),
@@ -821,7 +817,7 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~21]
+# [impl->req~bonus-points~22]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -833,7 +829,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~21]
+# [impl->req~bonus-points~22]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -845,19 +841,15 @@ def bonuses(cards, events, joined=None):
     labelled = {p: set() for p in PARTICIPANTS}  # the same breadth as the maintainers see it, in "component:" labels
     by_pr = {(c["repo"], c["number"]): set(c.get("stats", {}).get("components") or ()) for c in cards}
     labels_of = {(c["repo"], c["number"]): {l for l in c.get("labels") or () if l.startswith("component:")} for c in cards}
-    hours = {p: set() for p in PARTICIPANTS}
     requested = {p: 0 for p in PARTICIPANTS}  # reviews that asked for changes
     issues = {(c["repo"], c["number"]) for c in cards if c["type"] == "issue"}
     on_issues = {p: 0 for p in PARTICIPANTS}  # shaping the work rather than writing it
     reach = {p: set() for p in PARTICIPANTS}  # the PR authors whose work they reviewed
     reviews_of = {}  # (repo, number) -> (first review's time, its author), for the first responder award
     scored = []  # the events that counted, for the tallies computed after the loop
-    handmade = {p: [0, 0] for p in PARTICIPANTS}  # merged PRs, of them written without an assistant
     for c in cards:
         if c["column"] == "done" and c["type"] == "pr" and c["author"] in tally:
             tally[c["author"]]["merged"] += 1
-            handmade[c["author"]][0] += 1
-            handmade[c["author"]][1] += not (c.get("stats") or {}).get("ai")
             st = c.get("stats") or {}
             changed = st.get("additions", 0) + st.get("deletions", 0)
             if st:  # the same small / medium / large the "size:" labels talk about, but measured on every PR
@@ -880,10 +872,6 @@ def bonuses(cards, events, joined=None):
                 exotic[e["actor"]].add(e["repo"])
         if e.get("number"):
             touched[e["actor"]].add((e["repo"], e["number"]))
-        hour = datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).astimezone(START.tzinfo).hour
-        t["night"] += hour >= 22 or hour < 6
-        t["early"] += 6 <= hour < 8
-        hours[e["actor"]].add(hour)
         on_issues[e["actor"]] += e["type"] == "IssuesEvent" or (e["repo"], e.get("number")) in issues
         scored.append(e)
         t["deleted"] += e["type"] == "DeleteEvent"
@@ -916,7 +904,7 @@ def bonuses(cards, events, joined=None):
     for p, t in tally.items():
         t["touched"], t["repos"], t["exotic"] = len(touched[p]), len(repos[p]), len(exotic[p])
         t["diverse"], t["labelled"] = len(comps[p]), len(labelled[p])
-        t["hours"], t["reach"] = len(hours[p]), len(reach[p])
+        t["reach"] = len(reach[p])
         mine = [e for e in scored if e["actor"] == p]
         # ratios need a body of work behind them, or one review out of two events wins the category
         if t["reviews"] >= REVIEW_FLOOR:
@@ -926,16 +914,11 @@ def bonuses(cards, events, joined=None):
             t["shipshare"] = round(100 * t["merged"] / len(mine))
             t["issuey"] = round(100 * on_issues[p] / len(mine))
             t["talky"] = round(100 * t["comments"] / len(mine))
-            weekend = sum(datetime.fromisoformat(e["created_at"].replace("Z", "+00:00")).weekday() >= 5 for e in mine)
-            t["weekend"] = round(100 * weekend / len(mine))
         said = [e.get("excerpt") or "" for e in mine if e["type"] in ("IssueCommentEvent", "PullRequestReviewCommentEvent")]
         if len(said) >= EVENT_FLOOR:  # the excerpt is capped, so this measures who fills the first line, not essays
             t["essay"] = round(sum(len(x) for x in said) / len(said))
         if t["reviews"] >= STRICT_FLOOR:
             t["strict"] = round(100 * requested[p] / t["reviews"])
-        merged, by_hand = handmade[p]
-        if merged >= MERGED_FLOOR:
-            t["handmade"] = round(100 * by_hand / merged)
         pushes = [e.get("commits") or 0 for e in mine if e["type"] == "PushEvent"]
         if len(pushes) >= EVENT_FLOOR:
             t["freight"] = round(sum(pushes) / len(pushes), 1)

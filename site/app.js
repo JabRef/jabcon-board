@@ -275,7 +275,7 @@ function renderPrGoal() {
   wander(!g.queue);
 }
 
-// [impl->req~bonus-points~21] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
+// [impl->req~bonus-points~22] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
 // The emoji links to what earned it - the record's PR or a GitHub search; an award with no such page opens the
 // contributor's detail view instead.
 function bonusLink(b, login, inner) {

@@ -202,12 +202,21 @@ the board publishes its configuration.
 
 Needs: impl
 
+### No award ranks a person, only their work
+`req~no-behaviour-profiling~1`
+
+No bonus category may be won by *when* somebody works (time of day, day of the week, hours active) or by *how* they
+wrote the code (with or without an AI assistant). Those describe the person, not the contribution, and the board
+publishes them under a real name; the ranking stays on what was contributed.
+
+Needs: impl
+
 ### Bonus points
-`req~bonus-points~21`
+`req~bonus-points~22`
 
 A second evaluation on top of the per-event points: +100 for each superlative a contributor holds — most comments,
-most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs, most
-activity between 22:00 and 06:00, most before 08:00, most activity in repositories outside the org, the widest set of components written or reviewed (by the changed files, and
+most PRs and issues touched, most repositories worked on, most PRs opened, most reviews, most merged PRs,
+most activity in repositories outside the org, the widest set of components written or reviewed (by the changed files, and
 again by the PRs' "component:" labels), most activity in
 JabRef's configured `dependency_repos` (openjdk/jfx, ICU4J, jgit, ...), and the most distinct repositories outside
 the org that are not dependencies. Everybody tied for a category gets the award. The contributor whose first issue or PR in the org is the most recent gets a
@@ -641,6 +650,26 @@ with the lowest contributor and ending with the leader, all of them settled with
 left. A reel shows the previous total, grayed, until its turn. The moment a reel stops, that contributor's gained
 points (`+0` included) pop out of the number and fly off the top of the screen slowly enough to be read; each then
 fades in as a badge over its contributor's avatar and stays there until the next data run. Off with `?still=1` or reduced-motion.
+
+Needs: impl
+
+## Data protection
+
+### The board says what it collects about whom
+`req~privacy-notice~1`
+
+The board's data is about identifiable people and comes from GitHub and the mailing list archives, not from the
+people themselves, so the page carries a notice (linked from the footer, reachable without JavaScript) naming what
+is collected, where it comes from, why, how long it is kept, who is responsible and how to be taken off the board.
+Removing a login from `participants` removes that person's cards, events and points from the next `data.json`.
+
+Needs: impl
+
+### The page loads nothing from third parties
+`req~no-third-party-requests~1`
+
+Everything the page needs is served from its own origin: opening the board must not tell any other party that
+somebody is looking at it. Libraries are vendored into `site/`, not loaded from a CDN.
 
 Needs: impl
 
