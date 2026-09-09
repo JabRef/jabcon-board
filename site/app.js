@@ -512,6 +512,8 @@ function newsItems() {
   const mid = ['{who} slots it in: {title}. {add} lines, clean finish.', 'Nicely worked by {who}: {title}.', 'And {who} delivers: {title}. {add} lines added.'];
   const small = ['A quick one from {who}: {title}.', '{who} keeps it tidy: {title}.', 'Tap-in for {who}: {title}.'];
   const reviewed = [' {rev} waves it through.', ' Reviewed by {rev}, no complaints.', ' {rev} had a look first, all clear.'];
+  // [impl->req~release-party~1]
+  if (data.release) items.push([`\u{1f3f7}\u{fe0f} ${data.release.repo} ${data.release.name} released ${ago(data.release.at)}`, data.release.url]);
   // [impl->req~sticker-moves~1]
   if (changes.points.length) items.push([`Latest run (${ago(changes.at)}): ${changes.points.map(([l, d]) => `${l} ${d > 0 ? '+' : '−'}${fmt(Math.abs(d))}`).join(', ')}`]);
   for (const m of changes.moves) items.push([moveText(m), `#user/${encodeURIComponent(m.to[0])}`]);
@@ -742,6 +744,8 @@ function celebrate(prev) {
     toast(`\u{1f3af} ${g.open} open PRs \u2014 the ${g.target} mark is reached!`);
     if (window.confetti) confetti({ particleCount: 300, spread: 120, origin: { y: 0.6 } });
   }
+  // [impl->req~release-party~1] a tag we had not seen in the run before; a first-ever reading is no release
+  if (data.release && prev.release && data.release.tag !== prev.release.tag) releaseParty(data.release);
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
     // the name is the author, not the merger: credit it with "by", never as the one who merged
@@ -775,6 +779,29 @@ function bell() {
   } catch (e) { /* no audio */ }
 }
 document.addEventListener('click', () => { if (audio?.state === 'suspended') audio.resume(); }, { once: false });
+
+// [impl->req~release-party~1] The moment the hammering was for: a new tag on the goal repo. The bell rings, the
+// confetti keeps coming for a minute and a chorus line of dwarfs dances along the bottom edge.
+const PARTY_MS = 60000, PARTY_DWARFS = 9, PARTY_BURST_MS = 1500;
+let partyTimer = 0;
+function releaseParty(rel) {
+  bell();
+  toast(`\u{1f3f7}\u{fe0f} ${rel.repo} ${rel.name} is out!`);
+  // the same rule as the wandering dwarf: reduced motion or a board held still gets the news, not the dance
+  if (document.documentElement.classList.contains('still') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  clearTimeout(partyTimer);
+  $('#party')?.remove();
+  // each dwarf a beat behind the one before, so the row reads as a dance and not as one animation nine times
+  document.body.insertAdjacentHTML('beforeend', `<div id="party" title="${esc(rel.name)} is released!">`
+    + Array.from({ length: PARTY_DWARFS }, (_, i) => `<span style="animation-delay:-${i * 120}ms">${dwarfSvg(64)}</span>`).join('')
+    + '</div>');
+  const until = Date.now() + PARTY_MS;
+  (function burst() {
+    if (Date.now() > until) { $('#party')?.remove(); return; }
+    if (window.confetti) confetti({ particleCount: 120, spread: 100, origin: { y: 0.85, x: Math.random() } });
+    partyTimer = setTimeout(burst, PARTY_BURST_MS);
+  })();
+}
 
 let toastTimer;
 function toast(text) {
