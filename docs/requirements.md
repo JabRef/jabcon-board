@@ -493,6 +493,16 @@ which is shorter than an hour while the history is still that young.
 
 Needs: impl
 
+### A contributor's change is explained
+`req~delta-detail~1`
+
+Every history sample keeps the counts behind a contributor's total (merged PRs, reviews, other events, how many were
+AI-assisted, on JabCon items or in boosted repos, and the stickers held). Hovering the gain next to a login, and the
+contributor's own detail view, then say what moved it: the counts that changed and the stickers gained or lost, which
+are worth exactly 100 each. The other lines are counts, not points, since a single event is worth between 1 and 30.
+
+Needs: impl
+
 ### Open-PR meter
 `req~pr-goal-meter~1`
 

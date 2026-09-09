@@ -1065,9 +1065,15 @@ def pr_goal():
 def history(previous, now, data):
     """One sample per run of the numbers the board draws a tendency for, so the page can compare with an hour ago.
     Half a day of five-minute runs is plenty; older samples are dropped."""
+    # [impl->req~delta-detail~1] the counts behind a contributor's total, so the page can say what a change came from
+    parts = {l["login"]: {"m": l["merged"], "r": l["reviews"], "o": l["other"], "a": l["ai"],
+                          "k": l.get("milestone", 0), "x": l.get("boosted", 0),
+                          "b": [f'{b["emoji"]} {b["title"]}' for b in l.get("bonuses", [])]}
+             for l in data["leaderboard"]}
     sample = {"t": now.isoformat(timespec="seconds"),
               "open_prs": (data["pr_goal"] or {}).get("open"),
               "points": {l["login"]: l["points"] for l in data["leaderboard"]},
+              "parts": parts,
               **{col: sum(1 for c in data["cards"] if c["column"] == col) for col in ("backlog", "progress", "done")}}
     return ((previous or {}).get("history", []) + [sample])[-144:]
 
