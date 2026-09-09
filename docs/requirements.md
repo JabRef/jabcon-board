@@ -502,13 +502,15 @@ every run below the target.
 Needs: impl
 
 ### The merge queue gets a dwarf
-`req~merge-queue-dwarf~4`
+`req~merge-queue-dwarf~5`
 
 While PRs sit in the goal repository's merge queue, a pixel-art dwarf stands where the bar ends, faces it and
 hammers at its tip once every 1.2 seconds, big enough to be seen from across the room. What he knocks off is the
 last stretch of the bar, because those are the PRs the count is about to lose: as wide as they are on the bar's
 scale — but never thinner than half a rem, so a single queued PR out of 72 is still a
-block and not two pixels — and flashes yellow with every strike, so the queue is visible as a length. A smaller one of him hammers on every card of a queued PR and on the milestone rows those PRs belong to, so the
+block and not two pixels — and flashes yellow with every strike, so the queue is visible as a length. Beside him GitHub's own estimate counts down by the
+second: the longest of the queued entries' estimates, so it says when the queue is empty again, and "due" once it
+has run out. A smaller one of him hammers on every card of a queued PR and on the milestone rows those PRs belong to, so the
 queue is visible where the work is, not only on the meter. Hovering him gives the count. No queue, no dwarf; with
 reduced motion or in the still mode nobody swings and the block simply stands out. The count comes from GraphQL,
 which alone knows the queue. A failed call never costs the dwarf: the last known count is kept and the run goes on.

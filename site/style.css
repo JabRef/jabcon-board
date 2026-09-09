@@ -113,7 +113,7 @@ section h2 .count { float: right; color: var(--fg); }
 .trend.flat { color: var(--muted); }
 .leader .trend { font-size: .65rem; }
 #prgoal .meter { width: 11rem; position: relative; }
-#prgoal { margin-right: 2rem; } /* the dwarf stands past the end of the bar and needs the room */
+#prgoal { margin-right: 5rem; } /* the dwarf and his countdown stand past the end of the bar and need the room */
 #prgoal .bar { position: relative; display: block; height: .9rem; border-radius: .2rem; overflow: hidden;
   background: linear-gradient(90deg, var(--ok), var(--warn) var(--t), #f85149 var(--g, 100%)); }
 #prgoal .rest { position: absolute; top: 0; bottom: 0; right: 0; background: var(--border); }
@@ -130,11 +130,14 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal .scale { position: relative; display: block; height: .9rem; font-size: .65rem; color: var(--muted); }
 #prgoal .scale span { position: absolute; }
 #prgoal .scale .over { color: #f85149; font-weight: bold; } /* the count past the goal, where the meter now ends */
-/* [impl->req~merge-queue-dwarf~4] the dwarf stands at the tip of the bar, mirrored so he faces it, and swings
+/* [impl->req~merge-queue-dwarf~5] the dwarf stands at the tip of the bar, mirrored so he faces it, and swings
    leftwards onto it: what he knocks off is about to be subtracted. His block flashes on the hit, both animations
    share the 1.2 s cycle and the phase the script sets, so the flash lands with the hammer */
 #prgoal .dwarf { position: absolute; top: calc((.9rem - 40px) / 2); transform: scaleX(-1); }
 #prgoal .dwarf svg { display: block; overflow: visible; }
+/* [impl->req~merge-queue-dwarf~5] the countdown stands to his right, at his height and out of the bar's way */
+#prgoal .eta { position: absolute; top: calc((.9rem - 1em) / 2); white-space: nowrap; font-size: .7rem;
+  font-variant-numeric: tabular-nums; color: #f2c94c; }
 .dwarf .arm { transform-box: view-box; transform-origin: 10px 8px; animation: hammer 1.2s linear infinite; }
 /* the pocket-sized one sits in the flow of a card or a milestone row, mirrored like his big brother */
 .dwarf.mark { flex: none; display: inline-block; vertical-align: middle; transform: scaleX(-1); }
@@ -143,7 +146,7 @@ section h2 .count { float: right; color: var(--fg); }
    below a finger's width: what he hammers at is visible whenever anything is queued at all */
 #prgoal .queue { position: absolute; top: 0; bottom: 0; z-index: 1; min-width: .5rem; background: #f2c94c;
   opacity: 0; animation: queueflash 1.2s linear infinite; }
-/* [impl->req~merge-queue-dwarf~4] the idle dwarf walks the whole board: over everything, in the way of nothing,
+/* [impl->req~merge-queue-dwarf~5] the idle dwarf walks the whole board: over everything, in the way of nothing,
    and under the detail view and the stamps, which the walk must not cover */
 #wanderer { position: fixed; left: 0; top: 0; z-index: 5; pointer-events: none; opacity: .85; }
 #wanderer svg { display: block; animation: bob .45s steps(2) infinite; } /* two frames of a walk: he reads as alive
