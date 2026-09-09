@@ -106,6 +106,10 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal { margin-left: auto; letter-spacing: 0; text-transform: none; }
 #prgoal a { display: flex; align-items: center; gap: .6rem; }
 #prgoal .cap { color: var(--fg); font-size: .8rem; white-space: nowrap; }
+/* [impl->req~trend-arrows~1] */
+.trend { font-size: .7em; margin-left: .3em; vertical-align: middle; }
+.trend.good { color: var(--ok); }
+.trend.bad { color: #f85149; }
 #prgoal .meter { width: 11rem; }
 #prgoal .bar { position: relative; display: block; height: .9rem; border-radius: .2rem; overflow: hidden;
   background: linear-gradient(90deg, var(--ok), var(--warn) var(--t), #f85149); }

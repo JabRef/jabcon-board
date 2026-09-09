@@ -461,6 +461,16 @@ is skipped with a warning, not a failed run.
 
 Needs: impl
 
+### Tendency arrows
+`req~trend-arrows~1`
+
+The collector samples the open-PR count and the column sizes on every run and keeps half a day of them. Backlog, in
+progress and the open-PR meter show a triangle for the direction the number moved in the last hour, green when that
+is the good direction (fewer open PRs, a shorter backlog, more in progress), red otherwise; hovering gives the
+change. Without a sample that old no arrow is drawn.
+
+Needs: impl
+
 ### Open-PR meter
 `req~pr-goal-meter~1`
 

@@ -1025,6 +1025,16 @@ def pr_goal():
     return {**goal, "open": n, "url": f"https://github.com/{goal['repo']}/pulls"}
 
 
+# [impl->req~trend-arrows~1]
+def history(previous, now, data):
+    """One sample per run of the numbers the board draws a tendency for, so the page can compare with an hour ago.
+    Half a day of five-minute runs is plenty; older samples are dropped."""
+    sample = {"t": now.isoformat(timespec="seconds"),
+              "open_prs": (data["pr_goal"] or {}).get("open"),
+              **{col: sum(1 for c in data["cards"] if c["column"] == col) for col in ("backlog", "progress", "done")}}
+    return ((previous or {}).get("history", []) + [sample])[-144:]
+
+
 # [impl->req~jabcon-window~1]
 def main():
     args = sys.argv[1:]
@@ -1093,6 +1103,7 @@ def main():
         "stats": totals,
         "leaderboard": sorted(board, key=lambda l: -l["points"]),
     }
+    data["history"] = history(previous, now, data)
     with open(out, "w") as f:
         json.dump(data, f, indent=1)
     print(f"wrote {out}: {len(cards)} cards, {len(events)} events")
