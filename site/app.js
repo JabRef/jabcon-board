@@ -146,18 +146,24 @@ function renderStats() {
 // target ticked on the bar. The colour runs green (zero open) to red at the goal; past the goal it flashes.
 // [impl->req~pr-goal-meter~1]
 let prgoalHtml;
+const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
 function renderPrGoal() {
   const g = data.pr_goal;
   $('#prgoal').hidden = !g;
   if (!g) return;
-  const pct = (n) => (100 * Math.min(n, g.max) / g.max).toFixed(1) + '%';
+  // past the goal the meter does not just fill up, it grows out of its box, OVER_PX per PR too many, so the
+  // overshoot is a length and not only a colour. The scale then spans the count, with the goal ticked inside it.
+  const over = Math.max(0, g.open - g.max), span = g.max + over;
+  const pct = (n) => (100 * n / span).toFixed(1) + '%';
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   const html = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
     <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>
-    <span class="meter"><span class="bar ${g.open > g.max ? 'alarm' : ''}" style="--t:${pct(g.target)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
-      <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
+    <span class="meter" style="width:calc(11rem + min(${over * OVER_PX}px, 20rem))"><span class="bar ${over ? 'alarm' : ''}" style="--t:${pct(g.target)};--g:${pct(g.max)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span>${over ? `<span class="tick" style="left:${pct(g.max)}"></span>` : ''}</span>
+      <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span>${over
+        ? `<span style="left:${pct(g.max)};transform:translateX(-50%)">${g.max}</span><span class="over" style="right:0">${g.open}</span>`
+        : `<span style="right:0">${g.max}</span>`}</span></span></a>`;
   if (html !== prgoalHtml) { // rebuilding the same meter would restart the alarm's beat mid-cycle for nothing
     prgoalHtml = html;
     $('#prgoal').innerHTML = html;

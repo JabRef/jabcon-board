@@ -114,7 +114,7 @@ section h2 .count { float: right; color: var(--fg); }
 .leader .trend { font-size: .65rem; }
 #prgoal .meter { width: 11rem; }
 #prgoal .bar { position: relative; display: block; height: .9rem; border-radius: .2rem; overflow: hidden;
-  background: linear-gradient(90deg, var(--ok), var(--warn) var(--t), #f85149); }
+  background: linear-gradient(90deg, var(--ok), var(--warn) var(--t), #f85149 var(--g, 100%)); }
 #prgoal .rest { position: absolute; top: 0; bottom: 0; right: 0; background: var(--border); }
 /* over the goal there is nothing left to fill, so the bar goes solid red and beats like a health bar near zero:
    it never blends back into the gradient, it only dims and swells, ease-in-out both ways for a sine-like pulse */
@@ -128,6 +128,7 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal .tick { position: absolute; top: 0; bottom: 0; width: .15rem; background: var(--bg); transform: translateX(-50%); }
 #prgoal .scale { position: relative; display: block; height: .9rem; font-size: .65rem; color: var(--muted); }
 #prgoal .scale span { position: absolute; }
+#prgoal .scale .over { color: #f85149; font-weight: bold; } /* the count past the goal, where the meter now ends */
 #components { display: grid; grid-template-columns: fit-content(5rem) minmax(1.5rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
 #leaderboard { display: flex; gap: .8rem; margin-top: auto; align-items: flex-end; }
