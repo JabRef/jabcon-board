@@ -765,7 +765,9 @@ setInterval(tick, 1000);
 setInterval(loadVideo, 15 * 60000);
 setInterval(renderTicker, 30000);
 
-// version.txt holds the deployed commit; shown in the corner and used to reload the page after a new deployment.
+// version.txt holds the deployed commit and when it was made; shown in the corner so the wall can be told apart
+// from what is pushed, and used to reload the page after a new deployment.
+// [impl->req~deployed-version~1]
 let version;
 async function checkVersion() {
   try {
@@ -774,7 +776,11 @@ async function checkVersion() {
     const v = (await r.text()).trim();
     if (version && v !== version) location.reload();
     version = v;
-    $('#version').textContent = `site ${v}`;
+    const [sha, iso] = v.split(/\s+/);
+    const when = iso && new Date(iso);
+    $('#version').textContent = `site ${sha}${when ? ` \u00b7 ${when.toLocaleString('en-GB', { weekday: 'short', hour: '2-digit', minute: '2-digit', timeZone: data?.config.timezone })}` : ''}`;
+    $('#version').title = when ? `Deployed commit ${sha}, committed ${ago(iso)}. The page reloads itself within five minutes of the next deployment.`
+      : `Deployed commit ${sha}. The page reloads itself within five minutes of the next deployment.`;
   } catch (e) { /* offline: try again later */ }
 }
 checkVersion();
