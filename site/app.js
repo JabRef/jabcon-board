@@ -69,6 +69,7 @@ function updateMore(box) {
 function renderStats() {
   const s = data.stats;
   $('#totals').innerHTML = `<span>${fmt(s.changed_files)} files</span><span class="add">+${fmt(s.additions)}</span><span class="del">−${fmt(s.deletions)}</span>`;
+  renderPrGoal();
   const comps = Object.entries(s.components).sort((a, b) => b[1] - a[1]).slice(0, 5);
   const max = comps[0]?.[1] || 1;
   const compWhy = 'Lines changed (added + removed) in this component. Click for the PRs behind the number.';
@@ -99,6 +100,23 @@ function renderStats() {
     return `<div class="leader" data-login="${esc(l.login)}" style="--c:${color[l.login]}" title="${why}">${avatar(l.login, '').replace(`title="${l.login}"`, `title="${why}"`)}<div class="pts">${fmt(l.points)}</div><div>${esc(l.login)}</div>${bonusRow(l)}</div>`;
   }).join('');
   slotMachine();
+}
+
+// The open-PR meter next to the stats heading: how far the review backlog still is from the goal, with the stretch
+// target ticked on the bar. Over the goal the bar is full and amber.
+// [impl->req~pr-goal-meter~1]
+function renderPrGoal() {
+  const g = data.pr_goal;
+  $('#prgoal').hidden = !g;
+  if (!g) return;
+  const pct = (n) => (100 * Math.min(n, g.max) / g.max).toFixed(1) + '%';
+  const cls = g.open > g.max ? 'over' : g.open <= g.target ? 'hit' : '';
+  const why = esc(`${g.open} open PRs in ${g.repo}.\n`
+    + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
+  $('#prgoal').innerHTML = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
+    <span class="cap">${g.open} open PRs</span>
+    <span class="meter"><span class="bar"><span class="fill ${cls}" style="width:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span></span>
+      <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span><span style="right:0">${g.max}</span></span></span></a>`;
 }
 
 // [impl->req~bonus-points~19] the +100 awards a contributor holds, one emoji each, the category in the tooltip.

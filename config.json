@@ -27,6 +27,11 @@
     "Siedlerchr",
     "calixtus"
   ],
+  "pr_goal": {
+    "repo": "JabRef/jabref",
+    "max": 72,
+    "target": 36
+  },
   "milestones": [
     "JabRef/jabref/36",
     "JabRef/jabref/24",
