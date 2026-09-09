@@ -34,6 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           # optional fine-grained PAT for milestones in private repos
           MILESTONE_TOKEN: ${{ secrets.BOARD_TOKEN }}
+          BONUS_CAP: ${{ secrets.BONUS_CAP }}
         run: python3 scripts/collect.py --out out/data.json ${{ inputs.force && '--force' || '' }}
       - run: scripts/gh-pages.sh push pace
         env:

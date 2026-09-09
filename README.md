@@ -46,6 +46,8 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
 `nerd_prs` (explicit `owner/repo#number` PRs whose refactorings appear in Nerd corner without becoming participant cards),
 `honorary_awards` (`login`, `title`, `text`, `emoji`, optional `url`: +100 for what the API cannot see).
 `private_repos` lists private repos whose issue activity is counted for the leaderboard and shown as counts only (no titles) under the milestones. Milestones and `private_repos` need a repository secret `BOARD_TOKEN` (fine-grained PAT with read access to issues of that repo); otherwise they are skipped with a warning.
+The optional `BONUS_CAP` environment variable (`{"login": n}`, a repository secret) limits how many bonus awards a
+contributor holds; it is deliberately not part of `config.json`, which the board publishes.
 Bot activity is excluded, and so is automation running under a human account: `exclude_titles` (item titles, e.g.
 `New Crowdin updates`) and `exclude_branches` (e.g. `l10n_main`) drop those items, their events and their points.
 

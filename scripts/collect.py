@@ -28,6 +28,10 @@ API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN")
 # A fine-grained PAT scoped to private repos; used only for milestones and private_repos (it cannot run global searches: 422)
 MILESTONE_TOKEN = os.environ.get("MILESTONE_TOKEN") or TOKEN
+# How many awards a contributor may hold, as {"login": n}. Kept in the environment rather than in config.json: the
+# board publishes its configuration, and this one is nobody's business but the organiser's.
+# [impl->req~bonus-cap~1]
+BONUS_CAP = json.loads(os.environ.get("BONUS_CAP") or "{}")
 PARTICIPANTS = CONFIG["participants"]
 START = datetime.fromisoformat(CONFIG["jabcon_start"])
 END = datetime.fromisoformat(CONFIG["jabcon_end"])
@@ -1114,7 +1118,15 @@ def main():
     joined = first_seen(previous_joined)
     board = leaderboard(cards, events, private)
     by_login = {l["login"]: l for l in board}
-    for b in stamp(bonuses(cards, events, joined), previous, now):
+    awards = stamp(bonuses(cards, events, joined), previous, now)
+    # [impl->req~bonus-cap~1] a capped contributor keeps the awards held longest; the rest score nothing
+    caps = BONUS_CAP
+    if caps:
+        held = {}
+        for b in sorted(awards, key=lambda b: b["since"]):
+            held.setdefault(b["login"], []).append(b)
+        awards = [b for p, bs in held.items() for b in (bs[:caps[p]] if p in caps else bs)]
+    for b in awards:
         l = by_login[b["login"]]
         l["points"] += b["points"]
         l.setdefault("bonuses", []).append(b)
