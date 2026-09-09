@@ -497,7 +497,8 @@ While PRs sit in the goal repository's merge queue, a pixel-art dwarf stands at 
 hammers at it once every 1.2 seconds. The block he hits is as wide as those PRs are on the bar's scale and flashes
 yellow with every strike, so the queue is visible as a length. Hovering him gives the count. No queue, no dwarf; with
 reduced motion or in the still mode nobody swings and the block simply stands out. The count comes from GraphQL,
-which alone knows the queue, and a failing call only costs the dwarf, not the run.
+which alone knows the queue. A failed call never costs the dwarf: the last known count is kept and the run goes on.
+Only a repository that really has no queue answers zero, and then he is gone.
 
 Needs: impl
 
