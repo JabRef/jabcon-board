@@ -129,6 +129,29 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal .scale { position: relative; display: block; height: .9rem; font-size: .65rem; color: var(--muted); }
 #prgoal .scale span { position: absolute; }
 #prgoal .scale .over { color: #f85149; font-weight: bold; } /* the count past the goal, where the meter now ends */
+/* [impl->req~merge-queue-dwarf~1] the dwarf swings from the left onto the bar; his block flashes on the hit, both
+   animations share the 1.2 s cycle and the phase the script sets, so the flash lands with the hammer */
+#prgoal .dwarf { flex: none; align-self: center; margin-bottom: .9rem; margin-right: -.2rem; }
+#prgoal .dwarf svg { display: block; overflow: visible; }
+#prgoal .arm { transform-box: view-box; transform-origin: 10px 8px; animation: hammer 1.2s linear infinite; }
+#prgoal .queue { position: absolute; top: 0; bottom: 0; left: 0; z-index: 1; background: #f2c94c; opacity: 0;
+  animation: queueflash 1.2s linear infinite; }
+@keyframes hammer {
+  0%, 40% { transform: rotate(-62deg); }
+  52% { transform: rotate(8deg); }
+  58% { transform: rotate(-8deg); }
+  64% { transform: rotate(4deg); }
+  100% { transform: rotate(-62deg); }
+}
+@keyframes queueflash {
+  0%, 50% { opacity: 0; }
+  52% { opacity: 1; }
+  57% { opacity: .15; }
+  61% { opacity: .9; }
+  67% { opacity: .1; }
+  71% { opacity: .6; }
+  80%, 100% { opacity: 0; }
+}
 #components { display: grid; grid-template-columns: fit-content(5rem) minmax(1.5rem, 1fr) max-content; gap: .1rem .5rem; align-content: start; align-items: center; font-size: .85rem; }
 #components .bar { height: .9rem; background: var(--accent); border-radius: .2rem; }
 #leaderboard { display: flex; gap: .8rem; margin-top: auto; align-items: flex-end; }
@@ -219,8 +242,10 @@ body { animation: glow 40s ease-in-out infinite; }
   100% { transform: translate(25%, -15%) scale(.9); }
 }
 @keyframes breathe { 50% { border-color: #3d4654; } }
-@media (prefers-reduced-motion: reduce) { body, body::before, section, #news span, #prgoal .bar.alarm { animation: none; } #news span { padding-left: 0; } }
-html.still body, html.still body::before, html.still section, html.still #news span, html.still #prgoal .bar.alarm { animation: none; }
+@media (prefers-reduced-motion: reduce) { body, body::before, section, #news span, #prgoal .bar.alarm, #prgoal .arm, #prgoal .queue { animation: none; } #news span { padding-left: 0; } #prgoal .queue { opacity: .55; } }
+html.still body, html.still body::before, html.still section, html.still #news span, html.still #prgoal .bar.alarm,
+html.still #prgoal .arm, html.still #prgoal .queue { animation: none; }
+html.still #prgoal .queue { opacity: .55; }
 html.still #news span { padding-left: 0; }
 /* [impl->req~contributor-detail~2] */
 #detail[hidden] { display: none; }

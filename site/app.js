@@ -149,6 +149,22 @@ function renderStats() {
 let prgoalHtml;
 const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
+const QUEUE_MS = 1200; // one hammer swing, the same number as the CSS animation's duration
+
+// [impl->req~merge-queue-dwarf~1] While PRs wait in the merge queue a pixel dwarf stands at the left end of the
+// meter and hammers away at them; the block he hits is their share of the bar, and it flashes yellow on every hit.
+function dwarf(n) {
+  const why = esc(`${n} PR${n === 1 ? '' : 's'} in the merge queue.\nThe dwarf is hammering their block off the bar.`);
+  return `<span class="dwarf" title="${why}"><svg viewBox="0 0 16 16" width="26" height="26" shape-rendering="crispEdges">
+    <rect x="4" y="0" width="6" height="2" fill="#c0392b"/><rect x="3" y="2" width="9" height="1" fill="#c0392b"/>
+    <rect x="5" y="3" width="5" height="2" fill="#e8b18a"/><rect x="8" y="3" width="1" height="1" fill="#2b2118"/>
+    <rect x="4" y="5" width="7" height="3" fill="#dfe6ee"/>
+    <rect x="5" y="8" width="6" height="3" fill="#3b6ea5"/><rect x="5" y="11" width="6" height="1" fill="#4a3527"/>
+    <rect x="5" y="12" width="2" height="3" fill="#4a3527"/><rect x="9" y="12" width="2" height="3" fill="#4a3527"/>
+    <g class="arm"><rect x="10" y="8" width="4" height="1" fill="#8a5a2b"/><rect x="13" y="6" width="3" height="4" fill="#9aa5b1"/>
+      <rect x="13" y="6" width="3" height="1" fill="#c9d1d9"/></g>
+  </svg></span>`;
+}
 function renderPrGoal() {
   const g = data.pr_goal;
   $('#prgoal').hidden = !g;
@@ -160,8 +176,8 @@ function renderPrGoal() {
   const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   const html = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
-    <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>
-    <span class="meter" style="width:calc(11rem + min(${over * OVER_PX}px, 20rem))"><span class="bar ${over ? 'alarm' : ''}" style="--t:${pct(g.target)};--g:${pct(g.max)}"><span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span>${over ? `<span class="tick" style="left:${pct(g.max)}"></span>` : ''}</span>
+    <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>${g.queue ? dwarf(g.queue) : ''}
+    <span class="meter" style="width:calc(11rem + min(${over * OVER_PX}px, 20rem))"><span class="bar ${over ? 'alarm' : ''}" style="--t:${pct(g.target)};--g:${pct(g.max)}">${g.queue ? `<span class="queue" style="width:${pct(Math.min(g.queue, g.open))}"></span>` : ''}<span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span>${over ? `<span class="tick" style="left:${pct(g.max)}"></span>` : ''}</span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span>${over
         ? `<span style="left:${pct(g.max)};transform:translateX(-50%)">${g.max}</span><span class="over" style="right:0">${g.open}</span>`
         : `<span style="right:0">${g.max}</span>`}</span></span></a>`;
@@ -172,6 +188,9 @@ function renderPrGoal() {
   // and when it does have to be rebuilt, the beat picks up where the old one stood: it runs on the wall clock
   const bar = $('#prgoal .bar.alarm');
   if (bar) bar.style.animationDelay = `-${Date.now() % (2 * ALARM_MS)}ms`;
+  // the same for the swing and the flash it sets off, which have to stay in step with each other above all
+  const swing = `-${Date.now() % QUEUE_MS}ms`;
+  document.querySelectorAll('#prgoal .arm, #prgoal .queue').forEach((el) => { el.style.animationDelay = swing; });
 }
 
 // [impl->req~bonus-points~21] the +100 awards a contributor holds, one emoji each, the category in the tooltip.
