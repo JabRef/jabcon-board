@@ -240,7 +240,7 @@ def collect_events(previous):
             try:
                 cmp, _ = get(f"/repos/{e['repo']}/compare/{e['before']}...{e['head']}")
                 e["commits"] = cmp["total_commits"]
-                # [impl->req~bonus-points~20] the old head is no ancestor of the new one: history was rewritten
+                # [impl->req~bonus-points~21] the old head is no ancestor of the new one: history was rewritten
                 e["forced"] = cmp["status"] in ("diverged", "behind")
                 e["sync"] = (not e["repo"].startswith(CONFIG["org"] + "/")
                              and not any((c.get("author") or {}).get("login") == e["actor"] for c in cmp["commits"]))
@@ -718,13 +718,14 @@ def leaderboard(cards, events, private):
 
 # The second evaluation, like the bonus round in a game: +100 for each superlative the per-event points barely notice
 # (breadth, chattiness, night shifts). Everybody tied for a category gets it.
-# [impl->req~bonus-points~20]
+# [impl->req~bonus-points~21]
 BONUS = 100
 REVIEW_FLOOR = 10  # fewer reviews than this and the review ratios say nothing
 EVENT_FLOOR = 5  # same for the other ratios: one event out of two must not win a share
 MERGED_FLOOR = 3  # one hand-written PR is not a habit
 STRICT_FLOOR = 3  # a single "changes requested" is not a temperament
 SMALL, MEDIUM = 50, 500  # changed lines; above that a PR is large
+QUIET_HOURS, DEEP_LINES, DEEP_COMMITS, DEEP_COMPLEXITY = 6, 100, 5, 20  # what counts as silence, and as coming back
 THANKS = re.compile(r"\bth(?:ank|x)", re.I)
 
 
@@ -782,7 +783,7 @@ BONUS_KINDS = [
 ]
 
 
-# [impl->req~bonus-points~20]
+# [impl->req~bonus-points~21]
 def first_seen(previous):
     """Each participant's first issue or PR in the org. A fixed date, so it is reused from the previous data.json."""
     out = {p: previous[p] for p in PARTICIPANTS if p in (previous or {})}
@@ -794,7 +795,7 @@ def first_seen(previous):
     return out
 
 
-# [impl->req~bonus-points~20]
+# [impl->req~bonus-points~21]
 def bonuses(cards, events, joined=None):
     """One +100 award per category, shared by everyone tied for the top. Same events the leaderboard counts."""
     tally = {p: dict.fromkeys((k for _, k, *_ in BONUS_KINDS), 0) for p in PARTICIPANTS}
@@ -909,6 +910,37 @@ def bonuses(cards, events, joined=None):
     out += [{"login": r["author"], "title": r["title"], "text": r["text"], "emoji": r["emoji"], "points": BONUS,
              "url": r["url"]}
             for r in records(cards, exclude=CONFIG.get("record_bonus_exclude", [])) if r["author"] in tally]
+    # deep work: a long silence broken by something substantial - a big PR of one's own, a batch of commits, or a
+    # review of a complex diff. A comment does not end the silence in this sense, it only shows somebody is back.
+    card_of = {(c["repo"], c["number"]): c for c in cards}
+
+    def deep(e):
+        c = card_of.get((e["repo"], e.get("number"))) or {}
+        st = c.get("stats") or {}
+        lines = st.get("additions", 0) + st.get("deletions", 0)
+        if e["type"] == "PushEvent" and (e.get("commits") or 0) >= DEEP_COMMITS:
+            return f"{e['commits']} commits"
+        if e["type"] == "PullRequestEvent" and c.get("author") == e["actor"] and lines >= DEEP_LINES:
+            return f"{c['repo'].split('/')[-1]}#{c['number']}, {lines} lines"
+        if e["type"] == "PullRequestReviewEvent" and (st.get("complexity") or 0) >= DEEP_COMPLEXITY:
+            return f"a review of {c['repo'].split('/')[-1]}#{c['number']}"
+        return None
+
+    woken = {}
+    for p, mine in ((p, sorted((e for e in scored if e["actor"] == p), key=lambda e: e["created_at"])) for p in tally):
+        for before, after in zip(mine, mine[1:]):
+            quiet = (datetime.fromisoformat(after["created_at"].replace("Z", "+00:00"))
+                     - datetime.fromisoformat(before["created_at"].replace("Z", "+00:00"))).total_seconds() / 3600
+            what = deep(after)
+            if what and quiet >= QUIET_HOURS and quiet > woken.get(p, (0,))[0]:
+                woken[p] = (quiet, what, (card_of.get((after["repo"], after.get("number"))) or {}).get("url"))
+    if woken:
+        longest = max(q for q, _, _ in woken.values())
+        for p, (quiet, what, url) in woken.items():
+            if quiet == longest:
+                out.append({"login": p, "title": "Deep work", "emoji": "\U0001f9d8",
+                            "text": f"back from {round(quiet)} quiet hours with {what}",
+                            "points": BONUS, "url": url})
     # the shortest way from "opened" to "merged"
     fast = [(datetime.fromisoformat(c["merged_at"].replace("Z", "+00:00"))
              - datetime.fromisoformat(c["created_at"].replace("Z", "+00:00")), c)
