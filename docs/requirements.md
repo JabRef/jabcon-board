@@ -115,6 +115,15 @@ Outside `jabcon_start`..`jabcon_end` the collector exits without touching the da
 
 Needs: impl
 
+### A rate limit does not stop the board
+`req~collect-resilience~1`
+
+GitHub answers a hit rate limit with 403 or 429; the collector waits for the time the response names and retries a
+few times. When the run fails anyway, the site is still published with the data of the previous run, which the board
+then shows as stale, so a deployment is never held back by the API.
+
+Needs: impl
+
 ### Publishing waits for the running deployment
 `req~publish-pacing~1`
 

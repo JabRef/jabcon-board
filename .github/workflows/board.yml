@@ -30,6 +30,9 @@ jobs:
       - name: Copy site
         run: cp -r site/. out/ && echo "${GITHUB_SHA::7} $(git log -1 --format=%cI)" > out/version.txt
       - name: Collect data
+        # a rate-limited or otherwise failing collector must not hold back the site: the previous data.json is already
+        # in out/ from the checkout, and the board marks data this old as stale by itself
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
           # optional fine-grained PAT for milestones in private repos

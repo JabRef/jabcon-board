@@ -56,20 +56,23 @@ PR_AUTHORS = {}  # "owner/repo#n" -> login, loaded from the previous data.json
 AI_COMMENT = re.compile(r"\U0001f916|\bclaude\b", re.I)
 
 
+# [impl->req~collect-resilience~1]
 def get(path, params=None, token=None):
     url = API + path + ("?" + urllib.parse.urlencode(params) if params else "")
     req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"})
     token = token or TOKEN
     if token:
         req.add_header("Authorization", "Bearer " + token)
-    for attempt in range(3):
+    for attempt in range(4):
         try:
             with urllib.request.urlopen(req, timeout=60) as resp:
                 return json.load(resp), resp.headers
         except urllib.error.HTTPError as e:
-            if e.code in (403, 429) and attempt < 2:
-                reset = int(e.headers.get("X-RateLimit-Reset", time.time() + 60))
-                time.sleep(max(1, min(reset - time.time(), 120)))
+            # a secondary rate limit answers 403 with Retry-After and no reset header, a primary one the other way round
+            if e.code in (403, 429) and attempt < 3:
+                after = e.headers.get("Retry-After")
+                reset = int(e.headers.get("X-RateLimit-Reset", 0)) - time.time() if e.headers.get("X-RateLimit-Reset") else 60
+                time.sleep(max(1, min(int(after) if after else reset, 90)))
                 continue
             print(f"GET {url} -> {e.code}", file=sys.stderr)
             raise
