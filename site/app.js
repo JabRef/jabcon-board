@@ -803,7 +803,7 @@ setInterval(renderTicker, 30000);
 
 // version.txt holds the deployed commit and when it was made; shown in the corner so the wall can be told apart
 // from what is pushed, and used to reload the page after a new deployment.
-// [impl->req~deployed-version~1]
+// [impl->req~deployed-version~2]
 let version;
 async function checkVersion() {
   try {
