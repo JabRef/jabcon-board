@@ -183,7 +183,7 @@ section h2 .count { float: right; color: var(--fg); }
   gap: .05rem .1rem; max-width: 5.5rem; height: 1.75rem; overflow: hidden; margin: 0 auto; font-size: .75rem;
   line-height: 1.2; cursor: help; }
 #detail .bonus { font-size: .8rem; color: var(--ok); }
-/* [impl->req~delta-detail~1] */
+/* [impl->req~delta-detail~2] */
 #detail .moved { flex-basis: 100%; font-size: .8rem; font-weight: normal; color: var(--muted); margin-top: .2rem; }
 a.bonus { text-decoration: none; }
 .delta { position: absolute; top: -.2rem; left: 50%; transform: translateX(-50%); font-size: .85rem; font-weight: bold;
