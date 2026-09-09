@@ -1130,6 +1130,26 @@ def merge_queue(repo):
             "queue_prs": [e["pullRequest"]["number"] for e in mq["entries"]["nodes"] if e.get("pullRequest")]}
 
 
+
+# [impl->req~release-party~1]
+def latest_release():
+    """The newest release of the goal repository, prereleases included - JabRef's alphas are the whole point.
+    A release is cut by a bot, so no participant's event feed carries it; the board has to ask for it."""
+    goal = CONFIG.get("pr_goal")
+    if not goal:
+        return None
+    try:
+        rel, _ = get(f"/repos/{goal['repo']}/releases", {"per_page": 1})
+    except urllib.error.HTTPError as e:
+        print(f"::warning::releases of {goal['repo']} unavailable ({e})", file=sys.stderr)
+        return None
+    if not rel:
+        return None
+    r = rel[0]
+    return {"repo": goal["repo"], "tag": r["tag_name"], "name": r["name"] or r["tag_name"],
+            "url": r["html_url"], "at": r["published_at"] or r["created_at"]}
+
+
 # [impl->req~trend-arrows~6]
 def history(previous, now, data):
     """One sample per run of the numbers the board draws a tendency for, so the page can compare with an hour ago.
@@ -1214,6 +1234,7 @@ def main():
         "milestones": ms,
         "focus": focus_progress(),
         "pr_goal": pr_goal(previous) or (previous or {}).get("pr_goal"),
+        "release": latest_release() or (previous or {}).get("release"),
         "private_activity": private,
         "generated_at": now.isoformat(timespec="seconds"),
         "config": CONFIG,

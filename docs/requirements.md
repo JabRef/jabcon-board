@@ -521,6 +521,19 @@ everything but in the way of nothing, bobbing in two frames so the walk is visib
 
 Needs: impl
 
+### A release is celebrated
+`req~release-party~1`
+
+When the goal repository publishes a release (prereleases included, and cut by a bot, so the collector asks the
+repository itself rather than waiting for a participant's event), the board notices on the next data run: it rings
+the bell, throws confetti for a minute and a chorus line of dwarfs dances along the bottom edge, each a beat behind
+the one before. A toast names the tag, and the newsticker keeps it as a headline for whoever missed the dance. It
+fires only when the tag differs from the one the previous run saw, never on the first reading and never twice for
+the same release; with reduced motion or in the still mode the news comes without the dance. A failed call keeps
+the last known release rather than reading as "none".
+
+Needs: impl
+
 ### Tendency arrows
 `req~trend-arrows~6`
 
