@@ -553,6 +553,13 @@ function celebrate(prev) {
     bell(); // the bell opens the act: it makes the room look up while the reels are still rolling
     whenSlotsSettled(() => toast(`🔔 ${leader} takes the lead!`)); // the name comes once the numbers stand
   }
+  // [impl->req~pr-goal-fanfare~1] the meter's big moment: the open PRs drop to the stretch target or below
+  const g = data.pr_goal, was = prev.pr_goal;
+  if (g && was && was.open > g.target && g.open <= g.target) {
+    bell();
+    toast(`\u{1f3af} ${g.open} open PRs \u2014 the ${g.target} mark is reached!`);
+    if (window.confetti) confetti({ particleCount: 300, spread: 120, origin: { y: 0.6 } });
+  }
   const before = new Set(prev.cards.filter((c) => c.column === 'done').map((c) => c.id));
   for (const c of data.cards.filter((c) => c.column === 'done' && !before.has(c.id))) {
     // the name is the author, not the merger: credit it with "by", never as the one who merged

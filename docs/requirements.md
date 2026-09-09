@@ -472,6 +472,15 @@ is skipped with a warning, not a failed run.
 
 Needs: impl
 
+### Reaching the stretch target is celebrated
+`req~pr-goal-fanfare~1`
+
+When the open-PR count drops to the stretch target or below, having been above it in the previous data run, the
+board rings the bell, throws confetti and announces the number in a toast. It fires on the crossing only, not on
+every run below the target.
+
+Needs: impl
+
 ### Tendency arrows
 `req~trend-arrows~4`
 
@@ -490,7 +499,8 @@ Needs: impl
 Right of the stats heading a meter shows how many PRs are open in the configured goal repository, scaled from zero
 to the goal, with the stretch target ticked on the bar and labelled on the scale below it. The filled part is
 coloured by the count: green near zero, amber at the stretch target, red at the goal.
-Past the goal the bar flashes red like an alarm (not with reduced motion or the still mode). Hovering names the repository and how many PRs still have to
+Past the goal the bar turns solid red and beats — swelling and glowing and back, like a health bar near zero
+(not with reduced motion or the still mode). Hovering names the repository and how many PRs still have to
 go; clicking opens the PR list.
 
 Needs: impl
