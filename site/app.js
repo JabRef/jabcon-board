@@ -187,8 +187,28 @@ function bonusRow(l) { // always rendered, empty included: equal heights keep th
 const NERD_PAGE = 4, NERD_MS = 12000;
 let nerdPage = 0, nerdTimer;
 
+// What makes two lines feel like the same line: a record's category, or a detected fact's leading word ("deleted
+// Foo, Bar" vs "deleted Baz"). [impl->req~nerd-variety~1]
+const nerdKind = (r) => r.title || r.text.split(' ')[0];
+
+// A page must not read as four times "deleted" by the same person. Greedy round-robin: of the items left, take the
+// one whose kind and author sit furthest back in the page being filled, ties going to the higher-weighted item.
+function nerdOrder(items) {
+  const out = [], rest = [...items];
+  while (rest.length) {
+    const recent = out.slice(1 - NERD_PAGE).reverse();
+    const seen = (r) => {
+      const k = recent.findIndex((p) => nerdKind(p) === nerdKind(r)), a = recent.findIndex((p) => p.author === r.author);
+      return (k < 0 ? 0 : NERD_PAGE - k) + (a < 0 ? 0 : NERD_PAGE - a);
+    };
+    const best = rest.reduce((b, r) => (seen(r) < seen(b) ? r : b));
+    out.push(...rest.splice(rest.indexOf(best), 1));
+  }
+  return out;
+}
+
 function renderNerd() {
-  const items = [...data.refactorings.map((r) => ({...r, title: ''})), ...(data.records || [])];
+  const items = nerdOrder([...data.refactorings.map((r) => ({...r, title: ''})), ...(data.records || [])]);
   const pages = Math.ceil(items.length / NERD_PAGE) || 1;
   nerdPage %= pages;
   $('#refactorings').innerHTML = items.slice(nerdPage * NERD_PAGE, (nerdPage + 1) * NERD_PAGE).map((r) =>

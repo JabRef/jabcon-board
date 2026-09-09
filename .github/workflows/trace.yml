@@ -16,3 +16,5 @@ jobs:
       - name: Script self-checks
         run: for t in test_*.py; do python3 "$t"; done
         working-directory: scripts
+      - name: JS self-checks
+        run: node scripts/test_nerd_order.js
