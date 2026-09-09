@@ -82,7 +82,7 @@ section h2 .count { float: right; color: var(--fg); }
 #refactorings li { display: flex; gap: .5rem; align-items: center; padding: 0; white-space: nowrap; overflow: hidden; }
 #refactorings img { width: 1.4rem; height: 1.4rem; border-radius: 50%; }
 #refactorings .repo { color: var(--muted); font-size: .8rem; }
-/* [impl->req~nerd-records~2] */
+/* [impl->req~nerd-records~3] */
 #refactorings .title { color: var(--muted); }
 /* [impl->req~ai-models~1] */
 #nerd { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1.2rem; align-content: start; }

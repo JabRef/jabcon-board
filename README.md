@@ -51,7 +51,7 @@ contributor holds; it is deliberately not part of `config.json`, which the board
 Bot activity is excluded, and so is automation running under a human account: `exclude_titles` (item titles, e.g.
 `New Crowdin updates`) and `exclude_branches` (e.g. `l10n_main`) drop those items, their events and their points.
 
-"Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...), plus one record holder per funny category (longest identifier, longest and shortest method, most code written or deleted, most tangled diff, wordiest changelog entry). Each record carries an icon and pays its author +100 bonus points.
+"Nerd corner" lists the five most interesting merged changes, detected by regexes on the diffs (sealed types, records, pattern matching, moved or deleted classes, net-negative PRs, ...), plus one record holder per funny category (longest identifier, longest, shortest and most sophisticated method, most modern Java, most code written or deleted, most tangled diff, wordiest changelog entry). Each record carries an icon and pays its author +100 bonus points.
 
 ## Leaderboard points
 
@@ -125,7 +125,7 @@ AI-written comments count for none of them.
 | 🏎️             | Speedrun              | shortest time from opening a PR to its merge                                                                                  |
 | 🧟             | Necromancer           | activity on the oldest item somebody else opened                                                                              |
 | 🐣             | Newcomer              | most recent first issue or PR in the org                                                                                      |
-| 📏🐍🤏✍️🔥🍝📜 | Nerd corner records   | longest identifier, longest and shortest method, most code written, most deleted, most tangled diff, wordiest changelog entry |
+| 📏🐍🤏🧠☕✍️🔥🍝📜 | Nerd corner records   | longest identifier, longest, shortest and most sophisticated method, most modern Java, most code written, most deleted, most tangled diff, wordiest changelog entry |
 | 🍸 …           | `honorary_awards`     | whatever the jury decides                                                                                                     |
 
 Categories, thresholds and the 100 itself live in `BONUS_KINDS` and `BONUS` in `scripts/collect.py`.
