@@ -135,7 +135,6 @@ section h2 .count { float: right; color: var(--fg); }
 #prgoal .tick { position: absolute; top: 0; bottom: 0; width: .15rem; background: var(--bg); transform: translateX(-50%); }
 #prgoal .scale { position: relative; display: block; height: .9rem; font-size: .65rem; color: var(--muted); }
 #prgoal .scale span { position: absolute; }
-#prgoal .scale .over { color: #f85149; font-weight: bold; } /* the count past the goal, where the meter now ends */
 /* [impl->req~merge-queue-dwarf~5] the dwarf stands at the tip of the bar, mirrored so he faces it, and swings
    leftwards onto it: what he knocks off is about to be subtracted. His block flashes on the hit, both animations
    share the 1.2 s cycle and the phase the script sets, so the flash lands with the hammer */

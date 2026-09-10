@@ -613,7 +613,7 @@ coloured by the count: green near zero, amber at the stretch target, red at the 
 Above the stretch target the filled part turns solid amber and beats — swelling and glowing and back, like a
 health bar near zero (not with reduced motion or the still mode).
 Past the goal the meter grows out of its box, ten pixels per PR too many, and its scale then spans the count
-with the goal ticked inside it, and the same beat runs in red. The beat runs on the wall clock, so a data refresh redrawing the meter
+with the goal ticked inside it, and the same beat runs in red. The count itself stands in the caption only. The beat runs on the wall clock, so a data refresh redrawing the meter
 does not jump it back to the start of a cycle. A run whose count comes back implausibly empty keeps the previous one instead. Hovering names the repository and how many PRs still have to
 go; clicking opens the PR list.
 

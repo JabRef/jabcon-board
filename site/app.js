@@ -254,6 +254,7 @@ function renderPrGoal() {
   if (!g) return;
   // past the goal the meter does not just fill up, it grows out of its box, OVER_PX per PR too many, so the
   // overshoot is a length and not only a colour. The scale then spans the count, with the goal ticked inside it.
+  // The count itself is only in the caption: on the scale it would sit on top of the goal's label and say nothing new.
   const over = Math.max(0, g.open - g.max), span = g.max + over;
   // over the stretch target the bar already beats, in amber until the goal is passed too
   const beat = over ? 'alarm' : g.open > g.target ? 'alarm warn' : '';
@@ -264,7 +265,7 @@ function renderPrGoal() {
     <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>
     <span class="meter" style="width:calc(11rem + min(${over * OVER_PX}px, 20rem))"><span class="bar ${beat}" style="--t:${pct(g.target)};--g:${pct(g.max)}">${g.queue ? `<span class="queue" style="right:${pct(span - g.open)};width:${pct(Math.min(g.queue, g.open))}"></span>` : ''}<span class="rest" style="left:${pct(g.open)}"></span><span class="tick" style="left:${pct(g.target)}"></span>${over ? `<span class="tick" style="left:${pct(g.max)}"></span>` : ''}</span>
       <span class="scale"><span style="left:0">0</span><span style="left:${pct(g.target)};transform:translateX(-50%)">${g.target}</span>${over
-        ? `<span style="left:${pct(g.max)};transform:translateX(-50%)">${g.max}</span><span class="over" style="right:0">${g.open}</span>`
+        ? `<span style="left:${pct(g.max)};transform:translateX(-50%)">${g.max}</span>`
         : `<span style="right:0">${g.max}</span>`}</span>${g.queue ? dwarf(g.queue, pct(g.open)) : ''}${g.queue && g.queue_eta
         ? `<span class="eta" id="queue-eta" style="left:calc(${pct(g.open)} + 1.6rem)"></span>` : ''}</span></a>`;
   if (html !== prgoalHtml) { // rebuilding the same meter would restart the alarm's beat mid-cycle for nothing
