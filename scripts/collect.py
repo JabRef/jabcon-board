@@ -1068,7 +1068,7 @@ def focus_progress():
             "url": f"https://github.com/issues?q={urllib.parse.quote(FOCUS_Q + ' is:open')}"}
 
 
-# [impl->req~pr-goal-meter~2]
+# [impl->req~pr-goal-meter~3]
 def pr_goal(previous=None):
     """How many PRs are open in the goal repo, for the meter against the configured targets."""
     goal = CONFIG.get("pr_goal")
