@@ -29,9 +29,6 @@
   ],
   "pr_goal": {
     "repo": "JabRef/jabref",
-    "also_repos": [
-      "JabRef/themes.jabref.org"
-    ],
     "max": 72,
     "target": 36
   },
