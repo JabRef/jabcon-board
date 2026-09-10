@@ -104,7 +104,7 @@ section h2 .count { float: right; color: var(--fg); }
 #totals .add { color: var(--ok); } #totals .del { color: #f85149; }
 /* open-PR meter, right of the stats heading: the filled part runs green (empty backlog) over amber at the stretch
    target (--t) to red at the goal, the tick marks the target, the grey rest is what is still free */
-/* [impl->req~pr-goal-meter~3] */
+/* [impl->req~pr-goal-meter~2] */
 #stats h2 { display: flex; align-items: center; }
 #prgoal { margin-left: auto; letter-spacing: 0; text-transform: none; }
 #prgoal a { display: flex; align-items: center; gap: .6rem; }

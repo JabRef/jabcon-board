@@ -156,7 +156,7 @@ function renderStats() {
 
 // The open-PR meter next to the stats heading: how far the review backlog still is from the goal, with the stretch
 // target ticked on the bar. The colour runs green (zero open) to red at the goal; past the goal it flashes.
-// [impl->req~pr-goal-meter~3]
+// [impl->req~pr-goal-meter~2]
 let prgoalHtml;
 const OVER_PX = 10; // how far the meter grows for every PR over the goal
 const ALARM_MS = 1100; // one beat, the same number as the CSS animation's duration
@@ -255,7 +255,7 @@ function renderPrGoal() {
   // overshoot is a length and not only a colour. The scale then spans the count, with the goal ticked inside it.
   const over = Math.max(0, g.open - g.max), span = g.max + over;
   const pct = (n) => (100 * n / span).toFixed(1) + '%';
-  const why = esc(`${g.open} open PRs in ${[g.repo, ...(g.also_repos || [])].join(' + ')}.\n`
+  const why = esc(`${g.open} open PRs in ${g.repo}.\n`
     + [g.max, g.target].map((t) => (g.open <= t ? `${t}: reached, ${t - g.open} to spare` : `${g.open - t} to go to ${t}`)).join('\n'));
   const html = `<a href="${esc(g.url)}" target="_blank" rel="noopener" title="${why}">
     <span class="cap">${g.open} open PRs${trend('open_prs', true, true, true)}</span>
