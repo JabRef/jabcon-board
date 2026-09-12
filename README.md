@@ -1,5 +1,8 @@
 # JabCon board
 
+**Discontinued** for privacy reasons: the published data and all screenshots were deleted, the site only says the
+board is discontinued, and the repository is archived. The code stays for reference.
+
 A self-refreshing wall display for [JabCon](https://contribute.jabref.org/), the JabRef developer meetup:
 what participants are working on, what got merged, who did what, plus a [gource](https://gource.io/) video
 of the JabRef repository during the meetup.
@@ -28,7 +31,7 @@ screen width (Full HD and UHD look the same); Ctrl+mouse wheel scales the page (
   `data.json` to the `gh-pages` branch. Outside the JabCon window it publishes the site but skips data collection.
   `gh-pages` is always a single commit (`scripts/gh-pages.sh` force-pushes a fresh one), so it never piles up old data or videos.
 - `.github/workflows/screenshot.yml` stores a screenshot under `screenshots/` every three hours during the day of a
-  JabCon day; the night hours are left out, because a screenshot stays on `main` forever.
+  JabCon day; the night hours are left out. (The screenshots were removed from the history when the board was discontinued.)
 - The video is rendered by `gource-jabcon.yml` in [JabRef/jabref](https://github.com/JabRef/jabref) to
   `https://files.jabref.org/gource/jabcon-2026.mp4`; the URL is set at the top of `site/app.js`.
 - `scripts/highlights.py data.json jabcon-2026.mp4 highlights.mp4 [count]` cuts a highlights reel from that video: a
@@ -154,4 +157,4 @@ python3 -m http.server -d site 8000   # open http://localhost:8000/
 
 ## After JabCon
 
-Delete the `gh-pages` branch, switch or remove the gource workflow in JabRef/jabref. `screenshots/` stays on `main`.
+Delete the `gh-pages` branch, switch or remove the gource workflow in JabRef/jabref.
